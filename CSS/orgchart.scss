@@ -1,0 +1,109 @@
+@import "SCSS/colors.scss";
+
+
+/* =========== DEV HELP =========== */
+.hide {display: none !important}
+.bootstrap-version {
+    margin: 1rem;
+}
+
+/* =========== Standard Chart =========== */
+.org-chart {
+    
+    h1 {
+        background-color: $Gray-3;
+        border: 1px solid $Gray-3;
+        color: $Primary-Blue;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 2rem
+    }
+
+    h2 {
+        background-color: $Gray-2;
+        border: 1px solid $Gray-3;
+        color: $Primary-Blue;
+        padding: 1rem;
+        margin: 0 .75rem 1.5rem;
+        font-size: 1.75rem;
+
+
+    }
+
+    h3 {
+        background-color: $Primary-Blue;
+        color: $White;
+        padding: 1rem;
+        margin: 0 1.5rem 1rem;
+        font-size: 1.5rem;
+
+    }
+
+    h4 {
+        background-color: $Accent-Blue-1;
+        color: $White;
+        padding: 1rem;
+        margin: 0 2.25rem .75rem;
+        font-size: 1.25rem;
+
+
+    }
+
+    .lvl-5 {
+        background-color: $Gray-1;
+        border: 1px solid $Gray-3;
+        padding: 1rem;
+        margin-bottom: .5rem;
+        color: $Primary-Blue; 
+        font-weight: bold;
+
+        ul {
+            font-weight: normal;
+            li{list-style: disc;}
+        }
+    }
+
+    .lvl-grid {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+        margin: 0 3rem 1rem;
+        grid-gap: .5rem;
+        
+    }
+
+    .no-list {
+        list-style: none;
+        //margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* =========== Bootstrap tabs =========== */
+.org-tab {
+  //  border: 1px solid red;
+          margin: 0 3rem .5rem;
+
+    .nav-pills {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: .5rem;
+     //   border: 1px solid green; 
+        .nav-link {
+            background-color: $Gray-1;
+            border: 1px solid $Gray-3;
+            padding: 1rem;
+            color: $Primary-Blue;
+            height: 100%;
+        }
+        
+        .nav-link.active {
+            background-color: $Gray-2;
+        }
+    }
+    .tab-content {
+        margin: 0 .5rem 1rem .5rem;
+        padding: 1rem;
+        border: 1px solid $Gray-3;
+    }
+}

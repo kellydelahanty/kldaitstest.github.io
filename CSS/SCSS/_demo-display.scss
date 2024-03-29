@@ -1,0 +1,95 @@
+//BASICS
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+main { padding: 1rem}
+
+.test-box {
+    margin: 1rem 0;
+    padding: .25rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+
+    h2 {
+        grid-column: 1 / span 3;
+        background-color: $White;
+    }
+}
+
+//TEXT
+.header-text {color: $header-text;}
+
+.text {color: $text}
+.link {color: $link }
+.link-hover {color: $link-hover}
+.link-visited {color: $link-visited }
+
+.text-dark-bg {color: $text-darkBG}
+.link-dark-bg {color: $link-darkBG }
+.link-hover-dark-bg {color: $link-hover-darkBG }
+.link-visited-dark-bg {color: $link-visited-darkBG}
+
+.link, .link-dark-bg, .link-hover, .link-hover-dark-bg, .link-visited, .link-visited-dark-bg {text-decoration: underline;}
+
+//Boxes
+.box-white {background-color: $White; outline: 1px solid black}
+.box-black {background-color: $Black;}
+
+
+.box-gray-1 {background-color: $Gray-1; }
+.box-gray-2 {background-color: $Gray-2; }
+.box-gray-3 {background-color: $Gray-3; }
+.box-gray-4 {background-color: $Gray-4; }
+.box-gray-5 {background-color: $Gray-5; }
+.box-gray-6 {background-color: $Gray-6; }
+.box-gray-7 {background-color: $Gray-7; }
+
+
+.box-primary-blue {background-color: $Primary-Blue; }
+.box-primary-blue-dark {background-color:$Primary-Blue-Dark; }
+
+.box-accent-blue-1 {background-color: $Accent-Blue-1; }
+.box-accent-blue-1-dark {background-color: $Accent-Blue-1-Dark; }
+
+.box-accent-blue-2 {background-color: $Accent-Blue-2; }
+.box-accent-blue-2-dark {background-color: $Accent-Blue-2-Dark; }
+
+.box-uic {background-color: $UIC-Red; }
+.box-uis {background-color:$UIS-Blue; }
+.box-uiuc {background-color:$UIUC-Orange; }
+
+
+.box-citron-1 {background-color:$Citron-1; }
+.box-citron-2 {background-color:$Citron-2; }
+.box-citron-3 {background-color:$Citron-3; }
+.box-citron-4 {background-color:$Citron-4; }
+
+.box-gray-blue-1 {background-color:$Gray-Blue-1; }
+.box-gray-blue-2 {background-color:$Gray-Blue-2; }
+.box-gray-blue-3 {background-color:$Gray-Blue-3; }
+.box-gray-blue-4 {background-color:$Gray-Blue-4; }
+
+
+.box-periwinkle-1 {background-color:$Periwinkle-1; }
+.box-periwinkle-2 {background-color:$Periwinkle-2; }
+.box-periwinkle-3 {background-color:$Periwinkle-3; }
+.box-periwinkle-4 {background-color:$Periwinkle-4; }
+
+.box-salmon-1 {background-color:$Salmon-1; }
+.box-salmon-2 {background-color:$Salmon-2; }
+.box-salmon-3 {background-color:$Salmon-3; }
+.box-salmon-4 {background-color:$Salmon-4; }
+
+.box-teal-1 {background-color:$Teal-1; }
+.box-teal-2 {background-color:$Teal-2; }
+.box-teal-3 {background-color:$Teal-3; }
+.box-teal-4 {background-color:$Teal-4; }
+
+.box-yellow-1 {background-color:$Yellow-1; }
+.box-yellow-2 {background-color:$Yellow-2; }
+.box-yellow-3 {background-color:$Yellow-3; }
+.box-yellow-4 {background-color:$Yellow-4; }
+.box-yellow-5 {background-color:$Yellow-5; }
+
+
