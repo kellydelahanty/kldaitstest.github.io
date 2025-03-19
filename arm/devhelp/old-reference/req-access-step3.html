@@ -1,0 +1,271 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View access : University of Illinois System Access | University of Illinois System </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+    <header>
+
+        <div class="topbrand">
+            <div class="grid-x">
+               <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <a href="settings.html" class="button clear prefs" aria-label="Preferences"><img src="../../img/unused/prefs.png"
+                            alt="Preferences"></a>
+
+
+                    <span>Billy Donovan <span class="sdetail">658884541</span></span>
+                    <label for="current-unit" class="show-for-sr">Select unit to manage:</label>
+                    <select class="pulldown-look" id="current-unit">
+                        <option selected>Basketball Theory, Dept of</option>
+                        <option>Sports and Leisure, Div of</option>
+                    </select>
+
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <!-- no link on the main page-->
+                    <a href="index"><img src="../../img/appname.png" alt="Access Rights Management application"></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+                navigation here
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell bodycard change">
+                    <h1>Request or change access
+                    </h1>
+
+                    <div class="change-single">
+                        <div class="profile-single is-person">
+                            <div class="profile-type grid-x">
+                                <div class="profile-type-name">
+                                    <h2>Zach LaVine</h2>
+
+                                </div>
+                                <div class="profile-type-details">
+
+                                    Education Administration [335000]
+
+
+                                </div>
+                                <div class="profile-type-flags">
+                                    <div><strong>zlavine</strong> / 65214551</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="redo-search">
+                            <a href="back-to-search" class="cancel-link">Cancel</a>
+                        </div>
+
+                    </div>
+
+                    <div class="grid-x">
+                        <div class="cell">
+
+                            <section class="shop-group">
+                                <h2>
+                                    Student
+                                    information: General
+                                    learning and
+                                    registration</h2>
+
+
+                                <h3 class="is-data">Reporting and Data
+                                    Warehouse Access</h3>
+                                </h2>
+                                <div class="cur-per-list">
+
+                                    <ul class="shopping">
+                                        <li>
+                                            <div class="profilename">Pre-registration and
+                                                registration
+                                            </div>
+
+                                            <div class="shop-opts">
+                                                <span class="training-note">Requires training </span>
+                                                <button type="button" class="definition tiny clear"
+                                                    aria-label="Definition of pre-registration and registration"
+                                                    data-open="info-def"></button>
+
+                                                <button type="button" class="button tiny"
+                                                    data-open="prof-detail">Add</button>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="profilename">Something else
+                                            </div>
+
+                                            <div class="shop-opts">
+
+                                                <button type="button" class="definition tiny clear"
+                                                    aria-label="Definition of {name of profile}"
+                                                    data-open="info-def"></button>
+
+                                                <button type="button" class="button tiny">Add</button>
+
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                            </section>
+
+
+
+                            <button class="button batch">Next: Submit request</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="reveal info-modal" id="info-def" data-reveal>
+        <div class="modal-top">
+            <div class="bread">Category Name > Subcategory name > Application or report/data name </div>
+            <h1>About { name of profile}
+            </h1>
+
+        </div>
+        <p class="training-req">Note: Completed FERPA training is required before access can be granted. </p>
+
+        <p><span class="stress">Expected role:</span> Persons holding management positions within the division who have
+            oversight authority and are
+            impowered to
+            make decisions in the best interest of the University. They will also monitor documents to insure they
+            comply with all federal, state and university rules. They will have maintenance and query access to all
+            processes and tables through menus and forms and will execute reports.</p>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="reveal form-modal" id="prof-detail" data-reveal>
+        <div class="modal-top">
+            <div class="bread">Category Name > Subcategory name > Application or report/data name </div>
+            <h1>Set permission details for {name of profile}
+            </h1>
+
+            <p class="form-direction">This profile requires additional settings. All fields are required
+                unless noted.
+            </p>
+        </div>
+
+        <form class="detail-form">
+
+            <!-- <p class="error-ov">Please correct marked errors.</p> -->
+            <!-- add class of error to next div if error state-->
+            <div class="quest">
+                <label for="selectex">Select the level of access needed: </label>
+                <select id="selectex">
+                    <option>Choose one ...</option>
+                    <option>PRR Role Instructor (With SSN)</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                </select>
+            </div>
+
+            <div class="quest hidden">
+                <div class="followup">
+                    <label for="df">You have requested SSN access. Please explain why this person requires.... </label>
+                    <textarea id="df"></textarea>
+                </div>
+            </div>
+
+            <div class="quest">
+                <label for="wh">Select the VPD needed: </label>
+                <select id="wh" class="input-sm">
+                    <option>UIC </option>
+                    <option>UIS</option>
+                    <option>UIUC</option>
+                </select>
+            </div>
+
+            <div class="modal-actions"><button type="submit" class="button">Save these settings</button></div>
+
+
+        </form>
+
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../../js/app.js"></script>
+</body>
+
+</html>

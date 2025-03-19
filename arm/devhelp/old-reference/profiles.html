@@ -1,0 +1,372 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select profiles : University of Illinois Access Rights Management | University of Illinois System </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+    <header>
+
+        <div class="topbrand">
+            <div class="grid-x">
+               <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <span>Lauren Curtis <span class="sdetail">(651321699)</span></span>
+
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <a href="dash.html"><img src="../../img/appname.png" alt="Access Rights Management application"></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+                 <div class="burger"> <button type="button" data-toggle="mob-menu"><img src="../../img/hamburger.png" alt=" "
+                            aria-label="Open main menu"></button> Menu</div>
+
+                <ul id="mob-menu" class="main-menu" data-toggler=".shown">
+                    <li><a href="">Request Inbox</a></li>
+                    <li><a href="request.html">Manage Access</a> </li>
+                    <li><a href="inboxm.html">My Submissions</a> </li>
+                    <li><a href="">Reports</a></li>
+                    <li>Templates</li>
+                    <li>Preferences</li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <section class="target">
+                <div class="grid-x">
+                    <div class="cell medium-2 large-3 is-for">
+                        <h1>Add or edit access</h1>
+                    </div>
+                    <div class="cell medium-8 large-7 target-summary is-person">
+
+                        <div class="profile-type-name">
+
+                            <h2>Norma Desmond</h2>
+                        </div>
+                        <div class="profile-ids">
+                            <div><strong>ndesmond</strong> / 65214551</div>
+                        </div>
+
+                    </div>
+                    <div class="cell medium-2 target-redo"><a href="search.html">Search again</a>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid-x">
+                <div class="cell bodycard">
+                    <h1 class="result-head">Select or edit profiles</h1>
+
+                    <section class="picker group-student">
+                        <h2>General learner, <span class="cat-top">Student information</span> </h2>
+                        <div class="profile-set">
+                            <h3 class="is-data">Some kind of reporting name </h3>
+                            <div class="profile-set-info"><button class="button clear" data-open="def-1">Profile
+                                    definitions</button>
+                            </div>
+
+                            <div id="def-1" class="reveal definition-modal" data-reveal
+                                aria-labelledby="Profile definitions for NAME OF THE APP HERE">
+                                <h1>Name of the application: Profile definitions</h1>
+                                <p>{Name of the app} is ad fajdl lajdf dfds. a sdifuoiasu fdjs fjasdufsau </p>
+                                <dl>
+                                    <dt>Profile one</dt>
+                                    <dd>kfjaldjflsjl asdlfj sdj</dd>
+                                    <dt>Profile two </dt>
+                                    <dd>Outline or definition</dd>
+
+
+                                </dl>
+                                <button class="close-button" data-close aria-label="Close modal" type="button">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <ul class="profile-list">
+                                <li>
+                                    <div class="profile-text">Name of profile
+
+                                    </div>
+                                    <div class="picker-actions"><button type="button" class="button pickme"
+                                            data-open="profile-1-example">Add</button>
+                                    </div>
+
+                                </li>
+
+                                <div class="reveal form-modal" id="profile-1-example" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Category Name > Subcategory name > Application or report/data
+                                            name > Profile name</div>
+                                        <h1>Set permission details for this profile
+                                        </h1>
+
+                                        <p class="form-direction">All fields
+                                            required unless noted. If you don't know yet what the settings should be,
+                                            skip this profile and add it later, after getting clarification.
+                                        </p>
+                                    </div>
+
+
+                                    <div class="quest">
+                                        <label for="selectex">Select the level of access needed: </label>
+                                        <select id="selectex">
+                                            <option>Choose one ...</option>
+                                            <option selected>PRR Role Instructor (With SSN)</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="quest hidden">
+                                        <div class="followup">
+                                            <label for="df">You have requested SSN access. Please explain why this
+                                                person
+                                                requires.... </label>
+                                            <textarea id="df"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-actions"><button type="submit" class="button">Save these
+                                            settings</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <li>
+                                    <div class="profile-text">Name of profile
+
+                                    </div>
+                                    <div class="picker-actions"><button type="button" class="button pickme">Add</button>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="profile-text">Name of profile
+
+                                    </div>
+                                    <div class="picker-actions"><span class="prov">Provisioned</span>
+                                        <button type="button" class="button clear del-x"
+                                            aria-label="Delete profile [name here]"></button>
+                                        <span class="edit-setting"><button class="button clear">Change
+                                                settings</button></span>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="profile-text">Name of profile
+                                        <div class="profile-dets">Details and settings
+                                            <p>Provisioned 05/15/2021, tvaughan; approved by joegills</p>
+                                        </div>
+                                    </div>
+                                    <div class="picker-actions"><span class="prov">Provisioned</span>
+                                        <button type="button" class="button clear del-x"
+                                            aria-label="Delete profile [name here]"></button>
+                                        <span class="edit-setting"><button class="button clear">Change
+                                                settings</button></span>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="profile-set">
+                            <h3 class="is-an-app">Application name that is an app</h3>
+                            <div class="profile-set-info"><button class="button clear">Profile definitions</button>
+                            </div>
+                            <ul class="profile-list">
+                                <li>
+                                    <div class="profile-text">Name of profile
+                                        <div class="profile-dets">Details and settings</div>
+                                    </div>
+                                    <div class="picker-actions"><span class="prov">Provisioned</span>
+                                        <button type="button" class="button clear del-x"
+                                            aria-label="Delete profile [name here]"></button>
+                                        <span class="edit-setting"><button class="button clear">Change
+                                                settings</button></span>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="profile-text">Name of profile
+
+                                    </div>
+                                    <div class="picker-actions"><span class="prov">Provisioned</span>
+                                        <button type="button" class="button clear del-x"
+                                            aria-label="Delete profile [name here]"></button>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="profile-text">Name of profile
+
+                                    </div>
+                                    <div class="picker-actions"><span class="prov prov-prog">In progress</span>
+                                        <button type="button" class="button clear del-x"
+                                            aria-label="Delete profile [name here]"></button>
+
+                                        <span class="inprogress">Submitted 02/15/2024</span>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <h2>Registration and Pre-registration, <span class="cat-top">Student information</span>
+                        </h2>
+
+                        <div class="profile-set">
+                            <h3 class="is-data">Reporting something</h3>
+                        </div>
+                        <ul class="profile-list">
+                            <li>
+                                <div class="profile-text">Name of profile
+                                    <div class="profile-dets">Details and settings</div>
+                                </div>
+                                <div class="picker-actions">
+                                    <span class="added-to-cart">In cart</span>
+
+                                    <button type="button" class="button clear del-x"
+                                        aria-label="Delete profile [name here]"></button>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="profile-text">Name of profile
+                                    <div class="profile-dets">Details and settings</div>
+                                </div>
+                                <div class="picker-actions">
+                                    <span class="added-to-cart">In cart</span>
+
+                                    <button type="button" class="button clear del-x"
+                                        aria-label="Delete profile [name here]"></button>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="profile-text">Name of profile
+                                    <div class="profile-dets">Details and settings</div>
+                                </div>
+                                <div class="picker-actions">
+                                    <span class="prov">Provisioned</span>
+
+                                    <button type="button" class="button clear del-x"
+                                        aria-label="Delete profile [name here]"></button>
+                                    <span class="edit-setting"><button class="button clear">Change
+                                            settings</button></span>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+
+
+                        </p>
+                    </section>
+                    <!-- Note: we will add these functions later, but before initial rollout-->
+                    <!-- <div class="tagon ">
+                        <p class="add-picks"><button type="button" class="button clear">Add another
+                                topic area</button>
+                        <div>tbd</div>
+                    </div>
+                    <div class="tagon ">
+                        <p class="add-picks"><button type="button" class="button clear">Add profiles not listed</button>
+                        <div>tbd</div>
+                    </div>
+                -->
+
+
+                    <div class="actionbar">
+                        <div class="part"> <button type="button" class="button">Continue</button></div>
+                        <div class="part">
+                            <p class="util-back"><a href="index">Cancel and return to dashboard</a> </p>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script type="text/javascript" src="js/accessible-autocomplete.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script>
+        accessibleAutocomplete.enhanceSelectElement({
+            selectElement: document.querySelector('#auto-unit')
+        });
+    </script>
+</body>
+
+</html>

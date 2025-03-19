@@ -1,0 +1,537 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pattern Examples : University of Illinois System Access | University of Illinois System </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+    <header>
+
+        <div class="topbrand">
+            <div class="grid-x">
+                <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <a href="settings.html" class="button clear prefs" aria-label="Preferences"><img src="../img/unused/prefs.png"
+                            alt="Preferences"></a>
+
+
+                    <span>Billy Donovan <span class="sdetail">658884541</span></span>
+                    <label for="current-unit" class="show-for-sr">Select unit to manage:</label>
+                    <select class="pulldown-look" id="current-unit">
+                        <option selected>Basketball Theory, Dept of</option>
+                        <option>Sports and Leisure, Div of</option>
+                    </select>
+
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <!-- no link on the main page-->
+                    <a href="index"><img src="../img/appname.png" alt="Access Rights Management application"></a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell bodycard">
+
+                    <p>Note: This page is a comprehensive list of the types of form elements/other content that might
+                        appear in the settings modal. This is not an actual screen in the app; it's just here to define
+                        the various types of content in one place. </p>
+                    <div class=" form-modal">
+                        <div class="modal-top">
+                            <div class="bread">Category Name > Subcategory name > Application or report/data name </div>
+                            <h1>Set permission details for {name of profile}
+                            </h1>
+
+                            <p class="form-direction">This profile requires additional settings. All fields are required
+                                unless noted.
+                            </p>
+                        </div>
+
+                        <form class="detail-form">
+
+                            <div class="callout for-guide">Errors
+                               
+                            </div>
+
+                            <p class="error-summary">Error-summary</p>
+
+                            <div class="error-ov">error-ov</div>
+
+                            <div class="error-note">error-note</div>
+
+                            <div class="quest error">
+                                <label for="wh">Select the campus needed: </label>
+                                <select id="wh">
+                                    <option>Pick</option>
+                                    <option>UIC</option>
+                                    <option>UIS</option>
+                                    <option>UIUC</option>
+                                    <option>UofI Admin</option>
+                                </select>
+                            </div>
+
+
+                            <div class="callout for-guide">Simple select.
+                                <p>Use to show short number of mutually exclusive choices (~ 7 max). Select can also be
+                                    used for larger lists, if the contents and order are immediately familiar to users.
+                                    Example: showing the list of US states in an ordering situation. The user isn't
+                                    expected to have to read all options, and the order is standard.</p>
+                            </div>
+
+                            <p class="error-ov">Please correct marked errors.</p>
+                            <!-- add class of error to next div if error state-->
+
+                            <div class="quest">
+                                <label for="wh">Select the campus needed: </label>
+                                <select id="wh">
+                                    <option>Pick</option>
+                                    <option>UIC</option>
+                                    <option>UIS</option>
+                                    <option>UIUC</option>
+                                    <option>UofI Admin</option>
+                                </select>
+                            </div>
+
+
+                            <div class="callout for-guide">
+                                Follow-up pattern
+                                <p>Could be any type of form element. Displays only when triggered by previous question;
+                                    disappears if the trigger is changed. Visually indented with an arrow visual.</p>
+                            </div>
+
+                            <div class="quest">
+                                <label for="selectex">Select the level of access needed: </label>
+                                <select id="selectex">
+                                    <option>Choose one ...</option>
+                                    <option selected>PRR Role Instructor (With SSN)</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                            <div class="quest">
+                                <div class="followup">
+                                    <label for="df">You have requested SSN access. Please explain why this person
+                                        requires.... </label>
+                                    <textarea id="df"></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="callout for-guide">
+                                Checkboxes
+                                <p>To show a list of choices where >1 selection is possible. Should note if <em>no</em>
+                                    selections are valid. Better than selects if additional information or context is
+                                    needed/</p>
+                            </div>
+                            <div class="quest">
+                                <!-- example of placement of error message-->
+                                <!-- <div class="error-note">Required field</div>-->
+                                <fieldset class="checks">
+
+                                    <legend>Check all that you like: </legend>
+                                    <div>
+                                        <input type="checkbox" name="checkboxes" id="ch1">
+                                        <label for="ch1">Lemon</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkboxes" id="ch2">
+                                        <label for="ch2">Blueberry</label>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+
+                            <div class="quest">
+                                <fieldset class="radios">
+                                    <legend>Notification settings:</legend>
+                                    <div>
+
+                                        <input type="checkbox" name="not" id="ch2">
+                                        <label for="ch2">Comments
+
+                                            <span>
+                                                Get notified when someones posts a comment on a posting
+
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="not" id="ch22">
+                                        <label for="ch22">Candidates
+                                            <span>Get notified when a candidate applies for a job</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="not" id="ch23">
+                                        <label for="ch23">Offers
+                                            <span>Get notified when a candidate accepts or rejects an offer</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+
+                            <div class="callout for-guide">
+                                Radios
+                                <p>To show a list of choices where only one selection is possible. </p>
+                            </div>
+                            <div class="quest">
+                                <fieldset class="radios">
+                                    <legend>Check your favorite:</legend>
+                                    <div>
+                                        <input type="radio" name="rads" id="ra1">
+                                        <label for="ra1">Lemon</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="rads" id="ra2">
+                                        <label for="ra2">Blueberry</label>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+
+
+
+                            <div class="callout for-guide">
+                                Textarea
+                                <p>Displayed size should hint to expected content length.</p>
+                            </div>
+
+                            <div class="quest ">
+
+                                <label for="qw">Please enter whatever extended text is needed:
+                                </label>
+                                <textarea id="qw"></textarea>
+
+                            </div>
+
+
+                            <div class="callout for-guide">
+                                Element group
+                                <p>Used for sequencial narrowing/selecting. Contents for each element could be driven by
+                                    previous selections. Can be used to build a list of values to add, in which case the
+                                    list shows underneath the tool. </p>
+                            </div>
+
+                            <div class="quest">
+                                <fieldset>
+                                    <legend>Select units that require access:</legend>
+
+                                    <div class="sequence-entry-block bottom-align">
+
+
+                                        <div class="seb-one"><label for="coa">COA</label>
+                                            <select>
+                                                <option>Pick</option>
+                                                <option>1-UIUC</option>
+                                                <option>2-UIC</option>
+                                                <option>3-UIS</option>
+                                                <option>4-Admin</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="seb-one"><label for="coll">College</label>
+                                            <input type="text" id="coll">
+                                        </div>
+
+                                        <div class="seb-one"><label for="dept">Department</label>
+                                            <input type="text" id="dept" disabled>
+                                        </div>
+                                        <div class="seb-one"><label for="org">Org</label>
+                                            <input type="text" id="org" disabled>
+                                        </div>
+
+                                        <div class="seb-one">
+                                            <button type="button" aria-label="Look up this code" class="button twbtn"
+                                                type="button">Add</button>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+                                <!-- next div shows only when an addition has been made, or person already has some access-->
+                                <div class="selections grid-x">
+                                    <div class="cell medium-7">
+                                        <p><strong>Access selected:</strong> </p>
+                                        <ul>
+                                            <li>Name of unit picked above <button class="button clear small"
+                                                    aria-label="Remove name-listed-here">[remove]</button>
+                                            </li>
+                                            <li>A second unit they picked above <button class="button clear small"
+                                                    aria-label="Remove name-of-this-unit">[remove]</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cell medium-5"> <button class="button small twbtn">Add
+                                            another</button>
+                                    </div>
+
+                                    <div class="medium-12 hidden">
+                                        <fieldset>
+                                            <legend>Add another unit:</legend>
+
+                                            <div class="sequence-entry-block bottom-align">
+
+
+                                                <div class="seb-one"><label for="coa">COA</label>
+                                                    <select>
+                                                        <option>Pick</option>
+                                                        <option>1-UIUC</option>
+                                                        <option>2-UIC</option>
+                                                        <option>3-UIS</option>
+                                                        <option>4-Admin</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="seb-one"><label for="coll">College</label>
+                                                    <input type="text" id="coll">
+                                                </div>
+
+                                                <div class="seb-one"><label for="dept">Department</label>
+                                                    <input type="text" id="dept">
+                                                </div>
+                                                <div class="seb-one"><label for="org">Org</label>
+                                                    <input type="text" id="org">
+                                                </div>
+
+                                                <div class="seb-one">
+                                                    <button type="button" aria-label="Look up this code"
+                                                        class="button twbtn2" type="button">Add</button>
+                                                </div>
+
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="callout for-guide">
+                                Instructional text
+                                <p>Should be rarely needed. There are two flavor.</p>
+                            </div>
+
+                            <div class="quest">
+                                <p class="instruct">
+                                    This is an example of extended instructions that might go along with some of the
+                                    questions.
+                                </p>
+
+                                <p class="instruct big-note">This is also instructional text. This is really important!
+                                </p>
+                            </div>
+
+                            <div class="callout for-guide">
+                                Range input group
+
+                            </div>
+
+                            <div class="quest">
+
+                                <fieldset class="input-group">
+                                    <legend>Enter a range:</legend>
+                                    <span class="input-group-label">From</span>
+                                    <input class="input-group-field" type="text">
+                                    <span class="input-group-label">To</span>
+                                    <input class="input-group-field" type="text">
+                                    <div class="input-group-button">
+                                        <input type="submit" class="button twbtn" value="Set">
+                                    </div>
+                                </fieldset>
+
+
+
+                            </div>
+
+                            <div class="callout for-guide">
+                                Example of conflict notice
+                                <p>Shows disabled state if selections can be in conflict.</p>
+
+                            </div>
+                            <div class="quest">
+                                <fieldset class="checks">
+                                    <legend>Assign a role:</legend>
+                                    <div>
+
+                                        <input type="checkbox" name="lim-ch" id="ee" checked>
+                                        <label for="ee">Grand master
+                                        </label>
+                                    </div>
+                                    <div class="conflix">
+
+                                        <input type="checkbox" name="lim-ch" id="ff" disabled>
+                                        <label for="ff">Wizard
+                                            <span class="conflix-reason">[ This role is unavailable if Grand Master is
+                                                selected. ]</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="lim-ch" id="gg">
+                                        <label for="gg">Pleb
+
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+
+                            <div class="callout for-guide">
+                                Autocomplete select
+                                <p>It's a select (a defined list) that looks like a text input. Restricts options as the
+                                    user types, limiting the otherwise unmanageably long list to something usable.</p>
+                            </div>
+
+                            <div class="quest">
+                                <label for="location">For this department:</label>
+                                <select id="location" aria-label="Select department; begin typing name or org code">
+                                    <option value="" disabled selected hidden></option>
+                                    <option>003902- Chemistry</option>
+                                    <option>100222 - English</option>
+                                    <option>909098 - Physics</option>
+                                </select>
+                                <div id="location2" class="auto-hint" aria-hidden="true">Begin typing name or org code
+                                </div>
+                            </div>
+
+                            <div class="quest">
+                                <fieldset>
+                                    <legend>Select units that require access:</legend>
+
+                                    <div class="autocom-block">
+                                        <div class="nonautopart"><label for="coa">COA</label>
+                                            <select>
+                                                <option>Pick</option>
+                                                <option>1-UIUC</option>
+                                                <option>2-UIC</option>
+                                                <option>3-UIS</option>
+                                                <option>4-Admin</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="autopart"><label for="cola">Unit</label>
+                                            <select id="cola">
+                                                <option></option>
+                                                <option>whatever</option>
+                                                <option>Dynamically populated</option>
+                                            </select>
+                                        </div>
+
+
+
+                                        <div class="btn-for-block">
+                                            <button type="button" aria-label="Look up this code" class="button twbtn2"
+                                                type="button">Add</button>
+                                        </div>
+
+                                    </div>
+
+                                </fieldset>
+
+
+                            </div>
+
+
+                            <div class="modal-actions"><button type="submit" class="button">Save these settings</button>
+                            </div>
+
+
+                        </form>
+
+
+                        <button class="close-button" data-close aria-label="Close modal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script type="text/javascript" src="../js/accessible-autocomplete.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        accessibleAutocomplete.enhanceSelectElement({
+            selectElement: document.querySelector('#location')
+        });
+        accessibleAutocomplete.enhanceSelectElement({
+            selectElement: document.querySelector('#cola')
+        })
+    </script>
+</body>
+
+</html>

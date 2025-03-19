@@ -1,0 +1,1039 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Sink Reference</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/app.css">
+    <link rel="stylesheet" href="../../css/devhelp.css">
+
+
+</head>
+
+<body>
+
+
+    <main id="main" class="ks-main">
+        <div class="grid-container">
+            <div class="grid-x">
+
+                <!--Table of Contents-->
+                <div class="cell bodycard">
+                    <div class="grid-x grid-margin-y grid-margin-x">
+                        <div class="cell">
+                            <h1>ARM Kitchen Sink</h1>
+                        </div>
+                        <div class="cell" id="toc">
+                            <h2>Table of Contents</h2>
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#basic"> Basic Components </a>
+                                        <ul>
+                                            <li><a href="#basic-text">Basic Text</a></li>
+                                            <li><a href="#custom-text">Custom Text</a></li>
+                                            <li> <a href="#buttons">Buttons</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#foundation">Foundation Components</a>
+                                        <ul>
+                                            <li><a href="#f-buttons">Buttons</a></li>
+                                            <li><a href="#f-callouts">Callouts</a></li>
+                                            <li> <a href="#f-badges">Badges</a></li>
+                                            <li> <a href="#f-labels">Labels</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#layout"> Layout </a>
+                                        <ul>
+                                            <li><a href="#ationbars">Action Bars</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#containers"> Containers </a>
+                                        <ul>
+                                            <li><a href="#callouts">Callouts</a></li>
+                                            <li><a href="#accordions">Accordions</a></li>
+                                            <li><a href="#tabs">Tabs</a></li>
+                                            <li><a href="#modals">Modals</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#custom-content-components"> Custom Content Components </a>
+                                        <ul>
+                                            <li><a href="#usertargets">User Targets</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Basic -->
+                <div class="cell bodycard" id="basic">
+                    <div class="grid-x grid-margin-y grid-margin-x">
+                        <div class="cell ks-heading">
+                            <h2>Basic Components</h2>
+                            <a href="#toc">Back to Table of Contents</a>
+                        </div>
+
+                        <!--Basic Text styling-->
+                        <div class="cell ks-section" id="basic-text">
+                            <h3>Basic Text Styling</h3>
+                            <div class="grid-x grid-margin-y grid-margin-x">
+                                <div class="cell small-4 medium-4 large-2">
+                                    <h1>Heading 1</h1>
+                                    <h2>Heading 2</h2>
+                                    <h3>Heading 3</h3>
+                                    <h4>Heading 4</h4>
+                                    <h5>Heading 5</h5>
+                                    <h6>Heading 6</h6>
+
+                                </div>
+
+                                <div class="cell small-4 medium-4 large-2">
+                                    <ul>
+                                        <li>Unordered List</li>
+                                        <li>List Item</li>
+                                        <li>List Item</li>
+                                    </ul>
+                                    <ol>
+                                        <li>Unordered List</li>
+                                        <li>List Item</li>
+                                        <li>List Item</li>
+                                    </ol>
+                                </div>
+
+                                <div class="cell small-4 medium-4 large-2 ">
+                                    <a href="#">This is a link.</a>
+                                </div>
+
+                                <div class="cell large-6 ">
+                                    <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Quisque at blandit risus, quis volutpat enim. Sed vel nisi quis odio faucibus
+                                        elementum.
+                                        Mauris facilisis quis sem ut tincidunt. Vivamus at eleifend urna. Pellentesque
+                                        cursus ut
+                                        arcu nec vulputate. Aenean sollicitudin bibendum commodo. Nulla facilisi. In sed
+                                        tempor purus.</p>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+                        <!--Custom Text styling-->
+                        <div class="cell ks-section" id="custom-text">
+                            <h3>Custom Text Styling</h3>
+
+                            <p class="fineprint">.fineprint - not currently used anywhere</p>
+                            <p class="smallest">.smallest - currently used for "more history" button on request boxes
+                            </p>
+
+                            <p class="em">.em - not currently used anywhere</p>
+
+                            <p class="gentext">.gentext - Currently used on intro text on USC Submission table pages</p>
+                            <p class="standout-text">.standout-text - not currently used anywhere. Same as
+                                instructions-ov except no padding</p>
+
+                            <p class="instructions-ov">.instructions-ov - used for instructions on ov pages</p>
+
+
+                            <p class="bigtext">.bigtext - Currently used on intro text on USC request access
+                                confirmation pages</p>
+                            <p class="big-note">.big-note - used on form-patterns devhelp pages</p>
+
+                            <p class="expiring">.expiring - Use on items set to expire soon in inboxes </p>
+                            <p class="hold">.hold - Use on SAM pre-processing inbox for items they've placed a hold on
+                            </p>
+
+                            <p class="alert-note">.alert-note - Use on p for alerts </p>
+
+                            <p class="confirm-check">.confirm-check - Use on h1 for confirmation messages on req access
+                                confirmation page, tweaked css to allow it to be used on paragraphs as well</p>
+
+                            <div class="caveat">
+                                <p> Used on div around p currently, and the text needs to be two lines in order for the
+                                    icon to not cut off at the bottom (should fix in future). </p>
+                            </div>
+
+
+                        </div>
+
+                        <!--Button Styling-->
+                        <div class="cell ks-section" id="buttons">
+                            <h3>Buttons</h3>
+                            <div>
+                                <h4>Currently Used Buttons</h4>
+                                <button type="button" class="button">Button</button>
+
+                                <button type="button" class="button clear small">clear</button>
+                                <button type="button" class="button clear small can-btn">clear + can-btn</button>
+
+                                <button type="button" class="button util-btn">util-btn</button>
+                                <button type="button" class="button neutral-btn"> neutral-btn</button>
+                                <button type="button" class="button caution-btn">caution-btn</button>
+                                <button type="button" class="button secbtn">secbtn</button>
+
+                                <button type="button" class="button twbtn">twbtn</button>
+                                <button type="button" class="button twbtn2">twbtn2</button>
+                            </div>
+                            <div>
+                                <h4>Currently Unused Buttons</h4>
+                                <button type="button" class="button prime-btn">prime-btn</button>
+
+                                <button type="button" class="button req-btn">req-btn</button>
+                                <button type="button" class="button req-edit-btn">req-edit-btn</button>
+                                <button type="button" class="button added-state">added-state</button>
+                                <button type="button" class="button sec-btn">sec-btn</button>
+
+                                <button type="button" class="button remove ">remove</button>
+                                <button type="button" class="button util">util</button>
+                                <button type="button" class="button util-back">util-back</button>
+                                <button type="button" class="button pickme">pickme</button>
+                            </div>
+                            <div>
+                                <h4>Icon Only buttons</h4>
+
+
+
+                                <button type="button" class="button clear del-x"></button>
+                                <button type="button" class="button clear info-btn"></button>
+                                <button type="button" class="button clear train-btn"></button>
+                                <button type="button" class="button clear small hist-btn"></button>
+
+                                <button type="button" class="button clear small dets-btn"></button>
+                                <button class="prof-add-btn"></button>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Foundation -->
+                <div class="cell bodycard" id="foundation">
+                    <div class="grid-x grid-margin-y grid-margin-x">
+                        <div class="cell ks-heading">
+                            <h2>Foundation Components </h2>
+                            <a href="#toc">Back to Table of Contents</a>
+
+                        </div>
+                        <!--Foundation Color built-in components-->
+                        <div class="cell ks-section" id="f-buttons">
+
+                            <h3>Foundation Buttons</h3>
+                            <button class="button primary">Primary</button>
+                            <button class="button secondary">secondary</button>
+                            <button class="button success">success</button>
+                            <button class="button warning">warning</button>
+                            <button class="button alert">alert</button>
+                        </div>
+                        <div class="cell ks-section" id="f-callout">
+                            <h3>Foundation Callouts</h3>
+                            <div class="callout primary">
+                                <h5>Primary callout</h5>
+                            </div>
+                            <div class="callout secondary">
+                                <h5>Primary callout</h5>
+                            </div>
+                            <div class="callout success">
+                                <h5>Primary callout</h5>
+                            </div>
+                            <div class="callout warning">
+                                <h5>Primary callout</h5>
+                            </div>
+
+                            <div class="callout alert">
+                                <h5>Primary callout</h5>
+                            </div>
+                        </div>
+                        <div class="cell ks-section" id="f-badges">
+
+                            <h3>Foundation Badges</h3>
+                            <span class="badge primary">1</span>
+                            <span class="badge secondary">2</span>
+                            <span class="badge success">S</span>
+                            <span class="badge alert">A</span>
+                            <span class="badge warning">W</span>
+                        </div>
+                        <div class="cell ks-section" id="f-labels">
+
+                            <h3>Foundation Labels</h3>
+                            <span class="label primary">Primary Label</span>
+                            <span class="label secondary">Secondary Label</span>
+                            <span class="label success">Success Label</span>
+                            <span class="label alert">Alert Label</span>
+                            <span class="label warning">Warning Label</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layout -->
+            <div class="cell bodycard" id="layout">
+                <div class="grid-x grid-margin-y grid-margin-x">
+                    <div class="cell ks-heading">
+                        <h2>Layout </h2>
+                        <a href="#toc">Back to Table of Contents</a>
+
+                    </div>
+                    <!--Action bars-->
+                    <div class="cell ks-section" id="ationbars">
+                        <h3>Action Bars</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Containers -->
+            <div class="cell bodycard" id="containers">
+                <div class="grid-x grid-margin-y grid-margin-x">
+                    <div class="cell ks-heading">
+                        <h2>Containers</h2>
+                        <a href="#toc">Back to Table of Contents</a>
+
+                    </div>
+                    <!--Callouts-->
+                    <div class="cell ks-section " id="callouts">
+                        <h3>Callouts</h3>
+                        <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="cell">
+                                <div class="callout ">
+                                    Standard call out, no additional classes
+                                </div>
+
+                                <div class="callout notice">
+                                    "notice" callout, not currently used anywhere
+                                </div>
+
+                                <div class="callout warn">
+                                    "warn" callout, currently used on selectApp page of request access if they try
+                                    to proceed without selecting anything
+                                </div>
+
+                                <div class="callout ack">
+                                    "ack" Callout, success/acknowledgement
+                                </div>
+
+                                <div class="callout ack-2">
+                                    "ack" Callout, success/acknowledgement
+                                </div>
+
+                                <div class="callout err-callout">
+                                    "err-callout" Red error callout that has a ! icon
+                                </div>
+
+                                <div class="callout reminder-callout">
+                                    "reminder-callout" Brown reminder callout with a tied string around finger icon
+                                </div>
+
+
+                                <div class="cell callout callout-act-needed  data-closable">
+                                    <p><strong>Note:</strong> This is an a "callout-act-needed" callout used on
+                                        dash: </p>
+                                    <ul>
+                                        <li>2 requests have been denied by authorizers. <a href="mysubs.html"
+                                                aria-label="View the details of recently denied requests">View the
+                                                details here</a>.
+                                        </li>
+                                        <li>3 requests have not been authorized yet, and are in danger of
+                                            expiring.<a href="mysubs.html"
+                                                aria-label="Review the status of submitted requests."> Review the
+                                                status
+                                                here</a>.</li>
+                                        <li>4 of your unsubmitted/saved requests are about to expire. <a
+                                                href="saved.html"
+                                                aria-label="Review unsubmitted / saved requested requests.">Review
+                                                them
+                                                here</a>.</li>
+                                    </ul>
+                                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                                        <span aria-hidden="true">&times;</span>
+                                </div>
+
+                                <p class="missing">Missing Callout.
+                                    Styled p tag instead of div, used on request access profiles page
+                                </p>
+
+                                <div class="callout for-guide">
+                                    <p> "for-guide" callout. Used internally for documentation guides for
+                                        devs/designer</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Accordions-->
+                    <div class="cell ks-section" id="accordions">
+                        <h3>Accordions</h3>
+                        <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="cell"><!--Standard Accordions-->
+                                <h3>Standard Accordions</h3>
+                                <ul class="accordion selection-accord" data-accordion data-multi-expand="true"
+                                    data-allow-all-closed="true">
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 1</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 1 Content</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 2</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 2 Content</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 3</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 3 Content</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="cell access-list"><!--Access List accordions-->
+                                <p>Access List Accordions</p>
+                                <ul class="accordion access-top-level" data-accordion data-multi-expand="true"
+                                    data-allow-all-closed="true">
+
+                                    <!-- IF THERE IS ONLY ONE SECTION, ADD CLASS 'IS-ACTIVE' TO THE LI CLASS SO IT IS AUTOMATICALLY OPEN-->
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3>Accordion 1 Title</h3>
+                                        </a>
+
+                                        <div class="accordion-content" data-tab-content>
+                                            Accordion 1 content
+
+
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3>Accordion 2 Title</h3>
+                                        </a>
+
+                                        <div class="accordion-content" data-tab-content>
+                                            Accordion 2 content
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3>Accordion 3 Title</h3>
+                                        </a>
+
+                                        <div class="accordion-content" data-tab-content>
+                                            Accordion 3 content
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--Tabs-->
+                    <div class="cell ks-section" id="tabs">
+                        <h3>Page content Tabs</h3>
+
+                        <ul class="tabs pagepanel" data-tabs id="track-tabs">
+                            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Tab 3</a></li>
+                        </ul>
+
+                        <div class="tabs-content pagepanel-content" data-tabs-content="track-tabs">
+                            <div class="tabs-panel is-active" id="panel1">
+                                <p>Panel 1 Content</p>
+                            </div>
+
+                            <div class="tabs-panel" id="panel2">
+                                <p>Panel 2 Content</p>
+                            </div>
+
+                            <div class="tabs-panel" id="panel3">
+                                <p>Panel 3 Content</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Modals-->
+                    <div class="cell ks-section" id="modals">
+                        <h3>Reveal Modals</h3>
+
+                        <div class="grid-x grid-margin-x grid-margin-y">
+
+
+                            <div class="cell"><!--gen-modal-->
+                                <p>Gen modal </p>
+                                <button class="button" data-open="gen-modal-ex">Click me for a modal</button>
+                                <div class="reveal gen-modal" id="gen-modal-ex" data-reveal>
+                                    <h1>Awesome. I Have It.</h1>
+                                    <p class="lead">Your couch. It is mine.</p>
+                                    <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!--hist-modal-->
+                            <div class="cell">
+                                <p>History Modal- Used on View Access pages to view access history on a particular
+                                    profile</p>
+                                <button type="button" class="button" aria-label="History request #1356"
+                                    data-open="history1">History Modal</button>
+                                <div class="reveal hist-modal" id="history1" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Student information > General learner & registration >
+                                        </div>
+                                        <h1>Access History for
+                                            <span>Banner Student: Hold maintenance </span>
+                                        </h1>
+
+                                    </div>
+
+
+                                    List dates and sources of requests that yielded this access; what info needs to
+                                    be displayed?
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!--form-modal (used on old profiles page)-->
+                            <div class="cell">
+                                <p>form-modal</p>
+                                <button class="button" data-open="profile-1-example">Form Modal</button>
+
+                                <div class="reveal form-modal" id="profile-1-example" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Category Name > Subcategory name > Application or
+                                            report/data
+                                            name > Profile name</div>
+                                        <h1>Set permission details for this profile
+                                        </h1>
+
+                                        <p class="form-direction">All fields
+                                            required unless noted. If you don't know yet what the settings should
+                                            be,
+                                            skip this profile and add it later, after getting clarification.
+                                        </p>
+                                    </div>
+
+
+                                    <div class="quest">
+                                        <label for="selectex">Select the level of access needed: </label>
+                                        <select id="selectex">
+                                            <option>Choose one ...</option>
+                                            <option selected>PRR Role Instructor (With SSN)</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="quest hidden">
+                                        <div class="followup">
+                                            <label for="df">You have requested SSN access. Please explain why this
+                                                person
+                                                requires.... </label>
+                                            <textarea id="df"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-actions"><button type="submit" class="button">Save these
+                                            settings</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!--settings + form different version of form-modal (used on new profile page)-->
+                            <div class="cell">
+                                <p>settings popup with form-modal inside</p>
+
+                                <button class="button" data-open="exampleSetting">Settings Modal</button>
+
+                                <div class="reveal large settings-popup" id="exampleSetting" data-reveal
+                                    aria-labelledby="setting-head">
+                                    <h1 id="setting-head">Specify settings for Name-of-profile-here</h1>
+
+
+                                    <p class="error-summary">2 marked setting fields must be completed below. </p>
+
+                                    <form class="form-modal">
+                                        <div class="setting-item">
+                                            <div class="not-shared">
+                                                <label for="set1">Level of access needed:</label>
+                                                <select id="set1">
+                                                    <option>Option 1</option>
+                                                    <option>Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <!-- <p class="shared-notice">
+                                                                        <span>Shared setting used</span>: This profile makes use of the following setting, which has been set previously and is used by other profiles. 
+                                                                    </p>-->
+
+
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which might be used by other profiles. If added, they will
+                                                inherit
+                                                the
+                                                setting you indicate here.
+                                            </p>
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <select id="set1">
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which has been set previously and is used by other
+                                                profiles.
+                                            </p>
+
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <div class="shared-value">Whatever the setting value is</div>
+                                                    <select id="set1" class="hidden">
+                                                        <option selected>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+                                                    <div class="align-offset"><button type="button"
+                                                            class="txt-btn">Change
+                                                            setting</button></div>
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                    You can change this setting, but doing so will affect all other
+                                                    profiles
+                                                    which use this setting:
+                                                    <ul class="shared-affects">
+                                                        <li>Profile #545</li>
+                                                        <li>Profile #323</li>
+                                                        <li>Profile #876</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which has been set previously and is used by other
+                                                profiles.
+                                            </p>
+
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <select id="set1">
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+                                                    <div class="align-offset"><button type="button"
+                                                            class="txt-btn">Cancel
+                                                            change</button></div>
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                    You can change this setting, but doing so will affect all other
+                                                    profiles
+                                                    which use this setting:
+                                                    <ul class="shared-affects">
+                                                        <li>Profile #545</li>
+                                                        <li>Profile #323</li>
+                                                        <li>Profile #876</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <div class="not-shared">
+                                                <label for="just1">Justification for access needed:</label>
+                                                <textarea id="just1"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-action">
+                                            <button type="submit" class="button">Save settings</button>
+                                        </div>
+
+                                    </form>
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--info-modal-->
+                            <div class="cell">
+                                <p>Info Modal</p>
+
+                                <button type="button" class="button"
+                                    aria-label="Definition of pre-registration and registration"
+                                    data-open="info-def">Info Modal</button>
+                                <div class="reveal info-modal" id="info-def" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Category Name > Subcategory name > Application or
+                                            report/data name </div>
+                                        <h1>About { name of profile}
+                                        </h1>
+
+                                    </div>
+                                    <p class="training-req">Note: Completed FERPA training is required before access
+                                        can be granted. </p>
+
+                                    <p><span class="stress">Expected role:</span> Persons holding management
+                                        positions within the division who have
+                                        oversight authority and are
+                                        impowered to
+                                        make decisions in the best interest of the University. They will also
+                                        monitor documents to insure they
+                                        comply with all federal, state and university rules. They will have
+                                        maintenance and query access to all
+                                        processes and tables through menus and forms and will execute reports.</p>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--definition-modal -->
+                            <div class="cell">
+                                <p>Defintion Modal</p>
+                                <button type="submit" class="button" data-open="missed-req">Process this
+                                    request</button>
+
+                                <div class="reveal definition-modal" id="missed-req" data-reveal
+                                    aria-labelledby="modalheader-1">
+
+                                    <h1 id="modalheader-1">One or more requests were not decided.</h1>
+
+                                    <p>Select "Go back" to review the action page again. </p>
+                                    <p>Click "Continue" to proceed, which will return any skipped/undecided requests
+                                        to the inbox. </p>
+
+
+                                    <div class="optbar">
+                                        <button class="button neutral-btn" type="button" data-close>Go back &amp;
+                                            review</button> <button class="button" type="button">Continue with
+                                            decisions</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <!--status-reveal-->
+                            <div class="cell">
+                                <p> Status reveal</p>
+                                <a href="javascript:void();" data-open="status-main-pop"> #39985</a>
+                                <div class="reveal status-reveal" id="status-main-pop" data-reveal>
+                                    <div class="status-body">
+                                        <h1>Request #88888 <span>Submitted 01/15/24</span></h1>
+
+
+                                        <h2>For:</h2>
+                                        <p>PreferredFirst Lastname<br>
+                                            Sr title here | Education Administation [333]<br>
+                                            netidhere / 65unihere
+                                        </p>
+
+                                        <h2>Buy: </h2>
+                                        <p>{Submitter name}
+                                            <span>on behalf of {unit name }</span>
+                                        </p>
+
+                                        <h2>Prequested effective date:</h2>
+                                        <p>Nov 12, 2024 [edit]</p>
+                                    </div>
+
+                                    <div class="blanket-cancel checks">
+                                        <h2>Remaining {2} parts of this request</h2>
+
+                                        <label for="cancel-it"><input id="cancel-it" type="checkbox"
+                                                name="blanket-cancel">Cancel
+                                            all incomplete parts of
+                                            this request <strong>[Note: Clicking the Cancel items button below will
+                                                immediately
+                                                cancel the
+                                                remaining items. This action cannot be undone.</strong>] </label>
+                                        <button type="button" class="button">Cancel remaining items</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="req-part-name"><span class="part-no">(1) </span>
+                                    <a href="javascript:void();" data-open="item-detail">Modify{name of profile}
+                                        click me</a>
+                                </div>
+
+                                <div class="reveal status-reveal" id="item-detail" data-reveal>
+
+                                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                    <div class="status-banner">
+                                        <h1>Request #2222 - Part #3</h1>
+                                        <div>In process</div>
+                                        <p>Submitted: mm/dd/yyyy</p>
+
+                                    </div>
+
+                                    <div class="status-body">
+                                        <h2>For:</h2>
+                                        <p>PreferredFirst Lastname<br>
+                                            Sr title here | Education Administation [333]<br>
+                                            netidhere / 65unihere
+                                        </p>
+
+                                        <h2>Buy: </h2>
+                                        <p>{Submitter name}
+                                            <span>on behalf of {unit name }</span>
+                                        </p>
+
+                                        <h2>Details</h2>
+                                        <p>Add {name of profile }
+                                            <span>settings go here if applicable</span>
+                                        </p>
+
+                                        <h2>Status </h2>
+                                        <p>{write status details here; this would include comments about rejections,
+                                            etc. }</p>
+
+                                        <div>{potentially timeframe goes here } </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="req-cnl-btn">
+                                    <button class="cancel-part-btn" aria-label="Cancel request part #39985-1"
+                                        data-open="confirm-cancel"></button>
+                                </div>
+
+                                <div class="reveal status-reveal" id="confirm-cancel" data-reveal>
+                                    <div class="status-body">
+                                        <h1>Cancel this part of your request? </h1>
+
+                                        <p>To be cancelled: Adding {name of profile } /Changing settings for {name
+                                            of profile}
+                                            /Removing
+                                            {name of profile }</p>
+                                        <button type="button" class="button ">Yes, cancel it </button> <button
+                                            type="button" class="button secondary" data-close>No, keep this
+                                            request</button>
+                                        <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Custom Content Components-->
+            <div class="cell bodycard" id="custom-content-components">
+                <div class="grid-x grid-margin-y grid-margin-x">
+
+                    <div class="cell ks-heading">
+                        <h2>Custom Content Components </h2>
+                        <a href="#toc">Back to Table of Contents</a>
+
+                    </div>
+
+                    <!--User Targets-->
+                    <div class="cell ks-section" id="usertargets">
+                        <h3>User Target</h3>
+                        <div class="grid-x grid-margin-y grid-margin-x">
+                            <!--Individual User AccountTarget-->
+                            <div class="cell">
+
+                                <div class="credit-bnnr">
+                                    <!--Appears on request access pages for USC. The "Change unit" part only appears if USC can submit requests for multiple units -->
+                                    Building request for the
+                                    following
+                                    account on behalf of
+                                    the <strong>Dept of Communications</strong>:
+                                    <span class="unit-change"> [<a href=kdfdf>change unit</a>]</span>
+                                </div>
+                                <div class="target-for-req">
+                                    <div class="t-bio t-is-person">
+                                        <h2 class="t-bio-name">Ava Gardner</h2>
+                                        Assoc Office Mngr
+                                    </div>
+
+                                    <div class="t-unit">Inclusive Care Clinic [883000]<br>
+                                        College of Dentistry [FN], UIC</div>
+                                    <div class="t-ids">gardner/123456789
+                                        <div class="id-issue-toggle"><a href="javascript:void();"
+                                                data-toggle="other-netids">Additional NetIDs</a> </div>
+                                        <!--Only appears if user has additional netIDs-->
+                                    </div>
+                                </div>
+
+                                <div id="other-netids" data-toggler=".shown" class="t-id-list hidden">
+                                    <!--Only appears if user has additional netIDs-->
+                                    <ul class="inline-list">
+                                        <li>avag (UIC)</li>
+                                        <li><em>agardne</em></li>
+                                    </ul>
+                                </div>
+                                <!-- show the t-flagged-acct div only if the target meets the criteria for separation from the university (or other possible warning flags in future)-->
+                                <div class="t-flagged-acct">Warning: Separated from University 04/23/22</div>
+
+
+                                <!-- NEW STRUCTURE; wrap related account notes in additional div -->
+                                <div class="related-accts cell">
+                                    <h2>Related accounts</h2>
+                                    <div class="has-sysaccts">
+                                        <p>Ava Gardner has 3 data warehouse service accounts:</p>
+                                        <ul class="inlinelist" role="list">
+                                            <li><a href="view-access-sa.html">APP_UIC_CTE</a></li>
+                                            <li><a href="fdjfdf">APP_UIUC_COE_ALL</a></li>
+                                            <li><a href="asdfd">APP_UIUC_COTE</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="has-sysaccts has-otherid">
+                                        <p>Ava Gardner has 1 linked account: <strong><a href="knkdjk.html">HR2BROY3</a>
+                                            </strong>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--System Account Target-->
+                            <div class="cell">
+                                <!-- if the account being changed isn't a person use the following. Many parts are TBD-->
+                                <div class="target-for-req target-sysacct">
+                                    <div class="t-bio t-is-person t-not-person">
+                                        <h2 class="t-bio-name">Account name</h2>
+                                        other identifying info
+                                    </div>
+
+                                    <div class="t-unit">acct information </div>
+                                    <div class="t-ids">owner? (TBD)
+
+                                    </div>
+                                </div>
+                                <div id="other-netids" data-toggler=".shown" class="t-id-list hidden">
+                                    <ul class="inline-list">
+                                        <li>avag (UIC)</li>
+                                        <li><em>agardne</em></li>
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../../js/app.js"></script>
+</body>
+
+</html>

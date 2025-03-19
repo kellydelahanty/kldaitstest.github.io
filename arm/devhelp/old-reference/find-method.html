@@ -1,0 +1,342 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select way to find profiles : University of Illinois Access Rights Management | University of Illinois System
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+    <header>
+
+        <div class="topbrand">
+            <div class="grid-x">
+                <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <span>Lauren Curtis <span class="sdetail">(651321699)</span></span>
+
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <a href="dash.html"><img src="../../img/appname.png" alt="Access Rights Management application"></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+                <div class="burger"> <button type="button" data-toggle="mob-menu"><img src="../../img/hamburger.png" alt=" "
+                            aria-label="Open main menu"></button> Menu</div>
+
+                <ul id="mob-menu" class="main-menu" data-toggler=".shown">
+                    <li><a href="">Request Inbox</a></li>
+                    <li><a href="request.html">Manage Access</a> </li>
+                    <li><a href="inboxm.html">My Submissions</a> </li>
+                    <li><a href="">Reports</a></li>
+                    <li>Templates</li>
+                    <li>Preferences</li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <section class="target">
+                <div class="grid-x">
+                    <div class="cell medium-2 large-3 is-for">
+                        <h1>Add or edit access</h1>
+                    </div>
+                    <div class="cell medium-8 large-7 target-summary is-person">
+
+                        <div class="profile-type-name">
+
+                            <h2>Norma Desmond</h2>
+                        </div>
+                        <div class="profile-ids">
+                            <div><strong>ndesmond</strong> / 65214551</div>
+                        </div>
+
+                    </div>
+                    <div class="cell medium-2 target-redo"><a href="search.html">Search again</a>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid-x">
+                <div class="cell bodycard find-profiles">
+                    <div class="selection-tabs">
+                        <h1>Select a method to find profiles</h1>
+                        <ul class="tabs" data-tabs id="method-tabs">
+                            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"
+                                    class="by-browse"><span>Browse by topic areas</span> <span
+                                        class="selection-hint">Best for new hires and positions</span></a>
+                            </li>
+                            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2"
+                                    class="by-search"><span>Search
+                                        by application / report name</span> <span class="selection-hint">Best for making
+                                        a single request
+                                    </span></a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3"
+                                    class="by-copy"><span>Apply
+                                        another user's access</span> <span class="selection-hint">Best for position
+                                        replacements</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tabs-content selection-interfaces" data-tabs-content="method-tabs">
+                        <div class="tabs-panel is-active" id="panel1">
+                            <p class="instructions">Select all topic areas of interest. You will then be able to view
+                                all application and
+                                report profiles for the selected area.</p>
+                            <!-- <div class="callout err-callout">Please select at least one topic area, or change the method
+                                of finding profiles.</div>-->
+                            <ul class="browse-boxes">
+                                <li class="collaboration">
+                                    <h2>Communication, collaboration, and support tools</h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within communication and collaboration:</legend>
+                                            <div><input type="checkbox" id="cp1"><label for="cp1">Training,
+                                                    communication, and online support tools</label>
+                                            </div>
+                                            <div><input type="checkbox" id="cp2"><label for="cp2">File repositories and
+                                                    storage</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li class="finance">
+                                    <h2>Finance</h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within finance:</legend>
+                                            <div><input type="checkbox" id="f1"><label for="f1">Accounts
+                                                    payable</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f2"><label for="f2">Accounts
+                                                    receivable</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f3"><label for="f3">Budget</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f4"><label for="f4">Fixed
+                                                    assets</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f5"><label for="f5">General
+                                                    finance</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f6"><label for="f6">General
+                                                    ledger</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f7"><label for="f7">Grants and
+                                                    contracts</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f8"><label for="f8">Purchasing</label>
+                                            </div>
+                                            <div><input type="checkbox" id="f9"><label for="f9">Travel and
+                                                    expense management</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li class="hr">
+                                    <h2>HR and payroll</h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within research:</legend>
+                                            <div><input type="checkbox" id="hr1"><label for="hr1">Central HR
+                                                    functions</label>
+                                            </div>
+                                            <div><input type="checkbox" id="hr2"><label for="hr2">Central
+                                                    payroll
+                                                    functions</label>
+                                            </div>
+                                            <div><input type="checkbox" id="hr3"><label for="hr3">HR-Pay
+                                                    department access </label>
+                                            </div>
+                                            <div><input type="checkbox" id="hr4"><label for="hr4">Job listings and
+                                                    hiring</label>
+                                            </div>
+                                            <div><input type="checkbox" id="hr4"><label for="hr4">Time entry
+                                                    access </label>
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li class="research">
+                                    <h2>Research administration </h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within research:</legend>
+                                            <div><input type="checkbox" id="r2"><label for="r2">Research
+                                                    administration and compliance</label>
+                                            </div>
+                                            <div><input type="checkbox" id="r1"><label for="r1">Sponsored
+                                                    research </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li class="student">
+                                    <h2>Student information</h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within student information:
+                                            </legend>
+                                            <div><input type="checkbox" id="1"><label for="1">Academic
+                                                    history</label>
+                                            </div>
+
+                                            <div><input type="checkbox" id="2"><label for="2">Catalog and
+                                                    schedule</label>
+                                            </div>
+
+                                            <div><input type="checkbox" id="3"><label for="3">Financial
+                                                    aid</label>
+                                            </div>
+
+                                            <div><input type="checkbox" id="4"><label for="4">General learner
+                                                    and
+                                                    registration </label>
+                                            </div>
+
+                                            <div class="curr-prov"><input type="checkbox" id="5"><label for="5">General
+                                                    person <span>(currently provisioned)</span>
+                                                </label>
+                                            </div>
+
+                                            <div><input type="checkbox" id="6"><label for="6">Recruiting and
+                                                    admissions</label>
+                                            </div>
+                                            <div><input type="checkbox" id="7"><label for="67">Test score
+                                                    administration</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li class="capital">
+                                    <h2>University capital programs</h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within research:</legend>
+                                            <div><input type="checkbox" id="cp1"><label for="cp1">General
+                                                    capital programs</label>
+                                            </div>
+                                            <div><input type="checkbox" id="cp2"><label for="cp2">Space
+                                                    utilization</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                                <li class="analytics">
+                                    <h2>University data and analytics</h2>
+                                    <div class="topcat-subs">
+                                        <fieldset class="choice-checklist checks">
+                                            <legend>Select areas within data and analytics:</legend>
+                                            <div><input type="checkbox" id="cp1"><label for="cp1">Tools</label>
+                                            </div>
+                                            <div><input type="checkbox" id="cp2"><label for="cp2">Guides</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="actionbar">
+                                <div class="part"> <button type="button" class="button">Continue</button></div>
+                                <div class="part">
+                                    <p class="util-back"><a href="index">Cancel and return to dashboard</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-panel" id="panel2">
+                            search interface
+                            <div class="actionbar">
+                                <div class="part"> <button type="button" class="button">Continue</button></div>
+                                <div class="part">
+                                    <p class="util-back"><a href="index">Cancel and return to dashboard</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-panel" id="panel3">
+                            copy interface
+
+                            <div class="actionbar">
+                                <div class="part"> <button type="button" class="button">Continue</button></div>
+                                <div class="part">
+                                    <p class="util-back"><a href="index">Cancel and return to dashboard</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script type="text/javascript" src="../../js/accessible-autocomplete.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script>
+        accessibleAutocomplete.enhanceSelectElement({
+            selectElement: document.querySelector('#auto-unit')
+        });
+    </script>
+</body>
+
+</html>
