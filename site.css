@@ -1,0 +1,48 @@
+.sb-body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sb-heading {
+  padding: 0.5rem 1rem;
+  background: #9FB7D1;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sb-heading h1 {
+  font-size: 28px;
+}
+.sb-heading a {
+  background-color: #50576D;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.sb-heading a:hover, .sb-heading a:focus {
+  background-color: #3B414E;
+  color: white;
+}
+.sb-heading div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sb-main {
+  margin: 1rem;
+}
+
+.sb-section {
+  background-color: #E7EDF2;
+  border: 1px solid #9FB7D1;
+  border-radius: 10px;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+}
+.sb-section h2 {
+  margin-bottom: 0;
+}
+.sb-section .sb-nav ul li {
+  margin-bottom: 0.5rem;
+}
