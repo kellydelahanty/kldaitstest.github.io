@@ -93,20 +93,20 @@
       "oAP" : "\/a11y-orgchart\/divs.html",
       "oF" : 0
     },
+    "\/a11y-orgchart\/heading.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/a11y-orgchart\/heading.html",
+      "oF" : 0
+    },
     "\/a11y-orgchart\/headings-tab.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/a11y-orgchart\/headings-tab.html",
-      "oF" : 0
-    },
-    "\/a11y-orgchart\/headings.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/headings.html",
       "oF" : 0
     },
     "\/a11y-orgchart\/list.html" : {
