@@ -1,0 +1,45 @@
+.aa-table-test-1 {
+    border: none;
+
+
+  tbody {
+    tr, tr:nth-child(2n) {background-color: #ffffff;}
+
+    th {text-align: left;}
+
+    td, th {  border-bottom: 1px solid #B8B8B8;}
+
+
+    .linked-req-test-1-header {
+        th { border-left: 4px solid #6C9EA8; }
+        th, td {border-bottom: 1px solid #CACCCD;}
+    }
+    .linked-req-test-1, .linked-req-test-1-ext {
+        td {
+            border-bottom: 1px solid #e6e6e6;
+        }
+    
+       td:first-of-type {
+            border-left: 4px solid #6C9EA8;
+    
+        }
+    }
+
+    .linked-req-test-1-ext {
+        background-color: #EFF6F7 !important;
+        font-style: italic;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+#last-touch, #status {
+    min-width: 150px;
+}

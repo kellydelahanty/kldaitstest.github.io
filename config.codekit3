@@ -129,6 +129,19 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/arm\/css\/test.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/css\/test.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0
+    },
     "\/arm\/devhelp\/autocomplete-elements.html" : {
       "cB" : 0,
       "ft" : 8192,

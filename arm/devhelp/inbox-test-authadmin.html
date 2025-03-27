@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/test.css">
 
 </head>
 
@@ -68,158 +69,12 @@
                     </div>
 
 
-                    <section>
-                        <h2>WIP</h2>
+                    <!--Option 1 - Current Design-->
+                    <section class="">
+                        <h2>Option 1 (current design) </h2>
 
 
-                                   <!--WIP Multiple Headings/subheadings-->
-                                   <div style="margin-bottom: 5rem;">
-                                    <table class="table-test-3" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
-                                        <caption>
-                                            Placeholder: Caption goes here
-                                        </caption>
-                                        <thead>
-                                            <tr>
-                                                <th id="employee" scope="col">Employee</th>
-                                                <th id="req-summary" scope="col">Request Summary</th>
-                                                <th id="last-touch" scope="col">Last Touch</th>
-                                                <th id="usc-claim" scope="col">Claimed By</th>
-                                                <th id="status" scope="col">Status</th>
-                                                <th id="claim" scope="col">Claim</th>
-                                                <th id="act" scope="col">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-        
-                                            <!--Single Request-->
-                                            <tr>
-                                                <th id="mblack" headers="employee">Blackwood, Martin</th>
-
-                                                <td headers="mblack req-summary">
-                                                    <span class="req-code">(#4001-1)</span>
-                                                    <span class="req-line"> Modify: iBuy dept account coder</span>
-                                                    <span class="noa">iBuy</span>
-                                                </td>
-                                                <td headers="mblack last-touch">MM/DD/YYYY</td>
-                                                <td headers="mblack usc-claim">Peter Lukas</td>
-                                                <td headers="mblack status">Needs Review</td>
-                                                <td headers="mblack claim"><button class="claim-btn" type="button"><span class="show-for-sr">Claim #4001-1</span></button></td>
-                                                <td headers="mblack act"><a href="#">Act</a></td>
-                                            </tr>
-                                           
-        
-                                            <!--Multiple Requests-->
-                                            <tr>
-                                                <th id="sjames" headers="employee" rowspan="3">James, Sasha</th>
-                                                <th id="sjames-multireq" headers="sjames req-summary">2 requests</th>
-                                                <td headers="sjames last-touch"> </td>
-                                                <td headers="sjames usc-claim"> </td>
-                                                <td headers="sjames status"> </td>
-                                                <td headers="sjames claim"><button class="claim-btn" type="button"><span class="show-for-sr">Claim #4001-1</span></button></td>
-                                                <td headers="sjames act"><a href="#">Act</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td headers="sjames req-summary sjames-multireq">
-                                                    <span class="req-code">(#4002-1)</span>
-                                                    <span class="req-line"> Modify: iBuy dept account coder</span>
-                                                    <span class="noa">iBuy</span>
-                                                </td>
-                                                <td headers="sjames last-touch">MM/DD/YYYY</td>
-                                                <td headers="sjames usc-claim">Jonah Magnus</td>
-                                                <td headers="sjames status">Needs Review</td>
-                                                <td headers="sjames claim"><button class="claim-btn" type="button"><span class="show-for-sr">Claim #4002-1</span></button></td>
-                                                <td headers="sjames act"><a href="#">Act</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td headers="sjames req-summary sjames-multireq">
-                                                    <span class="req-code">(#4002-2)</span>
-                                                    <span class="req-line"> Modify: Banner something something</span>
-                                                    <span class="noa">Banner</span>
-                                                </td>
-                                                <td headers="sjames last-touch">MM/DD/YYYY</td>
-                                                <td headers="sjames usc-claim">Jonah Magnus</td>
-                                                <td headers="sjames status">Needs Review</td>
-                                                <td headers="sjames claim"><button class="claim-btn" type="button"><span class="show-for-sr">Claim #4002-2</span></button></td>
-                                                <td headers="sjames act"><a href="#">Act</a></td>
-                                            </tr>
-                   
-                                            <!--Linked Request-->
-                                            <tr>
-                                                <th id="jsims" headers="employee" rowspan="6">Sims, Jonathan</th>
-                                                <th id="jsims-multireq" headers="jsims req-summary"> 5 requests, 4 actionable by this group</th>
-                                                <td headers="jsims last-touch"> </td>
-                                                <td headers="jsims usc-claim"> </td>
-                                                <td headers="jsims status"> </td>
-                                                <td headers="jsims claim"><button class="claim-btn" type="button"><span class="show-for-sr">Claim #4001-1</span></button></td>
-                                                <td headers="jsims act"><a href="#">Act (4)</a></td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <th id="jsims-linked-header" headers="jsims jsims-multireq req-summary">4 linked requests</th>
-                                                <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Jonah Magnus</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header claim"><button class="claim-btn" type="button"><span class="show-for-sr">Claim #1777</span></button></td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header act"><a href="#">Act (3)</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
-                                                    <span class="req-code">(#1777-1)</span> 
-                                                    Records and Transfer Articulation Ad Hoc Reporting
-                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                </td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Office of Undergrad Admissions</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header claim"></td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header act"></td>
-                                            </tr>
-                                            <tr>
-                                                <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
-                                                    <span class="req-code">(#1777-2)</span>Add: Pre-Registration and
-                                                    Registration Ad Hoc Reporting
-                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                </td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Office of Undergrad Admissions</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
-                                                <td></td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header act"></td>
-                                            </tr>
-                                            <tr>
-                                                <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
-                                                    <span class="req-code">(#1777-3)</span>
-                                                    Add: Registration Census Ad Hoc Reporting
-                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                </td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Office of Undergrad Admissions</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header claim"></td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header act"></td>
-                                            </tr>
-                                            <tr>
-                                                <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
-                                                    <span class="req-code">(#1777-4)</span>
-                                                    Add: Recruiting and Admissions Ad Hoc Reporting
-                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                </td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Office of Undergrad Admissions</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header claim"><span class="show-for-sr">Cannot claimed #1777-4, External Authorizer</span></td>
-                                                <td headers="jsims jsims-multireq jsims-linked-header act"></td>
-                                            </tr>
-                                        </tbody>
-                                        </table>
-                                        
-
-
-                                        
-                                </div>
-                        <!--Option 1 - Current Design -->
                         <div style="margin-bottom: 5rem;">
-                            <h2>Option 1 (current design) - </h2>
                             <table class="listing-table open-requests">
                                 <caption>List of requests with at least one part still needing action</caption>
                                 <thead>
@@ -241,7 +96,8 @@
                                             <span class="req-line"> Modify: iBuy dept account coder</span>
                                             <span class="noa">iBuy</span>
                                         </td>
-                                        <td><span class="expiring">5/5/24</span> <span class="show-for-sr">This request is
+                                        <td><span class="expiring">5/5/24</span> <span class="show-for-sr">This request
+                                                is
                                                 close to expiring</span> </td>
                                         <td>David Niven</td>
                                         <td>Needs Review </td>
@@ -250,13 +106,14 @@
                                         <td><a href="next" aria-label="Act on request #4001-1">Act</a></td>
                                     </tr>
 
-                                    <!--2 Requests per person-->            
+                                    <!--2 Requests per person-->
                                     <tr>
                                         <td rowspan="3">Rogers, Roy </td>
                                         <td colspan="2"><span class="sum-of-requests">2 requests</span></td>
                                         <td> </td>
                                         <td></td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 2 Roy
+                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 2
+                                                    Roy
                                                     Rogers requests</span></button></td>
                                         <td><a href="next" aria-label="Act on 2 Roy Rogers requests">Act (2)</a></td>
                                     </tr>
@@ -276,7 +133,8 @@
                                     <tr>
                                         <td>
                                             <span class="req-code">(#1985-2)</span>
-                                            <span class="req-line"> Add: Attribute Maintenance System: Attribute Maintenance
+                                            <span class="req-line"> Add: Attribute Maintenance System: Attribute
+                                                Maintenance
                                                 - UIUC</span>
                                             <span class="noa">Banner Student</span>
                                         </td>
@@ -292,11 +150,14 @@
                                     <!--Linked Request + additional request-->
                                     <tr><!--Person Header-->
                                         <td rowspan="4">Wood, Natalie </td>
-                                        <td colspan="2"> <span class="sum-of-requests">5 requests, 4 actionable by this group</span></td>
+                                        <td colspan="2"> <span class="sum-of-requests">5 requests, 4 actionable by this
+                                                group</span></td>
                                         <td></td>
                                         <td> </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim all 4 available requests for Natalie Wood</span></button></td>
-                                        <td><a href="next" aria-label="Act on all 4 requests for Natalie Wood">Act (4)</a>
+                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim all
+                                                    4 available requests for Natalie Wood</span></button></td>
+                                        <td><a href="next" aria-label="Act on all 4 requests for Natalie Wood">Act
+                                                (4)</a>
                                         </td>
                                     </tr>
                                     <tr><!--Linked Request Header-->
@@ -306,7 +167,8 @@
                                         <td>10/15/24</td>
                                         <td>Peter Lukas</td>
                                         <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 4 linked
+                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 4
+                                                    linked
                                                     requests for name-of-person</span></button></td>
                                         <td><a href="next" aria-label="Act on 4 linked requests for name-of-person">Act
                                                 (3)</a></td>
@@ -322,7 +184,8 @@
                                                     Registration Ad Hoc Reporting
                                                     <span class="noa">EDDIE and Data Warehouse Reporting</span>
                                                 </li>
-                                                <li><span class="req-code">(#1777-3)</span>Add: Registration Census Ad Hoc
+                                                <li><span class="req-code">(#1777-3)</span>Add: Registration Census Ad
+                                                    Hoc
                                                     Reporting
                                                     <span class="noa">EDDIE and Data Warehouse Reporting</span>
                                                 </li>
@@ -355,118 +218,305 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        
+
                         </div>
+                    </section>
 
+                    <!--Option 2 - one row per linked item-->
+                    <section>
 
-             
-
-                        <!--WIP-->
-                        <div style="margin-bottom: 5rem;" class="hide">
-                            <h3>Option 1 (current design) - </h3>
-                            <table class="listing-table open-requests">
-                                <caption>List of requests with at least one part still needing action</caption>
+                        <h2>Option 2 - Each item in linked request is is its own row </h2>
+                        <!--WIP Multiple Headings/subheadings-->
+                        <div style="margin-bottom: 5rem;">
+                            <table class="aa-table-test-1 listing-table"
+                                summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+                                <caption>
+                                    Placeholder: Caption goes here
+                                </caption>
                                 <thead>
                                     <tr>
-                                        <th class="reqt-user">User name</th>
-                                        <th class="reqt-sum">Request summary</th>
-                                        <th class="reqt-date">Last touch </th>
-                                        <th class="reqt-dibs">Claimed by</th>
-                                        <th class="reqt-status">Status </th>
-                                        <th class="reqt-claim">Claim</th>
-                                        <th class="reqt-act"><span class="show-for-sr">Action</span> </th>
+                                        <th id="employee" scope="col">Employee</th>
+                                        <th id="req-summary" scope="col">Request Summary</th>
+                                        <th id="last-touch" scope="col">Last Touch</th>
+                                        <th id="usc-claim" scope="col">Claimed By</th>
+                                        <th id="status" scope="col">Status</th>
+                                        <th id="claim" scope="col">Claim</th>
+                                        <th id="act" scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                    <!--Single Request-->
                                     <tr>
-                                        <td>Gardner, Ava</td>
-                                        <td>
-                                            <span class="req-code">(#1800-3)</span>
-                                            <span class="req-line">Add: iBuy approver</span>
-                                            <span class="noa">iBuy</span>
-                                        </td>
-                                        <td>10/10/24</td>
-                                        <td> </td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim
-                                                    #1800-3</span></button></td>
-                                        <td><a href="next" aria-label="Act on #1800-3">Act</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kelly, Grace </td>
-                                        <td><span class="req-code">(#4001-1)</span>
+                                        <th id="mblack" headers="employee">Blackwood, Martin</th>
+
+                                        <td headers="mblack req-summary">
+                                            <span class="req-code">(#4001-1)</span>
                                             <span class="req-line"> Modify: iBuy dept account coder</span>
                                             <span class="noa">iBuy</span>
                                         </td>
-                                        <td><span class="expiring">5/5/24</span> <span class="show-for-sr">This request is
-                                                close to expiring</span> </td>
-                                        <td>David Niven</td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim
-                                                    #4001-1</span></button></td>
-                                        <td><a href="next" aria-label="Act on request #4001-1">Act</a></td>
+                                        <td headers="mblack last-touch">MM/DD/YYYY</td>
+                                        <td headers="mblack usc-claim">Peter Lukas</td>
+                                        <td headers="mblack status">Needs Review</td>
+                                        <td headers="mblack claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim #4001-1</span></button></td>
+                                        <td headers="mblack act"><a href="#">Act</a></td>
+                                    </tr>
+
+
+                                    <!--Multiple Requests-->
+                                    <tr>
+                                        <th id="sjames" headers="employee" rowspan="3">James, Sasha</th>
+                                        <th id="sjames-multireq" headers="sjames req-summary">2 requests</th>
+                                        <td headers="sjames last-touch"> </td>
+                                        <td headers="sjames usc-claim"> </td>
+                                        <td headers="sjames status"> </td>
+                                        <td headers="sjames claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim All for Sasha James</span></button></td>
+                                        <td headers="sjames act"><a href="#">Act</a></td>
                                     </tr>
                                     <tr>
-                                        <td rowspan="3">Rogers, Roy </td>
-                                        <td colspan="2"><span class="sum-of-requests">2 requests</span></td>
-                                        <td> </td>
-                                        <td></td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 2 Roy
-                                                    Rogers requests</span></button></td>
-                                        <td><a href="next" aria-label="Act on 2 Roy Rogers requests">Act (2)</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="req-code">(#1848-21)</span>
-                                            <span class="req-line"> Add: Faculty Assignment </span>
-                                            <span class="noa">Banner Student</span>
+                                        <td headers="sjames req-summary sjames-multireq">
+                                            <span class="req-code">(#4002-1)</span>
+                                            <span class="req-line"> Modify: iBuy dept account coder</span>
+                                            <span class="noa">iBuy</span>
                                         </td>
-                                        <td>10/15/24</td>
-                                        <td> </td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim
-                                                    #1848-21</span></button></td>
-                                        <td><a href="next" aria-label="Act on request #1848-21">Act</a></td>
+                                        <td headers="sjames last-touch">MM/DD/YYYY</td>
+                                        <td headers="sjames usc-claim">Jonah Magnus</td>
+                                        <td headers="sjames status">Needs Review</td>
+                                        <td headers="sjames claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim #4002-1</span></button></td>
+                                        <td headers="sjames act"><a href="#">Act</a></td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <span class="req-code">(#1985-2)</span>
-                                            <span class="req-line"> Add: Attribute Maintenance System: Attribute Maintenance
-                                                - UIUC</span>
-                                            <span class="noa">Banner Student</span>
+                                        <td headers="sjames req-summary sjames-multireq">
+                                            <span class="req-code">(#4002-2)</span>
+                                            <span class="req-line"> Modify: Banner something something</span>
+                                            <span class="noa">Banner</span>
                                         </td>
-                                        <td>10/20/24</td>
-                                        <td> </td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim
-                                                    #1985-2</span></button></td>
-                                        <td><a href="next" aria-label="Act on request #1985-2">Act</a></td>
+                                        <td headers="sjames last-touch">MM/DD/YYYY</td>
+                                        <td headers="sjames usc-claim">Jonah Magnus</td>
+                                        <td headers="sjames status">Needs Review</td>
+                                        <td headers="sjames claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim #4002-2</span></button></td>
+                                        <td headers="sjames act"><a href="#">Act</a></td>
                                     </tr>
+
+                                    <!--Linked Request-->
                                     <tr>
-                                        <td rowspan="4">Wood, Natalie </td>
-                                        <td colspan="2"> <span class="sum-of-requests">5 requests, 4 actionable by this
-                                                group</span></td>
-                                        <td></td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim all 4
-                                                    available requests for Natalie Wood</span></button></td>
-                                        <td><a href="next" aria-label="Act on all 4 requests for Natalie Wood">Act (4)</a>
+                                        <th id="jsims" headers="employee" rowspan="6">Sims, Jonathan</th>
+                                        <th id="jsims-multireq" headers="jsims req-summary"> 5 requests, 4 actionable by
+                                            this group</th>
+                                        <td headers="jsims last-touch"> </td>
+                                        <td headers="jsims usc-claim"></td>
+                                        <td headers="jsims status"> </td>
+                                        <td headers="jsims claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim All for Jonathan Sims</span></button></td>
+                                        <td headers="jsims act"><a href="#">Act (4)</a></td>
+                                    </tr>
+
+                                    <tr class="linked-req-test-1-header"><!--Linked Header-->
+                                        <th class="linked-req" id="jsims-linked-header"
+                                            headers="jsims jsims-multireq req-summary"><span
+                                                class="sum-of-requests sum-linked">4 linked requests</span></th>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="linked-req">
-                                            <span class="sum-of-requests sum-linked">4 linked requests</span>
-                                        </th>
-                                        <td>10/15/24</td>
-                                        <td>Peter Lukas</td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 4 linked
-                                                    requests for name-of-person</span></button></td>
-                                        <td><a href="next" aria-label="Act on 4 linked requests for name-of-person">Act
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Jonah Magnus
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"><button
+                                                class="claim-btn" type="button"><span class="show-for-sr">Claim
+                                                    #1777</span></button></td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"><a href="#">Act
                                                 (3)</a></td>
                                     </tr>
+                                    <tr class="linked-req-test-1">
+                                        <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                            <span class="req-code">(#1777-1)</span>
+                                            Records and Transfer Articulation Ad Hoc Reporting
+                                            <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Jonah Magnus
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"></td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"></td>
+                                    </tr>
+                                    <tr class="linked-req-test-1">
+                                        <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                            <span class="req-code">(#1777-2)</span>Add: Pre-Registration and
+                                            Registration Ad Hoc Reporting
+                                            <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Jonah Magnus
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
+                                        <td></td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"></td>
+                                    </tr>
+                                    <tr class="linked-req-test-1-ext"><!--External-->
+                                        <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                            <span class="req-code">(#1777-4)</span>
+                                            Add: Recruiting and Admissions Ad Hoc Reporting
+                                            <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Office of
+                                            Undergrad Admissions</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"><span
+                                                class="show-for-sr">Cannot claimed #1777-4, External Authorizer</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"></td>
+                                    </tr>
+
+                                    <!--Not linked-->
                                     <tr>
-                                        <td colspan="3" class="linked-req">
+                                        <td headers="jsims  jsims-multireq req-summary">
+                                            <span class="req-code">(#1234-1)</span>
+                                            Add: Registration Census Ad Hoc Reporting
+                                            <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq  last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq  usc-claim">Jonah Magnus</td>
+                                        <td headers="jsims jsims-multireq status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq  claim"><button class="claim-btn"
+                                                type="button"><span class="show-for-sr">Claim
+                                                    #1234</span></button></td>
+                                        <td headers="jsims jsims-multireq  act"><a href="#">Act</a>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+
+
+
+                        </div>
+
+                    </section>
+
+
+                    <!--Option 3 - one row per linked item-->
+                    <section>
+
+                        <h2>Option 3 - Linked requests are 3+ rows - header, internal requests, external requests (1 row
+                            per authorizer group) </h2>
+                        <!--WIP Multiple Headings/subheadings-->
+                        <div style="margin-bottom: 5rem;">
+                            <table class="aa-table-test-1 listing-table"
+                                summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+                                <caption>
+                                    Placeholder: Caption goes here
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th id="employee" scope="col">Employee</th>
+                                        <th id="req-summary" scope="col">Request Summary</th>
+                                        <th id="last-touch" scope="col">Last Touch</th>
+                                        <th id="usc-claim" scope="col">Claimed By</th>
+                                        <th id="status" scope="col">Status</th>
+                                        <th id="claim" scope="col">Claim</th>
+                                        <th id="act" scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <!--Single Request-->
+                                    <tr>
+                                        <th id="mblack" headers="employee">Blackwood, Martin</th>
+
+                                        <td headers="mblack req-summary">
+                                            <span class="req-code">(#4001-1)</span>
+                                            <span class="req-line"> Modify: iBuy dept account coder</span>
+                                            <span class="noa">iBuy</span>
+                                        </td>
+                                        <td headers="mblack last-touch">MM/DD/YYYY</td>
+                                        <td headers="mblack usc-claim">Peter Lukas</td>
+                                        <td headers="mblack status">Needs Review</td>
+                                        <td headers="mblack claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim #4001-1</span></button></td>
+                                        <td headers="mblack act"><a href="#">Act</a></td>
+                                    </tr>
+
+
+                                    <!--Multiple Requests-->
+                                    <tr>
+                                        <th id="sjames" headers="employee" rowspan="3">James, Sasha</th>
+                                        <th id="sjames-multireq" headers="sjames req-summary">2 requests</th>
+                                        <td headers="sjames last-touch"> </td>
+                                        <td headers="sjames usc-claim"> </td>
+                                        <td headers="sjames status"> </td>
+                                        <td headers="sjames claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim All for Sasha James</span></button></td>
+                                        <td headers="sjames act"><a href="#">Act</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td headers="sjames req-summary sjames-multireq">
+                                            <span class="req-code">(#4002-1)</span>
+                                            <span class="req-line"> Modify: iBuy dept account coder</span>
+                                            <span class="noa">iBuy</span>
+                                        </td>
+                                        <td headers="sjames last-touch">MM/DD/YYYY</td>
+                                        <td headers="sjames usc-claim">Jonah Magnus</td>
+                                        <td headers="sjames status">Needs Review</td>
+                                        <td headers="sjames claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim #4002-1</span></button></td>
+                                        <td headers="sjames act"><a href="#">Act</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td headers="sjames req-summary sjames-multireq">
+                                            <span class="req-code">(#4002-2)</span>
+                                            <span class="req-line"> Modify: Banner something something</span>
+                                            <span class="noa">Banner</span>
+                                        </td>
+                                        <td headers="sjames last-touch">MM/DD/YYYY</td>
+                                        <td headers="sjames usc-claim">Jonah Magnus</td>
+                                        <td headers="sjames status">Needs Review</td>
+                                        <td headers="sjames claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim #4002-2</span></button></td>
+                                        <td headers="sjames act"><a href="#">Act</a></td>
+                                    </tr>
+
+                                    <!--Linked Request-->
+                                    <tr>
+                                        <th id="jsims" headers="employee" rowspan="6">Sims, Jonathan</th>
+                                        <th id="jsims-multireq" headers="jsims req-summary"> 7 requests, 4 actionable by
+                                            this group</th>
+                                        <td headers="jsims last-touch"> </td>
+                                        <td headers="jsims usc-claim"></td>
+                                        <td headers="jsims status"> </td>
+                                        <td headers="jsims claim"><button class="claim-btn" type="button"><span
+                                                    class="show-for-sr">Claim All for Jonathan Sims</span></button></td>
+                                        <td headers="jsims act"><a href="#">Act (4)</a></td>
+                                    </tr>
+
+                                    <tr class="linked-req-test-1-header"><!--Linked Header-->
+                                        <th class="linked-req" id="jsims-linked-header"
+                                            headers="jsims jsims-multireq req-summary"><span
+                                                class="sum-of-requests sum-linked">6 linked requests</span></th>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Jonah Magnus
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"><button
+                                                class="claim-btn" type="button"><span class="show-for-sr">Claim
+                                                    #1777</span></button></td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"><a href="#">Act
+                                                (3)</a></td>
+                                    </tr>
+                                    <tr class="linked-req-test-1"><!--linked internal items-->
+                                        <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                            <span class="show-for-sr">Requests that are actionable by this group</span>
                                             <ul class="linked-req-list">
                                                 <li><span class="req-code">(#1777-1)</span> Records and Transfer
                                                     Articulation Ad Hoc Reporting
@@ -476,145 +526,95 @@
                                                     Registration Ad Hoc Reporting
                                                     <span class="noa">EDDIE and Data Warehouse Reporting</span>
                                                 </li>
-                                                <li><span class="req-code">(#1777-3)</span>Add: Registration Census Ad Hoc
+                                                <li><span class="req-code">(#1777-3)</span>Add: Registration Census Ad
+                                                    Hoc
                                                     Reporting
                                                     <span class="noa">EDDIE and Data Warehouse Reporting</span>
                                                 </li>
-                                                <li class="linked-ext">
-                                                    <div>
-                                                        <span class="req-code">(#1777-4)</span>Add: Recruiting and
-                                                        Admissions Ad Hoc Reporting
-                                                        <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                    </div>
-                                                    <div class="linked-ext-unit">Office of Undergrad Admissions</div>
-                                                    <div>Needs Review</div>
-                                                </li>
                                             </ul>
                                         </td>
-                                        <td>test1</td>
-                                        <td>test2</td>
-                                        <td>test3</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="req-code">(#4001-1)</span>
-                                            <span class="req-line"> Modify: iBuy dept account coder</span>
-                                            <span class="noa">iBuy</span>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
                                         </td>
-                                        <td>5/5/24</td>
-                                        <td> </td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim
-                                                    #4001-1</span></button></td>
-                                        <td><a href="next" aria-label="Act on request #4001-1">Act</a></td>
-                                    </tr>
-    
-    
-                                    <!--Multi-Request Header-->
-                                    <tr>
-                                        <td rowspan="6">James, Sasha </td>
-                                        <td colspan="2"> <span class="sum-of-requests">5 requests, 4 actionable by this
-                                                group</span></td>
-                                        <td></td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim all 4
-                                                    available requests for Natalie Wood</span></button></td>
-                                        <td><a href="next" aria-label="Act on all 4 requests for Natalie Wood">Act (4)</a>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Jonah Magnus
                                         </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Approved</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"></td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"></td>
                                     </tr>
-    
-                                    <!--Linked Request Header-->
-                                    <tr>
-                                        <th class="linked-req">
-                                            <span class="sum-of-requests sum-linked">4 linked requests</span>
-                                        </th>
-                                        <td>10/15/24</td>
-                                        <td>Peter Lukas</td>
-                                        <td> </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim 4 linked
-                                                    requests for name-of-person</span></button></td>
-                                        <td><a href="next" aria-label="Act on 4 linked requests for name-of-person">Act
-                                                (3)</a></td>
-                                    </tr>
-    
-    
-                                    <!--Linked Request Content-->
-                                    <tr>
-                                        <td colspan="3" class="linked-req">
+                                    <tr class="linked-req-test-1-ext"><!--External-->
+                                        <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                            <span class="show-for-sr">Requests that are actionable by a different authorizer group</span>
                                             <ul class="linked-req-list">
-                                                <li><span class="req-code">(#1777-1)</span> Records and Transfer
-                                                    Articulation Ad Hoc Reporting
+                                                <li>
+                                                    <span class="req-code">(#1777-4)</span>Add: Recruiting and
+                                                    Admissions Ad Hoc Reporting
+                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                                </li>
+                                                <li>
+                                                    <span class="req-code">(#1777-5)</span>Add: Another request example
                                                     <span class="noa">EDDIE and Data Warehouse Reporting</span>
                                                 </li>
                                             </ul>
                                         </td>
-                                        <td>Approved</td>
-                                        <td> </td>
-                                        <td> </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Office of
+                                            Undergrad Admissions</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"><span
+                                                class="show-for-sr">Cannot claimed #1777-4, External Authorizer</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"></td>
                                     </tr>
-                                    <!--Linked Request Content-->
-                                    <tr>
-                                        <td colspan="3" class="linked-req">
+                                    <tr class="linked-req-test-1-ext"><!--External-->
+                                        <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                            <span class="show-for-sr">Requests that are actionable by a different authorizer group</span>
                                             <ul class="linked-req-list">
-                                                <li><span class="req-code">(#1777-1)</span> Records and Transfer
-                                                    Articulation Ad Hoc Reporting
+
+                                                <li>
+                                                    <span class="req-code">(#1777-6)</span>Add: Yet another thing
                                                     <span class="noa">EDDIE and Data Warehouse Reporting</span>
                                                 </li>
                                             </ul>
                                         </td>
-                                        <td>Approved</td>
-                                        <td> </td>
-                                        <td> </td>
-                                    </tr>
-    
-    
-                                    <!--OLD Linked Request Content-->
-                                    <tr>
-                                        <td colspan="3" class="linked-req">
-                                            <ul class="linked-req-list">
-                                                <li><span class="req-code">(#1777-1)</span> Records and Transfer
-                                                    Articulation Ad Hoc Reporting
-                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                </li>
-                                                <li><span class="req-code">(#1777-3)</span>Add: Registration Census Ad Hoc
-                                                    Reporting
-                                                    <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                </li>
-                                                <li class="linked-ext">
-                                                    <div>
-                                                        <span class="req-code">(#1777-4)</span>Add: Recruiting and
-                                                        Admissions Ad Hoc Reporting
-                                                        <span class="noa">EDDIE and Data Warehouse Reporting</span>
-                                                    </div>
-                                                    <div class="linked-ext-unit">Office of Undergrad Admissions</div>
-                                                    <div>Needs Review</div>
-                                                </li>
-                                            </ul>
+                                        <td headers="jsims jsims-multireq jsims-linked-header last-touch">MM/DD/YYYY
                                         </td>
-                                        <td>test1</td>
-                                        <td>test2</td>
-                                        <td>test3</td>
-                                    </tr>
-    
-                                    <!--Independent Request -->
-                                    <tr>
-                                        <td><span class="req-code">(#4001-1)</span>
-                                            <span class="req-line"> Modify: iBuy dept account coder</span>
-                                            <span class="noa">iBuy</span>
+                                        <td headers="jsims jsims-multireq jsims-linked-header usc-claim">Some other
+                                            Authorizer Group</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header status">Approved</td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header claim"><span
+                                                class="show-for-sr">Cannot claimed #1777-4, External Authorizer</span>
                                         </td>
-                                        <td>5/5/24</td>
-                                        <td> </td>
-                                        <td>Needs Review </td>
-                                        <td><button class="claim-btn" type="button"><span class="show-for-sr">Claim
-                                                    #4001-1</span></button></td>
-                                        <td><a href="next" aria-label="Act on request #4001-1">Act</a></td>
+                                        <td headers="jsims jsims-multireq jsims-linked-header act"></td>
                                     </tr>
-    
+
+                                    <!--Not linked-->
+                                    <tr>
+                                        <td headers="jsims  jsims-multireq req-summary">
+                                            <span class="req-code">(#1234-1)</span>
+                                            Add: Registration Census Ad Hoc Reporting
+                                            <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                        </td>
+                                        <td headers="jsims jsims-multireq  last-touch">MM/DD/YYYY
+                                        </td>
+                                        <td headers="jsims jsims-multireq  usc-claim">Jonah Magnus</td>
+                                        <td headers="jsims jsims-multireq status">Needs Review</td>
+                                        <td headers="jsims jsims-multireq  claim"><button class="claim-btn"
+                                                type="button"><span class="show-for-sr">Claim
+                                                    #1234</span></button></td>
+                                        <td headers="jsims jsims-multireq  act"><a href="#">Act</a>
+                                        </td>
+                                    </tr>
+
+
                                 </tbody>
                             </table>
-                        
+
+
+
+
                         </div>
 
-                        
                     </section>
 
 
