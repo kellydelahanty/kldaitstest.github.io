@@ -1,0 +1,667 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions in progess : Access Rights Management for USCs | University of Illinois System </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+    <header>
+
+        <div class="topbrand">
+            <div class="grid-x">
+                <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <span>Lauren Curtis <span class="sdetail">(651321699)</span></span>
+
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <a href="dash.html">
+                        <img src="../img/appname.png" alt="Access Rights Management application"></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+                <div class="burger"> <button type="button" data-toggle="mob-menu"><img src="../img/hamburger.png" alt=" "
+                            aria-label="Open main menu"></button> Menu</div>
+
+                <ul id="mob-menu" class="main-menu" data-toggler=".shown">
+                    <!--  <li><a href="">Request Inbox</a></li>-->
+                    <li><a href="request.html">Manage Access</a> </li>
+                    <li><a href="inboxm.html">My Submissions</a> </li>
+                    <li><a href="submitted.html">Saved/Unsubmitted</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li>Templates</li>
+
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell bodycard tracking">
+
+                    <h1>My Submissions: Requests in progress </h1>
+                    <div class="grid-x">
+                        <div class="cell medium-6">
+                            <p class="gentext">Within a request submission, each profile addition/change is given its
+                                own ID number and
+                                tracked
+                                individually. Once all parts of a request submission are complete, it can be found
+                                within
+                                Completed or Closed Submissions. </p>
+                        </div>
+                        <div class="cell medium-5 medium-offset-1" style="text-align: center;">
+                            <a href="closed-subs.html">Completed or closed submissions</a>
+                        </div>
+                    </div>
+
+
+                    <ul class="tabs pagepanel" data-tabs id="track-tabs">
+                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Requests I submitted</a>
+                        </li>
+                        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Requests from co-USCs</a>
+                        </li>
+                        <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Search by name or request
+                                #</a></li>
+                    </ul>
+
+
+
+
+                    <div class="tabs-content pagepanel-content" data-tabs-content="track-tabs">
+                        <div class="tabs-panel is-active" id="panel1">
+                            <h2 class="show-for-sr">Requests I submitted</h2>
+
+                            <div class="filterbar onlysort">
+                                <div class="count">
+                                    3 requests with parts still in progress:
+                                </div>
+                                <!--
+                        <div class="filters">
+                            <button class="button clear pop-cntl" data-toggle="filter1"
+                                aria-label="Limit search results to ">Limit to:</button>
+
+
+                            <div class="dropdown-pane" id="filter1" data-dropdown data-auto-focus="false"
+                                data-hover-pane="true" data-close-on-click="true">
+                                <fieldset>
+                                    <legend class="show-for-sr">Check options to include</legend>
+                                    <label for="unit1"><input type="checkbox" id="unit1" name="filter-list" checked>Name
+                                        of unit 1 </label>
+
+
+                                    <label for="unit2"><input type="checkbox" id="unit2" name="filter-list" checked>
+                                        Name of unit 2</label>
+                                    <label for="unit3"><input type="checkbox" id="unit3" name="filter-list" checked>
+                                        Name of unit 3</label>
+
+                                </fieldset>
+                                <button type="button" class="button apply-btn"
+                                    aria-label="Apply limit-by choices">Apply</button>
+                            </div>-->
+                                <div class="sorts">
+                                    <button class="button ordering pop-cntl" data-toggle="order-drop"
+                                        aria-label="Select how to order results">Order by</button>
+                                    <div class="dropdown-pane" id="order-drop" data-dropdown data-auto-focus="false"
+                                        data-hover-pane="true" data-close-on-click="true">
+                                        <fieldset>
+                                            <legend class="show-for-sr">Select a way to order:</legend>
+                                            <label for="subdate"><input type="radio" id="subdate" name="order-list"
+                                                    checked>Submission date
+                                            </label>
+                                            <label for="forname"><input type="radio" id="forname" name="order-list">Name
+                                            </label>
+
+                                            <button type="button" class="button apply-btn"
+                                                aria-label="Apply order-by choice">Apply</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="listing-table sub-req">
+                                <caption>List of my submitted requests</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Request</th>
+                                        <th>Date</th>
+                                        <th>Person</th>
+                                        <th>Request parts</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>#45000</td>
+                                        <td>10/15/24</td>
+                                        <td>Ford, Harrison</td>
+                                        <td class="req-parts">
+                                            <ul>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(1) </span>Add
+                                                        whatever
+                                                        to
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Prereq</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-1"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(2)
+                                                        </span>Remove
+                                                        whatever
+                                                        from
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Pending</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-2"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(3) </span>Add
+                                                        whatever
+                                                        to
+                                                        whatever </div>
+                                                    <div class="req-stat-col">In process</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-3"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(4) </span>Add
+                                                        whatever
+                                                        to
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Attn req</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-4"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#45211</td>
+                                        <td>10/02/24</td>
+                                        <td>Cross, Mark</td>
+                                        <td class="req-parts">
+                                            <ul>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(1) </span>Add
+                                                        whatever
+                                                        to
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Denied</div>
+                                                    <div class="req-cnl-btn">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(2) </span><a
+                                                            href="">Remove whatever
+                                                            from
+                                                            whatever</a> </div>
+                                                    <div class="req-stat-col">Complete</div>
+                                                    <div class="req-cnl-btn">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(3) </span><a
+                                                            href="">Add
+                                                            whatever to
+                                                            whatever</a> </div>
+                                                    <div class="req-stat-col">Cancelled</div>
+                                                    <div class="req-cnl-btn">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(4) </span><a
+                                                            href="">Add
+                                                            whatever to
+                                                            whatever</a> </div>
+                                                    <div class="req-stat-col">In process</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45211-4"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rtno">
+                                            <a href="javascript:void();" data-open="status-main-pop"> #39985</a>
+                                        </td>
+                                        <td>09/17/24</td>
+                                        <td>Givenchy, Hubert</td>
+                                        <td class="req-parts">
+                                            <ul>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(1) </span><a
+                                                            href="javascript:void();" data-open="item-detail">Modify
+                                                            {name of profile} click me</a>
+                                                    </div>
+                                                    <div class="req-stat-col"><span class="stat-">Status</span>
+                                                    </div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #39985-1"
+                                                            data-open="confirm-cancel"></button>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- show 15 requests, regardless of number of line items. Will revisit break number when data has been collected. -->
+                            <!-- 
+                            <nav aria-label="Pagination">
+                                <ul class="pagination">
+                                    <li class="pagination-previous disabled">Previous</li>
+                                    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                                    <li><a href="#" aria-label="Page 2">2</a></li>
+                                    <li><a href="#" aria-label="Page 3">3</a></li>
+
+                                    <li class="ellipsis"></li>
+                                    <li><a href="#" aria-label="Page 12">6</a></li>
+                                    <li><a href="#" aria-label="Page 13">7</a></li>
+                                    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+                                </ul>
+                            </nav>
+                            -->
+                        </div>
+
+
+
+                        <div class="tabs-panel" id="panel2">
+                            <div class="filterbar">
+                                <div class="filters">
+                                    <button class="button clear pop-cntl" data-toggle="filter1"
+                                        aria-label="Limit search results to ">Show from:</button>
+
+
+                                    <div class="dropdown-pane" id="filter1" data-dropdown data-auto-focus="false"
+                                        data-hover-pane="true" data-close-on-click="true">
+                                        <fieldset>
+                                            <legend class="show-for-sr">Check units to include</legend>
+                                            <label for="unit1"><input type="checkbox" id="unit1" name="filter-list"
+                                                    checked>Name
+                                                of unit 1 </label>
+
+
+                                            <label for="unit2"><input type="checkbox" id="unit2" name="filter-list"
+                                                    checked>
+                                                Name of unit 2</label>
+                                            <label for="unit3"><input type="checkbox" id="unit3" name="filter-list"
+                                                    checked>
+                                                Name of unit 3</label>
+
+                                        </fieldset>
+                                        <button type="button" class="button apply-btn"
+                                            aria-label="Apply limit-by choices">Apply</button>
+                                    </div>
+                                </div>
+                                <div class="sorts">
+                                    <button class="button ordering pop-cntl" data-toggle="order-drop2"
+                                        aria-label="Select how to order results">Order by</button>
+                                    <div class="dropdown-pane" id="order-drop2" data-dropdown data-auto-focus="false"
+                                        data-hover-pane="true" data-close-on-click="true">
+                                        <fieldset>
+                                            <legend class="show-for-sr">Select a way to order:</legend>
+                                            <label for="subdate2"><input type="radio" id="subdate2" name="order-list"
+                                                    checked>Submission date
+                                            </label>
+                                            <label for="forname2"><input type="radio" id="forname2"
+                                                    name="order-list">Name
+                                            </label>
+
+                                            <button type="button" class="button apply-btn"
+                                                aria-label="Apply order-by choice">Apply</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <table class="listing-table sub-req">
+                                <caption>List of my submitted requests</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Request</th>
+                                        <th>Date</th>
+                                        <th>By</th>
+                                        <th>Person</th>
+                                        <th>Request parts</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>#45000</td>
+                                        <td>10/15/24</td>
+                                        <td>NetID-of-usc</td>
+                                        <td>Ford, Harrison</td>
+                                        <td class="req-parts">
+                                            <ul>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(1) </span>Add
+                                                        whatever
+                                                        to
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Prereq</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-1"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(2)
+                                                        </span>Remove
+                                                        whatever
+                                                        from
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Pending</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-2"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(3) </span>Add
+                                                        appname and profile </div>
+                                                    <div class="req-stat-col">In process</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-3"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(4) </span>Add
+                                                        whatever
+                                                        profile </div>
+                                                    <div class="req-stat-col">Attn req</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45000-4"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#45211</td>
+                                        <td>10/02/24</td>
+                                        <td>NetID-of-usc</td>
+                                        <td>Cross, Mark</td>
+                                        <td class="req-parts">
+                                            <ul>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(1) </span>Add
+                                                        whatever
+                                                        to
+                                                        whatever </div>
+                                                    <div class="req-stat-col">Denied</div>
+                                                    <div class="req-cnl-btn">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(2) </span><a
+                                                            href="">Remove whatever
+                                                            from
+                                                            whatever</a> </div>
+                                                    <div class="req-stat-col">Complete</div>
+                                                    <div class="req-cnl-btn">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(3) </span><a
+                                                            href="">Add
+                                                            whatever to
+                                                            whatever</a> </div>
+                                                    <div class="req-stat-col">Cancelled</div>
+                                                    <div class="req-cnl-btn">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(4) </span><a
+                                                            href="">Add
+                                                            whatever to
+                                                            whatever</a> </div>
+                                                    <div class="req-stat-col">In process</div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #45211-4"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#39985</td>
+                                        <td>09/17/24</td>
+                                        <td>NetID-of-usc</td>
+                                        <td>Givenchy, Hubert</td>
+                                        <td class="req-parts">
+                                            <ul>
+                                                <li>
+                                                    <div class="req-part-name"><span class="part-no">(1) </span><a
+                                                            href="javascript:void();" data-open="item-detail">Modify
+                                                            {name of profile} click me</a>
+                                                    </div>
+                                                    <div class="req-stat-col"><span class="stat-">Status</span>
+                                                    </div>
+                                                    <div class="req-cnl-btn"><button class="cancel-part-btn"
+                                                            aria-label="Cancel request part #39985-1"
+                                                            data-open="confirm-cancel"></button>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- show 15 requests, regardless of number of line items. Will revisit break number when data has been collected. -->
+                            <!-- 
+                            <nav aria-label="Pagination">
+                                <ul class="pagination">
+                                    <li class="pagination-previous disabled">Previous</li>
+                                    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                                    <li><a href="#" aria-label="Page 2">2</a></li>
+                                    <li><a href="#" aria-label="Page 3">3</a></li>
+
+                                    <li class="ellipsis"></li>
+                                    <li><a href="#" aria-label="Page 12">6</a></li>
+                                    <li><a href="#" aria-label="Page 13">7</a></li>
+                                    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+                                </ul>
+                            </nav>
+                            -->
+
+
+                        </div>
+                        <div class="tabs-panel" id="panel3">
+
+                            <h2 class="show-for-sr">Search for requests</h2>
+
+                            <div class="input-group req-search">
+                                <span class="input-group-label"> <label for="req-search">Enter NetID OR Request Number:
+                                    </label></span>
+                                <input type="search" id="req-search" class="input-med">
+                                <div class="input-group-button">
+                                    <input type="submit" class="button" value="Search">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="reveal status-reveal" id="confirm-cancel" data-reveal>
+                        <div class="status-body">
+                            <h1>Cancel this part of your request? </h1>
+
+                            <p>To be cancelled: Adding {name of profile } /Changing settings for {name of profile}
+                                /Removing
+                                {name of profile }</p>
+                            <button type="button" class="button ">Yes, cancel it </button> <button type="button"
+                                class="button secondary" data-close>No, keep this
+                                request</button>
+                            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="reveal status-reveal" id="status-main-pop" data-reveal>
+                        <div class="status-body">
+                            <h1>Request #88888 <span>Submitted 01/15/24</span></h1>
+
+
+                            <h2>For:</h2>
+                            <p>PreferredFirst Lastname<br>
+                                Sr title here | Education Administation [333]<br>
+                                netidhere / 65unihere
+                            </p>
+
+                            <h2>Buy: </h2>
+                            <p>{Submitter name}
+                                <span>on behalf of {unit name }</span>
+                            </p>
+
+                            <h2>Prequested effective date:</h2>
+                            <p>Nov 12, 2024 [edit]</p>
+                        </div>
+
+                        <div class="blanket-cancel checks">
+                            <h2>Remaining {2} parts of this request</h2>
+
+                            <label for="cancel-it"><input id="cancel-it" type="checkbox" name="blanket-cancel">Cancel
+                                all incomplete parts of
+                                this request <strong>[Note: Clicking the Cancel items button below will immediately
+                                    cancel the
+                                    remaining items. This action cannot be undone.</strong>] </label>
+                            <button type="button" class="button">Cancel remaining items</button>
+                        </div>
+
+                        <button class="close-button" data-close aria-label="Close reveal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="reveal status-reveal" id="item-detail" data-reveal>
+
+                        <button class="close-button" data-close aria-label="Close reveal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class="status-banner">
+                            <h1>Request #2222 - Part #3</h1>
+                            <div>In process</div>
+                            <p>Submitted: mm/dd/yyyy</p>
+
+                        </div>
+
+                        <div class="status-body">
+                            <h2>For:</h2>
+                            <p>PreferredFirst Lastname<br>
+                                Sr title here | Education Administation [333]<br>
+                                netidhere / 65unihere
+                            </p>
+
+                            <h2>Buy: </h2>
+                            <p>{Submitter name}
+                                <span>on behalf of {unit name }</span>
+                            </p>
+
+                            <h2>Details</h2>
+                            <p>Add {name of profile }
+                                <span>settings go here if applicable</span>
+                            </p>
+
+                            <h2>Status </h2>
+                            <p>{write status details here; this would include comments about rejections, etc. }</p>
+
+                            <div>{potentially timeframe goes here } </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
