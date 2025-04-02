@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorizer inbox : Access Rights Management for USCs | University of Illinois System </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
+
+    <link rel="stylesheet" type="text/css" href="../../site.css" />
+
+</head>
+
+<body>
+    <aside class="sb-heading">
+        <div>
+          <h1>Kelly Delahanty's Front-End Sandbox</h1>
+          <nav>
+            <a href="../../index.html">Back to Sandbox Home</a>
+          </nav>
+        </div>
+      </aside>
+    <header>
+
+        <div class="topbrand">
+            <div class="grid-x">
+                <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <span>Lauren Curtis </span>
+                    <!-- show this button only if the person is both a USC *and* and authorizer-->
+                    <button type="button" aria-label="Change role" data-toggle="switch-view" class="setting-btn"><span
+                            class="show-for-sr">Switch role</span></button>
+
+                    <div class="dropdown-pane dropdown-acct" id="switch-view" data-dropdown data-auto-focus="false"
+                        data-hover-pane="true" data-close-on-click="true">
+
+                        <a href="USC-main-page">Switch to USC view</a>
+
+                    </div>
+
+
+
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <img src="../img/authorizer-logo.png"
+                        alt="Access Rights Management application - Authorizer access">
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell bodycard tracking">
+
+                    <div class="h1-btn ">
+                        <h1>Accessible Table Test - USC Tables (with action button) </h1>
+                    </div>
+
+
+                    <!--Option 1- Different rows with rowgroups that span all rows, request part still one cell/column -->
+                    <div style="margin-bottom: 5rem;" class="">
+                        <h2>Option 1 -Request part is all in one column/cell</h2>
+
+                    </div>
+
+                            <!--Option 2- Different rows with rowgroups that span all rows, request part still one cell/column -->
+                            <div style="margin-bottom: 5rem;" class="">
+                                <h2>Option 2 - Each request part is it's own row (but still in one column/cell), other columns are "rowgroup"s that span the rows of the request parts </h2>
+                                <table class="listing-table table-test-2">
+                                    <caption>
+                                        Poster availability
+                                    </caption>
+                                    <col>
+                                    <col>
+                                    <colgroup span="3"></colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="req-test-num">Request</th>
+                                            <th scope="col" class="req-test-date">Org Date</th>
+                                            <th scope="col" class="req-test-usc">Requested By</th>
+                                            <th scope="col" class="req-test-person">Person</th>
+                                            <th scope="col" class="req-test-parts">Requested parts</th>
+        
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th rowspan="3" scope="rowgroup">#45000</th>
+                                            <td rowspan="3"scope="rowgroup">MM/DD/YYYY</td>
+                                            <td rowspan="3"scope="rowgroup">NetID-of-usc</td>
+                                            <td rowspan="3"scope="rowgroup">Blackwood, Martin</td>
+                                            <td class="req-test-parts">        
+                                                <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to whatever </a></div>
+                                                <div class="req-stat-col">In Process 
+                                                    <button class="cancel-part-btn" aria-label="Cancel request part #45000-4" data-open="confirm-cancel"></button>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="req-test-parts">        
+                                                <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to from  </a></div>
+                                                <div class="req-stat-col">Pending 
+                                                    <button class="cancel-part-btn" aria-label="Cancel request part #45000-4" data-open="confirm-cancel"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="req-test-parts">        
+                                                <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever from whatever </a></div>
+                                                <div class="req-stat-col">Complete 
+
+                                                </div>
+                                            </td>
+                                        </tr>
+        
+                                        <tr>
+                                            <th rowspan="2" scope="rowgroup">#45002</th>
+                                            <td rowspan="2"scope="rowgroup">MM/DD/YYYY</td>
+                                            <td rowspan="2"scope="rowgroup">NetID-of-usc</td>
+                                            <td rowspan="2"scope="rowgroup">Richardson, Helen</td>
+                                            <td class="req-test-parts">        
+                                                <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to from  </a></div>
+                                                <div class="req-stat-col">Pending 
+                                                    <button class="cancel-part-btn" aria-label="Cancel request part #45000-4" data-open="confirm-cancel"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="req-test-parts">        
+                                                <div class="req-part-name"><span class="part-no">(1) </span><a href="">Remove whatever from from  </a></div>
+                                                <div class="req-stat-col">Denied 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+             
+                                </table>
+                            </div>
+
+
+                        <!--Option 2- Splitting up the Request part into mulitple columns -->
+                        <div style="margin-bottom: 5rem;">
+                            <h2>Option 2 - Split request part into 3 columns </h2>
+                            <table class="listing-table table-test-3">
+                                <caption>
+                                    Poster availability
+                                </caption>
+                                <col>
+                                <col>
+                                <colgroup span="3"></colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="req-test-num">Request</th>
+                                        <th scope="col" class="req-test-date">Org Date</th>
+                                        <th scope="col" class="req-test-usc">Requested By</th>
+                                        <th scope="col" class="req-test-person">Person</th>
+                                        <th scope="col" class="req-test-parts">Requested parts</th>
+                                        <th scope="col" class="req-test-status">Status</th>
+                                        <th scope="col" class="req-test-date">Cancel?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="3" scope="rowgroup">#45000</th>
+                                        <td rowspan="3"scope="rowgroup">MM/DD/YYYY</td>
+                                        <td rowspan="3"scope="rowgroup">NetID-of-usc</td>
+                                        <td rowspan="3"scope="rowgroup">Blackwood, Martin</td>
+                                        <td class="req-test-parts">        
+                                            <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to from  </a></div>
+                                        </td>
+                                        <td>In Process</td>
+                                        <td><button class="cancel-part-btn" aria-label="Cancel request part #45000-4" data-open="confirm-cancel"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="req-test-parts"> 
+                                            <div class="req-part-name"><span class="part-no">(1) </span><a href="">Remove whatever from from  </a></div>
+                                        </td>
+                                        <td>Pending</td>
+                                        <td><button class="cancel-part-btn" aria-label="Cancel request part #45000-4" data-open="confirm-cancel"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="req-test-parts">
+                                            <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to from  </a></div>
+                                        </td>
+                                        <td>Completed</td>
+                                        <td></td>
+                                    </tr>
+    
+                                    <tr>
+                                        <th rowspan="3" scope="rowgroup">#45002</th>
+                                        <td rowspan="3"scope="rowgroup">MM/DD/YYYY</td>
+                                        <td rowspan="3"scope="rowgroup">NetID-of-usc</td>
+                                        <td rowspan="3"scope="rowgroup">Richardson, Helen</td>
+                                        <td class="req-test-parts">        
+                                            <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to from  </a></div>
+                                        </td>
+                                        <td>Pending</td>
+                                        <td><button class="cancel-part-btn" aria-label="Cancel request part #45000-4" data-open="confirm-cancel"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="req-test-parts"> 
+                                            <div class="req-part-name"><span class="part-no">(1) </span><a href="">Add whatever to from  </a></div>
+                                        </td>
+                                        <td>Denied</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+         
+                            </table>
+                        </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

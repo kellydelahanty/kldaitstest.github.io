@@ -43,3 +43,43 @@
 #last-touch, #status {
     min-width: 150px;
 }
+
+
+.sub-req {
+    tbody {
+        th {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: none;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+        }
+        
+        tr {
+            border-bottom: 1px solid #919294
+        }
+    }
+
+}
+
+.usc-inbox {
+
+    .req-number {width: 100px;}
+    .req-date {width: 150px;}
+
+
+    tbody {
+        
+        td.req-parts {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+
+    }
+}

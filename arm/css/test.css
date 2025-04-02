@@ -30,3 +30,28 @@
 #last-touch, #status {
   min-width: 150px;
 }
+
+.sub-req tbody th {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: none;
+}
+.sub-req tbody tr:nth-child(even) {
+  background-color: white;
+}
+.sub-req tbody tr {
+  border-bottom: 1px solid #919294;
+}
+
+.usc-inbox .req-number {
+  width: 100px;
+}
+.usc-inbox .req-date {
+  width: 150px;
+}
+.usc-inbox tbody td.req-parts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

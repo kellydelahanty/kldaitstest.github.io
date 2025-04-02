@@ -186,6 +186,14 @@
       "oAP" : "\/arm\/devhelp\/inbox-test-authadmin.html",
       "oF" : 0
     },
+    "\/arm\/devhelp\/inbox-test-usc-action.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/devhelp\/inbox-test-usc-action.html",
+      "oF" : 0
+    },
     "\/arm\/devhelp\/inbox-test-usc.html" : {
       "cB" : 0,
       "ft" : 8192,
