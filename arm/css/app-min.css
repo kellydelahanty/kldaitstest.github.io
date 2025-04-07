@@ -69,6 +69,7 @@ a {
 
 abbr[title] {
   border-bottom: 0;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
 
@@ -286,6 +287,8 @@ select {
 
 button {
   padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: 0;
   border-radius: 5px;
@@ -336,6 +339,8 @@ textarea {
   line-height: 1.5;
   color: #000000;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 [type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus,
@@ -363,12 +368,18 @@ textarea[readonly] {
 
 [type=submit],
 [type=button] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-radius: 5px;
 }
 
 input[type=search] {
   box-sizing: border-box;
+}
+
+::-moz-placeholder {
+  color: #B8B8B8;
 }
 
 ::placeholder {
@@ -513,6 +524,8 @@ select {
   height: 2.4375rem;
   margin: 0 0 1rem;
   padding: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: 1px solid #B8B8B8;
   border-radius: 5px;
@@ -561,6 +574,9 @@ select:not([multiple]) {
 .is-invalid-input:not(:focus) {
   border-color: #DC383D;
   background-color: rgb(251.5, 235.1, 235.6);
+}
+.is-invalid-input:not(:focus)::-moz-placeholder {
+  color: #DC383D;
 }
 .is-invalid-input:not(:focus)::placeholder {
   color: #DC383D;
@@ -912,6 +928,7 @@ ul.no-bullet, ol.no-bullet {
   * {
     background: transparent !important;
     color: black !important;
+    -webkit-print-color-adjust: economy;
     print-color-adjust: economy;
     box-shadow: none !important;
     text-shadow: none !important;
@@ -3526,6 +3543,8 @@ a.button:hover, a.button:focus {
   margin-bottom: 2.25rem;
   background-color: #e6e6e6;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   touch-action: none;
 }
@@ -3603,6 +3622,8 @@ input[type=range] {
   height: auto;
   margin-top: 0.45rem;
   margin-bottom: 0.45rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: 0;
   line-height: 1;
@@ -3675,6 +3696,8 @@ output {
   font-size: 0.875rem;
   font-weight: bold;
   color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   height: 2rem;
 }
@@ -7113,6 +7136,7 @@ input[type=radio] {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
   /* Remove most all native input styles */
+  -moz-appearance: none;
   appearance: none;
   /* For iOS < 15 */
   background-color: var(--form-background);
@@ -7156,6 +7180,7 @@ input[type=radio]:focus {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
   /* Remove most all native input styles */
+  -moz-appearance: none;
   appearance: none;
   /* For iOS < 15 */
   background-color: var(--form-background);
@@ -7292,6 +7317,8 @@ input[type=text]:disabled {
 .radio-bars input[type=radio] {
   position: absolute;
   width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-color: transparent;
 }
@@ -7336,10 +7363,20 @@ input[type=text]:disabled {
   margin-bottom: 0;
 }
 
+::-moz-placeholder {
+  color: #6D6E71;
+  opacity: 1;
+  font-style: italic;
+}
+
 ::placeholder {
   color: #6D6E71;
   opacity: 1;
   font-style: italic;
+}
+
+.needs-input::-moz-placeholder {
+  color: #B82025;
 }
 
 .needs-input::placeholder {
@@ -8370,6 +8407,9 @@ li.linked-ext {
 }
 .main-lookup input[type=text]:focus {
   border-color: #82d6ff;
+}
+.main-lookup input[type=text]:focus::-moz-placeholder {
+  color: #07A5E9;
 }
 .main-lookup input[type=text]:focus::placeholder {
   color: #07A5E9;
@@ -9477,6 +9517,7 @@ ul.process-instruct {
   display: grid;
   grid-template-columns: 200px auto;
   row-gap: 20px;
+  -moz-column-gap: 10px;
   column-gap: 10px;
   align-items: center;
 }

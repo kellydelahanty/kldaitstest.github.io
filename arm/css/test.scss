@@ -1,85 +1,174 @@
 .aa-table-test-1 {
-    border: none;
-
+  border: none;
 
   tbody {
-    tr, tr:nth-child(2n) {background-color: #ffffff;}
+    tr,
+    tr:nth-child(2n) {
+      background-color: #ffffff;
+    }
 
-    th {text-align: left;}
+    th {
+      text-align: left;
+    }
 
-    td, th {  border-bottom: 1px solid #B8B8B8;}
-
+    td,
+    th {
+      border-bottom: 1px solid #b8b8b8;
+    }
 
     .linked-req-test-1-header {
-        th { border-left: 4px solid #6C9EA8; }
-        th, td {border-bottom: 1px solid #CACCCD;}
+      th {
+        border-left: 4px solid #6c9ea8;
+      }
+      th,
+      td {
+        border-bottom: 1px solid #cacccd;
+      }
     }
-    .linked-req-test-1, .linked-req-test-1-ext {
-        td {
-            border-bottom: 1px solid #e6e6e6;
-        }
-    
-       td:first-of-type {
-            border-left: 4px solid #6C9EA8;
-    
-        }
+    .linked-req-test-1,
+    .linked-req-test-1-ext {
+      td {
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+      td:first-of-type {
+        border-left: 4px solid #6c9ea8;
+      }
     }
 
     .linked-req-test-1-ext {
-        background-color: #EFF6F7 !important;
-        font-style: italic;
+      background-color: #eff6f7 !important;
+      font-style: italic;
+    }
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Testing Table Layouts
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.table-test-2,
+.table-test-4 {
+  tbody {
+    tr th {
+      text-transform: none;
+      text-align: left;
+    }
+
+    tr:nth-child(2n) {
+      background-color: #ffffff;
+    }
+
+    tr,
+    tr:nth-child(2n) {
+      border-bottom: 1px solid #6d6e71;
     }
   }
 
+  .req-test-num {
+    width: 100px;
+  }
+  .req-test-date {
+    width: 125px;
+  }
+  .req-test-usc {
+    width: 150px;
+  }
+  .req-test-person {
+    width: auto;
+  }
+  th.req-test-parts {
+    width: 600px;
+  }
+}
+
+.table-test-2 {
+  td.req-test-parts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 
+.table-test-4 {
+  td.req-test-parts {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: .5rem;
+    row-gap: .5rem;
 
+    .req-stat-col {padding-left: 34px}
+    .req-cnl-btn {justify-self: center;}
 
-
-
-
-
-#last-touch, #status {
-    min-width: 150px;
+    //div {background-color: yellow;}
+  }
 }
 
+@media (min-width: 640px) {
+  .table-test-4 {
+    td.req-test-parts {
+    
+      grid-template-columns: 5fr 3fr 1fr;
+      .req-stat-col {padding-left: 0}
+      .req-cnl-btn {justify-self: end;}
+
+  //    div {background-color: pink;}
+
+    }
+  }
+}
+
+.table-test-3 {
+  th,
+  td {
+    text-align: left;
+    background-color: white;
+    border-bottom: 1px solid #b8b8b8;
+  }
+
+  th {
+    vertical-align: top;
+  }
+}
+
+#last-touch,
+#status {
+  min-width: 150px;
+}
 
 .sub-req {
-    tbody {
-        th {
-            text-align: left;
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: none;
-
-        }
-
-        tr:nth-child(even) {
-            background-color: white;
-        }
-        
-        tr {
-            border-bottom: 1px solid #919294
-        }
+  tbody {
+    th {
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: none;
     }
 
+    tr:nth-child(even) {
+      background-color: white;
+    }
+
+    tr {
+      border-bottom: 1px solid #919294;
+    }
+  }
 }
 
 .usc-inbox {
+  .req-number {
+    width: 100px;
+  }
+  .req-date {
+    width: 150px;
+  }
 
-    .req-number {width: 100px;}
-    .req-date {width: 150px;}
-
-
-    tbody {
-        
-        td.req-parts {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-
+  tbody {
+    td.req-parts {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
+  }
 }
