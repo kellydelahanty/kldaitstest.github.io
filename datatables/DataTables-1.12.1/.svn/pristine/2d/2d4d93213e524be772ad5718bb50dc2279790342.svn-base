@@ -1,0 +1,4 @@
+Version:released 5/19/2022
+Documentation: https://cdn.datatables.net/1.12.1/
+Notes: 	This version replaced the sorting up/down png images with css code. See 1.12.0 documentation 
+	for details (https://cdn.datatables.net/1.12.0/)

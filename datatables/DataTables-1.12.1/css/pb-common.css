@@ -1,0 +1,3635 @@
+@charset "UTF-8";
+/* ==================================================================================
+   # SITE LAYOUT 
+===================================================================================== */
+/* =========================================================================
+  ## GRID
+============================================================================ */
+/* ===============================================================
+  ### GRID CONTAINER
+================================================================== */
+.grid-container {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================================================
+  ### GRID ITEMS
+================================================================== */
+.cell {
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
+}
+
+.col-1-sm {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+}
+
+.col-2-sm {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+.col-3-sm {
+  -ms-grid-column-span: 3;
+  grid-column: span 3;
+}
+
+.col-4-sm {
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
+}
+
+.col-5-sm {
+  -ms-grid-column-span: 5;
+  grid-column: span 5;
+}
+
+.col-6-sm {
+  -ms-grid-column-span: 6;
+  grid-column: span 6;
+}
+
+.col-7-sm {
+  -ms-grid-column-span: 7;
+  grid-column: span 7;
+}
+
+.col-8-sm {
+  -ms-grid-column-span: 8;
+  grid-column: span 8;
+}
+
+.col-9-sm {
+  -ms-grid-column-span: 9;
+  grid-column: span 9;
+}
+
+.col-10-sm {
+  -ms-grid-column-span: 10;
+  grid-column: span 10;
+}
+
+.col-11-sm {
+  -ms-grid-column-span: 11;
+  grid-column: span 11;
+}
+
+.col-12-sm {
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
+}
+
+@media (min-width: 700px) {
+  .col-1-md {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+  .col-2-md {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+  .col-3-md {
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+  }
+  .col-4-md {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+  }
+  .col-5-md {
+    -ms-grid-column-span: 5;
+    grid-column: span 5;
+  }
+  .col-6-md {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
+  .col-7-md {
+    -ms-grid-column-span: 7;
+    grid-column: span 7;
+  }
+  .col-8-md {
+    -ms-grid-column-span: 8;
+    grid-column: span 8;
+  }
+  .col-9-md {
+    -ms-grid-column-span: 9;
+    grid-column: span 9;
+  }
+  .col-10-md {
+    -ms-grid-column-span: 10;
+    grid-column: span 10;
+  }
+  .col-11-md {
+    -ms-grid-column-span: 11;
+    grid-column: span 11;
+  }
+  .col-12-md {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+  }
+}
+@media (min-width: 1025px) {
+  .col-1-lg {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+  .col-2-lg {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+  .col-3-lg {
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+  }
+  .col-4-lg {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+  }
+  .col-5-lg {
+    -ms-grid-column-span: 5;
+    grid-column: span 5;
+  }
+  .col-6-lg {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
+  .col-7-lg {
+    -ms-grid-column-span: 7;
+    grid-column: span 7;
+  }
+  .col-8-lg {
+    -ms-grid-column-span: 8;
+    grid-column: span 8;
+  }
+  .col-9-lg {
+    -ms-grid-column-span: 9;
+    grid-column: span 9;
+  }
+  .col-10-lg {
+    -ms-grid-column-span: 10;
+    grid-column: span 10;
+  }
+  .col-11-lg {
+    -ms-grid-column-span: 11;
+    grid-column: span 11;
+  }
+  .col-12-lg {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+  }
+}
+/* ========================= #### IMAGES IN GRID ITEMS ========================= */
+.cell img {
+  max-width: 100%;
+}
+
+/* ===============================================================
+  ### GRID GAPS
+================================================================== */
+.grid-gap-10 {
+  grid-gap: 10px;
+}
+
+.grid-gap-30 {
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
+}
+
+.grid-gap-50 {
+  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+}
+
+@media (min-width: 375px) {
+  .grid-gap-30, .grid-gap-50 {
+    grid-column-gap: 30px;
+  }
+}
+@media (min-width: 700px) {
+  .grid-gap-50 {
+    grid-column-gap: 50px;
+  }
+}
+/* =========================================================================
+  ## IE LAYOUT FIXES
+============================================================================ */
+/*IE ONLY STYLE FIXES*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Places each row in grid-container in it's own row by default*/
+  .cell {
+    grid-column: 1;
+  }
+  .cell:nth-child(1) {
+    -ms-grid-row: 1;
+  }
+  .cell:nth-child(2) {
+    -ms-grid-row: 2;
+  }
+  .cell:nth-child(3) {
+    -ms-grid-row: 3;
+  }
+  .cell:nth-child(4) {
+    -ms-grid-row: 4;
+  }
+  .cell:nth-child(5) {
+    -ms-grid-row: 5;
+  }
+  .cell:nth-child(6) {
+    -ms-grid-row: 6;
+  }
+  .cell:nth-child(7) {
+    -ms-grid-row: 7;
+  }
+  .cell:nth-child(8) {
+    -ms-grid-row: 8;
+  }
+  .cell:nth-child(9) {
+    -ms-grid-row: 9;
+  }
+  .cell:nth-child(10) {
+    -ms-grid-row: 10;
+  }
+  .cell:nth-child(11) {
+    -ms-grid-row: 11;
+  }
+  .cell:nth-child(12) {
+    -ms-grid-row: 12;
+  }
+  .cell:nth-child(13) {
+    -ms-grid-row: 13;
+  }
+  .cell:nth-child(14) {
+    -ms-grid-row: 14;
+  }
+  .cell:nth-child(15) {
+    -ms-grid-row: 15;
+  }
+  .cell:nth-child(16) {
+    -ms-grid-row: 16;
+  }
+  .cell:nth-child(17) {
+    -ms-grid-row: 17;
+  }
+  .cell:nth-child(18) {
+    -ms-grid-row: 18;
+  }
+  .cell:nth-child(19) {
+    -ms-grid-row: 19;
+  }
+  .cell:nth-child(20) {
+    -ms-grid-row: 20;
+  }
+  .cell:nth-child(21) {
+    -ms-grid-row: 21;
+  }
+  .cell:nth-child(22) {
+    -ms-grid-row: 22;
+  }
+  .cell:nth-child(23) {
+    -ms-grid-row: 23;
+  }
+  .cell:nth-child(24) {
+    -ms-grid-row: 24;
+  }
+  .cell:nth-child(25) {
+    -ms-grid-row: 25;
+  }
+  .cell:nth-child(26) {
+    -ms-grid-row: 26;
+  }
+  .cell:nth-child(27) {
+    -ms-grid-row: 27;
+  }
+  .cell:nth-child(28) {
+    -ms-grid-row: 28;
+  }
+  .cell:nth-child(29) {
+    -ms-grid-row: 29;
+  }
+  .cell:nth-child(30) {
+    -ms-grid-row: 30;
+  }
+  /*Fixes 2-column page template layout*/
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), (-ms-high-contrast: none) and (min-width: 700px) {
+  main .grid-container .subnav {
+    margin-right: 50px;
+  }
+  main .grid-container #page-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+}
+/* ==================================================================================
+   # GENERAL SITE STYLING
+===================================================================================== */
+/* =========================================================================
+   ## BASIC SITE STYLING
+============================================================================ */
+/* ===============================================================
+   ### LAYOUT
+================================================================== */
+body {
+  margin: 0;
+}
+
+.content-block {
+  padding: 1rem;
+}
+
+.blue-block {
+  background-color: #F0F5F9;
+}
+
+.gray-block {
+  background-color: #E8E9ED;
+}
+
+/* ===============================================================
+   ### FONTS & TEXT
+================================================================== */
+p, h1, h2, h3, h4, h5, h6, legend, label, li, a, dt, dd, th, td {
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+
+p, main li, main ul {
+  color: #0a0a0a;
+  font-size: 1rem;
+  line-height: 175%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0a0a0a;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ol li, ul li {
+  margin: 0.75rem 0;
+}
+ol li ul, ul li ul {
+  padding-left: 1.5rem;
+}
+
+/* ===============================================================
+   ### LINKS
+================================================================== */
+a {
+  color: #006EBD;
+}
+
+a:hover, a:visited:hover {
+  color: #45781C;
+}
+
+a:visited {
+  color: #005394;
+}
+
+a.button {
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: none;
+  text-align: center;
+}
+
+a:hover.button {
+  border-bottom: none;
+  color: #fefefe;
+}
+
+a.hollow, a:hover.hollow {
+  border-bottom: solid 1px #006EBD;
+}
+
+a.hollow-white {
+  border: #fefefe solid 1px;
+}
+
+a.primary, a.primary:hover {
+  color: #fefefe;
+}
+
+a.accent, a.accent:hover {
+  color: #0a0a0a;
+}
+
+/* Links that look like links but align properly with buttons in btn-groups */
+a.btn-match {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #006EBD;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+
+a.btn-match:hover, a.btn-match:focus {
+  color: #45781C;
+  text-decoration: underline;
+}
+
+/* Image+Links - used for the "Upcoming opportunities" and "Sign up for Email Notifications" CTAs on homepage */
+.img-link {
+  max-width: 300px;
+}
+.img-link img {
+  float: left;
+  padding-right: 1rem;
+  max-width: 50px;
+}
+
+/* > Arrow Links - Used to draw attention to particular links */
+.arrow-link {
+  background: url("/common/graphics/icons/icon-arrow-link.png") left center no-repeat;
+  padding-left: 30px;
+}
+
+.arrow-link:hover {
+  background: url("/common/graphics/icons/icon-arrow-link-hover.png") left center no-repeat;
+  padding-left: 30px;
+}
+
+.plain-link {
+  border-bottom: transparent;
+  text-decoration: none;
+}
+
+/* ===============================================================
+   ### BUTTONS
+================================================================== */
+.button, [type=file].button::file-selector-button {
+  border-radius: 3px;
+  border: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #E8E9ED;
+  color: #0a0a0a;
+  transition: 0.3s;
+  margin: 0.5rem 0;
+}
+
+.button:hover, [type=file].button::file-selector-button:hover {
+  cursor: pointer;
+  background-color: #C1C6CD;
+}
+
+.small {
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.primary {
+  background-color: #006EBD;
+  color: #fefefe;
+}
+
+.primary:hover {
+  background-color: #005394;
+}
+
+.secondary {
+  background-color: #2F3235;
+  color: #fefefe;
+}
+
+.secondary:hover {
+  background-color: #434B55;
+}
+
+.tertiary {
+  background-color: #fefefe;
+  color: #434B55;
+}
+
+.tertiary:hover {
+  background-color: #E8E9ED;
+}
+
+.accent {
+  background-color: #FEC500;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
+.accent:hover {
+  background-color: #E2A800;
+}
+
+.hollow, [type=file].hollow::file-selector-button {
+  border: 1px #006EBD solid;
+  background-color: transparent;
+  color: #006EBD;
+}
+
+.hollow:hover, [type=file].hollow::file-selector-button:hover {
+  border-color: #005394;
+  color: #fefefe;
+  background-color: #005394;
+}
+
+.hollow-white {
+  border: 1px #fefefe solid;
+  background-color: transparent;
+  color: #fefefe;
+}
+
+.hollow-white:hover {
+  border-color: #fefefe;
+  color: #434B55;
+  background-color: #fefefe;
+}
+
+.round {
+  padding: 3px 8px;
+  border: none;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.link-match {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1rem;
+  color: #006EBD;
+}
+
+.link-match:hover {
+  color: #45781C;
+  background: none;
+}
+
+[type=file].button::file-selector-button {
+  margin: 0.5rem;
+}
+
+[type=file] {
+  background-color: transparent;
+  padding: 0.5rem 0;
+}
+
+[type=file]:hover {
+  background-color: transparent;
+}
+
+[type=file].hollow {
+  border: transparent;
+  color: #0a0a0a;
+  background-color: transparent;
+}
+
+/* BUTTON GROUPINGS AND LAYOUTS */
+.button-group .button {
+  margin-right: 0.75rem;
+}
+
+/*Disabled buttons*/
+.button:disabled, .button[disabled] {
+  background: #E8E9ED;
+  color: #434B55;
+  cursor: not-allowed;
+  font-weight: normal;
+  border-color: transparent;
+}
+
+/* ===============================================================
+  ### PAGINATION 
+  Used in both "Search Results" (public and private) and "News & Announcements" (public only). 
+  Pagination for datatables is handled separately. 
+================================================================== */
+.pagination {
+  float: right;
+}
+.pagination p {
+  margin: 0.25rem 0;
+  line-height: 300%;
+}
+.pagination a {
+  margin: 0.05rem;
+  padding: 0.75rem;
+  border: none;
+}
+.pagination a.current {
+  background-color: #006EBD;
+  color: #fefefe;
+}
+.pagination a:hover, .pagination a:focus, .pagination a:visited:hover {
+  background-color: #005394;
+  color: #fefefe;
+}
+
+@media (min-width: 700px) {
+  .pagination {
+    text-align: right;
+  }
+  .pagination p {
+    line-height: 250%;
+    margin: 0.5rem 0;
+  }
+  .pagination a {
+    padding: 0.35rem;
+    margin: 0.25rem;
+  }
+}
+@media (min-width: 1025px) {
+  .pagination p {
+    line-height: 200%;
+  }
+}
+/* =========================================================================
+   ## CUSTOM STATIC CONTAINERS
+============================================================================ */
+/* ===============================================================
+  ### CARDS
+================================================================== */
+.card .card-header {
+  background-color: #434B55;
+  padding: 0.75rem 1rem;
+}
+.card .card-header h1, .card .card-header h2, .card .card-header h3, .card .card-header h4, .card .card-header h5, .card .card-header h6 {
+  margin: 0;
+  color: #fefefe;
+  font-size: 18px;
+}
+.card .card-body {
+  border: 1px solid #C1C6CD;
+  padding: 0.75rem 1rem;
+}
+.card .card-body p {
+  margin: 0 0 1rem 0;
+}
+
+.blue-card .card-header {
+  background-color: #005394;
+  color: #fefefe;
+}
+
+.yellow-card .card-header {
+  background-color: #FEC500;
+  border: 1px solid #C1C6CD;
+  border-bottom: 0px transparent solid;
+}
+.yellow-card .card-header h1, .yellow-card .card-header h2, .yellow-card .card-header h3, .yellow-card .card-header h4, .yellow-card .card-header h5, .yellow-card .card-header h5, .yellow-card .card-header p {
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
+.red-card .card-header {
+  background-color: #AB0505;
+  color: #0a0a0a;
+}
+
+.green-card .card-header {
+  background-color: #45781C;
+  color: #0a0a0a;
+}
+
+.plain-card {
+  border: 1px solid #C1C6CD;
+}
+.plain-card .card-header {
+  background-color: transparent;
+  padding-bottom: 0;
+}
+.plain-card .card-header h1, .plain-card .card-header h2, .plain-card .card-header h3, .plain-card .card-header h4, .plain-card .card-header h5, .plain-card .card-header h5, .plain-card .card-header p {
+  color: #0a0a0a;
+  font-weight: bold;
+  font-size: 1.35rem;
+}
+.plain-card .card-body {
+  border: none;
+}
+
+/* ===============================================================
+  ### CALLOUT BOX
+================================================================== */
+.callout {
+  background-color: #F0F5F9;
+  border-left: solid 10px #006EBD;
+  padding: 0.5rem 2rem;
+  margin: 0 0.5rem;
+}
+.callout h2 {
+  font-size: 18px;
+}
+.callout ol li, .callout ul li {
+  margin: 0.25rem 0;
+}
+
+/* ========================= #### IE FIX - CALLOUT BOX  ========================= */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .callout {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), (-ms-high-contrast: none) and (min-width: 700px) {
+  .callout {
+    margin-left: 1rem;
+  }
+}
+/* ===============================================================
+  ### ATTENTION BOXES
+================================================================== */
+.attn-box {
+  display: flex;
+  border: 1px solid #C1C6CD;
+}
+.attn-box .attn-img {
+  width: 20%;
+  max-width: 75px;
+  content: " ";
+  background-image: url("/common/graphics/icons/icon_warning-white.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #C1C6CD;
+  padding: 0.5rem;
+}
+@media (min-width: 700px) {
+  .attn-box .attn-img {
+    width: 15%;
+  }
+}
+.attn-box .attn-mssg {
+  width: 80%;
+  padding: 0 1rem;
+}
+.attn-box .attn-mssg p {
+  line-height: 150%;
+  margin: 1rem 0;
+}
+
+.attn-warning {
+  border-color: #E2A800;
+}
+.attn-warning .attn-img {
+  background-color: #E2A800;
+  background-image: url("/common/graphics/icons/icon_warning-white.svg");
+}
+
+.attn-crit-error {
+  border-color: #AB0505;
+}
+.attn-crit-error .attn-img {
+  background-color: #AB0505;
+  background-image: url("/common/graphics/icons/icon_error-white.svg");
+}
+
+.attn-success {
+  border-color: #45781C;
+}
+.attn-success .attn-img {
+  background-color: #45781C;
+  background-image: url("/common/graphics/icons/icon_success-white.svg");
+}
+
+/* =========================================================================
+   ## CUSTOM INTERACTIVE CONTAINERS
+============================================================================ */
+/* ===============================================================
+  ### TOOLTIPs
+================================================================== */
+.deque-tooltip-wrapper {
+  position: relative;
+}
+
+.deque-tooltip {
+  box-sizing: border-box;
+  font-size: 13px;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  min-width: 104px;
+  max-width: 250px;
+  margin-right: -340px;
+  padding: 8px 6px;
+  line-height: 16px;
+  z-index: 700;
+}
+
+.deque-tooltip:after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #b2b2b2;
+  top: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  left: -1%;
+  content: "";
+}
+
+/* ===============================================================
+  ### ACCORDIONS
+================================================================== */
+.accordion .header {
+  width: 100%;
+  margin: 0;
+  margin-top: 1px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: normal;
+}
+.accordion .header .toggle {
+  cursor: pointer;
+  display: block;
+  padding: 1rem;
+  background-color: #6C707A;
+  color: #fefefe;
+  background-image: url("/common/graphics/icons/icon_Plus-white.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 15px center;
+  padding-left: 3.25rem;
+}
+.accordion .header .toggle:focus, .accordion .header .toggle:hover {
+  background-color: #006EBD;
+}
+.accordion .header .toggle:focus-visible {
+  outline: 2px dashed #0a0a0a;
+}
+.accordion .header [aria-expanded=true].toggle {
+  background-color: #006EBD;
+  background-image: url("/common/graphics/icons/icon_Minus-white.svg");
+}
+.accordion .header [aria-expanded=true].toggle:hover, .accordion .header [aria-expanded=true].toggle:focus {
+  background-color: #005394;
+}
+.accordion .content {
+  display: block;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #fefefe;
+  border: 1px solid #C1C6CD;
+  border-top: none;
+  padding: 0px 1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.small-accordion .header {
+  font-size: 16px;
+}
+.small-accordion .header .toggle {
+  background-size: 13px 13px;
+  background-position: 15px center;
+  padding: 0.5rem 0.75rem;
+  padding-left: 2.75rem;
+}
+
+/* Styles specific for NIGP Code accordions are handled in the "NIGP Codes" Section */
+/* ===============================================================
+  ### REVEAL MODAL
+================================================================== */
+/*Code from https://van11y.net/accessible-modal/*/
+dialog {
+  /* needed for old browsers */
+  display: block;
+  border: 0;
+}
+
+.no-scroll {
+  overflow: hidden; /* removes scroll when modal is opened */
+}
+
+.simple-modal-overlay,
+.simple-animated-modal-overlay,
+.simple-animatedtransform-modal-overlay,
+.warning-modal-overlay,
+.critical-modal-overlay {
+  /* overlay covers everything */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #434B55;
+  opacity: 0.8;
+  z-index: 666;
+  cursor: pointer;
+}
+
+.simple-modal-overlay[data-background-click=disabled],
+.simple-animated-modal-overlay[data-background-click=disabled],
+.simple-animatedtransform-modal-overlay[data-background-click=disabled],
+.warning-modal-overlay[data-background-click=disabled],
+.critical-modal-overlay[data-background-click=disabled] {
+  cursor: auto;
+}
+
+.simple-modal, .warning-modal, .critical-modal {
+  position: fixed;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1200px;
+  top: 5vh;
+  max-height: 90vh;
+  z-index: 667;
+  overflow: auto;
+  padding: 0;
+}
+.simple-modal #modal-title, .warning-modal #modal-title, .critical-modal #modal-title {
+  margin: 0;
+  padding: 1rem;
+  background-color: #006EBD;
+  color: #fefefe;
+}
+.simple-modal #js-modal-content, .warning-modal #js-modal-content, .critical-modal #js-modal-content {
+  padding: 0 1rem;
+}
+
+.warning-modal #modal-title {
+  background-color: #E2A800;
+  color: #0a0a0a;
+}
+
+.critical-modal #modal-title {
+  background-color: #AB0505;
+  color: #fefefe;
+}
+
+.warning-modal #modal-title, .critical-modal #modal-title {
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 35px 35px;
+  padding-left: 60px;
+}
+
+.warning-modal #modal-title {
+  background-image: url("/common/graphics/icons/icon_warning-white.svg");
+}
+
+.critical-modal #modal-title {
+  background-image: url("/common/graphics/icons/icon_error-white.svg");
+}
+
+.simple-modal-close, .warning-modal-close, .critical-modal-close {
+  float: right;
+  background: transparent;
+  color: #fefefe;
+  padding: 0 0.25rem;
+  margin: 0.5rem 1rem 0 0;
+  border: 0;
+  border-radius: 3px;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.warning-modal-close {
+  color: #0a0a0a;
+}
+
+.simple-modal-close:focus-visible, .simple-modal-close:focus,
+.warning-modal-close:focus-visible, .warning-modal-close:focus,
+.critical-modal-close:focus-visible, .critical-modal-close:focus {
+  outline: #fefefe dashed 2px;
+  outline-offset: 2px;
+  border-style: transparent;
+}
+
+.simple-modal-close:focus, .simple-modal-close:hover, .simple-modal-close:active {
+  background: #fefefe;
+  color: #006EBD;
+}
+
+.warning-modal-close:focus, .warning-modal-close:hover, .warning-modal-close:active {
+  background: #0a0a0a;
+  color: #FEC500;
+}
+
+.critical-modal-close:focus, .critical-modal-close:hover, .critical-modal-close:active {
+  background: #fefefe;
+  color: #AB0505;
+}
+
+/* ========================= #### IE FIX - MODAL  ========================= */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .simple-modal, .warning-modal, .critical-modal {
+    margin: 0 3%;
+  }
+  .simple-modal .simple-modal__content, .simple-modal .warning-modal__content, .simple-modal .critical-modal__content, .warning-modal .simple-modal__content, .warning-modal .warning-modal__content, .warning-modal .critical-modal__content, .critical-modal .simple-modal__content, .critical-modal .warning-modal__content, .critical-modal .critical-modal__content {
+    background-color: white;
+  }
+}
+/* ===============================================================
+   ### ALERT
+================================================================== */
+.alert {
+  padding: 0 1.5rem;
+  background-color: #C1C6CD;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.25rem;
+}
+.alert p {
+  font-size: 1.05rem;
+}
+.alert p.alert-mssg {
+  font-size: 1.25rem;
+}
+.alert .alert-mssg::before {
+  content: "";
+  background-image: url("/common/graphics/icons/icon_warning-white.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.alert .closebtn {
+  margin: 15px;
+  font-weight: bold;
+  float: right;
+  font-size: 2rem;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
+  border: none;
+  padding-bottom: 0.45rem;
+}
+.alert .closebtn:focus-visible {
+  outline-offset: 2px;
+  outline: #0a0a0a 2px dashed;
+}
+
+.alert-warning {
+  background-color: #E2A800;
+}
+.alert-warning p, .alert-warning .closebtn {
+  color: #0a0a0a;
+}
+.alert-warning .closebtn:hover {
+  border-radius: 5px;
+  background-color: #0a0a0a;
+  color: #fefefe;
+}
+.alert-warning .alert-mssg::before {
+  background-image: url("/common/graphics/icons/icon_warning-black.svg");
+}
+.alert-warning .closebtn:focus-visible {
+  outline-color: #0a0a0a;
+}
+
+.alert-crit-error {
+  background-color: #AB0505;
+}
+.alert-crit-error p, .alert-crit-error .closebtn {
+  color: #fefefe;
+}
+.alert-crit-error .alert-mssg::before {
+  background-image: url("/common/graphics/icons/icon_error-white.svg");
+}
+.alert-crit-error .closebtn:hover {
+  border-radius: 5px;
+  background-color: #fefefe;
+  color: #0a0a0a;
+}
+.alert-crit-error .closebtn:focus-visible {
+  outline-color: #fefefe;
+}
+
+/* =========================================================================
+   ## FORM ELEMENTS
+============================================================================ */
+/* ===============================================================
+  ### TEXT & SELECT INPUTS
+================================================================== */
+[type=text], [type=password], [type=search], [type=number], [type=color],
+[type=date], [type=time], [type=datetime], [type=datetime-local],
+[type=month], [type=week], [type=email], [type=tel], [type=url],
+textarea, select {
+  display: block;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid #C1C6CD;
+  border-radius: 3px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+
+[type=text], [type=password], [type=search], [type=number], [type=color],
+[type=date], [type=time], [type=datetime], [type=datetime-local],
+[type=month], [type=week], [type=email], [type=tel], [type=url],
+textarea {
+  box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28108, 112, 122%29'></polygon></svg>");
+  background-origin: content-box;
+  background-position: right -1rem center;
+  background-repeat: no-repeat;
+  background-size: 9px 6px;
+  padding: 0.35rem;
+  padding-right: 1.5rem;
+}
+
+[type=text]:disabled, [type=password]:disabled, [type=search]:disabled, [type=number]:disabled, [type=color]:disabled,
+[type=date]:disabled, [type=time]:disabled, [type=datetime]:disabled, [type=datetime-local]:disabled,
+[type=month]:disabled, [type=week]:disabled, [type=email]:disabled, [type=tel]:disabled, [type=url]:disabled,
+textarea:disabled, select:disabled {
+  background-color: #E8E9ED;
+  cursor: not-allowed;
+}
+
+/* ===============================================================
+  ### RADIO & CHECKBOXES INPUTS
+================================================================== */
+.radcheck div {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+.radcheck div.indented {
+  margin-left: 2.5rem;
+}
+.radcheck [type=checkbox], .radcheck [type=radio] {
+  margin-left: 0;
+  opacity: 0;
+  position: absolute;
+}
+.radcheck [type=checkbox] + label, .radcheck [type=radio] + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 1.25rem;
+  display: block;
+}
+.radcheck [type=checkbox] + label::before, .radcheck [type=radio] + label::before {
+  background: #fefefe;
+  content: " ";
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-left: -30px;
+  text-indent: 0;
+  vertical-align: middle;
+}
+.radcheck [type=checkbox] + label::before {
+  border-radius: 3px;
+  border: 2px solid #6C707A;
+  line-height: 1.2;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+.radcheck [type=radio] + label::before {
+  border: 2px solid #fefefe;
+  outline: 2px solid #6C707A;
+  border-radius: 100%;
+  line-height: 1.4;
+  height: 1rem;
+  width: 1rem;
+}
+.radcheck [type=checkbox]:checked + label::before {
+  background-color: #434B55;
+  border-color: #434B55;
+  background-image: url("/common/graphics/icons/icon-check.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.radcheck [type=radio]:checked + label::before {
+  background-color: #434B55;
+  outline-color: #434B55;
+}
+.radcheck [type=checkbox]:disabled + label, .radcheck [type=radio]:disabled + label {
+  color: #6C707A;
+  cursor: not-allowed;
+}
+.radcheck [type=checkbox]:disabled + label::before {
+  background: #E8E9ED;
+  border-color: #C1C6CD;
+  cursor: not-allowed;
+}
+.radcheck [type=radio]:disabled + label::before {
+  background-color: #E8E9ED;
+  border-color: #E8E9ED;
+  outline-color: #C1C6CD;
+  cursor: not-allowed;
+}
+.radcheck [type=checkbox]:checked:disabled + label::before {
+  background: #6C707A;
+  border-color: #6C707A;
+  background-image: url("/common/graphics/icons/icon-check.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.radcheck [type=radio]:checked:disabled + label::before {
+  outline-color: #6C707A;
+  background: #6C707A;
+}
+.radcheck [type=checkbox]:focus-visible + label, .radcheck [type=radio]:focus-visible + label {
+  outline: 2px dotted #434B55;
+  outline-offset: 5px;
+}
+.radcheck label {
+  padding-left: 30px;
+}
+
+/* ===============================================================
+  ### FORM LAYOUT STYLING 
+================================================================== */
+.question {
+  padding: 0 0 1.5rem 0;
+  margin-right: 0.5rem;
+}
+.question fieldset:last-of-type {
+  padding-bottom: 0;
+}
+
+.static-question {
+  padding-bottom: 1.5rem;
+}
+.static-question .pseudo-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.static-question p, .static-question a, .static-question button {
+  display: inline-block;
+  margin-top: 0;
+}
+
+fieldset {
+  border: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+fieldset legend {
+  padding: 0;
+  margin: 0;
+}
+
+.fieldset-group, .radcheck .fieldset-group {
+  margin-left: 0;
+  display: block;
+  width: 100%;
+}
+
+.inlined-group input {
+  display: inline;
+}
+
+.block-fieldset div {
+  display: inline-block;
+}
+
+@media (min-width: 700px) {
+  .left-legend legend {
+    float: left;
+    margin-right: 1rem;
+    padding-bottom: 0.25rem;
+  }
+  .left-legend .parent-legend {
+    margin-top: 0;
+  }
+}
+.tiny-input {
+  width: 80px;
+  max-width: 100%;
+}
+
+.sm-input {
+  width: 180px;
+  max-width: 100%;
+}
+
+.med-input {
+  width: 300px;
+  max-width: 100%;
+}
+
+.lg-input {
+  width: 500px;
+  max-width: 100%;
+}
+
+.fw-input {
+  width: 100%;
+}
+
+/* ===============================================================
+  ### FORM LABELS, LEGENDS, NOTES, ETC 
+================================================================== */
+.required:after {
+  content: " *";
+  font-weight: bold;
+  color: #AB0505;
+}
+
+label {
+  font-weight: bold;
+}
+
+legend {
+  font-weight: bold;
+  line-height: 1.8;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.parent-legend {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sublegend {
+  font-weight: bold;
+  margin: 0 1rem 0.5rem 0;
+}
+
+.fieldset-group .inlined {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .fieldset-group .inlined {
+    display: inline-block;
+  }
+}
+.form-note {
+  font-style: italic;
+  font-weight: normal;
+  color: #6C707A;
+}
+
+.more-info-label [type=checkbox] + label {
+  padding-right: 0;
+  margin-right: 0;
+  line-height: 100%;
+}
+.more-info-label .round {
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  margin-left: 0.5rem;
+}
+
+/* ===============================================================
+  ### ERROR/WARNING/SUCCESS MESSAGES
+================================================================== */
+/* == On Input Messages == */
+.error, .warning, .success {
+  border: #F5F7F9 1px solid;
+  padding: 0;
+  padding-bottom: 1rem;
+  max-width: max-content;
+  margin-bottom: 1rem;
+}
+.error .error-mssg, .error .warning-mssg, .error .success-mssg, .warning .error-mssg, .warning .warning-mssg, .warning .success-mssg, .success .error-mssg, .success .warning-mssg, .success .success-mssg {
+  font-weight: bold;
+  padding: 0.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  line-height: normal;
+}
+.error label, .error a, .error [type=text], .error [type=date], .error [type=email], .error [type=password], .error [type=tel], .error [type=search], .error [type=file], .error select, .error textarea, .warning label, .warning a, .warning [type=text], .warning [type=date], .warning [type=email], .warning [type=password], .warning [type=tel], .warning [type=search], .warning [type=file], .warning select, .warning textarea, .success label, .success a, .success [type=text], .success [type=date], .success [type=email], .success [type=password], .success [type=tel], .success [type=search], .success [type=file], .success select, .success textarea {
+  margin: 0 1rem;
+}
+.error .radcheck label a, .warning .radcheck label a, .success .radcheck label a {
+  display: inline;
+}
+.error .inlined label, .error .inlined a, .error .inlined [type=text], .error .inlined [type=date], .error .inlined [type=email], .error .inlined [type=password], .error .inlined [type=tel], .error .inlined [type=search], .error .inlined [type=file], .error .inlined select, .error .inlined textarea, .warning .inlined label, .warning .inlined a, .warning .inlined [type=text], .warning .inlined [type=date], .warning .inlined [type=email], .warning .inlined [type=password], .warning .inlined [type=tel], .warning .inlined [type=search], .warning .inlined [type=file], .warning .inlined select, .warning .inlined textarea, .success .inlined label, .success .inlined a, .success .inlined [type=text], .success .inlined [type=date], .success .inlined [type=email], .success .inlined [type=password], .success .inlined [type=tel], .success .inlined [type=search], .success .inlined [type=file], .success .inlined select, .success .inlined textarea {
+  margin: 0;
+}
+.error .inlined:first-of-type label, .error .inlined:first-of-type a, .error .inlined:first-of-type [type=text], .error .inlined:first-of-type [type=date], .error .inlined:first-of-type [type=email], .error .inlined:first-of-type [type=password], .error .inlined:first-of-type [type=tel], .error .inlined:first-of-type [type=search], .error .inlined:first-of-type [type=file], .error .inlined:first-of-type select, .error .inlined:first-of-type textarea, .warning .inlined:first-of-type label, .warning .inlined:first-of-type a, .warning .inlined:first-of-type [type=text], .warning .inlined:first-of-type [type=date], .warning .inlined:first-of-type [type=email], .warning .inlined:first-of-type [type=password], .warning .inlined:first-of-type [type=tel], .warning .inlined:first-of-type [type=search], .warning .inlined:first-of-type [type=file], .warning .inlined:first-of-type select, .warning .inlined:first-of-type textarea, .success .inlined:first-of-type label, .success .inlined:first-of-type a, .success .inlined:first-of-type [type=text], .success .inlined:first-of-type [type=date], .success .inlined:first-of-type [type=email], .success .inlined:first-of-type [type=password], .success .inlined:first-of-type [type=tel], .success .inlined:first-of-type [type=search], .success .inlined:first-of-type [type=file], .success .inlined:first-of-type select, .success .inlined:first-of-type textarea {
+  margin-left: 1rem;
+}
+.error .inlined:last-of-type label, .error .inlined:last-of-type a, .error .inlined:last-of-type [type=text], .error .inlined:last-of-type [type=date], .error .inlined:last-of-type [type=email], .error .inlined:last-of-type [type=password], .error .inlined:last-of-type [type=tel], .error .inlined:last-of-type [type=search], .error .inlined:last-of-type [type=file], .error .inlined:last-of-type select, .error .inlined:last-of-type textarea, .warning .inlined:last-of-type label, .warning .inlined:last-of-type a, .warning .inlined:last-of-type [type=text], .warning .inlined:last-of-type [type=date], .warning .inlined:last-of-type [type=email], .warning .inlined:last-of-type [type=password], .warning .inlined:last-of-type [type=tel], .warning .inlined:last-of-type [type=search], .warning .inlined:last-of-type [type=file], .warning .inlined:last-of-type select, .warning .inlined:last-of-type textarea, .success .inlined:last-of-type label, .success .inlined:last-of-type a, .success .inlined:last-of-type [type=text], .success .inlined:last-of-type [type=date], .success .inlined:last-of-type [type=email], .success .inlined:last-of-type [type=password], .success .inlined:last-of-type [type=tel], .success .inlined:last-of-type [type=search], .success .inlined:last-of-type [type=file], .success .inlined:last-of-type select, .success .inlined:last-of-type textarea {
+  margin-right: 1rem;
+}
+.error fieldset .inlined:first-of-type label, .error fieldset .inlined:first-of-type a, .error fieldset .inlined:first-of-type [type=text], .error fieldset .inlined:first-of-type [type=date], .error fieldset .inlined:first-of-type [type=email], .error fieldset .inlined:first-of-type [type=password], .error fieldset .inlined:first-of-type [type=tel], .error fieldset .inlined:first-of-type [type=search], .error fieldset .inlined:first-of-type [type=file], .error fieldset .inlined:first-of-type select, .error fieldset .inlined:first-of-type textarea, .warning fieldset .inlined:first-of-type label, .warning fieldset .inlined:first-of-type a, .warning fieldset .inlined:first-of-type [type=text], .warning fieldset .inlined:first-of-type [type=date], .warning fieldset .inlined:first-of-type [type=email], .warning fieldset .inlined:first-of-type [type=password], .warning fieldset .inlined:first-of-type [type=tel], .warning fieldset .inlined:first-of-type [type=search], .warning fieldset .inlined:first-of-type [type=file], .warning fieldset .inlined:first-of-type select, .warning fieldset .inlined:first-of-type textarea, .success fieldset .inlined:first-of-type label, .success fieldset .inlined:first-of-type a, .success fieldset .inlined:first-of-type [type=text], .success fieldset .inlined:first-of-type [type=date], .success fieldset .inlined:first-of-type [type=email], .success fieldset .inlined:first-of-type [type=password], .success fieldset .inlined:first-of-type [type=tel], .success fieldset .inlined:first-of-type [type=search], .success fieldset .inlined:first-of-type [type=file], .success fieldset .inlined:first-of-type select, .success fieldset .inlined:first-of-type textarea {
+  margin: 0;
+}
+.error fieldset, .warning fieldset, .success fieldset {
+  margin: 0 1rem;
+  padding-bottom: 0;
+}
+.error fieldset label, .error fieldset a, .error fieldset [type=text], .error fieldset [type=date], .error fieldset [type=email], .error fieldset [type=password], .error fieldset [type=tel], .error fieldset [type=search], .error fieldset [type=file], .error fieldset select, .error fieldset textarea, .warning fieldset label, .warning fieldset a, .warning fieldset [type=text], .warning fieldset [type=date], .warning fieldset [type=email], .warning fieldset [type=password], .warning fieldset [type=tel], .warning fieldset [type=search], .warning fieldset [type=file], .warning fieldset select, .warning fieldset textarea, .success fieldset label, .success fieldset a, .success fieldset [type=text], .success fieldset [type=date], .success fieldset [type=email], .success fieldset [type=password], .success fieldset [type=tel], .success fieldset [type=search], .success fieldset [type=file], .success fieldset select, .success fieldset textarea {
+  margin: 0;
+}
+.error label, .error a, .error p, .warning label, .warning a, .warning p, .success label, .success a, .success p {
+  display: block;
+}
+.error .tiny-input, .error .sm-input, .error .med-input, .error .lg-input, .error .fw-input, .warning .tiny-input, .warning .sm-input, .warning .med-input, .warning .lg-input, .warning .fw-input, .success .tiny-input, .success .sm-input, .success .med-input, .success .lg-input, .success .fw-input {
+  max-width: 90%;
+}
+.error .radcheck div:last-of-type, .warning .radcheck div:last-of-type, .success .radcheck div:last-of-type {
+  margin-bottom: 0;
+}
+.error .radcheck div:last-of-type [type=checkbox] + label, .error .radcheck div:last-of-type [type=radio] + label, .warning .radcheck div:last-of-type [type=checkbox] + label, .warning .radcheck div:last-of-type [type=radio] + label, .success .radcheck div:last-of-type [type=checkbox] + label, .success .radcheck div:last-of-type [type=radio] + label {
+  margin-bottom: 0;
+}
+
+.error {
+  border: #AB0505 1px solid;
+}
+.error .error-mssg {
+  color: #fefefe;
+  background: url("/common/graphics/icons/icon_error-white.svg") left center no-repeat;
+  background-size: 23px 23px;
+  background-position: 0.5rem center;
+  background-color: #AB0505;
+}
+
+.warning {
+  border: #E2A800 1px solid;
+}
+.warning .warning-mssg {
+  color: #0a0a0a;
+  background: url("/common/graphics/icons/icon_warning-black.svg") left center no-repeat;
+  background-size: 23px 23px;
+  background-position: 0.5rem center;
+  background-color: #E2A800;
+}
+
+.success {
+  border: #45781C 1px solid;
+}
+.success .success-mssg {
+  color: #fefefe;
+  background: url("/common/graphics/icons/icon_success-white.svg") left center no-repeat;
+  background-size: 23px 23px;
+  background-position: 0.5rem center;
+  background-color: #45781C;
+}
+
+/* == Form Summary == */
+.error-summary, .warning-summary, .success-summary {
+  border: 1px solid #F5F7F9;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.error-summary h1, .error-summary h2, .error-summary h3, .error-summary h4, .error-summary h5, .error-summary h6, .warning-summary h1, .warning-summary h2, .warning-summary h3, .warning-summary h4, .warning-summary h5, .warning-summary h6, .success-summary h1, .success-summary h2, .success-summary h3, .success-summary h4, .success-summary h5, .success-summary h6 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+  padding-left: 30px;
+}
+.error-summary ul, .warning-summary ul, .success-summary ul {
+  margin-top: 0.5rem;
+}
+.error-summary ul li, .warning-summary ul li, .success-summary ul li {
+  margin: 0.5rem 0;
+}
+
+.error-summary {
+  border: 1px solid #AB0505;
+}
+.error-summary h1, .error-summary h2, .error-summary h3, .error-summary h4, .error-summary h5, .error-summary h6 {
+  color: #AB0505;
+  background-image: url("/common/graphics/icons/icon_error-red.svg");
+}
+
+.warning-summary {
+  border: 1px solid #E2A800;
+}
+.warning-summary h1, .warning-summary h2, .warning-summary h3, .warning-summary h4, .warning-summary h5, .warning-summary h6 {
+  color: #0a0a0a;
+  background-image: url("/common/graphics/icons/icon_warning-yellow.svg");
+}
+
+.success-summary {
+  border: 1px solid #45781C;
+}
+.success-summary h1, .success-summary h2, .success-summary h3, .success-summary h4, .success-summary h5, .success-summary h6 {
+  color: #45781C;
+  background-image: url("/common/graphics/icons/icon_success-green.svg");
+}
+
+/* ===============================================================
+  ### IE FIX - FORMS 
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  legend {
+    display: table;
+    white-space: normal;
+  }
+}
+.radcheck-ref div {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+.radcheck-ref div.indented {
+  margin-left: 2.5rem;
+}
+.radcheck-ref [type=checkbox], .radcheck-ref [type=radio] {
+  margin-left: 0;
+  opacity: 0;
+  position: absolute;
+}
+.radcheck-ref [type=checkbox] + label, .radcheck-ref [type=radio] + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 1.25rem;
+  display: block;
+}
+.radcheck-ref [type=checkbox] + label::before, .radcheck-ref [type=radio] + label::before {
+  content: " ";
+  display: inline-block;
+  margin-right: 0.6em;
+  margin-left: -30px;
+  text-indent: 0;
+  vertical-align: middle;
+}
+.radcheck-ref [type=checkbox] + label::before {
+  background: #fefefe;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px #6C707A;
+  display: inline-block;
+  line-height: 1.2;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+.radcheck-ref [type=radio] + label::before {
+  background: #fefefe;
+  border: 2px solid #fefefe;
+  outline: 2px solid #6C707A;
+  border-radius: 100%;
+  line-height: 1.4;
+  height: 1rem;
+  width: 1rem;
+}
+.radcheck-ref [type=checkbox]:checked + label::before {
+  background-color: #434B55;
+  box-shadow: 0 0 0 1px #2F3235;
+  background-image: url("/common/graphics/icons/icon-check.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.radcheck-ref [type=radio]:checked + label::before {
+  background-color: #434B55;
+  outline-color: #434B55;
+}
+.radcheck-ref [type=checkbox]:disabled + label, .radcheck-ref [type=radio]:disabled + label {
+  color: #6C707A;
+  cursor: not-allowed;
+}
+.radcheck-ref [type=checkbox]:disabled + label::before {
+  background: #E8E9ED;
+  box-shadow: 0 0 0 1px #C1C6CD;
+  cursor: not-allowed;
+}
+.radcheck-ref [type=radio]:disabled + label::before {
+  background-color: #E8E9ED;
+  border-color: #E8E9ED;
+  outline-color: #C1C6CD;
+  cursor: not-allowed;
+}
+.radcheck-ref [type=checkbox]:checked:disabled + label::before {
+  background: green;
+  box-shadow: 0 0 0 1px #C1C6CD;
+}
+.radcheck-ref [type=radio]:checked:disabled + label::before {
+  outline-color: #6C707A;
+  background: #6C707A;
+}
+.radcheck-ref [type=checkbox]:focus-visible + label, .radcheck-ref [type=radio]:focus-visible + label {
+  outline: 2px dotted #434B55;
+  outline-offset: 5px;
+}
+.radcheck-ref label {
+  padding-left: 30px;
+}
+
+/*DATATABLE STYLES ARE SET UP IN datatables-style-bulletin.css*/
+/* ===============================================================
+  ### MARGINS & PADDING
+================================================================== */
+table {
+  border-collapse: collapse;
+}
+table th, table thead th, table tbody th,
+table td, table thead td, table tbody td {
+  text-align: left;
+  padding: 0.75rem;
+}
+
+/* ===============================================================
+  ### TABLE HEADER
+================================================================== */
+table {
+  width: 100%;
+}
+table thead th, table thead td, table th {
+  background-color: #005394;
+  border: 1px solid #005394;
+  color: #fefefe;
+}
+table thead tr th.sorting::before, table thead tr th.sorting::after, table thead tr td.sorting::before, table thead tr td.sorting::after {
+  color: #C1C6CD;
+}
+table thead tr th.sorting_asc::before, table thead tr td.sorting_asc::before, table thead tr th.sorting_desc::after, table thead tr td.sorting_desc::after {
+  color: #fefefe;
+}
+
+/* ===============================================================
+  ### TABLE BODY & ROWS
+================================================================== */
+table tbody {
+  border: 1px solid #C1C6CD;
+}
+table tbody tr {
+  background-color: #fefefe;
+}
+table tbody tr:nth-child(even) {
+  background-color: #F5F7F9;
+  background-color: #E8E9ED;
+  background-color: #F0F5F9;
+}
+
+/* ==================================================================================
+   # TEMPLATE STYLING 
+===================================================================================== */
+/* =========================================================================
+  ## HEADER STYLING 
+============================================================================ */
+/* ===============================================================
+  ### MAIN HEADER
+================================================================== */
+.header-main {
+  padding: 1rem;
+  background-color: #434B55;
+  border-bottom: #0095FF 5px solid;
+}
+.header-main .site-name {
+  display: flex;
+  align-items: center;
+}
+.header-main .site-name .logo, .header-main .site-name .inverse-logo {
+  float: left;
+  height: 60px;
+  margin-top: 0.05rem;
+  margin-right: 1rem;
+}
+.header-main .site-name .logo {
+  display: none;
+}
+.header-main .site-name a, .header-main .site-name a:visited {
+  text-decoration: none;
+  color: #fefefe;
+  border: none;
+  font-size: 1.05rem;
+}
+.header-main .site-name a:hover, .header-main .site-name a:focus {
+  color: #fefefe;
+  border-bottom: 1px #fefefe solid;
+}
+.header-main .site-name .site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+}
+.header-main .account {
+  display: none;
+}
+.header-main .menu-btn {
+  text-align: right;
+}
+.header-main :focus-visible {
+  outline: 2px #fefefe dashed;
+  outline-offset: 1px;
+}
+
+@media (min-width: 700px) {
+  .header-main {
+    background-color: #fefefe;
+    border-bottom: none;
+  }
+  .header-main .site-name .inverse-logo {
+    display: none;
+  }
+  .header-main .site-name .logo {
+    display: block;
+  }
+  .header-main .site-name a, .header-main .site-name a:visited {
+    color: #434B55;
+  }
+  .header-main .site-name a:hover, .header-main .site-name a:focus {
+    color: #005394;
+  }
+  .header-main .account {
+    display: block;
+    text-align: right;
+  }
+  .header-main :focus-visible {
+    outline: 2px #0a0a0a dashed;
+    outline-offset: 1px;
+  }
+}
+/* ===============================================================
+  ### SIMPLE HEADER
+================================================================== */
+.header-simple {
+  padding: 1rem;
+  background-color: #434B55;
+}
+.header-simple .site-name {
+  display: flex;
+  align-items: center;
+}
+.header-simple .site-name .inverse-logo {
+  float: left;
+  height: 60px;
+  margin-top: 0.05rem;
+  margin-right: 1rem;
+}
+.header-simple .site-name a, .header-simple .site-name a:visited {
+  color: #fefefe;
+  text-decoration: none;
+  border: none;
+  font-size: 1.15rem;
+}
+.header-simple .site-name a:hover, .header-simple .site-name a:focus {
+  color: #fefefe;
+  border-bottom: 1px #fefefe solid;
+}
+.header-simple .site-name a:focus-visible {
+  outline: 2px #fefefe dashed;
+  outline-offset: 2px;
+}
+.header-simple .site-name .site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  max-width: max-content;
+}
+
+/* ===============================================================
+  ### IE FIX - HEADER 
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Fixes placement of cells in header in IE and makes sure the buttons are still clickable*/
+  .header-main .grid-container {
+    display: flex;
+  }
+  .header-main .grid-container .site-name, .header-main .grid-container .menu-btn {
+    width: 50%;
+  }
+  .header-main .grid-container .account {
+    width: 0;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), (-ms-high-contrast: none) and (min-width: 700px) {
+  .header-main .grid-container .menu-btn {
+    width: 0;
+  }
+  .header-main .grid-container .account {
+    width: 50%;
+  }
+}
+/* ===============================================================
+  ### SKIPTO.JS Styling
+================================================================== */
+nav#id-skip-to button:hover {
+  background-color: #C1C6CD !important;
+}
+
+#id-skip-to-menu-heading-group-label {
+  margin-top: 0.5rem !important;
+}
+
+@media (min-width: 375px) {
+  nav#id-skip-to, nav#id-skip-to.popup.focus, nav#id-skip-to.popup:hover {
+    left: 35% !important;
+  }
+}
+@media (min-width: 700px) {
+  nav#id-skip-to, nav#id-skip-to.popup.focus, nav#id-skip-to.popup:hover {
+    left: 45% !important;
+  }
+}
+/* =========================================================================
+  ## NAVIGATION STYLING 
+============================================================================ */
+/* ===============================================================
+  ### GLOBAL NAVIGATION 
+================================================================== */
+/* Dropdown navigation fuctionality adapted from https://www.w3.org/WAI/tutorials/menus/flyout/#flyoutnavkbbtn*/
+/* ========================= #### MOBILE NAVIGATION TOGGLE ========================= */
+.mobile-nav-toggle {
+  display: inline;
+  padding: 0.75rem;
+  padding-right: 1rem;
+  border-radius: 3px;
+  background: transparent;
+  border: transparent;
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1rem;
+  color: #fefefe;
+}
+
+.mobile-nav-toggle::before {
+  content: "☰";
+  font-size: 1.75rem;
+  padding-right: 0.25rem;
+}
+
+.mobile-nav-toggle:hover {
+  background-color: #fefefe;
+  color: #434B55;
+}
+
+@media (min-width: 700px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+/* ========================= #### MOBILE NAVIGATION ========================= */
+.navbar {
+  border-bottom: 10px #0095FF solid;
+  background-color: #434B55;
+}
+
+.navbar-links {
+  padding: 0;
+  margin: 0;
+  display: none;
+  list-style: none;
+}
+.navbar-links li {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+.navbar-links li a {
+  padding: 1rem;
+  color: #fefefe;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  width: 100%;
+}
+.navbar-links li a:focus-visible {
+  outline-offset: -5px;
+  outline: 2px #fefefe dashed;
+}
+.navbar-links li a:hover, .navbar-links li a:focus {
+  color: #fefefe;
+  background-color: #005394;
+}
+.navbar-links .current {
+  background-color: #006EBD;
+}
+.navbar-links li.account-mobile {
+  border-bottom: #fefefe 1px solid;
+}
+.navbar-links li.account-mobile a.hollow-white {
+  border: #fefefe solid 1px;
+}
+.navbar-links li.account-mobile a.hollow-white:hover {
+  background-color: #fefefe;
+  color: #434B55;
+}
+.navbar-links li.account-mobile button {
+  padding: 1rem;
+  width: 100%;
+}
+.navbar-links li.account-mobile ul {
+  list-style: none;
+  padding: 1rem 1rem;
+}
+.navbar-links li.account-mobile ul a {
+  padding: 1rem 0;
+}
+.navbar-links li.has-submenu {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 10fr 2fr;
+}
+.navbar-links li.has-submenu ul {
+  list-style: none;
+  grid-column: span 12;
+  display: none;
+  background-color: #434B55;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links li.has-submenu ul a {
+  padding: 1rem 2rem;
+  width: 90%;
+}
+@media (min-width: 650px) {
+  .navbar-links li.has-submenu ul a {
+    width: 100%;
+  }
+}
+.navbar-links li.has-submenu button {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+}
+.navbar-links li.has-submenu button span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  font-size: 1rem;
+  vertical-align: middle;
+  border-top: 8px dashed #fefefe;
+  border-bottom: none;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  transform: rotate(-90deg);
+}
+.navbar-links li.has-submenu .rotate span {
+  transform: rotate(0deg);
+}
+.navbar-links li.has-submenu.open ul {
+  display: block;
+}
+.navbar-links li.has-submenu a:hover:after, .navbar-links li.has-submenu a:focus:after, .navbar-links li.has-submenu:hover a:hover:after, .navbar-links li.has-submenu:hover a:focus:after {
+  content: "";
+}
+.navbar-links li.has-submenu:hover button, .navbar-links li.has-submenu button:hover, .navbar-links li.has-submenu button:focus {
+  background: #005394;
+  cursor: pointer;
+  outline: none;
+}
+.navbar-links li.has-submenu button:focus-visible {
+  outline-offset: -3px;
+  outline: 2px #fefefe dashed;
+}
+
+/* ========================= #### DESKTOP NAVIGATION - MEDIUM ========================= */
+@media (min-width: 700px) {
+  ul.navbar-links {
+    display: flex;
+  }
+  ul.navbar-links li {
+    display: flex;
+  }
+  ul.navbar-links li a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+  }
+  ul.navbar-links li.account-mobile {
+    display: none;
+  }
+  ul.navbar-links li.has-submenu {
+    width: auto;
+    display: flex;
+  }
+  ul.navbar-links li.has-submenu ul {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    width: fit-content;
+  }
+  ul.navbar-links li.has-submenu ul a {
+    padding: 0.75rem;
+  }
+  ul.navbar-links li.has-submenu button {
+    line-height: 1;
+    padding: 0.15rem;
+  }
+  ul.navbar-links li.has-submenu button span {
+    margin-left: 0.25rem;
+    margin-right: 0.5rem;
+    transform: rotate(0deg);
+  }
+  ul.navbar-links li.has-submenu:hover ul {
+    display: block;
+  }
+}
+/* ========================= #### DESKTOP NAVIGATION - LARGE ========================= */
+@media (min-width: 1025px) {
+  ul.navbar-links li.has-submenu ul {
+    left: 0;
+  }
+  ul.navbar-links li.has-submenu button span {
+    margin-left: 0.3rem;
+    margin-right: 0.45rem;
+  }
+}
+/* ===============================================================
+  ### SIDEBAR NAVIGATION
+================================================================== */
+.subnav {
+  display: none;
+}
+.subnav h2 {
+  font-size: 1.15rem;
+}
+.subnav a, .subnav a:visited {
+  color: #006EBD;
+  text-decoration: none;
+  border-bottom: none;
+  border-left: transparent 5px solid;
+  padding: 0.5rem 0.5rem;
+  display: block;
+  line-height: 135%;
+}
+.subnav a.current, .subnav a:hover, .subnav a:focus {
+  background-color: #F0F5F9;
+  border-left: #006EBD 5px solid;
+  color: #006EBD;
+}
+.subnav ul {
+  list-style: none;
+  padding: 0;
+}
+.subnav ul li ul {
+  padding-left: 2rem;
+}
+
+@media (min-width: 700px) {
+  .subnav {
+    display: block;
+  }
+}
+/* ===============================================================
+  ### IE FIX - NAVIGATION  
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Improve dropdowns in mobile navigation*/
+}
+@media screen and (-ms-high-contrast: active) and (max-width: 700px), (-ms-high-contrast: none) and (max-width: 700px) {
+  .navbar-links li.has-submenu {
+    display: inline-block;
+  }
+  .navbar-links li.has-submenu a {
+    width: 75%;
+  }
+  .navbar-links li.has-submenu button {
+    padding: 1.15rem 1.25rem 1rem;
+  }
+  .navbar-links li.has-submenu ul a {
+    width: 90%;
+  }
+}
+/* =========================================================================
+  ### BREADCRUMB BAR
+============================================================================ */
+.breadcrumbBar {
+  background-color: #F0F5F9;
+}
+.breadcrumbBar a {
+  padding: 0.5rem 1rem;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  color: #005394;
+}
+.breadcrumbBar a:hover {
+  color: #434B55;
+}
+.breadcrumbBar #backButton::before {
+  content: "←";
+  font-size: 1.25rem;
+  padding-right: 0.5rem;
+}
+
+/* =========================================================================
+  ## FOOTER STYLING
+============================================================================ */
+/* ===============================================================
+  ### MAIN & SIMPLE FOOTER
+================================================================== */
+footer {
+  margin-top: 2rem;
+}
+
+.main-footer, .simple-footer {
+  background-color: #434B55;
+  padding: 1rem 0;
+}
+.main-footer p, .main-footer h2, .simple-footer p, .simple-footer h2 {
+  color: #fefefe;
+}
+.main-footer h2, .simple-footer h2 {
+  margin-bottom: 0;
+}
+.main-footer a, .main-footer a:visited, .simple-footer a, .simple-footer a:visited {
+  color: #A3D9FF;
+}
+.main-footer a:hover, .main-footer a:focus, .simple-footer a:hover, .simple-footer a:focus {
+  color: #DBFFBD;
+}
+.main-footer a:focus-visible, .simple-footer a:focus-visible {
+  outline: 2px #fefefe dashed;
+  outline-offset: 1px;
+}
+
+.simple-footer {
+  padding: 0 1rem;
+}
+
+/* ===============================================================
+  ### FOOTER CONTENT - CONTACT INFORMATION & NAVIGATION 
+================================================================== */
+ul.footer-navlinks > li > a {
+  font-weight: bold;
+}
+
+.footer-contact, .footer-nav {
+  margin: 0 2rem;
+}
+
+.footer-contact {
+  padding-bottom: 1rem;
+  border-bottom: 1px #fefefe solid;
+}
+.footer-contact ul li::marker {
+  color: #fefefe;
+}
+
+.footer-nav h2 {
+  display: inline-block;
+}
+.footer-nav ul.footer-navlinks {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer-nav ul.footer-navlinks li {
+  padding-bottom: 0.75rem;
+}
+
+@media (min-width: 450px) {
+  .footer-nav ul.footer-navlinks {
+    columns: 2;
+    margin-top: 1rem;
+  }
+  .footer-nav ul.footer-navlinks li {
+    margin-top: 0;
+  }
+}
+@media (min-width: 700px) {
+  .footer-contact, .footer-nav {
+    margin: 0 1rem;
+  }
+  .footer-contact {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .footer-nav {
+    margin-left: 0rem;
+    padding-left: 2rem;
+    border-left: 1px #fefefe solid;
+  }
+}
+@media (min-width: 1025px) {
+  .footer-nav ul.footer-navlinks {
+    padding-right: 2rem;
+  }
+}
+/* ===============================================================
+  ### POLICY FOOTER
+================================================================== */
+.policy-footer {
+  background-color: #fefefe;
+  color: #0a0a0a;
+  padding: 1rem;
+}
+.policy-footer p {
+  margin: 0;
+  padding: 0;
+}
+.policy-footer .staff-login {
+  text-align: center;
+}
+.policy-footer .staff-login a {
+  border: none;
+}
+.policy-footer .staff-login img {
+  width: 15px;
+}
+@media (min-width: 700px) {
+  .policy-footer .staff-login {
+    text-align: right;
+  }
+}
+
+/* ===============================================================
+  ### IE FIX - FOOTER  
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Fixes placement of cells in footer in IE*/
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), (-ms-high-contrast: none) and (min-width: 700px) {
+  .main-footer .footer-contact {
+    -ms-grid-row: 1;
+  }
+  .main-footer .footer-nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 8;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), (-ms-high-contrast: none) and (min-width: 700px) {
+  .policy-footer .staff-login {
+    -ms-grid-row: 1;
+    -ms-grid-column: 12;
+  }
+}
+/* ==================================================================================
+   # SPECIFIC PAGE COMMON STYLES
+===================================================================================== */
+/* =========================================================================
+  ## SEARCH PAGE
+============================================================================ */
+/* ===============================================================
+  ### SEARCH - SIMPLE SEARCH 
+================================================================== */
+.simple-search .question {
+  width: 100%;
+}
+.simple-search .question input {
+  width: 100%;
+}
+.simple-search .error {
+  max-width: none;
+  margin-bottom: 0.5rem;
+}
+.simple-search .error input,
+.simple-search .error label {
+  width: 90%;
+  margin: 0 0.75rem;
+}
+.simple-search .button-group {
+  width: 100%;
+}
+
+@media (min-width: 375px) {
+  .simple-search .error input,
+  .simple-search .error label {
+    width: 95%;
+  }
+}
+@media (min-width: 700px) {
+  .simple-search .question {
+    width: 60%;
+  }
+  .simple-search .button-group {
+    width: max-content;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .simple-search .question {
+    width: 75%;
+  }
+  .simple-search .error {
+    width: 70%;
+  }
+}
+/* ===============================================================
+  ### SEARCH - ADVANCED SEARCH 
+================================================================== */
+.advanced-search {
+  margin-top: 0.5rem;
+}
+.advanced-search .question {
+  padding: 0;
+}
+.advanced-search .block-fieldset div {
+  display: block;
+}
+.advanced-search .radcheck [type=checkbox] + label,
+.advanced-search .radcheck [type=radio] + label {
+  margin-bottom: 0;
+}
+.advanced-search .search-section {
+  margin-bottom: 1rem;
+}
+.advanced-search .search-section .input-group {
+  padding-left: 15px;
+  border-left: #005394 solid 5px;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+.advanced-search .nigp-codes input, .advanced-search .nigp-codes button {
+  margin-top: 1rem;
+}
+.advanced-search .nigp-codes #selectedNIGPCodeDisplay p:first-of-type {
+  margin: 0;
+}
+.advanced-search .nigp-codes #selectedNIGPCodeDisplay p.header {
+  margin-top: 1px;
+}
+
+@media (min-width: 375px) {
+  .advanced-search .block-fieldset div {
+    display: inline-block;
+  }
+}
+.advanced-search .error {
+  padding-bottom: 1rem;
+}
+.advanced-search .error .input-group {
+  padding-left: 5px;
+  border-left: none;
+  margin-left: 0rem;
+}
+
+/*
+.advanced-search {
+  margin-top: .5rem;
+
+  .question {
+    padding: 0;
+    margin-bottom: .75rem;
+  }
+
+
+
+
+  .radcheck {
+    [type="checkbox"] + label, [type="radio"] + label {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .nigp-codes {
+    margin-bottom: 1.5rem;
+    input {margin-top: 1rem;}
+    #selectedNIGPCodeDisplay {
+      p {margin:0}
+      p.header {margin-top:1px}
+    }
+  }
+
+  .button-group {margin: .25rem 0;}
+
+
+  .error {
+    [type="text"], [type="date"], select {
+      margin-bottom: 1rem;
+    }
+    .question {
+      margin-bottom: 0;
+      [type="text"], [type="date"], select {margin-bottom: 0;}
+
+      #dueDateFrom {margin-bottom: .5rem;} //adds spacing between dates in error on smallest screens
+    }
+
+    fieldset:last-child {padding-bottom:10px;}
+
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .advanced-search {
+    .block-fieldset div { display: inline-block;}
+
+  }
+}
+*/
+/* ===============================================================
+  ### SEARCH - SEARCH HEADER
+================================================================== */
+.search-header {
+  margin: 1rem 0;
+}
+.search-header h1 {
+  margin: 0;
+}
+
+@media (min-width: 375px) {
+  .search-header .search-header-controls form,
+  .search-header .search-header-controls p {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 700px) {
+  .search-header {
+    margin: 0.5rem 0 0 0;
+  }
+  .search-header h1 {
+    margin-top: 0.5rem;
+  }
+  .search-header .search-header-controls {
+    text-align: right;
+  }
+}
+/* ===============================================================
+  ### SEARCH - NO RESULT SUGGESTIONS
+================================================================== */
+.search-suggestions p {
+  color: #434B55;
+  font-size: 1.25rem;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+/* ===============================================================
+  ### SEARCH - FILTERS
+================================================================== */
+.filters {
+  grid-row: 2;
+}
+.filters .filter-header {
+  background-color: #006EBD;
+  border: 1px solid #006EBD;
+  color: #fefefe;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+.filters .filter-section {
+  border: 1px solid #C1C6CD;
+  border-top: none;
+  padding: 1rem;
+}
+.filters .filter-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  display: inline-block;
+}
+.filters .filter-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.filters .filter-section ul .link-match {
+  float: none;
+}
+.filters .filter-section ul li {
+  margin: 1rem 0;
+}
+.filters .filter-section ul li button.filter-close {
+  float: right;
+  background: none;
+  border: none;
+  color: #6C707A;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0 0.25rem 0.1rem;
+}
+.filters .filter-section ul li button.filter-close:hover,
+.filters .filter-section ul li button.filter-close:focus {
+  background: #6C707A;
+  color: #fefefe;
+}
+
+@media (min-width: 700px) {
+  .filters {
+    grid-row: 1;
+  }
+}
+/* ===============================================================
+  ### SEARCH - NOTICE PREVIEW
+================================================================== */
+.searchTermEmphasis {
+  font-weight: bold;
+}
+
+.notice-preview {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  border-bottom: 1px solid #C1C6CD;
+}
+.notice-preview .notice-summary {
+  grid-column: span 12;
+}
+.notice-preview .notice-summary .procurement-number {
+  font-weight: bold;
+  margin: 0;
+}
+.notice-preview .notice-summary h3 {
+  margin: 5px 0;
+  font-weight: bold;
+}
+.notice-preview .notice-summary .instution {
+  color: #6C707A;
+  margin: 0;
+}
+.notice-preview .notice-meta {
+  grid-column: span 12;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+.notice-preview .notice-meta p {
+  font-size: 0.9rem;
+}
+.notice-preview .notice-meta .notice-status {
+  grid-column: span 3;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.notice-preview .notice-meta .notice-status:before {
+  content: " ";
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+.notice-preview .notice-meta .status-published:before {
+  background-color: #65AE29;
+}
+.notice-preview .notice-meta .status-awarded:before {
+  background-color: #FEC500;
+}
+.notice-preview .notice-meta .status-non-awarded:before,
+.notice-preview .notice-meta .status-cancelled:before {
+  background-color: #AB0505;
+}
+.notice-preview .notice-meta p strong {
+  display: block;
+}
+
+@media (min-width: 375px) {
+  .notice-preview .notice-meta p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1025px) {
+  .notice-preview {
+    grid-column-gap: 50px;
+  }
+  .notice-preview .notice-summary {
+    grid-column: span 9;
+  }
+  .notice-preview .notice-meta {
+    grid-column: span 3;
+    display: block;
+  }
+  .notice-preview .notice-meta p.notice-status {
+    margin: 1rem 0;
+  }
+}
+/* ===============================================================
+  ### IE FIX - SEARCH PAGE  
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .notice-preview .notice-meta p {
+    display: inline-block;
+    width: 30%;
+  }
+  .notice-preview .notice-meta .notice-status {
+    width: 100%;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 700px), (-ms-high-contrast: none) and (min-width: 700px) {
+  .simple-search {
+    display: flex;
+  }
+  .simple-search .question {
+    width: 55%;
+  }
+  .simple-search .button-group {
+    width: 45%;
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+  .search-header .search-header-controls {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .filters {
+    margin-right: 30px;
+  }
+  #notices {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 1025px), (-ms-high-contrast: none) and (min-width: 1025px) {
+  #notices {
+    -ms-grid-column: 4;
+  }
+}
+/* =========================================================================
+  ## NIGP CODE DISPLAY 
+============================================================================ */
+/* ===============================================================
+  ### NIGP CODES - TABLE & LISTS
+================================================================== */
+ul.inactive, li.inactive,
+td.inactive, table.inactive tr td:nth-child(2),
+td span.inactive {
+  font-style: italic;
+}
+
+td.inactive:before, table.inactive tr td:nth-child(2):before,
+h1.inactive:after, h2.inactive:after, h3.inactive:after, h4.inactive:after, h5.inactive:after, h6.inactive:after {
+  content: "This NIGP code is no longer active";
+  color: #0a0a0a;
+  background: url("/common/graphics/icons/icon_warning-yellow.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  display: inline-block;
+}
+
+td.inactive:before, table.inactive tr td:nth-child(2):before {
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  padding-left: 25px;
+}
+
+h1.inactive:after, h2.inactive:after, h3.inactive:after, h4.inactive:after, h5.inactive:after, h6.inactive:after {
+  font-style: italic;
+  font-weight: normal;
+  background-size: 25px 25px;
+  padding-left: 30px;
+  margin-left: 0.75rem;
+}
+
+/* ===============================================================
+  ### NIGP CODES - ACCORDIONS & ACCORDION CONTENT 
+================================================================== */
+.nigp-accordion .header .inactive {
+  color: #434B55;
+  font-style: italic;
+  background-color: #E8E9ED;
+  background-image: url("/common/graphics/icons/icon_Plus-slate.svg");
+}
+.nigp-accordion .header .inactive:focus, .nigp-accordion .header .inactive:hover {
+  background-color: #C1C6CD;
+}
+.nigp-accordion .header [aria-expanded=true].inactive {
+  background-color: #E8E9ED;
+  background-image: url("/common/graphics/icons/icon_Minus-slate.svg");
+}
+.nigp-accordion .header [aria-expanded=true].inactive:focus, .nigp-accordion .header [aria-expanded=true].inactive:hover {
+  background-color: #C1C6CD;
+  background-image: url("/common/graphics/icons/icon_Minus-slate.svg");
+  color: #434B55;
+}
+.nigp-accordion .inactive-mssg:before {
+  margin-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  content: "This NIGP code is no longer active";
+  color: #0a0a0a;
+  font-style: normal;
+  font-weight: bold;
+  background: url("/common/graphics/icons/icon_warning-yellow.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 25px;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+.nigp-accordion .content {
+  padding: 0;
+  display: grid;
+}
+.nigp-accordion .content .button {
+  font-size: 14px;
+  margin: 1rem;
+}
+.nigp-accordion .content ul {
+  padding-left: 0;
+  margin: 0;
+}
+.nigp-accordion .content ul li {
+  margin: 0;
+  padding: 1rem;
+  background: #fefefe;
+  line-height: 150%;
+}
+.nigp-accordion .content ul li:nth-child(even) {
+  background: #F0F5F9;
+}
+.nigp-accordion .content table {
+  width: 100%;
+}
+.nigp-accordion .content table tbody {
+  border: none;
+}
+.nigp-accordion .content table td {
+  font-size: 14px;
+  line-height: 140%;
+  vertical-align: top;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+}
+.nigp-accordion .content table tr td:last-of-type {
+  min-width: 50px;
+}
+.nigp-accordion .content table button {
+  font-size: 14px;
+}
+
+.small-accordion .header .inactive:before {
+  background-size: 20px 20px;
+  padding-left: 1.5rem;
+}
+.small-accordion .content ul li {
+  font-size: 14px;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  line-height: 150%;
+}
+.small-accordion .content ul li:nth-child(even) {
+  background: #F0F5F9;
+}
+
+@media (min-width: 700px) {
+  .nigp-accordion {
+    width: 95%;
+  }
+  .card-body .nigp-accordion {
+    width: 100%;
+  }
+}
+/* ===============================================================
+  ### NIGP CODES - NIGP CODE MODAL  
+================================================================== */
+.nigp-header h2 {
+  margin-bottom: 0;
+}
+.nigp-header a {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#modalNIGPListContainer h3 {
+  margin: 0;
+}
+#modalNIGPListContainer h4 {
+  margin: 1rem 0 0.5rem;
+}
+#modalNIGPListContainer p {
+  margin-bottom: 0.5rem;
+}
+
+#modalSelectedNIGPCodeDisplay p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#modalSelectedNIGPCodeDisplay p.header {
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 1px;
+}
+
+/* ===============================================================
+  ### NIGP CODES - NIGP LOOKUP 
+  2/7/23 - KD: I think this is no longer utilized anywhere can probably be deleted 
+================================================================== */
+.nigp-lookup th {
+  padding: 1rem 0.5rem;
+}
+.nigp-lookup td {
+  vertical-align: top;
+  padding: 0.75rem 0.5rem;
+  font-size: 14px;
+  line-height: 140%;
+}
+.nigp-lookup tr td:last-of-type {
+  min-width: 80px;
+}
+.nigp-lookup tr td:last-of-type button {
+  display: block;
+  font-size: 14px;
+  margin-top: 0.75rem;
+  text-align: left;
+  text-decoration: underline;
+  border: none;
+}
+.nigp-lookup tr td:last-of-type button:first-of-type {
+  margin-top: 0;
+}
+
+/* ===============================================================
+  ### IE FIX - NIGP CODES
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .nigp-header, #modalNIGPListContainer, #modalSelectedNIGPContainer {
+    margin-bottom: 1rem;
+  }
+  #nigpLookupForm .button-group {
+    display: block;
+  }
+  #modalSelectedNIGPContainer {
+    margin-top: 1rem;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 1025px), (-ms-high-contrast: none) and (min-width: 1025px) {
+  #modalSelectedNIGPContainer {
+    -ms-grid-column: 8;
+    -ms-grid-row: 2;
+    margin-left: 3rem;
+    margin-top: 0;
+  }
+  #nigpLookupForm {
+    display: flex;
+  }
+  #nigpLookupForm .button-group {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+}
+/* =========================================================================
+  ## NOTICE HELPER CLASSES
+============================================================================ */
+.clearBoth {
+  clear: both;
+}
+
+.fineprint {
+  font-size: 0.75rem;
+}
+
+/* =========================================================================
+  ## SIDE BAR BOXES 
+============================================================================ */
+.card.notice-documents .card-header, .card.notice-ebidding .card-header {
+  background-size: 35px 45px;
+  background-position: 0.75rem center;
+  background-color: #434B55;
+  padding: 1.25rem;
+  padding-left: 3.5rem;
+  padding-right: 2rem;
+  margin: 0;
+  line-height: normal;
+}
+
+/* ===============================================================
+  ### DOCUMENTS BOX
+================================================================== */
+.notice-documents .card-header {
+  background: url("/common/graphics/icons/icon-documents.svg") left center no-repeat;
+}
+
+.notice-documents {
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+.notice-documents .form-note {
+  padding-left: 0.5rem;
+}
+.notice-documents h4 {
+  margin-top: 1.25rem;
+}
+.notice-documents ul {
+  padding-left: 2rem;
+  margin-top: 0;
+}
+.notice-documents ul li {
+  word-break: break-all;
+  line-height: normal;
+}
+.notice-documents legend {
+  font-weight: bold;
+  font-size: 18px;
+}
+.notice-documents label {
+  word-break: break-all;
+}
+.notice-documents p {
+  margin-bottom: 0.5rem;
+}
+.notice-documents .doc-grouping {
+  margin-bottom: 2rem;
+}
+.notice-documents .doc-grouping .sublegend {
+  margin-bottom: 0.5rem;
+}
+.notice-documents .doc-grouping:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ===============================================================
+  ### E-BIDDING BOX 
+================================================================== */
+.notice-ebidding .card-header {
+  background: url("/common/graphics/icons/icon-submit-ebid-reverse.svg") left center no-repeat;
+}
+
+.notice-ebidding .button {
+  margin-top: 0;
+}
+.notice-ebidding p {
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 700px) {
+  .notice-ebidding p {
+    margin: 0.25rem 0;
+  }
+}
+/* =========================================================================
+  ## NOTICE BODY BOX
+============================================================================ */
+.notice-body {
+  border: 0.1em solid #434B55;
+  border-top: 1.5em solid #434B55;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  overflow-wrap: break-word;
+}
+.notice-body p {
+  line-height: 125%;
+}
+.notice-body #noticeBottomInfo ul, .notice-body #noticeBottomInfo ul li {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+.notice-body #procuringInst {
+  color: #6C707A;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+.notice-body #procurementNumHeader {
+  font-size: 1.15rem;
+  display: block;
+}
+.notice-body #noticeTitle {
+  clear: both;
+  margin: 1rem 0;
+  font-size: 20px !important;
+  line-height: 125%;
+  font-weight: bold !important;
+}
+@media (min-width: 375px) {
+  .notice-body #procuringInst {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    float: left;
+  }
+  .notice-body #procurementNumHeader {
+    float: right;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+  }
+  .notice-body #noticeTitle {
+    font-size: 22px !important;
+  }
+}
+.notice-body .noticeActions, .notice-body .NoticeActions {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #C1C6CD;
+  line-height: 150%;
+}
+.notice-body .noticeActions p, .notice-body .NoticeActions p {
+  line-height: 150%;
+}
+.notice-body .noticeActions #firstPublished, .notice-body .NoticeActions #firstPublished {
+  margin: 1.5rem 0 1rem;
+  font-style: italic;
+}
+.notice-body .noticeActions .bodyPart, .notice-body .NoticeActions .bodyPart {
+  margin: 1rem 0;
+}
+.notice-body .noticeActions .bodyPart li, .notice-body .NoticeActions .bodyPart li {
+  margin: 0.5rem 1rem;
+  line-height: 150%;
+}
+.notice-body .noticeActions .formrow, .notice-body .NoticeActions .formrow {
+  clear: both;
+  margin-bottom: 1rem;
+}
+.notice-body .noticeActions .formrow .indent, .notice-body .NoticeActions .formrow .indent {
+  margin: 1rem 0;
+  line-height: 165%;
+}
+.notice-body .noticeActions .formrow .indent .floatLeftPadded, .notice-body .NoticeActions .formrow .indent .floatLeftPadded {
+  display: block;
+  padding-right: 1rem;
+  vertical-align: top;
+}
+.notice-body .noticeActions .formrow .indent .floatLeftPadded .formrow, .notice-body .NoticeActions .formrow .indent .floatLeftPadded .formrow {
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 375px) {
+  .notice-body .noticeActions .formrow .indent, .notice-body .NoticeActions .formrow .indent {
+    margin: 1rem;
+  }
+  .notice-body .noticeActions .formrow .indent .floatLeftPadded, .notice-body .NoticeActions .formrow .indent .floatLeftPadded {
+    display: inline-block;
+  }
+}
+.notice-body .noticeActions #noticeDescription, .notice-body .NoticeActions #noticeDescription {
+  margin-bottom: 0.5rem;
+}
+.notice-body .noticeActions h2, .notice-body .noticeActions #projectDescription strong:first-of-type, .notice-body .NoticeActions h2, .notice-body .NoticeActions #projectDescription strong:first-of-type {
+  font-size: 20px !important;
+  margin-bottom: 0rem !important;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.notice-body .noticeActions #projectDescription:first-of-type strong, .notice-body .NoticeActions #projectDescription:first-of-type strong {
+  margin-top: 0;
+}
+.notice-body .noticeActions h3, .notice-body .noticeActions .divisionTitle, .notice-body .NoticeActions h3, .notice-body .NoticeActions .divisionTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+.notice-body .noticeActions .divisionTitle, .notice-body .NoticeActions .divisionTitle {
+  margin: 1.5rem 0 0.25rem 0;
+}
+.notice-body .noticeActions h3, .notice-body .NoticeActions h3 {
+  margin-top: 0;
+}
+.notice-body .noticeActions #addInfoContact, .notice-body .NoticeActions #addInfoContact {
+  margin: 1rem 0;
+  line-height: 165%;
+}
+@media (min-width: 375px) {
+  .notice-body .noticeActions #addInfoContact, .notice-body .NoticeActions #addInfoContact {
+    margin: 1rem !important;
+  }
+}
+.notice-body .noticeActions #submitAddress, .notice-body .noticeActions blockquote, .notice-body .NoticeActions #submitAddress, .notice-body .NoticeActions blockquote {
+  background: url("/common/graphics/icons/icon-submit-mail.svg");
+}
+.notice-body .noticeActions #submitAddress p, .notice-body .noticeActions blockquote p, .notice-body .NoticeActions #submitAddress p, .notice-body .NoticeActions blockquote p {
+  margin: 0;
+}
+.notice-body .noticeActions #Ebidding, .notice-body .noticeActions #ebidding, .notice-body .NoticeActions #Ebidding, .notice-body .NoticeActions #ebidding {
+  background: url("/common/graphics/icons/icon-submit-ebid.svg");
+  vertical-align: center;
+}
+.notice-body .noticeActions #submitAddress, .notice-body .noticeActions blockquote, .notice-body .NoticeActions #submitAddress, .notice-body .NoticeActions blockquote {
+  width: 15em !important;
+}
+.notice-body .noticeActions #submitAddress, .notice-body .noticeActions blockquote, .notice-body .noticeActions #Ebidding, .notice-body .noticeActions #ebidding, .notice-body .NoticeActions #submitAddress, .notice-body .NoticeActions blockquote, .notice-body .NoticeActions #Ebidding, .notice-body .NoticeActions #ebidding {
+  background-position: left 2px;
+  background-size: 40px 50px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem 0 !important;
+  margin-bottom: 0rem !important;
+  padding-bottom: 2rem;
+  padding-top: 0;
+  padding-left: 3.25rem;
+  max-width: 50% !important;
+}
+@media (min-width: 375px) {
+  .notice-body .noticeActions #submitAddress, .notice-body .noticeActions blockquote, .notice-body .noticeActions #Ebidding, .notice-body .noticeActions #ebidding, .notice-body .NoticeActions #submitAddress, .notice-body .NoticeActions blockquote, .notice-body .NoticeActions #Ebidding, .notice-body .NoticeActions #ebidding {
+    margin: 1rem 0.5rem !important;
+  }
+}
+.notice-body .noticeActions .floatLeft, .notice-body .NoticeActions .floatLeft {
+  /*taking advantage of the "floatleft" class but not actually using floats*/
+  display: inline;
+  margin-left: 0 !important;
+}
+.notice-body .noticeActions #newCPO, .notice-body .NoticeActions #newCPO {
+  margin-bottom: 0.25rem;
+}
+.notice-body .noticeActions #newSPO, .notice-body .NoticeActions #newSPO {
+  margin-bottom: 1.5rem;
+}
+.notice-body .noticeActions .noticeAction, .notice-body .noticeActions .noticeaction, .notice-body .noticeActions .noticeactionGreen, .notice-body .noticeActions .NoticeAction, .notice-body .NoticeActions .noticeAction, .notice-body .NoticeActions .noticeaction, .notice-body .NoticeActions .noticeactionGreen, .notice-body .NoticeActions .NoticeAction {
+  border: 1px solid #005394;
+  background: #fefefe;
+  margin-bottom: 0.5rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionHeader, .notice-body .noticeActions .noticeAction .noticeactionheader, .notice-body .noticeActions .noticeAction .NoticeActionHeader, .notice-body .noticeActions .noticeAction .noticeactionheaderGreen, .notice-body .noticeActions .noticeaction .noticeActionHeader, .notice-body .noticeActions .noticeaction .noticeactionheader, .notice-body .noticeActions .noticeaction .NoticeActionHeader, .notice-body .noticeActions .noticeaction .noticeactionheaderGreen, .notice-body .noticeActions .noticeactionGreen .noticeActionHeader, .notice-body .noticeActions .noticeactionGreen .noticeactionheader, .notice-body .noticeActions .noticeactionGreen .NoticeActionHeader, .notice-body .noticeActions .noticeactionGreen .noticeactionheaderGreen, .notice-body .noticeActions .NoticeAction .noticeActionHeader, .notice-body .noticeActions .NoticeAction .noticeactionheader, .notice-body .noticeActions .NoticeAction .NoticeActionHeader, .notice-body .noticeActions .NoticeAction .noticeactionheaderGreen, .notice-body .NoticeActions .noticeAction .noticeActionHeader, .notice-body .NoticeActions .noticeAction .noticeactionheader, .notice-body .NoticeActions .noticeAction .NoticeActionHeader, .notice-body .NoticeActions .noticeAction .noticeactionheaderGreen, .notice-body .NoticeActions .noticeaction .noticeActionHeader, .notice-body .NoticeActions .noticeaction .noticeactionheader, .notice-body .NoticeActions .noticeaction .NoticeActionHeader, .notice-body .NoticeActions .noticeaction .noticeactionheaderGreen, .notice-body .NoticeActions .noticeactionGreen .noticeActionHeader, .notice-body .NoticeActions .noticeactionGreen .noticeactionheader, .notice-body .NoticeActions .noticeactionGreen .NoticeActionHeader, .notice-body .NoticeActions .noticeactionGreen .noticeactionheaderGreen, .notice-body .NoticeActions .NoticeAction .noticeActionHeader, .notice-body .NoticeActions .NoticeAction .noticeactionheader, .notice-body .NoticeActions .NoticeAction .NoticeActionHeader, .notice-body .NoticeActions .NoticeAction .noticeactionheaderGreen {
+  background-color: #005394;
+  color: #fefefe;
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  line-height: 125%;
+}
+.notice-body .noticeActions .noticeAction .noticeActionHeader div, .notice-body .noticeActions .noticeAction .noticeactionheader div, .notice-body .noticeActions .noticeAction .NoticeActionHeader div, .notice-body .noticeActions .noticeAction .noticeactionheaderGreen div, .notice-body .noticeActions .noticeaction .noticeActionHeader div, .notice-body .noticeActions .noticeaction .noticeactionheader div, .notice-body .noticeActions .noticeaction .NoticeActionHeader div, .notice-body .noticeActions .noticeaction .noticeactionheaderGreen div, .notice-body .noticeActions .noticeactionGreen .noticeActionHeader div, .notice-body .noticeActions .noticeactionGreen .noticeactionheader div, .notice-body .noticeActions .noticeactionGreen .NoticeActionHeader div, .notice-body .noticeActions .noticeactionGreen .noticeactionheaderGreen div, .notice-body .noticeActions .NoticeAction .noticeActionHeader div, .notice-body .noticeActions .NoticeAction .noticeactionheader div, .notice-body .noticeActions .NoticeAction .NoticeActionHeader div, .notice-body .noticeActions .NoticeAction .noticeactionheaderGreen div, .notice-body .NoticeActions .noticeAction .noticeActionHeader div, .notice-body .NoticeActions .noticeAction .noticeactionheader div, .notice-body .NoticeActions .noticeAction .NoticeActionHeader div, .notice-body .NoticeActions .noticeAction .noticeactionheaderGreen div, .notice-body .NoticeActions .noticeaction .noticeActionHeader div, .notice-body .NoticeActions .noticeaction .noticeactionheader div, .notice-body .NoticeActions .noticeaction .NoticeActionHeader div, .notice-body .NoticeActions .noticeaction .noticeactionheaderGreen div, .notice-body .NoticeActions .noticeactionGreen .noticeActionHeader div, .notice-body .NoticeActions .noticeactionGreen .noticeactionheader div, .notice-body .NoticeActions .noticeactionGreen .NoticeActionHeader div, .notice-body .NoticeActions .noticeactionGreen .noticeactionheaderGreen div, .notice-body .NoticeActions .NoticeAction .noticeActionHeader div, .notice-body .NoticeActions .NoticeAction .noticeactionheader div, .notice-body .NoticeActions .NoticeAction .NoticeActionHeader div, .notice-body .NoticeActions .NoticeAction .noticeactionheaderGreen div {
+  text-align: left;
+}
+.notice-body .noticeActions .noticeAction .noticeActionHeader #noticeActionInfo, .notice-body .noticeActions .noticeAction .noticeactionheader #noticeActionInfo, .notice-body .noticeActions .noticeAction .NoticeActionHeader #noticeActionInfo, .notice-body .noticeActions .noticeAction .noticeactionheaderGreen #noticeActionInfo, .notice-body .noticeActions .noticeaction .noticeActionHeader #noticeActionInfo, .notice-body .noticeActions .noticeaction .noticeactionheader #noticeActionInfo, .notice-body .noticeActions .noticeaction .NoticeActionHeader #noticeActionInfo, .notice-body .noticeActions .noticeaction .noticeactionheaderGreen #noticeActionInfo, .notice-body .noticeActions .noticeactionGreen .noticeActionHeader #noticeActionInfo, .notice-body .noticeActions .noticeactionGreen .noticeactionheader #noticeActionInfo, .notice-body .noticeActions .noticeactionGreen .NoticeActionHeader #noticeActionInfo, .notice-body .noticeActions .noticeactionGreen .noticeactionheaderGreen #noticeActionInfo, .notice-body .noticeActions .NoticeAction .noticeActionHeader #noticeActionInfo, .notice-body .noticeActions .NoticeAction .noticeactionheader #noticeActionInfo, .notice-body .noticeActions .NoticeAction .NoticeActionHeader #noticeActionInfo, .notice-body .noticeActions .NoticeAction .noticeactionheaderGreen #noticeActionInfo, .notice-body .NoticeActions .noticeAction .noticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .noticeAction .noticeactionheader #noticeActionInfo, .notice-body .NoticeActions .noticeAction .NoticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .noticeAction .noticeactionheaderGreen #noticeActionInfo, .notice-body .NoticeActions .noticeaction .noticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .noticeaction .noticeactionheader #noticeActionInfo, .notice-body .NoticeActions .noticeaction .NoticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .noticeaction .noticeactionheaderGreen #noticeActionInfo, .notice-body .NoticeActions .noticeactionGreen .noticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .noticeactionGreen .noticeactionheader #noticeActionInfo, .notice-body .NoticeActions .noticeactionGreen .NoticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .noticeactionGreen .noticeactionheaderGreen #noticeActionInfo, .notice-body .NoticeActions .NoticeAction .noticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .NoticeAction .noticeactionheader #noticeActionInfo, .notice-body .NoticeActions .NoticeAction .NoticeActionHeader #noticeActionInfo, .notice-body .NoticeActions .NoticeAction .noticeactionheaderGreen #noticeActionInfo {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .noticeAction .noticeActionHeader div:last-of-type, .notice-body .noticeActions .noticeAction .noticeactionheader #noticeActionPubDate, .notice-body .noticeActions .noticeAction .noticeactionheader div:last-of-type, .notice-body .noticeActions .noticeAction .NoticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .noticeAction .NoticeActionHeader div:last-of-type, .notice-body .noticeActions .noticeAction .noticeactionheaderGreen #noticeActionPubDate, .notice-body .noticeActions .noticeAction .noticeactionheaderGreen div:last-of-type, .notice-body .noticeActions .noticeaction .noticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .noticeaction .noticeActionHeader div:last-of-type, .notice-body .noticeActions .noticeaction .noticeactionheader #noticeActionPubDate, .notice-body .noticeActions .noticeaction .noticeactionheader div:last-of-type, .notice-body .noticeActions .noticeaction .NoticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .noticeaction .NoticeActionHeader div:last-of-type, .notice-body .noticeActions .noticeaction .noticeactionheaderGreen #noticeActionPubDate, .notice-body .noticeActions .noticeaction .noticeactionheaderGreen div:last-of-type, .notice-body .noticeActions .noticeactionGreen .noticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .noticeactionGreen .noticeActionHeader div:last-of-type, .notice-body .noticeActions .noticeactionGreen .noticeactionheader #noticeActionPubDate, .notice-body .noticeActions .noticeactionGreen .noticeactionheader div:last-of-type, .notice-body .noticeActions .noticeactionGreen .NoticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .noticeactionGreen .NoticeActionHeader div:last-of-type, .notice-body .noticeActions .noticeactionGreen .noticeactionheaderGreen #noticeActionPubDate, .notice-body .noticeActions .noticeactionGreen .noticeactionheaderGreen div:last-of-type, .notice-body .noticeActions .NoticeAction .noticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .NoticeAction .noticeActionHeader div:last-of-type, .notice-body .noticeActions .NoticeAction .noticeactionheader #noticeActionPubDate, .notice-body .noticeActions .NoticeAction .noticeactionheader div:last-of-type, .notice-body .noticeActions .NoticeAction .NoticeActionHeader #noticeActionPubDate, .notice-body .noticeActions .NoticeAction .NoticeActionHeader div:last-of-type, .notice-body .noticeActions .NoticeAction .noticeactionheaderGreen #noticeActionPubDate, .notice-body .noticeActions .NoticeAction .noticeactionheaderGreen div:last-of-type, .notice-body .NoticeActions .noticeAction .noticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .noticeAction .noticeActionHeader div:last-of-type, .notice-body .NoticeActions .noticeAction .noticeactionheader #noticeActionPubDate, .notice-body .NoticeActions .noticeAction .noticeactionheader div:last-of-type, .notice-body .NoticeActions .noticeAction .NoticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .noticeAction .NoticeActionHeader div:last-of-type, .notice-body .NoticeActions .noticeAction .noticeactionheaderGreen #noticeActionPubDate, .notice-body .NoticeActions .noticeAction .noticeactionheaderGreen div:last-of-type, .notice-body .NoticeActions .noticeaction .noticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .noticeaction .noticeActionHeader div:last-of-type, .notice-body .NoticeActions .noticeaction .noticeactionheader #noticeActionPubDate, .notice-body .NoticeActions .noticeaction .noticeactionheader div:last-of-type, .notice-body .NoticeActions .noticeaction .NoticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .noticeaction .NoticeActionHeader div:last-of-type, .notice-body .NoticeActions .noticeaction .noticeactionheaderGreen #noticeActionPubDate, .notice-body .NoticeActions .noticeaction .noticeactionheaderGreen div:last-of-type, .notice-body .NoticeActions .noticeactionGreen .noticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .noticeactionGreen .noticeActionHeader div:last-of-type, .notice-body .NoticeActions .noticeactionGreen .noticeactionheader #noticeActionPubDate, .notice-body .NoticeActions .noticeactionGreen .noticeactionheader div:last-of-type, .notice-body .NoticeActions .noticeactionGreen .NoticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .noticeactionGreen .NoticeActionHeader div:last-of-type, .notice-body .NoticeActions .noticeactionGreen .noticeactionheaderGreen #noticeActionPubDate, .notice-body .NoticeActions .noticeactionGreen .noticeactionheaderGreen div:last-of-type, .notice-body .NoticeActions .NoticeAction .noticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .NoticeAction .noticeActionHeader div:last-of-type, .notice-body .NoticeActions .NoticeAction .noticeactionheader #noticeActionPubDate, .notice-body .NoticeActions .NoticeAction .noticeactionheader div:last-of-type, .notice-body .NoticeActions .NoticeAction .NoticeActionHeader #noticeActionPubDate, .notice-body .NoticeActions .NoticeAction .NoticeActionHeader div:last-of-type, .notice-body .NoticeActions .NoticeAction .noticeactionheaderGreen #noticeActionPubDate, .notice-body .NoticeActions .NoticeAction .noticeactionheaderGreen div:last-of-type {
+  text-align: right;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody, .notice-body .noticeActions .noticeAction .NoticeActionBody, .notice-body .noticeActions .noticeaction .noticeActionBody, .notice-body .noticeActions .noticeaction .NoticeActionBody, .notice-body .noticeActions .noticeactionGreen .noticeActionBody, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody, .notice-body .noticeActions .NoticeAction .noticeActionBody, .notice-body .noticeActions .NoticeAction .NoticeActionBody, .notice-body .NoticeActions .noticeAction .noticeActionBody, .notice-body .NoticeActions .noticeAction .NoticeActionBody, .notice-body .NoticeActions .noticeaction .noticeActionBody, .notice-body .NoticeActions .noticeaction .NoticeActionBody, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody, .notice-body .NoticeActions .NoticeAction .noticeActionBody, .notice-body .NoticeActions .NoticeAction .NoticeActionBody {
+  background: #fefefe;
+  padding: 1rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody br, .notice-body .noticeActions .noticeAction .NoticeActionBody br, .notice-body .noticeActions .noticeaction .noticeActionBody br, .notice-body .noticeActions .noticeaction .NoticeActionBody br, .notice-body .noticeActions .noticeactionGreen .noticeActionBody br, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody br, .notice-body .noticeActions .NoticeAction .noticeActionBody br, .notice-body .noticeActions .NoticeAction .NoticeActionBody br, .notice-body .NoticeActions .noticeAction .noticeActionBody br, .notice-body .NoticeActions .noticeAction .NoticeActionBody br, .notice-body .NoticeActions .noticeaction .noticeActionBody br, .notice-body .NoticeActions .noticeaction .NoticeActionBody br, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody br, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody br, .notice-body .NoticeActions .NoticeAction .noticeActionBody br, .notice-body .NoticeActions .NoticeAction .NoticeActionBody br {
+  margin-bottom: 0.5rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer {
+  margin: 0.25rem 0 1rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer br, .notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer div, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer br, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer div, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer br, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer div, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer br, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer div, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer br, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer div, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer br, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer div, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer br, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer div, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer br, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer div, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer br, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer div, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer br, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer div, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer br, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer div, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer br, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer div, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer br, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer div, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer br, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer div, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer br, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer div, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer br, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer div {
+  margin-bottom: 0.25rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer .floatLeft, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer .floatLeft, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer .floatLeft {
+  display: inline;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer .renewalTerms, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer .renewalTerms, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer .renewalTerms {
+  padding-left: 1.5rem;
+}
+.notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer .renewalTerms #sharedContractStatementDisplay {
+  margin-top: 0.5rem;
+}
+@media (min-width: 375px) {
+  .notice-body .noticeActions .noticeAction .noticeActionBody .vendorOffer, .notice-body .noticeActions .noticeAction .NoticeActionBody .vendorOffer, .notice-body .noticeActions .noticeaction .noticeActionBody .vendorOffer, .notice-body .noticeActions .noticeaction .NoticeActionBody .vendorOffer, .notice-body .noticeActions .noticeactionGreen .noticeActionBody .vendorOffer, .notice-body .noticeActions .noticeactionGreen .NoticeActionBody .vendorOffer, .notice-body .noticeActions .NoticeAction .noticeActionBody .vendorOffer, .notice-body .noticeActions .NoticeAction .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeAction .noticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeAction .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeaction .noticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeaction .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeactionGreen .noticeActionBody .vendorOffer, .notice-body .NoticeActions .noticeactionGreen .NoticeActionBody .vendorOffer, .notice-body .NoticeActions .NoticeAction .noticeActionBody .vendorOffer, .notice-body .NoticeActions .NoticeAction .NoticeActionBody .vendorOffer {
+    margin: 0.25rem 0 1rem 1rem;
+  }
+}
+.notice-body .noticeActions .noticeAction #delayedAwardStatement, .notice-body .noticeActions .noticeaction #delayedAwardStatement, .notice-body .noticeActions .noticeactionGreen #delayedAwardStatement, .notice-body .noticeActions .NoticeAction #delayedAwardStatement, .notice-body .NoticeActions .noticeAction #delayedAwardStatement, .notice-body .NoticeActions .noticeaction #delayedAwardStatement, .notice-body .NoticeActions .noticeactionGreen #delayedAwardStatement, .notice-body .NoticeActions .NoticeAction #delayedAwardStatement {
+  font-size: 0.75rem;
+  line-height: 125%;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1rem;
+}
+.notice-body .noticeActions .bidder-listing .noticeActionHeader h2, .notice-body .noticeActions .bidder-listing .noticeactionheader h2, .notice-body .NoticeActions .bidder-listing .noticeActionHeader h2, .notice-body .NoticeActions .bidder-listing .noticeactionheader h2 {
+  color: #fefefe;
+  grid-column: span 2;
+  font-size: 18px !important;
+  font-weight: bold;
+  margin: 0;
+  display: block;
+}
+.notice-body .noticeActions .bidder-listing .noticeActionHeader h2 #noticeActionPubDate, .notice-body .noticeActions .bidder-listing .noticeactionheader h2 #noticeActionPubDate, .notice-body .NoticeActions .bidder-listing .noticeActionHeader h2 #noticeActionPubDate, .notice-body .NoticeActions .bidder-listing .noticeactionheader h2 #noticeActionPubDate {
+  float: right;
+  padding: 0;
+  padding-left: 1.5em;
+}
+.notice-body .noticeActions .bidder-listing .listing-body, .notice-body .NoticeActions .bidder-listing .listing-body {
+  background: #fefefe;
+}
+.notice-body .noticeActions .bidder-listing .listing-body > div, .notice-body .NoticeActions .bidder-listing .listing-body > div {
+  padding: 1rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body p, .notice-body .NoticeActions .bidder-listing .listing-body p {
+  margin: 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body h3, .notice-body .NoticeActions .bidder-listing .listing-body h3 {
+  text-transform: uppercase;
+  padding: 0 1rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: #005394;
+}
+.notice-body .noticeActions .bidder-listing .listing-body h3:first-of-type, .notice-body .NoticeActions .bidder-listing .listing-body h3:first-of-type {
+  margin-top: 1rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .locale, .notice-body .NoticeActions .bidder-listing .listing-body .locale {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #2F3235;
+  padding-left: 1rem;
+  display: inline-block;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .amount-comments, .notice-body .NoticeActions .bidder-listing .listing-body .amount-comments {
+  font-size: 0.9rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .contractor-name, .notice-body .NoticeActions .bidder-listing .listing-body .contractor-name {
+  display: block;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .category, .notice-body .NoticeActions .bidder-listing .listing-body .category {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  padding-top: 0.25rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .subcontractors, .notice-body .NoticeActions .bidder-listing .listing-body .subcontractors {
+  list-style-type: circle;
+  line-height: normal;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .subcontractors li, .notice-body .NoticeActions .bidder-listing .listing-body .subcontractors li {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  padding-bottom: 0.5rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .subcontractors .contractor-name, .notice-body .NoticeActions .bidder-listing .listing-body .subcontractors .contractor-name {
+  font-size: 1rem;
+  padding-top: 0.25rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .subcontractors .subcon-sign, .notice-body .NoticeActions .bidder-listing .listing-body .subcontractors .subcon-sign {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #6C707A;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder {
+  border-top: 1px solid #C1C6CD;
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .won, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .won {
+  font-weight: 700;
+  background: url("/common/graphics/icons/winner-preview.svg") left top no-repeat;
+  background-size: 19px 24px;
+  padding-left: 1.75rem;
+  padding-bottom: 0.25rem;
+  padding-bottom: 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .terms, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .terms {
+  margin: 0;
+  padding: 0.25rem 0 0 0.25rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .terms li, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .terms li {
+  list-style-type: none;
+  margin: 0 0 0 25px;
+  padding: 0 1.2rem 0.25rem 0;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 125%;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .terms .total, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .terms .total {
+  font-weight: 700;
+  display: block;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .amount-comments, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .amount-comments {
+  margin: 0.5rem 0 0.5rem 1.75rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .terms-renewal, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .terms-renewal {
+  margin: 0 0 0 2rem;
+  padding: 0;
+  padding-left: 1.75rem;
+  list-style-type: disc;
+  font-size: 0.9rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .terms-renewal li, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .terms-renewal li {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  line-height: 125%;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder .subcontractors, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder .subcontractors {
+  padding-left: 2.75rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .awarded-bidder:first-of-type, .notice-body .noticeActions .bidder-listing .listing-body h3 + .awarded-bidder, .notice-body .NoticeActions .bidder-listing .listing-body .awarded-bidder:first-of-type, .notice-body .NoticeActions .bidder-listing .listing-body h3 + .awarded-bidder {
+  border-top: none;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder {
+  background-color: #f6f1f1;
+  background-color: #E8E9ED;
+  position: relative;
+  margin: 0 1rem;
+  padding: 0.75rem 1rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .lost, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .lost {
+  font-weight: 700;
+  background: url("/common/graphics/icons/unsuccessful-preview.svg") left top no-repeat;
+  background-size: 18px 18px;
+  padding-left: 25px;
+  line-height: normal;
+  margin-right: 1rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .toggle, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .toggle {
+  float: right;
+  margin-top: -1.8em;
+  font-size: 1.5em;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .toggle, .notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .showHideAll, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .toggle, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .showHideAll {
+  cursor: default;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .plus::before, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .plus::before {
+  content: " + ";
+  float: left;
+  font-size: 110%;
+  margin: 20px 0.5em 0 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .header.toggle[aria-expanded=true]::before, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .header.toggle[aria-expanded=true]::before {
+  content: " - ";
+  margin: 20px 0.4em 0 0;
+  margin-right: 0;
+  font-size: 145%;
+  font-weight: bold;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .toggle[aria-expanded=true]::before, .notice-body .noticeActions .bidder-listing .listing-body .losing-bidder .showHideAll[aria-expanded=true]::before, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .toggle[aria-expanded=true]::before, .notice-body .NoticeActions .bidder-listing .listing-body .losing-bidder .showHideAll[aria-expanded=true]::before {
+  content: " - ";
+  margin: 0 0.5em 0 0;
+  margin-right: 0;
+  font-size: 110%;
+  font-weight: bold;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content, .notice-body .NoticeActions .bidder-listing .listing-body .content {
+  margin: 0 1rem;
+  background-color: #F5F7F9;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list {
+  padding: 0;
+  margin: 0;
+  margin-left: 1.75rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list > li, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list > li {
+  line-height: normal;
+  margin: 0;
+  padding: 0.75rem 0 0.25rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list > li .contractor-name, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list > li .contractor-name {
+  font-size: 1.1rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list > li .bidamount, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list > li .bidamount {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.25rem 1.5rem 0 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list > li:first-of-type, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list > li:first-of-type {
+  padding-top: 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list .amount-comments, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list .amount-comments {
+  line-height: normal;
+  margin-bottom: 0.5rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .content .unsuccess-list .subcontractors, .notice-body .NoticeActions .bidder-listing .listing-body .content .unsuccess-list .subcontractors {
+  margin-top: 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard {
+  border: 2px solid #C1C6CD;
+  margin: 1rem;
+  padding: 0 !important;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard h3, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard h3 {
+  text-transform: none;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  color: #005394;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard {
+  background-color: #F0F5F9;
+  padding: 0.3rem 0.5rem 3rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard h4, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard h4 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 110%;
+  margin-right: 0.25rem;
+  width: 100%;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock p, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock .mainscore, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock .mainscore {
+  font-size: 3.75rem;
+  display: block;
+  color: #005394;
+  line-height: normal;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock .count, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock .count {
+  font-size: 2.5rem;
+  display: block;
+  color: #005394;
+  line-height: normal;
+}
+@media (min-width: 375px) {
+  .notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock {
+    width: 32%;
+    width: 17%;
+    min-width: min-content;
+    margin-right: 0.75rem;
+  }
+  .notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock p, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock p {
+    text-align: left;
+  }
+}
+@media (min-width: 700px) {
+  .notice-body .noticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .scorecard .scoreblock {
+    width: 18%;
+    margin-right: 0.5rem;
+  }
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .updatedofficer, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .updatedofficer {
+  margin-top: 1rem;
+  margin: 1rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .scoreboard .updatedofficer p, .notice-body .NoticeActions .bidder-listing .listing-body .scoreboard .updatedofficer p {
+  margin-bottom: 0.5rem;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .award-recap, .notice-body .NoticeActions .bidder-listing .listing-body .award-recap {
+  padding-top: 0;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .award-recap p, .notice-body .NoticeActions .bidder-listing .listing-body .award-recap p {
+  margin-bottom: 0.75rem;
+  line-height: 150%;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .award-recap p.boiler:last-of-type, .notice-body .NoticeActions .bidder-listing .listing-body .award-recap p.boiler:last-of-type {
+  font-size: 0.75rem;
+  line-height: 125%;
+  font-style: italic;
+  text-align: center;
+  line-height: 125%;
+}
+.notice-body .noticeActions .bidder-listing .listing-body .award-recap p:last-of-type, .notice-body .NoticeActions .bidder-listing .listing-body .award-recap p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ===============================================================
+  ### DOWNTIME ALERTS
+================================================================== */
+.downtime-alert article {
+  padding: 0.5rem 1rem;
+  background-color: #F9F0F0;
+  border-left: #AB0505 10px solid;
+}
+
+/* ==================================================================================
+   # HELPER CLASSES 
+===================================================================================== */
+/* ===============================================================
+  ### STYLING - BOTTOM DIVIDER
+================================================================== */
+.bottom-divider {
+  border-bottom: 1px solid #C1C6CD;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===============================================================
+  ### STYLING - TEXT 
+================================================================== */
+.centered {
+  text-align: center;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+/* ===============================================================
+  ### STYLING - LAYOUT, PADDING, AND MARGIN 
+================================================================== */
+.inlined {
+  display: inline-block;
+}
+
+.push-right {
+  margin-right: 1rem;
+}
+
+.push-bottom {
+  margin-bottom: 1.5rem;
+} /*UPDATED 11.03.21 - Added push-bottom class*/
+.push-top {
+  margin-top: 1.5rem;
+}
+
+.noTop {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ===============================================================
+  ### DISPLAY - VISIBILITY 
+================================================================== */
+.hidden, .offscreen {
+  /*"offscreen" is only used in the body of the notices*/
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+  clip: rect(1px, 1px, 1px, 1px); /* clip to 1px width and height */
+  width: 1px; /* Set width to 1px */
+  height: 1px; /* Set height to 1px */
+  text-indent: -999em; /* Indent any text so it is not visible */
+  overflow: hidden; /* Ensure that contents are not visible beyond 1px boundary */
+  word-wrap: normal; /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */
+}
+
+.desktop-only {
+  display: none;
+}
+@media (min-width: 700px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.noDisplay {
+  display: none !important;
+}
+
+/* ===============================================================
+  ### FOCUS STYLING 
+================================================================== */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: #0a0a0a dashed 2px;
+  outline-offset: 1px;
+  border-style: transparent;
+}
+
+/*IE Fix*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  a:focus, button:focus {
+    outline: #0a0a0a dashed 2px;
+    outline-offset: 1px;
+    border-style: transparent;
+  }
+}
+/* ==================================================================================
+   # DEBUG AND DEV STYLING
+===================================================================================== */
+.placeholder {
+  background-color: yellow;
+}
+
+#devDebuggingBar {
+  background-color: #E9E9E9;
+  font-family: consolas;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.debugDumps {
+  font-family: consolas;
+  color: #B9B9B9;
+}
+
+#simulateFutureBar {
+  background-color: #DDE9EB;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0;
+}
+
+#searchDebuggingBar {
+  background-color: teal;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0;
+}
