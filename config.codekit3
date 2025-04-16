@@ -345,6 +345,14 @@
       "oAP" : "\/datatables\/DataTables-1.12.1\/aits-fix-table.html",
       "oF" : 0
     },
+    "\/datatables\/DataTables-1.12.1\/border-styles.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/datatables\/DataTables-1.12.1\/border-styles.html",
+      "oF" : 0
+    },
     "\/datatables\/DataTables-1.12.1\/bulletinDatatableSample.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -497,14 +505,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/datatables\/DataTables-1.12.1\/financeDatatableSample.cfm",
-      "oF" : 0
-    },
-    "\/datatables\/DataTables-1.12.1\/financeDatatableSample.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/datatables\/DataTables-1.12.1\/financeDatatableSample.html",
       "oF" : 0
     },
     "\/datatables\/DataTables-1.12.1\/heading-styles.html" : {
