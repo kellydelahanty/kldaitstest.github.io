@@ -36,6 +36,7 @@
  ROW STYLING
  By default all the table rows will be white with a border in between rows.
  To have rows alternate between white and some other color with no borders between rows, apply one of the following classes:
+ PLEASE NOTE: Double-check color contrast for links against the blue and lightblue options - standard primary blue will not meet color contrast.
    - "rows_gray"
    - "rows_blue"
    - "rows_lightBlue"
@@ -212,7 +213,7 @@ table.header_lightGray, table.header_darkGray, table.header_blue, table.header_d
 table.dataTable.no-footer.rows_gray, table.dataTable.no-footer.rows_blue, table.dataTable.no-footer.rows_lightBlue {
   border-bottom: none;
 }
-table.dataTable.no-footer.rows_gray tbody tr, table.dataTable.no-footer.rows_gray tbody tr:focus, table.dataTable.no-footer.rows_gray tbody tr:hover, table.dataTable.no-footer.rows_blue tbody tr, table.dataTable.no-footer.rows_blue tbody tr:focus, table.dataTable.no-footer.rows_blue tbody tr:hover, table.dataTable.no-footer.rows_lightBlue tbody tr, table.dataTable.no-footer.rows_lightBlue tbody tr:focus, table.dataTable.no-footer.rows_lightBlue tbody tr:hover {
+table.dataTable.no-footer.rows_gray tbody tr, table.dataTable.no-footer.rows_blue tbody tr, table.dataTable.no-footer.rows_lightBlue tbody tr {
   background-color: #fefefe;
 }
 table.dataTable.no-footer.rows_gray tbody tr, table.dataTable.no-footer.rows_blue tbody tr, table.dataTable.no-footer.rows_lightBlue tbody tr {
@@ -221,20 +222,32 @@ table.dataTable.no-footer.rows_gray tbody tr, table.dataTable.no-footer.rows_blu
 table.dataTable.no-footer.rows_gray tbody tr:last-child, table.dataTable.no-footer.rows_blue tbody tr:last-child, table.dataTable.no-footer.rows_lightBlue tbody tr:last-child {
   border-bottom: 1px solid #0a0a0a;
 }
-table.dataTable.no-footer.rows_gray tbody .dataTableOddRow:last-child, table.dataTable.no-footer.rows_blue tbody .dataTableOddRow:last-child, table.dataTable.no-footer.rows_lightBlue tbody .dataTableOddRow:last-child {
+table.dataTable.no-footer.rows_gray tbody tr.odd:last-child, table.dataTable.no-footer.rows_blue tbody tr.odd:last-child, table.dataTable.no-footer.rows_lightBlue tbody tr.odd:last-child {
   border: none;
 }
 
-table.dataTable.no-footer.rows_gray .dataTableOddRow, table.dataTable.no-footer.rows_gray .dataTableOddRow:focus, table.dataTable.no-footer.rows_gray .dataTableOddRow:hover {
+table.dataTable.rows_gray tbody tr.odd {
   background-color: #F0F0F0;
 }
 
-table.dataTable.no-footer.rows_blue .dataTableOddRow, table.dataTable.no-footer.rows_blue .dataTableOddRow:focus, table.dataTable.no-footer.rows_blue .dataTableOddRow:hover {
+table.dataTable.rows_gray.hover tbody tr:hover {
+  background-color: #e6e6e6;
+}
+
+table.dataTable.rows_lightBlue tbody tr.odd {
+  background-color: #F4F8FB;
+}
+
+table.dataTable.rows_lightBlue.hover tbody tr:hover {
   background-color: #E9F1F8;
 }
 
-table.dataTable.no-footer.rows_lightBlue .dataTableOddRow, table.dataTable.no-footer.rows_lightBlue .dataTableOddRow:focus, table.dataTable.no-footer.rows_lightBlue .dataTableOddRow:hover {
-  background-color: #F5F6F7;
+table.dataTable.rows_blue tbody tr.odd {
+  background-color: #E9F1F8;
+}
+
+table.dataTable.rows_blue.hover tbody tr:hover {
+  background-color: #D0E4F1;
 }
 
 /* ====================================

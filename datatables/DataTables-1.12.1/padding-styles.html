@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+	<title>Padding Style Example</title>
+	<cfset local.currentRelease="myRelease2022">
+
+		<cfoutput>
+			<script src="../../jquery/jquery-3.6.0.min.js?v=myRelease2022" type="text/javascript"></script>
+
+			<script src="../../datatables/DataTables-1.12.1/js/jquery.dataTables.min.js?v=myRelease2022"
+				type="text/javascript"></script>
+			<link href="../../datatables/DataTables-1.12.1/css/jquery.dataTables.css?v=myRelease2022" rel="stylesheet"
+				type="text/css" />
+
+			<script
+				src="../../datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js?v=myRelease2022"></script>
+			<script
+				src="../../datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=myRelease2022"></script>
+			<link rel="stylesheet"
+				href="../../datatables/extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css?v=myRelease2022">
+
+			<link href="../../datatables/DataTables-1.12.1/css/Datatable-AITS-Fix.css?v=myRelease2022" rel="stylesheet"
+				type="text/css" />
+			<link href="../../datatables/DataTables-1.12.1/css/Datatables-Style-Minimalist.css" rel="stylesheet"
+				type="text/css" />
+			<link href="../../datatables/DataTables-1.12.1/css/Datatables-Styles-Finance.css" rel="stylesheet"
+				type="text/css" />
+
+		</cfoutput>
+
+		<!--- note: this style is only needed for the sample because there is no other finance css applied
+				this (or something equivalent) should be in your application's css file --->
+		<style>
+			.hidden {
+				position: absolute;
+				clip: rect(1px 1px 1px 1px);
+				width: 1px;
+				height: 1px;
+				text-indent: -999em;
+				overflow: hidden;
+				word-wrap: normal;
+			}
+
+			.sb-heading {
+				padding: 0.5rem 1rem;
+				background: #9FB7D1;
+				margin-bottom: 1rem;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.sb-heading h1 {
+				font-size: 28px;
+			}
+
+			.sb-heading a {
+				background-color: #50576D;
+				color: white;
+				padding: 0.75rem 1rem;
+				border-radius: 10px;
+				text-decoration: none;
+			}
+
+			.sb-heading a:hover,
+			.sb-heading a:focus {
+				background-color: #3B414E;
+				color: white;
+			}
+
+			.sb-heading div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.table-section {
+				padding-bottom: 3rem;
+				margin-bottom: 3rem;
+				border-bottom: 5px solid gray;
+			}
+		</style>
+
+		<script type="text/javascript" id="errorFocusScript">
+			$(document).ready(function () {
+				var oTable = $('.ex-table').dataTable({
+					dom: "<'datatableContainer_pageLength' l>B<'datatableContainer_filterResults' f><'datatableContainer_paginateTop datatableContainer_pagination' p>rt<'datatableContainer_resultCounts' i><'datatableContainer_paginateBottom datatableContainer_pagination' p>",
+					lengthMenu: [[2, 5, 10, -1],
+					[2, 5, 10, "All"]],
+					pageLength: 10,
+					searching: false,
+					bFilter: true,
+					bSort: true,
+					columnDefs: [
+						{ targets: 'no-sort', orderable: false }  // don't allow sorting on no-sort columns
+						//,{targets: 'noDisplay', visible: false}   // don't show noDisplay columns
+					],
+					aaSorting: [[1, 'asc'], [0, 'asc']],
+					sPaginationType: "full_numbers",
+					fixedHeader: {
+						header: true,
+						footer: false
+					},
+					bAutoWidth: false,						    // set to false to allow the table to be responsive to changes in window width
+					drawCallback: function (settings) {
+						drawCallbackFunc(settings);
+					},
+					language: {
+						sSearch: "Search: ",
+						zeroRecords: "<span id='zeroRecordMsg'>No Records Returned</span>",
+						info: "Showing _START_ to _END_ of _TOTAL_ records",
+						infoEmpty: "Showing 0 records",
+						infoFiltered: "(filtered from _MAX_ total records)",
+						lengthMenu: "Records per page: _MENU_",
+						loadingRecords: "Loading your records, please wait.",
+						processing: "Processing your request, please wait.",
+						aria: {
+							paginate: {
+								first: 'Go to First Page',
+								previous: 'Go to Previous Page',
+								next: 'Go to Next Page',
+								last: 'Go to Last Page',
+								number: 'Go to Page '   //not supported in datatables v. 1 (workaround added in the drawCallbackFunc)
+							}
+						}
+					},
+					createdRow: function (nRow, aData, aDataIndex) {
+						// As each row is created, set the data-auth attribute to the current authID
+						$(nRow).attr('data-auth', aData[0]);
+					},
+
+				});
+
+
+
+				// set the search box to a maxlength of 50
+				$('.datatableContainer_filterResults input').attr('maxlength', 50);
+
+				// add a description to the search field, so users know which data they are searching (especially helpful on pages with multiple datatables)				
+				$('.datatableContainer_filterResults input').each(function () {
+					var ariaDescribedBy = $(this).closest('.dataTables_wrapper').parent().attr('id') + 'Header';
+					$(this).attr("aria-describedby", ariaDescribedBy);
+				});
+
+				// each time the table is redrawn, update the pagination buttons and filter fields
+				function drawCallbackFunc(settings) {
+
+					// get the div that holds this table - this will ensure we're not changing features of any other tables on the page 
+					//		and, they can all share the same drawCallbackFunc
+					var tableContainer = '#' + $('#' + settings.sTableId).parent().attr('id');
+
+					var startRecord = settings._iDisplayStart; // note this is 0 based
+					var endRecord = settings.fnDisplayEnd();
+					var displayCount = endRecord - startRecord; // how many records are shown on this page
+
+					var filterCount = settings.fnRecordsDisplay(); // how many filtered records shown on all pages
+					var totalCount = settings.fnRecordsTotal(); // how many non-filtered records were available
+
+
+					if (filterCount <= 10) {
+						// with <= 10 records (our min page length option) to show now, no need to paginate
+						$(tableContainer + ' .datatableContainer_pagination').addClass("noDisplay");
+						$(tableContainer + ' .datatableContainer_pageLength div').addClass("noDisplay");
+					}
+					else {
+						// pagination should only be shown if there are more records to be seen on other pages
+						//		this is only based on the ones we see (displayCount)
+						//			              and the ones we should see (filterCount)
+						if (displayCount < filterCount) {
+							//	seeing less than we should - show pagination
+							$(tableContainer + ' .datatableContainer_pagination').removeClass("noDisplay");
+						}
+						else {
+							//	seeing as many as we should - hide pagination
+							$(tableContainer + ' .datatableContainer_pagination').addClass("noDisplay");
+						}
+
+						// for >10 records, always show the length menu
+						$(tableContainer + ' .datatableContainer_pageLength div').removeClass("noDisplay");
+					}
+
+					switch (totalCount) {
+						case 0: {
+							// with 0 records ever, no need to search or export
+							$(tableContainer + ' .datatableContainer_filterResults div').addClass("noDisplay");
+							$(tableContainer + ' .dt-buttons').addClass("noDisplay");
+							break;
+						}
+						case 1: {
+							// with 1 records ever, no need to search, but allow export
+							$(tableContainer + ' .dt-buttons').removeClass("noDisplay");
+							$(tableContainer + ' .datatableContainer_filterResults div').addClass("noDisplay");
+							break;
+						}
+						default: {
+							// with > 1 records ever, allow search and export
+							$(tableContainer + ' .dt-buttons').removeClass("noDisplay");
+							$(tableContainer + ' .datatableContainer_filterResults div').removeClass("noDisplay");
+							break;
+						}
+					}
+
+					// add a listener to any links or buttons in the table to scroll back if they are hidden under the header
+					$(".dataTables_wrapper a").on("focus", function () {
+						scrollPageUp(element = $(this),
+							headerHeight = 80
+						);
+						return false;
+					});
+					$(".dataTables_wrapper button").on("focus", function () {
+						scrollPageUp(element = $(this),
+							headerHeight = 80
+						);
+						return false;
+					});
+
+					// add aria labels to numeric pagination buttons. 
+					//  NOTE: First, Previous, Next and Last buttons have their labels added with datatables language aria options
+					$("div.datatableContainer_pagination a").each(function () {
+						if ($.isNumeric($(this).text())) {
+							$(this).attr("aria-label", $("#datatableContainer_paginationLabel").text() + ' ' + $(this).text());
+						}
+					});
+
+					// set the current attribute for the current page link
+					$("div.datatableContainer_pagination a.current").attr("aria-current", "true");
+
+				};
+
+
+				$(".showID").click(function (event) {
+					event.preventDefault();
+
+					var email = $(this).parent().siblings(".email").text();
+
+					var id = $(this).parent().siblings(".userID").text();
+					if (id.length === 0) {
+						id = "[undefined]"
+					}
+
+					//alert("Note: while Email and ID are both searchable, this is what jquery sees\n\tEmail:   " + email + "\n\tID:\t     " + id + "\n\nTo see both, remove the columnDefs for noDisplay");
+					alert("Email:   " + email + "\nID:\t     " + id);
+				});
+
+
+			});
+		</script>
+</head>
+
+
+<body>
+	<aside class="sb-heading">
+		<div>
+			<h1>Kelly Delahanty's Front-End Sandbox</h1>
+			<nav>
+				<a href="../../index.html">Back to Sandbox Home</a>
+			</nav>
+		</div>
+	</aside>
+
+	<h1 >Table Padding Style Examples</h1>
+    <p>The following classes are available for determining padding size:</p>
+	<ul>
+		<li>padding_sm</li>
+		<li>padding_lg</li>
+	</ul>
+
+
+
+	<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
+	<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
+
+	<!--Default Padding-->
+	<div class="table-section">
+		<h2>Default Padding</h2>
+		<table id="ex-table-light-gray" class="ex-table header_lightGray">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Birthday</th>
+					<th>Last Modified</th>
+					<th class="no-sort no-export">Action</th>
+					<th class="noDisplay">ID</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Aaron</td>
+					<td>Adams</td>
+					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+					<td data-sort="2000/01/01">01/01/2000</td>
+					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">1</td>
+				</tr>
+				<tr>
+					<td>Brenda</td>
+					<td>Banks</td>
+					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+					<td data-sort="1998/02/02">02/02/1998</td>
+					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">2</td>
+				</tr>
+				<tr>
+					<td>Charles</td>
+					<td>Carter</td>
+					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+					<td data-sort="2010/03/03">03/03/2010</td>
+					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">3</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!--Small Padding-->
+	<div class="table-section">
+		<h2>Small Padding</h2>
+		<table id="ex-table-light-gray" class="ex-table  header_lightGray padding_sm">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Birthday</th>
+					<th>Last Modified</th>
+					<th class="no-sort no-export">Action</th>
+					<th class="noDisplay">ID</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Aaron</td>
+					<td>Adams</td>
+					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+					<td data-sort="2000/01/01">01/01/2000</td>
+					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">1</td>
+				</tr>
+				<tr>
+					<td>Brenda</td>
+					<td>Banks</td>
+					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+					<td data-sort="1998/02/02">02/02/1998</td>
+					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">2</td>
+				</tr>
+				<tr>
+					<td>Charles</td>
+					<td>Carter</td>
+					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+					<td data-sort="2010/03/03">03/03/2010</td>
+					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">3</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!--Large Padding-->
+	<div class="table-section">
+		<h2>Large Padding</h2>
+		<table id="ex-table-light-gray" class="ex-table  header_lightGray padding_lg">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Birthday</th>
+					<th>Last Modified</th>
+					<th class="no-sort no-export">Action</th>
+					<th class="noDisplay">ID</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Aaron</td>
+					<td>Adams</td>
+					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+					<td data-sort="2000/01/01">01/01/2000</td>
+					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">1</td>
+				</tr>
+				<tr>
+					<td>Brenda</td>
+					<td>Banks</td>
+					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+					<td data-sort="1998/02/02">02/02/1998</td>
+					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">2</td>
+				</tr>
+				<tr>
+					<td>Charles</td>
+					<td>Carter</td>
+					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+					<td data-sort="2010/03/03">03/03/2010</td>
+					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+					<td><button class="showID">Show User ID</button></td>
+					<td class="noDisplay userID">3</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+</body>
+
+</html>

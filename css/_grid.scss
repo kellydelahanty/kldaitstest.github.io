@@ -1,0 +1,170 @@
+@use 'variables' as *;
+
+/* =========================================================================
+  ## GRID
+============================================================================ */
+
+/* ===============================================================
+  ### GRID CONTAINER
+================================================================== */
+.grid-container {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  max-width: $site-width;
+  margin: 0 auto;
+}
+
+
+/* ===============================================================
+  ### GRID ITEMS
+================================================================== */
+.cell {-ms-grid-column-span: 12; grid-column: span 12;} //Defaults to 12col if not otherwise specified
+
+.col-1-sm {-ms-grid-column-span: 1; grid-column: span 1}
+.col-2-sm {-ms-grid-column-span: 2; grid-column: span 2}
+.col-3-sm {-ms-grid-column-span: 3; grid-column: span 3}
+.col-4-sm {-ms-grid-column-span: 4; grid-column: span 4}
+.col-5-sm {-ms-grid-column-span: 5; grid-column: span 5}
+.col-6-sm {-ms-grid-column-span: 6; grid-column: span 6}
+.col-7-sm {-ms-grid-column-span: 7; grid-column: span 7}
+.col-8-sm {-ms-grid-column-span: 8; grid-column: span 8}
+.col-9-sm {-ms-grid-column-span: 9; grid-column: span 9}
+.col-10-sm {-ms-grid-column-span: 10; grid-column: span 10}
+.col-11-sm {-ms-grid-column-span: 11; grid-column: span 11}
+.col-12-sm {-ms-grid-column-span: 12; grid-column: span 12}
+
+@media (min-width: $breakpoint-md) {
+  .col-1-md {-ms-grid-column-span: 1; grid-column: span 1}
+  .col-2-md {-ms-grid-column-span: 2; grid-column: span 2}
+  .col-3-md {-ms-grid-column-span: 3; grid-column: span 3}
+  .col-4-md {-ms-grid-column-span: 4; grid-column: span 4}
+  .col-5-md {-ms-grid-column-span: 5; grid-column: span 5}
+  .col-6-md {-ms-grid-column-span: 6; grid-column: span 6}
+  .col-7-md {-ms-grid-column-span: 7; grid-column: span 7}
+  .col-8-md {-ms-grid-column-span: 8; grid-column: span 8}
+  .col-9-md {-ms-grid-column-span: 9; grid-column: span 9}
+  .col-10-md {-ms-grid-column-span: 10; grid-column: span 10}
+  .col-11-md {-ms-grid-column-span: 11; grid-column: span 11}
+  .col-12-md {-ms-grid-column-span: 12; grid-column: span 12}
+}
+
+@media (min-width: $breakpoint-lg) {
+  .col-1-lg {-ms-grid-column-span: 1; grid-column: span 1}
+  .col-2-lg {-ms-grid-column-span: 2; grid-column: span 2}
+  .col-3-lg {-ms-grid-column-span: 3; grid-column: span 3}
+  .col-4-lg {-ms-grid-column-span: 4; grid-column: span 4}
+  .col-5-lg {-ms-grid-column-span: 5; grid-column: span 5}
+  .col-6-lg {-ms-grid-column-span: 6; grid-column: span 6}
+  .col-7-lg {-ms-grid-column-span: 7; grid-column: span 7}
+  .col-8-lg {-ms-grid-column-span: 8; grid-column: span 8}
+  .col-9-lg {-ms-grid-column-span: 9; grid-column: span 9}
+  .col-10-lg {-ms-grid-column-span: 10; grid-column: span 10}
+  .col-11-lg {-ms-grid-column-span: 11; grid-column: span 11}
+  .col-12-lg {-ms-grid-column-span: 12; grid-column: span 12}
+}
+
+/* ========================= #### IMAGES IN GRID ITEMS ========================= */
+.cell {
+  img {max-width: 100%;}
+}
+
+/* ===============================================================
+  ### GRID GAPS
+================================================================== */
+.grid-gap-10 {grid-gap:10px;}
+   .grid-gap-30 {
+     grid-row-gap: 30px;
+     grid-column-gap: 10px;
+   }
+
+   .grid-gap-50 {
+     grid-row-gap: 50px;
+     grid-column-gap: 10px;
+
+   }
+
+   @media(min-width: $breakpoint-sm) {
+     .grid-gap-30, .grid-gap-50 {
+       grid-column-gap:30px;
+     }
+   }
+
+   @media(min-width: $breakpoint-md) {
+     .grid-gap-50 {
+       grid-column-gap:50px;
+     }
+   }
+
+
+/* =========================================================================
+  ## IE LAYOUT FIXES
+============================================================================ */
+//RESOURCES
+// https://thamas.hu/css-grid-items-internet-explorer-11-semi-auto-placement/ 
+// https://css-tricks.com/css-grid-in-ie-debunking-common-ie-grid-misconceptions/#article-header-id-2
+
+
+ //Mixin used to automatically place each cell in a grid-container on its own row by default. Code from https://thamas.hu/css-grid-items-internet-explorer-11-semi-auto-placement/ 
+@mixin ie-grid-rows($start: 1, $rows: 50, $container: true) {
+  @for $i from $start through $rows {
+    $row: $i;
+
+    @if $container {
+      > *:nth-child(#{$i}) {
+        -ms-grid-row: $row;
+      }
+    }
+
+    @else {
+      &:nth-child(#{$i}) {
+        -ms-grid-row: $row;
+      }
+    }
+  }
+}
+
+
+@mixin ie-grid-column($start: 1, $column: 12, $container: true) {
+  @for $i from $start through $column {
+    $column: $i;
+
+    @if $container {
+      > *:nth-child(#{$i}) {
+        -ms-grid-column: $column;
+      }
+    }
+
+    @else {
+      &:nth-child(#{$i}) {
+        -ms-grid-column: $column;
+      }
+    }
+  }
+}
+
+/*IE ONLY STYLE FIXES*/ 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Places each row in grid-container in it's own row by default*/ 
+  .cell {
+    @include ie-grid-rows($rows: 30, $container: false);
+    grid-column: 1;
+  }
+
+
+  /*Fixes 2-column page template layout*/
+    @media (min-width: $breakpoint-md) {
+      main {
+        .grid-container {
+          .subnav {margin-right: 50px;}
+          #page-content {
+            -ms-grid-row: 1;
+            -ms-grid-column: 4;
+          }
+        }
+      }
+    }
+}
