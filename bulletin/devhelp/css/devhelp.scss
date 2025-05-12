@@ -1,0 +1,300 @@
+/* ==========================================================================
+   ## VARIABLES
+   ========================================================================== */
+  $font-family: 'Lato', Helvetica, Roboto, Arial, sans-serif;
+
+  $blue-01: #F0F5F9;
+  $blue-02: #A3D9FF;
+  $blue-03: #0095FF;
+  $blue-04: #006EBD;
+  $blue-05: #005394;
+
+  $green: #65AE29;
+  $green-dark: #45781C;
+  $green-light: #DBFFBD;
+
+  $yellow: #FEC500;
+  $yellow-dark: #E2A800;
+
+  $red: #AB0505;
+
+  $gray-01: #F5F7F9;
+  $gray-02: #E8E9ED;
+  $gray-03: #C1C6CD;
+  $gray-04: #6C707A;
+
+  $slate: #434B55;
+  $slate-dark: #2F3235;
+
+  $black: #0a0a0a;
+
+  $white: #fefefe;
+
+  $breakpoint-sm: 375px;
+  $breakpoint-md: 700px;
+  $breakpoint-lg: 1025px;
+
+
+  $dark-bg-link: $blue-02;
+  $dark-bg-link-hover: $green-light;
+/* ==========================================================================
+   ## LAYOUT STYLING
+   ========================================================================== */
+  .doc {
+
+    .content-block {
+      background-color: $gray-02;
+      z-index: -5;
+
+      .devblock {
+        background-color: $white;
+        padding: 2rem;
+        z-index: -4;
+
+        .dbheader {
+          border-bottom: 3px solid $gray-04;
+          margin-bottom: .5rem;
+
+          h2 {color: $blue-05; display: inline-block;}
+          p {margin-top: 0;}
+
+          a {
+            float:right;
+
+            display: inline-block;
+            border: none;
+            background-color: $gray-04;
+            border-radius: 3px;
+            color: $white;
+            padding: .5rem;
+          }
+
+          button { 
+
+            background-color: transparent;
+            border: 1px solid $blue-05;
+
+            border-radius: 3px;
+            color: $blue-05;
+            padding: .25rem;
+            margin: 0 0 .25rem .5rem;
+
+          }
+
+          .toc {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              display: inline-block;
+              margin: 0 .5rem .5rem 0;
+
+              a {
+                padding: .5rem;
+                border: none;
+                background-color: $blue-01;
+                color: $blue-05;
+              }
+              a:hover, a:focus {color: $white; background-color: $blue-05}
+
+
+            }
+          }
+
+          a:hover, a:focus {background-color: $blue-05}
+
+        }
+
+        @media (max-width: 700px) {
+          .dbheader {
+            h2, a {display: block;}
+            a {
+              float: none;
+              margin: .5rem 0;
+              width: max-content;
+            }
+          }
+        }
+      }
+
+    }
+
+    .blue-block {background-color: $blue-01}
+    .hp-fix .content-block {background-color: $white;}
+
+
+
+
+
+
+
+    .devcell {
+      background-color: $blue-02;
+      border: 1px $blue-05 solid;
+      padding: .5rem;
+      font-family: $font-family;
+    }
+
+    .co-doc {
+      h3 {margin-top: 0;}
+    }
+
+    .co-ex {
+      margin-bottom: 1rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid $gray-04;
+    }
+
+
+
+    .devborder {border: 1px $black solid}
+
+    .partical-divider {
+      border-bottom: 2px dashed $gray-03;
+    }
+
+
+
+//Making mobile-nav-toggle buttons that look the same but don't work for the "Header" section of the guide, so that the mobile-nav-toggle in the "Navigation" section works instead
+    .mobile-nav-toggle-ex {
+      display: inline;
+    
+      padding: .75rem;
+      padding-right: 1rem;
+      border-radius: 3px;
+    
+      background: transparent;
+      border: transparent;
+    
+      text-align: left;
+      font-size: 1.25rem;
+      line-height: 1rem;
+      color: $white;
+    }
+    
+    .mobile-nav-toggle-ex::before {
+      content: "\2630";
+      font-size: 1.75rem;
+      padding-right: .25rem;
+    }
+    
+    .mobile-nav-toggle-ex:hover {
+      background-color: $white;
+      color: $slate;
+    }
+    
+    
+    @media(min-width: $breakpoint-md){
+      .mobile-nav-toggle-ex {display: none;}
+    }
+
+/* ==========================================================================
+   ## DOCUMENTATION SPECIFIC ELEMENTS
+   ========================================================================== */
+  .toc {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: .5rem;
+
+      a {
+        padding: .5rem;
+        border: none;
+        background-color: $blue-01;
+      }
+
+      a:hover, a:focus {color: $white;background-color: $blue-04;}
+    }
+  }
+
+  @media (max-width: 430px) {
+    .toc li {
+      margin: 0.5rem 0.25rem;
+      a{display: block}
+    }
+
+  }
+
+  .warning-note {
+    background-color: pink;
+    padding: 1rem;
+    border-left: $red 5px solid;
+    font-style: italic;
+    max-width: max-content;
+  }
+
+  .src-note {
+    background-color: $blue-01;
+    padding: 1rem;
+    border-left: $blue-04 5px solid;
+    font-style: italic;
+    max-width: max-content;
+  }
+
+  .footnotes {
+    border-top: 1px solid $gray-03;
+    margin-top: 2rem;
+    p {font-size: .9rem;}
+    p:last-child{margin-bottom:0; padding-bottom:0}
+    code {font-size: .8rem; border:none}
+  }
+  code {
+    font-size: 1rem;
+    padding: 0rem .25rem;
+    background-color: $gray-02;
+    border: 1px solid $gray-04;
+  }
+
+  .codebloc {
+    background-color: $gray-02;
+    border: 1px solid $gray-04;
+    padding: 1rem 2rem;
+    width: max-content;
+  }
+
+  .colors {
+    .colorbloc {
+      min-height: 60px;
+      padding: 1rem;
+      font-family: $font-family;
+    }
+
+    .blue01 {background-color: $blue-01}
+    .blue02 {background-color: $blue-02}
+    .blue03 {background-color: $blue-03}
+    .blue04 {background-color: $blue-04; color: $white}
+    .blue05 {background-color: $blue-05; color: $white}
+
+    .slate {background-color: $slate; color: $white}
+    .slateD {background-color: $slate-dark; color: $white}
+
+    .green {background-color: $green}
+    .greenD {background-color: $green-dark; color: $white}
+    .greenL {background-color: $green-light}
+
+    .yellow {background-color: $yellow}
+    .yellowD {background-color: $yellow-dark}
+
+    .red {background-color: $red; color: $white}
+
+    .gray01 {background-color: $gray-01}
+    .gray02 {background-color: $gray-02}
+    .gray03 {background-color: $gray-03}
+    .gray04 {background-color: $gray-04; color: $white}
+
+    .black {background-color: $black; color: $white}
+    .white {background-color: $white; border: 1px solid $black}
+  }
+}
+
+.dark-bg-block {
+  background-color: $slate-dark;
+  padding: 0 1rem;
+  a, a:visited {color: $dark-bg-link}
+  a:hover, a:focus-visible {color: $dark-bg-link-hover}
+
+}

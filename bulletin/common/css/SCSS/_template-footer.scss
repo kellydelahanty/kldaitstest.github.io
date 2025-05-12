@@ -1,0 +1,155 @@
+@use 'variables' as *;
+
+/* =========================================================================
+  ## FOOTER STYLING
+============================================================================ */
+   // ### MAIN & SIMPLE FOOTER
+   // ### FOOTER CONTENT - CONTACT INFORMATION & NAVIGATION 
+   // ### POLICY FOOTER
+   // ### IE FIXES
+
+
+
+/* ===============================================================
+  ### MAIN & SIMPLE FOOTER
+================================================================== */
+footer {margin-top: 2rem;}
+
+.main-footer, .simple-footer {
+  background-color: $site-color;
+  padding: 1rem 0;
+
+  p, h2 {color: $white;}
+  h2 {margin-bottom: 0;} 
+
+  a, a:visited {color: $dark-bg-link;}
+  a:hover, a:focus {color: $dark-bg-link-hover;}
+
+  a:focus-visible {
+    outline: 2px $white dashed;
+    outline-offset: 1px;
+  }
+
+}
+
+.simple-footer {
+  padding: 0 $site-padding;
+}
+
+
+
+
+/* ===============================================================
+  ### FOOTER CONTENT - CONTACT INFORMATION & NAVIGATION 
+================================================================== */
+ul.footer-navlinks > li > a {font-weight: bold;}
+
+.footer-contact, .footer-nav {
+  margin: 0 2rem;
+}
+
+.footer-contact {
+  padding-bottom: 1rem;
+  border-bottom: 1px $white solid;
+
+  ul li::marker{
+   color: $white
+  }
+}
+
+.footer-nav {
+  h2 {display: inline-block;}
+  ul.footer-navlinks {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+
+    li { padding-bottom: .75rem;}
+  }
+}
+
+@media(min-width:450px){
+  .footer-nav {
+    ul.footer-navlinks {
+      columns:2;
+    
+      margin-top: 1rem;
+      li {margin-top:0}
+    }
+  }
+
+}
+
+@media (min-width: $breakpoint-md) {
+  .footer-contact, .footer-nav {margin: 0 $site-padding;}
+  .footer-contact {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .footer-nav {
+    margin-left: 0rem;
+    padding-left: 2rem;
+    border-left: 1px $white solid;
+  }
+}
+
+
+@media (min-width: $breakpoint-lg) {
+  .footer-nav {
+
+    ul.footer-navlinks {
+      padding-right: 2rem;
+    }
+  }
+}
+
+
+/* ===============================================================
+  ### POLICY FOOTER
+================================================================== */
+.policy-footer {
+  background-color: $white;
+  color: $font-color;
+  padding: $site-padding;
+
+  p {
+    margin: 0;
+    padding:0;
+  }
+  .staff-login {
+    text-align: center;
+    a {border: none;}
+    img {width: 15px}
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .staff-login {text-align: right;}
+  }
+}
+
+
+/* ===============================================================
+  ### IE FIX - FOOTER  
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Fixes placement of cells in footer in IE*/
+  .main-footer {
+    @media (min-width: $breakpoint-md) {
+      .footer-contact {-ms-grid-row: 1;}
+      .footer-nav {
+        -ms-grid-row: 1;
+        -ms-grid-column: 8;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .policy-footer .staff-login{
+      -ms-grid-row: 1;
+      -ms-grid-column: 12;
+    }
+  }
+}
+
+

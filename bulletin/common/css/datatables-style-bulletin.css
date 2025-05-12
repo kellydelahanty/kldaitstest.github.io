@@ -1,0 +1,184 @@
+/* ==================================================================================
+  #DATATABLES STYLING 
+===================================================================================== */
+/* =========================================================================
+  ## GENERAL TABLE STYLING 
+============================================================================ */
+/*The styles here match the CSS for general HTML tables in pb-common.css*/
+/* ===============================================================
+  ### MARGINS & PADDING
+================================================================== */
+table.dataTable {
+  border-collapse: collapse;
+}
+table.dataTable th, table.dataTable thead th, table.dataTable tbody th,
+table.dataTable td, table.dataTable thead td, table.dataTable tbody td {
+  text-align: left;
+  padding: 0.75rem;
+}
+
+/* ===============================================================
+  ### TABLE HEADER
+================================================================== */
+table.dataTable thead th, table.dataTable thead td, table.dataTable th {
+  background-color: #005394;
+  border: 1px solid #005394;
+  color: #fefefe;
+}
+table.dataTable thead tr th.sorting::before, table.dataTable thead tr th.sorting::after, table.dataTable thead tr td.sorting::before, table.dataTable thead tr td.sorting::after {
+  color: #C1C6CD;
+}
+table.dataTable thead tr th.sorting_asc::before, table.dataTable thead tr td.sorting_asc::before, table.dataTable thead tr th.sorting_desc::after, table.dataTable thead tr td.sorting_desc::after {
+  color: #fefefe;
+}
+
+th.sorting:focus-visible {
+  outline: 2px dashed white;
+  outline-offset: -5px;
+}
+
+th button:focus-visible {
+  outline: 2px dashed white;
+  outline-offset: 3px;
+}
+
+/* ===============================================================
+  ### TABLE BODY & ROWS
+================================================================== */
+table.dataTable tbody {
+  border: 1px solid #C1C6CD;
+}
+table.dataTable tbody tr {
+  background-color: #fefefe;
+}
+table.dataTable tbody tr:nth-child(even) {
+  background-color: #F5F7F9;
+  background-color: #E8E9ED;
+  background-color: #F0F5F9;
+}
+
+/* =========================================================================
+  ## DATATABLE SPECFIC STYLING 
+============================================================================ */
+/* ===============================================================
+  ### MARGIN / PADDING / LAYOUT
+================================================================== */
+table.dataTable {
+  margin-top: 0.5rem;
+}
+
+.dtfh-floatingparenthead {
+  height: auto !important;
+}
+
+/* ===============================================================
+  ### DATATABLE WRAPPER CONTROLS AND CONTENT
+================================================================== */
+.dataTables_wrapper [type=text], .dataTables_wrapper [type=search], .dataTables_wrapper select {
+  display: inline;
+}
+
+.dataTables_length, .datatableContainer_filterResults,
+.dataTables_info, .dt-buttons, .datatableContainer_pagination {
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+
+/* ========================= #### NUMBER OF RECORDS SHOWN SELECT ========================= */
+.dataTables_wrapper .dataTables_length select {
+  padding-right: 1.5rem;
+}
+
+/* ========================= #### BUTTONS ========================= */
+.dt-buttons::before {
+  content: "Export Data to: ";
+}
+
+button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border: 1px solid transparent;
+  background: none;
+  background: #E8E9ED;
+  color: #0a0a0a;
+  font-size: 1rem;
+}
+
+button.dt-button:hover:not(.disabled), div.dt-button:hover:not(.disabled), a.dt-button:hover:not(.disabled), input.dt-button:hover:not(.disabled) {
+  border: none;
+  border: 1px solid transparent;
+  background: none;
+  background: #C1C6CD;
+}
+
+/* ========================= #### PAGINATION ========================= */
+.dataTables_paginate::before {
+  content: "Go to Page:";
+  padding-right: 0.25rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0.75rem;
+  margin: 0.05rem;
+  border: none;
+  text-decoration: underline !important;
+  color: #006EBD !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: none;
+  border-radius: 0;
+  color: #fefefe !important;
+  border: none;
+  border-radius: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #006EBD;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background-color: #005394;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  text-decoration: none !important;
+  color: #6C707A !important;
+}
+
+@media (min-width: 700px) {
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.35rem;
+    margin: 0.25rem;
+  }
+}
+/* ========================= #### RESPONSIVENESS OVERRIDE ========================= */
+@media (max-width: 800px) {
+  .dataTables_wrapper .datatableContainer_filterResults {
+    width: auto;
+  }
+  .dataTables_wrapper .dataTables_filter {
+    margin-top: 0;
+  }
+}
+/* ===============================================================
+  ### OPTIONAL STYLING CLASSES 
+================================================================== */
+/* ========================= #### SMALL TABLES  ========================= */
+.small-padding th, .small-padding thead th, .small-padding tbody th,
+.small-padding td, .small-padding thead td, .small-padding tbody td {
+  text-align: left;
+}
+
+table.dataTable.small-table {
+  border-collapse: collapse;
+}
+table.dataTable.small-table th, table.dataTable.small-table thead th, table.dataTable.small-table tbody th,
+table.dataTable.small-table td, table.dataTable.small-table thead td, table.dataTable.small-table tbody td {
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
+  font-size: 14px;
+}

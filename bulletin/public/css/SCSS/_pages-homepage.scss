@@ -1,0 +1,243 @@
+@use '../../../common/css/scss/variables' as *;
+
+/* =========================================================================
+  ## HOMEPAGE
+============================================================================ */
+   // ### HOMEPAGE - SEARCH & CTA BLOCK
+   // ### HOMEPAGE - NEWS PREVIEWS & DOWNTIME ALERTS 
+   // ### HOMEPAGE - INFORMATIONAL BLURB SECTIONS
+   // ### IE FIXES - HOMEPAGE 
+
+
+/* ===============================================================
+  ### HOMEPAGE - SEARCH & CTA BLOCK
+================================================================== */
+  .hp-search {
+    input {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .hp-search.error {
+    max-width:none;
+
+    form {padding: .75rem;}
+
+    .hp-search-input {
+      label, input, a {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+
+  }
+
+
+  @media (min-width: $breakpoint-lg) {
+    .hp-search.error {
+      padding-right: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  @media (min-width: 475px) {
+    .hp-cta {grid-column: span 6;}
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .hp-search {
+      margin-bottom: 1rem;
+      .hp-search-input {grid-column: span 9}
+      .hp-search-button {
+        grid-column: span 3;
+        margin-top: .85rem;
+        button {height: 40px}
+      }
+    }
+    .hp-cta {grid-column: span 5;}
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    .hp-search {
+      grid-column: span 6;
+      padding-right: 1.5rem;
+    }
+    .hp-cta {
+      margin-top: 1rem;
+      grid-column: span 3;
+    }
+  }
+
+
+/* ===============================================================
+  ### HOMEPAGE NEWS
+================================================================== */
+/* Makes the # of columns adjust based on # of articles, with min column size being 200px */
+
+.hp-news {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  
+  article {
+    padding: .5rem $site-padding;
+    background-color: $blue-01;
+    border-left: $primary-blue 10px solid;
+
+    h3 {margin-bottom: 0}
+
+    .article-date {
+      margin: .25rem 0 0 0;
+      color: $gray-04;
+    }
+  }
+}
+
+
+/* ===============================================================
+  ### HOMEPAGE - INFORMATIONAL BLURB SECTIONS
+================================================================== */
+.hp-section {
+  margin: .5rem auto;
+  .grid-container {grid-gap: 10px}
+  padding-bottom: 30px;
+  border-bottom: $border;
+
+  .hp-blurb-1, .hp-blurb-2, .hp-blurb-3 {
+    grid-column: span 12;
+    order: 2;
+  }
+
+  .hp-img-1, .hp-img-2, .hp-img-3 {grid-column: 3/span 8;}
+    
+  img {
+    width: 100%;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  .hp-blurb-1 {
+    a {margin-right: .5rem;}
+  }
+}
+
+.hp-section:last-child {
+  border-bottom: none;
+  padding-bottom:20px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .hp-section {
+    border-bottom: none;
+    .grid-container {grid-gap: 20px}
+
+    .hp-blurb-1, .hp-blurb-3 {
+      grid-column: span 7;
+      order: 1;
+    }
+
+    .hp-img-1, .hp-img-3 {
+      grid-column: span 5;
+      order:2
+    }
+
+    .hp-blurb-2 {grid-column: span 7}
+    .hp-img-2 {grid-column: span 5}
+
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .hp-section {
+    .grid-container {grid-gap: 30px}
+
+    .hp-blurb-1 {grid-column: 2 / span 5;}
+    .hp-blurb-2 {grid-column: 7/span 4;}
+    .hp-blurb-3 {grid-column: 3 / span 4}
+
+    .hp-img-1 {grid-column: span 5}
+    .hp-img-2 {grid-column: 3 / span 4}
+    .hp-img-3 {grid-column: span 4}
+
+  }
+}
+
+@media (min-width: 1135px) {
+  .hp-blurb-1 {padding-top:15%}
+  .hp-blurb-3 {padding-top:10%}
+}
+
+/* ===============================================================
+  ### IE FIX - HOMEPAGE 
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  /* ========================= #### IE FIX - HOMEPAGE CTA/SEARCH & INFO BLURB SECTIONS  ========================= */
+
+  @media (min-width: 475px) {
+      .hp-cta {-ms-grid-column-span: 6;}
+    }
+
+    @media (min-width: $breakpoint-md) {
+      .hp-cta {-ms-grid-column-span: 5;}
+      .hp-search {
+        .hp-search-input {
+          -ms-grid-column-span: 9;
+          margin-right: 1rem;
+        } 
+        .hp-search-button {
+          -ms-grid-column-span: 3;
+          -ms-grid-row: 1;
+          -ms-grid-column: 10;
+        }
+      }
+
+      .hp-blurb-1, .hp-blurb-2, .hp-blurb-3 {-ms-grid-column-span: 7;}
+
+      .hp-img-1, .hp-img-2, .hp-img-3 {-ms-grid-column-span: 5;}
+
+      .hp-section .grid-container .cell {-ms-grid-row: 1;}
+
+      .hp-img-1, .hp-img-3 {-ms-grid-column: 8;}
+
+      .hp-blurb-2 {-ms-grid-column: 6;}
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      .cell.hp-cta {
+        -ms-grid-column-span: 3;
+        -ms-grid-row: 2;
+        -ms-grid-column: 7
+      }
+      .cell.hp-cta:last-child {-ms-grid-column: 10}
+      .hp-search {-ms-grid-column-span: 6; }
+    }
+
+    /* ========================= #### IE FIX - HOMEPAGE NEWS SECTION  ========================= */
+    .hp-news {
+      display: flex;
+      flex-wrap: wrap;
+
+      article {
+        vertical-align: top;
+        display: inline-block;
+        margin: .5rem 0
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      .hp-news article{
+        width: 40%;
+        margin: 0 1rem 1rem 0;
+      }
+    }
+    @media (min-width: $breakpoint-lg) {
+      .hp-news article{width: 25%;}
+    }
+ 
+}

@@ -1,0 +1,319 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Public Standard Template | Illinois Procurement Bulletin of Higher Ed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/common/graphics/favicon.png">
+
+  <!--STYLESHEETS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="/common/css/pb-common.css">
+  <link rel="stylesheet" href="/public/css/pb-public.css">
+
+  <noscript>
+    <link rel="stylesheet" href="/common/css/nojs.css">
+  </noscript>
+
+
+  
+  <!--JAVASCRIPT & RELATED STYLESHEETS-->
+  <!--The following Javascript and related files exist in the uiDesignFiles common folder for finance apps
+     but I can't get linking to there to work for some reason so I'm pulling them into the procure/common/javascript 
+     folder and linking to them there for local dev purposes-->
+  <!--Jquery -->
+  <script src="/common/javascript/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+  <!--Skipto-->
+  <script id="skipToMinJS" src="/common/javascript/skipTo/skipTo-5.1.6/skipto-min.js"></script>
+  <script type="text/javascript" id="skipToScript">
+    var SkipToConfig = {
+      "settings": {
+        "skipTo": {
+          colorTheme: "bulletin",
+          displayOption: "popup"
+        }
+      }
+    };
+  </script>
+
+  <!--Datatables-->
+  <script id="dataTablesMinJS"
+    src="/common/javascript/datatables/DataTables-1.12.1/js/jquery.dataTables.min.js"
+    type="text/javascript"></script>
+
+  <link href="/common/javascript/datatables/DataTables-1.12.1/css/jquery.dataTables.css"
+    rel="stylesheet" type="text/css" />
+
+  <script id="dataTablesButtonsMinJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/dataTables.buttons.min.js"
+    type="text/javascript"></script>
+  <script id="buttonsHtml5MinJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/buttons.html5.min.js"
+    type="text/javascript"></script>
+  <script id="jszipJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/jszip.min.js"
+    type="text/javascript"></script>
+  <script id="buttonsPrintMinJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/buttons.print.min.js"
+    type="text/javascript"></script>
+
+  <link
+    href="/common/javascript/datatables/extensions/Buttons-2.3.2/css/buttons.dataTables.min.css"
+    rel="stylesheet" type="text/css" />
+  <script id="dataTablesFixedHeaderMinJS"
+    src="/common/javascript/datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js"></script>
+  <script id="dataTablesFixedHeaderAITSAccessibilityFixes"
+    src="/common/javascript/datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js"></script>
+
+  <link rel="stylesheet"
+    href="/common/javascript/datatables/extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css">
+  <link href="/common/javascript/datatables/DataTables-1.12.1/css/Datatable-AITS-Fix.css"
+    rel="stylesheet" type="text/css" />
+  <link href="/common/common/css/datatables-style-bulletin.css" rel="stylesheet"
+    type="text/css" />
+</head>
+
+<body>
+  <header class="header-main">
+    <div class="grid-container grid-gap-10">
+      <div class="cell col-8-sm col-7-md site-name">
+        <img class="inverse-logo" src="/common/graphics/bulletin-logo-inverse.svg" alt="">
+        <img class="logo" src="/common/graphics/bulletin-logo.svg" alt="">
+
+        <a href="index.html">
+          <span class="site-title">Illinois Procurement Bulletin</span>
+          Public Institutions of Higher Education
+        </a>
+      </div>
+      <div class="cell col-5-md account button-group">
+        <!--Logged in version -->
+        <a href="homepage-out.html" class="button primary">Log Out</a>
+        <!--End Logged In version-->
+
+        <!--Logged out version 
+        <a href="/registration/registration-account.html" class="button hollow">Create Account</a>
+        <a class="button primary" href="homepage-in.html">Log in</a>-->
+        <!--End Logged out version -->
+
+      </div>
+      <div class="cell col-4-sm menu-btn">
+        <button class="mobile-nav-toggle">Menu</button>
+      </div>
+    </div> <!--grid-containter-->
+  </header>
+
+  <nav aria-label="Main Navigation" class="navbar" id="mainnav">
+    <div class="grid-container grid-gap-10">
+      <div class="cell">
+        <ul class="navbar-links">
+          <li class="account-mobile">
+            <!--Logged in version-->
+            <ul>
+              <li><a href="index.html" class="button primary">Log Out </a></li>
+            </ul>
+            <!--End logged in version-->
+
+            <!--Logged out version
+            <ul>
+              <li><a href="index.html" class="button primary">Log in</a></li>
+              <li><a href="/registration/registration-account.html" class="button hollow-white">Create Account</a></li>
+            </ul>-->
+            <!--End logged out version-->
+          </li>
+
+          <li><a href="index.html" class="current">Home</a></li>
+          <li class="has-submenu">
+            <a href="/search-results-simple.html" aria-haspopup="true" aria-expanded="false">Search</a>
+            <ul>
+              <li><a href="/search-results-advanced.html">Advanced Search</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="about/about.html" aria-haspopup="true" aria-expanded="false">About the Bulletin</a>
+            <ul>
+              <li><a href="about/new-vendors.html">Getting Started - New Vendor Guide</a></li>
+              <li><a href="about/bulletin-guide.html">Using the Bulletin</a></li>
+              <li><a href="about/participating-institutions.html">Participating Institutions</a></li>
+              <li><a href="about/iphec.html">Illinois Public Higher Education Cooperative (IPHEC)</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="/resources/vendor-resources.html" aria-haspopup="true" aria-expanded="false">Vendor Resources</a>
+            <ul>
+              <li><a href="/resources/supplier-diversity.html">Supplier Diversity and Other Business Programs</a></li>
+              <li><a href="/resources/laws-regulations.html">State Laws and Regulations</a></li>
+              <li><a href="/resources/bid-limits.html">Bid Limits</a></li>
+              <li><a href="/resources/glossary.html">Glossary</a></li>
+              <li><a href="/resources/NIGP-codes.html">NIGP Codes</a></li>
+            </ul>
+          </li>
+          <li><a href="/ebids-in.html">My E-bids</a></li>
+          <li class="has-submenu">
+            <a href="/news/news.html" aria-haspopup="true" aria-expanded="false">News and Announcements</a>
+            <ul>
+              <li><a href="/news/campaign-contribution-violations.html">Campaign Contribution Violation</a></li>
+              <li><a href="/news/conflicts-of-interest.html">Conflicts of Interest</a></li>
+              <li><a href="/news/exemptions.html">Exemptions</a></li>
+              <li><a href="/news/cpo-waivers.html">CPO Waivers</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu"><!--Only Appears when user is logged in-->
+            <a href="/account/general.html" aria-haspopup="true" aria-expanded="false">My Account</a>
+            <ul>
+              <li><a href="/account/security.html">Password and Security</a></li>
+              <li><a href="/account/company.html">Company</a></li>
+              <li><a href="/account/email.html">Email Notifications</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <div class="content-block">
+      <div class="grid-container grid-gap-50">
+
+        
+        <nav aria-label="About the Bulletin Section Subnavigation" class="cell col-3-md subnav" id="subnav">
+          <ul>
+            <li><a href="about.cfm" class="current">About the Bulletin</a></li>
+            <li><a href="about.cfm?mName=findNewVendorGuide">Getting Started - New Vendor Guide</a></li>
+            <li><a href="about.cfm?mName=findBulletinGuide">Using the Bulletin</a></li>
+            <li><a href="about.cfm?mName=findParticipatingInstitutions">Participating Institutions</a></li>
+            <li><a href="about.cfm?mName=findIPHECPage">Illinois Public Higher Education Cooperative (IPHEC)</a></li>
+          </ul>
+        </nav>
+        <div class="cell col-9-md" id="page-content">
+          <h1>Page Heading</h1>
+          <p>This is the template for the average page on the Public side of the procurement bulletin.</p>
+          <p>The sidebar navigation content will change based on the page in question, and some pages will not have
+            sidebar navigation at all</p>
+          <p class="placeholder">Please note that the actual links on this page may not work because they are in the
+            process of being updated.
+            Based on the file structure changes they may not work on this page because the links will be formatted to
+            work from within the Public > Source folder
+            and not the devhelp folder </p>
+
+
+
+        </div><!--main section cell-->
+      </div> <!--full page grid-containter-->
+    </div>
+
+  </main>
+
+  <footer role="contentInfo">
+    <div class="main-footer">
+      <div class="grid-container grid-gap-10">
+        <div class="cell col-6-md col-7-lg footer-contact">
+          <h2>Contact Us</h2>
+          <p>For technical help with registering and/or obtaining documents, contact the Bulletin Manager:</p>
+          <p>Champaign, IL 61820 <br>
+            E-Mail: <a href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> <br>
+            Phone: (217) 333-3596
+          </p>
+          <p><a href="/contact.html">For procurement questions, contact the appropriate university purchasing staff.</a>
+          </p>
+        </div>
+
+        <nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+          <h2>Navigation</h2>
+          <div class="grid-container">
+            <div class="cell ">
+              <ul class="footer-navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/search-results-simple.html">Search</a></li>
+                <li><a href="/upcoming.html">Potential Upcoming Opportunities </a></li>
+
+                <li><a href="about/about.html">About the Bulletin</a></li>
+                <li><a href="/resources/vendor-resources.html">Vendor Resources</a></li>
+                <li><a href="/ebids-out.html">My E-bids</a></li>
+                <li><a href="/news/news.html">News and Announcements</a></li>
+<!--Only Appears when user is logged in
+                <li><a href="/account/general.html">My Account</a>
+          -->   
+                 </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        
+      </div> <!--grid-containter-->
+    </div>
+
+    <div id="policy" class="policy-footer">
+      <div class="grid-container grid-gap-10">
+        <div class="cell col-11-md">
+          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education</p>
+        </div>
+        <div class="cell col-1-md staff-login"><a href="#"><img src="/common/graphics/icons/icon-lock.png"
+              alt="log in to the staff side of the Illinois Higher Ed Bulletin"></a></div>
+      </div> <!--grid-containter-->
+    </div>
+
+  </footer>
+
+  <script src="/common/javascript/pb-common.js"></script>
+
+<!--Only needed on pages with modals-->
+<script src="/common/javascript/modal-min.js"></script>
+
+<!--Only needed on pages with accordions/toggle functions-->
+  <script type="text/javascript" id="slideToggleScript">
+    $(document).ready(function () {
+      $(".toggle").click(function () {
+        toggleContent(this);
+      });
+
+      $(".toggle").keydown(function (event) {
+        var key = event.which || event.keyCode;
+        if (key == 13) {
+          $(this).click();
+          event.preventDefault();
+        }
+
+      });
+
+      $("input.js-modal").click(function () {
+        $("#js-modal .toggle").click(function () {
+          toggleContent(this);
+        });
+
+        $("#js-modal .toggle").keydown(function (event) {
+          var key = event.which || event.keyCode;
+          if (key == 13) {
+            $(this).click();
+            event.preventDefault();
+          }
+
+        });
+      });
+
+    });
+
+
+    function toggleContent(buttonClicked) {
+      //getting the next element
+      var contentID = "#" + $(buttonClicked).attr('aria-controls');
+      //checking if its already visible
+      if ($(buttonClicked).attr('aria-expanded') === 'true') {
+
+        $(buttonClicked).attr("aria-expanded", "false");
+      }
+      else {
+        $(buttonClicked).attr("aria-expanded", "true");
+      }
+      $(contentID).slideToggle(0);
+      return false;
+    };
+  </script>
+
+</body>
+
+</html>

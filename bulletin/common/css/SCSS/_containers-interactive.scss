@@ -1,0 +1,336 @@
+@use 'variables' as *;
+
+/* =========================================================================
+   ## CUSTOM INTERACTIVE CONTAINERS
+============================================================================ */
+  // ### TOOLTIPS
+  // ### ACCORDIONS
+  // ### REVEAL MODAL
+    // #### IE FIX - MODAL 
+  // ### ALERT
+
+/* ===============================================================
+  ### TOOLTIPs
+================================================================== */
+.deque-tooltip-wrapper {
+  position: relative;
+}
+.deque-tooltip {
+  box-sizing: border-box;
+  font-size: 13px;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  min-width: 104px;
+  max-width: 250px;
+  margin-right: -340px;
+  padding: 8px 6px;
+  line-height: 16px;
+  z-index: 700;
+}
+.deque-tooltip:after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #b2b2b2;
+  top: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  left: -1%;
+  content: "";
+}
+
+/* ===============================================================
+  ### ACCORDIONS
+================================================================== */
+.accordion {
+  .header {
+    width: 100%;
+    margin: 0;
+    margin-top: 1px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: normal;
+
+    .toggle {
+      cursor: pointer;
+      display: block;
+
+      padding: 1rem;
+
+      background-color: $gray-04;
+      color: $white;
+
+      background-image: $accordion-closed-white;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: 15px center;
+      padding-left: 3.25rem;
+    }
+
+    .toggle:focus, .toggle:hover {background-color: $primary-blue;}
+
+    .toggle:focus-visible {outline: 2px dashed $black;}
+
+    [aria-expanded="true"].toggle {
+      background-color: $primary-blue;
+      background-image: $accordion-open-white;
+    }
+
+    [aria-expanded="true"].toggle:hover, [aria-expanded="true"].toggle:focus {background-color: $primary-dark;}
+  }
+
+  .content {
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+
+    background-color: $white;
+    border: $border;
+    border-top: none;
+
+    padding: 0px 1rem;
+
+    margin: 0 0 .25rem 0;
+  }
+}
+
+.small-accordion {
+  .header {
+    font-size: 16px;
+    .toggle {
+      background-size: 13px 13px;
+      background-position: 15px center;
+      padding: .5rem .75rem;
+      padding-left: 2.75rem;
+    }
+  }
+}
+
+/* Styles specific for NIGP Code accordions are handled in the "NIGP Codes" Section */ 
+// Styles specific for NIGP Code accordions are handled in the _nigp.scss file 
+
+
+/* ===============================================================
+  ### REVEAL MODAL
+================================================================== */
+/*Code from https://van11y.net/accessible-modal/*/
+
+dialog {
+  /* needed for old browsers */
+  display: block;
+  border: 0;
+}
+
+  
+.no-scroll { overflow: hidden; /* removes scroll when modal is opened */}
+
+  
+.simple-modal-overlay,
+.simple-animated-modal-overlay,
+.simple-animatedtransform-modal-overlay,
+.warning-modal-overlay,
+.critical-modal-overlay {
+  /* overlay covers everything */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: $slate;
+  opacity: .8;
+  z-index: 666;
+  cursor: pointer;
+}
+
+.simple-modal-overlay[data-background-click="disabled"], 
+.simple-animated-modal-overlay[data-background-click="disabled"],
+.simple-animatedtransform-modal-overlay[data-background-click="disabled"],
+.warning-modal-overlay[data-background-click="disabled"],
+.critical-modal-overlay[data-background-click="disabled"]
+{cursor: auto;}
+
+.simple-modal, .warning-modal, .critical-modal {
+  position: fixed;
+  //left: 10%;
+  //right: auto;
+  margin: 0 auto;
+
+  width: 95%;
+  max-width:  $site-width;
+  top: 5vh;
+  max-height: 90vh;
+  z-index: 667;
+  overflow: auto;
+  padding:0;
+
+  #modal-title {
+    margin:0;
+    padding: $site-padding;
+    background-color: $primary-blue;
+    color: $white;
+  }
+
+  #js-modal-content {padding: 0 $site-padding; }
+}
+
+ .warning-modal {
+  #modal-title {
+   
+    background-color: $warning;
+    color: $black;
+  }
+}
+
+.critical-modal {
+  #modal-title {
+    background-color: $error;
+    color: $white;
+  }
+}
+
+.warning-modal, .critical-modal {
+  #modal-title {
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 35px 35px;
+    padding-left: 60px;
+  }
+}
+
+.warning-modal {
+  #modal-title{background-image: $icon-warning-white;}
+}
+
+.critical-modal {
+  #modal-title{background-image: $icon-error-white;}
+}
+
+
+.simple-modal-close, .warning-modal-close, .critical-modal-close {
+  float: right;
+  background: transparent;
+  color: $white;
+  padding: 0 .25rem;
+  margin: .5rem 1rem 0 0;
+  border: 0;
+  border-radius: 3px;
+  font-family: $font-family;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.warning-modal-close {
+  color: $black
+}
+
+.simple-modal-close:focus-visible, .simple-modal-close:focus,
+.warning-modal-close:focus-visible, .warning-modal-close:focus,
+.critical-modal-close:focus-visible, .critical-modal-close:focus  {
+  outline: $white dashed 2px;
+  outline-offset: 2px;
+  border-style: transparent;
+}
+
+
+.simple-modal-close:focus, .simple-modal-close:hover, .simple-modal-close:active {
+  background: $white;
+  color: $primary-blue;
+}
+
+.warning-modal-close:focus, .warning-modal-close:hover, .warning-modal-close:active {
+  background: $black;
+  color: $yellow;
+}
+
+.critical-modal-close:focus, .critical-modal-close:hover, .critical-modal-close:active {
+  background: $white;
+  color: $red;
+}
+/* ========================= #### IE FIX - MODAL  ========================= */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .simple-modal, .warning-modal, .critical-modal {
+    margin: 0 3%;
+    .simple-modal__content, .warning-modal__content, .critical-modal__content {background-color: white;}               
+  }
+}
+     
+/* ===============================================================
+   ### ALERT
+================================================================== */
+  // UPDATED 11.09.21 - Updated Alert to accomodate having two styles - warning (yellow) and error/critical issue (red) 
+  .alert {
+    padding: 0 1.5rem;
+    background-color: $gray-03;
+    font-family: $font-family;
+    font-size: 1.25rem;
+
+    p {font-size: 1.05rem;}
+    p.alert-mssg {font-size: 1.25rem;}
+
+    .alert-mssg::before {
+      content: "";
+      background-image: $icon-warning-white;
+      background-repeat: no-repeat;
+      display: inline-block;
+      background-size: 40px 40px;
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    .closebtn {
+       margin: 15px;
+       font-weight: bold;
+       float: right;
+       font-size: 2rem;
+       line-height: 20px;
+       cursor: pointer;
+       transition: 0.3s;
+       background: transparent;
+       border: none;
+       padding-bottom: .45rem;
+     }
+
+     .closebtn:focus-visible {
+       outline-offset: 2px;
+       outline: $black 2px dashed;
+     }
+  }
+
+  .alert-warning {
+    background-color: $warning;
+
+    p, .closebtn {color: $black}
+
+    .closebtn:hover {
+      border-radius: 5px;
+      background-color: $black;
+      color: $white;
+    }
+
+    .alert-mssg::before {background-image: $icon-warning-black;}
+
+    .closebtn:focus-visible {outline-color: $black;}
+  }
+
+  .alert-crit-error {
+    background-color: $error;
+
+    p, .closebtn {color: $white}
+
+    .alert-mssg::before {background-image: $icon-error-white;}
+
+
+    .closebtn:hover {
+      border-radius: 5px;
+      background-color: $white;
+      color: $black;
+    }
+
+    .closebtn:focus-visible {outline-color: $white;}
+  }
+

@@ -1,0 +1,3765 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Site Documentation- Common Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../../common/graphics/favicon.png">
+
+
+  <!--STYLESHEETS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../common/css/pb-common.css">
+  <link rel="stylesheet" href="../css/devhelp.css"> <!--Only used on devhelp pages-->
+  <link rel="stylesheet" type="text/css" href="../../../css/sandbox.css" />
+
+  <noscript>
+    <link rel="stylesheet" href="../../common/css/nojs.css">
+  </noscript>
+
+
+
+  <!--JAVASCRIPT & RELATED STYLESHEETS-->
+  <!--The following Javascript and related files exist in the uiDesignFiles common folder for finance apps
+     but I can't get linking to there to work for some reason so I'm pulling them into the procure../../common/javascript 
+     folder and linking to them there for local dev purposes-->
+  <!--Jquery -->
+  <script src="../../common/javascript/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+  <!--Skipto-->
+  <script id="skipToMinJS" src="../../common/javascript/skipTo/skipTo-5.1.6/skipto-min.js"></script>
+  <script type="text/javascript" id="skipToScript">
+    var SkipToConfig = {
+      "settings": {
+        "skipTo": {
+          colorTheme: "bulletin",
+          displayOption: "popup"
+        }
+      }
+    };
+  </script>
+
+  <!--Datatables-->
+  <script id="dataTablesMinJS" src="../../common/javascript/datatables/DataTables-1.12.1/js/jquery.dataTables.min.js"
+    type="text/javascript"></script>
+
+  <link href="../../common/javascript/datatables/DataTables-1.12.1/css/jquery.dataTables.css" rel="stylesheet"
+    type="text/css" />
+
+  <script id="dataTablesButtonsMinJS"
+    src="../../common/javascript/datatables/extensions/Buttons-2.3.2/js/dataTables.buttons.min.js"
+    type="text/javascript"></script>
+  <script id="buttonsHtml5MinJS" src="../../common/javascript/datatables/extensions/Buttons-2.3.2/js/buttons.html5.min.js"
+    type="text/javascript"></script>
+  <script id="jszipJS" src="../../common/javascript/datatables/extensions/Buttons-2.3.2/js/jszip.min.js"
+    type="text/javascript"></script>
+  <script id="buttonsPrintMinJS" src="../../common/javascript/datatables/extensions/Buttons-2.3.2/js/buttons.print.min.js"
+    type="text/javascript"></script>
+
+  <link href="../../common/javascript/datatables/extensions/Buttons-2.3.2/css/buttons.dataTables.min.css" rel="stylesheet"
+    type="text/css" />
+  <script id="dataTablesFixedHeaderMinJS"
+    src="../../common/javascript/datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js"></script>
+  <script id="dataTablesFixedHeaderAITSAccessibilityFixes"
+    src="../../common/javascript/datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js"></script>
+
+  <link rel="stylesheet"
+    href="../../common/javascript/datatables/extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css">
+  <link href="../../common/javascript/datatables/DataTables-1.12.1/css/Datatable-AITS-Fix.css" rel="stylesheet"
+    type="text/css" />
+  <link href="../../common/common/css/datatables-style-bulletin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <aside class="sb-heading">
+    <div>
+      <h1>Kelly Delahanty's Front-End Sandbox</h1>
+      <nav>
+        <a href="../../../index.html">Back to Sandbox Home</a>
+      </nav>
+    </div>
+  </aside>
+  <main id="main" class="doc">
+    <!-- ## Page Intro-->
+    <div class="content-block">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell">
+          <h1>Site Components and Documentation - Common (v2 - WIP for public and private combo)</h1>
+          <p class="warning-note"> Please note that page is in the process of being updated as part of the private side
+            redesign.</p>
+
+          <p>This page contains documentation of the components that are common to both the Public and Staff Procurement
+            Bulletin sites.
+          </p>
+          <p>
+            Styling exclusive to either the Public or Staff site can be found on the following pages:
+          </p>
+          <ul class="toc">
+            <li><a href="site-documentation-public.html">Public site documentation</a></li>
+            <li><a href="site-documentation-staff.html">Staff site documentation</a></li>
+          </ul>
+
+        </div>
+        <div class="cell col-4-md hidden">
+          <h2>SCSS Files</h2>
+          <p>SCSS was used to create the styling for both the public and Private site.
+            While only the final complied CSS files should be called in the html
+            there are few places in this documentation where the source scss file is mention in case future editing is
+            needed.
+            When editing the CSS, please edit the original scss source file and use a complier lke Codekit to generate
+            the final css files.
+          </p>
+
+        </div>
+        <div class="cell col-8-md hidden">
+          <p class="warning-note">
+            <strong>Documentation page styling</strong><br>
+            There are unique css styles for this documenation page that are not utilized elsewhere
+            in the site.
+            These come from the devhelp.css file, which should not be called on any of the site pages.
+            In most cases, this style in just for the layout of page content on these pages, but there are
+            a few instances where the css of a site component was slightly tweaked so it would appear properly in the
+            context of this page.These instances are typically called out within the documentation.
+            <br><br>
+            There are a few instances on this page where the elements respond unexpectedly when the screen is resized
+            due to the unique layout of this page
+            if the element behaves properly in the actual site, then no additional tweaking has been done to make it
+            work within this documentation page.
+          </p>
+
+        </div>
+        <div class="cell">
+          <h2>Jump to...</h2>
+          <ul class="toc">
+            <li><a href="#layout">Grid and Layout Components</a></li>
+            <li><a href="#header">Headers</a></li>
+            <li><a href="#global-nav">Global Navigation Bar</a></li>
+            <li><a href="#footer">Footers</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#text-link-buttons">Text, Links, and Buttons</a></li>
+            <li><a href="#form">Form Components</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#static">Static Containers</a></li>
+            <li><a href="#dynamic">Dynamic Containers</a></li>
+            <li><a href="#helper">Helper CSS</a></li>
+            <li><a href="#nojs">No Javascript Fallback CSS</a></li>
+            <li><a href="#page">Page-Specific & Combination Components</a></li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- ## Grid and Layout Components-->
+    <div class="content-block" id="layout">
+
+      <div class="grid-container grid-gap-10 devblock" >
+        <div class="cell dbheader">
+          <h2>Grid and Layout Components</h2>
+          <button class="toggle" role="button" aria-controls="layout-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+          <a href="#main">Back to top</a>
+        </div>
+        <div class="cell " id="layout-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+            <!--Grid container and Content Block-->
+            <div class="cell co-doc">
+              <h3>Content Block</h3>
+              <p>Content in the <code>main</code> section of the site can be split into divs with the class
+                <code>content-block</code>.
+                This will provide padding to the content and also allow a background color to be added for color blocked
+                sections of the site.
+                (<a href="#contentblock">See Content Block Colors section of additonal information</a>).
+                For most pages, there only one <code>content-block</code> div needs to be used - you only need to use
+                multiple on a page if
+                you're adding different background colors to each.
+              <h3>Grid Container and Cells</h3>
+              <p>
+                The site uses a 12-column CSS Grid for the majority of layout and formating.
+                The structure of the grid uses a "wrapper" div with the class <code>grid-container</code> which sets up
+                the grid, places a max-width limit <a href="#f1">[1]</a> on the site content.
+                The first div under the <code>header</code>, <code>nav</code>, and <code>footer</code> sections should
+                be a
+                <code>grid-container</code> div.
+              </p>
+
+              </p>
+              <p>
+                The child divs of the <code>grid-container</code> div should have the class <code>cell</code>.
+                You can nest <code>grid-container</code> divs within <code>cell</code> divs to achieve more complex
+                layouts.
+              </p>
+              <p>
+                The overall structure looks like this for the <code>main</code> section of the site, with the
+                <code>content-block</code> being replaced
+                by <code>header</code>, <code>nav</code>, and <code>footer</code> as appropriate:
+              </p>
+              <pre class="codebloc">
+          &lt;div class="content-block"&gt
+            &lt;div class="grid-container"&gt
+              &lt;div class="cell"&gt Cell Content &lt;/div&gt
+              &lt;div class="cell"&gt
+                &lt;div class="grid-container"&gt
+                  &lt;div class="cell"&gt Cell Content &lt;/div&gt
+                  &lt;div class="cell"&gt Cell Content &lt;/div&gt
+                &lt;/div&gt
+              &lt;/div&gt
+            &lt;/div&gt
+          &lt;/div&gt</pre>
+              <p>By default a <code>cell</code> div will span the entire 12 columns.
+                You can adjust the number of columns the <code>cell</code> div spans by giving it additional classes of
+                <code>col-x-sm</code>, <code>col-x-md</code>, and <code>col-x-lg</code>, where "x" is replaced by the
+                number
+                of columns you want the div to span.
+                (<a href="#res-grid">See the "Responsive Grid" section below for further explaination on these
+                  classes.</a>)
+              </p>
+            </div>
+            <div class="cell co-ex">
+              <div class="grid-container grid-gap-10">
+                <div class="cell devcell">Cell</div>
+                <div class="cell col-1-sm devcell">col-1-sm</div>
+                <div class="cell col-11-sm devcell">col-11-sm</div>
+                <div class="cell col-2-sm devcell">col-2-sm</div>
+                <div class="cell col-10-sm devcell">col-10-sm</div>
+                <div class="cell col-3-sm devcell">col-3-sm</div>
+                <div class="cell col-9-sm devcell">col-9-sm</div>
+                <div class="cell col-4-sm devcell">col-4-sm</div>
+                <div class="cell col-8-sm devcell">col-8-sm</div>
+                <div class="cell col-5-sm devcell">col-5-sm</div>
+                <div class="cell col-7-sm devcell">col-7-sm</div>
+                <div class="cell col-6-sm devcell">col-6-sm</div>
+                <div class="cell col-6-sm devcell">col-6-sm</div>
+              </div>
+            </div>
+
+            <!--Responsive--Grid-->
+            <div id="res-grid" class="cell co-doc">
+              <h3>Responsive Grid</h3>
+              <p><code>cell</code> divs can be span a different amount of columns at different screen sizes <a
+                  href="f2">[2]</a>.
+                The <code>col-x-sm</code> class will determine the amount of columns it will span on small screen sizes,
+                <code>col-x-md</code> will determine columns spanned on medium screens,
+                and <code>col-x-lg</code> determines how many columns it'll span at larger screens.
+                If you want the <code>cell</code> to span the same number of columns at all sizes, you only have to use
+                the
+                correct <code>col-x-sm</code>,
+                you do not have to set the <code>col-x-md</code> amd <code>col-x-lg</code> as well.
+                Similiarly, if the <code>cell</code> spans the same number of columns on both medium and large screens,
+                you
+                only need to use a <code>col-x-md</code> class.
+            </div>
+            <div class="cell co-ex">
+              <div class="grid-container grid-gap-10">
+                <div class="devcell cell col-2-sm">col-2-sm</div>
+                <div class="devcell cell col-2-md col-10-sm"> col-10-sm / col-2-md </div>
+                <div class="devcell cell col-12-sm col-8-md col-2-lg">col-12-sm / col-2-lg / col-8-md</div>
+                <div class="devcell cell col-3-sm col-6-md col-2-lg">col-2-sm / col-2-lg / col-6-md </div>
+                <div class="devcell cell col-5-sm col-6-md col-2-lg">col-5-sm / col-2-lg / col-6-md</div>
+                <div class="devcell cell col-4-sm col-12-md col-2-lg">col-4-sm / col-2-lg / col-12-md</div>
+              </div>
+            </div>
+
+            <!--Grid Gaps-->
+            <div class="cell co-doc">
+              <h3>Grid Gaps</h3>
+              <p>By default, the <code>grid-container</code> divs do not have any grid gaps between columns.
+                You can add gaps by an additional class of either <code>grid-gap-10</code>, <code>grid-gap-30</code> or
+                <code>grid-gap-30</code>
+                to the <code>grid-container</code> div, depending on how much of a grid gap you want.
+              </p>
+              <p>There is some built in repsoniveness to the grid gap classes.
+                While the <code>grid-row-gap</code> will remain at the set number (50px for <code>grid-gap-50</code> and
+                30px for <code>grid-gap-30</code>) at all sizes,
+                the <code>grid-column-gap</code> will automatically decrease at certain screen widths<a
+                  href="f2">[2]</a>.
+                On medium screens <code>grid-column-gap</code> will not go beyond 30px,
+                and on small screen sizes it will not go beyond 10px. This is to ensure that the page content is
+                properly
+                responsive and text wraps appropriately.</p>
+
+            </div>
+            <div class="cell co-ex">
+              <div class="grid-container grid-gap-10">
+                <div class="cell">
+                  <h4> No Grid Gap</h4>
+                  <div class="grid-container">
+                    <div class="devcell cell col-6-sm">No grid-gap class</div>
+                    <div class="devcell cell col-6-sm">No grid-gap class</div>
+                    <div class="devcell cell col-6-sm">No grid-gap class</div>
+                    <div class="devcell cell col-6-sm">No grid-gap class</div>
+                  </div>
+                </div>
+
+                <div class="cell">
+                  <h4> Grid Gap 10</h4>
+                  <div class="grid-container grid-gap-10">
+                    <div class="devcell cell col-6-sm">grid-gap-10</div>
+                    <div class="devcell cell col-6-sm">grid-gap-10</div>
+                    <div class="devcell cell col-6-sm">grid-gap-10</div>
+                    <div class="devcell cell col-6-sm">grid-gap-10</div>
+                  </div>
+                </div>
+
+                <div class="cell">
+                  <h4> Grid Gap 30</h4>
+                  <div class="grid-container grid-gap-30">
+                    <div class="devcell cell col-6-sm">grid-gap-30</div>
+                    <div class="devcell cell col-6-sm">grid-gap-30</div>
+                    <div class="devcell cell col-6-sm">grid-gap-30</div>
+                    <div class="devcell cell col-6-sm">grid-gap-30</div>
+                  </div>
+                </div>
+
+                <div class="cell">
+                  <h4> Grid Gap 50</h4>
+                  <div class="grid-container grid-gap-50">
+                    <div class="devcell cell col-6-sm">grid-gap-50</div>
+                    <div class="devcell cell col-6-sm">grid-gap-50</div>
+                    <div class="devcell cell col-6-sm">grid-gap-50</div>
+                    <div class="devcell cell col-6-sm">grid-gap-50</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Content Block-->
+            <div id="contentblock" class="cell co-doc">
+              <h3>Content Block Colors</h3>
+              <p>By default <code>content-block</code> has no background color.
+                You can add a background using the classes <code>blue-block</code> or <code>gray-block</code>
+              </p>
+            </div>
+            <div class="cell co-ex">
+              <div class="cell colors">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell col-4-sm col-3-md colorbloc blue01">.blue-block</div>
+                  <div class="cell col-4-sm col-3-md colorbloc gray02">.gray-block</div>
+                </div>
+              </div>
+            </div>
+
+            <!--Dividers-->
+            <div class="cell co-doc bottom-divider">
+              <h3>Bottom Dividers</h3>
+              <p>You can giv a <code>div</code> 1px solid gray bottom border by giving it the class
+                <code>>bottom-divider</code>.
+              </p>
+            </div>
+
+
+            <!--Footnotes-->
+            <div class="cell footnotes">
+              <p id="f1">[1] Set in the _settings.scss file with the <code>$site-width</code> variable. Currently set to
+                1200px</p>
+              <p id="f1">[2] Breakpoints are set in the _settings.scss file with the <code>$breakpoint-lg</code>,
+                <code>$breakpoint-md</code>, and <code>$breakpoint-sm</code> variables.
+                The breakpoints are currently set to 1025px, 700px, and 375px respectively.
+                Note that <code>breakpoint-sm</code> is rarely used, since the grid-layout is set up to work with small
+                screens by default.
+                It is primarily used to adjust the grid-gap classes on very small screens, and adjustments to specific
+                elements like tabs or some elements on the search page.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- ## Header-->
+    <div class="content-block" id="header">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Header</h2>
+          <button class="toggle" role="button" aria-controls="header-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell " id="header-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+            <!--Standard Header-->
+            <div class="cell co-doc ">
+              <h3>Standard "Main" Header</h3>
+              <h4>Use Case</h4>
+              <p>The standard "main" header appears on nearly all pages of both the public and private site
+                except for those that use the "Simple Header" <a class="placeholder" href="">(see Simple Header
+                  documentation for more information).</a>
+                The only differences between the standard header on the public and private site is that the there is a
+                "Create Account" link on the public site when users are logged out.
+              </p>
+
+              <h4>Costruction</h4>
+              <p>The standard header has three main parts:</p>
+              <ul>
+                <li>the "Site Name" section, which contains both the logo and the site title</li>
+                <li>The "Account" section, which only appears on medium and larger screens and which contains:
+                  <ul>
+                    <li>the log in/out link, (styled as a primary button) </li>
+                    <li> the "create account" link (styled as a hollow button), which only appears on the public site
+                      when
+                      the user is logged out</li>
+                  </ul>
+                </li>
+                <li>the "mobile menu" toggle button, which only appears on smaller screens</li>
+              </ul>
+
+              <pre class="codebloc">
+&lt;header class="header-main">
+  &lt;div class="grid-container grid-gap-10">
+    &lt;div class="cell col-8-sm col-7-md site-name">
+      &lt;img class="inverse-logo" src="../../common/graphics/bulletin-logo-inverse.svg" alt="">
+      &lt;img class="logo" src="../../common/graphics/bulletin-logo.svg" alt="">
+          
+      &lt;a href="index.html">
+        &lt;span class="site-title">Illinois Procurement Bulletin&lt;/span>
+        Public Institutions of Higher Education
+      &lt;/a>
+    &lt;/div>
+    &lt;div class="cell col-5-md account button-group">
+     &lt;a href="[registration page link goes here]" class="button hollow">Create Account&lt;/a>
+
+      &lt;a href="[Log in / Log out link goes here]" class="button primary">Log Out / Log out&lt;/a>
+    &lt;/div>
+    &lt;div class="cell col-4-sm menu-btn">
+      &lt;button class="mobile-nav-toggle">Menu</button>
+    &lt;/div>
+  &lt;/div> 
+&lt;/header>
+</pre>
+            </div>
+
+            <div class="cell ">
+              <h4>Examples</h4>
+              <p class="warning-note">The headers in these examples have been given the class "devborder" in these
+                documentation guide. This class should not be included in the actual site headers.
+                They also have the class "mobile-nav-toggle-ex" instead of "mobile-nav-toggle" for the mobile menu
+                button,
+                so that they don't actually trigger the mobile menu toggle in the <a href="#global-nav">Global
+                  Navigation
+                  section of the page.</a></p>
+            </div>
+
+            <div class="cell "> <!--Logged in version -->
+              <h5>Public/Staff - Logged In</h5>
+              <header class="header-main devborder">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell col-8-sm col-7-md site-name">
+                    <img class="inverse-logo" src="../../common/graphics/bulletin-logo-inverse.svg" alt="">
+                    <img class="logo" src="../../common/graphics/bulletin-logo.svg" alt="">
+
+                    <a href="index.html">
+                      <span class="site-title">Illinois Procurement Bulletin</span>
+                      Public Institutions of Higher Education
+                    </a>
+                  </div>
+                  <div class="cell col-5-md account button-group">
+                    <a href="homepage-out.html" class="button primary">Log Out</a>
+                  </div>
+                  <div class="cell col-4-sm menu-btn">
+                    <button class="mobile-nav-toggle-ex">Menu</button>
+                  </div>
+                </div>
+              </header>
+            </div> <!--End Logged In version-->
+
+            <div class="cell co-ex "><!--Public Logged out version-->
+              <h5>Public - Logged Out</h5>
+              <header class="header-main devborder">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell col-8-sm col-7-md site-name">
+                    <img class="inverse-logo" src="../../common/graphics/bulletin-logo-inverse.svg" alt="">
+                    <img class="logo" src="../../common/graphics/bulletin-logo.svg" alt="">
+
+                    <a href="index.html">
+                      <span class="site-title">Illinois Procurement Bulletin</span>
+                      Public Institutions of Higher Education
+                    </a>
+                  </div>
+                  <div class="cell col-5-md account button-group">
+
+
+                    <a href="/registration/registration-account.html" class="button hollow">Create Account</a>
+                    <a class="button primary" href="homepage-in.html">Log in</a>
+
+                  </div>
+                  <div class="cell col-4-sm menu-btn">
+                    <button class="mobile-nav-toggle-ex">Menu</button>
+                  </div>
+                </div>
+              </header>
+            </div><!--End Public Logged out version -->
+
+
+
+            <!--Simple Header-->
+            <div class="cell co-doc">
+              <h3>Simple Header</h3>
+              <h4>Use</h4>
+              <p>The Simple header is used on the following pages:</p>
+              <ul>
+                <li>the registration pages on the public site</li>
+                <li> the login/2FA/related pages on both sites (which is also the homepage when logged out on the Staff
+                  site)</li>
+                <li>the downtime pages on both sites</li>
+              </ul>
+              <p>Pages using the Simple header should never have a global navigation bar</p>
+              <h4>Construction</h4>
+              <p>Simple headers only have the "site-name" section with the logo and site title. They do not have the
+                "Account" or "Mobile Menu" button.</p>
+              <pre class="codebloc">
+&lt;header class="header-simple">
+  &lt;div class="grid-container grid-gap-10">
+    &lt;div class="cell site-name">
+      &lt;img class="inverse-logo" src="../../common/graphics//bulletin-logo-inverse.svg" alt="">
+      &lt;a href="#">
+        &lt;span class="site-title">Illinois Procurement Bulletin&lt;/span>
+        Public Institutions of Higher Education
+      &lt;/a>
+     &lt;/div>
+  &lt;/div> 
+&lt;/header>
+</pre>
+            </div>
+            <div class="cell">
+
+              <header class="header-simple">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell site-name">
+                    <img class="inverse-logo" src="../../common/graphics//bulletin-logo-inverse.svg" alt="">
+
+                    <a href="#">
+                      <span class="site-title">Illinois Procurement Bulletin</span>
+                      Public Institutions of Higher Education
+                    </a>
+                  </div>
+
+                </div>
+              </header>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ## Navigation-->
+    <div class="content-block" id="global-nav">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Global Navigation Bar</h2>
+          <button class="toggle" role="button" aria-controls="global-nav-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+          <a href="#main">Back to top</a>
+        </div>
+        <div class="cell " id="global-nav-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+            <!--Global Navigation-->
+            <div class="cell co-doc">
+              <p class="warning-note">
+                This section deals with the Global Navigation bar that appears under the header.
+                Sidebar navigation is currently considered a Public side only feature.
+                Documentation can be found on the <a href="site-documentation-public.html">Public site documenation
+                  page.</a>
+              </p>
+              <p class="src-note">
+                The javascript to control the navigation menu's dropdown and the mobile menu's toggle are located in the
+                pb-public.js and pb-public-min.js files.
+                The code for the dropdown navigation functionality is adapted from the <a
+                  href="https://www.w3.org/WAI/tutorials/menus/flyout/#flyoutnavkbbtn">W3C's Web Accessiblity Tutorials
+                  on
+                  Fly-out Menus.</a>
+              </p>
+
+              <p>The content of the Global Navigation menu will differ on the Public and Staff side, but the styling and
+                behavior will be the same.
+                Below is an example showing the different parts of the global navigation</p>
+
+              <pre class="codebloc">
+  &lt;nav aria-label="Main Navigation" class="navbar" id="mainnav">
+    &lt;div class="grid-container grid-gap-10">
+      &lt;div class="cell">
+        &lt;ul class="navbar-links">
+          &lt;li class="account-mobile">
+            &lt;ul>
+              &lt;li>&lt;a href="index.html" class="button primary">Log in&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="/registration/registration-account.html" class="button hollow-white">Create Account&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/li>
+
+          &lt;li>&lt;a href="#" class="current">Item 1 (Current)&lt;/a>&lt;/li>
+          &lt;li class="has-submenu">
+            &lt;a href="#" aria-haspopup="true" aria-expanded="false">Item 2 with Submenu&lt;/a>
+            &lt;ul>
+              &lt;li>&lt;a href="#">Item 2a&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Item 2b&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Item 2c&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/li>
+          &lt;li>&lt;a href="#" class="">Item 3&lt;/a>&lt;/li>
+          &lt;li class="has-submenu current">
+            &lt;a href="#" aria-haspopup="true" aria-expanded="false">Item 4 with Submenu (Current)&lt;/a>
+            &lt;ul>
+              &lt;li>&lt;a href="#">Item 3a&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Item 3b&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Item 3c&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/li>
+
+          &lt;li>&lt;a href="#" class="">Item 5&lt;/a>&lt;/li>
+          &lt;li class="has-submenu">
+            &lt;a href="#" aria-haspopup="true" aria-expanded="false">Item 6 with Submenu&lt;/a>
+            &lt;ul>
+              &lt;li>&lt;a href="#" class="current">Item 6a&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Item 6b&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#">Item 6c&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/li>
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/nav>
+</pre>
+
+              <h3>Mobile Account Links</h4>
+                <p>
+                  The first content in the navigation is the <code>account-mobile</code> section, which contains the
+                  "Log
+                  in"/"Log out" and "Create Account" links.
+                  These only appear in the mobile dropdown menu on small screens, and the rules for which buttons appear
+                  based on if the user is logged in
+                  or not is the same as the "account" section in the header. <a href="#header">See header documentation
+                    for
+                    more details.</a>
+                </p>
+
+
+                <h3>Navigation Items + Submenus</h4>
+                  <p>
+                    The rest of the <code>li</code>s contain the links for the different top level pages.
+                    The <code>li</code> for pages with submenus should have the class <code>has-submenu</code>
+                    and the parent <code>a</code> tag should have the attributes <code>aria-haspopup="true"</code> and
+                    <code>aria-expanded="false"</code>.
+                    The links to the subpages are then listed in the nested <code>ul</code> in the parent
+                    <code>li</code>.
+                    Only the first level of child pages are included in the global navigation. If a child page has its
+                    own
+                    child,
+                    it is not included in the global navigation.
+                  </p>
+
+                  <h3>Current Navigation Item Styling</h4>
+                    <p>The <code>a</code> of the current page should recieve the class <code>current</code>.
+                      If the page in question is the parent of a dropdown, the <code>current</code> class
+                      should also be added to the <code>li</code> with the <code>has-submenu</code> class for that page.
+                      If the current page is a subpage in a dropdown, both the page itself as well as the parent
+                      dropdown
+                      should
+                      have the <code>current</code> class applied.
+
+                    </p>
+                    <p class="warning-note">
+                      The header is included in the below example so that the mobile menu is accessible on smaller
+                      screens.
+                      The "current" styling on the mobile menu will appear messed up in the below example as a result of
+                      the
+                      way the example is
+                      placed in this documentation and does not occur normally in the actual site.
+                    </p>
+
+
+
+            </div>
+
+
+            <div class="cell">
+
+              <header class="header-main">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell col-8-sm col-7-md site-name">
+                    <img class="inverse-logo" src="../../common/graphics/bulletin-logo-inverse.svg" alt="">
+                    <img class="logo" src="../../common/graphics/bulletin-logo.svg" alt="">
+
+                    <a href="index.html">
+                      <span class="site-title">Illinois Procurement Bulletin</span>
+                      Public Institutions of Higher Education
+                    </a>
+                  </div>
+                  <div class="cell col-5-md account button-group">
+
+
+                    <a href="/registration/registration-account.html" class="button hollow">Create Account</a>
+                    <a class="button primary" href="homepage-in.html">Log in</a>
+
+
+                  </div>
+                  <div class="cell col-4-sm menu-btn">
+                    <button class="mobile-nav-toggle">Menu</button>
+                  </div>
+                </div>
+              </header>
+
+              <nav aria-label="Main Navigation" class="navbar" id="mainnav">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell">
+                    <ul class="navbar-links">
+                      <li class="account-mobile">
+                        <ul>
+                          <li><a href="index.html" class="button primary">Log in</a></li>
+                          <li><a href="/registration/registration-account.html" class="button hollow-white">Create
+                              Account</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="#" class="current">Item 1 (Current)</a></li>
+                      <li class="has-submenu">
+                        <a href="#" aria-haspopup="true" aria-expanded="false">Item 2 with Submenu</a>
+                        <ul>
+                          <li><a href="#">Item 2a</a></li>
+                          <li><a href="#">Item 2b</a></li>
+                          <li><a href="#">Item 2c</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#" class="">Item 3</a></li>
+                      <li class="has-submenu current">
+                        <a href="#" aria-haspopup="true" aria-expanded="false">Item 4 with Submenu (Current)</a>
+                        <ul>
+                          <li><a href="#">Item 3a</a></li>
+                          <li><a href="#">Item 3b</a></li>
+                          <li><a href="#">Item 3c</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="#" class="">Item 5</a></li>
+                      <li class="has-submenu current">
+                        <a href="#" aria-haspopup="true" aria-expanded="false">Item 6 with Current Submenu page</a>
+                        <ul>
+                          <li><a href="#" class="current">(Current) Item 6a</a></li>
+                          <li><a href="#">Item 6b</a></li>
+                          <li><a href="#">Item 6c</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ## Footer-->
+    <div class="content-block" id="footer">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Footer</h2>
+          <button class="toggle" role="button" aria-controls="footer-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+          <a href="#main">Back to top</a>
+        </div>
+        <div class="cell" id="footer-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Intro-->
+                <div class="cell co-doc">
+                  <p>There are two different footers used on both the Staff and Public sites:</p>
+                  <ul>
+                    <li>the standard or <code>main-footer</code>, which is used on most pages on both sites.</li>
+                    <li>the <code>simple-footer</code>, used on the same pages the <code>simple-header</code> is used</li>
+                  </ul>
+                  <p>Both footers are made up of two sections: the first section is the where the main/simple footer-specific
+                    footer content goes. The second section is the <code>policy-footer</code> which is the same on both the main
+                    and simple footers. </p>
+                </div>
+        
+                <!--Main Footer-->
+                <div class="cell co-doc">
+                  <h3>Main Footer</h3>
+                  <p>
+                    The <code>main-footer</code> or "standard" footer is used on most pages of the site.
+                    On both the Public and Staff site it has the same two sections, although the specific content in each
+                    section will different based on if it's the public or staff site. The two sections are:
+                  </p>
+                  <ul>
+                    <li><code>footer-contact</code> - contains contact information for the Bulletin Manager and a link to
+                      relevant contact pages
+                    </li>
+                    <li><code>footer-nav</code> - contains a <code>nav</code> with links to the site's top level pages.
+                      Child pages are not included in the footer navigation. </li>
+                  </ul>
+                  <pre class="codebloc">
+        &lt;footer role="contentInfo">
+        
+          &lt;div class="main-footer">
+            &lt;div class="grid-container grid-gap-10">
+        
+              &lt;div class="cell col-6-md col-7-lg footer-contact">
+                &lt;h2>Contact Us&lt;/h2>
+                [Staff/Public site specific contact information goes here]
+              &lt;/div>
+        
+              &lt;nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+                &lt;h2>Navigation&lt;/h2>
+                &lt;div class="grid-container">
+                  &lt;div class="cell ">
+                    &lt;ul class="footer-navlinks">
+                      &lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 6&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 7&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Link 8&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/div>
+        
+                &lt;/div>
+              &lt;/nav>
+            &lt;/div> 
+          &lt;/div>
+        
+          [Policy Footer Content Goes here]
+        
+        &lt;/footer>  
+        </pre>
+                </div>
+                <div class="cell ">
+                  <h4>Public Site</h4>
+                  <footer role="contentInfo" class="devborder">
+                    <div class="main-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-6-md col-7-lg footer-contact">
+                          <h2>Contact Us</h2>
+                          <p>For technical help with registering and/or obtaining documents, contact the Bulletin Manager:</p>
+                          <p>Champaign, IL 61820 <br>
+                            E-Mail: <a href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> <br>
+                            Phone: (217) 333-3596
+                          </p>
+                          <p><a href="/contact.html">For procurement questions, contact the appropriate university purchasing
+                              staff.</a>
+                          </p>
+                        </div>
+        
+                        <nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+                          <h2>Navigation</h2>
+                          <div class="grid-container">
+                            <div class="cell ">
+                              <ul class="footer-navlinks">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/search-results-simple.html">Search</a></li>
+        
+                                <li><a href="about/about.html">About the Bulletin</a></li>
+                                <li><a href="/upcoming.html">Potential Upcoming Opportunities </a></li>
+                                <li><a href="/resources/vendor-resources.html">Vendor Resources</a></li>
+                                <li><a href="/ebids-out.html">My E-bids</a></li>
+                                <li><a href="/news/news.html">News and Announcements</a></li>
+                                <li><a href="/account/general.html">My Account</a><!--Only Appears when user is logged in-->
+                              </ul>
+                            </div>
+        
+                          </div>
+                        </nav>
+        
+        
+                      </div> <!--grid-containter-->
+                    </div>
+        
+                    <div id="policy" class="policy-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-11-md">
+                          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education</p>
+                        </div>
+                        <div class="cell col-1-md staff-login"><a href="#"><img src="../../common/graphics/icons/icon-lock.png"
+                              alt="log in to the staff side of the Illinois Higher Ed Bulletin"></a></div>
+                      </div> <!--grid-containter-->
+                    </div>
+        
+                  </footer>
+                </div>
+        
+                <div class="cell co-ex">
+                  <h4>Staff Site</h4>
+                  <footer role="contentInfo" class="devborder">
+                    <div class="main-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-6-md col-7-lg footer-contact">
+                          <h2>Contact </h2>
+                          <p>For questions about the Bulletin or publishing help, contact the Bulletin Manager:
+                            <a href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> or (217) 333-3596
+                          </p>
+                          </p>
+                          <p>For procurement questions, please see: </p>
+                          <ul>
+                            <li><a href="https://www.procure.stateuniv.state.il.us/contactUs.cfm">Institutions' Procurement
+                                Office Contact Information</a></li>
+                            <li><a href="#">Individual Procurement Staff Contacts</a></li>
+                            <!--procurement contacts in Resrouces on staff site-->
+        
+                          </ul>
+                        </div>
+        
+                        <nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+                          <h2>Navigation</h2>
+                          <div class="grid-container">
+                            <div class="cell">
+                              <ul class="footer-navlinks">
+                                <li><a href="#">To Do List</a></li>
+                                <li><a href="#">Active Notices</a></li>
+                                <li><a href="#">Sole Source Hearings</a></li>
+                                <li><a href="#">Search</a></li>
+                                <li><a href="#">Notice Status</a></li>
+                                <li><a href="#">E-Bidding</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <li><a href="#">Resources</a></li>
+                              </ul>
+                            </div>
+        
+                          </div>
+                        </nav>
+                      </div> <!--grid-containter-->
+                    </div>
+        
+                    <div id="policy" class="policy-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-11-md">
+                          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education</p>
+                        </div>
+                        <div class="cell col-1-md staff-login"><a href="#"><img src="../../common/graphics/icons/icon-lock.png"
+                              alt="log in to the staff side of the Illinois Higher Ed Bulletin"></a></div>
+                      </div> <!--grid-containter-->
+                    </div>
+        
+                  </footer>
+        
+                </div>
+        
+                <!--Simple Footer-->
+                <div class="cell co-doc">
+                  <h3>Simple Footer</h3>
+                  <p>The Simple footer is used on the same pages that the Simple Header is used on both sites. </p>
+        
+                  <p>
+                    The <code>policy-footer</code> is the same as in the <code>main-footer</code> example,
+                    but the <code>main-footer</code> div is replaced by <code>simple-footer</code>,
+                    and the content of the footer is just one <code>cell</code> with the help text.
+                    The help text will differ depending on if the user is on Staff or Public site.
+                  </p>
+        
+                  <pre class="codebloc">
+        &lt;footer role="contentInfo">
+        
+            &lt;div class="simple-footer">
+                &lt;div class="grid-container grid-gap-10">
+                    &lt;div class="cell">
+                        &lt;h2>Get Help&lt;/h2>
+                        &lt;p>
+                            For questions about the [Staff/Public specific content], contact the Bulletin Manager: &lt;a
+                                href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu&lt;/a> or (217) 333-3596
+                        &lt;/p>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        
+            [Policy Footer content goes here]
+        
+        &lt;/footer>
+                  </pre>
+                </div>
+                <div class="cell">
+                  <h4>Staff Site</h4>
+                  <footer role="contentInfo" class="devborder">
+        
+                    <div class="simple-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell">
+                          <h2>Get Help</h2>
+                          <p>
+                            For questions about the Bulletin or publishing help, contact the Bulletin Manager: <a
+                              href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> or (217) 333-3596
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div id="policy" class="policy-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-11-md">
+                          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education | <a
+                              href="https://www.procure.stateuniv.state.il.us/">View Public Bulletin Site</a></p>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+                  </footer>
+                </div>
+                <div class="cell co-ex">
+                  <h4>Public Site</h4>
+                  <footer role="contentInfo" class="devborder">
+        
+                    <div class="simple-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell">
+                          <h2>Get Help</h2>
+                          <p>
+                            For technical help with registering and/or obtaining documents, contact the Bulletin Manager: <a
+                              href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> or (217) 333-3596
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div id="policy" class="policy-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-11-md">
+                          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education </p>
+                        </div>
+                        <div class="cell col-1-md staff-login">
+                          <a href="https://staff.procure.stateuniv.state.il.us">
+                            <img src="../../common//graphics/icons/icon-lock.png"
+                              alt="log in to the private buyer side of the Illinois Higher Ed Bulletin">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </footer>
+                </div>
+        
+        
+                <!--Policy Footer-->
+                <div class="cell co-doc">
+                  <h3>Policy Footer</h3>
+                  <p>
+                    The <code>policy-footer</code> exists at the bottom of both the Standard and Simple footers.
+                    It contains copyright information on both sites. On the public site, it contains a "lock" icon that
+                    links to the Staff site. On the Staff site it has a text link to the public site
+                  </p>
+                  <pre class="codebloc">
+        &lt;footer role="contentInfo">          
+        
+          [simple-footer or main-footer content goes here]
+                  
+          &lt;div id="policy" class="policy-footer">
+            &lt;div class="grid-container grid-gap-10">
+              &lt;div class="cell col-11-md">
+                [Staff/Public specific content]
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+                  
+        &lt;/footer>
+        </pre>
+                </div>
+        
+                <div class="cell">
+                  <h4>Staff Site</h4>
+                  <footer role="contentInfo" class="devborder">
+        
+                    <div id="policy" class="policy-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-11-md">
+                          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education | <a
+                              href="https://www.procure.stateuniv.state.il.us/">View Public Bulletin Site</a></p>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+                  </footer>
+                </div>
+                <div class="cell ">
+                  <h4>Public Site</h4>
+                  <footer role="contentInfo" class="devborder">
+        
+                    <div id="policy" class="policy-footer">
+                      <div class="grid-container grid-gap-10">
+                        <div class="cell col-11-md">
+                          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education </p>
+                        </div>
+                        <div class="cell col-1-md staff-login">
+                          <a href="https://staff.procure.stateuniv.state.il.us">
+                            <img src="../../common//graphics/icons/icon-lock.png"
+                              alt="log in to the private buyer side of the Illinois Higher Ed Bulletin">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </footer>
+                </div>
+          </div>
+        </div>
+      </div> <!--full page grid-containter-->
+    </div>
+
+    <!-- ## Colors-->
+    <div class="content-block" id="colors">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Colors</h2>
+          <button class="toggle" role="button" aria-controls="colors-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+
+        <div class="cell" id="colors-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Base Colors-->
+                <div class="cell co-doc">
+                  <h3>Base Colors</h3>
+                  <p>
+                    Below are the colors used on the site with their scss variable name along with their hex code.
+                    The text colors used here indicate which standard text color (<code>$white</code> or <code>$black</code>)
+                    should be used
+                    on top of each color in order to insure color contrast standards are met. Remember to double check color
+                    contrast if using
+                    any other text/background color variation.
+        
+                </div>
+                <div class="cell co-ex">
+                  <div class="grid-container grid-gap-10 colors">
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue01">$blue-01: #F0F5F9</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue02">$blue-02: #A3D9FF</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue03">$blue-03: #0095FF</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue04">$blue-04: #006EBD</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue05">$blue-05: #005394</div>
+        
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc slate">$slate: #434B55</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc slateD">$slate-dark: #2F3235</div>
+        
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc green">$green: #65AE29</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc greenD">$green-dark: #45781C</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc greenL">$green-light: #DBFFBD</div>
+        
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc yellow">$yellow: #FEC500</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc yellowD">$yellow-dark: #E2A800</div>
+        
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc red">$red: #AB0505</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc redD">$red-dark: #7A0505</div>
+
+        
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc gray01">$gray-01: #F5F7F9</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc gray02">$gray-02: #E8E9ED</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc gray03">$gray-03: #C1C6CD</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc gray04">$gray-04: #6C707A</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc black">$black: #0a0a0a</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc white">$white: #fefefe</div>
+        
+                  </div>
+                </div>
+        
+                <!--Role-based Colors-->
+                <div class="cell co-doc">
+                  <h3>Role-based Colors</h3>
+                  <p>
+                    Some colors are assigned to role-based variables in the _settings.scss file.
+                    These role-based variables are used in the rest of the SCSS to assign colors. If that color ever needs to be
+                    changed, you can simply
+                    change what color is assigned to that role-based variable in _settings.scss instead of changing it
+                    everywhere in the scss/css files.
+                    If they are currently assigned to any other role-based variables that is also included. Below are the
+                    current role variables and
+                    colors assigned to them
+                  </p>
+                </div>
+                <div class="cell colors">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell">
+                      <h4>Site Colors</h4>
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc slate"><strong>$site-color</strong><br>$slate: #434B55
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue04"><strong>$primary-blue</strong><br>$blue-04:
+                      #006EBD</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue05"><strong>$primary-dark</strong><br>$blue-05:
+                      #005394</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc yellow"><strong>$accent</strong><br>$yellow: #FEC500
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc yellowD">
+                      <strong>$accent-dark</strong><br>$yellow-dark: #E2A800
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc yellowD"><strong>$warning</strong><br>$yellow-dark:
+                      #E2A800</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc red"><strong>$error</strong><br>$red: #AB0505</div>
+        
+        
+                    <div class="cell">
+                      <h4>Text and Link Colors</h4>
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc black"><strong>$font-color</strong><br>$black: #0a0a0a
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue04"><strong>$link</strong><br>$blue-04: #006EBD
+                    </div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc greenD"><strong>$link-hover</strong><br>$green-dark:
+                      #45781C</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue05"><strong>$link-visted</strong><br>$blue-05:
+                      #005394</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc blue02"><strong>$dark-bg-link</strong><br>$blue-02:
+                      #A3D9FF</div>
+                    <div class="cell col-6-sm col-3-md col-2-lg colorbloc greenL">
+                      <strong>$dark-bg-link-hover</strong><br>$green-light: #DBFFBD
+                    </div>
+                  </div>
+        
+                </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+    <!--## Text, Links, Buttons-->
+    <div class="content-block" id="text-link-buttons">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Text, Links, and Buttons</h2>
+          <button class="toggle" role="button" aria-controls="text-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell" id="text-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Text Components-->
+                <div class="cell co-doc">
+                  <h3>Text Components - Headers, lists, paragraphs, and links</h3>
+                  <p>Below are examples of headers, ordered and unordered lists, a paragraph and a link.
+                    These are styled automatically and do not need any additional classes added unless trying to use one of the
+                    <a href="static">custom styles</a>.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell col-2-md doc-fix"> <!--Headers-->
+                      <h1>Header 1</h1>
+                      <h2>Header 2</h2>
+                      <h3>Header 3</h3>
+                      <h4>Header 4</h4>
+                      <h5>Header 5</h5>
+                      <h6>Header 6</h6>
+                    </div>
+                    <div class="cell col-3-md"><!--Unordered lists-->
+                      <ul>
+                        <li>Unordered List Item 1</li>
+                        <li>Unordered List Item 2</li>
+                        <li>Unordered List Item 3</li>
+                        <li>Unordered List Item 4
+                          <ul>
+                            <li>Unordered Sublist Item 1</li>
+                            <li>Unordered Sublist Item 2</li>
+                            <li>Unordered Sublist Item 3</li>
+                          </ul>
+                        </li>
+                        <li>Unordered List Item 3</li>
+                      </ul>
+                    </div>
+                    <div class="cell col-3-md"> <!--Ordered lists-->
+                      <ol>
+                        <li>Ordered List Item 1</li>
+                        <li>Ordered List Item 2</li>
+                        <li>Ordered List Item 3</li>
+                        <li>Ordered List Item 4
+                          <ul>
+                            <li>Ordered Sublist Item 1</li>
+                            <li>Ordered Sublist Item 2</li>
+                            <li>Ordered Sublist Item 3</li>
+                          </ul>
+                        </li>
+                        <li>Ordered List Item 3</li>
+                      </ol>
+                    </div>
+                    <div class="cell col-4-md"> <!--paragraphs and links-->
+                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras enim nisl, tempor sed dui eu,
+                        scelerisque ornare arcu. Sed congue vel nibh in finibus. Etiam vel maximus elit, id tempus risus.
+                        Praesent id magna felis. Donec nec aliquam arcu. Integer viverra cursus turpis, sed suscipit odio rutrum
+                        non. In eu ligula tellus. Nunc ut dui in enim venenatis auctor. </p>
+                    </div>
+                  </div>
+                </div>
+        
+                <!--Links-->
+                <div class="cell co-doc">
+                  <h3>Links</h3>
+                  <h4>Basic Links</h4>
+                  <p>Normal links do not need any additional styling.
+                    Links on dark backgrounds (like the footer) will look different, but that will be handled in the CSS, not
+                    HTML</p>
+                </div>
+                <div class="cell bottom-divider partical-divider">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell col-6-sm col-2-md">
+                      <p> <a href="#">This is a link</a></p>
+                    </div>
+                    <div class="cell col-6-sm dark-bg-block">
+                      <p><a href="#">This is a link on a dark background</a></p>
+                    </div>
+                  </div>
+        
+        
+                </div>
+        
+                <!--Button Links-->
+                <div class="cell co-doc ">
+                  <h4>Links that look link buttons</h4>
+                  <p>
+                    In cases where something should semantically be an <code>a</code> tag
+                    but you want to visually stand out more and look like a button you
+                    can give it the class <code>button</code> and the appropriate button styling class
+                    (<a href="#buttons">see button section</a>).
+                    If you want the text of a link to align vertically with the text of a button,
+                    give it the classes of <code>button</code> and <code>btn-match</code>
+                  </p>
+                </div>
+                <div class="cell partical-divider">
+                  <p>
+                    <a href="#" class="button primary push-right">Link that looks like a button</a>
+                    <a href="#" class="button secondary push-right">Link that looks like a button</a>
+                    <a href="#" class="button hollow push-right">Link that looks like a hollow button</a>
+                    <a href="#" class="button btn-match">Link that aligns with buttons</a>
+                  </p>
+                </div>
+        
+                <!--Special Links / Img+link-->
+                <div class="cell co-doc">
+                  <h4>Special Link</h4>
+                  <h5>Image + Link</h5>
+                  <p>
+                    There are a few instances of an image and link being grouped together (Ex: Public side homepage).
+                  </p>
+                  <pre class="codebloc">
+        &lt;div class="img-link">
+          &lt;img src="[image src link" alt="">
+          &lt;a href="#">Text of link&lt;/a>
+        &lt;/div>
+        </pre>
+                </div>
+                <div class="cell">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell col-4-md col-3-lg">
+                      <div class="img-link">
+                        <img src="../../common/graphics/icons/icon_calendar.svg" alt="">
+                        <a href="#">Plan ahead — view potential upcoming opportunities</a>
+                      </div>
+                    </div>
+        
+                    <div class="cell col-4-md col-3-lg">
+                      <div class="img-link">
+                        <img src="../../common/graphics/icons/icon_email.svg" alt="">
+                        <a href="#">Get notices sent to you — sign up for email notifications</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <!--Arrow Links-->
+                <div class="cell co-doc">
+                  <h5>Arrow Links</h5>
+                  <p>Arrow links are used on stand-alone links (ie. Links that aren't part of a larger paragraph) to draw more
+                    attention to the link.</p>
+                  <pre class="codebloc">&lt;p class="arrow-link">&lt;a href="#">Text of link&lt;/a>&lt;/p></pre>
+                </div>
+                <div class="cell co-ex">
+                  <p class="arrow-link"><a href="#">If your organization has never done business on the Bulletin before, visit
+                      our New Vendor Guide to learn about vendor requirements.</a></p>
+                </div>
+        
+                <!--Buttons-->
+                <div id="buttons" class="cell co-doc">
+                  <h3>Buttons</h3>
+                  <p>All buttons should be given the class <code>button</code>. Additional styling can be given by adding the
+                    following classes:</p>
+                  <ul>
+                    <li><code>primary</code> - A "primary blue" button, used for most buttons on the site</li>
+                    <li> <code>secondary</code> - A "slate" button, usually used when there are multiple buttons on a page and
+                      you want some to stand out less than the "primary" buttons </li>
+                    <li><code>accent</code> - a yellow button, used to stand out more than the standard primary buttons</li>
+                    <li> <code>hollow</code> - used to stand out less than another button. Usually when buttons are right next
+                      to each other.</li>
+                    <li><code>tertiary</code> - A white button, used on dark backgrounds</li>
+                    <li><code>hollow-white</code> - a hollow button, but for use on dark backgrounds</li>
+                  </ul>
+                </div>
+                <div class="cell bottom-divider partical-divider">
+                  <div class="button-group push-bottom">
+                    <button class="button primary">primary</button>
+                    <button class="button secondary">secondary</button>
+                    <button class="button accent">accent</button>
+                    <button class="button hollow">hollow</button>
+                    <div class="inlined dark-bg-block">
+                      <button class="button hollow-white">hollow-white</button>
+                      <button class="button tertiary">tertiary</button>
+                    </div>
+                  </div>
+        
+                  <p>All buttons, regardless of the additional styles applied to them,
+                    appear the same way when disabled.
+                  </p>
+                  <div class="button-group">
+                    <button class="button primary" disabled>primary - disabled</button>
+                    <button class="button secondary" disabled>secondary - disabled</button>
+                    <button class="button accent" disabled>accent - disabled</button>
+                    <button class="button hollow" disabled>hollow - disabled</button>
+                    <div class="inlined dark-bg-block">
+                      <button class="button hollow-white" disabled>hollow-white - disabled</button>
+                      <button class="button tertiary" disabled>tertiary - disabled</button>
+                    </div>
+                  </div>
+                </div>
+        
+                <!--Buttons that look like links-->
+                <div class="cell co-doc">
+                  <h4>Buttons that look like links</h4>
+                  <p>Giving a button the class <code>link-match</code> will make it stylistically look like a link.
+                    This should be used in places where its semantically correct to use a button but visually a button would be
+                    overwhelming
+                    (ex: the "+# more" button on the search result filter facets)
+                  </p>
+                </div>
+                <div class="cell bottom-divider partical-divider">
+                  <div class="button-group">
+                    <button class="button primary">primary</button>
+                    <button class="button link-match">Button that looks like link</button>
+                  </div>
+                </div>
+        
+                <!--Round buttons-->
+                <div class="cell co-doc">
+                  <h4>Round Buttons / More info buttons</h4>
+                  <p>The <code>round</code> class can be added to make a circle button.
+                    This will be used for triggering "More information" modals.
+                    Only one character - a "?" - should be visible in the button itself.
+                    The rest of the buttton label should be wrapped in a <code>span</code> with the class <code>hidden</code> so
+                    it is not visable to sighted user but is read by screen readers.
+                  </p>
+                  <pre class="codebloc">
+        &lt;button class="button primary round">
+            &lt;span class="hidden">Learn more about the X filter category&lt;/span>
+            ?
+        &lt;/button>
+        </pre>
+                </div>
+                <div class="cell bottom-divider partical-divider">
+                  <button class="button primary round"><span class="hidden">Learn more about the X filter
+                      category</span>?</button>
+                </div>
+        
+                <div class="cell co-doc">
+                  <h4>Button Groups</h4>
+                  <p>To add even spacing between buttons when multiple appear next to each other,
+                    wrap the buttons in a div with the class <code>button-group</code>.</p>
+                  <pre class="codebloc">
+        &lt;div class="button-group">            
+            &lt;button class="button primary">Button 1&lt;/button>
+            &lt;button class="button hollow">Button &lt;/button>
+        &lt;/div>
+        </pre>
+                </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    </div>
+
+    <!-- ## Form Components -->
+    <div class="content-block" id="form">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Form Components</h2>
+          <button class="toggle" role="button" aria-controls="forms-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell" id="forms-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Forms & Form Questions-->
+                <div class="cell co-doc">
+                  <h3>Forms & Form Questions</h3>
+                  <p>The form inputs and labels in the Registration and Account section of the site should have a div with the
+                    class <code>question</code>
+                    wrapped around each individual pairing of label and input. For example, the code for the example below is:
+                  </p>
+                  <pre class="codebloc">
+                      &lt;form>
+                        &lt;div class="question">
+                          &lt;label for="text">Text Input&lt;/label>
+                          &lt;input type="text" name="text" aria-required="true" id="text">
+                          &lt;a href="#">Show Password&lt;/a>
+                        &lt;/div>
+                        &lt;div class="question">
+                          &lt;label for="select">Select Input&lt;/label>
+                          &lt;select id="select" name="select">
+                            &lt;option>Select one&lt;/option>
+                            &lt;option value="Option1">Option 1&lt;/option>
+                            &lt;option value="Option2">Option 2&lt;/option>
+                          &lt;/select>
+                        &lt;/div>
+                      &lt;/form></pre>
+                </div>
+                <div class="cell co-ex">
+                  <form>
+                    <div class="question">
+                      <label for="text">Text Input</label>
+                      <input type="text" name="text" aria-required="true" id="text">
+                      <a href="#">Show Password</a>
+                    </div>
+                    <div class="question">
+                      <label for="select">Select Input</label>
+                      <select id="select" name="select">
+                        <option>Select one</option>
+                        <option value="Option1">Option 1</option>
+                        <option value="Option2">Option 2</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+        
+                <!--Input sizes-->
+                <div class="cell co-doc">
+                  <h3>Input sizes</h3>
+                  <p>Text and Select inputs can be set to sizes other than default by giving them the following classes:</p>
+                  <ol>
+                    <li><code>tiny-input</code> - width: 80px</li>
+                    <li><code>sm-input</code> - width: 180px </li>
+                    <li><code>med-input</code> - width: 300px</li>
+                    <li><code>lg-input</code> - width: 500px</li>
+                    <li><code>fw-input</code> - width: 100%</li>
+                  </ol>
+                </div>
+                <div class="cell co-ex">
+                  <form>
+                    <div class="question">
+                      <label for="tiny-ex">tiny-input</label>
+                      <input type="text" name="tiny-ex" aria-required="true" class="tiny-input" id="tiny-ex">
+                    </div>
+                    <div class="question">
+                      <label for="sm-ex">sm-input</label>
+                      <input type="text" name="sm-ex" aria-required="true" class="sm-input" id="sm-ex">
+                    </div>
+                    <div class="question">
+                      <label for="med-ex">med-input</label>
+                      <input type="text" name="med-ex" aria-required="true" class="med-input" id="med-ex">
+                    </div>
+                    <div class="question">
+                      <label for="lg-ex">lg-input</label>
+                      <input type="text" name="lg-ex" aria-required="true" class="lg-input" id="lg-ex">
+                    </div>
+                    <div class="question">
+                      <label for="fw-ex">fw-input</label>
+                      <input type="text" name="fw-ex" aria-required="true" class="fw-input" id="fw-ex">
+                    </div>
+                  </form>
+                </div>
+        
+                <!--Inlined Inputs/Buttons-->
+                <div class="cell co-doc">
+                  <h3>Inlined inputs and buttons</h3>
+                  <p>By default, form inputs will stack vertically.
+                    If you want them to align horizontally, give the <code>question</code> divs the additional class of
+                    <code>inlined</code>.
+                    If there is a button that you want to also align with the inputs you cand give the button itself the class
+                    of <code>inlined</code>.
+                </div>
+                <div class="cell co-ex">
+                  <form>
+                    <div class="question inlined">
+                      <label for="select2">Select Input</label>
+                      <select id="select2" name="select2">
+                        <option>Select one</option>
+                        <option value="Option1">Option 1</option>
+                        <option value="Option2">Option 2</option>
+                      </select>
+                    </div>
+                    <div class="question inlined">
+                      <label for="text2" class="required">Input inlined with button</label>
+                      <input type="text" name="text2" aria-required="true" id="text2">
+                    </div>
+                    <button class="button primary inlined">Button</button>
+                  </form>
+                </div>
+        
+                <!--Checkboxes and Radio Buttons-->
+                <div class="cell co-doc">
+                  <h3>Checkboxes and Radio Buttons</h3>
+                  <p>
+                    Fieldsets for checkboxes and radio buttons should also be wrapped in a <code>question</code> div.
+                    The <code>fieldset</code> should given the class <code>radcheck</code>.
+                    Each pairing of the <code>input</code> and it's <code>label</code> should be wrapped in it's own div.
+                  </p>
+                  <h4>Indended Checkboxes / Radio buttons</h4>
+                  <p>
+                    If a checkbox or radio button is sub-option of another option, you can indent it by giving the
+                    <code>div</code> the class <code>indented</code>.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell col-6-md">
+                      <form>
+                        <div class="question">
+                          <fieldset class="radcheck">
+                            <legend>Checkboxes</legend>
+                            <div>
+                              <input id="checkbox1" type="checkbox" name="checkbox1">
+                              <label for="checkbox1">checkbox 1</label>
+                            </div>
+                            <div>
+                              <input id="checkbox2" type="checkbox" name="checkbox2">
+                              <label for="checkbox2">checkbox 2</label>
+                            </div>
+                            <div class="indented">
+                              <input id="checkbox3" type="checkbox" name="checkbox3">
+                              <label for="checkbox3">checkbox 3</label>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="cell col-6-md">
+                      <form>
+                        <div class="question">
+                          <fieldset class="radcheck">
+                            <legend>Radio Buttons</legend>
+                            <div>
+                              <input type="radio" name="radio" value="radio1" id="radio1">
+                              <label for="radio1">Radio 1</label>
+                            </div>
+                            <div>
+                              <input type="radio" name="radio" value="radio2" id="radio2">
+                              <label for="radio2">Radio 2</label>
+                            </div>
+                            <div class="indented">
+                              <input type="radio" name="radio" value="radio3" id="radio3">
+                              <label for="radio3">Radio 3</label>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+        
+        
+        
+                <!--Inlined Checkboxes or Radio Buttons-->
+                <div class="cell co-doc">
+                  <h3>Inlined Checkboxes or Radio Buttons</h3>
+                  <p>By default, checkboxes and radio buttons are also listed vertically.
+                    To have them list horizontally, give the <code>question</code> div the class <code>block-fieldset</code>
+                  </p>
+                  <p>If you wish for the legend to appear inline with the radio/checkbox inputs instead of above them, give the
+                    <code>question block-fieldset</code> div the additional class <code>left-legend</code>.
+                </div>
+                <div class="cell co-ex">
+                  <form>
+                    <div class="question block-fieldset">
+                      <fieldset class="radcheck ">
+                        <legend>Legend</legend>
+                        <div>
+                          <input id="checkbox1" type="checkbox" name="checkbox1">
+                          <label for="checkbox1">checkbox 1</label>
+                        </div>
+                        <div>
+                          <input id="checkbox2" type="checkbox" name="checkbox2">
+                          <label for="checkbox2">checkbox 2</label>
+                        </div>
+                        <div>
+                          <input id="checkbox3" type="checkbox" name="checkbox3">
+                          <label for="checkbox3">checkbox 3</label>
+                        </div>
+                      </fieldset>
+                    </div>
+        
+                    <div class="question block-fieldset left-legend">
+                      <fieldset class="radcheck ">
+                        <legend>Left Legend</legend>
+                        <div>
+                          <input id="checkbox1" type="checkbox" name="checkbox1">
+                          <label for="checkbox1">checkbox 1</label>
+                        </div>
+                        <div>
+                          <input id="checkbox2" type="checkbox" name="checkbox2">
+                          <label for="checkbox2">checkbox 2</label>
+                        </div>
+                        <div>
+                          <input id="checkbox3" type="checkbox" name="checkbox3">
+                          <label for="checkbox3">checkbox 3</label>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </form>
+                </div>
+        
+                <!--Form Note-->
+                <div class="cell co-doc">
+                  <h3>Form Note</h3>
+                  <p>Some of the form pages in the registration process have supplimentary instructions in addition to the main
+                    instructions
+                    (EX: "All fields are required unless marked. You may update this information at any point in your “My
+                    Accounts” page.").
+                    To style these differently than the main instructions, give the <code>p</code> tag the class
+                    <code>form-note</code>. <code>form-notes</code> is also
+                    used to mark optional input fields (see "Optional and Required Inputs" section below).
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <p class="form-note">This is a form note</p>
+                </div>
+        
+                <!--Optional Inputs-->
+                <div class="cell co-doc">
+                  <h3>Optional and Required Inputs</h3>
+                  <p>When a form input is optional, put the text "(Optional)" in the <code>label</code> or
+                    <code>legend</code>wrapped in a <code>span</code> with the class <code>form-note</code>
+        
+                  <p class="warning-note">The current plan is to have required be the default and mark optional inputs.
+                    However, if usability tests indicate that it's preferable to mark the required inputs instead, a class has
+                    already been prepared.
+                    Simply give the the <code>label</code> the class <code>required</code>.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <form>
+                    <div class="question">
+                      <label for="text">Text Input <span class="form-note">(Optional)</span></label>
+                      <input type="text" name="text" aria-required="true" id="text">
+                    </div>
+                    <div class="question">
+                      <label for="text" class="required">Required Input</label>
+                      <input type="text" name="text" aria-required="true" id="text">
+                    </div>
+                  </form>
+                </div>
+        
+        
+                <!--Error summary-->
+                <div class="cell co-doc">
+                  <h3>Form Error Summary</h3>
+                  <p>
+                    When there are multiple inputs on a page that could potentially trigger an error message,
+                    an error summary should appear at the top of the page that list all the error messages on <thead>
+                      page and links to the input for each error message. The individual inputs should also have
+                      relevant error messages on them (see "Error Messages on Inputs" section below).
+                      <strong>Note:</strong> If there is only one input on the page, then the error summary is not
+                      necessary you can just put the error message on the input as the sole error message.
+                  </p>
+                  <pre class="codebloc">
+        &lt;div class="cell co-ex">
+          &lt;div class="error-summary">
+            &lt;h2>Please correct the following errors before submitting:&lt;/h2>
+            &lt;ul>
+              &lt;li>&lt;a href="#">Form cannot be empty. Please fill in at least one search input field before searching.&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#main">To date cannot be before from date.&lt;/a>&lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/div>
+        </pre>
+                  <p>To create the error message, give a div the class <code>error-summary</code>.
+                    Put a heading at the appropriate level for the page in question, then put a <code>ul</code>
+                    with a list of the error messages with jump links to the specific inputs for those error messages.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <div class="error-summary">
+                    <h2>Please correct the following errors before submitting:</h2>
+                    <ul>
+                      <li><a href="#">Form cannot be empty. Please fill in at least one search input field before searching.</a>
+                      </li>
+                      <li><a href="#main">To date cannot be before from date.</a></li>
+                    </ul>
+                  </div>
+                </div>
+        
+        
+                <!--Error Messages-->
+                <div class="cell co-doc">
+                  <h3>Error Messages on Inputs</h3>
+                  <p>
+                    To display an error message on the specific form input, put the class <code>error</code>
+                    on the same div that has the <code>question</code> class on it. This will put a red box around the
+                    input. At the very top of this div should be a <code>p</code> with the class <code>error-mssg</code>.
+                    This <code>error-mssg</code> should be not be displayed by default, and only be displayed when there is an
+                    error on the form input in question.
+                    The error box will span the full length of the div they are in. To control the width, use the grid layout
+                    classes.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell col-4-md">
+                      <form>
+                        <div class="question error">
+                          <p class="error-mssg">Error Message on 4 column cell div</p>
+                          <label for="text-error">Text Input</label>
+                          <input type="text" name="text-error" aria-required="true" id="text-error">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="cell col-4-md">
+                      <form>
+                        <div class="question error">
+                          <p class="error-mssg">Very Very Very Very Very Very Very Very Very Very Very Very Very Very Long Error
+                            Message on a 4 column cell div</p>
+                          <label for="text-error">Text Input</label>
+                          <input type="text" name="text-error" aria-required="true" id="text-error">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="cell">
+                      <form>
+                        <div class="question error">
+                          <p class="error-mssg">Very Very Very Very Very Very Very Very Very Very Very Very Very Very Long Error
+                            Message on a 12-column cell div</p>
+                          <label for="text-error">Text Input</label>
+                          <input type="text" name="text-error" aria-required="true" id="text-error">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell">
+                      <h4>One error Message on multiple questions</h4>
+                      <p>If an error message incapsulates two or more inputs together
+                        (ie: The date in "from date" input needs to be before the date in "to date" input)
+                        you can put the <code>error</code> class on a div or <code>fieldset</code> that contains all the
+                        inputs and put the <code>error-mssg</code> within at the top of said div or <code>fieldset</code>,
+                        instead of having the same error message on multiple inputs.
+                      </p>
+                    </div>
+                    <div class="cell">
+                      <fieldset class="error">
+                        <p class="error-mssg">From date needs to be before the start date</p>
+                        <div class="question inlined">
+                          <label for="from-duedate">From Date:</label>
+                          <input type="date" id="duedate-from" name="duedate-from">
+                        </div>
+                        <div class="question inlined">
+                          <label for="to-duedate">To Date:</label>
+                          <input type="date" id="duedate-to" name="duedate-to">
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+        
+                <!--Disabled Form Fields-->
+                <div class="cell co-doc">
+                  <h3>Disabled Form Fields</h3>
+                  <p>Disabled form fields should be used rarely, but there is css in place to handle when they do happen.
+                    There is no additional css classes that need to be added to disabled form elements. </p>
+                </div>
+                <div class="cell co-ex">
+                  <form>
+                    <div class="grid-container grid-gap-30">
+                      <div class="cell col-3-md">
+                        <div class="question">
+                          <label for="text-error">Disabled Text Input</label>
+                          <input disabled type="text" name="text-error" aria-required="true" id="text-error">
+                        </div>
+                      </div>
+                      <div class="cell col-3-md">
+                        <div class="question">
+                          <label for="select">Select Input</label>
+                          <select disabled id="select" name="select">
+                            <option>Select one</option>
+                            <option value="Option1">Option 1</option>
+                            <option value="Option2">Option 2</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="cell col-3-md">
+                        <fieldset class="radcheck">
+                          <legend>Checkboxes</legend>
+                          <div>
+                            <input disabled id="diabled-check" type="checkbox" name="diabled-check">
+                            <label for="diabled-check">Checkbox</label>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div class="cell col-3-md">
+                        <fieldset class="radcheck">
+                          <legend>Radio</legend>
+                          <div>
+                            <input disabled id="diabled-radio" type="radio" name="diabled-radio">
+                            <label for="disabled-radio">Radio</label>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!--## Tables-->
+    <div class="content-block" id="tables">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Tables</h2>
+          <button class="toggle" role="button" aria-controls="tables-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell" id="tables-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                    <!--Default Tables-->
+        <div class="cell co-doc">
+          <h3>Default Tables</h3>
+          <p>Below is an example of a table. It appears styled by default, and no additional classes are needed</p>
+        </div>
+        <div class="cell co-ex">
+          <table>
+            <tr>
+              <th>Procurement #</th>
+              <th>Insitution</th>
+              <th>Date</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><a href="#">1234567</a></td>
+              <td>UABC</td>
+              <td>MM/DD/YYYY</td>
+              <td>This is a description</td>
+            </tr>
+            <tr>
+              <td><a href="#">1234567</a></td>
+              <td>UABC</td>
+              <td>MM/DD/YYYY</td>
+              <td>This is a description</td>
+            </tr>
+            <tr>
+              <td><a href="#">1234567</a></td>
+              <td>UABC</td>
+              <td>MM/DD/YYYY</td>
+              <td>This is a description</td>
+            </tr>
+          </table>
+        </div>
+
+        <!--Datatables-->
+        <div class="cell co-doc">
+          <h3>Datatables</h3>
+          <p class="warning-note">Datatable documentation will go here.</p>
+        </div>
+        
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <!-- ##Static Containers-->
+    <div class="content-block" id="static">
+      <div class="grid-container grid-gap-30 devblock">
+
+        <div class="cell dbheader">
+          <h2>Static Containers</h2>
+          <button class="toggle" role="button" aria-controls="static-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell" id="static-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Callout-->
+                <div class="cell co-doc">
+                  <h3>Callout</h3>
+                  <p>Callout boxes are used in the registration and account section to provide additional information.
+                    You can create one by giving a div the class of <code>callout</code>. The size of the callout box
+                    should be determined using the <a href="#layout">grid system</a>.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <div class="callout">
+                    <h2>This is a callout box h2 heading.</h2>
+                    <p>This is an example of text in a calloutbox <a href="#">including an example of a link.</a> </p>
+                    <ul>
+                      <li>List styling has been adjusted</li>
+                      <li>to take up less vertical space</li>
+                      <li>inside callout boxes</li>
+                      <li>for both
+                        <ol>
+                          <li>ordered lists and</li>
+                          <li>unordered lists</li>
+                        </ol>
+                      </li>
+        
+                    </ul>
+                  </div>
+                </div>
+        
+                <!--Card-->
+                <div class="cell co-doc">
+                  <h3>Cards</h3>
+                  <p>
+                    Cards are used to contain groups of information. They are used on the in notices, the NIPG modal, and on the
+                    Resources page on the Staff side.
+                  </p>
+                  <pre class="codebloc">
+        &lt;div class="card">
+          &lt;div class="card-header">
+            &lt;h3>Card Header - Default Card&lt;/h3>
+          &lt;/div>
+          &lt;div class="card-body">
+            &lt;p>Card body content&lt;/p>
+          &lt;/div>
+        &lt;/div></pre>
+                  <p>
+                    You can change the style of card header by adding one of the following classes to the same div as the
+                    <code>card</code> class:
+                  </p>
+                  <ul>
+                    <li><code>blue-card</code></li>
+                    <li><code>yellow-card</code></li>
+                    <li><code>red-card</code></li>
+                    <li><code>green-card</code></li>
+                    <li><code>plain-card</code></li>
+                  </ul>
+                  <p class="warning-note">10/24/24 Update: Added additional styling classes for cards. Cards with the additional
+                    class "plain-card" are replacing the now defunct "contact-card" class that was previously used on the
+                    Contact page of the public Bulletin.</p>
+                </div>
+                <div class="cell co-ex">
+                  <div class="grid-container grid-gap-10">
+        
+                    <!--Default Card-->
+                    <div class="cell">
+                      <div class="card">
+                        <div class="card-header">
+                          <h3>Card Header - Default Card</h3>
+                        </div>
+                        <div class="card-body">
+                          <p>Card body content</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <!--Blue Card-->
+                    <div class="cell col-6-sm">
+                      <div class="card blue-card">
+                        <div class="card-header">
+                          <h3>Card Header - blue-card</h3>
+                        </div>
+                        <div class="card-body">
+                          <p>Card body content</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <!--Yellow Card-->
+                    <div class="cell col-6-sm">
+                      <div class="card yellow-card">
+                        <div class="card-header">
+                          <h3>Card Header - yellow-card</h3>
+                        </div>
+                        <div class="card-body">
+                          <p>Card body content</p>
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                    <!--Red Card-->
+                    <div class="cell col-6-sm">
+                      <div class="card red-card">
+                        <div class="card-header">
+                          <h3>Card Header - red-card</h3>
+                        </div>
+                        <div class="card-body">
+                          <p>Card body content</p>
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                    <!--Green Card-->
+                    <div class="cell col-6-sm">
+                      <div class="card green-card">
+                        <div class="card-header">
+                          <h3>Card Header - green-card</h3>
+                        </div>
+                        <div class="card-body">
+                          <p>Card body content</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <!--Plain Card-->
+                    <div class="cell col-6-sm">
+                      <div class="card plain-card">
+                        <div class="card-header">
+                          <h3>Card Header - plain-card</h3>
+                        </div>
+                        <div class="card-body">
+                          <p>Card body content</p>
+                        </div>
+                      </div>
+                    </div>
+        
+        
+                  </div>
+                </div>
+        
+                <!--Attention Boxes-->
+                <div class="cell co-doc">
+                  <h3>Attention Boxes</h3>
+                  <p>
+                    When there is a section of text that you want to draw the users attention to, you can use an "attention
+                    box".
+                    These can also be used at the top of forms for success message or if the error/warning applies to the entire
+                    form,
+                    rather than to individual inputs (in which case you would use an <span class="placeholder">form
+                      summary</span> element instead.)
+                  </p>
+                  <pre class="codebloc">
+        &lt;div class="cell col-6-md attn-box attn-warning">
+          &lt;div class="attn-img">
+            &lt;p class="hidden">Warning!&lt;/p>
+          &lt;/div>
+          &lt;div class="attn-mssg">
+            &lt;p>This is where your message goes.&lt;/p>
+          &lt;/div>
+        &lt;/div>
+        </pre>
+                  <p>
+                    The <code>attn-img</code> shouldn't actually contain an image file - the image is added via css.
+                    Instead, the only contents in this box should be a <code>p</code> with the class
+                    <code>vissuallyhidden</code>
+                    to add "alt text" for screenreader users - for example, the hidden text "warning!" has been added to make
+                    up for the fact that screenreader users can't see the warning icon.
+                  </p>
+                  <p>
+                    The <code>attn-mssg</code> should contain your text in a <code>p</code> tag.
+                  </p>
+        
+                  <p>
+                    There are three different styles of attention box:
+                  </p>
+                  <ul>
+                    <li><code>attn-warning</code> - The "warning" (yellow) box should be used for standard warnings</li>
+                    <li><code>attn-crit-error</code> - The "critical error" (red) box should be used for more serious/urgent
+                      warnings.</li>
+                    <li><code>attn-success</code> - The "success" (green) box should be used for sucess messages, like after
+                      password is sucessfully updated</li>
+                  </ul>
+                </div>
+                <div class="cell">
+                  <div class="grid-container grid-gap-10">
+                    <div class="cell col-6-md attn-box attn-warning">
+                      <div class="attn-img">
+                        <p class="hidden">Warning!</p>
+                      </div>
+                      <div class="attn-mssg">
+                        <p>This is a warning attention box, used for standard warnings.</p>
+                      </div>
+                    </div>
+                    <div class="cell col-6-md attn-box attn-crit-error">
+                      <div class="attn-img">
+                        <p class="hidden">Warning!</p>
+                      </div>
+                      <div class="attn-mssg">
+                        <p>This is a critical warning attention box, used for critical, urgent, or especially important
+                          warnings.</p>
+                      </div>
+                    </div>
+                    <div class="cell col-6-md attn-box attn-success">
+                      <div class="attn-img">
+                        <p class="hidden">Success!</p>
+                      </div>
+                      <div class="attn-mssg">
+                        <p>This is a success attention box, used for when the user has successed at something.</p>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+    <!-- ## Dynamic Containers-->
+    <div class="content-block" id="dynamic">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Dynamic Components</h2>
+          <button class="toggle" role="button" aria-controls="dynamic-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell" id="dynamic-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                    <!--Modal-->
+        <div class="cell co-doc">
+          <h3>Modal</h3>
+          <p class="src-note">The javascript that controls this modal is fond in the modal.js or modal-min.js files and
+            was sourced from the <a href="https://van11y.net/accessible-modal/">van11y.net accessible modal window</a>.
+          <p>
+
+          <h4>Modal Trigger</h4>
+          <p>Modal triggers can be created by giving the trigger in question (in this case the <code>button</code>) the
+            class <code>js-modal</code> and these additional attributes:</p>
+
+          <pre class="codebloc">
+&lt;button class="js-modal button primary" data-modal-prefix-class="simple" 
+data-modal-content-id="example-modal" data-modal-title="Title for your modal" 
+data-modal-close-text="&times;" data-modal-close-title="Close modal">
+Show me a modal
+&lt;/button>
+</pre>
+          <p>The <code>data-modal-prefix-class</code> attribute can have the following values</p>
+          <ul>
+            <li><code>simple</code> - the default modal, it will have a $primary-blue title section </p>
+            </li>
+            <li><code>warning</code> - used for warnings, will have a yellow title section with an alert icon </p>
+            </li>
+            <li><code>critical</code> - used for critical warnings or errors, will have a red title section with an
+              alert icon </p>
+            </li>
+          </ul>
+
+          <h4>Modal Content</h4>
+          <p>
+            The modal content is created by giving a div the id that matches the <code>data-modal-content-id</code>
+            property of the trigger, as well as the classes <code>hidden</code>,<code>reveal</code>, and
+            <code>modal-body</code>.
+            The contents of the modal can then be put inside this div.
+          </p>
+          <pre class="codebloc">
+&lt;div id="example-modal" class="hidden reveal modal-body">
+    &lt;p>This is a modal.&lt;/p>
+    &lt;button class="secondary button">This is a button&lt;/button> 
+&lt;/div>
+          </pre>
+        </div>
+        <div class="cell">
+          <div class="button-group">
+            <button class="js-modal button primary" data-modal-prefix-class="simple"
+              data-modal-content-id="modal_example" data-modal-title="Title for default modal"
+              data-modal-close-text="&times;" data-modal-close-title="Close modal">Show me a modal</button>
+
+            <button class="js-modal button primary" data-modal-prefix-class="warning"
+              data-modal-content-id="modal_example-warning" data-modal-title="Title for warning modal"
+              data-modal-close-text="&times;" data-modal-close-title="Close modal">Show me a warning modal</button>
+
+            <button class="js-modal button primary" data-modal-prefix-class="critical"
+              data-modal-content-id="modal_example-critical" data-modal-title="Title for critical modal"
+              data-modal-close-text="&times;" data-modal-close-title="Close modal">Show me a critical modal</button>
+          </div>
+
+        </div>
+        <div id="modal_example" class="hidden reveal modal-body">
+          <p>This is a modal.</p>
+        </div>
+
+        <div id="modal_example-warning" class="hidden reveal modal-body">
+          <p>This is a warning modal.</p>
+        </div>
+        <div id="modal_example-critical" class="hidden reveal modal-body">
+          <p>This is a critical modal.</p>
+        </div>
+
+        <div class="cell co-ex">
+          <p class="warning-note">There is fallback css (nojs.css) in place for displaying the information in a modal if
+            javascript is disabled. In this case the
+            contents of the modal will appear inline in the page whereever it is placed. We will probably need to make
+            adjustments to this to account for what would make
+            the most sense for each indivdual instances of a modal. <strong>11/5/24</strong> - This appears to be
+            currently not working, will need to fix
+          </p>
+        </div>
+
+
+        <!--Accordions-->
+        <div class="cell co-doc" id="accordion-section">
+          <h3>Accordion</h3>
+          <p class="src-note">Accordions rely on jquery to work, plus some adapted custom Javascipt - see below.
+          <p>To create an accordion component, give a div class of <code>accordion</code>. Each accordion "panel" should
+            be within this div and is made up of two parts - the header and the content. </p>
+          <p> The header is created by giving a heading (an <code>h3</code> is used in the example) the class of
+            <code>header</code>. Within that heading
+            there should be a span that contains the actual text of the header with the following attributes:
+          </p>
+          <code>
+            &lt;span title="Click to toggle More Info section" class="toggle" role="button" aria-controls="section1" tabindex="0" aria-expanded="false">Heading Text&lt;/span>
+          </code>
+          <p>The "aria-control" attribute should match the id on the corresponding content div.</p>
+
+          <p>The content section is created by giving a dive the class <code>content</code>. The id needs to match
+            the "aria-control" of the header and the div should have the inline style of
+            <code>style="display:none;"</code>
+            by default so that it doesn't appear until the accordion is opened.
+          <p>
+
+          <h4>Small Accorions</h4>
+          <p>To make a small version of an accordion for areas where screen real estate is tight (inside the NIGP Code
+            Modal or in the Advanced Search interface),
+            give the div with the class <code>accordion</code> the additional class of <code>small-accordion</code>.
+          <h4>Javascript inside of modals</h4>
+          <p>There is custom Javascript needed for the accordions to work properly inside of modals: </p>
+          <pre class="codebloc">
+            &lt;script type="text/javascript" id="slideToggleScript">
+              $(document).ready(function(){
+                $(".toggle").click(function(){
+                  toggleContent(this);
+                });
+
+                $(".toggle").keydown(function(event){
+                  var key = event.which || event.keyCode;
+                  if(key == 13) {
+                    $(this).click();
+                    event.preventDefault();
+                  }
+                });
+
+                $("input.js-modal").click(function(){
+                  $("#js-modal .toggle").click(function(){
+                    toggleContent(this);
+                  });
+
+                  $("#js-modal .toggle").keydown(function(event){
+                    var key = event.which || event.keyCode;
+                    if(key == 13) {
+                      $(this).click();
+                      event.preventDefault();
+                    }
+                  });
+                });
+              });
+
+
+              function toggleContent(buttonClicked) {
+                //getting the next element
+                var contentID = "#" + $(buttonClicked).attr('aria-controls');
+                //checking if its already visible
+                if ($(buttonClicked).attr('aria-expanded') === 'true') {
+                  $(buttonClicked).attr("aria-expanded", "false");
+                }
+                else {
+                  $(buttonClicked).attr("aria-expanded", "true");
+                }
+                $(contentID).slideToggle(0);
+                return false;
+              };
+            &lt;/script>
+          </pre>
+
+          <h4>NIGP Code Accordions</h4>
+          <p>The accordion showing NIPG codes in various places (the NIGP code modal, the email notification pages of
+            the Registration and My Account sections, and the advanced search form have additional special styling on
+            top of the base accordion styling.
+            <a href="#nigp-accordion">See the NIGP Code Accordion section for more information.</a>
+          </p>
+        </div>
+        <div class="cell co-ex ">
+          <p><strong>A regular sized accordion</strong></p>
+          <div class="accordion">
+            <h3 class="header">
+              <span title="Click to toggle More Info section" class="toggle" role="button" aria-controls="section1"
+                tabindex="0" aria-expanded="false">Accordion 1</span>
+            </h3>
+            <div id="section1" class="content" style="display:none;">
+              <p>Content of Accordion 1</p>
+            </div>
+            <h3 class="header">
+              <span title="Click to toggle More Info section" class="toggle" role="button" aria-controls="section2"
+                tabindex="0" aria-expanded="false">Accordion 2</span>
+            </h3>
+            <div id="section2" class="content" style="display:none;">
+              <p>Content of Accordion 2</p>
+            </div>
+          </div>
+
+          <p><strong>A small accordion</strong></p>
+          <div class="accordion small-accordion">
+            <h3 class="header">
+              <span title="Click to toggle More Info section" class="toggle" role="button" aria-controls="section1-sm"
+                tabindex="0" aria-expanded="false">Accordion 1</span>
+            </h3>
+            <div id="section1-sm" class="content" style="display:none;">
+              <p>Content of Accordion 1</p>
+            </div>
+            <h3 class="header">
+              <span title="Click to toggle More Info section" class="toggle" role="button" aria-controls="section2-sm"
+                tabindex="0" aria-expanded="false">Accordion 2</span>
+            </h3>
+            <div id="section2-sm" class="content" style="display:none;">
+              <p>Content of Accordion 2</p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <!--Alert-->
+        <div class="cell co-doc">
+          <h3>Dismissable Alert Banner</h3>
+          <p class="src-note">The javascript that controls the alert component is located in the pb-public.js or
+            pb-public-min.js files</p>
+          <p>This alert banner should normally appear at the very top of the <code>body</code> section of the HTML,
+            above even the <code>header</code>.
+            It should be in an <code>aside</code>, the role <code>complmentary</code>, the aria-label
+            <code>Alert</code>,
+            and the class class <code>alert</code>. It also needs to have a unique ID.
+          </p>
+          <p>For a "warning" alert (yellow), also give the <code>aside</code> the class <code>alert-warning</code>.
+            For a critical issue/error alert (red), give the <code>aside</code> the class <code>alert-crit-error</code>
+            instead.
+          </p>
+          <p class="warning-note">The aside, role and aria-label information is subject to change based on QA's
+            accessibility assessment.</a>
+          <p> Inside the <code>aside</code> there is a div with the class <code>grid-container</code>, which then has a
+            child div with the class <code>cell</code>.
+            Inside the <code>cell</code> is a <code>button</code> with the class <code>closebtn</code> and the js event
+            <code>onclick="removeAlert('ID')</code>, where "ID" is replaced
+            by the alert's ID.
+            The <code>button</code>'s contents are "& times;" (no space after the "&").
+            There is then a <code>p</code> with the class<code>alert-mssg</code> that contains the text of the alert.
+          </p>
+        </div>
+        <div class="cell co-ex ">
+          <aside class="alert alert-warning" id="alert-1" role="complementary" aria-label="Alert">
+            <div class="grid-container">
+              <div class="cell">
+                <button class="closebtn" onclick="removeAlert('alert-1')">&times;</button>
+                <p class="alert-mssg"><strong>Warning!</strong> This is a warning alert.</p>
+              </div>
+            </div>
+          </aside>
+
+          <aside class="alert alert-crit-error" id="alert-2" role="complementary" aria-label="Alert">
+            <div class="grid-container">
+              <div class="cell">
+                <button class="closebtn" onclick="removeAlert('alert-2')">&times;</button>
+                <p class="alert-mssg"><strong>Danger!</strong> This is a critical warning alert.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+
+        <!--Pagination-->
+        <div class="cell co-doc hidden">
+          <h4>Pagination</h4>
+          <p>Pagination appears as the second div in the notices div, under the <code>grid-container</code> that conains
+            all the notice previews.
+            The div has the class <code>pagination</code>. There is then a <code>p</code> tag that contains are the
+            links for the different pages.
+            If the user is on the first page then the "previous" link doesn't appear, and if the user is on the last
+            page the "next" link doesn't appear.
+            The <code>a</code> tag for the page that the user is currently on is given the class <code>current</code>.
+        </div>
+        <div class="cell hidden">
+          <h3>Pagination on first page</h3>
+          <div class="pagination">
+            <p>
+              <a href="" class="current">1</a>
+              <a href="">2</a>
+              <a href="">3</a>
+              <a href="">4</a>
+              <a href="">5</a>
+              <a href="">6</a>
+              <a href="">7</a>
+              <a href="">8</a>
+              <a href="">9</a>
+              <a href="">10</a>
+              <a href="">Next</a>
+            </p>
+          </div>
+        </div>
+        <div class="cell hidden">
+          <h3>Pagination on 11th page</h3>
+          <div class="pagination">
+            <p>
+              <a href="">Previous</a>
+
+              <a href="">6</a>
+              <a href="">7</a>
+              <a href="">8</a>
+              <a href="">9</a>
+              <a href="">10</a>
+              <a href="" class="current">11</a>
+              <a href="">12</a>
+              <a href="">13</a>
+              <a href="">14</a>
+              <a href="">15</a>
+              <a href="">16</a>
+              <a href="">Next</a>
+            </p>
+          </div>
+        </div>
+        <div class="cell hidden">
+          <h3>Pagination on last page page</h3>
+          <div class="pagination">
+            <p>
+              <a href="">Previous</a>
+              <a href="">1</a>
+              <a href="">2</a>
+              <a href="">3</a>
+              <a href="">4</a>
+              <a href="">5</a>
+              <a href="">6</a>
+              <a href="">7</a>
+              <a href="">8</a>
+              <a href="">9</a>
+              <a href="" class="current">10</a>
+            </p>
+          </div>
+        </div>
+        
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!--## Helper -->
+    <div class="content-block" id="helper">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Helper CSS</h2>
+          <button class="toggle" role="button" aria-controls="helper-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+        <div class="cell" id="helper-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Display-->
+                <div class="cell co-doc">
+                  <h3>Display and layout Helpers</h3>
+                  <p>
+                    There are a few different CSS classes, some that have already been mentioned in this documentation,
+                    that can be useful in a number of different scenarios for display and layout purposes. They include
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <ul>
+                    <li><code>hidden</code> - Hides the content from sighted users, but not from screenreaders</li>
+                    <li><code>noDisplay</code> - Changes display to "none"</li>
+                    <li><code>inlined</code> - Changes display to "inline-block"</li>
+                    <li><code>show</code> - Changes display to "block"</li>
+                    <li><code>push-right</code> - Gives the element a 2rem margin on the right</li>
+                    <li><code>push-bottom</code> - Gives the element a 1.5rem margin on the bottom</li>
+                    <li><code>push-top</code> - Gives the element a 1.5rem margin on the top</li>
+                    <li><code>noTop</code> - Removes the top margin and padding from an element</li>
+                    <li><code>noBottom</code> - Removes the bottom margin and padding from an element</li>
+                    <li><code>centered</code> - Sets text-align to center</li>
+                  </ul>
+                </div>
+        
+                <!--Plain Links-->
+                <div class="cell co-doc">
+                  <h3>Plain-link</h3>
+                  <p>
+                    In many cases, images that also function as links have their styling provided within other classes that
+                    provide additional styles of the element in question. However, if this is not the case you can use the
+                    class <code>plain-link</code> to remove the border-bottom from a link.
+                  </p>
+                </div>
+                <div class="cell co-ex">
+                  <a class="plain-link" href="">I'm a plain link</a>
+                </div>
+        
+                <!--Placeholder-->
+                <div class="cell co-doc">
+                  <h3>Placeholder</h3>
+                  <p>
+                    The <code>placeholder</code> class adds a bright yellow background to an element. It should be used in
+                    development to call out placeholder text that needs to be replaced.
+                    It should not be used in production.
+                  </p>
+                </div>
+                <div class="cell ">
+                  <p class="placeholder">[Insert final text here]</p>
+                </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--no javascript fallback css -->
+    <div class="content-block" id="nojs">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>No Javascript Fallbacks</h2>
+          <button class="toggle" role="button" aria-controls="nojs-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+        </div>
+
+        <div class="cell" id="nojs-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                <!--Display-->
+                <div class="cell co-doc">
+                  <h3>No Javascript Fallback CSS</h3>
+                  <p>
+                    There are a number of components featured on the site that rely on javascript being enabled in order
+                    to function properly. In cases where a user has javascript disabled in their browser, there are some
+                    fallbacks put in place. While using javacript is highly encouraged as it will ensure the mose
+                    pleasant and user friendly experience and there are portions of the site that will just not be usable
+                    at all without javascript, these fallbacks will make sure that the inforamtional portoions
+                    site is still met the bare minimum for functionality.
+                  </p>
+                  <p>To initalize the fallbacks, each page should have a call to the "nojs.css" file after the call to the
+                    pb-public.css file that is placed within a <code>noscript</code> tag as such:</p>
+                  <pre class="codebloc">&lt;noscript> &lt;link rel="stylesheet" href="css/nojs.css">&lt;/noscript></pre>
+                  <p>If the nojs.css is called, the following things will happen:
+                  <ul>
+                    <li>All accordions panels will appear as opened</li>
+                    <li>The <code>reveal</code> modal div will be displayed inline within the page based where it was placed in
+                      the HTML</li>
+                    <li>On small screens the navigation toggle will be open by default and cannot be closed</li>
+                    <li>The sideback subnavigation will not disappear on small screens</li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- ## Page Specific -->
+    <div class="content-block" id="page">
+      <div class="grid-container grid-gap-10 devblock">
+        <div class="cell dbheader">
+          <h2>Page-Specific & Combination Components</h2>
+          <button class="toggle" role="button" aria-controls="page-content" tabindex="0"  aria-expanded="false">Hide/Show Section</button>
+
+          <a href="#main">Back to top</a>
+          <p>These are specialized and/or complex components that only appear on select pages.</p>
+          <ul class="toc">
+            <li><a href="#page-search">Search Results</a></li>
+            <li><a href="#page-NIGP">NIGP Code Page</a></li>
+            <li><a href="#page-downtime">Downtime Page</a></li>
+          </ul>
+          <p class="warning-note">This section is currently out of date and in the process of being updated</p>
+        </div>
+
+        <div class="cell" id="page-content" style="display:none;">
+          <div class="grid-container grid-gap-10">
+                    <!--Search-->
+        <div class="cell page-section" id="page-search">
+          <div class="grid-container grid-gap-10">
+            <div class="cell page-section-header">
+              <h3>Search Results Page</h3>
+              <a href="#main">Back to top</a>
+              <a href="#page">Back to Page-Specific Table of Contents</a>
+            </div>
+
+            <!--Simple Search-->
+            <div class="cell co-doc">
+              <h4>Simple Search</h4>
+              <p>
+                The search feature on the Search Results page is placed in a div with the classes
+                <code>content-block blue-block</code>, with <code>grid-container grid-gap-10</code> directly inside.
+                Inside the <code>grid-container</code> is a div with the classes <code>cell search</code>. Inside that
+                div is a <code>form</code> , inside which is another div with the class <code>simple-search</code>.
+                There two divs inside the <code>simple-search</code>. The first contains the search input and the label
+                with the classes <code>question inlined</code>.
+                The second div has the classes <code>button-group inlined</code> and contains the search button (with
+                the classes <code>button accent</code>)
+                and a link to the Advanced Search page (with the classes <code>utton hollow</code>).
+              </p>
+            </div>
+            <div class="cell co-ex">
+              <div class="content-block blue-block">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell search">
+                    <form>
+                      <div class="simple-search">
+                        <div class="question inlined">
+                          <label for="simple-search">Search the Bulletin:</label>
+                          <input type="search" id="searchbox" name="searchbox">
+                        </div>
+                        <div class="button-group inlined">
+                          <button value="search" class="button accent" type="submit">Search</button>
+                          <a href="/search-results-advanced.html" class="button hollow" type="button">Advanced
+                            Search</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Advanced Search-->
+            <div class="cell co-doc">
+              <h4>Advanced Search</h4>
+              <p>
+                Advanced Search is initially set up the same way as simple search, but under <code>simple-search</code>
+                div there is another div with the class <code>advanced-search</code>.
+              </p>
+              <p>There are a two changes to the <code>simple-search</code> div: removing the search button and changing
+                the link to the Advanced Search into a link to Simple Search</p>
+              <p>
+                Inside the <code>advanced-search</code> are all the advanced search inputs, as well as a search button
+                and a "clear form" button that clears out all the form elements.
+                You can inspect or view the page source to see how the example below is structured.
+              </p>
+            </div>
+            <div class="cell co-ex">
+              <div class="content-block blue-block">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell search">
+                    <form>
+                      <div class="simple-search">
+                        <div class="question inlined">
+                          <label for="simple-search">Search the Bulletin:</label>
+                          <input type="search" id="searchbox" name="searchbox">
+                        </div>
+                        <div class="button-group inlined">
+                          <a href="/search-results-simple.html" class="button hollow" type="button">Simple Search</a>
+                        </div>
+                      </div>
+                      <div class="advanced-search">
+                        <h2>Notice Types</h2>
+                        <div class="question block-fieldset">
+                          <fieldset class="radcheck ">
+                            <legend>Competitive Notice</legend>
+                            <div>
+                              <input id="type-bid" type="checkbox" name="type-bid">
+                              <label for="type-bid">Bid</label>
+                            </div>
+                            <div>
+                              <input id="type-construction" type="checkbox" name="type-construction">
+                              <label for="type-construction">Construction Bid</label>
+                            </div>
+                            <div>
+                              <input id="type-PARFP" type="checkbox" name="type-PARFP">
+                              <label for="type-PARFP">Professiona & Artistic RFP</label>
+                            </div>
+                            <div>
+                              <input id="type-REPL" type="checkbox" name="type-REPL">
+                              <label for="type-REPL">Real Estate Property Lease</label>
+                            </div>
+                            <div>
+                              <input id="type-RFI" type="checkbox" name="type-RFI">
+                              <label for="type-RFI">Request for Information</label>
+                            </div>
+                            <div>
+                              <input id="type-QBS" type="checkbox" name="type-QBS">
+                              <label for="type-QBS">Request for Professional Services Qualifications (QBS)</label>
+                            </div>
+                            <div>
+                              <input id="type-RFP" type="checkbox" name="type-RFP">
+                              <label for="type-RFP">Request for Proposal</label>
+                            </div>
+                          </fieldset>
+
+                          <fieldset class="radcheck ">
+                            <legend>Non-Competitive Notice</legend>
+                            <div>
+                              <input id="type-concession" type="checkbox" name="type-concession">
+                              <label for="type-concession">Concession</label>
+                            </div>
+                            <div>
+                              <input id="type-Emergency" type="checkbox" name="type-Emergency">
+                              <label for="type-Emergency">Emergency</label>
+                            </div>
+                            <div>
+                              <input id="type-Exemption" type="checkbox" name="type-Exemption">
+                              <label for="type-Exemption">Exemption</label>
+                            </div>
+                            <div>
+                              <input id="type-award" type="checkbox" name="type-award">
+                              <label for="type-award">General Award</label>
+                            </div>
+                            <div>
+                              <input id="On-Going" type="checkbox" name="On-Going">
+                              <label for="On-Going">On-Going</label>
+                            </div>
+                            <div>
+                              <input id="type-solesource" type="checkbox" name="type-solesource">
+                              <label for="type-solesource">Sole Source</label>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <h2>Notice Status</h2>
+                        <div class="question block-fieldset">
+                          <fieldset class="radcheck ">
+                            <legend class="hidden">Notice Status</legend>
+                            <div>
+                              <input id="Published" type="checkbox" name="Published">
+                              <label for="Published">Published</label>
+                            </div>
+                            <div>
+                              <input id="Awarded" type="checkbox" name="Awarded">
+                              <label for="Awarded">Awarded</label>
+                            </div>
+                            <div>
+                              <input id="Cancelled" type="checkbox" name="Cancelled">
+                              <label for="Cancelled">Cancelled</label>
+                            </div>
+                            <div>
+                              <input id="Non-Awarded" type="checkbox" name="Non-Awarded">
+                              <label for="Non-Awarded">Non-Awarded</label>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <h2>Insitution</h2>
+                        <div class="question block-fieldset left-legend">
+                          <fieldset class="radcheck ">
+                            <legend>North</legend>
+                            <div>
+                              <input id="CSU" type="checkbox" name="CSU">
+                              <label for="CSU">CSU</label>
+                            </div>
+                            <div>
+                              <input id="GSU" type="checkbox" name="GSU">
+                              <label for="GSU">GSU</label>
+                            </div>
+                            <div>
+                              <input id="IMSA" type="checkbox" name="IMSA">
+                              <label for="IMSA">IMSA</label>
+                            </div>
+                            <div>
+                              <input id="NEIU" type="checkbox" name="NEIU">
+                              <label for="NEIU">NEIU</label>
+                            </div>
+                            <div>
+                              <input id="NIU" type="checkbox" name="NIU">
+                              <label for="NIU">NIU</label>
+                            </div>
+                          </fieldset>
+
+                          <fieldset class="radcheck ">
+                            <legend>Central</legend>
+                            <div>
+                              <input id="EIU" type="checkbox" name="EIU">
+                              <label for="EIU">EIU</label>
+                            </div>
+                            <div>
+                              <input id="ISU" type="checkbox" name="ISU">
+                              <label for="ISU">ISU</label>
+                            </div>
+                            <div>
+                              <input id="SIUMed" type="checkbox" name="SIUMed">
+                              <label for="SIUMed">SIUMed</label>
+                            </div>
+                            <div>
+                              <input id="UIS" type="checkbox" name="UIS">
+                              <label for="UIS">UIS</label>
+                            </div>
+                            <div>
+                              <input id="UIUC" type="checkbox" name="UIUC">
+                              <label for="UIUC">UIUC</label>
+                            </div>
+                            <div>
+                              <input id="UOCPres" type="checkbox" name="UOCPres">
+                              <label for="UOCPres">UOCPres</label>
+                            </div>
+                            <div>
+                              <input id="WIU" type="checkbox" name="WIU">
+                              <label for="WIU">WIU</label>
+                            </div>
+                          </fieldset>
+
+                          <fieldset class="radcheck">
+                            <legend>South</legend>
+                            <div>
+                              <input id="SIUC" type="checkbox" name="SIUC">
+                              <label for="SIUC">SIUC</label>
+                            </div>
+                            <div>
+                              <input id="SIUE" type="checkbox" name="SIUE">
+                              <label for="SIUE">SIUE</label>
+                            </div>
+                          </fieldset>
+
+                          <fieldset class="radcheck ">
+                            <legend>Statewide</legend>
+                            <div>
+                              <input id="CPO" type="checkbox" name="CPO">
+                              <label for="CPO">CPO</label>
+                            </div>
+                            <div>
+                              <input id="comptroller" type="checkbox" name="comptroller">
+                              <label for="comptroller">IL Comptroller</label>
+                            </div>
+                            <div>
+                              <input id="IPHEC" type="checkbox" name="IPHEC">
+                              <label for="IPHEC">IPHEC</label>
+                            </div>
+                            <div>
+                              <input id="secstate" type="checkbox" name="secstate">
+                              <label for="secstate">IL Secretary of State</label>
+                            </div>
+                            <div>
+                              <input id="uillinois" type="checkbox" name="uillinois">
+                              <label for="uillinois">University of Illinois System</label>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="nigp-codes">
+                          <h2 class="inlined">NIGP code</h2>
+
+                          <div class="accordion nigp-accordion small-accordion">
+                            <h3 class="header">
+                              <span title="Click to toggle More Info section" class="toggle" role="button"
+                                aria-controls="section7" tabindex="0" aria-expanded="false">005: Abrasives</span>
+                            </h3>
+                            <div id="section7" class="content" style="display:none;">
+                              <ul>
+                                <li>005-05 - Abrasives Equipment and Tools</li>
+                                <li>005-14 - Abrasives, Coated: Cloth, Fiber, Sandpaper, etc.</li>
+                                <li>005-21 - Abrasives, Sandblasting, Metal</li>
+                                <li>005-28 - Abrasives, Sandblasting, Other than Metal</li>
+                                <li>005-42 - Abrasives, Solid: Wheels, Stones, etc.</li>
+                                <li>005-56 - Abrasives, Tumbling (Wheel)</li>
+                                <li>005-63 - Compounds, Grinding and Polishing: Carborundum, Diamond, etc. (See Class
+                                  075 For Valve Grinding Compounds)</li>
+                                <li>005-75 - Recycled Abrasives, Products and Supplies </li>
+                                <li>005-84 - Wool, Steel, Aluminum, Copper, and Lead</li>
+                              </ul>
+                            </div>
+                            <h3 class="header">
+                              <span title="Click to toggle More Info section" class="toggle" role="button"
+                                aria-controls="section8" tabindex="0" aria-expanded="false">306: Engineering and
+                                Architectural Equipment, Surveying Equipment, Drawing Instruments, and Supplies,
+                                Environmentally Certified by an Agency Accepted Certification Entity</span>
+                            </h3>
+                            <div id="section8" class="content" style="display:none;">
+                              <ul>
+                                <li class="inactive">306-04: Blades, Gouges, Knives, Needle Files, Routers, etc.,
+                                  Environmentally Certified Products</li>
+                                <li>306-06: Calculators, Programmed for Surveying Systems, (See Class 600 For Office
+                                  Type), Environmentally Certified Products</li>
+                                <li>306-39: Duplicator Paper, Chemicals, and Supplies, Diazo Process Copying Machines,
+                                  (See Class 015 for Coated and Treated Paper Type, Diffusion Transfer Type, Dual
+                                  Spectrum Process and Thermal Process Copiers), Environmentally Certified Products</li>
+                                <li>306-40: Duplicators: Blue Print, Brown Print, Diazo Process, White Print, etc.,
+                                  Environmentally Certified Products</li>
+                              </ul>
+                            </div>
+                            <h3 class="header">
+                              <span title="Click to toggle More Info section" class="toggle inactive" role="button"
+                                aria-controls="section9" tabindex="0" aria-expanded="false">000: Active Class with an
+                                inactive item</span>
+                            </h3>
+                            <div id="section9" class="content" style="display:none;">
+                              <ul class="inactive">
+                                <li>306-04: Blades, Gouges, Knives, Needle Files, Routers, etc., Environmentally
+                                  Certified Products</li>
+                                <li>306-06: Calculators, Programmed for Surveying Systems, (See Class 600 For Office
+                                  Type), Environmentally Certified Products</li>
+                                <li>306-39: Duplicator Paper, Chemicals, and Supplies, Diazo Process Copying Machines,
+                                  (See Class 015 for Coated and Treated Paper Type, Diffusion Transfer Type, Dual
+                                  Spectrum Process and Thermal Process Copiers), Environmentally Certified Products</li>
+                                <li>306-40: Duplicators: Blue Print, Brown Print, Diazo Process, White Print, etc.,
+                                  Environmentally Certified Products</li>
+                              </ul>
+                            </div>
+                          </div><!--Accordion-->
+
+                          <input type="button" class="button primary js-modal" data-modal-prefix-class="simple"
+                            data-modal-content-id="nigp" data-modal-title="Manage NIGP Codes"
+                            data-modal-close-text="&times;" data-modal-close-title="Close modal"
+                            value="Manage NIGP Codes">
+                        </div>
+
+                        <h2>Due Date</h2>
+                        <fieldset>
+                          <div class="question inlined">
+                            <label for="from-duedate">From Date:</label>
+                            <input type="date" id="duedate-from" name="duedate-from">
+                          </div>
+                          <div class="question inlined">
+                            <label for="to-duedate">To Date:</label>
+                            <input type="date" id="duedate-to" name="duedate-to">
+                          </div>
+                        </fieldset>
+
+                        <div class="button-group">
+                          <button value="Search" class="button accent" type="submit">Search</button>
+                          <button value="clear-form" class="button hollow" type="button">Clear Form</button>
+                        </div>
+
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!--Search Header-->
+            <div class="cell co-doc">
+              <h4>Search Header</h4>
+              <p>
+                While the simple search and advanced inputs on the search page are inside a
+                <code>content-block blue-block</code>, all the rest of the page content (the page header, sort control,
+                results display, filters, notices, and pagination)
+                are all inside on <code>content-block</code> with no other class to add a background color.
+                Inside the <code>content-block</code> is a <code>grid-container grid-gap-10</code> div.
+              </p>
+              <p>
+                The first of two <code>cell</code> divs inside the <code>grid-container</code> has the additional class
+                of <code>search-header</code>.
+                This div contains the page heading, the "sort by" control, and the "Results #-# of #" text.
+                Within the <code>cell search-header</code> div is a <code>grid-container grid-gap-10</code> div.
+                Inside the <code>grid-container</code> are two <code>cell</code> divs.
+              </p>
+              <p>The first <code>cell</code> has the classes <code>cell col-4-md</code> and contains the <code>h1</code>
+                heading,
+                as well as a "Skip Filters" anchor link with the classes <code>skip-subnav hidden</code>. This link will
+                only appear for keyboard
+                users tabbing through the page and will jump users to the div that contains the actual notice previews.
+              </p>
+              <p> The second <code>cell</code> has the classes <code>cell col-8-md search-header-controls</code>.
+                It contains two elements: a <code>form</code> with the "sort by" <code>select</code> input and it's
+                label,
+                and a <code>p</code> with the "Results #-# of #" text.
+              </p>
+
+            </div>
+            <div class="cell co-ex">
+              <div class="cell search-header"><!--Search page header: Page title, sort-by controls, results #s-->
+                <div class="grid-container grid-gap-10">
+                  <div class="cell col-4-md ">
+                    <h1>Search Results</h1>
+                    <a href="##notices" class="skip-subnav hidden">Skip Filters</a>
+                  </div>
+                  <div class="cell col-8-md search-header-controls">
+                    <form>
+                      <label for="sort">Sort by:</label>
+                      <select name="sort" id="sort" class="inlined">
+                        <option value="date">Date</option>
+                        <option value="Relevancy">Relevancy</option>
+                      </select>
+                    </form>
+                    <p>Results 1-100 of 44500</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Search Suggestions-->
+            <div class="cell co-doc">
+              <h4>Search Suggestions</h4>
+              <p>Search suggestions should be displayed by putting a div with the classes
+                <code>cell search-suggestions</code> right under <thead>
+                  <code>search-header</code> div. The div should contain the a normal paragraph with link.
+                </thead>
+            </div>
+            <div class="cell co-ex">
+              <div class="cell search-suggestions"><!--Search Suggestions-->
+                <p>Did you mean '<a href="">search term</a>'?</p>
+              </div>
+            </div>
+
+            <!--Filter Facets-->
+            <div class="cell co-doc">
+              <h4>Filter Facets</h4>
+              <p>The second <code>cell</code> inside the main page's <code>grid-container</code> after the Search Header
+                div contains a <code>grid-container grid-gap-30</code> div.
+                Inside this <code>grid-container</code> are two <code>cell</code> divs.</p>
+              <p>
+                The first <code>cell</code> is the filters section. The div should contain the classes
+                <code>cell col-4-md col-3-lg filters</code>.
+                Inside the <code>cell</code> is an <code>h2</code> for the "Narrow Your Results" text. After that there
+                are four divs - one for each
+                area that the notices can be filtered by (Status, Notice, Types, Region, and Institution).
+              </p>
+              <p>Inside each div is an <code>h3</code> with the name of the section, and then a <code>ul</code> with the
+                filter links.
+                If there are more than 5 possible items to narrow the seach by in a section, those are hidden by default
+                and then displayed with a "+ # more" toggle.
+                This toggle is a button with the class <code>link-match</code>. </p>
+              <p class="warning-note">If these semantically all these filters to be buttons instead of links, just add
+                the class <code>link-match</code> to the buttons.</p>
+              <p>If a user clicks on one of the filters to narrow the results, add a button with the class
+                <code>filter-close</code> and the content "& times;" (with no space after &) after the
+                a now static text of the filter, within the same <code>li</code> item and use that as the button for
+                removing that filter.
+              </p>
+              <p><strong>Note:</strong>The filter div appears first in the HTML, but on smaller screens the row order
+                switches to make it appear after the div that contains the notices.</p>
+              <h5>More Information Buttons</h5>
+              <p>More information buttons can be added right after the <code>h3</code> when we determine it would be
+                useful to provide more explaination on what the different filter terms mean (ex: explaining what the
+                different statuses or notice types mean).
+                To do this, give a button the classes of <code>button primary round</code>.
+                The contents of the button should be <code>&lt;span class="hidden">Learn more about X&lt;/span>?</code>
+                so that only the "?" shows up visually but that screenreader users will have proper context for what
+                pressing the button will get them.
+                The button will trigger a modal with a definition list for the different status / notice types.
+              </p>
+              <p class="warning-note">This feature has not been discussed in detail, and then content will need to be
+                created if we decide to move forward with it.</p>
+
+            </div>
+            <div class="cell co-ex">
+              <div class="grid-container grid-gap-30">
+
+                <div class="cell col-4-md col-3-lg filters">
+                  <h2>Narrow Your Results</h2>
+                  <div>
+                    <h3>Status</h3>
+                    <button class="button primary round"><span class="hidden">Learn more about the X filter
+                        category</span>?</button>
+                    <ul>
+                      <li><a href="">Awarded</a> (999)</li>
+                      <li><a href="">Published</a> (888)</li>
+                      <li><a href="">Non-Awarded</a> (777)</li>
+                      <li><a href="">Cancelled</a> (666)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Notice Types</h3>
+                    <button class="button primary round"><span class="hidden">Learn more about the X filter
+                        category</span>?</button>
+                    <ul>
+                      <li><a href="">Bid</a> (999)</li>
+                      <li><a href="">RFP</a> (888)</li>
+                      <li><a href="">Geneal Award</a> (777)</li>
+                      <li><a href="">RFI</a> (666)</li>
+                      <li><a href="">Sole Source</a> (555)</li>
+                      <li><button href="" class="link-match">+ 9 More</button></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Region</h3>
+                    <ul>
+                      <li>
+                        North (9991)
+                        <button class="filter-close">&times;</button>
+
+
+                      </li>
+                      <li><a href="">Statewide</a> (2)</li>
+
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Institution</h3>
+                    <ul>
+                      <li><a href="">UIUC</a> (999)</li>
+                      <li><a href="">UIC</a> (888)</li>
+                      <li><a href="">SIUC</a> (777)</li>
+                      <li><a href="">ISU</a> (666)</li>
+                      <li><a href="">NIU</a> (555)</li>
+                      <li><button href="" class="link-match">+ 10 More</button></li>
+                    </ul>
+                  </div>
+                </div><!--End of Filters div-->
+
+                <div class="cell col-8-md col-9-lg"></div><!--End of #notices div-->
+
+              </div>
+            </div>
+
+            <!--Notices-->
+            <div class="cell co-doc">
+              <h4>Notices</h4>
+              <p>The second <code>cell</code> inside the main page's <code>grid-container</code> after the Search Header
+                div contains a <code>grid-container grid-gap-30</code> div.
+                Inside this <code>grid-container</code> are two <code>cell</code> divs.</p>
+              <p>The second <code>cell</code> contains the notices and the pagination for the notices.
+                It should have the classes <code>cell col-8-md col-9-lg</code> and the id <code>notices</code>.
+                Inside the <code>cell</code> is two divs. The first has the classes
+                <code>grid-container grid-gap-10</code> and contains all the notice previews. (The second contains the
+                pagination, see below).
+              </p>
+              <p>Inside the <code>grid-container</code> is a div with the classes <code>cell notice-preview</code> for
+                every notice preview.
+                Directly inside the <code>cell</code> div is two other divs: one with the class
+                <code>notice-summary</code> and one with the class <code>notice-meta</code>.
+              <h5>Notice Summary</h5>
+              <p>The <code>notice-summary</code> div contains the following elements:</p>
+              <ul>
+                <li>A <code>p</code> with the class <code>procurement-number</code> that contains the procurement
+                  number.</li>
+                <li>An <code>h2</code> of the notice title, and that links to the full notice popup. </li>
+                <li>A <code>p</code> with the class <code>instution</code> that contains the buying institution. </li>
+                <li>A <code>p</code> that contains the notice summary/extract.</li>
+              </ul>
+              <p class="warning-note">Exact requirements for the content of the notice summary/extract will need to be
+                determined. The requirements may change when the Buyer-side redesign happens. </p>
+              <h5>Notice Meta</h5>
+              <p>
+                The <code>notice-meta</code> div contain a <code>p</code> with the notice status, as well as
+                <code>p</code> tags for the different dates that
+                are relevant for that particular notice type (due date, hearing date, last updated date, and published
+                date). The <code>p</code>s that contain the dates
+                don't have any special classes, but "label" portion is in a <code>strong</code> tag, while the actual
+                date is not.
+              </p>
+              <p>The <code>p</code> that contains the notice status should have the class <code>notice-status</code> and
+                then have one of four additional statuses depending on the actual status in question:
+                <code>status-published</code>, <code>status-awarded</code>, <code>status-cancelled</code>, and
+                <code>status-non-awarded</code>.
+            </div>
+            <div class="cell co-ex">
+              <div class="cell"> <!--Filters, notice listings, pagination-->
+                <div class="grid-container grid-gap-30">
+
+                  <div id="notices" class="cell col-8-md col-9-lg">
+                    <div class="grid-container grid-gap-10">
+                      <div class="cell notice-preview">
+                        <div class="notice-summary">
+                          <p class="procurement-number">#jw2020518rfp</p>
+                          <h2><a href="#">Request for Proposals: Audit Services</a></h2>
+                          <p class="instution">University of Illinois at Chicago</p>
+                          <p>The Library at the University of Illinois is requesting the services of an independent
+                            auditor to provide an audit of the statement of financial position. </p>
+                        </div>
+                        <div class="notice-meta">
+                          <p class="notice-status status-published"> Published</p>
+                          <p><strong>Due Date: </strong>MM/DD/YYYY</p>
+                          <p><strong>Last Updated: </strong>MM/DD/YYYY</p>
+                          <p><strong>Published: </strong>MM/DD/YYYY</p>
+                        </div>
+                      </div>
+
+                      <div class="cell notice-preview">
+                        <div class="notice-summary">
+                          <p class="procurement-number">#jw2020518rfp</p>
+                          <h2><a href="#">Request for Proposals: Audit Services</a></h2>
+                          <p class="instution">University of Illinois at Chicago</p>
+                          <p>The Library at the University of Illinois is requesting the services of an independent
+                            auditor to provide an audit of the statement of financial position. </p>
+                        </div>
+                        <div class="notice-meta">
+                          <p class="notice-status status-awarded"> Awarded</p>
+                          <p><strong>Due Date: </strong>MM/DD/YYYY</p>
+                          <p><strong>Last Updated: </strong>MM/DD/YYYY</p>
+                          <p><strong>Published: </strong>MM/DD/YYYY</p>
+                        </div>
+                      </div>
+
+                      <div class="cell notice-preview">
+                        <div class="notice-summary">
+                          <p class="procurement-number">#jw2020518rfp</p>
+                          <h2><a href="#">Request for Proposals: Audit Services</a></h2>
+                          <p class="instution">University of Illinois at Chicago</p>
+                          <p>The Library at the University of Illinois is requesting the services of an independent
+                            auditor to provide an audit of the statement of financial position. </p>
+                        </div>
+                        <div class="notice-meta">
+                          <p class="notice-status status-non-awarded">Non-Awarded</p>
+                          <p><strong>Due Date: </strong>MM/DD/YYYY</p>
+                          <p><strong>Last Updated: </strong>MM/DD/YYYY</p>
+                          <p><strong>Published: </strong>MM/DD/YYYY</p>
+                        </div>
+                      </div>
+
+                      <div class="cell notice-preview">
+                        <div class="notice-summary">
+                          <p class="procurement-number">#jw2020518rfp</p>
+                          <h2><a href="#">Request for Proposals: Audit Services</a></h2>
+                          <p class="instution">University of Illinois at Chicago</p>
+                          <p>The Library at the University of Illinois is requesting the services of an independent
+                            auditor to provide an audit of the statement of financial position. </p>
+                        </div>
+                        <div class="notice-meta">
+                          <p class="notice-status status-cancelled">Cancelled</p>
+                          <p><strong>Due Date: </strong>MM/DD/YYYY</p>
+                          <p><strong>Last Updated: </strong>MM/DD/YYYY</p>
+                          <p><strong>Published: </strong>MM/DD/YYYY</p>
+                        </div>
+                      </div>
+                    </div><!--End of actual notice listing-->
+                  </div><!--End of #notices div-->
+
+                </div>
+              </div>
+            </div>
+
+            <!--No Results-->
+            <div class="cell co-doc">
+              <h4>No Results Found</h4>
+              <p>If no results can be found for a user's search, the div with filters in it is not displayed, and the
+                entire notice section is adjust
+                a single <code>h2</code> stating "No results found."
+            </div>
+
+          </div>
+        </div>
+
+        <!--News-->
+        <div class="cell page-section" id="page-news">
+          <div class="grid-container grid-gap-10">
+            <div class="cell page-section-header">
+              <h3>News & Announcements Pages</h3>
+              <a href="#main">Back to top</a>
+              <a href="#page">Back to Page-Specific Table of Contents</a>
+            </div>
+            <!--News articles (on News and Announcements page)-->
+            <div class="cell co-doc">
+              <h4> Article on News and Announcements Page </h4>
+              <p>All the news articles on the News & Announcement page and the Campaign Contribution Violations
+                should be in a <code>cell</code> div with the additional class <code>news-articles</code>. Each
+                individual
+                news posting is inside a <code>article</code> tag. The title of the news posting should be a
+                <code>h2</code>,
+                and the first paragraph should have the class <code>article-date</code> on it and include the date the
+                post was added to the bulletin. The rest of the article is in regular <code>p</code> tages.
+              </p>
+            </div>
+            <div class="cell news-articles">
+              <article>
+                <h2>Article Header </h2>
+                <p class="article-date">MM/DD/YYYY</p>
+                <p> This is the content of the article posting.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!--NIGP Codes-->
+        <div class="cell page-section" id="page-NIGP">
+          <div class="grid-container grid-gap-10">
+            <div class="cell page-section-header">
+              <h3>NIGP Codes Resource page and Modal</h3>
+              <a href="#main">Back to top</a>
+              <a href="#page">Back to Page-Specific Table of Contents</a>
+            </div>
+            <div class="cell co-doc">
+              <h4>NIGP Codes Browse/Search Table</h4>
+              <p>The NIGP Code Browse/Search Table is a datatable that displays NIGP Codes and descriptions.
+                Depending on the version of the table and where it appears, there may also be buttons for each row to
+                either Add/Remove Items from a selection or to show the items within a class.
+              </p>
+
+              <h5>Inactive Codes</h5>
+              <p>To mark a inactive class or item codes, simply give the <code>td</code> with the code description in it
+                the class <code>inactive</code>. </p>
+
+              <p class="warning-note">
+                The example here is a static table, not a dataTable, so the actual implimentation will vary.
+              </p>
+            </div>
+            <div class="cell co-ex">
+              <table class="nigp-lookup push-bottom">
+                <tr>
+                  <th>Code</th>
+                  <th>Description</th>
+                  <th><span class="hidden">Action</span></th>
+                </tr>
+                <tr>
+                  <td>000</td>
+                  <td>This is an example of a Class row in a "Browse" version of the table for the Email Notification or
+                    Advanced Search interface, where you can Add or Remove all the items in that class to the selection,
+                    or view the items in the class</td>
+                  <td>
+                    <button class="button link-match">Add all 000 Items</button>
+                    <button class="button link-match">Show Items</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000</td>
+                  <td>This is an example of a Class row in a "Search" version of the table for the Email Notification or
+                    Advanced Search interface, where you can Add or Remove all the items in that class to the selection.
+                  </td>
+                  <td>
+                    <button class="button link-match ">Remove all 000 Items</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000</td>
+                  <td>This is an example of a Class row in a "Search" version of the table for the NIGP Code page in the
+                    Resource section, where you can view the items in the class but there is no selection features.</td>
+                  <td>
+                    <button class="button link-match ">Show Items</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000-00</td>
+                  <td>This is an example of a item row, where you can add or remove the individual item from the
+                    selection</td>
+                  <td>
+                    <button class="button link-match">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>000</td>
+                  <td class="inactive">This is an Example of an Inactive code in the Advanced Search version of the
+                    modal, where inactive codes can still be added to the selection.</td>
+                  <td>
+                    <button class="button link-match">Add</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>000</td>
+                  <td class="inactive">This is an Example of an Inactive code in the Email Notification version of the
+                    modal, where inactive codes can NOT be added to the selection.</td>
+                  <td>
+
+                  </td>
+                </tr>
+
+              </table>
+
+              <table class="nigp-lookup">
+                <tr>
+                  <th>Code</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>000</td>
+                  <td>This is an example of a item row in a in the NIGP Code page in the Resource section, where there
+                    is no selection features. </td>
+
+                </tr>
+              </table>
+            </div>
+
+            <div class="cell co-doc" id="nigp-accordion">
+              <h4>NIGP Codes Accordion</h4>
+              <p>Accordions that are used to display lists of NIGP codes have unique styling, where that list of NIGP
+                Codes is displayed in an unordered list or a table.
+                To apply this styling, add the class <code>nigp-accordion</code> to the same div that has the
+                <code>accordion</code> class.
+              </p>
+              </p>
+              <h5>Static Accordion</h5>
+              <p>For static displays of NIGP codes, use a <code>ul</code> within the <code>content</code> div and it
+                will style properly without any additional adjustments.</p>
+
+              <p>To mark inactive codes where the entire class is inactie, you can add the class <code>inactive</code>
+                to the <code>span</code> with the class <code>toggle</code> in the <code>header</code>
+                and then the <code>inactive</code> to the <code>ul</code> in the <code>content</code> div. This will add
+                the "inactive" note to both the header of the accordion as well as every list item within the accordion.
+              </p>
+              <p>If only one item is inactive within a otherwise active class, you can just put the class
+                <code>inactive</code> on the individual <code>li</code> of the inactive item.
+              </p>
+
+              <h5>Interactive Accordion</h5>
+              <p>Interactive NIGP code accordions are used in the NIGP Code Modal for managing which NIGP codes have
+                been selected, either for email notification sign up or for adding to advanced search criteria.
+                In this case a "remove" button has to be present for each item as well as each class. To display this,
+                use a table with three columns: one for the code, one for the description, and one for the "remove"
+                button.
+                Give the <code>tr</code> for the table header the class <code>hidden</code> so it isn't visually
+                displayed but is still read by screenreaders.
+              </p>
+              <p> Buttons with the class <code>button</code> that are placed outside the table but inside the accordion
+                <code>content</code> div are used removing all the items in a class. These are full width by default.
+                A button for removing all classes placed outside the accordions will need to be given the class
+                <code>fw-input</code> to match this styling.
+              </p>
+              <p> If a single item in a class is inactive, you can put the class <code>inactive</code> on the individual
+                <code>td</code> that contains the description for that item.
+                If the entire class is inactive, you can put the <code>inactive</code> on the <code>table</code> and it
+                will automatically give the second <code>td</code> in all <code>tr</code>s the inactive styling.
+              </p>
+            </div>
+            <div class="cell">
+              <p><strong>Static NIGP Accordion with unordered list</strong></p>
+              <div class="accordion nigp-accordion push-bottom">
+                <h3 class="header">
+                  <span title="Click to toggle More Info section" class="toggle" role="button"
+                    aria-controls="nigp-section1" tabindex="0" aria-expanded="false">005: Abrasives</span>
+                </h3>
+                <div id="nigp-section1" class="content" style="display:none;">
+                  <ul>
+                    <li>005-05 - Abrasives Equipment and Tools</li>
+                    <li>005-14 - Abrasives, Coated: Cloth, Fiber, Sandpaper, etc.</li>
+                    <li>005-63 - Compounds, Grinding and Polishing: Carborundum, Diamond, etc. (See Class 075 For Valve
+                      Grinding Compounds)</li>
+                  </ul>
+                </div>
+                <h3 class="header">
+                  <span title="Click to toggle More Info section" class="toggle" role="button"
+                    aria-controls="nigp-section2" tabindex="0" aria-expanded="false">306: Engineering and Architectural
+                    Equipment, Surveying Equipment, Drawing Instruments, and Supplies, Environmentally Certified by an
+                    Agency Accepted Certification Entity</span>
+                </h3>
+                <div id="nigp-section2" class="content" style="display:none;">
+                  <ul>
+                    <li class="inactive">306-04: Blades, Gouges, Knives, Needle Files, Routers, etc., Environmentally
+                      Certified Products</li>
+                    <li>306-06: Calculators, Programmed for Surveying Systems, (See Class 600 For Office Type),
+                      Environmentally Certified Products</li>
+                    <li>306-39: Duplicator Paper, Chemicals, and Supplies, Diazo Process Copying Machines, (See Class
+                      015 for Coated and Treated Paper Type, Diffusion Transfer Type, Dual Spectrum Process and Thermal
+                      Process Copiers), Environmentally Certified Products</li>
+                    <li>306-40: Duplicators: Blue Print, Brown Print, Diazo Process, White Print, etc., Environmentally
+                      Certified Products</li>
+                  </ul>
+                </div>
+                <h3 class="header">
+                  <span title="Click to toggle More Info section" class="toggle inactive" role="button"
+                    aria-controls="nigp-section3" tabindex="0" aria-expanded="false">999: Inactive Class</span>
+                </h3>
+                <div id="nigp-section3" class="content" style="display:none;">
+                  <ul class="inactive">
+                    <li>999-01: Inactive Items</li>
+                    <li>999-02: Inactive Items</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p><strong>NIGP Accordion with table</strong></p>
+              <div class="accordion nigp-accordion small-accordion">
+
+                <!--SECTION 1-->
+                <h3 class="header">
+                  <span title="Click to toggle More Info section" class="toggle" role="button"
+                    aria-controls="nigp-section4" tabindex="0" aria-expanded="false">005: Abrasives</span>
+                </h3>
+                <div id="nigp-section4" class="content" style="display:none;">
+                  <button class="button secondary">Remove all 005 Items</button>
+
+                  <table>
+                    <tr class="hidden">
+                      <th>Code</th>
+                      <th>Description</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>005-05</td>
+                      <td>Abrasives Equipment and Tools</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                    <tr>
+                      <td>005-14</td>
+                      <td>Abrasives, Coated: Cloth, Fiber, Sandpaper, etc.</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                  </table>
+                </div>
+                <h3 class="header">
+                  <span title="Click to toggle More Info section" class="toggle" role="button"
+                    aria-controls="nigp-section5" tabindex="0" aria-expanded="false">306: Engineering and Architectural
+                    Equipment, Surveying Equipment, Drawing Instruments, and Supplies, Environmentally Certified by an
+                    Agency Accepted Certification Entity</span>
+                </h3>
+                <div id="nigp-section5" class="content" style="display:none;">
+                  <button class="button secondary">Remove all 306 Items</button>
+                  <table>
+                    <tr class="hidden">
+                      <th>Code</th>
+                      <th>Description</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>306-04</td>
+                      <td>Blades, Gouges, Knives, Needle Files, Routers, etc., Environmentally Certified Products</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                    <tr>
+                      <td>306-39</td>
+                      <td>Duplicator Paper, Chemicals, and Supplies, Diazo Process Copying Machines, Environmentally
+                        Certified Products</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                    <tr>
+                      <td>306-40</td>
+                      <td class="inactive">Duplicators: Blue Print, Brown Print, Diazo Process, White Print, etc.,
+                        Environmentally Certified Products</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                  </table>
+
+                </div>
+                <h3 class="header">
+                  <span title="Click to toggle More Info section" class="toggle inactive" role="button"
+                    aria-controls="section6" tabindex="0" aria-expanded="false">999: Inactive Class</span>
+                </h3>
+                <div id="section6" class="content" style="display:none;">
+                  <button class="button secondary">Remove all 999 Items</button>
+                  <table>
+                    <tr class="hidden">
+                      <th>Code</th>
+                      <th>Description</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>999-01</td>
+                      <td class="inactive">Inactive item example</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                    <tr>
+                      <td>999-40</td>
+                      <td class="inactive">Inactive item example with a long long long long long long long long long
+                        long long long long long long item description</td>
+                      <td><button class="link-match">Remove</button></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <!--Downtime -->
+        <div class="cell page-section" id="page-downtime">
+          <div class="grid-container grid-gap-10">
+            <div class="cell page-section-header">
+              <h3>Downtime Page</h3>
+              <a href="#main">Back to top</a>
+              <a href="#page">Back to Page-Specific Table of Contents</a>
+            </div>
+
+            <!--Downtime Header-->
+            <div class="cell co-doc">
+              <h4>Downtime Header</h4>
+              <p>When the site is down for maintenance the standard header is tweaked to remove the <code>account</code>
+                div in the <code>header</code>
+                and the <code>navbar-links</code> unordered list in the navigation.
+              </p>
+            </div>
+            <div class="cell co-ex devborder">
+              <header class="header-main">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell col-8-sm col-7-md site-name">
+                    <a href="../homepage-in.html">
+                      <span class="site-title">Illinois Procurement Bulletin</span>
+                      Public Institutions of Higher Education
+                    </a>
+                  </div>
+                  <div class="cell col-4-sm menu-btn">
+                    <button class="mobile-nav-toggle">Menu</button>
+                  </div>
+                </div> <!--grid-containter-->
+              </header>
+              <nav aria-label="Main Navigation" class="navbar" id="mainnav">
+                <div class="grid-container grid-gap-10">
+                  <div class="cell">
+                  </div>
+                </div>
+              </nav>
+            </div>
+
+
+            <!--Downtime Alert-->
+            <div class="cell co-doc">
+              <h4>Downtime Alert</h4>
+              <p>When the site is down for maintenance the <code>hp-news</code> div only has one <code>article</code> in
+                it with the additional class of <code>downtime-alert</code>.
+              </p>
+            </div>
+            <div class="cell co-ex ">
+              <div class="hp-news downtime-alert">
+                <article>
+                  <h3>October 6, 2012 - Bulletin Will Be Unavailable Due to System Maintenance</h3>
+                  <p class="article-preview">The scheduled maintenance will occur between 3 a.m. and 4 a.m. CDT on
+                    October 6, 2012. The Bulletin will be unavailable for use during this time. Please excuse any
+                    inconvenience.</p>
+                </article>
+              </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+        
+          </div>
+        </div>
+        
+
+
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+
+  <script src="../../common/javascript/pb-common.js"></script>
+  <script src="../../common/javascript/modal-min.js"></script>
+
+  <script type="text/javascript" id="slideToggleScript">
+    $(document).ready(function () {
+      $(".toggle").click(function () {
+        toggleContent(this);
+      });
+
+      $(".toggle").keydown(function (event) {
+        var key = event.which || event.keyCode;
+        if (key == 13) {
+          $(this).click();
+          event.preventDefault();
+        }
+
+      });
+
+      $("input.js-modal").click(function () {
+        $("#js-modal .toggle").click(function () {
+          toggleContent(this);
+        });
+
+        $("#js-modal .toggle").keydown(function (event) {
+          var key = event.which || event.keyCode;
+          if (key == 13) {
+            $(this).click();
+            event.preventDefault();
+          }
+
+        });
+      });
+
+    });
+
+
+    function toggleContent(buttonClicked) {
+      //getting the next element
+      var contentID = "#" + $(buttonClicked).attr('aria-controls');
+      //checking if its already visible
+      if ($(buttonClicked).attr('aria-expanded') === 'true') {
+
+        $(buttonClicked).attr("aria-expanded", "false");
+      }
+      else {
+        $(buttonClicked).attr("aria-expanded", "true");
+      }
+      $(contentID).slideToggle(0);
+      return false;
+    };
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+/* ===============================================================
+  ### DOWNTIME ALERTS
+================================================================== */
+.downtime-alert {
+    article {
+      padding: .5rem $site-padding;
+      background-color: #F9F0F0;
+      border-left: $error 10px solid;
+    }
+  }
+  

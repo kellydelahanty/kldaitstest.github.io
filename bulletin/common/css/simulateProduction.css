@@ -1,0 +1,10 @@
+/* SimulateProduction CSS Style Sheet
+	Defines CSS Styles to SimulateProduction
+*/
+
+.cfdebug,
+.cfdump_struct,
+.debugDumps,
+#userNameAndRoles {
+	display:none;
+}

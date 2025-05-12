@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="111px" height="111px" viewBox="0 0 111 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Registration-Account</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Registration-Account" fill-rule="nonzero">
+            <circle id="Oval" fill="#006EBD" cx="55.5" cy="55.5" r="55.5"></circle>
+            <path d="M55.5,7 C69.0309764,7 80,17.9690236 80,31.5 C80,39.0843215 76.5537786,45.8637349 71.1418328,50.3577432 C83.771929,56.1780591 92.5391052,68.949964 92.5391052,83.7695526 C92.5391052,104.076816 19,104.076816 19,83.7695526 C19,69.0846911 27.6084934,56.4104509 40.0543381,50.5179742 C34.5295415,46.0265473 31,39.175458 31,31.5 C31,17.9690236 41.9690236,7 55.5,7 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,282 @@
+<!--This is the template page for the "standard" pages. Nearly all pages save the login/2FA and downtime pages will use this template.-->
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Resources | Illinois Procurement Bulletin of Higher Ed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/common/graphics/favicon.png">
+
+  <!--STYLESHEETS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="/common/css/pb-common.css">
+  <link rel="stylesheet" href="/staff/css/pb-staff.css">
+
+  <noscript>
+    <link rel="stylesheet" href="/common/css/nojs.css">
+  </noscript>
+
+
+
+  <!--JAVASCRIPT & RELATED STYLESHEETS-->
+  <!--The following Javascript and related files exist in the uiDesignFiles common folder for finance apps
+     but I can't get linking to there to work for some reason so I'm pulling them into the procure/common/javascript 
+     folder and linking to them there for local dev purposes-->
+  <!--Jquery -->
+  <script src="/common/javascript/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+  <!--Skipto-->
+  <script id="skipToMinJS" src="/common/javascript/skipTo/skipTo-5.1.6/skipto-min.js"></script>
+  <script type="text/javascript" id="skipToScript">
+    var SkipToConfig = {
+      "settings": {
+        "skipTo": {
+          colorTheme: "bulletin",
+          displayOption: "popup"
+        }
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <header class="header-main">
+    <div class="grid-container grid-gap-10">
+      <div class="cell col-8-sm col-7-md site-name">
+        <img class="inverse-logo" src="/common/graphics/bulletin-logo-inverse.svg" alt="">
+        <img class="logo" src="/common/graphics/bulletin-logo.svg" alt="">
+
+        <a href="#">
+          <span class="site-title">Illinois Procurement Bulletin</span>
+          Public Institutions of Higher Education
+        </a>
+      </div>
+      <div class="cell col-5-md account button-group">
+        <a href="#" class="button primary">Log Out</a>
+      </div>
+
+      <div class="cell col-4-sm menu-btn">
+        <button class="mobile-nav-toggle">Menu</button>
+      </div>
+    </div> <!--grid-containter-->
+  </header>
+
+  <nav aria-label="Main Navigation" class="navbar" id="mainnav">
+    <div class="grid-container grid-gap-10">
+      <div class="cell">
+        <ul class="navbar-links">
+          <li><a href="#">To Do List</a></li>
+          <li><a href="#">Active Notices</a></li> <!--Only seen by Buyers and Site Contact users-->
+          <li><a href="#">Sole Source Hearings</a></li> <!--Only seen by Sole Source SPO role-->
+          <li class="has-submenu">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Search</a>
+            <ul>
+              <li><a href="#">Advanced Search</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Notice Status</a></li>
+          <li><a href="#">E-Bidding</a></li> <!--Only seen by Buyers and Site Contact users-->
+          <li><a href="../reports/reports.html">Reports</a></li>
+          <li><a href="../resources/resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="content-block">
+      <div class="grid-container grid-gap-50">
+
+        <div class="cell" id="page-content">
+          <div class="grid-container grid-gap-30">
+            <div class="cell">
+              <h1>Resources</h1>
+            </div>
+
+            <div class="cell mason-grid">
+              <div class="cell"><!--Vendor Information-->
+                <div class="card blue-card">
+                  <div class="card-header">
+                    <h3>Vendor Information</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="link-description">
+                      <a href="https://supplierdiversitymanagementportal.illinois.gov/">BEP Vendor Directory</a>
+                      <p>Purchasing entities can use the portal to search the Business Enterprise Program (BEP) and
+                        Veterans Business Program (VBP) certified vendor directory.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="https://sam.gov/search/">Federal Disbarred Vendors</a>
+                      <p>Ability to search a list of current companies (Entity) or individuals that have been declared
+                        ineligible to receive federal contracts.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="https://cpo-highered.illinois.gov/vendor-suspensions-debarments.html">State Vendor
+                        Suspensions & Debarments</a>
+                      <p>List of vendors that have been suspended or debarred per the State of Illinois.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="#" class="placeholder">Vendor Document and Email Reports</a>
+                      <p>[Reports for buyers to look up vendor information about their document request history, email
+                        notification history and NIGP codes they chose to receive email notifications.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="https://ipg.illinois.gov/ ">Illinois Procurement Gateway</a>
+                      <p>The IPG is an online vendor portal used for gathering business information from vendors who
+                        wish to conduct business with Illinois' State agencies and universities. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cell"><!--Contract Opportunities-->
+                <div class="card blue-card">
+                  <div class="card-header">
+                    <h3>Contract Opportunities</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="link-description">
+                      <a href="#" class="placeholder">Shared Offers</a>
+                      <p>A list of awarded procurements where the vendor has agreed to extend their offer to other state
+                        universities of Illinois</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="#" class="placeholder">CMS State Contracts</a>
+                      <p class="placeholder">[Insert short description of resource here]</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="https://www.procure.stateuniv.state.il.us/npo.cfm">Notice of Potential Opportunities</a>
+                      <p>This is a list of possible, future procurements. These potential procurement opportunities may
+                        or may not occur, depending on the needs of the State universities</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell"><!--Bulletin Resources-->
+                <div class="card blue-card">
+                  <div class="card-header">
+                    <h3>Bulletin Resources</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="link-description">
+                      <a href="#" class="placeholder">Change Password</a>
+                      <p>Change your bulletin password. Your password can be changed at any time, but must be changed at
+                        least once a year.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="../reports/reports.html">Reports</a>
+                      <p class="placeholder">Run various reports to help you analyze Bulletin activity, including
+                        ones on X, Y, and Z.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="#" class="placeholder">Document Management</a>
+                      <p>Gives staff side users the ability to attach documents to a procurement. Any documents attached
+                        using document management that are public documents will be posted immediately and not go
+                        through any approval or workflow. </p>
+                    </div>
+                    <div class="link-description">
+                      <a href="mailto:cpowebmaster@uillinois.edu">Email Bulletin Manager</a>
+                      <p>Contact the Bulletin Manager for questions about the Bulletin or assistance with the Bulletin.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell"><!--Purchasing References-->
+                <div class="card blue-card">
+                  <div class="card-header">
+                    <h3>Purchasing References</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="link-description">
+                      <a href="#" class="placeholder">University Purchasing Contacts </a>
+                      <p>List of Staff side users of the procurement bulletin along with their Institution, Role, phone
+                        number and email. </p>
+                    </div>
+                    <div class="link-description">
+                      <a href="https://www.procure.stateuniv.state.il.us/resources.cfm?mName=findLawsRegulations">Illinois
+                        Procurement Laws and Regulations</a>
+                      <p>Information on various laws and regulations that govern all purchases from the thirteen
+                        campuses of the nine Illinois public universities.</p>
+                    </div>
+                    <div class="link-description">
+                      <a href="https://www.procure.stateuniv.state.il.us/resources.cfm?mName=findNIGPList ">NIGP
+                        Codes</a>
+                      <p>NIGP Class and Class Item Codes identify the scope(s) of work as defined by the National
+                        Institute of Governmental Procurements.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div><!--main section cell-->
+      </div> <!--full page grid-containter-->
+    </div>
+
+  </main>
+
+  <footer role="contentInfo">
+    <div class="main-footer">
+      <div class="grid-container grid-gap-10">
+        <div class="cell col-6-md col-7-lg footer-contact">
+          <h2>Contact </h2>
+          <p>For questions about the Bulletin or publishing help, contact the Bulletin Manager:
+            <a href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> or (217) 333-3596
+          </p>
+          </p>
+          <p>For procurement questions, please see: </p>
+          <ul>
+            <li><a href="https://www.procure.stateuniv.state.il.us/contactUs.cfm">Institutions' Procurement Office
+                Contact Information</a></li>
+            <li><a href="#">Individual Procurement Staff Contacts</a></li>
+            <!--procurement contacts in Resrouces on staff site-->
+
+          </ul>
+        </div>
+
+        <nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+          <h2>Navigation</h2>
+          <div class="grid-container">
+            <div class="cell">
+              <ul class="footer-navlinks">
+                <li><a href="#">To Do List</a></li>
+                <li><a href="#">Active Notices</a></li>
+                <li><a href="#">Sole Source Hearings</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Notice Status</a></li>
+                <li><a href="#">E-Bidding</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+      </div> <!--grid-containter-->
+    </div>
+
+    <div id="policy" class="policy-footer">
+      <div class="grid-container grid-gap-10">
+        <div class="cell col-11-md">
+          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education</p>
+        </div>
+        <div class="cell col-1-md staff-login"><a href="#"><img src="/common/graphics/icons/icon-lock.png"
+              alt="log in to the staff side of the Illinois Higher Ed Bulletin"></a></div>
+      </div> <!--grid-containter-->
+    </div>
+
+  </footer>
+
+
+
+  <script src="/common/javascript/pb-common.js"></script>
+
+</body>
+
+</html>

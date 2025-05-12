@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Reports | Illinois Procurement Bulletin of Higher Ed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/common/graphics/favicon.png">
+
+    <!--STYLESHEETS-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/common/css/pb-common.css">
+    <link rel="stylesheet" href="/staff/css/pb-staff.css">
+
+    <noscript>
+        <link rel="stylesheet" href="/common/css/nojs.css">
+    </noscript>
+
+
+
+    <!--JAVASCRIPT & RELATED STYLESHEETS-->
+    <!--The following Javascript and related files exist in the uiDesignFiles common folder for finance apps
+     but I can't get linking to there to work for some reason so I'm pulling them into the procure/common/javascript 
+     folder and linking to them there for local dev purposes-->
+    <!--Jquery -->
+    <script src="/common/javascript/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+    <!--Skipto-->
+    <script id="skipToMinJS" src="/common/javascript/skipTo/skipTo-5.1.6/skipto-min.js"></script>
+    <script type="text/javascript" id="skipToScript">
+        var SkipToConfig = {
+            "settings": {
+                "skipTo": {
+                    colorTheme: "bulletin",
+                    displayOption: "popup"
+                }
+            }
+        };
+    </script>
+
+</head>
+
+<body>
+    <header class="header-main">
+        <div class="grid-container grid-gap-10">
+            <div class="cell col-8-sm col-7-md site-name">
+                <img class="inverse-logo" src="/common/graphics/bulletin-logo-inverse.svg" alt="">
+                <img class="logo" src="/common/graphics/bulletin-logo.svg" alt="">
+
+                <a href="#">
+                    <span class="site-title">Illinois Procurement Bulletin</span>
+                    Public Institutions of Higher Education
+                </a>
+            </div>
+            <div class="cell col-5-md account button-group">
+                <a href="#" class="button primary">Log Out</a>
+            </div>
+
+            <div class="cell col-4-sm menu-btn">
+                <button class="mobile-nav-toggle">Menu</button>
+            </div>
+        </div> <!--grid-containter-->
+    </header>
+
+    <nav aria-label="Main Navigation" class="navbar" id="mainnav">
+        <div class="grid-container grid-gap-10">
+            <div class="cell">
+                <ul class="navbar-links">
+                    <li><a href="#">To Do List</a></li>
+                    <li><a href="#">Active Notices</a></li> <!--Only seen by Buyers and Site Contact users-->
+                    <li><a href="#">Sole Source Hearings</a></li> <!--Only seen by Sole Source SPO role-->
+                    <li class="has-submenu">
+                        <a href="#" aria-haspopup="true" aria-expanded="false">Search</a>
+                        <ul>
+                            <li><a href="#">Advanced Search</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Notice Status</a></li>
+                    <li><a href="#">E-Bidding</a></li> <!--Only seen by Buyers and Site Contact users-->
+                    <li><a href="../reports/reports.html" class="current">Reports</a></li>
+                    <li><a href="../resources/resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <div class="content-block">
+            <div class="grid-container grid-gap-50">
+
+                <div class="cell" id="page-content">
+                    <div class="grid-container grid-gap-30">
+                       <div class="cell">
+                            <h1>Reports </h1>
+                        </div>
+                        <div class="cell mason-grid">
+                            <div class="cell"><!--Active and Upcoming Notice Reports-->
+                                <div class="card blue-card">
+                                    <div class="card-header">
+                                        <h3>Active and Upcoming Notice Reports</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="link-description">
+                                            <a href="#">Active Workflow Report</a>
+                                            <p>Provides user with a list of all their notices and what step of the workflow they are in. </p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Renewal Report</a>
+                                            <p>Gives a list of contracts that are going to end in the specified time frame for the specified institution.</p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Past Due Report</a>
+                                            <p>List of procurements that have been on the needs reminder list for over 60 days.</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+    
+             
+                            <div class="cell"><!--Bulletin Activity Reports-->
+                                <div class="card blue-card">
+                                    <div class="card-header">
+                                        <h3>Bulletin Activity Reports</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="link-description">
+                                            <a href="#">Shared Offers</a>
+                                            <p>List of procurements that have been designated during the award process that the XXXX of the contract can be utilized by other institutions. </p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Award by Institution</a>
+                                            <p>List of vendors that were awarded during a specific time frame. </p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Vendor Awards by Time</a>
+                                            <p>Shows the total number of awards and total award amounts for a specific date range and university selected. </p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Number of Transactions by Action Type </a>
+                                            <p>The total number of actions occurred for a given institution for a specified date range. </p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Justification Report</a>
+                                            <p>Lists the selected justifications for either Emergency, Exemption or Sole Source Notice types. </p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">SPO Responses Report</a>
+                                            <p>Provides a list of procurements for the selected time frame and the date and times that they were sent to the SPO and when the SPO  responded to them. </p>
+                                        </div>
+                                        <div class="link-description hidden">
+                                            <a href="#">BEP/Veteran/Small Business Report</a>
+                                            <p>Provides a list of procurements for the selected time frame and institution, and gives the awarded vendor information, and whether or not they are a BEP/Veteran/Small Business and the percentage and dollar amount.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cell"><!--Vendor Document and Email Reports-->
+                                <div class="card blue-card">
+                                    <div class="card-header">
+                                        <h3>Vendor Document and Email Reports </h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="link-description">
+                                            <a href="#">Vendor Document Request History</a>
+                                            <p>Provides what procurements a specific vendor downloaded documents for.</p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Notice Document Request History</a>
+                                            <p>Provides a list of vendors that downloaded documents for a specific procurement notice.</p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Email Notifications Sent to Vendor for Notice Report</a>
+                                            <p>List of vendors that were sent email notifications for a specific procurement number.</p>
+                                        </div>
+                                        <div class="link-description">
+                                            <a href="#">Vendors Signed up for Email Notification Report</a>
+                                            <p>List of vendors that are signed up to receive emails based on the NIGP codes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                      
+                    </div>
+
+
+                </div><!--main section cell-->
+            </div> <!--full page grid-containter-->
+        </div>
+
+    </main>
+
+    <footer role="contentInfo">
+        <div class="main-footer">
+            <div class="grid-container grid-gap-10">
+                <div class="cell col-6-md col-7-lg footer-contact">
+                    <h2>Contact </h2>
+                    <p>For questions about the Bulletin or publishing help, contact the Bulletin Manager:
+                        <a href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> or (217) 333-3596
+                    </p>
+                    </p>
+                    <p>For procurement questions, please see: </p>
+                    <ul>
+                        <li><a href="https://www.procure.stateuniv.state.il.us/contactUs.cfm">Institutions' Procurement
+                                Office Contact Information</a></li>
+                        <li><a href="#">Individual Procurement Staff Contacts</a></li>
+                        <!--procurement contacts in Resrouces on staff site-->
+
+                    </ul>
+                </div>
+
+                <nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+                    <h2>Navigation</h2>
+                    <div class="grid-container">
+                        <div class="cell">
+                            <ul class="footer-navlinks">
+                                <li><a href="#">To Do List</a></li>
+                                <li><a href="#">Active Notices</a></li>
+                                <li><a href="#">Sole Source Hearings</a></li>
+                                <li><a href="#">Search</a></li>
+                                <li><a href="#">Notice Status</a></li>
+                                <li><a href="#">E-Bidding</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <li><a href="#">Resources</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+            </div> <!--grid-containter-->
+        </div>
+
+        <div id="policy" class="policy-footer">
+            <div class="grid-container grid-gap-10">
+                <div class="cell col-11-md">
+                    <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education</p>
+                </div>
+                <div class="cell col-1-md staff-login"><a href="#"><img src="/common/graphics/icons/icon-lock.png"
+                            alt="log in to the staff side of the Illinois Higher Ed Bulletin"></a></div>
+            </div> <!--grid-containter-->
+        </div>
+
+    </footer>
+
+
+
+    <script src="/common/javascript/pb-common.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+@use '../../../common/css/scss/variables' as *;
+
+/* =========================================================================
+   ## DECORATIVE GRAPHICS LAYOUT
+============================================================================ */
+  .illu-section {
+    h1, h2, h3, h4 {
+      margin-top:.5rem;
+      margin-bottom: 0;
+    }
+    p {margin-top: .75rem;}
+    img {max-width: 100%;}
+  }
+
+  .decor-illu {
+    grid-row: 1;
+    text-align: center;
+    img {
+      padding-top: 1rem;
+      max-width: 200px
+    }
+
+    @media (min-width: $breakpoint-md) {
+      grid-row: auto;
+      text-align: auto;
+      img {width: 100%}
+    }
+
+  }
+

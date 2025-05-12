@@ -1,0 +1,328 @@
+@use 'variables' as *;
+/* =========================================================================
+  ## NAVIGATION STYLING 
+============================================================================ */
+   // ### GLOBAL NAVIGATION 
+      // #### MOBILE NAVIGATION
+      // #### MOBILE NAVIGATION TOGGLE
+      // #### DESKTOP NAVIGATION
+   // ### SIDEBAR NAVIGATION
+   // ### IE FIX - NAVIGATION
+   // ### BREADCRUMB BAR
+
+
+/* ===============================================================
+  ### GLOBAL NAVIGATION 
+================================================================== */
+/* Dropdown navigation fuctionality adapted from https://www.w3.org/WAI/tutorials/menus/flyout/#flyoutnavkbbtn*/
+
+/* ========================= #### MOBILE NAVIGATION TOGGLE ========================= */
+.mobile-nav-toggle {
+  display: inline;
+
+  padding: .75rem;
+  padding-right: 1rem;
+  border-radius: 3px;
+
+  background: transparent;
+  border: transparent;
+
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1rem;
+  color: $white;
+}
+
+.mobile-nav-toggle::before {
+  content: "\2630";
+  font-size: 1.75rem;
+  padding-right: .25rem;
+}
+
+.mobile-nav-toggle:hover {
+  background-color: $white;
+  color: $slate;
+}
+
+
+@media(min-width: $breakpoint-md){
+  .mobile-nav-toggle {display: none;}
+}
+
+/* ========================= #### MOBILE NAVIGATION ========================= */
+.navbar {
+  border-bottom: 10px $blue-03 solid;
+  background-color: $site-color;
+}
+
+.navbar-links {
+  padding: 0;
+  margin: 0;
+  display: none;
+  list-style: none;
+  
+  li {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    position:relative;
+
+    a {
+      padding: 1rem;
+      color: $white;
+      text-decoration: none;
+      border: none;
+      display: inline-block;
+      width: 100%;
+    }
+    
+    
+    a:focus-visible {
+      outline-offset:-5px;
+      outline: 2px $white dashed;
+    }
+
+    a:hover, a:focus {
+      color: $white;
+      background-color: $primary-dark;
+    }
+  }
+
+  .current {background-color: $primary-blue;}
+
+
+  li.account-mobile {
+    border-bottom: $white 1px solid;
+
+    a.hollow-white {border: $white solid 1px}
+    a.hollow-white:hover {background-color: $white; color: $slate;}
+    button {
+      padding: 1rem;
+      width: 100%
+    }
+
+    ul {
+      list-style: none;
+      padding: 1rem 1rem;
+      a {padding: 1rem 0;}
+    }
+
+  }
+
+  li.has-submenu {
+    display: grid;
+   width: 100%; // add after figuring out desktop styling
+    grid-template-columns: 10fr 2fr;
+  
+    ul {
+      list-style: none;
+      grid-column: span 12;
+      display: none;
+      background-color: $site-color;
+      margin: 0; 
+      padding: 0;
+
+
+      a {
+        padding: 1rem 2rem;
+        width: 90%;
+        @media (min-width: 650px) { width: 100%;}
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      display: inline-block;
+      span {
+        display:inline-block;
+        width: 0;
+        height: 0;
+        font-size: 1rem;
+        vertical-align: middle;
+        border-top: 8px dashed $white;
+        border-bottom: none;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: ' ';
+        transform: rotate(-90deg)
+      }
+    }
+    .rotate {
+      span {transform: rotate(0deg);
+      }
+    }
+  }
+
+  li.has-submenu.open {
+    ul {display: block;}
+  }
+
+  li.has-submenu, li.has-submenu:hover {
+    a:hover:after, a:focus:after {content: '';}
+  }
+
+  li.has-submenu:hover button, li.has-submenu button:hover, li.has-submenu button:focus {
+    background:  $primary-dark;
+    cursor: pointer;
+    outline: none;
+  }
+
+  li.has-submenu button:focus-visible {
+    outline-offset:-3px;
+    outline: 2px $white dashed;
+  }
+}
+
+
+
+/* ========================= #### DESKTOP NAVIGATION - MEDIUM ========================= */
+@media (min-width: $breakpoint-md) {
+  ul.navbar-links {
+    
+    display:flex;
+    li {
+      display:flex;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 1rem .5rem;
+
+      } 
+    }
+
+    li.account-mobile {display: none;}
+    li.has-submenu {
+      width: auto;
+      display: flex;
+      
+      
+      ul {
+        position:absolute;
+        right:0;
+        top:100%;
+        padding:0;
+        margin:0;
+        z-index: 1;
+        width: fit-content;
+
+        a {padding: .75rem;}
+      }
+
+      button {
+        line-height: 1;
+        padding: .15rem;
+          
+        span {
+          margin-left: .25rem;
+          margin-right: .5rem;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    //Makes sure dropdown works even if javascript is disabled
+    li.has-submenu:hover ul {display:block}
+  }
+}
+
+
+
+/* ========================= #### DESKTOP NAVIGATION - LARGE ========================= */
+@media (min-width: $breakpoint-lg) {
+  ul.navbar-links {
+      li.has-submenu {
+            
+      ul {left:0;}
+
+      button {          
+        span {
+          margin-left: .3rem;
+          margin-right: .45rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* ===============================================================
+  ### SIDEBAR NAVIGATION
+================================================================== */
+.subnav {
+  display: none;
+  h2 {font-size: 1.15rem;}
+
+  //UPDATED 03.24.23 - Fixed Subnav current/hover styling to not have text exceed background as screen shrinks to breakpoint-md
+  a, a:visited {
+    color: $link;
+    text-decoration: none;
+    border-bottom: none;
+    border-left: transparent 5px solid;
+    padding:  .5rem .5rem;
+    display: block;
+    line-height:135%;
+  }
+  
+  a.current, a:hover, a:focus  {
+    background-color: $blue-01;
+    border-left: $primary-blue 5px solid;
+    color: $link;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li ul {padding-left: 2rem}
+  }
+
+
+}
+
+@media (min-width: $breakpoint-md) {
+  .subnav {display: block}
+}
+
+
+/* ===============================================================
+  ### IE FIX - NAVIGATION  
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /*Improve dropdowns in mobile navigation*/
+  @media (max-width: $breakpoint-md) {
+    .navbar-links li.has-submenu {
+      display: inline-block;
+      a {width: 75%}
+      button {padding: 1.15rem 1.25rem 1rem}
+      ul a {width: 90%;}
+    }
+  }
+}
+
+/* =========================================================================
+  ### BREADCRUMB BAR
+============================================================================ */
+
+.breadcrumbBar {
+  background-color: $blue-01;
+
+  a {
+    padding: .5rem 1rem;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    color: $primary-dark;
+  }
+
+  a:hover {
+    color: $slate;
+  }
+
+  #backButton::before {
+    content: '\2190';
+    font-size: 1.25rem;
+    padding-right: .5rem;
+  }
+}

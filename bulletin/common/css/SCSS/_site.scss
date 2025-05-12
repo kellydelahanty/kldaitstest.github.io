@@ -1,0 +1,364 @@
+@use 'variables' as *;
+
+/* =========================================================================
+   ## BASIC SITE STYLING
+============================================================================ */
+   // ### LAYOUT
+   // ### FONTS & TEXT
+   // ### LINKS
+   // ### BUTTONS
+   // ### PAGINATION 
+
+
+/* ===============================================================
+   ### LAYOUT
+================================================================== */
+   body {margin: 0;}
+
+   .content-block {padding: $site-padding;}
+
+   .blue-block {background-color: $blue-01;}
+   .gray-block {background-color: $gray-02;}
+
+
+/* ===============================================================
+   ### FONTS & TEXT
+================================================================== */
+
+  p, h1, h2, h3, h4, h5, h6, legend, label, li, a, dt, dd, th, td {
+    font-family: $font-family;
+  }
+
+  p, main li, main ul {
+    color: $font-color;
+    font-size: 1rem;
+    line-height: 175%;
+  }
+
+  //UPDATED - Changed margin-bottom setting of headings
+  h1, h2, h3, h4, h5, h6 {color: $font-color;}
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: .75rem;
+  }
+  h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+
+  }
+  h6 {font-size: 16px;}
+
+  ol, ul {
+    li {margin: .75rem 0;
+      ul {padding-left: 1.5rem;}
+    }
+  }
+
+/* ===============================================================
+   ### LINKS
+================================================================== */
+   // UPDATED 06.28.22 - Changing links to use text-decoration instead of border-bottom
+   a {color: $link;}
+   a:hover, a:visited:hover {color: $link-hover;}
+   a:visited {color: $link-visited;}
+
+  
+   a.button {
+     text-decoration: none;
+     display: inline-block;
+     border-bottom: none;
+     text-align: center;
+   }
+
+   a:hover.button {
+     border-bottom: none;
+     color: $white;
+   }
+
+   a.hollow, a:hover.hollow {
+     border-bottom: solid 1px $primary-blue;
+   }
+
+   a.hollow-white {border: $white solid 1px;}
+
+   a.primary, a.primary:hover {color: $white;}
+   a.accent, a.accent:hover {color: $black}
+
+  /* Links that look like links but align properly with buttons in btn-groups */
+  a.btn-match {
+    text-decoration: underline;
+    background-color: transparent;
+    color: $primary-blue;
+    padding: .5rem 0;
+    display: inline-block;
+  }
+
+  a.btn-match:hover, a.btn-match:focus {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+  
+/* Image+Links - used for the "Upcoming opportunities" and "Sign up for Email Notifications" CTAs on homepage */
+.img-link {
+  max-width: 300px;
+
+  img {
+    float:left;
+    padding-right: 1rem;
+    max-width: 50px;
+  }
+}
+
+/* > Arrow Links - Used to draw attention to particular links */
+.arrow-link {
+   background: $arrow-link left center no-repeat;
+   padding-left: 30px;
+}
+
+.arrow-link:hover {
+   background: $arrow-link-hover left center no-repeat;
+   padding-left: 30px;
+}
+
+
+.plain-link {
+  border-bottom: transparent;
+  text-decoration: none;
+}
+
+/* ===============================================================
+   ### BUTTONS
+================================================================== */
+   .button, [type=file].button::file-selector-button {
+    border-radius: 3px;
+    border:none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    padding:.5rem 1.25rem;
+    background-color: $gray-02;
+    color: $black;
+    transition: 0.3s;
+    margin: .5rem 0;
+  }
+
+  .button:hover,  [type=file].button::file-selector-button:hover {
+    cursor: pointer;
+    background-color: $gray-03;
+  }
+
+  .sm-btn {
+    margin: .5rem;
+    padding: .25rem .5rem;
+  }
+
+  .tiny-btn {
+    font-size: 14px;
+    padding: .05rem .25rem;
+    margin: .05rem .5rem;
+
+  }
+
+  .primary {
+    background-color: $primary-blue;
+    color: $white;
+  }
+
+  .primary:hover {
+    background-color: $primary-dark;
+  }
+
+  .secondary {
+    background-color: $secondary-dark;
+    color: $white;
+  }
+
+  .secondary:hover {
+    background-color: $secondary;
+  }
+
+  .tertiary {
+    background-color: $white;
+    color: $slate;
+  }
+
+   .tertiary:hover {
+     background-color: $gray-02;
+   }
+
+  .accent {
+    background-color: $accent;
+    color: $black;
+    font-weight: bold; 
+  }
+
+  .accent:hover {
+    background-color: $accent-dark;
+  }
+
+  .crit-btn {
+    background-color: $red;
+    color: $white;
+  }
+
+  .crit-btn:hover {
+    background-color: $red-dark;
+  }
+
+
+  .hollow, [type=file].hollow::file-selector-button {
+    border: 1px $primary-blue solid;
+    background-color: transparent;
+    color: $primary-blue;
+  }
+
+  .hollow:hover, [type=file].hollow::file-selector-button:hover {
+    border-color: $primary-dark;
+    color: $white;
+    background-color: $primary-dark
+  }
+
+  .hollow-white {
+    border: 1px $white solid;
+    background-color: transparent;
+    color: $white;
+  }
+
+  .hollow-white:hover {
+    border-color: $white;
+    color: $slate;
+    background-color: $white
+  }
+
+  .round {
+    padding: 3px 8px;
+    border: none;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    font-weight: bold;
+    aspect-ratio: 1/1;
+
+  }
+
+  .link-match, .link-match-dark-bg {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 1rem;
+    color: $link;
+    cursor: pointer;
+  }
+
+  .link-match:hover, .link-match:focus,
+  .link-match-dark-bg:hover, .link-match-dark-bg:focus {
+    color: $link-hover;
+    background: none;
+  }
+
+
+
+  .link-match-dark-bg {
+    color: $dark-bg-link;
+  }
+
+  .link-match-dark-bg:hover, .link-match-dark-bg:focus {
+    color: $dark-bg-link-hover;
+  }
+
+
+  [type=file].button::file-selector-button {margin: .5rem}
+  [type=file] {
+    background-color: transparent;
+    padding: 0.5rem 0;
+  }
+
+  [type=file]:hover{
+    background-color: transparent;
+  }
+
+  [type=file].hollow {
+    border: transparent;
+    color: #0a0a0a;
+    background-color: transparent;
+  }
+
+
+ /* BUTTON GROUPINGS AND LAYOUTS */
+  .button-group {
+    .button {margin-right: .75rem;}
+  }
+
+/*Disabled buttons*/
+.button:disabled, .button[disabled] {
+  background: $gray-02;
+  color:$slate;
+  cursor: not-allowed;
+  font-weight: normal;
+  border-color: transparent
+}
+
+
+/* ===============================================================
+  ### PAGINATION 
+  Used in both "Search Results" (public and private) and "News & Announcements" (public only). 
+  Pagination for datatables is handled separately. 
+================================================================== */
+.pagination {
+  float: right;
+  p {
+    margin: .25rem 0;
+    line-height: 300%;
+  }
+  
+  a {
+    margin: .05rem;
+    padding: .75rem;
+    border: none;
+  }
+
+  a.current {
+    background-color: $primary-blue;
+    color: $white;
+  }
+
+  a:hover, a:focus, a:visited:hover {
+    background-color: $blue-05;
+    color: $white;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .pagination {
+    text-align: right;
+    p {
+      line-height: 250%;
+      margin: .5rem 0;
+    }
+    
+    a {
+      padding: .35rem;
+      margin: .25rem
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .pagination {
+    p {line-height: 200%}
+  }
+}

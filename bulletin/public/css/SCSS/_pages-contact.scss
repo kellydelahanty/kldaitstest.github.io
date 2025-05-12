@@ -1,0 +1,22 @@
+@use '../../../common/css/scss/variables' as *;
+
+/* =========================================================================
+  ## CONTACT PAGE
+============================================================================ */
+.contact {
+  p {margin-bottom: 0;}
+}
+
+/* ========================= #### IE FIX - CONTACT PAGE  ========================= */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    .cell {
+      margin-bottom: 1rem;
+      display: block;
+      width: 100%;
+    }
+
+  }
+}

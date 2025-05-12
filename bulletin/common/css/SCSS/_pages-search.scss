@@ -1,0 +1,458 @@
+@use 'variables' as *;
+/* =========================================================================
+  ## SEARCH PAGE
+============================================================================ */
+// ### SEARCH - SIMPLE SEARCH
+// ### SEARCH - ADVANCED SEARCH
+// ### SEARCH - SEARCH HEADER
+// ### SEARCH - NO RESULT SUGGESTIONS
+// ### SEARCH - FILTERS
+// ### SEARCH - NOTICE PREVIEW
+
+// Pagination is handled in site.scss
+
+// ### IE FIX - SEARCH PAGE
+
+/* ===============================================================
+  ### SEARCH - SIMPLE SEARCH 
+================================================================== */
+
+.simple-search {
+  .question {
+    width: 100%;
+    //padding-bottom: 0.5rem;
+    input {
+      width: 100%;
+    }
+  }
+
+  .error {
+    max-width: none;
+    margin-bottom: 0.5rem;
+    input,
+    label {
+      width: 90%;
+      margin: 0 0.75rem;
+    }
+  }
+
+  .button-group {
+    width: 100%;
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .simple-search {
+    .error {
+      input,
+      label {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .simple-search {
+    .question {
+      width: 60%;
+    }
+    .button-group {
+      width: max-content;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .simple-search {
+    .question {
+      width: 75%;
+    }
+    .error {
+      width: 70%;
+    }
+  }
+}
+
+/* ===============================================================
+  ### SEARCH - ADVANCED SEARCH 
+================================================================== */
+.advanced-search {
+  margin-top: 0.5rem;
+
+  .question {
+    padding: 0;
+  //  margin-bottom: 0;
+  }
+
+  .block-fieldset div {
+    display: block;
+  }
+
+  .radcheck {
+    [type="checkbox"] + label,
+    [type="radio"] + label {
+      margin-bottom: 0;
+    }
+  }
+
+  .search-section {
+    margin-bottom: 1rem;
+    .input-group {
+      padding-left: 15px;
+      border-left: $blue-05 solid 5px;
+      margin-left: 0.5rem;
+      margin-bottom:0;
+    }
+  }
+
+  .nigp-codes {
+    input, button {margin-top: 1rem;}
+    #selectedNIGPCodeDisplay {
+      p:first-of-type {margin:0}
+      p.header {margin-top:1px}
+    }
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .advanced-search {
+    .block-fieldset div {
+      display: inline-block;
+    }
+  }
+}
+
+.advanced-search {
+
+  .error {
+    padding-bottom: 1rem;
+    .input-group {
+      padding-left: 05px;
+      border-left: none;
+      margin-left: 0rem;
+    }
+  }
+ 
+
+    
+ 
+}
+
+/*
+.advanced-search {
+  margin-top: .5rem;
+
+  .question {
+    padding: 0;
+    margin-bottom: .75rem;
+  }
+
+
+
+
+  .radcheck {
+    [type="checkbox"] + label, [type="radio"] + label {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .nigp-codes {
+    margin-bottom: 1.5rem;
+    input {margin-top: 1rem;}
+    #selectedNIGPCodeDisplay {
+      p {margin:0}
+      p.header {margin-top:1px}
+    }
+  }
+
+  .button-group {margin: .25rem 0;}
+
+
+  .error {
+    [type="text"], [type="date"], select {
+      margin-bottom: 1rem;
+    }
+    .question {
+      margin-bottom: 0;
+      [type="text"], [type="date"], select {margin-bottom: 0;}
+
+      #dueDateFrom {margin-bottom: .5rem;} //adds spacing between dates in error on smallest screens
+    }
+
+    fieldset:last-child {padding-bottom:10px;}
+
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .advanced-search {
+    .block-fieldset div { display: inline-block;}
+
+  }
+}
+*/
+
+
+/* ===============================================================
+  ### SEARCH - SEARCH HEADER
+================================================================== */
+.search-header {
+  margin: 1rem 0;
+  h1 {
+    margin: 0;
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .search-header {
+    .search-header-controls {
+      form,
+      p {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .search-header {
+    margin: 0.5rem 0 0 0;
+    h1 {
+      margin-top: 0.5rem;
+    }
+    .search-header-controls {
+      text-align: right;
+    }
+  }
+}
+
+/* ===============================================================
+  ### SEARCH - NO RESULT SUGGESTIONS
+================================================================== */
+.search-suggestions {
+  p {
+    color: $slate;
+    font-size: 1.25rem;
+    margin-top: 0;
+    font-weight: bold;
+  }
+}
+
+/* ===============================================================
+  ### SEARCH - FILTERS
+================================================================== */
+.filters {
+  grid-row: 2;
+  .filter-header {
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+    color: $white;
+    padding: $site-padding;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .filter-section {
+    border: $border;
+    border-top: none;
+    padding: $site-padding;
+
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      display: inline-block;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      .link-match {
+        float: none;
+      }
+
+      li {
+        margin: 1rem 0;
+
+        button.filter-close {
+          float: right;
+          background: none;
+          border: none;
+          color: $gray-04;
+          font-size: 1.25rem;
+          font-weight: bold;
+          padding: 0 0.25rem 0.1rem;
+        }
+
+        button.filter-close:hover,
+        button.filter-close:focus {
+          background: $gray-04;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .filters {
+    grid-row: 1;
+  }
+}
+
+/* ===============================================================
+  ### SEARCH - NOTICE PREVIEW
+================================================================== */
+.searchTermEmphasis {
+  font-weight: bold;
+}
+
+.notice-preview {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  border-bottom: $border;
+
+  .notice-summary {
+    grid-column: span 12;
+
+    .procurement-number {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h3 {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .instution {
+      color: $gray-04;
+      margin: 0;
+    }
+  }
+
+  .notice-meta {
+    grid-column: span 12;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto;
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .notice-status {
+      grid-column: span 3;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .notice-status:before {
+      content: " ";
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      margin-right: 5px;
+      display: inline-block;
+    }
+
+    .status-published:before {
+      background-color: $green;
+    }
+    .status-awarded:before {
+      background-color: $yellow;
+    }
+    .status-non-awarded:before,
+    .status-cancelled:before {
+      background-color: $error;
+    }
+
+    p {
+      strong {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .notice-preview .notice-meta p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .notice-preview {
+    grid-column-gap: 50px;
+
+    .notice-summary {
+      grid-column: span 9;
+    }
+
+    .notice-meta {
+      grid-column: span 3;
+      display: block;
+      p.notice-status {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+/* ===============================================================
+  ### IE FIX - SEARCH PAGE  
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .notice-preview .notice-meta {
+    p {
+      display: inline-block;
+      width: 30%;
+    }
+    .notice-status {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .simple-search {
+      display: flex;
+      .question {
+        width: 55%;
+      }
+      .button-group {
+        width: 45%;
+        margin-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+    .search-header .search-header-controls {
+      -ms-grid-row: 1;
+      -ms-grid-column: 5;
+    }
+
+    .filters {
+      margin-right: 30px;
+    }
+    #notices {
+      -ms-grid-row: 1;
+      -ms-grid-column: 5;
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    #notices {
+      -ms-grid-column: 4;
+    }
+    .notice-preview .notice-meta {
+    }
+  }
+}

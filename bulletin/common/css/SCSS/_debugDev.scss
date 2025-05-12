@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+/* =========================================================================
+   ## Debug & Development Styles 
+   Styles that only appear in non-prod environments 
+   to help with development, debugging and testing
+============================================================================ */
+   // ### IMPERSONATE BAR & TABLE
+   // ### DEBUG 
+   // ### PLACEHOLDER CONTENT 
+
+
+/* ===============================================================
+   ### IMPERSONAGE BAR & TABLE
+================================================================== */
+
+.impersonate-bar {
+    padding:  $site-padding;
+    background-color: $black;
+    color: $white;
+    font-family: $font-family;
+    font-size: 14px;
+    .cell {display: flex;}
+
+    a, a:visited {color: $dark-bg-link;}
+    a:hover, a:focus {color: $dark-bg-link-hover;}
+    .current-user {
+        padding-right: 1rem;
+        border-right: 1px solid $white;
+        margin-right: 1rem;
+
+        .impersonating {font-style: italic;}
+
+        button {
+            font-size: 14px;
+            margin-left: .5rem;
+        }
+    }
+}
+
+
+/* ===============================================================
+   ### Impersonate Bar & Table
+================================================================== */
+
+#devDebuggingBar{
+    background-color: #E9E9E9;
+    font-family: consolas;
+    font-weight: bold;
+    text-align: center;
+    padding: .5em;
+    margin: 0;
+  }
+  
+  .debugDumps{
+    font-family: consolas;
+    color: #B9B9B9;
+  }
+  
+  #simulateFutureBar {
+    background-color: #DDE9EB;
+    font-weight: bold;
+    text-align: center;
+    padding: .5em;
+    margin: 0;
+  }
+  #searchDebuggingBar {
+    background-color: teal;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: .5em;
+    margin: 0;
+  }
+  
+  
+  
+/* ===============================================================
+   ### PLACEHOLDER CONTENT
+================================================================== */
+
+.placeholder {background-color: yellow;}

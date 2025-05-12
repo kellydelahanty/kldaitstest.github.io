@@ -1,0 +1,260 @@
+<!--This is the template page for the "standard" pages. Nearly all pages save the login/2FA and downtime pages will use this template.-->
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Staff Standard Template | Illinois Procurement Bulletin of Higher Ed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/common/graphics/favicon.png">
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">  <link rel="stylesheet" href="/common/css/pb-common.css">
+  
+    <!--STYLESHEETS-->
+  <link rel="stylesheet" href="/staff/css/pb-staff.css">
+
+  <noscript>
+    <link rel="stylesheet" href="/common/css/nojs.css">
+  </noscript>
+
+
+  
+  <!--JAVASCRIPT & RELATED STYLESHEETS-->
+  <!--The following Javascript and related files exist in the uiDesignFiles common folder for finance apps
+     but I can't get linking to there to work for some reason so I'm pulling them into the procure/common/javascript 
+     folder and linking to them there for local dev purposes-->
+  <!--Jquery -->
+  <script src="/common/javascript/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+  <!--Skipto-->
+  <script id="skipToMinJS" src="/common/javascript/skipTo/skipTo-5.1.6/skipto-min.js"></script>
+  <script type="text/javascript" id="skipToScript">
+    var SkipToConfig = {
+      "settings": {
+        "skipTo": {
+          colorTheme: "bulletin",
+          displayOption: "popup"
+        }
+      }
+    };
+  </script>
+
+  <!--Datatables-->
+  <script id="dataTablesMinJS"
+    src="/common/javascript/datatables/DataTables-1.12.1/js/jquery.dataTables.min.js?v=DTHeaderA11yFix2024"
+    type="text/javascript"></script>
+
+  <link href="/common/javascript/datatables/DataTables-1.12.1/css/jquery.dataTables.css?v=DTHeaderA11yFix2024"
+    rel="stylesheet" type="text/css" />
+
+  <script id="dataTablesButtonsMinJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/dataTables.buttons.min.js?v=DTHeaderA11yFix2024"
+    type="text/javascript"></script>
+  <script id="buttonsHtml5MinJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/buttons.html5.min.js?v=DTHeaderA11yFix2024"
+    type="text/javascript"></script>
+  <script id="jszipJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/jszip.min.js?v=DTHeaderA11yFix2024"
+    type="text/javascript"></script>
+  <script id="buttonsPrintMinJS"
+    src="/common/javascript/datatables/extensions/Buttons-2.3.2/js/buttons.print.min.js?v=DTHeaderA11yFix2024"
+    type="text/javascript"></script>
+
+  <link
+    href="/common/javascript/datatables/extensions/Buttons-2.3.2/css/buttons.dataTables.min.css?v=DTHeaderA11yFix2024"
+    rel="stylesheet" type="text/css" />
+  <script id="dataTablesFixedHeaderMinJS"
+    src="/common/javascript/datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js?v=DTHeaderA11yFix2024"></script>
+  <script id="dataTablesFixedHeaderAITSAccessibilityFixes"
+    src="/common/javascript/datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=DTHeaderA11yFix2024"></script>
+
+  <link rel="stylesheet"
+    href="/common/javascript/datatables/extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css?v=DTHeaderA11yFix2024">
+  <link href="/common/javascript/datatables/DataTables-1.12.1/css/Datatable-AITS-Fix.css?v=DTHeaderA11yFix2024"
+    rel="stylesheet" type="text/css" />
+  <link href="/common/common/css/datatables-style-bulletin.css?v=DTHeaderA11yFix2024" rel="stylesheet"
+    type="text/css" />
+</head>
+
+<body>
+  <header class="header-main">
+    <div class="grid-container grid-gap-8">
+      <div class="cell col-9-sm site-name">
+        <img class="inverse-logo" src="/common/graphics/bulletin-logo-inverse.svg" alt="">
+        <img class="logo" src="/common/graphics/bulletin-logo.svg" alt="">
+
+        <a href="#">
+          <span class="site-title">Illinois Procurement Bulletin</span>
+          Public Institutions of Higher Education
+        </a>
+
+        <div class="staff-site-name">
+          <span>Staff</span>
+        </div>
+      </div>
+
+
+      <div class="cell col-3-md account button-group">
+        <a href="#" class="button primary">Log Out</a>        
+      </div>
+
+
+      <div class="cell col-3-sm menu-btn">
+        <button class="mobile-nav-toggle">Menu</button>
+      </div>
+    </div> <!--grid-containter-->
+  </header>
+
+  <nav aria-label="Main Navigation" class="navbar" id="mainnav">
+    <div class="grid-container grid-gap-10">
+      <div class="cell">
+        <ul class="navbar-links">
+          <li><a href="#">To Do List</a></li>
+          <li><a href="#">Active Notices</a></li> <!--Only seen by Buyers and Site Contact users-->
+          <li><a href="#">Sole Source Hearings</a></li> <!--Only seen by Sole Source SPO role-->
+          <li class="has-submenu">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Search</a>
+            <ul>
+              <li><a href="#">Advanced Search</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Notice Status</a></li>
+          <li><a href="#">E-Bidding</a></li> <!--Only seen by Buyers and Site Contact users-->
+          <li><a href="../reports/reports.html">Reports</a></li>
+          <li><a href="../resources/resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="content-block">
+      <div class="grid-container grid-gap-50">
+
+        <div class="cell" id="page-content">
+          <h1>Page title</h1> 
+          <p>This is the "standard" template for the staff side of the Bulletin. Nearly all pages save the login/2FA and downtime pages
+            will use this template. </p>
+          <p class="placeholder">Please note the links on this page do not work yet</p>
+
+
+        </div><!--main section cell-->
+      </div> <!--full page grid-containter-->
+    </div>
+
+  </main>
+
+  <footer role="contentInfo">
+    <div class="main-footer">
+      <div class="grid-container grid-gap-10">
+        <div class="cell col-6-md col-7-lg footer-contact">
+          <h2>Contact </h2>
+          <p>For questions about the Bulletin or publishing help, contact the Bulletin Manager:  
+            <a href="mailto:cpowebmaster@uillinois.edu">cpowebmaster@uillinois.edu</a> or  (217) 333-3596</p>
+          </p>
+          <p>For procurement questions, please see: </p>
+          <ul>
+            <li><a href="https://www.procure.stateuniv.state.il.us/contactUs.cfm">Institutions' Procurement Office Contact Information</a></li>
+            <li><a href="#">Individual Procurement Staff Contacts</a></li><!--procurement contacts in Resrouces on staff site-->
+
+          </ul>
+        </div>
+
+        <nav class="cell col-6-md col-5-lg footer-nav" aria-label="Footer Navigation">
+          <h2>Navigation</h2>
+          <div class="grid-container">
+            <div class="cell">
+              <ul class="footer-navlinks">
+                <li><a href="#">To Do List</a></li>
+                <li><a href="#">Active Notices</a></li>
+                <li><a href="#">Sole Source Hearings</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Notice Status</a></li>
+                <li><a href="#">E-Bidding</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+      </div> <!--grid-containter-->
+    </div>
+    <div id="policy" class="policy-footer">
+      <div class="grid-container grid-gap-10">
+        <!--STAFF CONTENT-->
+        <div class="cell col-11-md">
+          <p>Copyright © Chief Procurement Officer for Public Institutions of Higher Education | <a
+              href="https://www.procure.stateuniv.state.il.us/">View Public Bulletin Site</a></p>
+        </div><!--END STAFF CONTENT-->
+  
+
+      </div> <!--grid-containter-->
+    </div>
+
+  </footer>
+
+
+
+  <script src="/common/javascript/pb-common.js"></script>
+
+
+<!--Only needed on pages with modals-->
+  <script src="/common/javascript/modal-min.js"></script>
+
+<!--Only needed on pages with accordions/toggle functions-->
+  <script type="text/javascript" id="slideToggleScript">
+    $(document).ready(function () {
+      $(".toggle").click(function () {
+        toggleContent(this);
+      });
+
+      $(".toggle").keydown(function (event) {
+        var key = event.which || event.keyCode;
+        if (key == 13) {
+          $(this).click();
+          event.preventDefault();
+        }
+
+      });
+
+      $("input.js-modal").click(function () {
+        $("#js-modal .toggle").click(function () {
+          toggleContent(this);
+        });
+
+        $("#js-modal .toggle").keydown(function (event) {
+          var key = event.which || event.keyCode;
+          if (key == 13) {
+            $(this).click();
+            event.preventDefault();
+          }
+
+        });
+      });
+
+    });
+
+
+    function toggleContent(buttonClicked) {
+      //getting the next element
+      var contentID = "#" + $(buttonClicked).attr('aria-controls');
+      //checking if its already visible
+      if ($(buttonClicked).attr('aria-expanded') === 'true') {
+
+        $(buttonClicked).attr("aria-expanded", "false");
+      }
+      else {
+        $(buttonClicked).attr("aria-expanded", "true");
+      }
+      $(contentID).slideToggle(0);
+      return false;
+    };
+  </script>
+
+</body>
+
+</html>

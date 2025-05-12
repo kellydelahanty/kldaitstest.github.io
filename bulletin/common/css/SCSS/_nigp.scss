@@ -1,0 +1,248 @@
+@use 'variables' as *;
+/* =========================================================================
+  ## NIGP CODE DISPLAY 
+============================================================================ */
+  // ### NIGP CODES - TABLE & LISTS
+  // ### NIGP CODES - ACCORDIONS & ACCORDION CONTENT
+  // ### NIGP CODES - NIGP CODE MODAL  
+  // ### NIGP CODES - NIGP LOOKUP 
+  // ### IE FIXES 
+
+
+  /* ===============================================================
+  ### NIGP CODES - TABLE & LISTS
+================================================================== */
+ul.inactive, li.inactive,
+td.inactive, table.inactive tr td:nth-child(2),
+td span.inactive {
+  font-style: italic;
+}
+
+td.inactive:before, table.inactive tr td:nth-child(2):before,
+h1.inactive:after, h2.inactive:after, h3.inactive:after, h4.inactive:after, h5.inactive:after, h6.inactive:after{
+  content: 'This NIGP code is no longer active';
+  color: $black;
+  background: $icon-warning-yellow;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  display: inline-block;
+}
+
+td.inactive:before, table.inactive tr td:nth-child(2):before {
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: .25rem;
+  margin-right: .5rem;
+  padding-left: 25px;
+}
+
+h1.inactive:after, h2.inactive:after, h3.inactive:after, h4.inactive:after, h5.inactive:after, h6.inactive:after {
+  font-style: italic;
+  font-weight: normal;
+  background-size: 25px 25px;
+  padding-left: 30px;
+  margin-left: .75rem;
+}
+
+/* ===============================================================
+  ### NIGP CODES - ACCORDIONS & ACCORDION CONTENT 
+================================================================== */
+.nigp-accordion {
+  .header {
+    .inactive {
+      color: $slate;
+      font-style: italic;
+      background-color: $gray-02;
+      background-image: $accordion-closed-gray;
+    }
+
+    .inactive:focus, .inactive:hover {
+      background-color: $gray-03;
+    }
+
+    [aria-expanded="true"].inactive {
+      background-color: $gray-02;
+      background-image: $accordion-open-gray;
+    }
+
+    [aria-expanded="true"].inactive:focus, [aria-expanded="true"].inactive:hover {
+      background-color: $gray-03;
+      background-image: $accordion-open-gray;
+      color: $slate;
+    }
+
+
+  }
+  
+  .inactive-mssg:before {
+    margin-bottom: .25rem;
+    margin-right: .5rem;
+
+    display: inline-block;
+    content: 'This NIGP code is no longer active';
+    color: $black;
+    font-style: normal;
+    font-weight: bold;
+
+    background: $icon-warning-yellow;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-left: 25px;
+    margin-left: 5px;
+    margin-right: 15px;
+  }
+
+  .content {
+    padding: 0;
+    display: grid;
+
+    .button {
+      font-size: 14px;
+      margin: 1rem;
+    }
+
+    ul {
+      padding-left: 0;
+      margin:0;
+
+      li {
+        margin:0;
+        padding: $site-padding;
+        background: $white;
+        line-height: 150%;
+      }
+      li:nth-child(even) { background: $blue-01;}
+    }
+
+    table {
+      width: 100%;
+      tbody {border: none}
+      td {
+        font-size: 14px;
+        line-height: 140%;
+        vertical-align: top;
+        padding: .5rem .5rem .5rem .75rem;
+      }
+
+      tr td:last-of-type {min-width: 50px;}
+      button { font-size: 14px;}
+    }
+  }
+}
+
+.small-accordion {
+  .header {
+    .inactive:before {
+      background-size: 20px 20px;
+      padding-left: 1.5rem;
+    }
+  }
+
+  .content {
+    ul {
+      li {
+        font-size: 14px;
+        margin:0;
+        padding: .5rem $site-padding;
+        line-height: 150%;
+      }
+      li:nth-child(even) { background: $blue-01;}
+    }
+  }
+}
+
+//Responsiveness, makes sure accordions don't go past edge of page in account on medium screens before subnavigation disappears, but that content in modal still is full width 
+@media (min-width: $breakpoint-md) {
+  .nigp-accordion {width: 95%;}
+  .card-body .nigp-accordion {width: 100%}
+}
+
+/* ===============================================================
+  ### NIGP CODES - NIGP CODE MODAL  
+================================================================== */
+.nigp-header {
+  h2  {margin-bottom: 0;}
+  a {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+#modalNIGPListContainer {
+  h3 {margin: 0;}
+  h4 {margin: 1rem 0 .5rem}
+  p {margin-bottom: .5rem}
+}
+
+#modalSelectedNIGPCodeDisplay p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#modalSelectedNIGPCodeDisplay p.header {
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 1px;
+}
+
+/* ===============================================================
+  ### NIGP CODES - NIGP LOOKUP 
+  2/7/23 - KD: I think this is no longer utilized anywhere can probably be deleted 
+================================================================== */
+.nigp-lookup {
+  th {padding: $site-padding .5rem;}
+
+  td {
+  vertical-align: top;
+  padding: .75rem .5rem;
+
+  font-size: 14px;
+  line-height: 140%;
+  }
+
+  tr td:last-of-type {
+    min-width: 80px;
+    button {
+      display: block;
+      font-size: 14px;
+      margin-top: .75rem;
+      text-align:left;
+      text-decoration: underline;
+      border: none
+    }
+    button:first-of-type {margin-top: 0;}
+  }
+}
+
+
+/* ===============================================================
+  ### IE FIX - NIGP CODES
+================================================================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .nigp-header, #modalNIGPListContainer, #modalSelectedNIGPContainer {margin-bottom: 1rem;}
+
+  #nigpLookupForm {
+    .button-group {display: block;} 
+  }
+
+  #modalSelectedNIGPContainer {margin-top: 1rem}
+
+    
+  @media (min-width: $breakpoint-lg) {
+    #modalSelectedNIGPContainer {
+      -ms-grid-column: 8;
+      -ms-grid-row:2;
+      margin-left: 3rem;
+      margin-top: 0; 
+    }
+    
+    #nigpLookupForm {
+      display: flex;
+      .button-group {
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
