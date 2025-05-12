@@ -5,6 +5,7 @@
 <head>
 	<title>Padding Style Example</title>
 	<cfset local.currentRelease="myRelease2022">
+		<link rel="stylesheet" type="text/css" href="../../../css/sandbox.css" />
 
 		<cfoutput>
 			<script src="../../jquery/jquery-3.6.0.min.js?v=myRelease2022" type="text/javascript"></script>
@@ -214,162 +215,176 @@
 
 <body>
 
+<aside class="sb-heading">
+    <div>
+      <h1>Kelly Delahanty's Front-End Sandbox</h1>
+      <nav>
+        <a href="../../../index.html">Back to Sandbox Home</a>
+      </nav>
+    </div>
+  </aside>
+	<main> 
+		<h1 >Table Padding Style Examples</h1>
+		<p>The following classes are available for determining padding size:</p>
+		<ul>
+			<li>padding_sm</li>
+			<li>padding_lg</li>
+		</ul>
+	
+	
+	
+		<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
+		<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
+	
+		<!--Default Padding-->
+		<div class="table-section">
+			<h2>Default Padding</h2>
+			<table id="ex-table-light-gray" class="ex-table header_lightGray">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
+	
+				</tbody>
+			</table>
+		</div>
+	
+		<!--Small Padding-->
+		<div class="table-section">
+			<h2>Small Padding</h2>
+			<p>table class="padding_sm"</p>
+			<table id="ex-table-light-gray" class="ex-table  header_lightGray padding_sm">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
+	
+				</tbody>
+			</table>
+		</div>
+	
+		<!--Large Padding-->
+		<div class="table-section">
+			<h2>Large Padding</h2>
+			<p>table class="padding_lg"</p>
 
-	<h1 >Table Padding Style Examples</h1>
-    <p>The following classes are available for determining padding size:</p>
-	<ul>
-		<li>padding_sm</li>
-		<li>padding_lg</li>
-	</ul>
+			<table id="ex-table-light-gray" class="ex-table  header_lightGray padding_lg">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
+	
+				</tbody>
+			</table>
+		</div>
+	</main>
 
 
-
-	<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
-	<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
-
-	<!--Default Padding-->
-	<div class="table-section">
-		<h2>Default Padding</h2>
-		<table id="ex-table-light-gray" class="ex-table header_lightGray">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
-
-			</tbody>
-		</table>
-	</div>
-
-	<!--Small Padding-->
-	<div class="table-section">
-		<h2>Small Padding</h2>
-		<table id="ex-table-light-gray" class="ex-table  header_lightGray padding_sm">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
-
-			</tbody>
-		</table>
-	</div>
-
-	<!--Large Padding-->
-	<div class="table-section">
-		<h2>Large Padding</h2>
-		<table id="ex-table-light-gray" class="ex-table  header_lightGray padding_lg">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
-
-			</tbody>
-		</table>
-	</div>
 
 </body>
 

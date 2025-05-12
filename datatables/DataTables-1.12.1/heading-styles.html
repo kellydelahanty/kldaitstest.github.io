@@ -4,6 +4,8 @@
 
 <head>
 	<title>Table Heading Style Example</title>
+	<link rel="stylesheet" type="text/css" href="../../../css/sandbox.css" />
+
 	<cfset local.currentRelease="myRelease2022">
 
 		<cfoutput>
@@ -42,8 +44,6 @@
 				overflow: hidden;
 				word-wrap: normal;
 			}
-
-
 		</style>
 
 		<script type="text/javascript" id="errorFocusScript">
@@ -212,312 +212,333 @@
 		</script>
 </head>
 
-
 <body>
+	<aside class="sb-heading">
+		<div>
+			<h1>Kelly Delahanty's Front-End Sandbox</h1>
+			<nav>
+				<a href="../../../index.html">Back to Sandbox Home</a>
+			</nav>
+		</div>
+	</aside>
+	<main>
+		<h1>Table Heading Style Examples</h1>
+		<p>The following classes are available for styling the table headers:</p>
+		<ul>
+			<li>header_lightGray</li>
+			<li>header_darkGray</li>
+			<li>header_blue</li>
+			<li>header_darkBlue</li>
+			<li>header_slate</li>
+			<li>header_inky</li>
+		</ul>
 
 
-	<h1 >Table Heading Style Examples</h1>
-	<p>The following classes are available for styling the table headers:</p>
-	<ul>
-		<li>header_lightGray</li>
-		<li>header_darkGray</li>
-		<li>header_blue</li>
-		<li>header_darkBlue</li>
-		<li>header_slate</li>
-		<li>header_inky</li>
-	</ul>
+		<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
+		<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
 
+		<!--Light Gray-->
+		<div class="table-section">
+			<h2>Light Gray Header</h2>
+			<p>table class="header_lightGray"</p>
+			<table class="ex-table header_lightGray">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
 
-	<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
-	<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
+				</tbody>
+			</table>
+		</div>
 
-	<!--Light Gray-->
-	<div class="table-section">
-		<h2>Light Gray Header</h2>
-		<table class="ex-table header_lightGray">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
+		<!--Dark Gray-->
+		<div class="table-section">
+			<h2>Dark Gray Header</h2>
+			<p>table class="header_darkGray"</p>
 
-			</tbody>
-		</table>
-	</div>
+			<table class="ex-table header_darkGray">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
 
-	<!--Dark Gray-->
-	<div class="table-section">
-		<h2>Dark Gray Header</h2>
-		<table class="ex-table header_darkGray">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
+				</tbody>
+			</table>
+		</div>
 
-			</tbody>
-		</table>
-	</div>
+		<!--Blue -->
+		<div class="table-section">
+			<h2>Blue Header</h2>
+			<p>table class="header_blue"</p>
 
-	<!--Blue -->
-	<div class="table-section">
-		<h2>Blue Header</h2>
-		<table class="ex-table header_blue">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
+			<table class="ex-table header_blue">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
 
-			</tbody>
-		</table>
-	</div>
+				</tbody>
+			</table>
+		</div>
 
-	<!--Dark Blue -->
-	<div class="table-section">
-		<h2>Dark Blue Header</h2>
-		<table class="ex-table header_darkBlue">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
+		<!--Dark Blue -->
+		<div class="table-section">
+			<h2>Dark Blue Header</h2>
+			<p>table class="header_darkBlue"</p>
 
-			</tbody>
-		</table>
-	</div>
+			<table class="ex-table header_darkBlue">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
 
-	<!--Slate -->
-	<div class="table-section">
-		<h2>Slate Header</h2>
-		<table class="ex-table header_slate">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
+				</tbody>
+			</table>
+		</div>
 
-			</tbody>
-		</table>
-	</div>
+		<!--Slate -->
+		<div class="table-section">
+			<h2>Slate Header</h2>
+			<p>table class="header_slate"</p>
 
-	<!--Inky -->
-	<div class="table-section">
-		<h2>Inky Header</h2>
-		<table class="ex-table header_inky">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email Address</th>
-					<th>Birthday</th>
-					<th>Last Modified</th>
-					<th class="no-sort no-export">Action</th>
-					<th class="noDisplay">ID</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Aaron</td>
-					<td>Adams</td>
-					<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
-					<td data-sort="2000/01/01">01/01/2000</td>
-					<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">1</td>
-				</tr>
-				<tr>
-					<td>Brenda</td>
-					<td>Banks</td>
-					<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
-					<td data-sort="1998/02/02">02/02/1998</td>
-					<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">2</td>
-				</tr>
-				<tr>
-					<td>Charles</td>
-					<td>Carter</td>
-					<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
-					<td data-sort="2010/03/03">03/03/2010</td>
-					<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
-					<td><button class="showID">Show User ID</button></td>
-					<td class="noDisplay userID">3</td>
-				</tr>
+			<table class="ex-table header_slate">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
 
-			</tbody>
-		</table>
-	</div>
+				</tbody>
+			</table>
+		</div>
+
+		<!--Inky -->
+		<div class="table-section">
+			<h2>Inky Header</h2>
+			<p>table class="header_inky"</p>
+
+			
+			<table class="ex-table header_inky">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email Address</th>
+						<th>Birthday</th>
+						<th>Last Modified</th>
+						<th class="no-sort no-export">Action</th>
+						<th class="noDisplay">ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Aaron</td>
+						<td>Adams</td>
+						<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+						<td data-sort="2000/01/01">01/01/2000</td>
+						<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">1</td>
+					</tr>
+					<tr>
+						<td>Brenda</td>
+						<td>Banks</td>
+						<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+						<td data-sort="1998/02/02">02/02/1998</td>
+						<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">2</td>
+					</tr>
+					<tr>
+						<td>Charles</td>
+						<td>Carter</td>
+						<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+						<td data-sort="2010/03/03">03/03/2010</td>
+						<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+						<td><button class="showID">Show User ID</button></td>
+						<td class="noDisplay userID">3</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</main>
+
 </body>
+
 
 </html>
