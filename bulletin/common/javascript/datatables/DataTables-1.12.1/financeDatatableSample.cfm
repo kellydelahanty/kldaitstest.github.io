@@ -350,8 +350,7 @@
 
  
 	<cfoutput><span class="noDisplay" id="currentDateTime">#dateTimeFormat(Now(), "mm/dd/yyyy hh:nn tt")#</span></cfoutput>
-	<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
-	<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
+
 <div id="staffDirectory">
 	<!--- see Datatables-Styles-Finance for other header, padding, alternating row, and border options --->
 	<table class="personTable header_darkBlue padding_lg tableBorder">

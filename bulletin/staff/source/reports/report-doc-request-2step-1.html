@@ -279,7 +279,7 @@
 									
 			//add aria labels to export buttons
       		$(".dt-buttons button").each(function() {
-			 	$(this).attr("aria-label", $("#datatableContainer_exportButtonLabel").text() + ' ' + $(this).text());
+				$(this).attr("aria-label", 'Export Data to ' + $(this).text());
        		}); 
 								
 			// set the search box to a maxlength of 50
@@ -367,7 +367,7 @@
 				//  NOTE: First, Previous, Next and Last buttons have their labels added with datatables language aria options
 		        $("div.datatableContainer_pagination a").each(function() {
 		            if ($.isNumeric($(this).text())) {
-						$(this).attr("aria-label", $("#datatableContainer_paginationLabel").text() + ' ' + $(this).text());
+                        $(this).attr("aria-label", 'Go to Page ' + $(this).text());
 					}
 		        });
 				
@@ -469,8 +469,7 @@
 
                         <div class="cell"><!--Table-->
                             <h2>Search Results for "Smith"</h2>
-                            <span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
-                            <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
+     
                             <div id="reportname">
                             <!-- see Datatables-Styles-Finance for other header, padding, alternating row, and border options -->
 

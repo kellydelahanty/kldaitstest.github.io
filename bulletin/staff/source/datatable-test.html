@@ -169,7 +169,7 @@
                 //  NOTE: First, Previous, Next and Last buttons have their labels added with datatables language aria options
                 $("div.datatableContainer_pagination a").each(function () {
                     if ($.isNumeric($(this).text())) {
-                        $(this).attr("aria-label", $("#datatableContainer_paginationLabel").text() + ' ' + $(this).text());
+                        $(this).attr("aria-label", 'Go to Page ' + $(this).text());
                     }
                 });
 
@@ -257,12 +257,10 @@
                             <div class="dt-header">
                                 <h2>Dash table with more info button</h2>
                                 <button class="button primary round">
-                                    <span class="hidden">[More Information trigger]</span>
-                                   ?
+                                    <span class="hidden">[More Information trigger]</span>?
                                 </button>
                             </div>
                       
-                            <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                             <div id="table1-div">
 
                                 <table id="table1" class="">
@@ -390,15 +388,13 @@
                             <div class="dt-header">
                                 <h2>Dash table with more info button</h2>
                                 <button class="button primary round">
-                                    <span class="hidden">[More Information trigger]</span>
-                                    ?
+                                    <span class="hidden">[More Information trigger]</span>?
                                 </button>
                                 <a href="#">Past Due Report</a>
                                 <a href="#">Renewal Report</a>                             
                             </div>
                             
 
-                            <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                             <div id="table2-div">
 
                                 <table id="table2" class="">
@@ -525,14 +521,12 @@
                             <div class="dt-header">
                                 <h2>Dash table with more info + button + links</h2>
                                 <button class="button primary round">
-                                    <span class="hidden">[More Information trigger]</span>
-                                    ?
+                                    <span class="hidden">[More Information trigger]</span>?
                                 </button>
                                 <a href="#" class="button hollow sm-btn">Create New NPO Listing</a>
                                 <a href="#">View NPOs on Public Site</a>                             
                             </div>
                             
-                            <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                             <div id="table3-div">
 
                                 <table id="table3" class="">
@@ -672,8 +666,6 @@
                                   </div>       
                             </div>
                             
-
-                            <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                             <table id="table4" class="">
                                 <thead>
                                     <tr>

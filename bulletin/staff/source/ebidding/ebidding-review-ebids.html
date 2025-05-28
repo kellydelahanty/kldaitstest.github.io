@@ -176,7 +176,7 @@
                 //  NOTE: First, Previous, Next and Last buttons have their labels added with datatables language aria options
                 $("div.datatableContainer_pagination a").each(function () {
                     if ($.isNumeric($(this).text())) {
-                        $(this).attr("aria-label", $("#datatableContainer_paginationLabel").text() + ' ' + $(this).text());
+                        $(this).attr("aria-label", 'Go to Page ' + $(this).text());
                     }
                 });
 
@@ -281,7 +281,6 @@
                                 -->
                                 <div class="cell">
                                     <h2>Submitted E-bids for Section: General Work </h2>
-                                    <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                                     <div id="ebids-reviewer1-div">
                                         <table id="ebids-reviewer1">
                                             <thead>
@@ -320,7 +319,6 @@
                                 -->
                                 <div class="cell">
                                     <h2>Submitted E-bids for Section: Electrical </h2>
-                                    <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                                     <div id="ebids-reviewer2-div">
                                         <table id="ebids-reviewer2">
                                             <thead>
@@ -357,7 +355,6 @@
                                 -->
                                 <div class="cell">
                                     <h2>Submitted E-bids for Section: Plumbing </h2>
-                                    <span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
                                     <div id="ebids-reviewer1-div">
                                         <table id="ebids-reviewer1">
                                             <thead>

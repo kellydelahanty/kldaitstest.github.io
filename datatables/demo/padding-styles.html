@@ -183,7 +183,7 @@
 					//  NOTE: First, Previous, Next and Last buttons have their labels added with datatables language aria options
 					$("div.datatableContainer_pagination a").each(function () {
 						if ($.isNumeric($(this).text())) {
-							$(this).attr("aria-label", $("#datatableContainer_paginationLabel").text() + ' ' + $(this).text());
+							$(this).attr("aria-label", 'Go to Page ' + $(this).text());
 						}
 					});
 
@@ -231,10 +231,6 @@
 			<li>padding_lg</li>
 		</ul>
 	
-	
-	
-		<span class="hidden" id="datatableContainer_exportButtonLabel">Export Data to</span>
-		<span class="hidden" id="datatableContainer_paginationLabel">Go to Page</span>
 	
 		<!--Default Padding-->
 		<div class="table-section">
