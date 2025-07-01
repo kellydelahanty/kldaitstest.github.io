@@ -1,0 +1,609 @@
+/*CSS for the General Template (Header, Navigation, Footer, that applies to all Financial Apps. This is already in place in prod and is just included for local development aid*/
+/* ==========================================================================
+   ## General Navigation
+   ========================================================================== */
+.navbar {
+  background-color: #3F4958;
+}
+
+nav {
+  display: grid;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  color: #fefefe;
+  font-size: 1.15rem;
+}
+nav button {
+  font-size: 100%;
+}
+nav a,
+nav a:visited {
+  color: #fefefe;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover,
+nav a.current,
+nav button.dropdown-parent:hover,
+nav button.dropdown.current {
+  color: #fefefe;
+  border-bottom: 2px solid #fefefe;
+}
+nav a:focus,
+nav button:focus {
+  outline-color: #fefefe;
+  outline-offset: 2px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+nav li {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+@media (min-width: 650px) {
+  nav li.current-parent {
+    box-sizing: border-box;
+    height: 60px;
+    border-bottom: 5px solid #c4d4e6;
+  }
+}
+@media (max-width: 650px) {
+  nav .navbar-links,
+  nav .site-modules {
+    display: none;
+  }
+  nav .navbar-links .module,
+  nav .site-modules .module {
+    display: block;
+  }
+  nav .navbar-links.show,
+  nav .site-modules.show {
+    display: block;
+  }
+  nav ul {
+    margin: 0 0 1rem 0;
+    list-style: none;
+    padding-left: 1.5rem;
+    width: 100%;
+    display: block;
+  }
+  nav li {
+    display: block;
+    padding: 1rem 0;
+  }
+  nav li.current-parent button {
+    border-bottom: 2px white solid;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-parent {
+  background-color: transparent;
+  color: #fefefe;
+  border: 0;
+  padding: 0;
+  border-bottom: 2px transparent solid;
+}
+
+li.dropdown button.dropdown-parent::after {
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 0.4em;
+  content: "";
+  border-bottom-width: 0;
+  border-top-style: solid;
+  border-color: #fefefe transparent transparent;
+  position: relative;
+  top: 0.4em;
+  display: inline-block;
+  float: right;
+  margin-left: 0.5em;
+}
+
+@media (min-width: 650px) {
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3F4958;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: -1rem;
+    box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-bottom: 1rem;
+  }
+  .dropdown-content li {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .dropdown-content {
+    display: none;
+    padding: 1rem 0 0 1rem;
+    margin-bottom: 0;
+  }
+  .dropdown-content li:last-child {
+    padding-bottom: 0;
+  }
+}
+/* ==========================================================================
+   ## Right Aligned Navigation Items
+   ========================================================================== */
+.right-nav {
+  border-top: white 2px solid;
+  padding-top: 0.5em;
+  margin-top: 1.5em;
+  margin-right: 3em;
+}
+.right-nav ul {
+  padding-left: 0rem;
+}
+
+@media (min-width: 651px) {
+  .right-nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+    border-top: none;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-left: white 2px solid;
+  }
+  .right-nav ul {
+    padding: 0;
+  }
+  .right-nav .dropdown-content {
+    min-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .right-nav .dropdown-content li {
+    width: 75%;
+  }
+}
+/* ==========================================================================
+   ## External Links
+   ========================================================================== */
+.external::before {
+  background-image: url(../graphics/external.svg);
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1em;
+  content: "";
+}
+
+.external-white::before {
+  background-image: url(../graphics/external-white.svg);
+}
+
+.external-blue::before {
+  background-image: url(../graphics/external-blue.svg);
+}
+
+/* ==========================================================================
+   ## 2-Level Navigation for Site Modules
+   ========================================================================== */
+.module-nav {
+  background-color: #e6e6e6;
+}
+
+.module {
+  display: inline-block;
+  font-size: 1.25rem;
+}
+.module a,
+.module a.link,
+.module a:visited {
+  display: block;
+  margin: 0;
+  padding: 0.75rem 1.75rem;
+  color: #3F4958;
+  border-bottom: 0px;
+}
+.module a:hover,
+.module a:focus {
+  border-bottom: 0px;
+  background-color: #25354a;
+  color: #fff;
+  transition: background-color 0.1s ease-out;
+}
+.module a:focus {
+  outline-offset: -5px;
+  outline-color: #fefefe;
+}
+
+.current-module {
+  background-color: #3F4958;
+}
+.current-module a,
+.current-module a:visited {
+  color: #fefefe;
+}
+
+/* ==========================================================================
+   ## Responsive/Mobile Navigation toggle
+   ========================================================================== */
+.mobile-nav-toggle,
+.module-nav-toggle {
+  margin: 1rem 0 1rem 1.5rem;
+  display: none;
+  background: transparent;
+  text-align: left;
+  border: transparent;
+}
+
+.mobile-nav-toggle {
+  color: #fefefe;
+  width: 100%;
+  background: url(../graphics/hamburger.svg) left center no-repeat;
+  padding-left: 35px;
+  background-size: 25px 22px;
+}
+
+.mobile-module {
+  display: none;
+}
+
+.module-nav-toggle {
+  display: block;
+  color: #3F4958;
+  background-size: 15px 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.module-nav-toggle:focus {
+  outline-offset: -10px;
+  outline-color: #25354a;
+}
+
+.module-nav-toggle:hover,
+.module-nav-toggle:focus-visible {
+  background-color: #25354a;
+  color: #fefefe;
+  outline-offset: -10px;
+  outline-color: #fefefe;
+}
+
+@media (max-width: 650px) {
+  .mobile-module {
+    display: flex;
+  }
+  .mobile-module .current-module {
+    display: inline;
+    padding: 1rem;
+  }
+  .mobile-module .module-nav-toggle {
+    margin: 0;
+  }
+  .mobile-nav-toggle,
+  .module-nav-toggle {
+    display: block;
+  }
+}
+/** Print Styles**/
+@media print {
+  .app-name {
+    font-size: 1rem;
+  }
+  .wordmark {
+    width: 150px;
+  }
+  .navbar, .logout, .helpbar, .impersonate {
+    display: none;
+  }
+}
+/* ==========================================================================
+   ## GLOBAL
+  ========================================================================== */
+body {
+  margin: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding: 1em;
+}
+
+/* ==========================================================================
+   ## LINKS
+  ========================================================================== */
+a, a:hover, a:visited {
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
+a {
+  color: #0B558E;
+  border-color: #0B558E;
+}
+
+a:visited {
+  color: #5A2784;
+  border-color: #5A2784;
+}
+
+a:hover {
+  color: #417505;
+  border-color: #417505;
+  border-bottom: solid 1px;
+}
+
+/* ==========================================================================
+   ## Impersonate Bar
+   ========================================================================== */
+.impersonate {
+  background-color: #25354a;
+  text-align: center;
+  padding: 0.5rem 0 0.75rem 0;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+.impersonate a {
+  color: #fefefe;
+  border-color: #fefefe;
+}
+.impersonate a:focus {
+  outline: white dotted 3px;
+  outline-offset: 2px;
+  border-style: transparent;
+}
+
+/* ==========================================================================
+   ## HEADER
+   ========================================================================== */
+header {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  flex-flow: row wrap;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+#skip a, #skip-main a, #skip-nav a {
+  background: transparent none repeat scroll 0 0;
+  border-bottom: 1px solid white;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid white;
+  color: white;
+  left: 40%;
+  padding: 8px;
+  position: absolute;
+  top: -48px;
+  transition: top 1s ease-out 0s, background 1s linear 0s;
+  z-index: 100;
+  font-size: 0.9rem;
+}
+
+#skip a:hover, #skip-main a:hover, #skip-nav a:hover {
+  text-decoration: underline;
+}
+
+#skip a:focus, #skip-main a:focus, #skip-nav a:focus {
+  background: #000 none repeat scroll 0 0;
+  outline: 0 none;
+  top: 0;
+  transition: top 0.1s ease-in 0s, background 0.5s linear 0s;
+  color: #fff;
+}
+
+.site-identity {
+  padding-left: 1em;
+  width: 100%;
+}
+@media (min-width: 750px) {
+  .site-identity {
+    width: 60%;
+  }
+}
+
+.wordmark {
+  width: 235px;
+  height: auto;
+  margin-top: 0.25rem;
+}
+
+a.wordmark {
+  opacity: 0.8;
+}
+
+a:hover .wordmark,
+a:focus .wordmark {
+  opacity: 1;
+}
+
+.app-name {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+.app-name a:link {
+  color: #3F4958;
+}
+.app-name a:hover, .app-name a:focus {
+  color: #0B558E;
+  border-bottom: 2px solid #0B558E;
+}
+.app-name a:visited {
+  color: #3F4958;
+}
+
+.account {
+  width: 100%;
+  text-align: right;
+}
+@media (min-width: 750px) {
+  .account {
+    width: 37%;
+  }
+}
+
+.logout {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 1em;
+  padding: 0.75rem 1.4rem;
+  -webkit-appearance: none;
+  border: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  background-color: #0D78BE;
+  color: #fefefe;
+}
+@media (max-width: 500px) {
+  .logout {
+    margin-top: 0.75rem;
+  }
+}
+
+a.logout:focus, a.logout:hover {
+  background-color: #0B558E;
+  color: #fefefe;
+  border: none;
+  margin: 0 0 0 1em;
+}
+
+a.logout:visited {
+  color: #fefefe;
+  border: none;
+  margin: 0 0 0 1em;
+}
+
+.no-nav {
+  background-color: #3F4958;
+  height: 10px;
+}
+
+/* ==========================================================================
+   ## FOOTER
+   ========================================================================== */
+footer {
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+footer .helpbar {
+  background-color: #E9F1F8;
+  padding: 0.5em 0 0.5em 0;
+}
+footer .policies, footer .helpbar {
+  padding-left: 1em;
+}
+footer .help-guide {
+  float: left;
+  margin-right: 5rem;
+}
+@media (max-width: 650px) {
+  footer .help-guide {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+  ## HELPER CLASSES
+  ========================================================================== */
+button {
+  cursor: pointer;
+}
+
+a:focus, button:focus {
+  outline: #0a0a0a dotted 3px;
+  outline-offset: 2px;
+  border-style: transparent;
+}
+
+a.plainlink:link,
+a.plainlink:hover,
+a.plainlink:focus {
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+.desktop-display {
+  display: none;
+}
+@media (min-width: 750px) {
+  .desktop-display {
+    display: block;
+  }
+}
+
+.mobile-display {
+  display: none;
+}
+@media (max-width: 750px) {
+  .mobile-display {
+    display: block;
+  }
+}
+
+.sr-only {
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  text-indent: -999em;
+  overflow: hidden;
+  word-wrap: normal;
+}
+
+.noDisplay {
+  display: none !important;
+}
+
+/* ==========================================================================
+  ## FABweb Match
+  ========================================================================== */
+BODY {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.inputButton {
+  background-color: #86AED7;
+  font-weight: bold;
+}
+
+.center_app {
+  line-height: 165%;
+  text-align: left;
+}
+
+H2 {
+  font-size: 115%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+H2, H3, H4, H5 {
+  color: #003366;
+}
+
+input {
+  line-height: normal;
+}

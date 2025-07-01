@@ -1,0 +1,57 @@
+@use 'settings' as *;
+
+.push-right {margin-right: 1em;}
+
+.link-btn {
+    color: #0B558E;
+    border: none;
+    text-decoration: none;
+    border-bottom: dotted 1px #0B558E; 
+    background-color: transparent;
+    padding: 0;
+}
+
+
+.link-btn:hover, .link-btn:focus {
+    color: #417505;
+    border: none;
+    border-bottom: dotted 1px #417505; 
+    background-color: transparent;
+}
+
+.link-btn:focus-visible {
+    outline: #0a0a0a dotted 3px;
+    outline-offset: 2px;
+    border-style: transparent;
+}
+
+#processingMsg {
+    margin: 1.5rem 1rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 150%;
+    text-align: center;
+
+    border: 1px solid $gold-dark;
+
+    background-image: URL("./graphics/warning.png");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center 5%;
+    padding: 3.25rem 1.5rem 1rem
+}
+
+@media (min-width: 760px) {
+
+    #processingMsg {
+        font-size: 1.25rem;
+        margin: 1.5rem 2.5rem;
+
+        background-position: center 10%;
+        padding: 3.25rem 4rem 1rem
+    }
+    
+}
+
+.datatableContainer_pageLength, .datatableContainer_filterResults, .datatableContainer_paginateTop {outline: 1px dotted red}

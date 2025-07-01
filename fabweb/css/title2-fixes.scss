@@ -1,0 +1,240 @@
+@use 'scss/settings' as *;
+@use 'scss/tabs' as *;
+
+/* ==========================================================================
+   ## FORMS & LAYOUTS
+   ========================================================================== */
+.psuedo-label {font-weight: bold;}
+
+.label-note {
+  font-weight: normal;
+}
+
+.required {
+  color: $red-dark;
+  font-weight: normal;
+}
+
+.input-display {
+  margin-bottom: .5rem;
+}
+
+
+.question {
+  label, .psuedo-label {
+    display: block;
+    margin-bottom: .25rem;
+  }
+}
+
+.js-tabcontent, .nav-tab-content { 
+  .question {
+    margin: 1rem 0;
+  }
+}
+
+
+/* ==========================================================================
+   ## Layout Styling
+   ========================================================================== */
+
+.info-section {
+  background-color: $icy-light;
+  padding: .5rem 2rem;
+  margin: 1rem 0; 
+  ul {
+    padding-left: 1rem; 
+
+    list-style: none;
+    li {
+      margin: .5rem 0
+    }
+  }
+}
+
+
+.hor-list {
+  display: flex;
+  flex-wrap: wrap;
+  div {margin: 0 2rem 1rem 0;}
+
+  div.question {margin-top: 1rem;}
+}
+
+ul.hor-list {
+  li {
+    list-style: none;
+    margin: 0 2rem 1.5rem 0;
+    .psuedo-label {display: block}
+  }
+}
+
+
+
+
+/* ==========================================================================
+   ## SWIS Asset List
+   ========================================================================== */
+
+.asset-list {
+  list-style: none;
+  margin:0; 
+  padding: 0;
+  >li:nth-child(odd) {background-color: $lightest-gray;}
+
+  ul {list-style: none;}
+}
+
+.asset-item {
+  border: 1px solid $dark-gray;
+  padding: 1rem;
+  padding-bottom: .5rem;
+  margin-bottom: .25rem;
+  h4 {margin-top: 0;}
+  h5 {
+    margin: 0;
+    margin-bottom: .25rem;
+    font-size: 12.5px;
+  }
+
+  a.btn-link, a.btn-link-hollow {display: inline-block;}
+}
+
+.asset-item-heading {
+  border-bottom: 1px solid $medium-gray;
+  padding-bottom: .25rem;
+
+  h4 {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+  } 
+
+  a {
+    margin-right: .5rem;
+  }
+
+}
+
+.asset-list-info, .child-assets {
+  margin-top: .75rem; 
+  ul {
+    padding-left: .5rem;
+    font-size: 12px;
+    li { margin-bottom: .5rem;}
+  }
+}
+
+.child-assets ul {
+  li { margin-bottom: .5rem;}
+  li.hor-list div {margin: 0 1rem .5rem 0;}
+}
+
+.reclass-asset {
+  display: inline;
+  margin-right: 1rem;
+}
+
+
+/* ==========================================================================
+   ## Tabs Navigation
+   ========================================================================== */
+
+
+nav.nav-tabs {
+  background-color: #FFFFFF;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    display: block;
+    padding: 0;
+  }
+
+  a, input[type=submit] {  
+    display: block;
+    padding: 1em  1.5em;
+
+    font-size: 1.05rem;
+    font-weight: bold;
+    background-color: $icy;
+    color: $primary-dark;
+  
+    border: none;
+    cursor: pointer;
+  }
+  input[type=submit] {
+    width: 100%;
+  }
+  a.current, input[type=submit].current {
+    color: $white;
+    background-color: $primary-blue;
+  }
+
+  a:hover, a:focus, 
+  input[type=submit]:hover,  input[type=submit]:focus {
+    background-color: $primary-dark;
+    color: $white;
+
+  }
+
+   a:focus-visible, input[type=submit]:focus-visible {
+    outline-offset: 2px;
+    outline: $black dotted 3px
+ }
+
+}
+
+.nav-tab-content {
+  background: $white;
+  border: 1px solid $medium-gray;
+  border-top: none;
+  padding: 1em;
+}
+
+
+@media (min-width: 600px) {
+  nav.nav-tabs {
+    li {
+      display: inline-block;
+      margin-right: .25rem;
+    }
+  }
+  .nav-tab-content {
+    border-top: 10px solid $icy;
+  }
+}
+
+/* ==========================================================================
+   ## Buttons
+   ========================================================================== */
+
+a.btn-link, a.btn-link-hollow {
+  padding: .15rem .5rem;
+  border-radius: .3rem ;
+
+}
+
+a.btn-link {
+  color: $white; 
+  background-color: $primary-blue;
+  border: none; 
+
+}
+
+a.btn-link-hollow {
+  color: $primary-dark;
+  background-color: transparent;
+  border: 1px solid $primary-dark;
+}
+
+a.btn-link:hover, a.btn-link:focus-visible,
+a.btn-link-hollow:hover, a.btn-link-hollow:focus-visible {
+  background-color: $primary-dark;
+  color: $white;
+  border: none; 
+}

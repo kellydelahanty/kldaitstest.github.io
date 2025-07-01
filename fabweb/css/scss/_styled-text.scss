@@ -1,0 +1,171 @@
+@use 'settings' as *;
+
+/* ==========================================================================
+   ## STYLED TEXT
+   ========================================================================== */
+/* ======= Error Message ======= */
+.error-mssg {
+    background: URL("/graphics/error-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: left 40%;
+    background-size: 30px 30px;
+    padding: 1rem 0; 
+    padding-left: 40px;
+    color: #800000;
+    font-weight: bold; 
+    font-size: 1.15rem;
+
+}
+
+/* ======= Warning Message ======= */
+.warning-mssg {
+    background: URL("/graphics/warning.png");
+    background-repeat: no-repeat;
+}
+
+p.warning-mssg {
+    background-position: left center;
+    background-size: 25px 25px;
+    padding-left: 35px;
+}
+
+.question .warning-mssg {
+    background-size: 17px 17px;
+    padding: 0 0 0px 20px;
+    background-position: left top;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+
+
+/* ======= Confirmation Messages ======= */
+
+.errorSucessWarningMsgs {
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  font-size: 100%;
+
+
+  h2 {
+    margin: .5rem 0 .25rem;
+    padding: .5rem 0;
+    padding-left: 35px;
+
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 25px;
+    font-weight: bold;
+    
+    text-align: left;
+    font-family:verdana;
+    font-size: 1.25rem; 
+  }
+  ul {
+    margin-top: 0;
+    padding-left: 65px;
+  }
+}
+
+
+.errorSucessWarningMsgs.successMsg {
+  border-color: green; 
+  h2 {  
+    color: green;
+
+    background-image: URL("/graphics/check.svg");
+    background-size: 27px 21px ;
+  }
+   
+}
+
+.errorSucessWarningMsgs.errormsg {
+  border-color: #800000;
+
+  h2 {  
+    color:  #800000;
+    background-image: URL("/graphics/error-triangle.svg");
+  }
+}
+
+
+.errorSucessWarningMsgs.warningmsg {
+  border-color: #fec500;
+
+  h2 {  
+    color: black;
+    background-image: URL("/graphics/warning.png");
+  }
+}
+  
+
+/* ======= More Information Message ======= */
+.helplinkText {
+    background: URL("/graphics/moreInfo.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px;
+    padding: .25rem;
+    padding-left: 25px;
+    border: none;
+    background-color: transparent;
+    color: $link;
+    text-decoration: underline;
+    cursor: help;
+  }
+
+.helplinkText:hover {
+  color: $link-hover;
+  text-decoration: underline;
+}
+
+.helpTextBox {
+  position: fixed;
+  border: .5em double #003366;
+  padding: .5em;
+  z-index: 1000000;
+  background: #FFFFFF;
+  max-width: 30em;
+  font-weight: normal;
+}
+
+
+
+
+/* ======= Locked Message ======= */
+.locked-mssg {
+    background: URL("/graphics/lock.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 25px;
+    padding: .5rem;
+    padding-left: 30px;
+    font-weight: bold;
+    
+    text-align: left;
+    font-family:verdana;
+}
+
+.callout {
+    border: 1px solid $primary-dark;
+    padding: 0 $site-spacing;
+    background-color: $icy;
+    margin: $site-spacing;
+    margin-top: 0;
+    display: inline-block;
+   width: 300px;
+
+    .callout-text {
+      background: URL("/graphics/moreInfo.svg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 20px 20px;
+      padding-left: 30px;
+
+      p:first-of-type {
+        font-weight: bold;;
+      }
+    }
+}

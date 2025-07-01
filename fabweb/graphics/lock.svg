@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="47px" viewBox="0 0 35 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Molecule/Icon/lock</title>
+    <g id="Molecule/Icon/lock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#006EBD" fill-rule="nonzero" x="7.10542736e-15" y="16.13" width="34.61" height="31.23" rx="4.83"></rect>
+        <rect id="Rectangle" stroke="#006EBD" stroke-width="5.69" x="7.88" y="3" width="18.87" height="25.93" rx="9.43"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="11.23" y="21.38" width="12.17" height="12.17" rx="6.08"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="15.14" y="27.46" width="4.33" height="14.73" rx="2.165"></rect>
+    </g>
+</svg>

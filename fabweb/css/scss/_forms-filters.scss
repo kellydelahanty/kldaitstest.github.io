@@ -1,0 +1,179 @@
+@use 'settings' as *;
+
+/* ==========================================================================
+  ## FORMS & FILTERS
+========================================================================== */
+
+
+/* ==================================================================
+  ### GENERAL FORM STYLING
+===================================================================== */
+.tiny-input {width: 90px;}
+.sm-input {width: 165px;}
+.med-input {width: 200px;}
+.lg-input {width: 350px;}
+.xlg-input {width: 450px;}
+
+*:disabled {
+    background-color: $light-gray;
+    color:  $darkest-gray;
+    border: 1px solid $medium-gray;
+    border-radius: 2px;
+}
+
+.filters, .updateUI, .introBoxes, .updateUI_single {
+    label {font-weight: bold;}
+  
+    .question {
+        padding: 0 0 1rem 0;
+        margin-right: .5rem;
+  
+        label, button {margin-right: .5em;}
+        p {margin: 0}
+  
+        input, select {
+            display: block;
+            background-color: $white;
+            border: 1px solid $dark-gray;
+            padding: 0.15rem;
+        }
+
+        .hide {display: none;}
+
+    }
+}
+
+
+/* ==================================================================
+  ### FILTER BOX
+===================================================================== */
+.filters {
+    background-color: $icy-light;
+    border: $light-gray 1px solid;
+
+    margin-bottom: 1rem;
+    margin-top: 1rem;     //UPDATED 9/20/23
+    padding: 1.25em 1em;
+    
+
+    p {margin-top: 0;}
+
+    h3 {margin-top: 0}    //UPDATED 9/20/23
+
+
+    .question {
+        display: inline-block;
+        input, select {border-color:  $medium-gray;}
+
+
+    }
+
+
+
+    fieldset {
+        border: none;
+        padding-left: 0;
+        legend {font-weight: bold}
+
+        [type="checkbox"], [type="radio"] {display: inline;}
+        [type="checkbox"] + label, [type="radio"] + label {
+            font-weight: normal;
+            margin-right: 1rem;
+        }
+    }
+
+    .inline-fieldset{
+        div {display: inline-block}
+    }
+
+    .inlined {display: inline !important}
+
+
+
+
+    .lookups {
+        margin-top: .5rem;
+        .question {
+          margin-right: 1rem;   /*UPDATED 05.31.22 - Fixed vertical shift when "choose location" button appears/disappears*/
+          label, button {margin-right: .5em;}   /*UPDATED 05.31.22 - Fixed vertical shift when "choose location" button appears/disappears*/
+          input, p {margin-top: .5rem;}
+          input:disabled {background-color: $white ;cursor: not-allowed;}
+          ::placeholder {color: $darkest-gray; opacity: 1}
+          button:disabled {
+            border:1px solid $dark-gray;
+            border-radius: 3px;
+            color: $darkest-gray;
+          }
+    
+        }
+    }
+
+
+    .actionbar {
+        margin-top: .5rem;
+        button {margin-right: 1em;}
+    }
+
+}
+
+.split-filters {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-gap: 1rem;
+    form:first-child {border-right: 1px solid $slate; padding-right:1rem}
+    form h3 {margin: 0 0 .5rem 0;}
+  
+    @media(max-width: 750px) {
+      grid-template-columns: 100%;
+      form:first-child {
+        padding-bottom: 2rem;
+        margin-bottom: 1rem;
+        border-right: none;
+        border-bottom: 1px solid $slate;
+      }
+    }
+}
+
+
+
+/* ==================================================================
+  ### BULK UPDATE UI 
+===================================================================== */
+.updateUI {
+    margin-top:2.5rem;
+    .question {margin-bottom: .25rem;}
+
+    .lookups {
+        .question {
+         label, button {margin-right: .5em;}
+          p {margin: .5rem 0 0 0}
+        }
+      }
+    
+
+}
+
+
+/* ==================================================================
+  ### INDIVIDUAL ASSET UPDATE UI 
+===================================================================== */
+.updateUI_single {
+    .question {
+        input, select {display: inline-block;}
+    }
+
+    .lookups {
+        display: inline-block;
+        input, select, p, button {display: inline-block;}
+        p {margin: 0 1rem 0 0;}
+        button {margin-right: .5rem;}
+    }
+    
+
+    .family-update {
+        display: inline-block;
+        margin-left: .5rem;
+        label {font-weight: normal}
+    }
+
+}

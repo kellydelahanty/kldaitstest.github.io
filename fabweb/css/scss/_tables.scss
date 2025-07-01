@@ -1,0 +1,52 @@
+@use 'settings' as *;
+
+th {
+  font-family: "Lato", Times, serif;
+  font-size: 1em
+}
+
+
+/* ==========================================================================
+  ## DATATABLE STYLING
+  ========================================================================== */ 
+  .dataTable img {width:20px; height: 20px}
+  th {
+    font-family:  Arial, Helvetica, sans-serif;
+    line-height: normal;
+    font-size: 1em
+  }
+
+  /*Add this class to the fieldset that surrounds the asset selection datatable to make the wrapper content 
+  (search, pagination, etc) properly responsive. Only works for tables intended to take up the full width of the page */
+  .table-fieldset {
+    .dataTableContainer {
+      width: 98vw;
+      .dataTables_wrapper {padding-right: 1rem}
+      @media (max-width: 800px) {
+        .dataTables_wrapper {padding-right: 2rem}
+    
+      }
+
+    }
+
+  }
+
+
+
+/* ==========================================================================
+  ## FAMILY TABLE 
+  ========================================================================== */ 
+
+.familyTable {
+  border: 1px solid $black;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  th, td {padding: 1rem;}
+  th {
+    background-color: $darkest-gray;
+    color: $white;
+    
+  }
+
+  tr {border-bottom: 1px solid $black;}
+}

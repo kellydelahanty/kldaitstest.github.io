@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <polygon id="path-1" points="11 0 22 22 0 22"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Triangle" fill="#FFFFFF" transform="translate(11.000000, 11.000000) rotate(-360.000000) translate(-11.000000, -11.000000) " xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)" id="wireframe/dark-gray">
+                <g transform="translate(0.000000, -0.500000)">
+                    <g transform="translate(11.000000, 11.500000) rotate(-180.000000) translate(-11.000000, -11.500000) ">
+                        <rect id="Rectangle" fill="#800000" x="0" y="0" width="22" height="23"></rect>
+                    </g>
+                </g>
+            </g>
+            <text id="!" mask="url(#mask-2)" font-family="Roboto-Bold, Roboto" font-size="15" font-weight="bold" fill="#FFFFFF">
+                <tspan x="8.96020508" y="19">!</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

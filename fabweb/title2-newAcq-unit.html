@@ -1,0 +1,312 @@
+<!--
+This is a template for Financial Apps. This template is for sites
+that have different "modules" or sections, such as FABweb.
+-->
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FABweb Title II Fixes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/finance-base.css">
+    <link rel="stylesheet" href="css/finance-updates.css">
+    <link rel="stylesheet" href="css/title2-fixes.css">
+
+    <script src="js/deque-patterns.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--Skip link for keyboard users-->
+    <aside id="skip-main"><a href="#main">jump to main content</a></aside>
+
+    <!--Header-->
+    <header>
+        <!--U of I System wordmark and Site Name-->
+        <div class="site-identity desktop-display">
+            <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+                    alt="University of Illinois System" class="wordmark"></a>
+            <div class="app-name"> <a href="#" class="plainlink">FABweb/Biennial Inventory</a> </div>
+        </div>
+
+        <!--User name, Change Roles link, and log out buttons-->
+        <div class="account">
+            Martin Blackwood (<a href="#">Change Roles</a>)
+            <a class="logout" href="#">Log Out</a>
+        </div>
+
+        <div class="site-identity mobile-display">
+            <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+                    alt="University of Illinois System" class="wordmark"></a>
+            <div class="app-name"> <a href="#" class="plainlink">FABweb/Biennial Inventory</a> </div>
+        </div>
+
+    </header>
+
+    <!--Navigation-->
+    <nav>
+        <!--Skip link for keyboard users that takes you directly to the navigation for the module you're currently in -->
+        <aside id="skip-nav"><a href="#site-navbar">Jump to navigation for this specific site</a></aside>
+
+
+        <!--Module Navigation-->
+        <div class="module-nav">
+            <!--Mobile toggle for module navigation.-->
+            <div class="mobile-module">
+                <div class="current-module">Current Module: Surplus Warehouse Inventory System</div>
+                <div>
+                    <button class="module-nav-toggle">Change Module</button>
+                </div>
+
+            </div>
+
+
+            <!--The first level of navigation that moves you to the different modules of the site-->
+            <div class="site-modules">
+                <div class="module "><a href="#">FABweb</a></div>
+                <div class="module "><a href="#">Biennial Inventory</a></div>
+                <div class="module"><a href="#">Asset Search</a></div>
+                <div class="module "><a href="#">Surplus Warehouse Inventory System</a></div>
+                <div class="module "><a href="#">Property Accounting</a></div>
+                <div class="module "><a href="#">Production Support</a></div>
+
+            </div>
+        </div>
+
+
+        <div class="navbar" id="site-navbar">
+            <!--Navigation for the module you're currently in-->
+            <button class="mobile-nav-toggle">
+                FABweb Menu
+            </button>
+
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New Acquisition</a></li>
+                <li><a href="#">Update</a></li>
+                <li><a href="#">Transfer</a></li>
+                <li><a href="#">Surplus/Disposal</a></li>
+                <li><a href="#">Check Status</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main id="main">
+        <h1>Surplus Warehouse Inventory System</h1>
+        <nav class="nav-tabs">
+            <ul>
+                <li><a href="title2-newAcq-acqDoc.html">Acquisition Doc Information</a></li>
+                <li><a href="title2-newAcq-unit.html"  class="current">Unit Info</a></li>
+                <li><a href="title2-newAcq-item.html">Item Info</a></li>
+                <li><a href="title2-newAcq-finalize.html">Finalize Transaction</a></li>
+            </ul>
+        </nav>
+        <div class="nav-tab-content"> 
+            <h3>Unit Information </h3>
+            <div>
+                <span class="required">*</span>
+                <span class="fineprint">=<span id="requiredDescription" class="fineprint">Required to Finalize
+                        Transaction</span>
+            </div>
+            <form>
+                <div class="question">
+                    <label for="PTag">PTag #</label>
+                    <input id="PTag" type="text" name="PTag" value="" maxlength="9">
+                </div>
+
+                <div class="info-section">
+                    <!--Chart-->
+                    <div class="question">
+                        <label class="psuedo-label" for="Chart">Responsible Chart<span
+                                class="required">*Required</span></label>
+                        <select name="Chart" id="Chart">
+                            <option value="">Select Chart</option>
+                            <option value="1">1 - Urbana</option>
+                            <option value="2">2 - Chicago</option>
+                            <option value="4">4 - Springfield</option>
+                            <option value="9">9 - System</option>
+                        </select>
+                    </div>
+
+                    <!--Org (Description not checked)-->
+                    <div class="question">
+                        <div class="input-display">
+                            <label class="psuedo-label" for="Org" id="org-label">Responsible Org <span
+                                    class="required">*Required</span></label>
+                            <input type="Text" id="Org" name="Org" value="" size="10" maxlength="6">
+                            <span aria-describedby="org-label">Enter Org code and click "Validate Org Description"
+                                to see name of Org. </span>
+                        </div>
+                        <button>Validate Org Description</button>
+                    </div>
+
+                    <!--Org (descritpion checked)-->
+                    <div class="question hidden">
+                        <div class="input-display">
+                            <label class="psuedo-label" for="Org" id="org-label">Responsible Org <span
+                                    class="required">*Required</span></label>
+                            <input type="Text" id="Org" name="Org" value="220019" size="10" maxlength="6">
+                            <span aria-describedby="org-label">IQUIST</span>
+                        </div>
+                        <button>Validate Org Description</button>
+                    </div>
+
+
+                    <!--Entity-->
+                    <div class="question">
+                        <span class="psuedo-label" id="entity-label">Entity</span>
+                        <span aria-describedby="entity-label">N/A</span>
+                    </div>
+
+                    <!--Location (Chart not selected)-->
+                    <div class="question hidden">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="location-label">Location <span
+                                    class="required">*Required</span></span>
+                            <span aria-describedby="location-label">Need to specify Chart to look up Location</span>
+                        </div>
+                    </div>
+
+                    <!--Location (not selected)-->
+                    <div class="question hidden">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="location-label">Location <span
+                                    class="required">*Required</span></span>
+                        </div>
+                        <button href="index.cfm?methodName=findLocationLookup&amp;PTag=NewAcquisition&amp;chart=1"
+                            class="popup ">Select Location</button>
+                    </div>
+
+                    <!--Location (selected)-->
+                    <div class="question">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="location-label">Location <span
+                                    class="required">*Required</span></span>
+                            <span class="lookup-value" aria-describedby="location-label">
+                                <span id="viewLocationCode">100002</span>
+                                -
+                                <span id="viewLocationTitle">0002 00000000 FAA Performing Art An</span>
+                            </span>
+                        </div>
+                        <button href="index.cfm?methodName=findLocationLookup&amp;PTag=NewAcquisition&amp;chart=1"
+                            class="popup">Select Location</button>
+                    </div>
+
+
+                    <!--Custodian (not selected)-->
+                    <div class="question hidden">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="custodian-label">Custodian</span>
+                        </div>
+                        <button
+                            href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Custodian"
+                            class="popup">Select Custodian</button>
+                    </div>
+
+
+                    <!--Custodian (selected)-->
+                    <div class="question">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="custodian-label">Custodian</span>
+                            <input type="hidden" name="Custodian" id="custodianUIN" value="669574976">
+                            <span class="lookup-value" aria-describedby="custodian-label">
+                                <span id="custodianUINDisplay">669574976</span>
+                                -
+                                <span id="custodianName">Delahanty, Kelly Lynn</span>
+
+                            </span>
+                        </div>
+                        <button
+                            href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Custodian"
+                            class="popup">Select Custodian</button>
+                    </div>
+
+                    <!--Equipment Manager (Not selected)-->
+                    <div class="question">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="equip-label">Equipment Manager</span>
+                        </div>
+                        <button
+                            href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Equipment%20Manager"
+                            class="popup">Select Equipment Manager</button>
+                    </div>
+
+                    <!--Equipment Manager (selected)-->
+                    <div class="question hidden">
+                        <div class="input-display">
+                            <span class="psuedo-label" id="equip-label">Equipment Manager</span>
+                            <input type="hidden" name="EquipMgr" id="equipmentMgrUIN" value="669574976">
+                            <span class="lookup-value" aria-describedby="equip-label">
+                                <span id="equipmentMgrUINDisplay">669574976</span>
+                                -
+                                <span id="equipmentMgrName">Delahanty, Kelly Lynn</span>
+                            </span>
+
+                        </div>
+
+                        <button
+                            href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Equipment%20Manager"
+                            class="popup">Select Equipment Manager</button>
+                    </div>
+
+                    <!--Commodity (Description not checked)-->
+                    <div class="question hidden">
+                        <div class="input-display">
+                            <label class="psuedo-label" for="Commodity" id="commodity-label">Commodity <span
+                                    class="required">*Required</span></label>
+                            <input type="Text" id="Commodity" name="Commodity" value="" size="10" maxlength="10">
+                            <span aria-describedby="commodity-label">Enter Commodity code and click "Validate
+                                Commodity Description" to see name of Org. </span>
+                        </div>
+                        <button>Validate Commodity Description</button>
+                    </div>
+
+                    <!--Commodity (Description  checked)-->
+                    <div class="question">
+                        <div class="input-display">
+                            <label class="psuedo-label" for="Commodity" id="commodity-label">Commodity <span
+                                    class="required">*Required</span></label>
+                            <input type="Text" id="Commodity" name="Commodity" value="17500" size="10"
+                                maxlength="10">
+                            <span aria-describedby="commodity-label">CHEMICAL LABORATORY EQUIPMENT AND SUPPLIES
+                            </span>
+                        </div>
+                        <button>Validate Commodity Description</button>
+
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="helpbar">
+            <!--This is an example of when there are mulitple help links.
+          If there is only one help link you can just inlucde the "Help Guide"
+          without the "Help Guides:" prefix-->
+            <a href="#">Site Map</a>
+        </div>
+        <div class="policies">
+            <p>©
+                <script>document.write(new Date().getFullYear());</script> University of Illinois Board of Trustees | <a
+                    href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/van11y-accessible-tab-panel-aria.es6-min.js"></script>
+
+</body>
+
+</html>

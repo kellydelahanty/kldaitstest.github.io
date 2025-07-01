@@ -1,0 +1,333 @@
+@use "settings" as *;
+
+// ==========================================================================
+//   Table of Contents
+//   ========================================================================== */
+// ## General navigation
+// ### Dropdowns
+// ## Right Aligned Navigation Items
+// ### Mobile Navigation Toggle
+// ## 2-Level Navigation for Site Modules
+
+/* ==========================================================================
+   ## General Navigation
+   ========================================================================== */
+   .navbar{background-color: $nav-color;}
+  
+nav {
+  display: grid;
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  color: $white;
+  font-size: 1.15rem;
+
+  button {
+    font-size: 100%;
+  }
+
+  a,
+  a:visited {
+    color: $white;
+    border-bottom: 2px solid transparent;
+  }
+
+  a:hover,
+  a.current,
+  button.dropdown-parent:hover,
+  button.dropdown.current {
+    color: $white;
+    border-bottom: 2px solid $white;
+  }
+
+  a:focus,
+  button:focus {
+    outline-color: $white;
+    outline-offset: 2px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0.5em 1em;
+  }
+
+  @media (min-width: 650px) {
+    li.current-parent {
+      box-sizing: border-box;
+      height: 60px;
+      border-bottom: 5px solid $it-blue;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .navbar-links,
+    .site-modules {
+      display: none;
+      .module {
+        display: block;
+      }
+    }
+
+    .navbar-links.show,
+    .site-modules.show {
+      display: block;
+    }
+
+    ul {
+      margin: 0 0 1rem 0;
+      list-style: none;
+      padding-left: 1.5rem;
+      width: 100%;
+      display: block;
+    }
+
+    li {
+      display: block;
+      padding: 1rem 0;
+    }
+
+    li.current-parent {
+      button {
+        border-bottom: 2px white solid;
+      }
+    }
+  }
+}
+
+// ### Dropdowns
+.dropdown {
+  position: relative;
+}
+.dropdown-parent {
+  background-color: transparent;
+  color: $white;
+  border: 0;
+  padding: 0;
+  border-bottom: 2px transparent solid;
+}
+
+li.dropdown button.dropdown-parent::after {
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 0.4em;
+  content: "";
+  border-bottom-width: 0;
+  border-top-style: solid;
+  border-color: #fefefe transparent transparent;
+  position: relative;
+  top: 0.4em;
+  display: inline-block;
+  float: right;
+  margin-left: 0.5em;
+}
+
+@media (min-width: 650px) {
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $nav-color;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: -1rem;
+    box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-bottom: 1rem;
+
+    li {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .dropdown-content {
+    display: none;
+    padding: 1rem 0 0 1rem;
+    margin-bottom: 0;
+
+    li:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* ==========================================================================
+   ## Right Aligned Navigation Items
+   ========================================================================== */
+
+  .right-nav {
+    border-top: white 2px solid;
+    padding-top: 0.5em;
+    margin-top: 1.5em;
+    margin-right: 3em;
+    ul {
+      padding-left: 0rem;
+    }
+  }
+
+  @media (min-width: 651px) {
+    .right-nav {
+      float: right;
+      padding: 0;
+      margin: 0;
+      border-top: none;
+      padding-right: 1em;
+      padding-left: 1em;
+      border-left: white 2px solid;
+      ul {
+        padding: 0;
+      }
+      .dropdown-content {
+        min-width: 100%;
+        overflow-wrap: break-word;
+        li {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+/* ==========================================================================
+   ## External Links
+   ========================================================================== */
+
+  .external::before {
+    background-image: url(../graphics/external.svg);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    display: inline-block;
+    width: 1.5em;
+    height: 1em;
+    // background-color: pink;
+    content: "";
+  }
+
+  .external-white::before {
+    background-image: url(../graphics/external-white.svg);
+  }
+
+  .external-blue::before {
+    background-image: url(../graphics/external-blue.svg);
+  }
+
+/* ==========================================================================
+   ## 2-Level Navigation for Site Modules
+   ========================================================================== */
+   .module-nav {
+    background-color: $light-gray;
+  }
+
+.module {
+  display: inline-block;
+  font-size: 1.25rem;
+
+  a,
+  a.link,
+  a:visited {
+    display: block;
+    margin: 0;
+    padding: 0.75rem 1.75rem;
+    color: $module-text;
+    border-bottom: 0px;
+  }
+
+  a:hover,
+  a:focus {
+    border-bottom: 0px;
+    background-color: $module-hover;
+    color: #fff;
+    transition: background-color 0.1s ease-out;
+  }
+
+  a:focus {
+    outline-offset: -5px;
+    outline-color: $white;
+  }
+}
+
+.current-module {
+  background-color: $nav-color;
+  a,
+  a:visited {
+    color: $white;
+  }
+}
+
+/* ==========================================================================
+   ## Responsive/Mobile Navigation toggle
+   ========================================================================== */
+.mobile-nav-toggle,
+.module-nav-toggle {
+  margin: 1rem 0 1rem 1.5rem;
+  display: none;
+  background: transparent;
+  text-align: left;
+  border: transparent;
+}
+
+
+.mobile-nav-toggle {
+  color: $white;
+  width: 100%;
+  background: url(../graphics/hamburger.svg) left center no-repeat;
+  padding-left: 35px;
+  background-size: 25px 22px;
+}
+
+.mobile-module {
+  display: none;
+}
+
+.module-nav-toggle {
+  display: block;
+  color: $nav-color;
+  background-size: 15px 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.module-nav-toggle:focus {
+  outline-offset: -10px;
+  outline-color: $module-hover;
+}
+
+.module-nav-toggle:hover,
+.module-nav-toggle:focus-visible {
+  background-color: $module-hover;
+  color: $white;
+  outline-offset: -10px;
+  outline-color: $white;
+}
+
+@media (max-width: 650px) {
+
+  .mobile-module {
+  display: flex;
+  .current-module {
+    display: inline;
+    padding: 1rem;
+  }
+  .module-nav-toggle {
+    margin: 0;
+  }
+}
+  .mobile-nav-toggle,
+  .module-nav-toggle {
+    display: block;
+  }
+}
+
+
+
+
+

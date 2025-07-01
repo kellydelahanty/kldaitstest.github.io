@@ -1,0 +1,606 @@
+.heading-content-align h2 {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.heading-content-align .align-content {
+  display: inline-block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.heading-content-align .align-content select, .heading-content-align .align-content input {
+  margin-right: 0.5rem;
+}
+
+.icon-key-datatable-wrapper {
+  display: none;
+  background-color: #F5F6F7;
+  outline: #e6e6e6 1px solid;
+  padding: 0.5rem 1rem;
+  max-width: max-content;
+}
+.icon-key-datatable-wrapper .icons-defs {
+  margin-top: 0.25rem;
+}
+.icon-key-datatable-wrapper .icon-def {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.icon-key-datatable-wrapper img {
+  max-height: 15px;
+}
+
+.asset-list-intro {
+  margin: 0 0 1rem 1rem;
+}
+.asset-list-intro h3 {
+  margin: 0;
+}
+.asset-list-intro p {
+  margin: 0.25rem 0;
+}
+
+.icon-key {
+  display: inline;
+}
+.icon-key p {
+  margin: 0;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  display: inline;
+}
+.icon-key .icons-defs {
+  display: inline-block;
+}
+.icon-key .icon-def {
+  margin-right: 0.75rem;
+  display: inline-block;
+}
+.icon-key img {
+  max-height: 15px;
+}
+
+.sitemap ul {
+  list-style: none;
+  padding: 0 0.5rem;
+}
+.sitemap ul li {
+  padding: 0.75rem 0;
+}
+.sitemap ul li ul {
+  margin: 0.75rem 0 0 1rem;
+}
+.sitemap ul li ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.mass-update-actions input {
+  margin-bottom: 1rem;
+}
+.mass-update-actions .callout {
+  width: 95%;
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  .mass-update-actions {
+    display: flex;
+  }
+  .mass-update-actions #massUpdateButtons {
+    margin-right: 2rem;
+    display: inline-block;
+    min-width: min-content;
+    max-width: max-content;
+  }
+  .mass-update-actions #massUpdateButtons h4 {
+    margin-bottom: 0.5rem;
+  }
+  .mass-update-actions .callout-containter {
+    max-width: 650px;
+  }
+  .mass-update-actions .callout h5 {
+    font-size: 1em;
+    margin: 0.75rem 0;
+  }
+  .mass-update-actions .callout .callout-text p:first-of-type {
+    font-weight: normal;
+  }
+}
+/* ==========================================================================
+   ## STYLED TEXT
+   ========================================================================== */
+/* ======= Error Message ======= */
+.error-mssg {
+  background: URL("/graphics/error-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: left 40%;
+  background-size: 30px 30px;
+  padding: 1rem 0;
+  padding-left: 40px;
+  color: #800000;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+/* ======= Warning Message ======= */
+.warning-mssg {
+  background: URL("/graphics/warning.png");
+  background-repeat: no-repeat;
+}
+
+p.warning-mssg {
+  background-position: left center;
+  background-size: 25px 25px;
+  padding-left: 35px;
+}
+
+.question .warning-mssg {
+  background-size: 17px 17px;
+  padding: 0 0 0px 20px;
+  background-position: left top;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+/* ======= Confirmation Messages ======= */
+.errorSucessWarningMsgs {
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  font-size: 100%;
+}
+.errorSucessWarningMsgs h2 {
+  margin: 0.5rem 0 0.25rem;
+  padding: 0.5rem 0;
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px 25px;
+  font-weight: bold;
+  text-align: left;
+  font-family: verdana;
+  font-size: 1.25rem;
+}
+.errorSucessWarningMsgs ul {
+  margin-top: 0;
+  padding-left: 65px;
+}
+
+.errorSucessWarningMsgs.successMsg {
+  border-color: green;
+}
+.errorSucessWarningMsgs.successMsg h2 {
+  color: green;
+  background-image: URL("/graphics/check.svg");
+  background-size: 27px 21px;
+}
+
+.errorSucessWarningMsgs.errormsg {
+  border-color: #800000;
+}
+.errorSucessWarningMsgs.errormsg h2 {
+  color: #800000;
+  background-image: URL("/graphics/error-triangle.svg");
+}
+
+.errorSucessWarningMsgs.warningmsg {
+  border-color: #fec500;
+}
+.errorSucessWarningMsgs.warningmsg h2 {
+  color: black;
+  background-image: URL("/graphics/warning.png");
+}
+
+/* ======= More Information Message ======= */
+.helplinkText {
+  background: URL("/graphics/moreInfo.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 20px;
+  padding: 0.25rem;
+  padding-left: 25px;
+  border: none;
+  background-color: transparent;
+  color: #0B558E;
+  text-decoration: underline;
+  cursor: help;
+}
+
+.helplinkText:hover {
+  color: #417505;
+  text-decoration: underline;
+}
+
+.helpTextBox {
+  position: fixed;
+  border: 0.5em double #003366;
+  padding: 0.5em;
+  z-index: 1000000;
+  background: #FFFFFF;
+  max-width: 30em;
+  font-weight: normal;
+}
+
+/* ======= Locked Message ======= */
+.locked-mssg {
+  background: URL("/graphics/lock.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px 25px;
+  padding: 0.5rem;
+  padding-left: 30px;
+  font-weight: bold;
+  text-align: left;
+  font-family: verdana;
+}
+
+.callout {
+  border: 1px solid #0B558E;
+  padding: 0 1em;
+  background-color: #E9F1F8;
+  margin: 1em;
+  margin-top: 0;
+  display: inline-block;
+  width: 300px;
+}
+.callout .callout-text {
+  background: URL("/graphics/moreInfo.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 20px 20px;
+  padding-left: 30px;
+}
+.callout .callout-text p:first-of-type {
+  font-weight: bold;
+}
+
+/* ==========================================================================
+  ## FORMS & FILTERS
+========================================================================== */
+/* ==================================================================
+  ### GENERAL FORM STYLING
+===================================================================== */
+.tiny-input {
+  width: 90px;
+}
+
+.sm-input {
+  width: 165px;
+}
+
+.med-input {
+  width: 200px;
+}
+
+.lg-input {
+  width: 350px;
+}
+
+.xlg-input {
+  width: 450px;
+}
+
+*:disabled {
+  background-color: #e6e6e6;
+  color: #595959;
+  border: 1px solid #cacaca;
+  border-radius: 2px;
+}
+
+.filters label, .updateUI label, .introBoxes label, .updateUI_single label {
+  font-weight: bold;
+}
+.filters .question, .updateUI .question, .introBoxes .question, .updateUI_single .question {
+  padding: 0 0 1rem 0;
+  margin-right: 0.5rem;
+}
+.filters .question label, .filters .question button, .updateUI .question label, .updateUI .question button, .introBoxes .question label, .introBoxes .question button, .updateUI_single .question label, .updateUI_single .question button {
+  margin-right: 0.5em;
+}
+.filters .question p, .updateUI .question p, .introBoxes .question p, .updateUI_single .question p {
+  margin: 0;
+}
+.filters .question input, .filters .question select, .updateUI .question input, .updateUI .question select, .introBoxes .question input, .introBoxes .question select, .updateUI_single .question input, .updateUI_single .question select {
+  display: block;
+  background-color: #fefefe;
+  border: 1px solid #8a8a8a;
+  padding: 0.15rem;
+}
+.filters .question .hide, .updateUI .question .hide, .introBoxes .question .hide, .updateUI_single .question .hide {
+  display: none;
+}
+
+/* ==================================================================
+  ### FILTER BOX
+===================================================================== */
+.filters {
+  background-color: #F5F6F7;
+  border: #e6e6e6 1px solid;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 1.25em 1em;
+}
+.filters p {
+  margin-top: 0;
+}
+.filters h3 {
+  margin-top: 0;
+}
+.filters .question {
+  display: inline-block;
+}
+.filters .question input, .filters .question select {
+  border-color: #cacaca;
+}
+.filters fieldset {
+  border: none;
+  padding-left: 0;
+}
+.filters fieldset legend {
+  font-weight: bold;
+}
+.filters fieldset [type=checkbox], .filters fieldset [type=radio] {
+  display: inline;
+}
+.filters fieldset [type=checkbox] + label, .filters fieldset [type=radio] + label {
+  font-weight: normal;
+  margin-right: 1rem;
+}
+.filters .inline-fieldset div {
+  display: inline-block;
+}
+.filters .inlined {
+  display: inline !important;
+}
+.filters .lookups {
+  margin-top: 0.5rem;
+}
+.filters .lookups .question {
+  margin-right: 1rem; /*UPDATED 05.31.22 - Fixed vertical shift when "choose location" button appears/disappears*/
+  /*UPDATED 05.31.22 - Fixed vertical shift when "choose location" button appears/disappears*/
+}
+.filters .lookups .question label, .filters .lookups .question button {
+  margin-right: 0.5em;
+}
+.filters .lookups .question input, .filters .lookups .question p {
+  margin-top: 0.5rem;
+}
+.filters .lookups .question input:disabled {
+  background-color: #fefefe;
+  cursor: not-allowed;
+}
+.filters .lookups .question ::placeholder {
+  color: #595959;
+  opacity: 1;
+}
+.filters .lookups .question button:disabled {
+  border: 1px solid #8a8a8a;
+  border-radius: 3px;
+  color: #595959;
+}
+.filters .actionbar {
+  margin-top: 0.5rem;
+}
+.filters .actionbar button {
+  margin-right: 1em;
+}
+
+.split-filters {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-gap: 1rem;
+}
+.split-filters form:first-child {
+  border-right: 1px solid #3F4958;
+  padding-right: 1rem;
+}
+.split-filters form h3 {
+  margin: 0 0 0.5rem 0;
+}
+@media (max-width: 750px) {
+  .split-filters {
+    grid-template-columns: 100%;
+  }
+  .split-filters form:first-child {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-right: none;
+    border-bottom: 1px solid #3F4958;
+  }
+}
+
+/* ==================================================================
+  ### BULK UPDATE UI 
+===================================================================== */
+.updateUI {
+  margin-top: 2.5rem;
+}
+.updateUI .question {
+  margin-bottom: 0.25rem;
+}
+.updateUI .lookups .question label, .updateUI .lookups .question button {
+  margin-right: 0.5em;
+}
+.updateUI .lookups .question p {
+  margin: 0.5rem 0 0 0;
+}
+
+/* ==================================================================
+  ### INDIVIDUAL ASSET UPDATE UI 
+===================================================================== */
+.updateUI_single .question input, .updateUI_single .question select {
+  display: inline-block;
+}
+.updateUI_single .lookups {
+  display: inline-block;
+}
+.updateUI_single .lookups input, .updateUI_single .lookups select, .updateUI_single .lookups p, .updateUI_single .lookups button {
+  display: inline-block;
+}
+.updateUI_single .lookups p {
+  margin: 0 1rem 0 0;
+}
+.updateUI_single .lookups button {
+  margin-right: 0.5rem;
+}
+.updateUI_single .family-update {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.updateUI_single .family-update label {
+  font-weight: normal;
+}
+
+th {
+  font-family: "Lato", Times, serif;
+  font-size: 1em;
+}
+
+/* ==========================================================================
+  ## DATATABLE STYLING
+  ========================================================================== */
+.dataTable img {
+  width: 20px;
+  height: 20px;
+}
+
+th {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  font-size: 1em;
+}
+
+/*Add this class to the fieldset that surrounds the asset selection datatable to make the wrapper content 
+(search, pagination, etc) properly responsive. Only works for tables intended to take up the full width of the page */
+.table-fieldset .dataTableContainer {
+  width: 98vw;
+}
+.table-fieldset .dataTableContainer .dataTables_wrapper {
+  padding-right: 1rem;
+}
+@media (max-width: 800px) {
+  .table-fieldset .dataTableContainer .dataTables_wrapper {
+    padding-right: 2rem;
+  }
+}
+
+/* ==========================================================================
+  ## FAMILY TABLE 
+  ========================================================================== */
+.familyTable {
+  border: 1px solid #0a0a0a;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.familyTable th, .familyTable td {
+  padding: 1rem;
+}
+.familyTable th {
+  background-color: #595959;
+  color: #fefefe;
+}
+.familyTable tr {
+  border-bottom: 1px solid #0a0a0a;
+}
+
+/* ==========================================================================
+  ## INTRO BOX STYLING
+  ========================================================================== */
+.introBoxes {
+  display: flex;
+  flex-direction: column;
+}
+.introBoxes .box {
+  border: 1px solid #3F4958;
+  padding: 1em;
+  display: inline-block;
+  max-width: 500px;
+  margin-bottom: 1em;
+}
+.introBoxes .box h3 {
+  margin-top: 0.5rem;
+}
+.introBoxes .box p {
+  line-height: 120%;
+}
+.introBoxes .box input, .introBoxes .box select {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.introBoxes .box:last-of-type {
+  margin-right: 0;
+  flex-shrink: 1;
+}
+
+.smallIntro .box {
+  padding: 0.75rem 1em;
+}
+.smallIntro .box h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+.smallIntro .box label, .smallIntro .box button, .smallIntro .box select, .smallIntro .box input {
+  font-size: 14px;
+}
+
+@media (min-width: 915px) {
+  .introBoxes {
+    flex-direction: row;
+  }
+  .introBoxes .box {
+    min-width: 250px;
+    margin-bottom: 0;
+    margin-right: 1em;
+  }
+}
+.push-right {
+  margin-right: 1em;
+}
+
+.link-btn {
+  color: #0B558E;
+  border: none;
+  text-decoration: none;
+  border-bottom: dotted 1px #0B558E;
+  background-color: transparent;
+  padding: 0;
+}
+
+.link-btn:hover, .link-btn:focus {
+  color: #417505;
+  border: none;
+  border-bottom: dotted 1px #417505;
+  background-color: transparent;
+}
+
+.link-btn:focus-visible {
+  outline: #0a0a0a dotted 3px;
+  outline-offset: 2px;
+  border-style: transparent;
+}
+
+#processingMsg {
+  margin: 1.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #E5BD30;
+  background-image: URL("./graphics/warning.png");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center 5%;
+  padding: 3.25rem 1.5rem 1rem;
+}
+
+@media (min-width: 760px) {
+  #processingMsg {
+    font-size: 1.25rem;
+    margin: 1.5rem 2.5rem;
+    background-position: center 10%;
+    padding: 3.25rem 4rem 1rem;
+  }
+}
+.datatableContainer_pageLength, .datatableContainer_filterResults, .datatableContainer_paginateTop {
+  outline: 1px dotted red;
+}

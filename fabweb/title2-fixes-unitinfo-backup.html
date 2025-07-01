@@ -1,0 +1,438 @@
+<!--
+This is a template for Financial Apps. This template is for sites
+that have different "modules" or sections, such as FABweb.
+-->
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FABweb Title II Fixes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/finance-base.css">
+    <link rel="stylesheet" href="css/finance-updates.css">
+    <link rel="stylesheet" href="css/title2.css">
+
+    <script src="js/deque-patterns.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--Skip link for keyboard users-->
+    <aside id="skip-main"><a href="#main">jump to main content</a></aside>
+
+    <!--Header-->
+    <header>
+        <!--U of I System wordmark and Site Name-->
+        <div class="site-identity desktop-display">
+            <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+                    alt="University of Illinois System" class="wordmark"></a>
+            <div class="app-name"> <a href="#" class="plainlink">FABweb/Biennial Inventory</a> </div>
+        </div>
+
+        <!--User name, Change Roles link, and log out buttons-->
+        <div class="account">
+            Martin Blackwood (<a href="#">Change Roles</a>)
+            <a class="logout" href="#">Log Out</a>
+        </div>
+
+        <div class="site-identity mobile-display">
+            <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+                    alt="University of Illinois System" class="wordmark"></a>
+            <div class="app-name"> <a href="#" class="plainlink">FFABweb/Biennial Inventory</a> </div>
+        </div>
+
+    </header>
+
+    <!--Navigation-->
+    <nav class="navbar">
+
+        <div class="site-modules">
+            <div class="module current-module"><a href="#">FABweb</a></div>
+            <div class="module"><a href="#">Biennial Inventory</a></div>
+            <div class="module"><a href="#">Asset Search</a></div>
+            <div class="module"><a href="#">Surplus Warehouse Inventory System</a></div>
+            <div class="module"><a href="#">Property Accounting</a></div>
+            <div class="module"><a href="#">Production Support</a></div>
+
+        </div>
+
+        <button class="mobile-nav-toggle">
+            Menu
+        </button>
+
+        <ul id="module-navigation" class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New Acquisition</a></li>
+            <li><a href="#">Update</a></li>
+            <li><a href="#">Transfer</a></li>
+            <li><a href="#">Surplus/Disposal</a></li>
+            <li><a href="#">Check Status</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <main id="main">
+        <h1>New Acquisition - Acquisition Info</h1>
+        <h2>Complete the Banner Record for a New Acquisition</h2>
+
+        <div class="js-tabs" data-existing-hx="h2" data-tabs-prefix-class="blue-tabs">
+            <!--Tabs-->
+            <ul class="js-tablist">
+                <li class="js-tablist__item">
+                    <a href="#tab_acq-doc" class="js-tablist__link">Acquisition Doc Info</a>
+                </li>
+                <li class="js-tablist__item">
+                    <a href="#tab_unit" class="js-tablist__link">Unit Info</a>
+                </li>
+                <li class="js-tablist__item">
+                    <a href="#tab_item" class="js-tablist__link">Item Info</a>
+                </li>
+                <li class="js-tablist__item">
+                    <a href="#tab_finalize" class="js-tablist__link">Finalize Transaction</a>
+                </li>
+            </ul>
+
+            <!--Tab: Acquisition Doc Info-->
+            <div id="tab_acq-doc" class="js-tabcontent">
+                <div class="hidden" style="height: 2rem; background-color: #E9FDE9; ">Lightgreen ref</div>
+                <div class="hidden" style="height: 2rem; background-color: #FEFEE4; ">Yellow ref</div>
+
+                <h3>Acquisition Doc Information</h3>
+                <div class="info-section">
+                    <h4>[Subsection Header?]</h4>
+
+                    <ul>
+                        <li><span class="psuedo-label">PTag #: </span> </li>
+                        <li><span class="psuedo-label">Acquisition Document #: </span>AR105788</li>
+                        <li><span class="psuedo-label">Line/Item #: </span>2 </li>
+                        <li><span class="psuedo-label">OTag #: </span>T01998898 </li>
+                        <li><span class="psuedo-label">OTag Date: </span>7/29/2024 </li>
+                        <li><span class="psuedo-label">Fiscal Year: </span>25 </li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h4>[Subsection Header?]</h4>
+
+                    <ul>
+                        <li><span class="psuedo-label">Invoice #: </span>AR105788 </li>
+                        <li><span class="psuedo-label">Invoice Date: </span> </li>
+                        <li><span class="psuedo-label">Fiscal Year: </span>25 </li>
+                        <li><span class="psuedo-label">Amount: </span>$214,050.00 </li>
+                        <li><span class="psuedo-label">Vendor Name: </span> </li>
+                        <li><span class="psuedo-label">Commodity: </span></li>
+
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h4>CFOAPAL</h4>
+                    <ul class="cfoap">
+                        <li><span class="psuedo-label">COA</span> 1</li>
+                        <li><span class="psuedo-label">Fund</span> 472877</li>
+                        <li><span class="psuedo-label">Org</span> 220001</li>
+                        <li><span class="psuedo-label">Account</span> 163060</li>
+                        <li><span class="psuedo-label">Program</span> 191100</li>
+                        <li><span class="psuedo-label">Activity</span></li>
+                    </ul>
+                </div>
+
+
+
+
+
+            </div>
+
+            <!--Tab: Unit Info-->
+            <div id="tab_unit" class="js-tabcontent">
+                <h3>Unit Information </h3>
+                <div>
+                    <span class="required">*</span>
+                    <span class="fineprint">=<span id="requiredDescription" class="fineprint">Required to Finalize
+                            Transaction</span>
+                </div>
+                <form>
+                    <div class="question">
+                        <label for="PTag">PTag #</label>
+                        <input id="PTag" type="text" name="PTag" value="" maxlength="9">
+                    </div>
+
+                    <!--Inital Design of form-->
+                    <div class="info-section">
+                        <!--Chart-->
+                        <div class="question">
+                            <label class="psuedo-label" for="Chart">Chart (Resp) <span
+                                    class="required">*Required</span></label>
+                            <input type="Text" id="Chart" name="Chart" value="1" size="10" maxlength="1"
+                                aria-label="Enter Chart (Resp) and click Refresh Chart Description to validate"
+                                >
+                            <input type="image" name="RefreshChart" src="../graphics/icon-refresh.png"
+                                alt="Refresh Chart Description"  height="18" width="18">
+                            <span>University of Illinois - Urbana</span>
+                        </div>
+
+                        <!--Org-->
+                        <div class="question">
+                            <label class="psuedo-label" for="Org">Org (Resp) <span
+                                    class="required">*Required</span></label>
+                            <input type="Text" id="Org" name="Org" value="220019" size="10" maxlength="6" aria-label="Enter Org (Resp) and click Refresh Org Description to validate">
+                            <input type="image" name="RefreshOrg" src="../graphics/icon-refresh.png" height="18"
+                                width="18" alt="Refresh Org Description">
+                            <span>IQUIST</span>
+                        </div>
+
+                        <!--Entity-->
+                        <div class="question">
+                            <span class="psuedo-label">Entity</span>
+                            <span id="">N/A</span>
+
+                        </div>
+
+                        <!--Location (Chart not selected)-->
+                        <div class="question">
+                            <span class="psuedo-label">Location <span class="required">*Required</span></span>
+                            <span>Need to specify Chart to look up Location</span>
+                        </div>
+
+                        <!--Location (not selected)-->
+                        <div class="question">
+                            <span class="psuedo-label">Location <span class="required">*Required</span></span>
+                            <input type="hidden" name="Location" id="locationCode" value="">
+                            <span id="viewLocationCode"></span>
+                            <a href="index.cfm?methodName=findLocationLookup&amp;PTag=NewAcquisition&amp;chart=1"
+                                class="popup">
+                                <img src="../graphics/icon-edit.png" height="18" width="18"
+                                    alt="Edit Location; Required to finalize transaction">
+                            </a>
+                        </div>
+
+                        <!--Location (selected)-->
+                        <div class="question">
+                            <span class="psuedo-label">Location <span class="required">*Required</span></span>
+                            <span id="viewLocationCode">100002</span>
+                            <input type="hidden" name="Location" id="locationCode" value="">
+                            <span id="viewLocationCode"></span>
+                            <a href="index.cfm?methodName=findLocationLookup&amp;PTag=NewAcquisition&amp;chart=1"
+                                class="popup">
+                                <img src="../graphics/icon-edit.png" height="18" width="18"
+                                    alt="Edit Location; Required to finalize transaction">
+                            </a>
+                            <span id="viewLocationTitle">0002 00000000 FAA Performing Art An</span>
+                        </div>
+
+                        <!--Custodian (not selected)-->
+                        <div class="question">
+                            <span class="psuedo-label">Custodian</span>
+                            <input type="hidden" name="Custodian" id="custodianUIN" value="">
+                            <span id="custodianUINDisplay"></span>
+                            <a href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Custodian"
+                                class="popup">
+                                <img src="../graphics/icon-edit.png" height="18" width="18"
+                                    alt="Edit Location; Required to finalize transaction">
+                            </a>
+
+
+                            <!--Custodian (selected)-->
+                            <div class="question">
+                                <span class="psuedo-label">Custodian</span>
+                                <input type="hidden" name="Custodian" id="custodianUIN" value="669574976">
+                                <span id="custodianUINDisplay">669574976</span>
+                                <a href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Custodian"
+                                    class="popup">
+                                    <img src="../graphics/icon-edit.png" height="18" width="18"
+                                        alt="Edit Location; Required to finalize transaction">
+                                </a>
+                                <span id="custodianName">Delahanty, Kelly Lynn</span>
+
+                            </div>
+
+                            <!--Equipment Manager (Not selected)-->
+                            <div class="question">
+                                <span class="psuedo-label">Equipment Manager</span>
+                                <input type="hidden" name="EquipMgr" id="equipmentMgrUIN" value="">
+                                <span id="equipmentMgrUINDisplay"></span>
+                                <a href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Equipment%20Manager"
+                                    class="popup"> <img src="../graphics/icon-edit.png" height="18" width="18"
+                                        alt=" Edit Equipment Manager"></a>
+
+                            </div>
+
+                            <!--Equipment Manager (selected)-->
+                            <div class="question">
+                                <span class="psuedo-label">Equipment Manager</span>
+                                <input type="hidden" name="EquipMgr" id="equipmentMgrUIN" value="669574976">
+                                <span id="equipmentMgrUINDisplay">669574976</span>
+                                <a href="index.cfm?methodName=findPersonLookup&amp;PTag=NewAcquisition&amp;personType=Equipment%20Manager"
+                                    class="popup"> <img src="../graphics/icon-edit.png" height="18" width="18"
+                                        alt="Edit Equipment Manager"></a>
+                                <span id="equipmentMgrName">Delahanty, Kelly Lynn</span>
+                            </div>
+
+                            <!--Commoditiy -->
+                            <div class="question">
+                                <label class="psuedo-label" for="Commodity">Commodity <span
+                                        class="required">*Required</span></label>
+                                <input type="Text" id="Commodity" name="Commodity" value="17500" size="10"
+                                    maxlength="10"
+                                    aria-label="Enter Commodity # and click Refresh Commodity Description to validate"
+                                    >
+                                <input type="image" name="RefreshCommodity" src="../graphics/icon-refresh.png"
+                                    alt="Refresh Commodity Description" height="18" width="18">
+                                <span>CHEMICAL LABORATORY EQUIPMENT AND SUPPLIES</span>
+                            </div>
+
+                            <div class="question">
+                            </div>
+
+                            <div class="question">
+                            </div>
+
+                            <div class="question">
+                            </div>
+
+                            <div class="question">
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </form>
+            </div>
+
+            <!--Tab: Item Info-->
+            <div id="tab_item" class="js-tabcontent">
+                <h3>Item Information </h3>
+
+                <div>
+                    <span class="required">*</span>
+                    <span class="fineprint">=<span id="requiredDescription" class="fineprint">Required to Finalize
+                            Transaction</span>
+                </div>
+
+                <div class="info-section">
+                    <form>
+                        <div class="question">
+                            <label class="psuedo-label" for="Manufacturer">Manufacturer <span class="required">*Required</span></label>
+                            <input type="text" id="Manufacturer" name="Manufacturer" value="" size="30" maxlength="35">
+                        </div>
+
+                        <div class="question">
+                            <label class="psuedo-label" for="Model">Model <span class="required">*Required</span></label>
+                            <input type="text" id="Model" name="Model" value="" size="27" maxlength="30">
+
+                        </div>
+
+                        <div class="question">
+                            <label class="psuedo-label" for="Part">Part # Vehicle Tag <span class="required">*Required</span></label>
+                            <input type="text" id="Part" name="Part" value="" size="30" maxlength="40">
+                        </div>
+
+                        <div class="question">
+                            <label class="psuedo-label" for="Serial">Serial #/VIN <span class="required">*Required</span></label>
+                            <input type="text" id="Serial" name="Serial" value="" size="27" maxlength="40">
+                        </div>
+
+                        <div class="question">
+                            <label class="psuedo-label" for="Description">Description <span class="required">*Required</span></label>
+                            <input type="text" id="Description" name="Description" 
+                                maxlength="60" size="70" >
+                        </div>
+
+                        <div class="question">
+                            <label class="psuedo-label" for="InService">In-Service Date <span class="required">*Required</span></label>
+                            <input type="date" id="InService" name="InService" >
+                        </div>
+
+                        <div class="question">
+                            <label class="psuedo-label" for="Parent">
+                                Master/Parent PTag #                             
+                                <span class="label-note fineprint">(This new acquisition will be linked as part of the master/parent asset.)</span>
+                            </label>
+                            <input type="text" id="Parent" name="Parent" value="" size="30" maxlength="9">
+                        </div>
+
+
+                        <div class="question">
+                            <label class="psuedo-label" for="ExtCrossRef">External Cross Ref</label>
+                            <input type="text" id="ExtCrossRef" name="ExtCrossRef" value="" size="60" maxlength="35">
+                        </div>
+
+
+
+
+                    </form>
+                </div>
+            </div>
+
+            <!--Tab: Finalize Transaction-->
+            <div id="tab_finalize" class="js-tabcontent">
+                <h3>Finalize Transaction</h3>
+                <p> When you forward this record to Property Accounting it will no longer appear in your list
+                    of incomplete new acquisitions. The Property Accounting Department will review this information
+                    and submit it to Banner. </p>
+                <p> When you choose to Cancel Record Update, your update information will not be saved. </p>
+
+                <form class="info-section">
+                    <div class="question">
+                        <label class="psuedo-label" for="ContactName">Contact Person: </label>
+                        <input type="text" id="ContactName" name="ContactName" value="Pawel Czarnota" size="30"
+                            maxlength="50">
+                    </div>
+
+                    <div class="question">
+                        <span class="psuedo-label">Phone:</span>
+                        (<input type="text" aria-label="Phone area code" id="ContactPhone1" name="ContactPhone1"
+                            value="217" size="2" maxlength="3">)
+                        &nbsp;&nbsp;
+                        <input type="text" aria-label="Phone prefix" id="ContactPhone2" name="ContactPhone2" value="123"
+                            size="2" maxlength="3">
+                        -
+                        <input type="text" aria-label="Phone suffix" name="ContactPhone3" id="ContactPhone3"
+                            value="4567" size="3" maxlength="4">
+                    </div>
+
+                    <div class="question">
+                        <label class="psuedo-label" for="ContactEmail">E-Mail:</label>
+                        <input type="text" id="ContactEmail" name="ContactEmail" value="pczarn2@illinois.edu" size="30"
+                            maxlength="90">
+                    </div>
+
+                    <div class="question top-label">
+                        <label for="CommentsToPA" class="psuedo-label">Comments to Property Accounting:&nbsp;</label>
+                        <textarea id="CommentsToPA" name="CommentsToPA" cols="45" rows="6" maxlength="250"></textarea>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="helpbar">
+            <!--This is an example of when there are mulitple help links.
+          If there is only one help link you can just inlucde the "Help Guide"
+          without the "Help Guides:" prefix-->
+            <a href="#">Site Map</a>
+        </div>
+        <div class="policies">
+            <p>©
+                <script>document.write(new Date().getFullYear());</script> University of Illinois Board of Trustees | <a
+                    href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/van11y-accessible-tab-panel-aria.es6-min.js"></script>
+
+</body>
+
+</html>
