@@ -1,0 +1,175 @@
+<!--
+    Original code from: https://niquette.ca/articles/input-counter/
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Textarea character counter - a11y from niquette</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/sandbox.css" />
+
+    <style>
+        /* =========== DEV HELP =========== */
+        .hide {
+            display: none !important;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .quest {
+            margin: 2rem 1rem;
+        }
+
+        /**/
+        .sr-only {
+            position: absolute;
+            left: -9999em;
+            opacity: 0;
+            overflow: hidden;
+            top: -9999em;
+        }
+
+        /* =========== Page Styling =========== */
+    </style>
+</head>
+
+<body class="sb-body">
+    <aside class="sb-heading">
+        <div>
+            <h1>Kelly Delahanty's Front-End Sandbox</h1>
+            <nav>
+                <a href="../../index.html">Back to Sandbox Home</a>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="sb-main">
+        <h1>Character Counter - a11y version from niquette </h1>
+        <form>
+
+            <!--Max Character Counter-->
+            <div class="quest ">
+                <label for="maxCount">Please enter max 25 characters (Required)</label>
+                <textarea id="maxCount" maxlength="25" class="maxCounter" aria-describedby="counter_description1"
+                    required></textarea>
+
+                <p class="counter screen-only" aria-hidden="true">Enter up to 25 characters</p>
+                <p class="counter sr-only" id="counter_description1">Enter up to 25 characters</p>
+            </div>
+            <!--Min Character Counter-->
+            <div class="quest ">
+                <label for="minCount">Please enter minimum 25 characters (Required)</label>
+                <textarea id="minCount" minLength="25" class="minCounter" aria-describedby="counter_description1"
+                    required></textarea>
+
+                <p class="counter screen-only" aria-hidden="true">Characters: 0 (Minimum 25 Characters)</p>
+                <p class="counter sr-only" id="counter_description1">Characters: 0 (Minimum 25 Characters)</p>
+            </div>
+
+
+
+        </form>
+
+    </main>
+
+    <!--Max Character Counter-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var timer = '';
+            var maxCounter = document.querySelectorAll('.maxCounter');
+            maxCounter.forEach(function (elem) {
+
+                elem.addEventListener("input", function () {
+
+                    clearTimeout(timer);
+                    var pause = this;
+                    var limit = this.getAttribute("maxlength");
+                    var remainingChars = limit - this.value.length;
+                    if (remainingChars <= 0) {
+                        this.value = this.value.substring(0, limit);
+                    }
+
+                    var screenOnlyElem = this.nextElementSibling;
+                    while (screenOnlyElem && screenOnlyElem.classList.contains('screen-only') === false) {
+                        screenOnlyElem = screenOnlyElem.nextElementSibling;
+                    }
+
+                    if (screenOnlyElem) {
+                        screenOnlyElem.textContent = remainingChars <= -1 ? 0 : remainingChars + ' character(s) remaining';
+                    }
+
+                    timer = setTimeout(function () {
+                        var srOnlyElem = pause.nextElementSibling;
+                        while (srOnlyElem && srOnlyElem.classList.contains('sr-only') === false) {
+                            srOnlyElem = srOnlyElem.nextElementSibling;
+                        }
+
+                        if (srOnlyElem) {
+                            srOnlyElem.textContent = remainingChars <= -1 ? 0 : remainingChars + ' character(s) remaining';
+                        }
+                    }, 2000);
+                });
+
+                elem.dispatchEvent(new Event('input'));
+            });
+        });
+    </script>
+
+    <!--Min character counter-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var timer = '';
+            var minCounter = document.querySelectorAll('.minCounter');
+            minCounter.forEach(function (elem) {
+
+                elem.addEventListener("input", function () {
+
+                    clearTimeout(timer);
+                    var pause = this;
+                    var minchar = this.getAttribute("minlength");
+                    var currentchar = this.value.length;
+
+                    /*
+                    if (remainingChars <= 0) {
+                        this.value = this.value.substring(0, minchar);
+                    }
+                    */
+
+                    var screenOnlyElem = this.nextElementSibling;
+                    while (screenOnlyElem && screenOnlyElem.classList.contains('screen-only') === false) {
+                        screenOnlyElem = screenOnlyElem.nextElementSibling;
+                    }
+
+                    if (screenOnlyElem) {
+                        screenOnlyElem.textContent = currentchar + ' characters';
+                    }
+
+                    timer = setTimeout(function () {
+                        var srOnlyElem = pause.nextElementSibling;
+                        while (srOnlyElem && srOnlyElem.classList.contains('sr-only') === false) {
+                            srOnlyElem = srOnlyElem.nextElementSibling;
+                        }
+
+                        if (srOnlyElem) {
+                            srOnlyElem.textContent = currentchar + ' characters';
+                        }
+                    }, 2000);
+                });
+
+                elem.dispatchEvent(new Event('input'));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
