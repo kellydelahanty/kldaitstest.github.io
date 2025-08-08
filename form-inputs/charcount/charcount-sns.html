@@ -1,0 +1,123 @@
+<!--
+    Original code from: https://github.com/rikschennink/short-and-sweet?tab=readme-ov-file
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SNS Textarea character counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/sandbox.css" />
+
+    <style>
+        /* =========== DEV HELP =========== */
+        .hide {
+            display: none !important;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input,
+        textarea {
+            display: block;
+        }
+
+        .quest {
+            margin: 2rem 1rem;
+        }
+
+        /**/
+        .sr-only {
+            position: absolute;
+            left: -9999em;
+            opacity: 0;
+            overflow: hidden;
+            top: -9999em;
+        }
+
+        .short-and-sweet-counter {
+            color: #666;
+            font-size: .75em;
+        }
+
+        /* =========== Page Styling =========== */
+    </style>
+</head>
+
+<body class="sb-body">
+    <aside class="sb-heading">
+        <div>
+            <h1>Kelly Delahanty's Front-End Sandbox</h1>
+            <nav>
+                <a href="../../index.html">Back to Sandbox Home</a>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="sb-main">
+        <h1>Character Counter - short-and-sweet-counter </h1>
+
+
+        <!--MAX counter-->
+        <form>
+            <h2>Max Counter</h2>
+
+            <div class="quest">
+                <label for="max-textarea">Max counter textare</label>
+                <textarea id="max-textarea" maxlength="160"
+                    data-counter-label="Still {remaining} characters left to type"></textarea>
+            </div>
+
+            <div class="quest">
+                <label for="max-text-input">Max counter text input</label>
+                <input id="max-text-input" type="text" maxlength="30" />
+            </div>
+        </form>
+
+
+        <!--Min counter-->
+        <form>
+            <h2>Min Counter</h2>
+
+            <div class="quest">
+                <label for="min-textarea">Min counter textarea</label>
+                <textarea id="min-textarea" minlength="25"
+                    data-counter-label="{length} of {minlength} minimum characters"></textarea>
+            </div>
+
+            <div class="quest">
+                <label for="min-text-input">Min counter text input</label>
+                <input id="min-text-input" type="text" minlength="25" />
+            </div>
+        </form>
+
+    </main>
+
+
+    <!--MAX Counter-->
+    <script src="js/sns-max-counter.js"></script>
+
+    <script>
+        maxCounter('#max-textarea, #max-text-input', {
+            counterClassName: 'max-counter-display',
+        });
+    </script>
+
+    <!--MIN Counter-->
+    <script src="js/sns-min-counter.js"></script>
+
+    <script>
+        minCounter('#min-textarea, #min-text-input', {
+            counterClassName: 'min-counter-display',
+        });
+    </script>
+
+</body>
+
+</html>

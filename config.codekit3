@@ -9478,21 +9478,51 @@
       "oAP" : "\/fabweb\/title2-surplus-summary.html",
       "oF" : 0
     },
-    "\/form-inputs\/charcount-jeff.html" : {
+    "\/form-inputs\/charcount\/charcount-jeff.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/form-inputs\/charcount-jeff.html",
+      "oAP" : "\/form-inputs\/charcount\/charcount-jeff.html",
       "oF" : 0
     },
-    "\/form-inputs\/niquette-a11y.html" : {
+    "\/form-inputs\/charcount\/charcount-niquette.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/form-inputs\/niquette-a11y.html",
+      "oAP" : "\/form-inputs\/charcount\/charcount-niquette.html",
       "oF" : 0
+    },
+    "\/form-inputs\/charcount\/charcount-sns.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/form-inputs\/charcount\/charcount-sns.html",
+      "oF" : 0
+    },
+    "\/form-inputs\/charcount\/js\/sns-max-counter.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/form-inputs\/charcount\/js\/sns-max-counter-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/form-inputs\/charcount\/js\/sns-min-counter.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/form-inputs\/charcount\/js\/sns-min-counter-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/index.html" : {
       "cB" : 0,
