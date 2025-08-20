@@ -1,0 +1,691 @@
+@use 'variables' as *;
+
+/* ## Request Access  ============================================================================================================================================================================================================
+    ### Select Applications
+    ### Profiles / Profiles Settings
+    ### Reconciliation 
+    ### Review Changes
+    ### Confirmation
+======================================================================================================================================================================================================================================*/
+
+//Action bar across all pages of Request Access (NeedsReview: Actionbar)
+.req-process-action {
+  padding-top: 1.25rem;
+}
+
+//Cancel button across all pages of Request Access
+.process-cancel:hover,
+.process-cancel:focus {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Select Applications
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+//Instructions at the top of page (NeedsReview - Text)
+ul.process-instruct {
+  font-size: 1.25rem;
+  padding-top: 1.5rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+//Div around the different h3 / checkbox sections in accordion
+.cross-func {
+  padding: 1rem 1rem 1rem 1.5rem;
+
+  h3 {
+    margin-left: -1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $inky;
+  }
+}
+
+//Added to divs around checkbox/label for applications where the user already has some permissions
+.active-app {
+  label {
+    font-weight: 600;
+  }
+
+  label:after {
+    content: url(../img/starred.png);
+  }
+}
+
+//Small text next to label that lists topics the application covers
+.hint {
+  align-self: end;
+  font-size: 0.85rem;
+  font-style: italic;
+
+  &:before {
+    content: "(";
+  }
+
+  &:after {
+    content: ")";
+  }
+}
+
+//Filters to limit by topic area in app selection
+.keywordbar {
+  button {
+    font-weight: 600;
+  }
+
+  button:hover {
+    text-decoration: underline;
+  }
+}
+
+.keywords label {
+  display: inline-block;
+  background-color: 1;
+
+  margin: 0 4px 4px 0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  text-indent: 0;
+  font-size: 0.9rem;
+}
+
+//Accordions in App Selection page (NeedsReview - could be more generic "large" accordions)
+.selection-accord {
+  border-bottom: 1px solid $light-gray;
+  .accordion-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .accordion-content {
+    border-top: none;
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+  .accordion-item a:link {
+    border-bottom: none;
+  }
+
+  .is-active .accordion-title {
+    border-bottom: none;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Profiles / Profiles Settings
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Container for all the profiles listed
+.profile-listing {
+  padding-top: 2rem;
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+  }
+}
+
+//Sections within Profile list
+.profileset {
+  border-top: 6px solid $gray-4;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 1rem 0 2rem 0;
+}
+
+//Specific styling for student profileset section
+.profileset-1 {
+  border-color: $cat-1;
+}
+.profileset-2 {
+  border-color: $cat-2;
+}
+.profileset-3 {
+  border-color: $cat-3;
+}
+.profileset-4 {
+  border-color: $cat-4;
+}
+.profileset-5 {
+  border-color: $cat-5;
+}
+.profileset-6 {
+  border-color: $cat-6;
+}
+.profileset-7 {
+  border-color: $cat-7;
+}
+.profileset-8 {
+  border-color: $cat-8;
+}
+.profileset-9 {
+  border-color: $cat-9;
+}
+.profileset-10 {
+  border-color: $cat-10;
+}
+
+//List of profiles under specific application h3
+.list-profile {
+  list-style-type: none;
+  margin: 0 0 2rem 2.5rem;
+  padding: 0;
+
+  li {
+    display: grid;
+    margin-bottom: 0.75rem;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+  }
+
+  li:has(div.profile-settings) {
+    .profile-dets {
+      border-bottom: none;
+      padding-bottom: 0.9rem;
+    }
+
+    .profile-settings {
+      border-top: none;
+      margin-top: -4px;
+
+      .accordion-item .accordion-title {
+        padding-left: 25px;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+
+      .accordion-title:hover {
+        color: $smoked-7;
+      }
+
+      .accordion-item .accordion-title::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        width: 17px;
+        height: 14px;
+        background-image: $accordion-arrow-sm;
+        background-position-y: center;
+        background-repeat: no-repeat;
+      }
+
+      .accordion-item.is-active .accordion-title::before {
+        transform: rotate(90deg);
+      }
+    }
+
+   
+  }
+}
+
+//Profile dets is the main profile section, contains the profile name and the +/-/status note content)
+//profile settings is the section under profile-dets that list the profile's settings
+.profile-dets,
+.profile-settings {
+  border: 1px solid $gray-4;
+  padding: 0.5rem;
+  border-radius: $global-radius;
+  grid-template-columns: auto 150px;
+  align-items: center;
+
+  li {
+    display: block;
+  }
+
+  .setting-heading {
+    display: inline;
+    p {
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    button {
+      padding: 0 0.25rem 0.1rem;
+      font-size: 14px;
+      display: inline-block;
+    }
+  }
+
+  .accordion {
+    border: none;
+    background: transparent;
+
+    .accordion-title {
+      font-size: 14px;
+      padding-top: 0;
+      padding-bottom: 0.5rem;
+      border: none;
+    }
+    .accordion-title:before {
+      position: relative;
+      right: 0.5rem;
+    }
+
+    .accordion-content {
+      background: transparent;
+      border: none;
+
+      ul.review-summary {
+        margin-bottom: 0;
+        margin-left: 1rem;
+
+        li {
+          margin-left: 0rem;
+          margin-bottom: 0;
+        }
+
+        li:last-of-type {
+          padding-bottom: 0.5rem;
+        }
+      }
+
+      .setting-group {
+        ul {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .shared-setting {
+    background-color: $wash-light;
+    border: 1px solid $gray-3;
+    border-radius: $global-radius;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+
+    .setting-heading {
+      p {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+.profile-dets {
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: grid;
+}
+
+//Profile name in profile-dets
+.profile-name {
+  font-weight: 600;
+}
+
+.profile-settings {
+  background-color: $wash;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+//Added to profile-dets if it's not editable
+.non-edit {
+  .profile-dets {
+    background-color: $wash;
+  }
+
+  .profile-settings {
+    background-color: $ground;
+    .setting-heading p {
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+//Container for add/delete/status note content in profile-dets
+.cart-act {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+//Add/delete button in profile-dets
+.prof-add-btn,
+.prof-del-btn {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+}
+
+.prof-add-btn {
+  background-image: $circle-plus-icon;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(88%) saturate(3194%)
+      hue-rotate(190deg) brightness(97%) contrast(98%);
+  }
+}
+
+.prof-del-btn {
+  background-image: $circle-minus-icon;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(49%) saturate(6822%)
+      hue-rotate(356deg) brightness(87%) contrast(81%);
+  }
+}
+
+//Status note in profile-dets
+.cur-status {
+  font-style: italic;
+  display: inline-block;
+  padding-right: 3px;
+}
+
+//Undo button next to profiles after they've been added/deleted
+.cart-undo {
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.4rem 0.6rem;
+  color: $primary-color;
+  margin-left: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $primary-dark;
+    text-decoration: underline;
+  }
+}
+
+//#### Setting Modal-----------------------------------------------------------
+.settings-popup {
+  border-top: 10px solid $robin-dark;
+
+  padding: 1.5rem 2rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+}
+
+//Setting Inputs
+.setting-item {
+  padding: 0.5rem 1.5rem 0.5rem 42px;
+  margin-bottom: 1.25rem;
+  background-image: $outline-arrow;
+  background-repeat: no-repeat;
+  background-position: left 21px;
+  border: 1px solid transparent;
+
+  select {
+    max-width: 450px;
+  }
+
+  label {
+    font-weight: 600;
+  }
+}
+
+.setting-item.err {
+  background-image: $error-circle;
+
+  label {
+    color: $error;
+  }
+
+  input,
+  select {
+    border-color: $error;
+  }
+}
+
+.not-shared,
+.is-shared {
+  padding: 0.75rem;
+}
+
+//Shared Setting Inputs
+.shared-notice {
+  background-color: #cbd3d7;
+
+  margin: 0;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
+  border-top-left-radius: $global-radius;
+  border-top-right-radius: $global-radius;
+
+  span {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.is-shared {
+  background-color: $wash;
+  border-radius: $global-radius;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+//Div with information about how shared setting effects other profiles
+.shared-setting-impact {
+  font-size: 0.9rem;
+  padding-left: 0.75rem;
+}
+
+//Lists of what other profiles is effected by shared setting
+.shared-affects {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+
+  li:after {
+    content: ", ";
+  }
+
+  li:last-of-type:after {
+    content: " ";
+  }
+}
+
+//USC Req access - in the setting modal, makes it align with the inputs
+.setting-action {
+  padding-top: 1rem;
+  padding-left: 50px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Reconciliation 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Reconcile Issue block/section (includes # circle and h2
+.reconcil-issue {
+  //margin: 1rem 0;
+  font-size: 1.1rem;
+
+  padding: 1rem 1.5rem;
+
+  h2 {
+    font-weight: 700;
+  }
+}
+
+//Issue Number graphic
+.issueno {
+  display: inline-flex;
+  margin-right: 4px;
+  width: 4ch;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: $peach-light;
+  font-weight: 600;
+}
+
+//Reconcile instructions and input inside reconcil-issue
+.reconcil-item {
+  padding: 0.75rem 0.75rem 0.75rem 5ch;
+  margin: 0.75rem 0;
+  border-bottom: 2px solid $peach-light;
+
+  > p {
+    font-size: 1.125rem;
+  }
+}
+
+//profiles - ul style for list of profiles in section
+.profile-list {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 0.75rem;
+  padding: 0;
+
+  li {
+    border: 1px solid $ground-dark;
+    background-color: $white;
+    padding: 0.3rem 0.6rem;
+    margin: 0 0 1rem 0;
+    border-radius: $global-radius;
+
+    ul li {
+      border: none;
+      margin: 0;
+      padding: 0.25rem;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+//profiles - container for text on profile, including profile name and settings/details
+.profile-text {
+  font-weight: 700;
+}
+
+// #### Issue: Prerequisite Profile -------------------------------------------------------------------
+//Profile names in the  "prerequisite profile" issue
+.pn {
+  font-weight: 700;
+}
+
+//Settings for pre-requite profile
+.req-setting {
+  label {
+    font-weight: 600;
+  }
+}
+
+.recon-setting-add {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid $peach-dark;
+}
+
+// #### Issue: Change effects other profiles, need justification -------------------------------------------
+
+//Container for 'changed x profile from y to z' section
+.set-change-group {
+  margin: 1rem 0 2rem 0;
+}
+
+.set-change {
+  display: grid;
+  grid-template-columns: 200px auto;
+  row-gap: 20px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+//labels for the set-change sections
+.set-label {
+  font-style: italic;
+  justify-self: end;
+}
+
+//Set change with new value
+.set-newvalue {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+//Boxes around justification input
+//Devs haven't implemented this styling on prod site,
+.reconcil-add {
+  margin: 1rem 0;
+  padding: 1.125rem;
+  max-width: 900px;
+  background-color: $peach-lightest;
+
+  border-radius: 0.5rem;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Review Changes
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Container for summary request
+.summary-of-request {
+  padding-bottom: 3rem;
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+}
+
+//Styling for list itself is in summary-list.scss
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Confirmation
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Container for Confirmation Message
+.confirm-message {
+  padding-bottom: 2.75rem;
+  padding-left: 50px;
+
+  h2 {
+    font-weight: 700;
+  }
+
+  ul {
+    list-style-type: circle;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+// Note box for "Make Changes or Check Status" (NeedsReview: could this be a generic callout, used other places?)
+.int-ad {
+  padding: 1rem 1rem 1rem 80px;
+  background: $orange-1 url(../img/big-edit.png) 16px 18px no-repeat;
+  border-radius: $global-radius;
+}
+
+//Start again (button) link (NeedsReview: actionbar)
+.startagain {
+  margin-top: 3rem;
+}

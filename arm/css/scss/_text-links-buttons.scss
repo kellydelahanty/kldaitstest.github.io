@@ -1,0 +1,385 @@
+@use 'variables' as *;
+
+/* Text, Links, and Buttons  ==============================================================
+    ### Text
+        #### Text with Icons
+    ## Links
+        ##Special Links
+    ## Buttons
+    ## Actionbar/button groupingings
+
+=========================================================================================== */
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Text
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.fineprint {
+    font-size: 0.9rem;
+    color: $gray-6;
+}
+
+
+//GENERIC TEXT- Currently used for "more history" button on request boxes
+.smallest {
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .4rem .2rem .5rem;
+}
+
+.em {
+    font-style: italic;
+}
+
+
+// GENERIC - only used on usc challenge page currently 
+.stress {
+    font-weight: 700;
+}
+
+//  (1.7.25 doesn't appear to be used
+.standout-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+// currently used on intro text on USC submission table pages
+.gentext {
+    color: $slate;
+    font-size: .9rem;
+}
+
+.bigtext {
+    font-size: 1.25rem;
+}
+
+//used in form-patterns, needsReview against other "big text" classes
+.big-note {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+//Used for instructions on USC pages - NEEDSREVIEW could be generic 
+.instructions-ov {
+    font-size: 1.25rem;
+    padding: 1rem 0 .5rem 0;
+    font-weight: 600;
+    margin: 0; 
+}
+
+
+
+// #### Text with Icons -----------------------------------------------------------------------------
+
+//Expiring and hold icon text styling
+.expiring {
+    font-weight: 700;
+    color: $alert-dark;
+}
+
+.expiring:after {
+    content: url(../img/clock-alert.png);
+    padding-left: 5px;
+}
+
+
+.hold {
+    font-weight: 700;
+    color: $orange-brown;
+}
+
+.hold:after {
+    content: url(../img/admin-hold-small.png);
+    padding-left: 5px;
+}
+
+
+//Generic - Alert note with yellow ! warning icon
+.alert-note {
+    padding: 1rem .5rem;
+    background: url(../img/alert-circle.png) left 1rem no-repeat;
+    padding-left: 44px;
+    color: $gold-2;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+
+// Confirmation message with checkbox icon - current
+.confirm-check {
+    color: $success-dark;
+    background: url(../img/lg-green-check.png) left top no-repeat;
+    padding: 4px 0 0 50px;
+    min-height: 48px;
+    margin: 1.75rem 0;
+    font-size: 1.5rem; //KD - added so it doesn't have to be put on an h1 to size correctly 
+}
+
+
+// Red ! in a quote bubble, currently has to be placed on a div around the paragraph
+// and the paragraph needs to wrap onto the second line in order for the bottom of the icon to not get cut off
+.caveat {
+    margin-bottom: 1rem;
+    padding: 1rem 0 1rem 55px;
+    color: $alert-dark;
+    // max-width: 900px;
+    //margin: .5rem auto 1.5rem auto;
+    font-size: 1.125rem;
+    
+    background-image: $red-quote-alert;
+    background-position: left .75rem;
+    background-repeat: no-repeat;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+//Used on old req-access-step3.html - used in modal after you click the "definition" button
+//no icon, just purple left-border/bg
+.training-req {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: .5rem .5rem .5rem .75rem;
+    background-color: $purple-light;
+    line-height: 1.3;
+    color: $purple-dark;
+    border-left: 4px solid $purple-dark;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Generic Links & Buttons
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+a:link {
+    border-bottom: 1px dotted $primary-color;
+}
+
+a:hover,
+a:focus {
+    border-bottom-style: solid;
+    color: $primary-dark;
+}
+
+
+a:focus,
+button:focus,
+.button:focus {
+    outline: 2px dotted $black;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+
+.button {
+    transition: background-color .35s ease-in-out;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Special Links
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// Used at top of pages to have go back links
+.goback {
+    font-size: .85rem;
+
+    &:before {
+        content: "<< "
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Special Button
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+button {
+    cursor: pointer;
+}
+ 
+//GENERIC - Cancel and return button 
+.can-btn:hover,
+.can-btn:focus {
+    text-decoration: underline;
+}
+
+//Lighter button used in the search "look up" and "download csv" buttons - NEEDSREVIEW
+.util-btn {
+    background-color: $carolina;
+    color: $inky;
+
+    &:hover,
+    &:focus {
+        background-color: $sea-6;
+        color: white;
+    }
+}
+
+//currently unused but could be used in future? 
+.sec-btn {
+    background-color: #6FCFFB;
+    background-color: $success-light;
+    color: $black;
+
+    &:hover,
+    &:focus {
+        background-color: #087EB4;
+        background-color: $success-dark;
+        color: $white;
+    }
+
+}
+
+
+
+//Gray button 
+.neutral-btn {
+    background-color: $gray-3;
+    color: $black;
+
+    &:hover,
+    &:focus {
+        background-color: $blue-gray-dark;
+        color: $white;
+    }
+}
+
+//currently unused but could be used in future? 
+.prime-btn {
+    background-color: $robin;
+    color: $primary-dark;
+}
+
+//Red button (used on "delete" btn on view access page) 
+.caution-btn {
+    background-color: $alert-lightest;
+    color: $magenta-6;
+
+    &:hover,
+    &:focus {
+        background-color:  $alert-dark;
+        color: white;
+    }
+}
+
+
+//buttons that align with text inputs 
+//NEEDSREVIEW - seems like twtbtn2 can probably be gotten rid of?, only in one place and it's doing the same thing as twbtn
+.twbtn,
+.twbtn2 {
+    background-color: $aqua-light;
+    color: $black;
+    padding: .65rem 1rem;
+    margin-top: -4px;
+}
+
+.twbtn:hover, .twbtn2:hover {
+    background-color: $aqua-mid;
+    color: $black;
+}
+
+.twbtn2 {
+    margin-top: 2px;
+    padding: .675rem 1rem;
+}
+
+.secbtn {
+    background-color: $blue-gray-light;
+    color: $black;
+}
+
+.secbtn:hover, .secbtn:focus {
+    background-color: $blue-gray-mid;
+    color: $black;
+}
+
+//More Info (i in circle) Button 
+.ref-guide {
+    height: 26px;
+    width: 26px;
+    background-image: $circle-i;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 3px;
+}
+
+
+//Used in request access profiles 02 but can be generic
+.txt-btn {
+    padding: .3rem .75rem;
+    background-color: transparent;
+    font-weight: 700;
+    color: $primary-color;
+
+    &:focus,
+    &:hover {
+        color: $primary-dark;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        @include focus-dark();
+    }
+}
+
+//Used in request access profiles 02 but can be generic to offset the txt-btn left spacing
+.align-offset {
+    margin-left: -.75rem;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Action Bar
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.button+.button {
+    margin-left: 1rem;
+}
+
+//Generic ALIGNMENT BUTTONS- action bar, used on Auth/admin pages currently 
+.bar-mainaction {
+    padding: 2.5rem 0 1rem 0;
+    text-align: right;
+}
+
+
+//NEEDSREVIEW - action bar at bottom of forms - only seems to be used in some places, needsReview
+.actionbar {
+    padding: 1.75rem 0;
+    max-width: 83.333333%;
+
+    @include breakpoint(medium) {
+        display: grid;
+        grid-template-columns: 66.667% 33.334%;
+        align-items: center;
+    }
+
+    .act-btn {
+
+        border: none;
+        display: inline-block;
+        background-color: $ground-mid;
+        color: $primary-dark;
+    }
+
+    .act-btn:hover,
+    .act-btn:focus {
+        color: $white;
+    }
+
+    h2 {
+        padding-bottom: 1rem;
+    }
+
+}
+
+
+
+//Action bar in modals - NEEDSREVIEW - actionbar
+.modal-actions {
+    margin-top: 2rem;
+    padding-left: 1.25rem;
+}
+
+

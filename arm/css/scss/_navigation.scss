@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+/* TEMPLATE - Navigation  =====================================================================================================================================================================================================*/ 
+
+
+//Navigation bar
+.navbar {
+    background-color: $ground;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-left: 34px;
+
+        @include breakpoint(large) {
+            margin-left: 0;
+        }
+    }
+
+    ul li {
+        padding: .2rem 2.5rem .2rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+
+        @include breakpoint(large) {
+            display: inline-block;
+            padding-left: 0;
+        }
+    }
+
+    ul li:last-child {
+        padding-right: 0;
+    }
+
+    a:link,
+    a:visited {
+        border-bottom-color: transparent;
+        color: $primary-dark;
+        display: inline-block;
+        padding: .2rem
+    }
+
+    a:hover,
+    a:focus {
+        color: $black;
+        border-color: $primary-dark;
+    }
+
+    a:focus {
+        @include focus-dark();
+    }
+}
+
+//navigation
+nav {
+    @include xy-grid-container;
+    font-size: .85rem;
+    padding: .6rem 0;
+}
+
+//curent link styling
+.nav-current a:link,
+.nav-current a:visited {
+    border-bottom: 2px solid $robin-dark;
+}
+
+//mobile menu
+.burger {
+    margin-left: 1rem;
+
+    @include breakpoint(large) {
+        display: none;
+    }
+}
+
+//global navigation  items, added to ul that contains the link list
+.main-menu {
+    display: none;
+
+    @include breakpoint(large) {
+        display: block;
+    }
+}
+
+
+//Adds * next to navigation item when there's something that needs attention on that page
+.attn-flair {
+    display: inline-block;
+    width: 11px;
+    height: 18px;
+    background-image: $blue-asterisk;
+    background-repeat: no-repeat;
+    background-position: top center
+}
+
+.attn-flair span {
+    @include for-sr();
+}

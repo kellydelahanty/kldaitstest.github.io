@@ -87,13 +87,13 @@
 
             <div class="quest">
                 <label for="min-textarea">Min counter textarea</label>
-                <textarea id="min-textarea" minlength="25"
+                <textarea class="min-counter" id="min-textarea" minlength="25"
                     data-counter-label="{length} of {minlength} minimum characters"></textarea>
             </div>
 
             <div class="quest">
                 <label for="min-text-input">Min counter text input</label>
-                <input id="min-text-input" type="text" minlength="25" />
+                <input class="min-counter" id="min-text-input" type="text" minlength="25" />
             </div>
         </form>
 
@@ -113,9 +113,7 @@
     <script src="js/min-counter.js"></script>
 
     <script>
-        minCounter('#min-textarea, #min-text-input', {
-            counterClassName: 'min-counter-display',
-        });
+        minCounter('.min-counter');
     </script>
 
 </body>

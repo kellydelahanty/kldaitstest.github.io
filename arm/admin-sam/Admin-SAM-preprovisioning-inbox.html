@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Pre-Provisioning Inbox | University of Illinois System </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+    <header>
+        <div class="topbrand">
+            <div class="grid-x">
+                <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../img/sys-logo.png"
+                        alt="University of Illinois System" class="syslogo">
+                </div>
+                <div class="cell medium-8 userblock small-order-1 medium-order-2">
+                    <span>Lauren Curtis <span class="sdetail">(651321699)</span></span>
+                    <a href="logout" class="button log-btn">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="grid-x">
+                <div class="cell medium-12 appname">
+                    <img src="../img/admin-logo.png" alt="Access Rights Management application - Authorizer access">
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <nav>
+                <div class="burger"> <button type="button" data-toggle="mob-menu"><img src="../img/hamburger.png"
+                            alt=" " aria-label="Open main menu"></button> Menu</div>
+
+                <ul id="mob-menu" class="main-menu" data-toggler=".shown">
+                    <li>Home</li>
+                    <li class="nav-current"><a href="#">Pre-Provisioning</a> </li>
+                    <li>Manual Provisioning</li>
+                    <li>Search/review access</li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell bodycard tracking">
+
+                    <h1>Request Inbox</h1>
+
+                    <section>
+
+                        <!--Filterbar-->
+                        <div class="filterbar">
+                            <div class="filters">
+                                <button class="button clear pop-cntl" data-toggle="filter1"
+                                    aria-label="Limit search results to ">Limit to:</button>
+
+                                <!-- only show filter if there's more than one application for this group-->
+                                <div class="dropdown-pane" id="filter1" data-dropdown data-auto-focus="false"
+                                    data-hover-pane="true" data-close-on-click="true">
+                                    <fieldset>
+                                        <legend class="show-for-sr">Check options to include</legend>
+                                        <label for="app1"><input type="checkbox" id="app1" name="filter-list"
+                                                checked>iBuy </label>
+
+
+                                        <label for="reports"><input type="checkbox" id="reports" name="filter-list"
+                                                checked>
+                                            EDDIE and Data Warehouse</label>
+
+                                        <label for="app2"><input type="checkbox" id="app2" name="filter-list" checked>
+                                            Another app name</label>
+
+                                    </fieldset>
+                                    <button type="button" class="button apply-btn"
+                                        aria-label="Apply limit-by choices">Apply</button>
+                                </div>
+                            </div>
+                            <div class="sorts">
+                                <button class="button ordering pop-cntl" data-toggle="order-drop"
+                                    aria-label="Select how to order results">Order by</button>
+                                <div class="dropdown-pane" id="order-drop" data-dropdown data-auto-focus="false"
+                                    data-hover-pane="true" data-close-on-click="true">
+                                    <fieldset>
+                                        <legend class="show-for-sr">Select a way to order:</legend>
+                                        <label for="order-1"><input type="radio" id="order-1" name="order-list"
+                                                checked>Person
+                                        </label>
+                                        <label for="order-2"><input type="radio" id="order-2" name="order-list">Date
+                                        </label>
+                                        <label for="order-3"><input type="radio" id="order-3" name="order-list">Schedule
+                                            Provisioning
+                                        </label>
+                                        <label for="order-4"><input type="radio" id="order-4" name="order-list">USC
+                                        </label>
+                                        <label for="order-5"><input type="radio" id="order-5" name="order-list">Request
+                                            #
+                                        </label>
+
+                                        <button type="button" class="button apply-btn"
+                                            aria-label="Apply order-by choice">Apply</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Table-->
+                        <table class="listing-table open-requests"
+                            summary="If there are multiple requests for a single employee the first row for that employee will summarize the number of requests and the claim and act buttons in that row will do so for all requests for that person. 
+                    There may be linked requests that must be processed together, these will also have a header row and may contain the display of requests that are part of the linked request but will be handled by a different authorizer group.">
+                            <caption>
+                                Placeholder: Caption goes here
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th id="req-account" scope="col">Account</th>
+                                    <th id="req-summary" scope="col">Request Summary</th>
+                                    <th id="usc" scope="col">USC</th>
+                                    <th id="req-date" scope="col">Last Modified</th>
+                                    <th id="sched-process" scope="col">Scheduled Processing</th>
+                                    <th id="act" scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <!--Single Request-->
+                                <tr>
+                                    <th id="mblack" headers="req-account">Blackwood, Martin</th>
+
+                                    <td headers="mblack req-summary">
+                                        <span class="req-code">(#4001-1)</span>
+                                        <span class="req-line"> Modify: iBuy dept account coder</span>
+                                        <span class="noa">iBuy</span>
+                                    </td>
+                                    <td headers="mblack usc">plukas</td>
+                                    <td headers="mblack req-date">12/28/2025</td>
+                                    <td headers="mblack status" class="hold">Hold</td>
+                                    <td headers="mblack act"><a href="#">Act</a></td>
+                                </tr>
+
+
+                                <!--Multiple Requests-->
+                                <tr>
+                                    <th id="sjames" headers="req-account" rowspan="3">James, Sasha</th>
+                                    <th id="sjames-multireq" headers="sjames req-summary">2 requests</th>
+                                    <td headers="sjames usc"> </td>
+                                    <td headers="sjames req-date"> </td>
+                                    <td headers="sjames status"> </td>
+                                    <td headers="sjames act"><a href="#">Act</a></td>
+                                </tr>
+                                <tr>
+                                    <td headers="sjames req-summary sjames-multireq">
+                                        <span class="req-code">(#4002-1)</span>
+                                        <span class="req-line"> Modify: iBuy dept account coder</span>
+                                        <span class="noa">iBuy</span>
+                                    </td>
+                                    <td headers="sjames usc">jmagnus</td>
+                                    <td headers="sjames req-date">12/28/2025</td>
+                                    <td headers="sjames status">N/A</td>
+                                    <td headers="sjames act"><a href="#">Act</a></td>
+                                </tr>
+                                <tr>
+                                    <td headers="sjames req-summary sjames-multireq">
+                                        <span class="req-code">(#4002-2)</span>
+                                        <span class="req-line"> Modify: Banner something something</span>
+                                        <span class="noa">Banner</span>
+                                    </td>
+                                    <td headers="sjames usc">jmagnus</td>
+
+                                    <td headers="sjames req-date">12/28/2025</td>
+                                    <td headers="sjames status">10/20/24 at 4:00 PM</td>
+                                    <td headers="sjames act"><a href="#">Act</a></td>
+                                </tr>
+
+                                <!--Employee with Linked Request-->
+                                <tr>
+                                    <th id="jsims" headers="req-account" rowspan="6">Sims, Jonathan</th>
+                                    <th id="jsims-multireq" headers="jsims req-summary"> 5 requests, 4 actionable by
+                                        this group</th>
+                                    <td headers="jsims usc"></td>
+                                    <td headers="jsims req-date"> </td>
+                                    <td headers="jsims status"> </td>
+                                    <td headers="jsims act"><a href="#">Act (4)</a></td>
+                                </tr>
+
+                                <tr ><!--Linked Header-->
+                                    <th  class="linked-req" id="jsims-linked-header"
+                                        headers="jsims jsims-multireq req-summary">
+                                        <span class="sum-linked">4 linked requests</span>
+                                    </th>
+                                    <td headers="jsims jsims-multireq jsims-linked-header usc"></td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header req-date"></td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header status"></td>
+
+                                    <td headers="jsims jsims-multireq jsims-linked-header act"><a href="#">Act(3)</a>
+                                    </td>
+                                </tr>
+                                <tr class="linked-req">
+                                    <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                        <span class="req-code">(#1777-1)</span>
+                                        Records and Transfer Articulation Ad Hoc Reporting
+                                        <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                    </td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header usc">jmagnus</td>
+
+                                    <td headers="jsims jsims-multireq jsims-linked-header req-date">12/28/2025</td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header status">10/20/24 at 4:00 PM
+                                    </td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header act"></td>
+                                </tr>
+                                <tr class="linked-req">
+                                    <td headers="jsims  jsims-multireq jsims-linked-header req-summary">
+                                        <span class="req-code">(#1777-2)</span>Add: Pre-Registration and
+                                        Registration Ad Hoc Reporting
+                                        <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                    </td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header usc">jmagnus</td>
+
+                                    <td headers="jsims jsims-multireq jsims-linked-header req-date">12/28/2025</td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header status">10/20/24 at 4:00 PM
+                                    </td>
+                                    <td headers="jsims jsims-multireq jsims-linked-header act"></td>
+                                </tr>
+
+
+                                <!--Not linked-->
+                                <tr>
+                                    <td headers="jsims  jsims-multireq req-summary">
+                                        <span class="req-code">(#1234-1)</span>
+                                        Add: Registration Census Ad Hoc Reporting
+                                        <span class="noa">EDDIE and Data Warehouse Reporting</span>
+                                    </td>
+                                    <td headers="jsims jsims-multireq  usc">jmagnus</td>
+                                    <td headers="jsims jsims-multireq  req-date">12/28/2025</td>
+                                    <td headers="jsims jsims-multireq status">10/20/24 at 4:00 PM</td>
+                                    <td headers="jsims jsims-multireq  act"><a href="#">Act</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="helpbar">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <h2 class="show-for-sr">Support</h2>
+                        <ul class="helpbar-links">
+                            <li class="help-center"><a href="jj"><span>USC Help Center</span></a></li>
+                            <li class="lookup"><a href="fg"><span>USC Lookup</span></a></li>
+                            <li class="ticket"><a href="df"><span>File a support
+                                        ticket</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-12 cell">
+                        &copy;
+                        <script>document.write(new Date().getFullYear());
+                        </script> University of Illinois Board of Trustees | <a
+                            href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
