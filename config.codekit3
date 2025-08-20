@@ -117,158 +117,6 @@
       "oAP" : "\/a11y-orgchart\/list.html",
       "oF" : 0
     },
-    "\/arm\/admin-sam\/Admin-SAM-preprovisioning-action.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/admin-sam\/Admin-SAM-preprovisioning-action.html",
-      "oF" : 0
-    },
-    "\/arm\/admin-sam\/Admin-SAM-preprovisioning-inbox.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/admin-sam\/Admin-SAM-preprovisioning-inbox.html",
-      "oF" : 0
-    },
-    "\/arm\/authorizers\/authorizer-action-linked.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/authorizers\/authorizer-action-linked.html",
-      "oF" : 0
-    },
-    "\/arm\/authorizers\/authorizer-action.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/authorizers\/authorizer-action.html",
-      "oF" : 0
-    },
-    "\/arm\/authorizers\/authorizer-detail-page.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/authorizers\/authorizer-detail-page.html",
-      "oF" : 0
-    },
-    "\/arm\/authorizers\/authorizer-inbox.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/authorizers\/authorizer-inbox.html",
-      "oF" : 0
-    },
-    "\/arm\/authorizers\/authorizer-waiting.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/authorizers\/authorizer-waiting.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/error.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/error.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/history-wip-toggle-a11y.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/history-wip-toggle-a11y.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/history-wip-toggle.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/history-wip-toggle.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/history-wip.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/history-wip.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/manage-access-search-result.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/manage-access-search-result.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/select-role.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/select-role.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/view-access-alternateID.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/view-access-alternateID.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/view-access-byApp.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/view-access-byApp.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/view-access-byProfile.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/view-access-byProfile.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/view-access-bySubject.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/view-access-bySubject.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/view-access-categories.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/view-access-categories.html",
-      "oF" : 0
-    },
-    "\/arm\/cross-roles\/view-access-noresult.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/cross-roles\/view-access-noresult.html",
-      "oF" : 0
-    },
     "\/arm\/css\/accessible-autocomplete.min.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -583,6 +431,30 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/arm\/devExamples\/expandCollapse.html",
+      "oF" : 0
+    },
+    "\/arm\/devExamples\/history-wip-toggle-a11y.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/devExamples\/history-wip-toggle-a11y.html",
+      "oF" : 0
+    },
+    "\/arm\/devExamples\/history-wip-toggle.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/devExamples\/history-wip-toggle.html",
+      "oF" : 0
+    },
+    "\/arm\/devExamples\/history-wip.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/devExamples\/history-wip.html",
       "oF" : 0
     },
     "\/arm\/devhelp\/autocomplete-elements.html" : {
@@ -1574,6 +1446,221 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/AUTHORS.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/AUTHORS.txt",
+      "oF" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/external\/jquery\/jquery.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/external\/jquery\/jquery-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/images\/ui-icons_444444_256x240.png" : {
+      "ft" : 32768,
+      "iS" : 7107,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/images\/ui-icons_444444_256x240.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/arm\/js\/jquery-tabs\/images\/ui-icons_555555_256x240.png" : {
+      "ft" : 32768,
+      "iS" : 7105,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/images\/ui-icons_555555_256x240.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/arm\/js\/jquery-tabs\/images\/ui-icons_777620_256x240.png" : {
+      "ft" : 32768,
+      "iS" : 4615,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/images\/ui-icons_777620_256x240.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/arm\/js\/jquery-tabs\/images\/ui-icons_777777_256x240.png" : {
+      "ft" : 32768,
+      "iS" : 7115,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/images\/ui-icons_777777_256x240.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/arm\/js\/jquery-tabs\/images\/ui-icons_cc0000_256x240.png" : {
+      "ft" : 32768,
+      "iS" : 4615,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/images\/ui-icons_cc0000_256x240.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/arm\/js\/jquery-tabs\/images\/ui-icons_ffffff_256x240.png" : {
+      "ft" : 32768,
+      "iS" : 6395,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/images\/ui-icons_ffffff_256x240.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/arm\/js\/jquery-tabs\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/index.html",
+      "oF" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui.min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.structure.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui.structure-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.structure.min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui.structure.min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.theme.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui.theme-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/jquery-ui.theme.min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/jquery-ui.theme.min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/LICENSE.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/js\/jquery-tabs\/LICENSE.txt",
+      "oF" : 0
+    },
+    "\/arm\/js\/jquery-tabs\/package.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/arm\/js\/jquery-tabs\/package-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
     },
     "\/arm\/js\/min-counter.js" : {
       "bF" : 0,

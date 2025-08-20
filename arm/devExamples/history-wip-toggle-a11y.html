@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[a11y test - View access history toggle WIP]</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+
+
+
+</head>
+
+<body>
+    <main id="main">
+        <div class="grid-container bodycard ">
+            <!--Access List-->
+            <div class="grid-x cell">
+
+                <!--Jquery Tabs Version -->
+                <div class="access-list ">
+                    <div class="cur-per-list ">
+                        <ul class="">
+
+                            <!--Profile 1 - settings and history-->
+                            <li class="tabs">
+                                <div class="tab-header">
+                                    [Profile 1 - Profile Name goes here - profile with settings and history]
+
+                                    <ul class="profile-tabs">
+                                        <li>
+                                            <a href="#profile1-dets" aria-selected="false" title="Details">
+                                                <i class="button clear small dets-btn" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#profile1-history" aria-selected="false" title="History">
+                                                <i class="button clear small hist-btn" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div id="profile1-dets">
+                                        <p>Profile 1 - Setting Details</p>
+                                    </div>
+                                    <div id="profile1-history">
+                                        <p>Profile 1 - History Snapshot</p>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <!--Profile 2 - settings and history-->
+                            <li class="tabs">
+                                <div class="tab-header">
+                                    [Profile 2 - Profile Name goes here - profile with settings and history]
+
+                                    <ul class="profile-tabs">
+                                        <li>
+                                            <a href="#profile2-dets" aria-selected="false" title="Details">
+                                                <i class="button clear small dets-btn" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#profile2-history" aria-selected="false" title="History">
+                                                <i class="button clear small hist-btn" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="tab-content">
+                                    <div id="profile2-dets">
+                                        <p>Profile 2 - Setting Details</p>
+                                    </div>
+                                    <div id="profile2-history">
+                                        <p>Profile 2 - History Snapshot</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Profile 3 - No Settings -->
+                            <li class="tabs">
+                                <div class="tab-header">
+                                    [Profile 3 - Profile Name goes here - profile without settings]
+
+                                    <ul class="profile-tabs">
+                                        <li>
+                                            <a href="#profile3-history" aria-selected="false" title="History">
+                                                <i class="button clear small hist-btn" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="tab-content">
+                                    <div id="profile3-history">
+                                        <p>Profile 3 - History Snapshot</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div>
+                    <a href="#">test link</a>
+                </div>
+
+            </div>
+    </main>
+
+
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../js/app.js"></script>
+
+    <!--Requires updated Jquery, doesn't seem to work with the jquery that I have in node_moduals in html
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+-->
+    <script src="../js/jquery-tabs/jquery-ui.js"></script>
+
+
+
+
+    <script>
+        $(function () {
+            $(".tabs").tabs({
+                collapsible: true
+            });
+
+            $(".tabs").tabs({
+                active: false
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

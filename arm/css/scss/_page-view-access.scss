@@ -353,7 +353,7 @@ a.rev-link:focus {
     margin-bottom: 0.75rem;
   }
 
-  > ul li {
+  > ul >li {
     background-color: $white;
     position: relative;
     padding: 0.5rem;
@@ -402,38 +402,11 @@ a.rev-link:focus {
 }
 
 //###### Profile Setting Details and History Snapshot buttons ---------------------------------------
-//Container for the history and details buttons on each profile
-.profile-tabs {
-  display: flex;
-  gap: .5rem;
-}
 
-//Setting Detail  button on each profile
-.dets-btn {
-  background-image: $circle-ellipses;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
 
-//History button on each profile
-.hist-btn {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: $calendar-icon;
-}
-
-.hist-btn:hover,
-.hist-btn:focus,
-.dets-btn:hover,
-.dets-btn:focus {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(7500%)
-    hue-rotate(175deg) brightness(94%) contrast(101%);
-}
 
 //###### HISTORY SNAPSHOT TOGGLE ---------------------------------------
-
+/*
 .history-toggle {
   //  outline: 1px dashed pink;
   // padding: 1rem .5rem 1rem 55px;
@@ -535,7 +508,7 @@ a.rev-link:focus {
     margin-top: 1rem;
   }
 }
-
+*/
 //###### HISTORY SNAPSHOT TOGGLE TABS VERSION WIP ---------------------------------------
 /* My old WIP version
 .tab-det-list{
@@ -592,6 +565,7 @@ a.rev-link:focus {
 
 */
 
+/*
 .cur-per-list {
     .tab-header {
         display: flex;
@@ -602,7 +576,7 @@ a.rev-link:focus {
     display: flex;
     gap: .5rem;
     //justify-content: space-between;
-    /* pushes left item left, right items right */
+    // pushes left item left, right items right
     list-style: none;
     padding: 0;
     margin: 0;
@@ -670,33 +644,53 @@ a.rev-link:focus {
     border: none;
   }
 }
-
+*/
 
 //###### HISTORY/SETTINGS TOGGLE - ACCORDION VERSION  ---------------------------------------
 
-.cur-per-list-accordion {
-    > ul {
-        margin-left: 1rem;
-        padding-bottom: 0.2rem;
-        list-style-type: none;
-        margin-bottom: 0.75rem;
-      }
-    
-      > ul li {
-        background-color: $white;
-        position: relative;
-        padding: 0.5rem;
-        //  padding-right: 60px; //old style, before we swtiched to tabs
-    
-        border: 1px solid $ground-dark;
-    
-        margin-bottom: 0.75rem;
-        border-radius: $global-radius;
-        font-size: 0.9rem;
+.cur-per-list {
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+
+    .profile-tabs {
+      display: flex;
+      gap: .5rem;
+      list-style: none;
+
+      a {
+        border-bottom: none;
+        padding-bottom: 5px; 
       }
 
-
-      .profile-header {
-        display: flex; 
+      li:focus-visible, a:focus-visible {
+        outline: 2px dashed $primary-color;
+        border: none;
       }
+
+      li:focus-visible, a:focus, a:focus-visible, a:hover {
+        .dets-btn, .hist-btn {
+          filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(7500%)
+          hue-rotate(175deg) brightness(94%) contrast(101%);
+        }
+      }
+    }
+  }
+  
+}
+
+.dets-btn, .hist-btn {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+//Setting Detail  button on each profile
+.dets-btn {
+  background-image: $circle-ellipses;
+}
+
+//History button on each profile
+.hist-btn {
+  background-image: $calendar-icon;
 }
