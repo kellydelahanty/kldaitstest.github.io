@@ -425,36 +425,20 @@
       "oS" : 0,
       "pg" : 0
     },
+    "\/arm\/devExamples\/a11y-profile-tabs.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arm\/devExamples\/a11y-profile-tabs.html",
+      "oF" : 0
+    },
     "\/arm\/devExamples\/expandCollapse.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/arm\/devExamples\/expandCollapse.html",
-      "oF" : 0
-    },
-    "\/arm\/devExamples\/history-wip-toggle-a11y.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/devExamples\/history-wip-toggle-a11y.html",
-      "oF" : 0
-    },
-    "\/arm\/devExamples\/history-wip-toggle.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/devExamples\/history-wip-toggle.html",
-      "oF" : 0
-    },
-    "\/arm\/devExamples\/history-wip.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/arm\/devExamples\/history-wip.html",
       "oF" : 0
     },
     "\/arm\/devhelp\/autocomplete-elements.html" : {

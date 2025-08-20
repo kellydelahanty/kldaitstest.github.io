@@ -347,31 +347,20 @@ a.rev-link:focus {
   }
 
   > ul {
-    margin-left: 1rem;
-    padding-bottom: 0.2rem;
     list-style-type: none;
+    margin-left: 1rem;
     margin-bottom: 0.75rem;
+    padding-bottom: 0.2rem;
   }
 
-  > ul >li {
-    background-color: $white;
+  > ul > li {
     position: relative;
     padding: 0.5rem;
-    //  padding-right: 60px; //old style, before we swtiched to tabs
-
-    border: 1px solid $ground-dark;
-
     margin-bottom: 0.75rem;
+    background-color: $white;
+    border: 1px solid $ground-dark;
     border-radius: $global-radius;
     font-size: 0.9rem;
-  }
-
-  li span {
-    //font-style: italic;
-  }
-
-  li::marker {
-    color: $purple;
   }
 
   //Used for VPD items
@@ -385,8 +374,74 @@ a.rev-link:focus {
   }
 }
 
-//Profile setting details, hidden behind the ... button toggle on <div>s within <li> that
-//NEEDSREVIEW - not sure why this is being handled by <divs> within <li>s instead of nested lists
+// ###### Setting Details & History Snapshot Panels ---------------------------------------
+.cur-per-list {
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+
+    .profile-tabs {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+
+      a {
+        border-bottom: none;
+        padding-bottom: 5px;
+      }
+
+      li:focus-visible,
+      a:focus-visible {
+        outline: 2px dashed $primary-color;
+        border: none;
+      }
+
+      li.ui-state-active {
+        .dets-btn,
+        .hist-btn {
+          filter: brightness(0) saturate(100%) invert(18%) sepia(80%)
+            saturate(961%) hue-rotate(176deg) brightness(94%) contrast(106%);
+        }
+      }
+
+      li:focus-visible,
+      a:focus,
+      a:focus-visible,
+      a:hover {
+        .dets-btn,
+        .hist-btn {
+          filter: brightness(0) saturate(100%) invert(11%) sepia(6%)
+            saturate(7137%) hue-rotate(167deg) brightness(98%) contrast(101%);
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    > div {
+      padding: 1rem;
+    }
+  }
+}
+
+// Profile tab icon links
+.dets-btn,
+.hist-btn {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+//Setting Detail button on each profile
+.dets-btn {
+  background-image: $circle-ellipses;
+}
+
+//History button on each profile
+.hist-btn {
+  background-image: $calendar-icon;
+}
+
+//Setting Detail panel - NEEDSREVIEW - not sure why this is being handled by <divs> within <li>s instead of nested lists
 
 .cur-per-list ul.det-level-list {
   list-style-image: none;
@@ -401,296 +456,90 @@ a.rev-link:focus {
   }
 }
 
-//###### Profile Setting Details and History Snapshot buttons ---------------------------------------
+//History Snapshot panel
+.history-highlight-list {
+  .history-highlight {
+    border: 1px solid $gray-4;
+    border-radius: 5px;
+    list-style-type: none;
+    margin-bottom: 1rem;
 
+    .history-meta {
+      background-color: $sky;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
 
+      margin: 0;
+      padding: 1rem;
 
-//###### HISTORY SNAPSHOT TOGGLE ---------------------------------------
-/*
-.history-toggle {
-  //  outline: 1px dashed pink;
-  // padding: 1rem .5rem 1rem 55px;
+      h3 {
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: auto auto;
 
-  ul {
-    li {
-      padding: 0;
-      border: none;
-    }
-
-    .history-highlight {
-      border: 1px solid $gray-4;
-      border-radius: 5px;
-      list-style-type: none;
-      margin-bottom: 1rem;
-
-      .history-meta {
-        background-color: $sky;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-
-        margin: 0;
-        padding: 1rem;
-
-        h3 {
-          font-weight: bold;
-          display: grid;
-          grid-template-columns: auto auto;
-
-          .req-number {
-            text-align: right;
-            font-weight: normal;
-          }
-        }
-
-        ul {
-          list-style: none;
-        }
-
-        p {
-          margin-bottom: 0;
-          font-style: italic;
+        .req-number {
+          text-align: right;
+          font-weight: normal;
         }
       }
 
-      .review-summary {
-        padding: 1rem 0 0 0;
+      ul {
+        list-style: none;
+      }
 
+      p {
+        margin-bottom: 0;
+        font-style: italic;
+      }
+    }
+
+    .review-summary {
+      padding: 1rem 0 0 0;
+
+      li {
+        padding: 0 1rem;
+      }
+
+      .lowest-lvl-dets {
+        margin-top: 0.25rem;
         li {
-          padding: 0 1rem;
-        }
-
-        .lowest-lvl-dets {
-          margin-top: 0.25rem;
-          li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-          }
-        }
-      }
-    }
-
-    .add-highlight,
-    .change-highlight {
-      .history-meta {
-        h3 {
-          padding-left: 1.75rem;
-          background-repeat: no-repeat;
-          background-position: left 4px;
-        }
-
-        p {
-          padding-left: 1.75rem;
-        }
-      }
-    }
-
-    .add-highlight {
-      .history-meta {
-        background-color: $shamrock-light;
-        h3 {
-          background-image: $green-plus-icon;
-        }
-      }
-    }
-
-    .change-highlight {
-      .history-meta {
-        background-color: $orange-1;
-        h3 {
-          background-image: $gold-gear-icon;
-        }
-      }
-    }
-  }
-
-  .history-highlight-list {
-    margin: 0;
-    margin-top: 1rem;
-  }
-}
-*/
-//###### HISTORY SNAPSHOT TOGGLE TABS VERSION WIP ---------------------------------------
-/* My old WIP version
-.tab-det-list{
-
-        padding-right: .5rem !important;
-    
-    .profile-det-header {
-       // display: grid;
-       // grid-template-columns: auto auto auto auto;
-
-       display: flex;
-        .profile-name {
-            outline: 3px dashed pink;
-          //  grid-column: 1 / span 3;
-          width: 75%;
-        }
-        .det-tabs  {
-            outline: 3px dashed red;
-            width: 25%;
-            text-align: right;
-
-            .tabs-title {
-                outline: 1px dashed green;
-                width: max-content;
-
-                text-align: right;
-                a {
-                    width: 25px;
-                  //  display: inline-block;
-                    background-size: 25px 25px;
-                    text-align: right;
-
-                }
-            }
-        }
-    }
-}
-.det-tabs {
-
-}
-
-.test1 {
-    .content {
-        display: none
-      }
-     // .content:first-of-type {display:block}
-      
-      a {
-        display: inline-block;
-        margin-right: 10px;
-        padding: 5px 0;
-      }
-}
-
-*/
-
-/*
-.cur-per-list {
-    .tab-header {
-        display: flex;
-        justify-content: space-between;
-
-    }
-  .tabs {
-    display: flex;
-    gap: .5rem;
-    //justify-content: space-between;
-    // pushes left item left, right items right
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: none;
-  //  width: 20%;
-    background: transparent;
-
-    li {
-        border: none;
-        padding: 0;
-    }
-  }
-
-  .tabs::after {
-    content: none;
-  }
-
-  .tabs-title, .profile-title {
-    flex: 1;
-    margin: 0;
-  }
-
-
-  .tabs-title > a {
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: $black;
-    background: transparent;
-  }
-
-  .tabs-title > a:hover,
-  .tabs-title > a:focus-visible {
-    background: transparent;
-    outline: 2px dashed $primary-color;
-
-  }
-
-  .tabs-title > a[aria-selected="true"] {
-    .hist-btn,
-    .dets-btn {
-      filter: brightness(0) saturate(100%) invert(16%) sepia(47%) saturate(2257%) hue-rotate(182deg) brightness(94%) contrast(99%);
-    }
-
-    .hist-btn:hover,
-    .hist-btn:focus,
-    .dets-btn:hover,
-    .dets-btn:focus {
-      filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(7500%)
-        hue-rotate(175deg) brightness(94%) contrast(101%);
-    }
-  }
-
-
-
-  .tabs-content {
-    background: transparent;
-    padding: 0 1rem;
-    border: none;
-  }
-}
-*/
-
-//###### HISTORY/SETTINGS TOGGLE - ACCORDION VERSION  ---------------------------------------
-
-.cur-per-list {
-  .tab-header {
-    display: flex;
-    justify-content: space-between;
-
-    .profile-tabs {
-      display: flex;
-      gap: .5rem;
-      list-style: none;
-
-      a {
-        border-bottom: none;
-        padding-bottom: 5px; 
-      }
-
-      li:focus-visible, a:focus-visible {
-        outline: 2px dashed $primary-color;
-        border: none;
-      }
-
-      li:focus-visible, a:focus, a:focus-visible, a:hover {
-        .dets-btn, .hist-btn {
-          filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(7500%)
-          hue-rotate(175deg) brightness(94%) contrast(101%);
+          padding-left: 1.5rem;
+          margin-bottom: 0.5rem;
         }
       }
     }
   }
   
-}
+  .add-highlight,
+  .change-highlight {
+    .history-meta {
+      h3 {
+        padding-left: 1.75rem;
+        background-repeat: no-repeat;
+        background-position: left 4px;
+      }
 
-.dets-btn, .hist-btn {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+      p {
+        padding-left: 1.75rem;
+      }
+    }
+  }
 
-}
-//Setting Detail  button on each profile
-.dets-btn {
-  background-image: $circle-ellipses;
-}
+  .add-highlight {
+    .history-meta {
+      background-color: $shamrock-light;
+      h3 {
+        background-image: $green-plus-icon;
+      }
+    }
+  }
 
-//History button on each profile
-.hist-btn {
-  background-image: $calendar-icon;
+  .change-highlight {
+    .history-meta {
+      background-color: $orange-1;
+      h3 {
+        background-image: $gold-gear-icon;
+      }
+    }
+  }
 }
