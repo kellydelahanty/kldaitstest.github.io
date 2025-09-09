@@ -5,74 +5,68 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>All Funds Summary : My-UI-Financials, University of Illinois</title>
     <link rel="stylesheet" href="css/dataTables.foundation.css?v=2.86">
-    <link rel="stylesheet" href="../js/jquery/jquery-ui-1.13.2/jquery-ui.css">
+    <link rel="stylesheet" href="javascript//jquery-ui-1.13.2/jquery-ui.css?v=2.86">
     <link rel="stylesheet" href="css/app.css?v=2.86">
-    <link rel="stylesheet" href="../datatables/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="../datatables/css/fixedHeader.dataTables.min.css">
-
+    <link rel="stylesheet" href="css/buttons.dataTables.min.css?v=2.86">
+    <link rel="stylesheet" href="css/fixedHeader.dataTables.min.css?v=2.86">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" crossorigin="">
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
-    <script src="../js/jquery/jquery-3.6.0.min.js"></script>
+    
+    <script src="node_modules/jquery/dist/jquery-3.6.0.min.js?v=2.86"></script>
     <script src="node_modules/what-input/dist/what-input.js?v=2.86"></script>
     <script src="node_modules/foundation-sites/dist/js/foundation.js?v=2.86"></script>
-    <script src="../js/jquery/jquery-ui-1.13.2/jquery-ui.js"></script>
-
-
-    <script src="javascript//DataTables-1.12.1/js/jquery.dataTables.min.js?v=2.86"></script>
-    <script src="javascript//DataTables-1.12.1/js/dataTables.foundation.js?v=2.86"></script>
-
     <script src="javascript//jquery-ui-1.13.2/jquery-ui.js?v=2.86"></script>
+                            
+    
+        <script src="javascript//DataTables-1.12.1/js/jquery.dataTables.min.js?v=2.86"></script>
+        <script src="javascript//DataTables-1.12.1/js/dataTables.foundation.js?v=2.86"></script>
 
+        <script src="javascript//jquery-ui-1.13.2/jquery-ui.js?v=2.86"></script>
+        <script src="javascript/dataTables.buttons.min.js?v=2.86"></script>
+        <script src="javascript/jszip.min.js?v=2.86"></script>
+        <script src="javascript/pdfmake.min.js?v=2.86"></script>
+        <script src="javascript/vfs_fonts.js?v=2.86"></script>
+        <script src="javascript/buttons.html5.min.js?v=2.86"></script>
+        <script src="javascript/dataTables.fixedHeader.min.js?v=2.86"></script>
+        <script src="javascript/fixedHeader.foundation.min.js?v=2.86"></script>
+        <script src="javascript/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=2.86"></script>
+        <script src="javascript/brackets-negative-custom.js?v=2.86"></script>
 
-    <script src="javascript/dataTables.buttons.min.js?v=2.86"></script>
-    <script src="javascript/jszip.min.js?v=2.86"></script>
-    <script src="javascript/pdfmake.min.js?v=2.86"></script>
-    <script src="javascript/vfs_fonts.js?v=2.86"></script>
-    <script src="javascript/buttons.html5.min.js?v=2.86"></script>
+        
+        <link rel="stylesheet" href="css/Datatables-style-minimalist.css?v=2.86">
 
-    <script src="../datatables/js/dataTables.fixedHeader.min.js"></script>
-    <script src="javascript/fixedHeader.foundation.min.js?v=2.86"></script>
-    <script src="javascript/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=2.86"></script>
-    <script src="javascript/brackets-negative-custom.js?v=2.86"></script>
-
-
-    <link rel="stylesheet" href="../datatables/demo/css/Datatables-Style-Minimalist.css">
-
-
-    <link rel="stylesheet" href="css/fixes.css">
-
-
-
+        <link rel="stylesheet" href="css/fixes.css">
 
     <script>
-        function checkContrast() {
-            // add an element with explicit background color set
-            var $newdiv1 = $("<div id='hcmtest' style='position:absolute;top:0;left:-99999px;background-color:#878787;'>T</div>");
-            $("body").append($newdiv1);
-            /*$( "body" ).append( "<div id='hcmtest' style='position:absolute;top:0;left:-99999px;background-color:#878787;'>T</div>" );*/
-            var testcolor = $("#hcmtest").css('background-color').toLowerCase(); // now get the background color
-            $("#hcmtest").remove(); // no longer needed
-            // different browsers return the color in different ways
-            if (testcolor != "#878787" && testcolor != "rgb(135, 135, 135)") {
-                // make any specific changes for high contrast mode here
-                /* $("#msg").html('<p>FYI: In high contrast mode.</p>');*/
-                $(document.body).addClass('hiC');
-            }
-        }
+         function checkContrast()
+       {
+              // add an element with explicit background color set
+              var $newdiv1 = $( "<div id='hcmtest' style='position:absolute;top:0;left:-99999px;background-color:#878787;'>T</div>" );
+              $( "body" ).append( $newdiv1 );
+              /*$( "body" ).append( "<div id='hcmtest' style='position:absolute;top:0;left:-99999px;background-color:#878787;'>T</div>" );*/
+              var testcolor = $( "#hcmtest" ).css('background-color').toLowerCase(); // now get the background color
+              $( "#hcmtest" ).remove(); // no longer needed
+              // different browsers return the color in different ways
+              if (testcolor != "#878787" && testcolor != "rgb(135, 135, 135)")
+              {
+                  // make any specific changes for high contrast mode here
+                 /* $("#msg").html('<p>FYI: In high contrast mode.</p>');*/
+                  $(document.body).addClass('hiC');
+              }
+       }
     </script>
 
+    
+        <script src="javascript/myfiproject.js?v=2.86"></script>
+        <script src="javascript/van11y-accessible-modal-window-aria.js?v=2.86"></script>
+    
 
-    <script src="javascript/myfiproject.js?v=2.86"></script>
-    <script src="javascript/van11y-accessible-modal-window-aria.js?v=2.86"></script>
-
-
-    <meta class="foundation-mq">
-</head>
+<meta class="foundation-mq"></head>>
 
 <body class="page">
     <div id="js-modal-page">
@@ -157,9 +151,6 @@
             </div>
 
         </header>
-
-
-
 
         <main id="main">
             <div class="grid-container">
@@ -346,184 +337,8 @@
 
                         <span class="offscreen">The table contains sortable columns except for Actions column</span>
 
-                        <div id="myTable_wrapper" class="dataTables_wrapper dt-foundation no-footer">
-                            <div class="marginrightshow">
-                                <div class="dataTables_length" id="myTable_length" role="navigation"
-                                    aria-label="Filter for how many rows to display in the table"><label>Show <select
-                                            name="myTable_length" aria-controls="myTable" class="">
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                            <option value="100">100</option>
-                                        </select> entries</label></div>
-                            </div>
-                            <div class="toolbar"></div>
-                            <div class="alignleft marginrightshow">
-                                <div class="dt-buttons"><a class="dt-button buttons-excel buttons-html5" tabindex="0"
-                                        aria-controls="myTable" href="#"
-                                        aria-label="Export Data to Excel"><span>Excel</span></a><a
-                                        class="dt-button buttons-csv buttons-html5" tabindex="0" aria-controls="myTable"
-                                        href="#" aria-label="Export Data to CSV"><span>CSV</span></a></div>
-                            </div>
-                            <div class="alignleft marginrightshow">
-                                <div id="myTable_filter" class="dataTables_filter" role="search"
-                                    aria-label="Search within records displayed in table"><label>Search:<input
-                                            type="search" class="" placeholder="" aria-controls="myTable"></label></div>
-                            </div>
-                            <div class="clearboth"></div>
-                            <table id="myTable" aria-labelledby="myTable_name" aria-describedby="myTable_info"
-                                class="display hover cell-border header_lightGray compact dataTable no-footer">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style="min-width: 5em; text-align: center; width: 60px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Chart: activate to sort column ascending">Chart</th>
-                                        <th scope="col" style="min-width: 6em; text-align: center; width: 76px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Fund: activate to sort column ascending">Fund</th>
-                                        <th scope="col" style="min-width: 6em; text-align: center; width: 94px;"
-                                            class="sorting sorting_asc" tabindex="0" aria-controls="myTable" rowspan="1"
-                                            colspan="1" aria-label="Organization: activate to sort column descending"
-                                            aria-sort="ascending">Organization</th>
-                                        <th scope="col" style="min-width: 6em; text-align: center; width: 76px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Program: activate to sort column ascending">Program</th>
-                                        <th scope="col" style="min-width: 6em; text-align: center; width: 76px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Grant: activate to sort column ascending">Grant</th>
-                                        <th scope="col"
-                                            style="min-width: 10em; max-width: 10em; text-align: center; width: 140px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Title: activate to sort column ascending">Title</th>
-                                        <th scope="col"
-                                            style="min-width: 5em; max-width: 5em; text-align: center; width: 60px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Ind: activate to sort column ascending">Ind</th>
-                                        <th scope="col" style="min-width: 8em; text-align: center; width: 108px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Budget: activate to sort column ascending">Budget</th>
-                                        <th scope="col" style="min-width: 8em; text-align: center; width: 108px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Current Month: activate to sort column ascending">Current Month
-                                        </th>
-                                        <th scope="col" style="min-width: 8em; text-align: center; width: 108px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Expenses: activate to sort column ascending">Expenses</th>
-                                        <th scope="col" style="min-width: 8em; text-align: center; width: 108px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Encumbrances: activate to sort column ascending">Encumbrances
-                                        </th>
-                                        <th scope="col" style="min-width: 8em; text-align: center; width: 108px;"
-                                            class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1"
-                                            aria-label="Budget Bal Avail: activate to sort column ascending">Budget Bal
-                                            Avail</th>
-                                        <th scope="col" style="min-width: 8em; width: 108px;"
-                                            class="no-sort sorting_disabled" rowspan="1" colspan="1"
-                                            aria-label="Details/Reports">Details/Reports</th>
-                                    </tr>
-                                </thead>
-
-
-
-
-                                <tbody>
-
-
-
-
-
-                                    <tr id="1" class="odd">
-                                        <td class="">4</td>
-                                        <td>559594</td>
-                                        <td class="sorting_1">849000</td>
-                                        <td>191788</td>
-                                        <td>C1455</td>
-                                        <th scope="row">925 Wanxiang China Fellow 094384</th>
-                                        <td>ITD</td>
-                                        <td class="alignRight">9,789.18</td>
-                                        <td class="alignRight">0.00</td>
-                                        <td class="alignRight" data-order="9789.18">9,789.18</td>
-                                        <td class="alignRight">0.00</td>
-                                        <td class="alignRight" data-order="0">0.00</td>
-                                        <td class="actions">
-                                            <div><a href="index.cfm?methodName=findAllFundsDetail&amp;fiscalYear=2026&amp;fiscalPeriod=02&amp;cOACode=4&amp;fundCode=559594&amp;orgCode=849000&amp;programCode=191788&amp;filtersList=4|4 - Springfield||All||All||All|All|||All||All"
-                                                    title="View details for 559594"
-                                                    aria-label="View details for 559594"><img src="images/drill.png"
-                                                        alt=""></a></div>
-
-
-
-                                            <div>
-                                                <a title="Report List" class="js-modal" data-modal-prefix-class="simple"
-                                                    data-modal-title="Select a Report to Open"
-                                                    data-modal-content-id="reportMenu-modal" data-modal-close-text="×"
-                                                    data-modal-close-title="Close modal" id="label_modal_qi15v9eetj"
-                                                    href="javascript:;"
-                                                    onclick="openDialog('reportMenu','9','&amp;sIDType=CUID&amp;sOutputFormat=H&amp;lsSEnter+Fiscal+Year:=2026&amp;lsSEnter+Fiscal+Period:=02&amp;lsSEnter+Chart+of+Account:=4+-+University+of+Illinois+-Springfield&amp;lsSEnter+Fund+Code:=559594&amp;lsSEnter+Organization+Code:=849000&amp;lsSEnter+Program+Code:=191788&amp;VDR+Date-For+ViewDirect+use+only:=*','1','ITD');"
-                                                    aria-haspopup="dialog"><img id="reportList1" border="0"
-                                                        alt="Create report for 559594" src="images/report.png"
-                                                        width="18" height="20"></a>
-                                            </div>
-
-                                        </td>
-                                    </tr>
-                                    <tr id="2" class="even">
-                                        <td class="">4</td>
-                                        <td>559594</td>
-                                        <td class="sorting_1">925000</td>
-                                        <td>191788</td>
-                                        <td>C1455</td>
-                                        <th scope="row">925 Wanxiang China Fellow 094384</th>
-                                        <td>ITD</td>
-                                        <td class="alignRight">62,910.82</td>
-                                        <td class="alignRight">0.00</td>
-                                        <td class="alignRight" data-order="38141.99">38,141.99</td>
-                                        <td class="alignRight">0.00</td>
-                                        <td class="alignRight" data-order="24768.83">24,768.83</td>
-                                        <td class="actions">
-                                            <div><a href="index.cfm?methodName=findAllFundsDetail&amp;fiscalYear=2026&amp;fiscalPeriod=02&amp;cOACode=4&amp;fundCode=559594&amp;orgCode=925000&amp;programCode=191788&amp;filtersList=4|4 - Springfield||All||All||All|All|||All||All"
-                                                    title="View details for 559594"
-                                                    aria-label="View details for 559594"><img src="images/drill.png"
-                                                        alt=""></a></div>
-
-
-
-                                            <div>
-                                                <a title="Report List" class="js-modal" data-modal-prefix-class="simple"
-                                                    data-modal-title="Select a Report to Open"
-                                                    data-modal-content-id="reportMenu-modal" data-modal-close-text="×"
-                                                    data-modal-close-title="Close modal" id="label_modal_2i77i5ivcl"
-                                                    href="javascript:;"
-                                                    onclick="openDialog('reportMenu','9','&amp;sIDType=CUID&amp;sOutputFormat=H&amp;lsSEnter+Fiscal+Year:=2026&amp;lsSEnter+Fiscal+Period:=02&amp;lsSEnter+Chart+of+Account:=4+-+University+of+Illinois+-Springfield&amp;lsSEnter+Fund+Code:=559594&amp;lsSEnter+Organization+Code:=925000&amp;lsSEnter+Program+Code:=191788&amp;VDR+Date-For+ViewDirect+use+only:=*','2','ITD');"
-                                                    aria-haspopup="dialog"><img id="reportList2" border="0"
-                                                        alt="Create report for 559594" src="images/report.png"
-                                                        width="18" height="20"></a>
-                                            </div>
-
-                                        </td>
-                                    </tr>
-                                </tbody>
-
-                            </table>
-                            <div class="clearboth"></div>
-                            <div class="clearboth"></div>
-                            <div class="bottom">
-                                <div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">Showing
-                                    1 to 2 of 2 entries</div>
-                            </div>
-                            <div class="alignleft marginrightshow">
-                                <div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate"
-                                    role="navigation" aria-label="Go to Page">
-                                    <ul class="pagination">
-                                        <li class="paginate_button previous unavailable disabled"
-                                            aria-controls="myTable" tabindex="0" id="myTable_previous">Previous</li>
-                                        <li class="paginate_button current" aria-controls="myTable" tabindex="0">1</li>
-                                        <li class="paginate_button next unavailable disabled" aria-controls="myTable"
-                                            tabindex="0" id="myTable_next">Next</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pageBar"></div>
+                        <div>
+                            [Datatable Goes Here]
                         </div>
 
 
