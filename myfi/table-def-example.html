@@ -40,7 +40,6 @@
         
         <link rel="stylesheet" href="css/Datatables-style-minimalist.css?v=2.86">
 
-        <link rel="stylesheet" href="css/fixes.css">
 
     <script>
          function checkContrast()
@@ -66,8 +65,15 @@
         <script src="javascript/van11y-accessible-modal-window-aria.js?v=2.86"></script>
     
 
-<meta class="foundation-mq"></head>>
-
+<meta class="foundation-mq"></head>
+<aside class="sb-heading">
+    <div>
+      <h1>Kelly Delahanty's Front-End Sandbox</h1>
+      <nav>
+        <a href="../../index.html">Back to Sandbox Home</a>
+      </nav>
+    </div>
+  </aside>
 <body class="page">
     <div id="js-modal-page">
         <aside id="skip"><a href="#main">jump to main content</a></aside>
@@ -392,85 +398,8 @@
                         <div id="tableDefinitions-modal" class="hidden">
 
                             <div id="tableDefinitions" title="Table definitions">
-                                <dl>
-                                    <dt>C-FOAPAL</dt>
-                                    <dd>The Chart of Accounts structure is composed of the following segments: Chart,
-                                        Fund, Organization, Account, Program, Activity (Optional), Location
-                                        (Optional). A valid C-FOAPAL is required to post or query transactions and
-                                        to retrieve financial reports.</dd>
+                                
 
-
-                                    <dt>Chart</dt>
-                                    <dd>Identifies the chart within the C-FOAPAL: 1=Urbana-Champaign, 2=Chicago,
-                                        4=Springfield, 9=System Offices</dd>
-
-                                    <dt>Fund</dt>
-                                    <dd>Identifies the fund used within the C-FOAPAL, which denotes the funding
-                                        source of the financial resources. Common examples include state funds
-                                        (1000YY), Indirect Cost Recovery (ICR) funds (200250), self-supporting funds
-                                        (3nnnnn), grant funds (4nnnnn &amp; 5nnnn), gift funds (6nnnnn), plant funds
-                                        (7nnnnn), loan funds (8nnnnn), and custodial funds (9nnnnn).</dd>
-
-
-                                    <dt>Organization</dt>
-                                    <dd>Identifies the organization used within the C-FOAPAL, which denotes the
-                                        department that is fiscally responsible for the financial resources.</dd>
-
-                                    <dt>Program</dt>
-                                    <dd>Identifies the program code used within the C-FOAPAL, which denotes the
-                                        functional classification of the financial activity (such as instruction or
-                                        research) as required by the National Association of College and University
-                                        Business Officers (NACUBO).</dd>
-
-                                    <dt>Grant</dt>
-                                    <dd>A unique identifier assigned in Banner to each sponsored project. 
-                                        <span class="def-note">
-                                            Note: The fund number associated with this activity may represent only a
-                                            portion of the grant code's financial scope. Additional fund numbers
-                                            could also be linked to the grant code. Please review the full grant
-                                            details for comprehensive information.
-                                        </span>
-                                      </dd>
-
-                                    <dt>Title</dt>
-                                    <dd>Identifies the title of the program code if the C-FOAPAL uses a shared fund
-                                        code (such as a state or ICR – Indirect Cost Recovery fund). Otherwise, it
-                                        identifies the title of the fund if the C-FOAPAL uses a unique fund code
-                                        (such as a self-supporting, grant, gift, or custodial fund).</dd>
-
-                                    <dt>Ind</dt>
-                                    <dd>Identifies the Banner indicator, which denotes whether the financial activity
-                                        is year-to-date (YTD) or inception-to-date (ITD, which aggregates the total
-                                        financial activity since the inception of the C-FOAPAL).</dd>
-
-                                    <dt>Budget</dt>
-                                    <dd>Identifies the budgeted amount for either YTD (year-to-date) or ITD
-                                        (inception-to-date) financial activity, depending on the time period of the
-                                        Ind column.</dd>
-
-                                    <dt>Current Month Expenses</dt>
-                                    <dd>Amount of expenses recorded during the selected period (month) and fiscal year.
-                                    </dd>
-
-                                    <dt>Expenses</dt>
-                                    <dd>Amount of expenses recorded either year-to-date (YTD) or inception-to-date
-                                        (ITD), depending on the option selected within the Indicator (Ind) column.
-                                    </dd>
-
-                                    <dt>Encumbrances</dt>
-                                    <dd>Identifies the obligated commitment balance for upcoming expenditures from
-                                        requisitions, purchase orders, payroll encumbrances, and general
-                                        encumbrances.</dd>
-
-                                    <dt>Budget Balance Available</dt>
-                                    <dd>Identifies the budget balance available to spend. This is calculated by
-                                        taking the net available budget and deducting the year-to-date expenses and
-                                        encumbrances.</dd>
-
-                                </dl>
-
-
-                                <!--    
                                 <ul>
                                     <li>
                                         <h3>C-FOAPAL</h3>
@@ -511,11 +440,14 @@
 
                                     <li>
                                         <h3>Grant</h3>
-                                        <p>A unique identifier assigned in Banner to each sponsored project. <br><b>
+                                        <p>A unique identifier assigned in Banner to each sponsored project.
+                                            <span class="def-note">
                                                 Note: The fund number associated with this activity may represent only a
                                                 portion of the grant code's financial scope. Additional fund numbers
                                                 could also be linked to the grant code. Please review the full grant
-                                                details for comprehensive information.</b></p>
+                                                details for comprehensive information.
+                                            </span>
+                                        </p>
                                     </li>
 
                                     <li>
@@ -568,7 +500,7 @@
                                     </li>
 
                                 </ul>
-                                -->
+                               
                             </div>
 
                         </div>

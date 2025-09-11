@@ -1,5 +1,4 @@
 .info-btn {
-  padding: 0.75rem;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -7,6 +6,7 @@
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  padding: 0.75rem;
   padding-left: 2.25rem;
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -23,10 +23,7 @@
   margin-right: 1rem;
 }
 
-#tableDefinitions dl dd {
-  margin-bottom: 1rem;
-}
-#tableDefinitions dl .def-note {
+.def-note {
   display: block;
   font-weight: bold;
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Group</title><g id="CMP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CMP---SVG" transform="translate(-35, -8)"><g id="Group" transform="translate(35, 7.9969)"><path d="M11.8944272,1.78885438 L21.2763932,20.5527864 C21.5233825,21.0467649 21.3231581,21.6474379 20.8291796,21.8944272 C20.6903242,21.9638549 20.5372111,22 20.381966,22 L1.61803399,22 C1.06574924,22 0.618033989,21.5522847 0.618033989,21 C0.618033989,20.8447549 0.654179081,20.6916418 0.723606798,20.5527864 L10.1055728,1.78885438 C10.3525621,1.29487588 10.9532351,1.09465154 11.4472136,1.34164079 C11.640741,1.43840449 11.7976635,1.59532698 11.8944272,1.78885438 Z" id="Triangle" fill="%23FFD125"></path><path d="M12.0581055,16.3901367 L10.300293,16.3901367 L10.0512695,9 L12.3071289,9 L12.0581055,16.3901367 Z M11.1791992,17.5473633 C11.5356445,17.5473633 11.8225098,17.6523438 12.0397949,17.8623047 C12.2570801,18.0722656 12.3657227,18.3408203 12.3657227,18.6679688 C12.3657227,18.9902344 12.2570801,19.2563477 12.0397949,19.4663086 C11.8225098,19.6762695 11.5356445,19.78125 11.1791992,19.78125 C10.8276367,19.78125 10.5432129,19.6762695 10.3259277,19.4663086 C10.1086426,19.2563477 10,18.9902344 10,18.6679688 C10,18.3457031 10.1086426,18.0783691 10.3259277,17.8659668 C10.5432129,17.6535645 10.8276367,17.5473633 11.1791992,17.5473633 Z" id="!" fill="%23000000" fill-rule="nonzero"></path></g></g></g></svg>');

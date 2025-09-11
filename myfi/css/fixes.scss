@@ -6,21 +6,17 @@ $Slate: #424c5b;
 $Inky: #25344b;
 
 .info-btn {
-    padding: .75rem;
-
     border: none;
     border-radius: 5px;
     
     font-weight: bold;
     font-size: 1rem;
     color: white;
-
-
   
     cursor: pointer;
     transition: 0.3s;
 
-
+    padding: .75rem;
 
     padding-left: 2.25rem;
     background-repeat: no-repeat;
@@ -28,37 +24,22 @@ $Inky: #25344b;
     background-position: 10px center;
     background-image: $more-info-icon;
     background-color: $Slate;
-
 }
 
 .info-btn:hover, .info-btn:focus {
     background-color: $Inky;
-
 }
 
 #myTable_name { 
     margin-right: 1rem;
 }
 
-#tableDefinitions {
-    dl {
-        dt {
-
-        }
-
-        dd {
-            margin-bottom: 1rem;
-        }
-
-        .def-note {
-            display: block;
-            font-weight: bold;
-            background-image: $alert-icon;
-            background-repeat: no-repeat;
-            background-position: left 5px;
-            padding-left: 2rem;
-        }
-    }
+.def-note {
+    display: block;
+    font-weight: bold;
+    background-image: $alert-icon;
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    padding-left: 2rem;
 }
-
 
