@@ -441,12 +441,12 @@
       "oAP" : "\/arm\/devExamples\/expandCollapse.html",
       "oF" : 0
     },
-    "\/arm\/devExamples\/modal-test.html" : {
+    "\/arm\/devExamples\/va11y-modal-test.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/arm\/devExamples\/modal-test.html",
+      "oAP" : "\/arm\/devExamples\/va11y-modal-test.html",
       "oF" : 0
     },
     "\/arm\/devhelp\/autocomplete-elements.html" : {
