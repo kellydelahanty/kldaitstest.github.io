@@ -1,0 +1,459 @@
+<!--
+This is a template for Financial Apps. This template is for standard sites that
+have navigation and only have one "module" or section of the site.
+-->
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>[Overview table options]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css">
+
+  <style>
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    thead {
+      background-color: lightgray;
+    }
+
+    th {
+      text-align: left;
+      padding: .5rem 0.75rem .5rem .5rem
+    }
+
+
+    td {
+      padding: .75rem .5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Skip link for keyboard users-->
+  <aside id="skip"><a href="#main">jump to main content</a></aside>
+
+
+  <!--Header-->
+  <header>
+    <!--U of I System wordmark and Site Name-->
+    <div class="site-identity desktop-display">
+      <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+          alt="University of Illinois System" class="wordmark"></a>
+      <div class="app-name"> <a href="#" class="plainlink">Semi-Annual Confirmation</a> </div>
+    </div>
+
+    <!--User name, Change Roles link, and log out buttons-->
+    <div class="account">
+      Martin Blackwood (<a href="#">Change Roles</a>)
+      <a class="logout" href="#">Log Out</a>
+    </div>
+
+    <div class="site-identity mobile-display">
+      <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+          alt="University of Illinois System" class="wordmark"></a>
+      <div class="app-name"> <a href="#" class="plainlink">Fiscal Control and Internal Auditing Act (FCIAA) Name</a>
+      </div>
+    </div>
+  </header>
+
+  <!--Navigation-->
+  <nav class="navbar">
+    <button class="mobile-nav-toggle">
+      Menu
+    </button>
+
+    <ul class="navbar-links">
+      <li><a href="#" class="current">Overview</a></li>
+      <li><a href="#">Sent to Dept</a></li>
+      <li><a href="#">Sent to Archive</a></li>
+      <li><a href="#">View Archive</a></li>
+      <li><a href="#">Admin</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+
+    <!--Table 1 - Standard header, not body headers-->
+    <div class="table-ex">
+      <h2>Table Layout Option 1</h2>
+      <table class="wip-table-1">
+        <thead>
+          <th>Chart Org</th>
+          <th>Dept Contact</th>
+          <th>PI</th>
+
+          <th>Grant/Program</th>
+          <th>Status</th>
+          <th>Due to Post-Award</th>
+          <th>Reporting Period</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-218: Liberal Arts & Sciences - Cline Ctr for Adv Social Rsrch</td>
+            <td>Abdullah Islam (<a href="">email@illinois.edu</a>) </td>
+            <td>Althaus, Scott </td>
+
+            <td><a href="">Grant CA692</a>: Joyce Fdn SG-22-47618 </td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+          <tr>
+            <td>1-220: Grainger Engineering - Materials Research Lab </td>
+            <td>Jeffrey Gaede (<a href="">email@illinois.edu</a>) </td>
+            <td>Backlund, Mikael P </td>
+
+            <td><a href="">Grant AJ270</a>: DOE DE-SC0023167 </td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+
+          <tr>
+            <td>1-220: Grainger Engineering - Materials Research Lab </td>
+            <td>Jeffrey Gaede (<a href="">email@illinois.edu</a>) </td>
+            <td>Bodony, Daniel J </td>
+
+            <td><a href="">Grant AJ108</a>: SBC UT-Austin UTAUS-SUB00000545 </td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+          <tr>
+            <td>1-220: Grainger Engineering - Materials Research Lab </td>
+            <td>Jeffrey Gaede (<a href="">email@illinois.edu</a>) </td>
+            <td>Bodony, Daniel J </td>
+
+            <td><a href="">Grant AK990</a>: DoD sub U Notre Dame 204618UI</td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--Table 2 - Chart-Org and Dept contact row headers spanning multiple rows-->
+    <div class="table-ex">
+      <h2>Table Layout Option 2</h2>
+      <table class="wip-table-2">
+        <thead>
+          <th>Chart Org</th>
+          <th>Dept Contact</th>
+          <th>PI</th>
+
+          <th>Grant/Program</th>
+          <th>Status</th>
+          <th>Due to Post-Award</th>
+          <th>Reporting Period</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" scope="rowgroup">1-106: Control - Bus & Fin Services - Cntl - OBFS - Grants & Contr</td>
+            <td rowspan="2" scope="rowgroup">Jeffrey Gaede (<a href="">email@illinois.edu</a>) </td>
+            <td>Trame, Michelle Kay </td>
+
+            <td><a href="">Grant A9975</a>: 106 UIUC FY25 FWS </td>
+            <td>Confirmer Reviewing</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+          <tr>
+            <td>Trame, Michelle Kay </td>
+
+            <td><a href="">Grant A9976</a>: 106 UIUC FY24 FWS </td>
+            <td>Needs Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+
+          <tr>
+            <td>1-218: Liberal Arts & Sciences - Cline Ctr for Adv Social Rsrch</td>
+            <td>Abdullah Islam (<a href="">email@illinois.edu</a>) </td>
+            <td>Althaus, Scott </td>
+
+            <td><a href="">Grant CA692</a>: Joyce Fdn SG-22-47618 </td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+          <tr>
+            <td rowspan="3" scope="rowgroup">1-220: Grainger Engineering - Materials Research Lab </td>
+            <td rowspan="3" scope="rowgroup">Jeffrey Gaede (<a href="">email@illinois.edu</a>) </td>
+            <td>Backlund, Mikael P </td>
+
+            <td><a href="">Grant AJ270</a>: DOE DE-SC0023167 </td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+          <tr>
+            <td>Bodony, Daniel J </td>
+
+            <td><a href="">Grant AJ108</a>: SBC UT-Austin UTAUS-SUB00000545 </td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+
+          <tr>
+            <td>Bodony, Daniel J </td>
+
+            <td><a href="">Grant AK990</a>: DoD sub U Notre Dame 204618UI</td>
+            <td>Ready for Dept Review</td>
+            <td>mm/dd/yy</td>
+            <td>mm/dd/yy to mm/dd/yy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--Table 3- Chart-org and Dept contact in same cell header spanning all columns -->
+    <div class="table-ex">
+      <h2>Table Layout Option 3</h2>
+
+      <table class="wip-table-3">
+        <thead>
+          <tr>
+            <th id="PI" scope="col">PI</th>
+            <th id="grant" scope="col">Grant/Program</th>
+            <th id="status" scope="col">Status</th>
+            <th id="due" scope="col">Due to Post-Award</th>
+            <th id="reporting" scope="col">Reporting Period</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="1-106" class="span" colspan="6" scope="colgroup">
+              1-106: Control - Bus & Fin Services - Cntl - OBFS - Grants & Contr <br>
+              Jeffrey Gaede (<a href="">email@illinois.edu</a>)
+            </th>
+          </tr>
+          <tr>
+            <td headers="1-106 PI">Trame, Michelle Kay</td>
+            <td headers="1-106  grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-106  status">[Status]</td>
+            <td headers="1-106  due">mm/dd/yyyy</td>
+            <td headers="1-106  reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+          <tr>
+            <td headers="1-106 PI" id="">Trame, Michelle Kay</td>
+            <td headers="1-106  grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-106  status">[Status]</td>
+            <td headers="1-106  due">mm/dd/yyyy</td>
+            <td headers="1-106  reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+
+
+
+          <tr>
+            <th id="1-218" class="span" colspan="6" scope="colgroup">
+              1-218: Liberal Arts & Sciences - Cline Ctr for Adv Social Rsrch<br>
+              Abdullah Islam (<a href="">email@illinois.edu</a>)
+            </th>
+          </tr>
+          <tr>
+            <td headers="1-218 PI">Althaus, Scott </td>
+            <td headers="1-218 grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-218 status">[Status]</td>
+            <td headers="1-218 due">mm/dd/yyyy</td>
+            <td headers="1-218 reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+          <tr>
+            <th id="1-220" class="span" colspan="6" scope="colgroup">
+              1-220: Grainger Engineering - Materials Research Lab <br>
+              Jeffrey Gaede (<a href="">email@illinois.edu</a>)
+            </th>
+          </tr>
+
+          <tr>
+            <td headers="1-220 PI">Backlund, Mikael P </td>
+            <td headers="1-220 grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-220 status">[Status]</td>
+            <td headers="1-220 due">mm/dd/yyyy</td>
+            <td headers="1-220 reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+          <tr>
+            <td headers="1-220 PI">Bodony, Daniel J </td>
+            <td headers="1-220  grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-220  status">[Status]</td>
+            <td headers="1-220  due">mm/dd/yyyy</td>
+            <td headers="1-220  reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+          <tr>
+            <td headers="1-220 PI" id="">Bodony, Daniel J </td>
+            <td headers="1-220  grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-220  status">[Status]</td>
+            <td headers="1-220  due">mm/dd/yyyy</td>
+            <td headers="1-220  reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <!--Table 4- Chart-org and Dept contact in same cell header spanning all columns  / PI spanning multiple rows-->
+    <div class="table-ex">
+      <h2>Table Layout Option 4</h2>
+
+      <table class="wip-table-4">
+        <thead>
+          <tr>
+            <th id="PI" scope="col">PI</th>
+            <th id="grant" scope="col">Grant/Program</th>
+            <th id="status" scope="col">Status</th>
+            <th id="due" scope="col">Due to Post-Award</th>
+            <th id="reporting" scope="col">Reporting Period</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="1-106" class="span" colspan="6" scope="colgroup">
+              1-106: Control - Bus & Fin Services - Cntl - OBFS - Grants & Contr <br>
+              Jeffrey Gaede (<a href="">email@illinois.edu</a>)
+            </th>
+          </tr>
+          <tr>
+            <th headers="1-106 PI" id="trame" rowspan="2" scope="rowgroup">Trame, Michelle Kay</th>
+            <td headers="1-106 trame grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-106 trame status">[Status]</td>
+            <td headers="1-106 trame due">mm/dd/yyyy</td>
+            <td headers="1-106 trame reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+          <tr>
+            <td headers="1-106 trame grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-106 trame status">[Status]</td>
+            <td headers="1-106 trame due">mm/dd/yyyy</td>
+            <td headers="1-106 trame reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+
+
+
+          <tr>
+            <th id="1-218" class="span" colspan="6" scope="colgroup">
+              1-218: Liberal Arts & Sciences - Cline Ctr for Adv Social Rsrch<br>
+              Abdullah Islam (<a href="">email@illinois.edu</a>)
+            </th>
+          </tr>
+          <tr>
+            <th headers="1-218 PI" id="althaus">Althaus, Scott </th>
+            <td headers="1-218 althaus grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-218 althaus status">[Status]</td>
+            <td headers="1-218 althaus due">mm/dd/yyyy</td>
+            <td headers="1-218 althaus reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+          <tr>
+            <th id="1-220" class="span" colspan="6" scope="colgroup">
+              1-220: Grainger Engineering - Materials Research Lab <br>
+              Jeffrey Gaede (<a href="">email@illinois.edu</a>)
+            </th>
+          </tr>
+
+          <tr>
+            <th headers="1-220 PI" id="backlund">Backlund, Mikael P </th>
+            <td headers="1-220 backlund grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-220 backlund status">[Status]</td>
+            <td headers="1-220 backlund due">mm/dd/yyyy</td>
+            <td headers="1-220 backlund reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+          <tr>
+            <th headers="1-220 PI" id="bodony" rowspan="2" scope="rowgroup">Bodony, Daniel J </th>
+            <td headers="1-220  grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-220 bodony status">[Status]</td>
+            <td headers="1-220 bodony due">mm/dd/yyyy</td>
+            <td headers="1-220 bodony reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+          <tr>
+            <td headers="1-220 bodony grant">
+              <a href="">Grant ####</a>: [Grant Name]
+            </td>
+            <td headers="1-220 bodony status">[Status]</td>
+            <td headers="1-220 bodony due">mm/dd/yyyy</td>
+            <td headers="1-220 bodony reporting">mm/dd/yyyy to mm/dd/yyyy</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+  </main>
+
+  <footer>
+    <div class="helpbar">
+      <!--This is an example of when there are mulitple help links.
+          If there is only one help link you can just inlucde the "Help Guide"
+          without the "Help Guides:" prefix-->
+      <div class="help-guide">
+        <p><strong>Help Guides:</strong> <a href="#">Help Guide 1</a> | <a href="#">Help Guide 2</a></p>
+      </div>
+      <div class="help-email">
+        <p><strong>Questions?</strong> <a href="#">Contact Us</a></p>
+      </div>
+    </div>
+    <div class="policies">
+      <p>©
+        <script>document.write(new Date().getFullYear());</script> University of Illinois Board of Trustees |
+        <a href="https://www.vpaa.uillinois.edu/resources/web_privacy" class="external external-blue">Privacy policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

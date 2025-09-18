@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Sample Datatable with export</title>
+	<cfset local.currentRelease = "myRelease2022">
+	
+	<cfoutput>
+		<script src="../../../jquery/jquery-3.6.0.min.js?v=myRelease2022" type="text/javascript"></script>
+		
+		<script src="../../../datatables/DataTables-1.12.1/js/jquery.dataTables.min.js?v=myRelease2022" type="text/javascript"></script>
+		<link href="../../../datatables/DataTables-1.12.1/css/jquery.dataTables.css?v=myRelease2022" rel="stylesheet" type="text/css" />
+		
+		<script src="../../../datatables/extensions/Buttons-2.3.2/js/dataTables.buttons.min.js?v=myRelease2022" type="text/javascript"></script>
+		<script src="../../../datatables/extensions/Buttons-2.3.2/js/buttons.html5.min.js?v=myRelease2022" type="text/javascript"></script>
+		<script src="../../../datatables/extensions/Buttons-2.3.2/js/jszip.min.js?v=myRelease2022" type="text/javascript"></script> <!--- jszip needed for excel export --->
+		<script src="../../../datatables/extensions/Buttons-2.3.2/js/buttons.print.min.js?v=myRelease2022" type="text/javascript"></script>
+		<link href="../../../datatables/extensions/Buttons-2.3.2/css/buttons.dataTables.min.css?v=myRelease2022" rel="stylesheet" type="text/css" />
+		
+		<script src="../../../datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js?v=myRelease2022"></script>
+		<script src="../../../datatables/extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=myRelease2022"></script>
+		<link rel="stylesheet" href="../../../datatables/extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css?v=myRelease2022">
+		
+		<link href="../../../datatables/DataTables-1.12.1/css/Datatable-AITS-Fix.css?v=myRelease2022" rel="stylesheet" type="text/css" />
+		<link href="../../../datatables/DataTables-1.12.1/css/Datatables-Style-Minimalist.css?v=myRelease2022" rel="stylesheet" type="text/css" />
+		<link href="../../../datatables/DataTables-1.12.1/css/Datatables-Styles-Finance.css?v=myRelease2022" rel="stylesheet" type="text/css" />
+	</cfoutput>
+	
+	<!--- note: this style is only needed for the sample because there is no other finance css applied
+				this (or something equivalent) should be in your application's css file --->
+	<style> 
+		.hidden {position: absolute; clip: rect(1px 1px 1px 1px); width: 1px; height: 1px; text-indent: -999em; overflow: hidden; word-wrap: normal;}
+	</style>
+	
+	<script type="text/javascript" id="errorFocusScript">
+		$(document).ready(function(){
+			var oTable=$('.personTable').dataTable( {
+										dom: "<'datatableContainer_pageLength' l>B<'datatableContainer_filterResults' f><'datatableContainer_paginateTop datatableContainer_pagination' p>rt<'datatableContainer_resultCounts' i><'datatableContainer_paginateBottom datatableContainer_pagination' p>", 
+										lengthMenu: [[2, 5, 10, -1], 
+													 [2, 5, 10, "All"]],
+										pageLength: 10,
+										searching: true,
+										bFilter: true,
+										bSort: true,
+										columnDefs: [ 
+											{targets: 'no-sort', orderable: false}  // don't allow sorting on no-sort columns
+											//,{targets: 'noDisplay', visible: false}   // don't show noDisplay columns
+										],
+										aaSorting: [[1, 'asc'], [0, 'asc']],
+										sPaginationType: "full_numbers",
+										fixedHeader: {
+			            					header: true,
+			            					footer: false
+			       						},
+        								bAutoWidth: false,						    // set to false to allow the table to be responsive to changes in window width
+										drawCallback: function(settings) {
+			    							drawCallbackFunc(settings);
+										},
+										language: {
+											sSearch: "Search: ",
+											zeroRecords: "<span id='zeroRecordMsg'>No Records Returned</span>",
+											info: "Showing _START_ to _END_ of _TOTAL_ records",
+											infoEmpty: "Showing 0 records",
+											infoFiltered: "(filtered from _MAX_ total records)",
+											lengthMenu: "Records per page: _MENU_",
+											loadingRecords: "Loading your records, please wait.",
+											processing: "Processing your request, please wait.",
+											aria: {
+								                paginate: {
+								                    first: 'Go to First Page',
+								                    previous: 'Go to Previous Page',
+								                    next: 'Go to Next Page',
+								                    last: 'Go to Last Page',
+								                    number: 'Go to Page '   //not supported in datatables v. 1 (workaround added in the drawCallbackFunc)
+								                }
+								            }
+										},
+										createdRow: function(nRow, aData, aDataIndex) {
+									        // As each row is created, set the data-auth attribute to the current authID
+											$(nRow).attr('data-auth', aData[0]);
+									    },
+										buttons: [
+										    {
+										        extend: 'csvHtml5',
+												text: 'CSV',
+												filename: 'StaffDirectory',
+												exportOptions: {
+													columns: ':not(.no-export)'
+												},
+												customize: function(doc){
+													// add the caption to the top of the file
+	                								
+													var currentdate = new Date(); 
+													var datetime = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear() 
+																	+ " "  
+													                + currentdate.getHours() + ":" 
+																	+ ('0' + currentdate.getMinutes()).slice(-2) + " "    // 2-digit minutes
+																	+ ((currentdate.getHours()>=12)?('PM'):'AM');		  // hours 0-11 = AM, 12-23 = PM
+													
+													return "Staff Directory \n"
+											        	   + "Exported: " + datetime + "\n"
+												    	   + "Exported by you! \n"
+														   + "This is only for demo purposes \n\r" + doc;
+												}
+										    },
+										    {
+										        extend: 'excelHtml5',
+										        text: 'Excel', 										// - Simple/Styled',
+												filename: "StyledStaffDirectory",
+												sheetName:'StaffDirectory',
+												title: null,										// hide the html page title from the export								
+												exportOptions: {
+													columns: ':not(.no-export)'
+												},
+												customize: function (xlsx) {						// add the style to the top row of the sheet (gray background, bold black text)
+															
+												 	var sheet = xlsx.xl.worksheets['sheet1.xml'];
+											       // Update the heading row to be of style 7
+											        $('row[r="1"] c', sheet).attr( 's', '7' );
+											    } 
+											}
+											/*, 
+											// other excel options to try based on your export needs:
+											{
+										        extend: 'excelHtml5',
+										        text: 'Excel',										// - Simple
+												filename: 'SimpleStaffDirectory',
+												sheetName:'StaffDirectory',
+												title: null,										// hide the html page title from the export								
+												exportOptions: {
+													columns: ':not(.no-export)'
+												},
+												
+											},
+											
+											
+											
+										    {
+										        extend: 'excelHtml5',
+										        text: 'Excel', 										// - With Header
+												filename: "HeaderStaffDirectory",
+												sheetName:'StaffDirectory',
+												title: null,										// hide the html page title from the export								
+												exportOptions: {
+													columns: ':not(.no-export)'
+												},
+												customize: function (xlsx) {						// add the caption to the top of the sheet
+															
+												 	var sheet = xlsx.xl.worksheets['sheet1.xml'];
+											        var downrows = 5;
+											        var clRow = $('row', sheet);	
+											        //update Row
+											        clRow.each(function () {
+											            var attr = $(this).attr('r');
+											            var ind = parseInt(attr);
+											            ind = ind + downrows;
+											            $(this).attr("r",ind);
+											        });
+										 
+											        // Update  row > c
+											        $('row c ', sheet).each(function () {
+											            var attr = $(this).attr('r');
+											            var pre = attr.substring(0, 1);
+											            var ind = parseInt(attr.substring(1, attr.length));
+											            ind = ind + downrows;
+											            $(this).attr("r", pre + ind);
+											        });
+											 		// apply style to number columns of thousands commas and 2 decimal places
+											 		var styleStr = "";
+													
+													function createRowNode(index,textContent) {
+											        	//Need to create row node with the following format: <row r="1"><c t="inlineStr" r="A1" s="2"><is><t>OBFS My-UI-Financials</t></is></c></row>
+														var rowNode = sheet.createElement("row"); 		// create a row node
+												        var rowNodeRAttr = sheet.createAttribute("r"); //create the r attribute for the row node
+												        rowNodeRAttr.value = index;					//set the value of the r attribute
+												        rowNode.setAttributeNode(rowNodeRAttr);		//add the attribute to the row node
+												        // define the cells and add them to the row
+												        // currently only setting the first column (A) cell
+												        var rowCNode = sheet.createElement("c");		// create a c node - cell of the row
+												        var rowCNodeTAttr = sheet.createAttribute("t");//create the t attribute for the c node
+												        rowCNodeTAttr.value = "inlineStr";				//set the value of the t attribute
+												        rowCNode.setAttributeNode(rowCNodeTAttr);		//add the attribute to the c node
+												        var rowCNodeRAttr = sheet.createAttribute("r");//create the t attribute for the r node
+												        rowCNodeRAttr.value = "A"+index;					//set the value of the r attribute
+												        rowCNode.setAttributeNode(rowCNodeRAttr);		//add the attribute to the c node
+												        var rowISNode = sheet.createElement("is");		// create a is node
+												        var rowTNode = sheet.createElement("t");		// create a t node
+												        var textnode = document.createTextNode(textContent); // create a text node for the content of the t node
+												        rowTNode.appendChild(textnode);				//add the textnode to the t node
+												        rowISNode.appendChild(rowTNode);				//add the t node to the is node
+												        rowCNode.appendChild(rowISNode);				//add the is node to the c node
+												        rowNode.appendChild(rowCNode);				//add the c node (cell) to the row node
+												        
+											            return rowNode;
+											        }
+													
+													
+													function Addrow(index,data) {
+											            msg='<row r="'+index+'">'
+											            for(i=0;i<data.length;i++){
+											                var key=data[i].k;
+											                var value=data[i].v;
+											                msg += '<c t="inlineStr" r="' + key + index + '" s="42">';
+											                msg += '<is>';
+											                msg +=  '<t>'+value+'</t>';
+											                msg+=  '</is>';
+											                msg+='</c>';
+											            }
+											            msg += '</row>';
+											            return msg;
+											        }
+											  
+											        //insert
+													
+													var currentdate = new Date(); 
+													var datetime = (currentdate.getMonth()+1)  + "/" + currentdate.getDate() + "/" + currentdate.getFullYear() 
+																	+ " "  
+													                + currentdate.getHours() + ":" 
+																	+ ('0' + currentdate.getMinutes()).slice(-2) + " "  // 2-digit minutes
+																	+ ((currentdate.getHours()>=12)?('PM'):'AM');		 // hours 0-11 = AM, 12-23 = PM
+													
+													var r1 = Addrow(1, [{k: 'A', v: 'Person Details' }]);
+											        var r2 = Addrow(2, [{k: 'A', v: 'Exported: ' + datetime}]);
+											        var r3 = Addrow(3, [{k: 'A', v: 'Exported by you!'}]);
+											        var r4 = Addrow(4, [{k: 'A', v: 'This is only for demo purposes'}]);
+											         
+											        sheet.childNodes[0].childNodes[1].innerHTML = r1 + r2+ r3+ r4+ sheet.childNodes[0].childNodes[1].innerHTML;
+				
+											        // Set the heading lines style to 2
+											        $('row[r="1"] c', sheet).attr( 's', '2' );
+											        $('row[r="2"] c', sheet).attr( 's', '2' );
+											        $('row[r="3"] c', sheet).attr( 's', '2' );
+											        $('row[r="4"] c', sheet).attr( 's', '2' );
+				
+											         // Update the heading row to be of style 7
+											        $('row[r="6"] c', sheet).attr( 's', '7' );
+											    } 
+											}	*/
+										]
+									} );
+									
+			//add aria labels to export buttons
+      		$(".dt-buttons button").each(function() {
+			 	$(this).attr("aria-label", 'Export Data to ' + $(this).text());
+       		}); 
+								
+			// set the search box to a maxlength of 50
+			$('.datatableContainer_filterResults input').attr('maxlength', 50); 
+							
+			// add a description to the search field, so users know which data they are searching (especially helpful on pages with multiple datatables)				
+			$('.datatableContainer_filterResults input').each(function() {
+				var ariaDescribedBy = $(this).closest('.dataTables_wrapper').parent().attr('id') + 'Header';
+				$(this).attr("aria-describedby", ariaDescribedBy);
+			});
+			
+			// each time the table is redrawn, update the pagination buttons and filter fields
+			function drawCallbackFunc(settings) {	
+			
+				// get the div that holds this table - this will ensure we're not changing features of any other tables on the page 
+				//		and, they can all share the same drawCallbackFunc
+				var tableContainer = '#' + $('#' + settings.sTableId).parent().attr('id');										
+						
+				var startRecord = settings._iDisplayStart; // note this is 0 based
+				var endRecord = settings.fnDisplayEnd();
+				var displayCount = endRecord - startRecord; // how many records are shown on this page
+				
+				var filterCount = settings.fnRecordsDisplay(); // how many filtered records shown on all pages
+				var totalCount = settings.fnRecordsTotal(); // how many non-filtered records were available
+		
+		
+				if(filterCount <= 10){
+					// with <= 10 records (our min page length option) to show now, no need to paginate
+					$(tableContainer + ' .datatableContainer_pagination').addClass("noDisplay");
+					$(tableContainer + ' .datatableContainer_pageLength div').addClass("noDisplay");
+				}
+				else {
+					// pagination should only be shown if there are more records to be seen on other pages
+					//		this is only based on the ones we see (displayCount)
+					//			              and the ones we should see (filterCount)
+					if(displayCount < filterCount){
+						//	seeing less than we should - show pagination
+						$(tableContainer + ' .datatableContainer_pagination').removeClass("noDisplay");
+					}
+					else {
+						//	seeing as many as we should - hide pagination
+						$(tableContainer + ' .datatableContainer_pagination').addClass("noDisplay");
+					}
+					
+					// for >10 records, always show the length menu
+					$(tableContainer + ' .datatableContainer_pageLength div').removeClass("noDisplay");
+				}
+				
+				switch (totalCount) { 
+					case 0: {
+						// with 0 records ever, no need to search or export
+						$(tableContainer + ' .datatableContainer_filterResults div').addClass("noDisplay");
+					    $(tableContainer + ' .dt-buttons').addClass("noDisplay");
+						break;
+					}
+					case 1: {
+						// with 1 records ever, no need to search, but allow export
+						$(tableContainer + ' .dt-buttons').removeClass("noDisplay");
+						$(tableContainer + ' .datatableContainer_filterResults div').addClass("noDisplay");	
+						break;
+					}
+					default: {
+						// with > 1 records ever, allow search and export
+						$(tableContainer + ' .dt-buttons').removeClass("noDisplay");
+						$(tableContainer + ' .datatableContainer_filterResults div').removeClass("noDisplay");
+						break;
+					}	
+				}
+				
+				// add a listener to any links or buttons in the table to scroll back if they are hidden under the header
+				$(".dataTables_wrapper a").on("focus", function() {
+		        	scrollPageUp(element=$(this),
+								 headerHeight=80
+					);
+					return false;
+				});
+				$(".dataTables_wrapper button").on("focus", function() {
+		        	scrollPageUp(element=$(this),
+								 headerHeight=80
+					);
+					return false;
+				});
+				
+				// add aria labels to numeric pagination buttons. 
+				//  NOTE: First, Previous, Next and Last buttons have their labels added with datatables language aria options
+		        $("div.datatableContainer_pagination a").each(function() {
+		            if ($.isNumeric($(this).text())) {
+						$(this).attr("aria-label", 'Go to Page ' + $(this).text());
+					}
+		        });
+				
+				// set the current attribute for the current page link
+				$("div.datatableContainer_pagination a.current").attr("aria-current", "true");
+			
+			};	
+			
+			
+			$(".showID").click(function(event){
+				event.preventDefault();
+				
+				var email = $(this).parent().siblings(".email").text();
+				
+				var id = $(this).parent().siblings(".userID").text();
+				if (id.length === 0){
+					id="[undefined]"
+				}
+				
+				//alert("Note: while Email and ID are both searchable, this is what jquery sees\n\tEmail:   " + email + "\n\tID:\t     " + id + "\n\nTo see both, remove the columnDefs for noDisplay");
+				alert("Email:   " + email + "\nID:\t     " + id);
+			});		
+			
+		
+		});
+	</script>
+</head>
+
+
+<body>
+
+<h1 id="staffDirectoryHeader">Sample Finance Datatable</h1>
+
+	<div id="staffDirectory">
+	<!-- see Datatables-Styles-Finance for other header, padding, alternating row, and border options -->
+	<table class="personTable header_darkBlue padding_lg tableBorder">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email Address</th>
+				<th>Birthday</th>
+				<th>Last Modified</th>
+				<th class="no-sort no-export">Action</th>
+				<th class="noDisplay">ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Aaron</td>
+				<td>Adams</td>
+				<td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+				<td data-sort="2000/01/01">01/01/2000</td>
+				<td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">1</td>
+			</tr>
+			<tr>
+				<td>Brenda</td>
+				<td>Banks</td>
+				<td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+				<td data-sort="1998/02/02">02/02/1998</td>
+				<td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">2</td>
+			</tr>
+			<tr>
+				<td>Charles</td>
+				<td>Carter</td>
+				<td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+				<td data-sort="2010/03/03">03/03/2010</td>
+				<td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">3</td>
+			</tr>
+			<tr>
+				<td>Delores</td>
+				<td>Dickens</td>
+				<td class="email"><a href="mailto:ddickens@uillinois.edu">ddickens@uillinois.edu</a></td>
+				<td data-sort="1976/04/04">04/04/1976</td>
+				<td data-sort="2000/01/01 20:39">01/01/2000 08:39 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">4</td>
+			</tr>
+			<tr>
+				<td>Amy</td>
+				<td>Adams</td>
+				<td class="email"><a href="mailto:aadams1@uillinois.edu">aadams1@uillinois.edu</a></td>
+				<td data-sort="2000/01/11">01/11/2000</td>
+				<td data-sort="2000/01/11 04:39">01/11/2000 04:39 AM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">5</td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>Banks</td>
+				<td class="email"><a href="mailto:bbanks1@uillinois.edu">bbanks1@uillinois.edu</a></td>
+				<td data-sort="1998/02/12">02/12/1998</td>
+				<td data-sort="1998/02/12 07:15">02/12/1998 07:15 AM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">6</td>
+			</tr>
+			<tr>
+				<td>Carrie</td>
+				<td>Carter</td>
+				<td class="email"><a href="mailto:ccarter1@uillinois.edu">ccarter1@uillinois.edu</a></td>
+				<td data-sort="2010/03/13">03/13/2010</td>
+				<td data-sort="2010/03/13 15:08">03/13/2010 03:08 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">7</td>
+			</tr>
+			<tr>
+				<td>Dan</td>
+				<td>Dickens</td>
+				<td class="email"><a href="mailto:ddickens1@uillinois.edu">ddickens1@uillinois.edu</a></td>
+				<td data-sort="1976/04/14">04/14/1976</td>
+				<td data-sort="2000/01/01 03:28">01/01/2000 03:28 AM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">8</td>
+			</tr>
+			<tr>
+				<td>Arthur</td>
+				<td>Adams</td>
+				<td class="email"><a href="mailto:aadams2@uillinois.edu">aadams2@uillinois.edu</a></td>
+				<td data-sort="2000/11/01">11/01/2000</td>
+				<td data-sort="2000/11/01 18:39">11/01/2000 06:39 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">9</td>
+			</tr>
+			<tr>
+				<td>Betty</td>
+				<td>Banks</td>
+				<td class="email"><a href="mailto:bbanks2@uillinois.edu">bbanks2@uillinois.edu</a></td>
+				<td data-sort="1998/12/02">12/02/1998</td>
+				<td data-sort="1998/12/02 07:15">12/02/1998 07:15 AM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">10</td>
+			</tr>
+			<tr>
+				<td>Christopher</td>
+				<td>Carter</td>
+				<td class="email"><a href="mailto:ccarter2@uillinois.edu">ccarter2@uillinois.edu</a></td>
+				<td data-sort="2010/08/03">08/03/2010</td>
+				<td data-sort="2010/08/03 15:08">08/03/2010 03:08 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">11</td>
+			</tr>
+			<tr>
+				<td>Donna</td>
+				<td>Dickens</td>
+				<td class="email"><a href="mailto:ddickens2@uillinois.edu">ddickens2@uillinois.edu</a></td>
+				<td data-sort="1976/09/04">09/04/1976</td>
+				<td data-sort="2000/09/01 20:39">09/01/2000 08:39 PM</td>
+				<td><button class="showID">Show User ID</button></td>
+				<td class="noDisplay userID">12</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+</body>
+</html>

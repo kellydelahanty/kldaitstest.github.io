@@ -1,0 +1,1354 @@
+
+.container div {
+    width:99%;
+    }
+    
+    /* should be .container .content */
+     .container .content {
+        display: none;
+        padding : 5px;
+    }
+    
+    /* should be .container .header */
+     .container .header {
+        padding: 2px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .headingTitle1
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: bolder;
+        FONT-SIZE: 1.25em;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 1em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    .heading1
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 1em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    .reportHeading1
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    H1.csReportHeading1 {
+        color: #003366;
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    H1.reportHeading1
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    H2.noMargin
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        PADDING-TOP: 0px
+    }
+    p.noMargin
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        PADDING-TOP: 0px
+    }
+    .heading2
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 1em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: left
+    }
+    .heading3
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0.5em 1em 0.15em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: left
+    }
+    .reportheading3
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0.5em 1em 0.15em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: left;
+        color: black;
+    }
+    .fineprint{
+        font-size: .75em;
+    }	
+    fieldset.noBorder {
+        border:0em;
+        padding:0 0 0 0;
+        margin: 0 0 0 0;
+        }
+    .section
+    {
+        FLOAT: left;
+        MARGIN: 0.25em 1em 1em;
+        WIDTH: 90%
+    }
+    
+    .section2
+    {
+        FLOAT: left;
+        MARGIN: 0.25em 1em 1em;
+        WIDTH: 90%;
+        BACKGROUND-COLOR: #b9ccdd
+    }
+    .bottomBar {
+        background-image: url("./graphics/bottom_bar.gif");
+    }
+    .grantHeading1
+    {
+        MARGIN: .5em 1em 0em 0em;
+        WIDTH: 95%;
+        BACKGROUND-COLOR: #C2D2E1;
+        font-weight:normal;
+        font-size:100%;
+        line-spacing:1em;
+    }
+    .grantSection
+    {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        line-height: 200%;
+        padding-left:0.5em;
+        padding-right:0em;
+        MARGIN: 0.5em 0em 2em 0em;
+        WIDTH: 94.4%;
+        BACKGROUND-COLOR: #ECFFEC;
+    }
+    .grantSection2
+    {
+        padding-top: 0em;
+        padding-bottom: 0em;
+        line-height: 200%;
+        padding-left:0.5em;
+        MARGIN: 0.5em 0em 1em 0em;
+        WIDTH: 94.4%;
+        BACKGROUND-COLOR: #ECFFEC;
+    }
+    .grantSubSection 
+    {
+        text-align: left; 
+        padding: 0 5;
+    }
+    .reportformsection
+    {
+         FLOAT: left;
+        MARGIN: 0em 1em 1em 0em;
+        WIDTH: 90%;
+        BACKGROUND-COLOR: #b9ccdd
+    }
+    .reportformsectionLine
+    {
+        FLOAT: left;
+        MARGIN: 0em;
+        WIDTH: 95%;
+    }
+    .subSection1
+    {
+        MARGIN: 0em 0.5em 0.5em 1.5em
+    }
+    .tabSection
+    {
+        FLOAT: left;
+        MARGIN: 0.75em 0px 0.5em 1em;
+        WIDTH: 95%
+    }
+    .subSection2
+    {
+        MARGIN: 0px
+    }
+    .csbottomBar
+    {
+        FLOAT: left;
+        MARGIN-BOTTOM: 1em
+    }
+    .indentElement
+    {
+        MARGIN: 0.5em
+    }
+    .indentLeft
+    {
+        MARGIN-left: 0.5em
+    }
+    .indentElementSmall
+    {
+        MARGIN: 0.5em 0em 0.5em 1em;
+    }
+    .indentLeftMedium
+    {
+        MARGIN-LEFT: 2em
+    }
+    .indentLeftLarge
+    {
+        MARGIN-LEFT: 4em
+    }
+    .indentLeftXLarge
+    {
+        MARGIN-LEFT: 6em
+    }
+    .strongFont
+    {
+        font-weight: bold;
+    }
+    .textSection
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        PADDING-TOP: 0px
+    }
+    .formContainer
+    {
+        MARGIN-TOP: 0.1em;
+        BACKGROUND-COLOR: #ecf5ff
+    }
+    .formContainer2
+    {
+        MARGIN-TOP: 0.1em;
+        BACKGROUND-COLOR: #b9ccdd
+    }
+    .formContainer3
+    {
+        MARGIN-TOP: 0.1em;
+        BACKGROUND-COLOR: #C2D2E1
+    }
+    .formContainer4
+    {
+        FLOAT: left;
+        MARGIN: 0em;
+        WIDTH: 95%;
+        padding: 1em 0em 1em 0em;
+        BACKGROUND-COLOR: #C2D2E1
+    }
+    .formSubSection1
+    {
+        PADDING-BOTTOM: 0.5em;
+        MARGIN: 0.5em 1em 1em;
+        PADDING-TOP: 0.5em
+    }
+    .formSubSection2
+    {
+        FLOAT: left;
+        PADDING-BOTTOM: 0.5em;
+        MARGIN: 0.5em 0.2em 2em 2em;
+        PADDING-TOP: 0.5em;
+        TEXT-ALIGN: center
+    }
+    .formSubSection3
+    {
+        FLOAT: left;
+        PADDING-BOTTOM: 0.5em;
+        MARGIN: 0.5em 0.2em 2em 1.5em;
+        PADDING-TOP: 0.5em;
+        TEXT-ALIGN: center
+    }
+    .formElement
+    {
+        MARGIN-TOP: 0.5em;
+        MARGIN-BOTTOM: 0.5em
+    }
+    .formElementXtraSpace
+    {
+        MARGIN-TOP: .75em;
+        MARGIN-BOTTOM: 0.75em
+    }
+    .smalltxt
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-SIZE: smaller;
+        PADDING-BOTTOM: 0px;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: left
+    }
+    .above
+    {
+        MARGIN-BOTTOM: -0.5em;
+        VERTICAL-ALIGN: bottom
+    }
+    .below
+    {
+        MARGIN-BOTTOM: 1em;
+        VERTICAL-ALIGN: top
+    }
+    .wrapping
+    {
+        WHITE-SPACE: nowrap
+    }
+    .smalltableft
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 4.5em;
+        PADDING-BOTTOM: 0px;
+        PADDING-TOP: 0px
+    }
+    .mediumtabright
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 11em;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px 0px 0px 1em;
+        PADDING-TOP: 0px
+    }
+    .largetabright
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 15em;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px 0px 0px 1em;
+        PADDING-TOP: 0px
+    }
+    .formelementbottom
+    {
+        MARGIN-BOTTOM: 0.1em;
+        VERTICAL-ALIGN: bottom;
+        TEXT-ALIGN: left
+    }
+    .subsectionleft
+    {
+        FLOAT: left;
+    }
+    .subsectionleftSmMargin
+    {
+        FLOAT: right;
+        margin: 0em;
+     
+    }
+    .optionsectionleft
+    {
+        FLOAT: left;
+        WIDTH: 45%;
+    }
+    .thirdsectionleft
+    {
+        FLOAT: left;
+        WIDTH: 30%;
+    }
+    .fifthsectionleft
+    {
+        FLOAT: left;
+        WIDTH: 18%;
+    }
+    .sectionleft
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        VERTICAL-ALIGN: top;
+        WIDTH: 100%;
+        PADDING-TOP: 0px;
+    }
+    H2.headingTitle1
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: bolder;
+        FONT-SIZE: 1.25em;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 1em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    H2.headingTitle2
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: 1.20em;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: .4em;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: left;
+    }
+    
+    H3.headingTitle
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 1.20em;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: .4em;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: left;
+    }
+    H3.noStyles
+    {
+        PADDING: 0em;
+        FONT-WEIGHT:normal;
+        FONT-SIZE: 1em;
+        MARGIN: 0em;
+    }
+    H4.noStyles
+    {
+        PADDING: 0em;
+        FONT-WEIGHT:normal;
+        FONT-SIZE: 1em;
+        MARGIN: 0em;
+    }
+    H3.noStylesButBold
+    {
+        PADDING: 0em;
+        FONT-WEIGHT:bold;
+        FONT-SIZE: 1em;
+        MARGIN: 0em;
+        color:black;
+    }
+    
+    H4.noStylesColorButBold
+    {
+        PADDING: 0em;
+        FONT-WEIGHT:bold;
+        FONT-SIZE: 1em;
+        MARGIN: 0em;
+    }
+    TH.alignRight
+    {
+        PADDING-LEFT: 0.2em;
+        FONT-WEIGHT: bold;
+        TEXT-ALIGN: left;
+    }
+    TH.subheading
+    {
+        PADDING-RIGHT: 0em;
+        PADDING-LEFT: 0.2em;
+        FONT-WEIGHT: bold;
+        PADDING-BOTTOM: 0.2em;
+        MARGIN: 0px;
+        WIDTH: 100%;
+        COLOR: black;
+        PADDING-TOP: 0.2em;
+        BACKGROUND-COLOR: #b9ccdd;
+        TEXT-ALIGN: left
+    }
+    TH.subheadingreadonly
+    {
+        PADDING-RIGHT: 0em;
+        PADDING-LEFT: 0.2em;
+        FONT-WEIGHT: bold;
+        PADDING-BOTTOM: 0.2em;
+        MARGIN: 0px;
+        WIDTH: 100%;
+        COLOR: black;
+        PADDING-TOP: 0.2em;
+        BACKGROUND-COLOR: #cccccc;
+        TEXT-ALIGN: left
+    }
+    TH.subheading H3
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        POSITION: relative
+    }
+    TH.subheadingreadonly H3
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        POSITION: relative
+    }
+    caption.subheading
+    {
+        PADDING-RIGHT: 0em;
+        PADDING-LEFT: 0.2em;
+        FONT-WEIGHT: bold;
+        PADDING-BOTTOM: 0.2em;
+        MARGIN: 0px;
+        WIDTH: 99.8%;
+        COLOR: black;
+        PADDING-TOP: 0.2em;
+        BACKGROUND-COLOR: #b9ccdd;
+        TEXT-ALIGN: left;
+        font-size:1em;
+    }
+    caption.subheadingreadonly
+    {
+        PADDING-RIGHT: 0em;
+        PADDING-LEFT: 0.2em;
+        PADDING-TOP: 0.2em;
+        PADDING-BOTTOM: 0.2em;
+        FONT-WEIGHT: bold;
+        MARGIN: 0em;
+        WIDTH: 99.8%;
+        COLOR: black;
+        BACKGROUND-COLOR: #cccccc;
+        TEXT-ALIGN: left
+    }
+    caption.subheading H2
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        font-size:1.1em;
+        font-weight:bold;
+        POSITION: relative
+    }
+    caption.subheadingreadonly H2
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        font-size:1.1em;
+        font-weight:bold;
+        POSITION: relative
+    }
+    .textaligncenter
+    {
+        COLOR: black;
+        TEXT-ALIGN: center
+    }
+    .leftHalfBordered
+    {
+        FLOAT: left;
+        MARGIN: 0.5em 1em 1em;
+        WIDTH: 45%
+    }
+    .h2normalText
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: 1.1em;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 1em 1em 0.75em;
+        VERTICAL-ALIGN: top;
+        WIDTH: 90%;
+        PADDING-TOP: 0px;
+        TEXT-ALIGN: center
+    }
+    .alignleft
+    {
+        MARGIN: 0em 0em 0em 0.5em;
+        TEXT-ALIGN: left
+    }
+    .alignleftNoVertPad
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0.5em;
+        PADDING-BOTTOM: 0em;
+        PADDING-TOP: 0em;
+        TEXT-ALIGN: left
+    }
+    .alignleftSmPad
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 2em;
+        PADDING-BOTTOM: 0.3em;
+        PADDING-TOP: 0.3em;
+        TEXT-ALIGN: left
+    }
+    .alignleftLgPad
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 10em;
+        PADDING-BOTTOM: 0.3em;
+        PADDING-TOP: 0.3em;
+        TEXT-ALIGN: left
+    }
+    .alignleftVerySmPad
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 1em;
+        PADDING-BOTTOM: 0.1em;
+        PADDING-TOP: 0.1em;
+        TEXT-ALIGN: left
+    }
+    .alignleftPadded
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 1.5em;
+        PADDING-BOTTOM: 0em;
+        PADDING-TOP: 0em;
+        TEXT-ALIGN: left
+    }
+    .blackText
+    {
+        COLOR: black;
+    }
+    .cfopamt
+    {
+        TEXT-ALIGN: right;
+        PADDING-RIGHT: 2em;
+    }
+    .cfopamthiglighted
+    {
+        TEXT-ALIGN: right;
+        PADDING-RIGHT: 2em;
+    }
+    
+    .plus:before {
+        content: " + ";
+        float: left; 
+        font-size: 110%;
+        margin: 20px .5em 0 0;
+        font-weight: bold;
+    }
+    
+    .minus:before {
+        content: " - ";
+        float: left; 
+        margin: 20px .5em 0 0;
+        font-size: 150%;  
+            /*Note: - seems to be 40% smaller than a +, adding that difference here keeps the following text from moving around*/
+        font-weight: bold;
+    }
+    
+    TABLE.reports
+    {
+        WIDTH: 98%;
+        border: 1px solid black;
+        border-collapse:collapse;
+        
+    }
+    TABLE.reports tr td
+    {
+        border: 1px solid black;
+        background-color: #ffffff;
+    }
+    TABLE.reports th
+    {
+        background-color: #b9ccdd;
+        font-weight: bold;
+        border: 1px solid black;
+        text-align:center;
+    }
+    TABLE.reports ul
+    {
+        padding:1em;
+        margin:0px;
+        list-style-position:inside;
+    }
+    
+    TABLE.fullPage
+    {
+        WIDTH: 100%
+    }
+    
+    TABLE LABEL.hidden {
+        DISPLAY: none;
+    }
+    TABLE LABEL.visible {
+        DISPLAY: inline;
+    }
+    TR.fedAgSeparation td {
+        padding-top: 10px;
+    }
+    LI.fedAgSeparation {
+        padding-top: 10px;
+    }
+    .overviewCol1{
+        WIDTH: 46%;
+        padding-bottom:0;
+    }
+    .overviewCol2{
+        WIDTH: 26%;
+        padding-bottom:0;
+    }
+    .overviewCol3{
+        WIDTH: 10%;
+        padding-bottom:0;
+    }
+    .overviewCol4{
+        WIDTH: 18%;
+        padding-bottom:0;
+    }
+    .overviewCol5{
+        WIDTH: 30%;
+        padding-bottom:0;
+    }
+    .expendCol1{
+        WIDTH: 5%;
+    }
+    .expendCol2{
+        WIDTH: 10%;
+    }
+    .expendCol3{
+        WIDTH: 10%;
+    }
+    .expendCol4{
+        WIDTH: 15%;
+    }
+    .expendCol5{
+        WIDTH: 15%;
+    }
+    
+    .drillCol1{
+        WIDTH: 25%;
+    }
+    .drillColCosts{
+        WIDTH: 15%;
+        TEXT-ALIGN: RIGHT;
+        PADDING-RIGHT: 3em;
+    }
+    .drillColSalaries{
+        WIDTH: 30%;
+        TEXT-ALIGN: RIGHT;
+        PADDING-RIGHT: 3em;
+    }
+    
+    H4.alignleftSmPad
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 2em;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: small;
+        PADDING-BOTTOM: 0.3em;
+        COLOR: black;
+        PADDING-TOP: 0.3em;
+        POSITION: relative;
+        TEXT-ALIGN: left;
+        TEXT-DECORATION: none
+    }
+    H3.alignleftNoVertPad
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: small;
+        PADDING-BOTTOM: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        POSITION: relative;
+        TEXT-ALIGN: left;
+        TEXT-DECORATION: none
+    }
+    
+    H4.alignleftNoVertPad
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: small;
+        PADDING-BOTTOM: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        POSITION: relative;
+        TEXT-ALIGN: left;
+        TEXT-DECORATION: none
+    }
+    h5.alignleftNoVertPad
+    {
+        PADDING-RIGHT: 0px;
+        DISPLAY: inline;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: small;
+        PADDING-BOTTOM: 0px;
+        COLOR: black;
+        PADDING-TOP: 0px;
+        POSITION: relative;
+        TEXT-ALIGN: left;
+        TEXT-DECORATION: none
+    }
+    .clearboth
+    {
+        CLEAR: both;
+    }
+    .clearBoth
+    {
+        CLEAR: both;
+    }
+    .csccbody
+    {
+        BORDER-RIGHT: #25354a thin solid;
+        BORDER-TOP: #25354a 0px solid;
+        FONT: 13px/1.231 arial, helvetica, clean, sans-serif;
+        BORDER-LEFT: #25354a thin solid;
+        BORDER-BOTTOM: #25354a thin solid
+    }
+    
+    UL.rptTabs
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        WIDTH: 100%;
+        PADDING-TOP: 0.4em;
+        LIST-STYLE-TYPE: none;
+        BACKGROUND-COLOR: #25354a;
+    }
+    UL.rptTabs LI
+    {
+        BORDER-RIGHT: white 1px solid;
+        BORDER-TOP: white 1px solid;
+        DISPLAY: block;
+        BACKGROUND: #25354a;
+        FLOAT: left;
+        FONT: bold 13px/1.231 arial, helvetica, clean, sans-serif;
+        MARGIN-LEFT: 4px;
+        BORDER-LEFT: white 1px solid;
+        COLOR: white
+    }
+    UL.rptTabs LI A
+    {
+        BORDER-RIGHT: thin;
+        PADDING-RIGHT: 10px;
+        BORDER-TOP: thin;
+        DISPLAY: block;
+        PADDING-LEFT: 10px;
+        PADDING-BOTTOM: 0px;
+        BORDER-LEFT: thin;
+        COLOR: #ffffff;
+        PADDING-TOP: 0px;
+        BORDER-BOTTOM: thin;
+        TEXT-DECORATION: none
+    }
+    UL.rptTabs LI A:hover
+    {
+        COLOR: #ffffff;
+        TEXT-DECORATION: none
+    }
+    UL.rptTabs LI A:visited
+    {
+        COLOR: #ffffff;
+        TEXT-DECORATION: none
+    }
+    UL.rptTabs LI.active
+    {
+        BACKGROUND: #ffffff;
+        MARGIN-LEFT: 0.4em
+    }
+    UL.rptTabs LI.active A
+    {
+        PADDING-RIGHT: 10px;
+        DISPLAY: block;
+        PADDING-LEFT: 10px;
+        PADDING-BOTTOM: 0px;
+        COLOR: #25354a;
+        PADDING-TOP: 0px
+    }
+    UL.rptTabs LI.active A:visited
+    {
+        COLOR: #25354a;
+    }
+    UL.rptTabs LI.active A:hover
+    {
+        COLOR: #25354a;
+    }
+    UL.actionlist
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        WIDTH: 100%;
+        COLOR: black;
+        PADDING-TOP: 0px
+    }
+    UL.actionlist LI
+    {
+        FONT-WEIGHT: normal;
+        MARGIN: 0px 1em;
+        LIST-STYLE-TYPE: none
+    }
+    UL.actionlist LI.subheading
+    {
+        FONT-WEIGHT: normal;
+        MARGIN: 0px 1em 0px 2.4em;
+        COLOR: black;
+        LIST-STYLE-TYPE: none
+    }
+    UL.actionlist LI.subheadingreadonly
+    {
+        FONT-WEIGHT: normal;
+        MARGIN: 0px 1em 0px 2.4em;
+        COLOR: black;
+        LIST-STYLE-TYPE: none
+    }
+    
+    H4.heading
+    {
+        FONT-WEIGHT: bold;
+        FONT-SIZE: medium;
+        MARGIN: 0px 1em 0.5em;
+        COLOR: black;
+        TEXT-ALIGN: left
+    }
+    H4.leftboldheading
+    {
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 1.1em;
+        COLOR: black;
+        TEXT-ALIGN: left
+    }
+    H5.subheading
+    {
+        FONT-WEIGHT: normal;
+        FONT-SIZE: small;
+        MARGIN: 0px 1em 0.5em 0em;
+        COLOR: black;
+        TEXT-ALIGN: left
+    }
+    H5.subheadingreadonly
+    {
+        FONT-WEIGHT: normal;
+        FONT-SIZE: small;
+        MARGIN: 0px 1em 0.5em 0em;
+        COLOR: black;
+        TEXT-ALIGN: left
+    }
+    DIV.subnavbar
+    {
+        PADDING-RIGHT: 0.2em;
+        PADDING-LEFT: 0.1em;
+        FONT-WEIGHT: normal;
+        PADDING-BOTTOM: 0.1em;
+        MARGIN: 0px 0em 0px 0px;
+        WIDTH: 99.8%;
+        COLOR: black;
+        PADDING-TOP: 0em;
+        BACKGROUND-COLOR: #b9ccdd;
+        TEXT-ALIGN: right
+    }
+    .buttonIndent
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0.5em 0.5em 0.5em 3em;
+        PADDING-TOP: 0px
+    }
+    .largerverticalspace
+    {
+        PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 2em 0em 0em;
+        PADDING-TOP: 0px
+    }
+    #navcontainer
+    {
+        PADDING-RIGHT: 0.2em;
+        PADDING-LEFT: 0em;
+        PADDING-BOTTOM: 0.1em;
+        MARGIN: -1.5em 0em 0em;
+        PADDING-TOP: 0.1em
+    }
+    #navcontainer UL
+    {
+        PADDING-RIGHT: 0px;
+        BORDER-TOP: medium none;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 90%;
+        LEFT: 0px;
+        FLOAT: left;
+        PADDING-BOTTOM: 0.3em;
+        MARGIN: 0em 0.8em 0em 0.3em;
+        WIDTH: 100%;
+        PADDING-TOP: 0.5em;
+        LIST-STYLE-TYPE: none;
+        POSITION: relative;
+        BACKGROUND-COLOR: #25354a;
+    }
+    /*#navcontainer UL LI
+    {
+        DISPLAY: inline
+    }*/
+    #navcontainer UL LI A
+    {
+        BORDER-RIGHT: #ffffff thin solid;
+        PADDING-RIGHT: 1em;
+        BORDER-TOP: #ffffff thin solid;
+        PADDING-LEFT: 1em;
+        PADDING-BOTTOM: 0.2em;
+        BORDER-LEFT: #ffffff thin solid;
+        COLOR: #fff;
+        PADDING-TOP: 0.2em;
+        BACKGROUND-COLOR: #25354a;
+        BORDER-BOTTOM-STYLE: none
+    }
+    #navcontainer UL LI A:hover
+    {
+    }
+    #navcontainer A.active
+    {
+        PADDING-RIGHT: 1em;
+        PADDING-LEFT: 1em;
+        PADDING-BOTTOM: 0.3em;
+        MARGIN: 0px;
+        COLOR: #25354a;
+        PADDING-TOP: 0.2em;
+        BACKGROUND-COLOR: #ffffff;
+        TEXT-DECORATION: none
+    }
+    .rejectbutton
+    {
+            CURSOR: pointer;
+        BORDER-TOP-WIDTH: medium;
+        PADDING-RIGHT: 0.5em;
+        PADDING-LEFT: 0.5em;
+        FONT-WEIGHT: bold;
+        BORDER-LEFT-WIDTH: medium;
+        FONT-SIZE: 80%;
+        BORDER-LEFT-COLOR: #cc3300;
+        BORDER-BOTTOM-WIDTH: medium;
+        BORDER-BOTTOM-COLOR: #cc3300;
+        MARGIN: auto;
+        OVERFLOW: visible;
+        COLOR: #000000;
+        BORDER-TOP-COLOR: #cc3300;
+        HEIGHT: 45px;
+        BORDER-RIGHT-WIDTH: medium;
+        BORDER-RIGHT-COLOR: #cc3300
+    }
+    .rejectbutton:hover
+    {
+            CURSOR: pointer;
+        BORDER-TOP-WIDTH: medium;
+        PADDING-RIGHT: 0.5em;
+        PADDING-LEFT: 0.5em;
+        FONT-WEIGHT: bold;
+        BORDER-LEFT-WIDTH: medium;
+        FONT-SIZE: 80%;
+        BORDER-LEFT-COLOR: #cc3300;
+        BORDER-BOTTOM-WIDTH: medium;
+        BORDER-BOTTOM-COLOR: #cc3300;
+        MARGIN: auto;
+        OVERFLOW: visible;
+        COLOR: #990033;
+        BORDER-TOP-COLOR: #cc3300;
+        HEIGHT: 45px;
+        BORDER-RIGHT-WIDTH: medium;
+        BORDER-RIGHT-COLOR: #cc3300
+    }
+    .acceptbutton
+    {
+            CURSOR: pointer;
+        BORDER-TOP-WIDTH: medium;
+        PADDING-RIGHT: 0.5em;
+        PADDING-LEFT: 0.5em;
+        FONT-WEIGHT: bold;
+        BORDER-LEFT-WIDTH: medium;
+        FONT-SIZE: 80%;
+        BORDER-LEFT-COLOR: #66cc99;
+        BORDER-BOTTOM-WIDTH: medium;
+        BORDER-BOTTOM-COLOR: #66cc99;
+        MARGIN: auto;
+        OVERFLOW: visible;
+        COLOR: #000000;
+        BORDER-TOP-COLOR: #66cc99;
+        HEIGHT: 45px;
+        BORDER-RIGHT-WIDTH: medium;
+        BORDER-RIGHT-COLOR: #66cc99
+    }
+    .acceptbutton:hover
+    {
+            CURSOR: pointer;
+        BORDER-TOP-WIDTH: medium;
+        PADDING-RIGHT: 0.5em;
+        PADDING-LEFT: 0.5em;
+        FONT-WEIGHT: bold;
+        BORDER-LEFT-WIDTH: medium;
+        FONT-SIZE: 80%;
+        BORDER-LEFT-COLOR: #66cc99;
+        BORDER-BOTTOM-WIDTH: medium;
+        BORDER-BOTTOM-COLOR: #66cc99;
+        MARGIN: auto;
+        OVERFLOW: visible;
+        COLOR: #339966;
+        BORDER-TOP-COLOR: #66cc99;
+        HEIGHT: 45px;
+        BORDER-RIGHT-WIDTH: medium;
+        BORDER-RIGHT-COLOR: #66cc99
+    }
+    .reconfirmLine
+    {
+        BACKGROUND-COLOR: #f0f8ff
+    }
+    .versionLabel
+    {
+        padding-top: .5em;
+        padding-left: .5em;
+        font-weight: bold
+    }
+    
+    TABLE.schedule
+    {
+        WIDTH: 98%;
+        border: 1px solid black;
+        border-collapse:collapse;
+        /*padding:4px;*/	
+    }
+    TABLE.schedule tr td
+    {
+        border: 1px solid black;
+        background-color: #ffffff;
+        /*padding:1px;*/
+    }
+    TABLE.schedule th
+    {
+        background-color: #b9ccdd;
+        font-weight: bold;
+        border: 1px solid black;
+        text-align:center;
+    }
+    TABLE.schedule td.date
+    {
+        border: 1px solid black;
+        background-color: #ffffff;
+        text-align:center;
+        padding:3px;
+        vertical-align:middle;
+    }
+    TABLE.schedule th.cell
+    {
+        background-color: #ffffff;
+        font-weight: normal;
+        padding:3px;
+        vertical-align:middle;
+    }
+    TABLE.schedule td.cell
+    {
+        padding:3px;
+        vertical-align:middle;
+    }
+    .csccbody2
+    {
+    /*    border-right: #25354a thin solid;
+        border-top: #25354a thin solid;
+        border-left: #25354a thin solid;
+        border-bottom: #25354a54a thin solid;*/
+        font-size: 0.85em;
+    }
+    /*Contributions related CSS */
+    .invalid {
+        background-color: #ffdddd;
+        border:2px solid maroon;
+    }
+    
+    .alignright {
+        text-align: right;
+        float:right;
+    }
+    .alignrightSmMargin {
+        text-align: right;
+        float:right;
+        margin: .5em;
+    }
+    .warnmsg {
+        color: maroon;
+        font-weight: bold;
+    }
+    .warnmsgNoPrint {
+        color: maroon;
+        font-weight: bold;
+    }
+    table.results {
+        border-spacing: 1em;
+        padding: 0.5em 1em 1em 1em; 
+        font-size:1em;
+        width:40%;
+        border-collapse: collapse;
+        border:0.1em solid #b7b7b7;
+    }
+    .results th, .results td{
+        border:0.1em solid #b7b7b7;
+    }
+    table.contrib {
+        border-spacing: 0;
+        width: 90%;
+        font-size:0.9em;
+        border-collapse: collapse;
+        border:0.1em solid #b7b7b7;
+    }
+    
+    .contrib input {
+        font-size:1.1em;
+    }
+    
+    .contrib th, .contrib td{
+        border:0.1em solid #b7b7b7;
+    }
+    
+    .contrib thead th{
+        padding: 2px 2px 2px 4px !important;
+        text-align:left !important;
+        background-color:#ccc !important;
+        vertical-align: middle;
+    }
+    
+    .contrib tbody tr td, .contrib tbody tr th {
+        padding: 2px 2px 2px 4px !important;
+        margins: 0em !important;
+        vertical-align: middle;
+    }
+    
+    .contrib tr:nth-child(even) {
+        text-align:left;
+        background-color:#efefef;
+    }
+    
+    .contrib tr:nth-child(odd) {
+        text-align:left;
+        background-color:#FFFFFF;
+    }
+    
+    .contrib th.narrow td.narrow {
+        padding: 0em;
+        margins: 0em;
+    }
+    .nodisplay {
+        display: none;
+    }
+    .ui-helper-hidden-accessible{
+        display: none;
+    }
+    
+    .hidden {
+        /* available for screen readers, hidden from reg users */
+      position: absolute;
+      clip: rect(1px 1px 1px 1px);
+      /* IE 6 and IE 7 */
+      clip: rect(1px, 1px, 1px, 1px);
+      /* clip to 1px width and height */
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      text-indent: -999em;
+      /* Indent any text so it is not visible */
+      word-wrap: normal;
+      /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */
+    }
+    .offscreen {
+      /* available for screen readers, hidden from reg users */
+      position: absolute;
+      clip: rect(1px 1px 1px 1px);
+      /* IE 6 and IE 7 */
+      clip: rect(1px, 1px, 1px, 1px);
+      /* clip to 1px width and height */
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      text-indent: -999em;
+      /* Indent any text so it is not visible */
+      word-wrap: normal;
+      /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */ }
+    
+    .error {
+          color: #7a2323; }
+    
+    .errorDiv {
+        padding: 0em;
+        margins: 0em;
+    }
+          
+    .seperatorLine {
+        text-align:left;
+        width:97.5%;
+        background-color: #C2D2E1;
+    }
+    #reviewerList  {
+        width: 100%;
+        border:none;
+        height:2em; 
+    }
+    
+    #reviewerList tr td {
+        height:2em; 
+    }
+    
+    #SearchAgain {
+        font-size:85%;
+    }
+     
+    main {
+        font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+    }
+    

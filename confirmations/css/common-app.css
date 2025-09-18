@@ -1,0 +1,767 @@
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/* ==========================================================================
+   ## Variables
+  ========================================================================== */
+/*Changed 03.12.21*/
+/*
+//Inky version
+  $nav-color: $inky;
+  $module-hover: $inky-dark;
+  $module-text: $inky-dark;
+  $app-name-color: $inky;
+*/
+/**/
+/* ==========================================================================
+   ## GLOBAL
+  ========================================================================== */
+  body {
+    margin: 0;
+  }
+  
+  main {
+    padding: 1em;
+  }
+  
+  /* ==========================================================================
+     ## LINKS
+    ========================================================================== */
+  a, a:hover, a:visited {
+    text-decoration: none;
+    border-bottom: dotted 1px;
+  }
+  
+  a {
+    color: #0B558E;
+    border-color: #0B558E;
+  }
+  
+  a:visited {
+    color: #5A2784;
+    border-color: #5A2784;
+  }
+  
+  a:hover {
+    color: #4A5A01;
+    border-color: #4A5A01;
+    border-bottom: solid 1px;
+  }
+  
+  /* ==========================================================================
+     ## Impersonate Bar
+     ========================================================================== */
+  .impersonate {
+    background-color: #25354a;
+    text-align: center;
+    padding: 0.5rem 0 0.75rem 0;
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  }
+  .impersonate a {
+    color: #fefefe;
+    border-color: #fefefe;
+  }
+  .impersonate a:focus {
+    outline: white dotted 3px;
+    outline-offset: 2px;
+    border-style: transparent;
+  }
+  
+  /* ==========================================================================
+     ## HEADER
+     ========================================================================== */
+  header {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    flex-flow: row wrap;
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  #skip a, #skip-main a, #skip-nav a {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 1px solid white;
+    color: white;
+    left: 40%;
+    padding: 8px;
+    position: absolute;
+    top: -48px;
+    transition: top 1s ease-out 0s, background 1s linear 0s;
+    z-index: 100;
+    font-size: 0.9rem;
+  }
+  
+  #skip a:hover, #skip-main a:hover, #skip-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  #skip a:focus, #skip-main a:focus, #skip-nav a:focus {
+    background: #000 none repeat scroll 0 0;
+    outline: 0 none;
+    top: 0;
+    transition: top 0.1s ease-in 0s, background 0.5s linear 0s;
+    color: #fff;
+  }
+  
+  .site-identity {
+    padding-left: 1em;
+    width: 100%;
+  }
+  @media (min-width: 750px) {
+    .site-identity {
+      width: 60%;
+    }
+  }
+  
+  .wordmark {
+    width: 235px;
+    height: auto;
+    margin-top: 0.25rem;
+  }
+  
+  a.wordmark {
+    opacity: 0.8;
+  }
+  
+  a:hover .wordmark,
+  a:focus .wordmark {
+    opacity: 1;
+  }
+  
+  .app-name {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+  }
+  .app-name a:link {
+    color: #3F4958;
+  }
+  .app-name a:hover, .app-name a:focus {
+    color: #0B558E;
+    border-bottom: 2px solid #0B558E;
+  }
+  .app-name a:visited {
+    color: #3F4958;
+  }
+  
+  .account {
+    width: 100%;
+    text-align: right;
+  }
+  @media (min-width: 750px) {
+    .account {
+      width: 37%;
+    }
+  }
+  
+  .logout {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 1em;
+    padding: 0.75rem 1.4rem;
+    -webkit-appearance: none;
+    border: none;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    background-color: #0D78BE;
+    color: #fefefe;
+  }
+  @media (max-width: 500px) {
+    .logout {
+      margin-top: 0.75rem;
+    }
+  }
+  
+  .logout:focus, .logout:hover {
+    background-color: #0B558E;
+    color: #fefefe;
+    border: none;
+    cursor: pointer;
+  }
+  
+  a.logout:visited {
+    color: #fefefe;
+    border: none;
+    margin: 0 0 0 1em;
+  }
+  
+  .no-nav {
+    background-color: #3F4958;
+    height: 10px;
+  }
+  
+  /* ==========================================================================
+     ## FOOTER
+     ========================================================================== */
+  footer {
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  }
+  footer .helpbar {
+    background-color: #E9F1F8;
+    padding: 0.5em 0 0.5em 0;
+  }
+  footer .policies, footer .helpbar {
+    padding-left: 1em;
+  }
+  footer .help-guide {
+    float: left;
+    margin-right: 5rem;
+  }
+  @media (max-width: 650px) {
+    footer .help-guide {
+      width: 100%;
+    }
+  }
+  
+  /* ==========================================================================
+    ## HELPER CLASSES
+    ========================================================================== */
+  a:focus, button:focus, .logout:focus {
+    outline: #0a0a0a dotted 3px;
+    outline-offset: 2px;
+    border-style: transparent;
+  }
+  
+  a.plainlink:link,
+  a.plainlink:hover,
+  a.plainlink:focus {
+    text-decoration: none;
+    border-bottom-color: transparent;
+  }
+  
+  .desktop-display {
+    display: none;
+  }
+  @media (min-width: 750px) {
+    .desktop-display {
+      display: block;
+    }
+  }
+  
+  .mobile-display {
+    display: none;
+  }
+  @media (max-width: 750px) {
+    .mobile-display {
+      display: block;
+    }
+  }
+  
+  .sr-only {
+    clip: rect(1px 1px 1px 1px);
+    /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  /* ==========================================================================
+     Table of Contents
+     ========================================================================== */
+  /* ==========================================================================
+     ## General Navigation
+     ========================================================================== */
+  nav {
+    display: grid;
+    background-color: #3F4958;
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+    color: #fefefe;
+    font-size: 1.15rem;
+  }
+  nav button {
+    font-size: 100%;
+  }
+  nav a, nav a:visited {
+    color: #fefefe;
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover, nav a.current, nav button.dropdown-parent:hover, nav button.dropdown.current {
+    color: #fefefe;
+    border-bottom: 2px solid #fefefe;
+  }
+  nav a:focus, nav button:focus {
+    outline-color: #fefefe;
+    outline-offset: 2px;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+  nav li {
+    display: inline-block;
+    padding: 0.5em 1em;
+  }
+  @media (min-width: 650px) {
+    nav li.current-parent {
+      box-sizing: border-box;
+      height: 60px;
+      border-bottom: 5px solid #c4d4e6;
+    }
+  }
+  @media (max-width: 650px) {
+    nav .navbar-links {
+      display: none;
+    }
+    nav .navbar-links.show {
+      display: block;
+    }
+    nav ul {
+      margin: 0 0 1rem 0;
+      list-style: none;
+      padding-left: 1.5rem;
+      width: 100%;
+      display: block;
+    }
+    nav li {
+      display: block;
+      padding: 1rem 0;
+    }
+    nav li.current-parent button {
+      border-bottom: 2px white solid;
+    }
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-parent {
+    background-color: transparent;
+    color: #fefefe;
+    border: 0;
+    padding: 0;
+    border-bottom: 2px transparent solid;
+  }
+  
+  li.dropdown button.dropdown-parent::after {
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.4em;
+    content: "";
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-color: #fefefe transparent transparent;
+    position: relative;
+    top: 0.4em;
+    display: inline-block;
+    float: right;
+    margin-left: 0.5em;
+  }
+  
+  @media (min-width: 650px) {
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #3F4958;
+      min-width: -webkit-max-content;
+      min-width: -moz-max-content;
+      min-width: max-content;
+      width: 100%;
+      margin-top: 1rem;
+      margin-left: -1rem;
+      box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      padding-bottom: 1rem;
+    }
+    .dropdown-content li {
+      display: block;
+      width: 100%;
+    }
+  }
+  @media (max-width: 650px) {
+    .dropdown-content {
+      display: none;
+      padding: 1rem 0 0 1rem;
+      margin-bottom: 0;
+    }
+    .dropdown-content li:last-child {
+      padding-bottom: 0;
+    }
+  }
+  /* ==========================================================================
+     ## Right Aligned Navigation Items
+     ========================================================================== */
+  .right-nav {
+    border-top: white 2px solid;
+    padding-top: 0.5em;
+    margin-top: 1.5em;
+    margin-right: 3em;
+  }
+  .right-nav ul {
+    padding-left: 0rem;
+  }
+  
+  @media (min-width: 651px) {
+    .right-nav {
+      float: right;
+      padding: 0;
+      margin: 0;
+      border-top: none;
+      padding-right: 1em;
+      padding-left: 1em;
+      border-left: white 2px solid;
+    }
+    .right-nav ul {
+      padding: 0;
+    }
+    .right-nav .dropdown-content {
+      min-width: 100%;
+      overflow-wrap: break-word;
+    }
+    .right-nav .dropdown-content li {
+      width: 75%;
+    }
+  }
+  /**/
+  /* ==========================================================================
+     ## Mobile Navigation toggle
+     ========================================================================== */
+  .mobile-nav-toggle {
+    margin: 1rem 0 1rem 1.5rem;
+    width: 100%;
+    display: none;
+    background: transparent;
+    text-align: left;
+    color: #fefefe;
+    border: transparent;
+    background: url(../graphics/hamburger.svg) left center no-repeat;
+    background-size: 25px 22px;
+    padding-left: 35px;
+  }
+  
+  @media (max-width: 650px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  }
+  .show {
+    display: block;
+  }
+  
+  /* ==========================================================================
+     ## 2-Level Navigation for Site Modules
+     ========================================================================== */
+  .site-modules {
+    background: #e6e6e6;
+    margin: 0;
+    padding-left: 1em;
+  }
+  
+  .module {
+    display: inline-block;
+    font-size: 1.25rem;
+  }
+  .module a, .module a.link, .module a:visited {
+    display: inline-block;
+    margin: 0;
+    padding: 0.75rem 1.75rem;
+    color: #3F4958;
+    border-bottom: 0px;
+  }
+  .module a:hover, .module a:focus {
+    border-bottom: 0px;
+    background-color: #25354a;
+    color: #fff;
+    transition: background-color 0.1s ease-out;
+  }
+  .module a:focus {
+    outline-offset: -5px;
+    outline-color: #fefefe;
+  }
+  
+  .current-module {
+    background-color: #3F4958;
+  }
+  .current-module a, .current-module a:visited {
+    color: #fefefe;
+  }
+  
+  /* ==========================================================================
+     ## External Links
+     ========================================================================== */
+  .external::before {
+    background-image: url(../graphics/external.svg);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    display: inline-block;
+    width: 1.5em;
+    height: 1em;
+    content: "";
+  }
+  
+  .external-white::before {
+    background-image: url(../graphics/external-white.svg);
+  }
+  
+  .external-blue::before {
+    background-image: url(../graphics/external-blue.svg);
+  }
+  
+  /** Print Styles**/
+  @media print {
+    .app-name {
+      font-size: 1rem;
+    }
+  
+    .wordmark {
+      width: 150px;
+    }
+  
+    .navbar, .logout, .helpbar, .impersonate {
+      display: none;
+    }
+  }
+  
+  /* ===============================================================
+    ### ATTENTION BOXES
+  ================================================================== */
+  .attn-box {
+    display: flex;
+    border: 1px solid #C1C6CD;
+    margin-bottom:10px;
+  }
+  .attn-box .attn-img {
+    width: 20%;
+    max-width: 75px;
+    content: " ";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #C1C6CD;
+    padding: 0.5rem;
+  }
+  @media (min-width: 700px) {
+    .attn-box .attn-img {
+      width: 15%;
+    }
+  }
+  .attn-box .attn-mssg {
+    width: 80%;
+    padding: 0 1rem;
+  }
+  .attn-box .attn-mssg p {
+    line-height: 150%;
+    margin: 1rem 0;
+  }
+  
+  .attn-page-warning {
+    border-color: #E2A800;
+    /* border-color: #B25C00; */
+  }
+  .attn-page-warning .attn-img {
+    background-color: #E2A800;
+    /* background-color: #B25C00; */
+    background-image: url("../graphics/errorSuccessWarningIcons/Icon_Warning-White.svg");
+  }
+  
+  .attn-page-success {
+    border-color: #45781C;
+  }
+  .attn-page-success .attn-img {
+    background-color: #45781C;
+    background-image: url("../graphics/errorSuccessWarningIcons/Icon_Success-White.svg");
+  }
+  
+  .attn-page-error {
+    border-color: #AB0505;
+  }
+  .attn-page-error .attn-img {
+    background-color: #AB0505;
+    background-image: url("../graphics/errorSuccessWarningIcons/Icon_Error-White.svg");
+  }
+  
+  /*ERROR MESSAGES / SUMMARY */
+  .error, .success, .warning {
+    padding: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .warning {
+    border: #E2A800 1px solid;
+  }
+  .success {
+    border: #45781C 1px solid;
+  }
+  .error {
+    border: #AB0505 1px solid;
+  }
+  
+  .error .error-mssg, .success .success-mssg, .warning .warning-mssg {
+    color: #fefefe;
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    line-height: normal;
+  }
+  .warning .warning-mssg {
+    background: url("../graphics/errorSuccessWarningIcons/Icon_Warning-Black.svg") left center no-repeat;
+    background-size: 23px 23px;
+    background-position: 0.5rem center;
+    background-color: #E2A800;
+    color:#000;
+  }
+  .success .success-mssg{
+    background: url("../graphics/errorSuccessWarningIcons/Icon_Success-White.svg") left center no-repeat;
+    background-size: 23px 23px;
+    background-position: 0.5rem center;
+    background-color: #45781C;
+  }
+  .error .error-mssg {
+    background: url("../graphics/errorSuccessWarningIcons/Icon_Error-White.svg") left center no-repeat;
+    background-size: 23px 23px;
+    background-position: 0.5rem center;
+    background-color: #AB0505;
+  }
+  
+  .error-mssg + .warning-mssg {
+    margin-top:-.5rem;
+  }
+  
+  .success-mssg + .warning-mssg {
+    margin-top:-.5rem;
+  }
+  
+  .error label, .error legend, .error div, .error a, .error [type=text], .error [type=date], .error [type=time], .error [type=email], .error [type=password], .error [type=tel], .error [type=file], .error select, .error textarea,
+  .success label, .success legend, .success div,  .success a, .success [type=text], .success [type=date], .success [type=time], .success [type=email], .success [type=password], .success [type=tel], .success [type=file], .success select, .success textarea,
+  .warning label, .warning legend, .warning div, .warning a, .warning [type=text], .warning [type=date], .warning [type=time], .warning [type=email], .warning [type=password], .warning [type=tel], .warning [type=file], .warning select, .warning textarea {
+    margin: 0 1rem;
+    max-width: 1145px;
+    max-width: 95%;
+  }
+  
+  .error fieldset, .warning fieldset, .success fieldset {
+    margin: 0 1rem;
+    padding-bottom: 0;
+  }
+  .error fieldset label, .error fieldset a, .error fieldset [type=text], .error fieldset [type=date],.error fieldset [type=time], .error fieldset [type=email], .error fieldset [type=password], .error fieldset [type=tel], .error fieldset [type=search], .error fieldset [type=file], .error fieldset select, .error fieldset textarea, .warning fieldset label, .warning fieldset a, .warning fieldset [type=text], .warning fieldset [type=date], .warning fieldset [type=time], .warning fieldset [type=email], .warning fieldset [type=password], .warning fieldset [type=tel], .warning fieldset [type=search], .warning fieldset [type=file], .warning fieldset select, .warning fieldset textarea, .success fieldset label, .success fieldset a, .success fieldset [type=text], .success fieldset [type=date], .success fieldset [type=time], .success fieldset [type=email], .success fieldset [type=password], .success fieldset [type=tel], .success fieldset [type=search], .success fieldset [type=file], .success fieldset select, .success fieldset textarea {
+    margin: 0;
+  }
+  .error label, .error a, .error p, .warning label, .warning a, .warning p, .success label, .success a, .success p {
+    display: block;
+  }
+  .error .radcheck label a, .warning .radcheck label a, .success .radcheck label a {
+    display: inline;
+  }
+  .error .tiny-input, .error .sm-input, .error .med-input, .error .lg-input, .error .fw-input, .warning .tiny-input, .warning .sm-input, .warning .med-input, .warning .lg-input, .warning .fw-input, .success .tiny-input, .success .sm-input, .success .med-input, .success .lg-input, .success .fw-input {
+    max-width: 90%;
+  }
+  .error .radcheck div:last-of-type, .warning .radcheck div:last-of-type, .success .radcheck div:last-of-type {
+    margin-bottom: 0;
+  }
+  .error .radcheck div:last-of-type [type=checkbox] + label, .error .radcheck div:last-of-type [type=radio] + label, .warning .radcheck div:last-of-type [type=checkbox] + label, .warning .radcheck div:last-of-type [type=radio] + label, .success .radcheck div:last-of-type [type=checkbox] + label, .success .radcheck div:last-of-type [type=radio] + label {
+    margin-bottom: 0;
+  }
+  
+  .error fieldset, .success fieldset, .warning fieldset {
+    margin: 0 1rem;
+    max-width: 1145px;
+    max-width: 90%;
+  }
+  .error label, .error a, .error p, .error legend,
+  .success label, .success a, .success p, .success legend,
+  .warning label, .warning a, .warning p, .warning legend {
+    display: block;
+  }
+  .error .tiny-input, .error .sm-input, .error .med-input, .error .lg-input, .error .fw-input,
+  .success .tiny-input, .success .sm-input, .success .med-input, .success .lg-input, .success .fw-input,
+  .warning .tiny-input, .warning .sm-input, .warning .med-input, .warning .lg-input, .warning .fw-input {
+    max-width: 90%;
+  }
+  .error .radcheck div:last-of-type,
+  .success .radcheck div:last-of-type,
+  .warning .radcheck div:last-of-type {
+    margin-bottom: 0;
+  }
+  .error .radcheck div:last-of-type [type=checkbox] + label, .error .radcheck div:last-of-type [type=radio] + label,
+  .success .radcheck div:last-of-type [type=checkbox] + label, .success .radcheck div:last-of-type [type=radio] + label,
+  .warning .radcheck div:last-of-type [type=checkbox] + label, .warning .radcheck div:last-of-type [type=radio] + label {
+    margin-bottom: 0;
+  }
+  
+  .error .input-group {
+    padding-left: 5px;
+    border-left: none;
+    margin-left: 0rem;
+  }
+  
+  .error-summary, .success-summary, .warning-summary {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    
+  }
+  .error-summary h1, .error-summary h2, .error-summary h3, .error-summary h4, .error-summary h5, .error-summary h6,
+  .success-summary h1, .success-summary h2, .success-summary h3, .success-summary h4, .success-summary h5, .success-summary h6,
+  .warning-summary h1, .warning-summary h2, .warning-summary h3, .warning-summary h4, .warning-summary h5, .warning-summary h6 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+  .error-summary ul, .success-summary, ul.warning-summary ul {
+    margin-top: 0.5rem;
+  }
+  .error-summary ul li, .success-summary ul li, .warning-summary ul li  {
+    margin: 0.5rem 0;
+  }
+  
+  .warning-summary {
+    border: 1px solid #E2A800;
+    background-color: #FFF;
+  }
+  .success-summary {
+    border: 1px solid #45781C;
+  }
+  .error-summary {
+    border: 1px solid #AB0505;
+  }
+  
+  .warning-summary h1, .warning-summary h2, .warning-summary h3, .warning-summary h4, .warning-summary h5, .warning-summary h6 {
+    color: #000;
+    background: url("../graphics/errorSuccessWarningIcons/Icon_Warning-Yellow.svg") left center no-repeat;
+    background-size: 23px 23px;
+    padding-left: 30px;
+  }
+  .success-summary h1, .success-summary h2, .success-summary h3, .success-summary h4, .success-summary h5, .success-summary h6 {
+    color: #45781C;
+    background: url("../graphics/errorSuccessWarningIcons/Icon_Success-Green.svg") left center no-repeat;
+    background-size: 23px 23px;
+    padding-left: 30px;
+  }
+  .error-summary h1, .error-summary h2, .error-summary h3, .error-summary h4, .error-summary h5, .error-summary h6 {
+    color: #AB0505;
+    background: url("../graphics/errorSuccessWarningIcons/Icon_Error-Red.svg") left center no-repeat;
+    background-size: 23px 23px;
+    padding-left: 30px;
+  }
+  
+  @media (max-width: 1310px){
+    .errorSuccessWarningMsg, .error, .warning, .success{
+      width:95%;
+    }
+    .error-summary, .warning-summary, .success-summary{
+      padding-right: 0;
+      width:93%;
+    }
+  }
+  
+  @media (max-width: 700px){
+    .errorSuccessWarningMsg, .error, .warning, .success{
+      width:95%;
+    }
+    .error-summary, .warning-summary, .success-summary{
+      padding-right: 0;
+      width:92%;
+    }
+  }
+  
