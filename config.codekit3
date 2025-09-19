@@ -7282,14 +7282,6 @@
       "oAP" : "\/confirmations\/browserconfig.xml",
       "oF" : 0
     },
-    "\/confirmations\/confirmations-test.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/confirmations\/confirmations-test.html",
-      "oF" : 0
-    },
     "\/confirmations\/css\/_devhelp.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -7542,22 +7534,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/confirmations\/grant-info-costshare-update.html",
-      "oF" : 0
-    },
-    "\/confirmations\/grant-info-costshare.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/confirmations\/grant-info-costshare.html",
-      "oF" : 0
-    },
-    "\/confirmations\/grant-info-current.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/confirmations\/grant-info-current.html",
       "oF" : 0
     },
     "\/confirmations\/grant-info-update.html" : {

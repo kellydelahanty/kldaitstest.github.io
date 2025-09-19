@@ -1,1354 +1,1597 @@
-
 .container div {
-    width:99%;
-    }
-    
-    /* should be .container .content */
-     .container .content {
-        display: none;
-        padding : 5px;
-    }
-    
-    /* should be .container .header */
-     .container .header {
-        padding: 2px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-    .headingTitle1
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: bolder;
-        FONT-SIZE: 1.25em;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 1em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    .heading1
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 1em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    .reportHeading1
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    H1.csReportHeading1 {
-        color: #003366;
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    H1.reportHeading1
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    H2.noMargin
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        PADDING-TOP: 0px
-    }
-    p.noMargin
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        PADDING-TOP: 0px
-    }
-    .heading2
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 1em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: left
-    }
-    .heading3
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0.5em 1em 0.15em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: left
-    }
-    .reportheading3
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0.5em 1em 0.15em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: left;
-        color: black;
-    }
-    .fineprint{
-        font-size: .75em;
-    }	
-    fieldset.noBorder {
-        border:0em;
-        padding:0 0 0 0;
-        margin: 0 0 0 0;
-        }
-    .section
-    {
-        FLOAT: left;
-        MARGIN: 0.25em 1em 1em;
-        WIDTH: 90%
-    }
-    
-    .section2
-    {
-        FLOAT: left;
-        MARGIN: 0.25em 1em 1em;
-        WIDTH: 90%;
-        BACKGROUND-COLOR: #b9ccdd
-    }
-    .bottomBar {
-        background-image: url("./graphics/bottom_bar.gif");
-    }
-    .grantHeading1
-    {
-        MARGIN: .5em 1em 0em 0em;
-        WIDTH: 95%;
-        BACKGROUND-COLOR: #C2D2E1;
-        font-weight:normal;
-        font-size:100%;
-        line-spacing:1em;
-    }
-    .grantSection
-    {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        line-height: 200%;
-        padding-left:0.5em;
-        padding-right:0em;
-        MARGIN: 0.5em 0em 2em 0em;
-        WIDTH: 94.4%;
-        BACKGROUND-COLOR: #ECFFEC;
-    }
-    .grantSection2
-    {
-        padding-top: 0em;
-        padding-bottom: 0em;
-        line-height: 200%;
-        padding-left:0.5em;
-        MARGIN: 0.5em 0em 1em 0em;
-        WIDTH: 94.4%;
-        BACKGROUND-COLOR: #ECFFEC;
-    }
-    .grantSubSection 
-    {
-        text-align: left; 
-        padding: 0 5;
-    }
-    .reportformsection
-    {
-         FLOAT: left;
-        MARGIN: 0em 1em 1em 0em;
-        WIDTH: 90%;
-        BACKGROUND-COLOR: #b9ccdd
-    }
-    .reportformsectionLine
-    {
-        FLOAT: left;
-        MARGIN: 0em;
-        WIDTH: 95%;
-    }
-    .subSection1
-    {
-        MARGIN: 0em 0.5em 0.5em 1.5em
-    }
-    .tabSection
-    {
-        FLOAT: left;
-        MARGIN: 0.75em 0px 0.5em 1em;
-        WIDTH: 95%
-    }
-    .subSection2
-    {
-        MARGIN: 0px
-    }
-    .csbottomBar
-    {
-        FLOAT: left;
-        MARGIN-BOTTOM: 1em
-    }
-    .indentElement
-    {
-        MARGIN: 0.5em
-    }
-    .indentLeft
-    {
-        MARGIN-left: 0.5em
-    }
-    .indentElementSmall
-    {
-        MARGIN: 0.5em 0em 0.5em 1em;
-    }
-    .indentLeftMedium
-    {
-        MARGIN-LEFT: 2em
-    }
-    .indentLeftLarge
-    {
-        MARGIN-LEFT: 4em
-    }
-    .indentLeftXLarge
-    {
-        MARGIN-LEFT: 6em
-    }
-    .strongFont
-    {
-        font-weight: bold;
-    }
-    .textSection
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        PADDING-TOP: 0px
-    }
-    .formContainer
-    {
-        MARGIN-TOP: 0.1em;
-        BACKGROUND-COLOR: #ecf5ff
-    }
-    .formContainer2
-    {
-        MARGIN-TOP: 0.1em;
-        BACKGROUND-COLOR: #b9ccdd
-    }
-    .formContainer3
-    {
-        MARGIN-TOP: 0.1em;
-        BACKGROUND-COLOR: #C2D2E1
-    }
-    .formContainer4
-    {
-        FLOAT: left;
-        MARGIN: 0em;
-        WIDTH: 95%;
-        padding: 1em 0em 1em 0em;
-        BACKGROUND-COLOR: #C2D2E1
-    }
-    .formSubSection1
-    {
-        PADDING-BOTTOM: 0.5em;
-        MARGIN: 0.5em 1em 1em;
-        PADDING-TOP: 0.5em
-    }
-    .formSubSection2
-    {
-        FLOAT: left;
-        PADDING-BOTTOM: 0.5em;
-        MARGIN: 0.5em 0.2em 2em 2em;
-        PADDING-TOP: 0.5em;
-        TEXT-ALIGN: center
-    }
-    .formSubSection3
-    {
-        FLOAT: left;
-        PADDING-BOTTOM: 0.5em;
-        MARGIN: 0.5em 0.2em 2em 1.5em;
-        PADDING-TOP: 0.5em;
-        TEXT-ALIGN: center
-    }
-    .formElement
-    {
-        MARGIN-TOP: 0.5em;
-        MARGIN-BOTTOM: 0.5em
-    }
-    .formElementXtraSpace
-    {
-        MARGIN-TOP: .75em;
-        MARGIN-BOTTOM: 0.75em
-    }
-    .smalltxt
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FONT-SIZE: smaller;
-        PADDING-BOTTOM: 0px;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: left
-    }
-    .above
-    {
-        MARGIN-BOTTOM: -0.5em;
-        VERTICAL-ALIGN: bottom
-    }
-    .below
-    {
-        MARGIN-BOTTOM: 1em;
-        VERTICAL-ALIGN: top
-    }
-    .wrapping
-    {
-        WHITE-SPACE: nowrap
-    }
-    .smalltableft
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 4.5em;
-        PADDING-BOTTOM: 0px;
-        PADDING-TOP: 0px
-    }
-    .mediumtabright
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 11em;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px 0px 0px 1em;
-        PADDING-TOP: 0px
-    }
-    .largetabright
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 15em;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px 0px 0px 1em;
-        PADDING-TOP: 0px
-    }
-    .formelementbottom
-    {
-        MARGIN-BOTTOM: 0.1em;
-        VERTICAL-ALIGN: bottom;
-        TEXT-ALIGN: left
-    }
-    .subsectionleft
-    {
-        FLOAT: left;
-    }
-    .subsectionleftSmMargin
-    {
-        FLOAT: right;
-        margin: 0em;
-     
-    }
-    .optionsectionleft
-    {
-        FLOAT: left;
-        WIDTH: 45%;
-    }
-    .thirdsectionleft
-    {
-        FLOAT: left;
-        WIDTH: 30%;
-    }
-    .fifthsectionleft
-    {
-        FLOAT: left;
-        WIDTH: 18%;
-    }
-    .sectionleft
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        VERTICAL-ALIGN: top;
-        WIDTH: 100%;
-        PADDING-TOP: 0px;
-    }
-    H2.headingTitle1
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: bolder;
-        FONT-SIZE: 1.25em;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 1em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    H2.headingTitle2
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: normal;
-        FONT-SIZE: 1.20em;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: .4em;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: left;
-    }
-    
-    H3.headingTitle
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: bold;
-        FONT-SIZE: 1.20em;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: .4em;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: left;
-    }
-    H3.noStyles
-    {
-        PADDING: 0em;
-        FONT-WEIGHT:normal;
-        FONT-SIZE: 1em;
-        MARGIN: 0em;
-    }
-    H4.noStyles
-    {
-        PADDING: 0em;
-        FONT-WEIGHT:normal;
-        FONT-SIZE: 1em;
-        MARGIN: 0em;
-    }
-    H3.noStylesButBold
-    {
-        PADDING: 0em;
-        FONT-WEIGHT:bold;
-        FONT-SIZE: 1em;
-        MARGIN: 0em;
-        color:black;
-    }
-    
-    H4.noStylesColorButBold
-    {
-        PADDING: 0em;
-        FONT-WEIGHT:bold;
-        FONT-SIZE: 1em;
-        MARGIN: 0em;
-    }
-    TH.alignRight
-    {
-        PADDING-LEFT: 0.2em;
-        FONT-WEIGHT: bold;
-        TEXT-ALIGN: left;
-    }
-    TH.subheading
-    {
-        PADDING-RIGHT: 0em;
-        PADDING-LEFT: 0.2em;
-        FONT-WEIGHT: bold;
-        PADDING-BOTTOM: 0.2em;
-        MARGIN: 0px;
-        WIDTH: 100%;
-        COLOR: black;
-        PADDING-TOP: 0.2em;
-        BACKGROUND-COLOR: #b9ccdd;
-        TEXT-ALIGN: left
-    }
-    TH.subheadingreadonly
-    {
-        PADDING-RIGHT: 0em;
-        PADDING-LEFT: 0.2em;
-        FONT-WEIGHT: bold;
-        PADDING-BOTTOM: 0.2em;
-        MARGIN: 0px;
-        WIDTH: 100%;
-        COLOR: black;
-        PADDING-TOP: 0.2em;
-        BACKGROUND-COLOR: #cccccc;
-        TEXT-ALIGN: left
-    }
-    TH.subheading H3
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        POSITION: relative
-    }
-    TH.subheadingreadonly H3
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        POSITION: relative
-    }
-    caption.subheading
-    {
-        PADDING-RIGHT: 0em;
-        PADDING-LEFT: 0.2em;
-        FONT-WEIGHT: bold;
-        PADDING-BOTTOM: 0.2em;
-        MARGIN: 0px;
-        WIDTH: 99.8%;
-        COLOR: black;
-        PADDING-TOP: 0.2em;
-        BACKGROUND-COLOR: #b9ccdd;
-        TEXT-ALIGN: left;
-        font-size:1em;
-    }
-    caption.subheadingreadonly
-    {
-        PADDING-RIGHT: 0em;
-        PADDING-LEFT: 0.2em;
-        PADDING-TOP: 0.2em;
-        PADDING-BOTTOM: 0.2em;
-        FONT-WEIGHT: bold;
-        MARGIN: 0em;
-        WIDTH: 99.8%;
-        COLOR: black;
-        BACKGROUND-COLOR: #cccccc;
-        TEXT-ALIGN: left
-    }
-    caption.subheading H2
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        font-size:1.1em;
-        font-weight:bold;
-        POSITION: relative
-    }
-    caption.subheadingreadonly H2
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        font-size:1.1em;
-        font-weight:bold;
-        POSITION: relative
-    }
-    .textaligncenter
-    {
-        COLOR: black;
-        TEXT-ALIGN: center
-    }
-    .leftHalfBordered
-    {
-        FLOAT: left;
-        MARGIN: 0.5em 1em 1em;
-        WIDTH: 45%
-    }
-    .h2normalText
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: normal;
-        FONT-SIZE: 1.1em;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 1em 1em 0.75em;
-        VERTICAL-ALIGN: top;
-        WIDTH: 90%;
-        PADDING-TOP: 0px;
-        TEXT-ALIGN: center
-    }
-    .alignleft
-    {
-        MARGIN: 0em 0em 0em 0.5em;
-        TEXT-ALIGN: left
-    }
-    .alignleftNoVertPad
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0.5em;
-        PADDING-BOTTOM: 0em;
-        PADDING-TOP: 0em;
-        TEXT-ALIGN: left
-    }
-    .alignleftSmPad
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 2em;
-        PADDING-BOTTOM: 0.3em;
-        PADDING-TOP: 0.3em;
-        TEXT-ALIGN: left
-    }
-    .alignleftLgPad
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 10em;
-        PADDING-BOTTOM: 0.3em;
-        PADDING-TOP: 0.3em;
-        TEXT-ALIGN: left
-    }
-    .alignleftVerySmPad
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 1em;
-        PADDING-BOTTOM: 0.1em;
-        PADDING-TOP: 0.1em;
-        TEXT-ALIGN: left
-    }
-    .alignleftPadded
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 1.5em;
-        PADDING-BOTTOM: 0em;
-        PADDING-TOP: 0em;
-        TEXT-ALIGN: left
-    }
-    .blackText
-    {
-        COLOR: black;
-    }
-    .cfopamt
-    {
-        TEXT-ALIGN: right;
-        PADDING-RIGHT: 2em;
-    }
-    .cfopamthiglighted
-    {
-        TEXT-ALIGN: right;
-        PADDING-RIGHT: 2em;
-    }
-    
-    .plus:before {
-        content: " + ";
-        float: left; 
-        font-size: 110%;
-        margin: 20px .5em 0 0;
-        font-weight: bold;
-    }
-    
-    .minus:before {
-        content: " - ";
-        float: left; 
-        margin: 20px .5em 0 0;
-        font-size: 150%;  
-            /*Note: - seems to be 40% smaller than a +, adding that difference here keeps the following text from moving around*/
-        font-weight: bold;
-    }
-    
-    TABLE.reports
-    {
-        WIDTH: 98%;
-        border: 1px solid black;
-        border-collapse:collapse;
-        
-    }
-    TABLE.reports tr td
-    {
-        border: 1px solid black;
-        background-color: #ffffff;
-    }
-    TABLE.reports th
-    {
-        background-color: #b9ccdd;
-        font-weight: bold;
-        border: 1px solid black;
-        text-align:center;
-    }
-    TABLE.reports ul
-    {
-        padding:1em;
-        margin:0px;
-        list-style-position:inside;
-    }
-    
-    TABLE.fullPage
-    {
-        WIDTH: 100%
-    }
-    
-    TABLE LABEL.hidden {
-        DISPLAY: none;
-    }
-    TABLE LABEL.visible {
-        DISPLAY: inline;
-    }
-    TR.fedAgSeparation td {
-        padding-top: 10px;
-    }
-    LI.fedAgSeparation {
-        padding-top: 10px;
-    }
-    .overviewCol1{
-        WIDTH: 46%;
-        padding-bottom:0;
-    }
-    .overviewCol2{
-        WIDTH: 26%;
-        padding-bottom:0;
-    }
-    .overviewCol3{
-        WIDTH: 10%;
-        padding-bottom:0;
-    }
-    .overviewCol4{
-        WIDTH: 18%;
-        padding-bottom:0;
-    }
-    .overviewCol5{
-        WIDTH: 30%;
-        padding-bottom:0;
-    }
-    .expendCol1{
-        WIDTH: 5%;
-    }
-    .expendCol2{
-        WIDTH: 10%;
-    }
-    .expendCol3{
-        WIDTH: 10%;
-    }
-    .expendCol4{
-        WIDTH: 15%;
-    }
-    .expendCol5{
-        WIDTH: 15%;
-    }
-    
-    .drillCol1{
-        WIDTH: 25%;
-    }
-    .drillColCosts{
-        WIDTH: 15%;
-        TEXT-ALIGN: RIGHT;
-        PADDING-RIGHT: 3em;
-    }
-    .drillColSalaries{
-        WIDTH: 30%;
-        TEXT-ALIGN: RIGHT;
-        PADDING-RIGHT: 3em;
-    }
-    
-    H4.alignleftSmPad
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 2em;
-        FONT-WEIGHT: normal;
-        FONT-SIZE: small;
-        PADDING-BOTTOM: 0.3em;
-        COLOR: black;
-        PADDING-TOP: 0.3em;
-        POSITION: relative;
-        TEXT-ALIGN: left;
-        TEXT-DECORATION: none
-    }
-    H3.alignleftNoVertPad
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: normal;
-        FONT-SIZE: small;
-        PADDING-BOTTOM: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        POSITION: relative;
-        TEXT-ALIGN: left;
-        TEXT-DECORATION: none
-    }
-    
-    H4.alignleftNoVertPad
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: normal;
-        FONT-SIZE: small;
-        PADDING-BOTTOM: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        POSITION: relative;
-        TEXT-ALIGN: left;
-        TEXT-DECORATION: none
-    }
-    h5.alignleftNoVertPad
-    {
-        PADDING-RIGHT: 0px;
-        DISPLAY: inline;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: normal;
-        FONT-SIZE: small;
-        PADDING-BOTTOM: 0px;
-        COLOR: black;
-        PADDING-TOP: 0px;
-        POSITION: relative;
-        TEXT-ALIGN: left;
-        TEXT-DECORATION: none
-    }
-    .clearboth
-    {
-        CLEAR: both;
-    }
-    .clearBoth
-    {
-        CLEAR: both;
-    }
-    .csccbody
-    {
-        BORDER-RIGHT: #25354a thin solid;
-        BORDER-TOP: #25354a 0px solid;
-        FONT: 13px/1.231 arial, helvetica, clean, sans-serif;
-        BORDER-LEFT: #25354a thin solid;
-        BORDER-BOTTOM: #25354a thin solid
-    }
-    
-    UL.rptTabs
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        WIDTH: 100%;
-        PADDING-TOP: 0.4em;
-        LIST-STYLE-TYPE: none;
-        BACKGROUND-COLOR: #25354a;
-    }
-    UL.rptTabs LI
-    {
-        BORDER-RIGHT: white 1px solid;
-        BORDER-TOP: white 1px solid;
-        DISPLAY: block;
-        BACKGROUND: #25354a;
-        FLOAT: left;
-        FONT: bold 13px/1.231 arial, helvetica, clean, sans-serif;
-        MARGIN-LEFT: 4px;
-        BORDER-LEFT: white 1px solid;
-        COLOR: white
-    }
-    UL.rptTabs LI A
-    {
-        BORDER-RIGHT: thin;
-        PADDING-RIGHT: 10px;
-        BORDER-TOP: thin;
-        DISPLAY: block;
-        PADDING-LEFT: 10px;
-        PADDING-BOTTOM: 0px;
-        BORDER-LEFT: thin;
-        COLOR: #ffffff;
-        PADDING-TOP: 0px;
-        BORDER-BOTTOM: thin;
-        TEXT-DECORATION: none
-    }
-    UL.rptTabs LI A:hover
-    {
-        COLOR: #ffffff;
-        TEXT-DECORATION: none
-    }
-    UL.rptTabs LI A:visited
-    {
-        COLOR: #ffffff;
-        TEXT-DECORATION: none
-    }
-    UL.rptTabs LI.active
-    {
-        BACKGROUND: #ffffff;
-        MARGIN-LEFT: 0.4em
-    }
-    UL.rptTabs LI.active A
-    {
-        PADDING-RIGHT: 10px;
-        DISPLAY: block;
-        PADDING-LEFT: 10px;
-        PADDING-BOTTOM: 0px;
-        COLOR: #25354a;
-        PADDING-TOP: 0px
-    }
-    UL.rptTabs LI.active A:visited
-    {
-        COLOR: #25354a;
-    }
-    UL.rptTabs LI.active A:hover
-    {
-        COLOR: #25354a;
-    }
-    UL.actionlist
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0px;
-        WIDTH: 100%;
-        COLOR: black;
-        PADDING-TOP: 0px
-    }
-    UL.actionlist LI
-    {
-        FONT-WEIGHT: normal;
-        MARGIN: 0px 1em;
-        LIST-STYLE-TYPE: none
-    }
-    UL.actionlist LI.subheading
-    {
-        FONT-WEIGHT: normal;
-        MARGIN: 0px 1em 0px 2.4em;
-        COLOR: black;
-        LIST-STYLE-TYPE: none
-    }
-    UL.actionlist LI.subheadingreadonly
-    {
-        FONT-WEIGHT: normal;
-        MARGIN: 0px 1em 0px 2.4em;
-        COLOR: black;
-        LIST-STYLE-TYPE: none
-    }
-    
-    H4.heading
-    {
-        FONT-WEIGHT: bold;
-        FONT-SIZE: medium;
-        MARGIN: 0px 1em 0.5em;
-        COLOR: black;
-        TEXT-ALIGN: left
-    }
-    H4.leftboldheading
-    {
-        FONT-WEIGHT: bold;
-        FONT-SIZE: 1.1em;
-        COLOR: black;
-        TEXT-ALIGN: left
-    }
-    H5.subheading
-    {
-        FONT-WEIGHT: normal;
-        FONT-SIZE: small;
-        MARGIN: 0px 1em 0.5em 0em;
-        COLOR: black;
-        TEXT-ALIGN: left
-    }
-    H5.subheadingreadonly
-    {
-        FONT-WEIGHT: normal;
-        FONT-SIZE: small;
-        MARGIN: 0px 1em 0.5em 0em;
-        COLOR: black;
-        TEXT-ALIGN: left
-    }
-    DIV.subnavbar
-    {
-        PADDING-RIGHT: 0.2em;
-        PADDING-LEFT: 0.1em;
-        FONT-WEIGHT: normal;
-        PADDING-BOTTOM: 0.1em;
-        MARGIN: 0px 0em 0px 0px;
-        WIDTH: 99.8%;
-        COLOR: black;
-        PADDING-TOP: 0em;
-        BACKGROUND-COLOR: #b9ccdd;
-        TEXT-ALIGN: right
-    }
-    .buttonIndent
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 0.5em 0.5em 0.5em 3em;
-        PADDING-TOP: 0px
-    }
-    .largerverticalspace
-    {
-        PADDING-RIGHT: 0px;
-        PADDING-LEFT: 0px;
-        PADDING-BOTTOM: 0px;
-        MARGIN: 2em 0em 0em;
-        PADDING-TOP: 0px
-    }
-    #navcontainer
-    {
-        PADDING-RIGHT: 0.2em;
-        PADDING-LEFT: 0em;
-        PADDING-BOTTOM: 0.1em;
-        MARGIN: -1.5em 0em 0em;
-        PADDING-TOP: 0.1em
-    }
-    #navcontainer UL
-    {
-        PADDING-RIGHT: 0px;
-        BORDER-TOP: medium none;
-        PADDING-LEFT: 0px;
-        FONT-WEIGHT: bold;
-        FONT-SIZE: 90%;
-        LEFT: 0px;
-        FLOAT: left;
-        PADDING-BOTTOM: 0.3em;
-        MARGIN: 0em 0.8em 0em 0.3em;
-        WIDTH: 100%;
-        PADDING-TOP: 0.5em;
-        LIST-STYLE-TYPE: none;
-        POSITION: relative;
-        BACKGROUND-COLOR: #25354a;
-    }
-    /*#navcontainer UL LI
+  width: 99%;
+}
+
+/* should be .container .content */
+.container .content {
+  display: none;
+  padding: 5px;
+}
+
+/* should be .container .header */
+.container .header {
+  padding: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.headingTitle1 {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-weight: bolder;
+  font-size: 1.25em;
+  float: left;
+  padding-bottom: 0px;
+  margin: 1em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: center;
+}
+.heading1 {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 1em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: center;
+}
+.reportHeading1 {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: center;
+}
+H1.csReportHeading1 {
+  color: #003366;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: center;
+}
+H1.reportHeading1 {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: center;
+}
+H2.noMargin {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  padding-top: 0px;
+}
+p.noMargin {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  padding-top: 0px;
+}
+.heading2 {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 1em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: left;
+}
+.heading3 {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0.5em 1em 0.15em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: left;
+}
+.reportheading3 {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0.5em 1em 0.15em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: left;
+  color: black;
+}
+.fineprint {
+  font-size: 0.75em;
+}
+fieldset.noBorder {
+  border: 0em;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.section {
+  float: left;
+  margin: 0.25em 1em 1em;
+  width: 90%;
+}
+
+.section2 {
+  float: left;
+  margin: 0.25em 1em 1em;
+  width: 90%;
+  background-color: #b9ccdd;
+}
+.bottomBar {
+  background-image: url("./graphics/bottom_bar.gif");
+}
+.grantHeading1 {
+  margin: 0.5em 1em 0em 0em;
+  width: 95%;
+  background-color: #c2d2e1;
+  font-weight: normal;
+  font-size: 100%;
+  line-spacing: 1em;
+}
+.grantSection {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  line-height: 200%;
+  padding-left: 0.5em;
+  padding-right: 0em;
+  margin: 0.5em 0em 2em 0em;
+  width: 94.4%;
+  background-color: #ecffec;
+}
+.grantSection2 {
+  padding-top: 0em;
+  padding-bottom: 0em;
+  line-height: 200%;
+  padding-left: 0.5em;
+  margin: 0.5em 0em 1em 0em;
+  width: 94.4%;
+  background-color: #ecffec;
+}
+.grantSubSection {
+  text-align: left;
+  padding: 0 5;
+}
+.reportformsection {
+  float: left;
+  margin: 0em 1em 1em 0em;
+  width: 90%;
+  background-color: #b9ccdd;
+}
+.reportformsectionLine {
+  float: left;
+  margin: 0em;
+  width: 95%;
+}
+.subSection1 {
+  margin: 0em 0.5em 0.5em 1.5em;
+}
+.tabSection {
+  float: left;
+  margin: 0.75em 0px 0.5em 1em;
+  width: 95%;
+}
+.subSection2 {
+  margin: 0px;
+}
+.csbottomBar {
+  float: left;
+  margin-bottom: 1em;
+}
+.indentElement {
+  margin: 0.5em;
+}
+.indentLeft {
+  margin-left: 0.5em;
+}
+.indentElementSmall {
+  margin: 0.5em 0em 0.5em 1em;
+}
+.indentLeftMedium {
+  margin-left: 2em;
+}
+.indentLeftLarge {
+  margin-left: 4em;
+}
+.indentLeftXLarge {
+  margin-left: 6em;
+}
+.strongFont {
+  font-weight: bold;
+}
+.textSection {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+.formContainer {
+  margin-top: 0.1em;
+  background-color: #ecf5ff;
+}
+.formContainer2 {
+  margin-top: 0.1em;
+  background-color: #b9ccdd;
+}
+.formContainer3 {
+  margin-top: 0.1em;
+  background-color: #c2d2e1;
+}
+.formContainer4 {
+  float: left;
+  margin: 0em;
+  width: 95%;
+  padding: 1em 0em 1em 0em;
+  background-color: #c2d2e1;
+}
+.formSubSection1 {
+  padding-bottom: 0.5em;
+  margin: 0.5em 1em 1em;
+  padding-top: 0.5em;
+}
+.formSubSection2 {
+  float: left;
+  padding-bottom: 0.5em;
+  margin: 0.5em 0.2em 2em 2em;
+  padding-top: 0.5em;
+  text-align: center;
+}
+.formSubSection3 {
+  float: left;
+  padding-bottom: 0.5em;
+  margin: 0.5em 0.2em 2em 1.5em;
+  padding-top: 0.5em;
+  text-align: center;
+}
+.formElement {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.formElementXtraSpace {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.smalltxt {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-size: smaller;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  text-align: left;
+}
+.above {
+  margin-bottom: -0.5em;
+  vertical-align: bottom;
+}
+.below {
+  margin-bottom: 1em;
+  vertical-align: top;
+}
+.wrapping {
+  white-space: nowrap;
+}
+.smalltableft {
+  padding-right: 0px;
+  padding-left: 4.5em;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.mediumtabright {
+  padding-right: 0px;
+  padding-left: 11em;
+  padding-bottom: 0px;
+  margin: 0px 0px 0px 1em;
+  padding-top: 0px;
+}
+.largetabright {
+  padding-right: 0px;
+  padding-left: 15em;
+  padding-bottom: 0px;
+  margin: 0px 0px 0px 1em;
+  padding-top: 0px;
+}
+.formelementbottom {
+  margin-bottom: 0.1em;
+  vertical-align: bottom;
+  text-align: left;
+}
+.subsectionleft {
+  float: left;
+}
+.subsectionleftSmMargin {
+  float: right;
+  margin: 0em;
+}
+.optionsectionleft {
+  float: left;
+  width: 45%;
+}
+.thirdsectionleft {
+  float: left;
+  width: 30%;
+}
+.fifthsectionleft {
+  float: left;
+  width: 18%;
+}
+.sectionleft {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0px;
+  vertical-align: top;
+  width: 100%;
+  padding-top: 0px;
+}
+H2.headingTitle1 {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-weight: bolder;
+  font-size: 1.25em;
+  float: left;
+  padding-bottom: 0px;
+  margin: 1em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  color: black;
+  padding-top: 0px;
+  text-align: center;
+}
+H2.headingTitle2 {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-weight: normal;
+  font-size: 1.2em;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0.4em;
+  color: black;
+  padding-top: 0px;
+  text-align: left;
+}
+
+H3.headingTitle {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-weight: bold;
+  font-size: 1.2em;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0.4em;
+  color: black;
+  padding-top: 0px;
+  text-align: left;
+}
+H3.noStyles {
+  padding: 0em;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0em;
+}
+H4.noStyles {
+  padding: 0em;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0em;
+}
+H3.noStylesButBold {
+  padding: 0em;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0em;
+  color: black;
+}
+
+H4.noStylesColorButBold {
+  padding: 0em;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0em;
+}
+TH.alignRight {
+  padding-left: 0.2em;
+  font-weight: bold;
+  text-align: left;
+}
+TH.subheading {
+  padding-right: 0em;
+  padding-left: 0.2em;
+  font-weight: bold;
+  padding-bottom: 0.2em;
+  margin: 0px;
+  width: 100%;
+  color: black;
+  padding-top: 0.2em;
+  background-color: #b9ccdd;
+  text-align: left;
+}
+TH.subheadingreadonly {
+  padding-right: 0em;
+  padding-left: 0.2em;
+  font-weight: bold;
+  padding-bottom: 0.2em;
+  margin: 0px;
+  width: 100%;
+  color: black;
+  padding-top: 0.2em;
+  background-color: #cccccc;
+  text-align: left;
+}
+TH.subheading H3 {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  color: black;
+  padding-top: 0px;
+  position: relative;
+}
+TH.subheadingreadonly H3 {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  color: black;
+  padding-top: 0px;
+  position: relative;
+}
+caption.subheading {
+  padding-right: 0em;
+  padding-left: 0.2em;
+  font-weight: bold;
+  padding-bottom: 0.2em;
+  margin: 0px;
+  width: 99.8%;
+  color: black;
+  padding-top: 0.2em;
+  background-color: #b9ccdd;
+  text-align: left;
+  font-size: 1em;
+}
+caption.subheadingreadonly {
+  padding-right: 0em;
+  padding-left: 0.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-weight: bold;
+  margin: 0em;
+  width: 99.8%;
+  color: black;
+  background-color: #cccccc;
+  text-align: left;
+}
+caption.subheading H2 {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  color: black;
+  padding-top: 0px;
+  font-size: 1.1em;
+  font-weight: bold;
+  position: relative;
+}
+caption.subheadingreadonly H2 {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  color: black;
+  padding-top: 0px;
+  font-size: 1.1em;
+  font-weight: bold;
+  position: relative;
+}
+.textaligncenter {
+  color: black;
+  text-align: center;
+}
+.leftHalfBordered {
+  float: left;
+  margin: 0.5em 1em 1em;
+  width: 45%;
+}
+.h2normalText {
+  padding-right: 0px;
+  padding-left: 0px;
+  font-weight: normal;
+  font-size: 1.1em;
+  float: left;
+  padding-bottom: 0px;
+  margin: 1em 1em 0.75em;
+  vertical-align: top;
+  width: 90%;
+  padding-top: 0px;
+  text-align: center;
+}
+.alignleft {
+  margin: 0em 0em 0em 0.5em;
+  text-align: left;
+}
+.alignleftNoVertPad {
+  padding-right: 0px;
+  padding-left: 0.5em;
+  padding-bottom: 0em;
+  padding-top: 0em;
+  text-align: left;
+}
+.alignleftSmPad {
+  padding-right: 0px;
+  padding-left: 2em;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
+  text-align: left;
+}
+.alignleftLgPad {
+  padding-right: 0px;
+  padding-left: 10em;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
+  text-align: left;
+}
+.alignleftVerySmPad {
+  padding-right: 0px;
+  padding-left: 1em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
+  text-align: left;
+}
+.alignleftPadded {
+  padding-right: 0px;
+  padding-left: 1.5em;
+  padding-bottom: 0em;
+  padding-top: 0em;
+  text-align: left;
+}
+.blackText {
+  color: black;
+}
+.cfopamt {
+  text-align: right;
+  padding-right: 2em;
+}
+.cfopamthiglighted {
+  text-align: right;
+  padding-right: 2em;
+}
+
+.plus:before {
+  content: " + ";
+  float: left;
+  font-size: 110%;
+  margin: 20px 0.5em 0 0;
+  font-weight: bold;
+}
+
+.minus:before {
+  content: " - ";
+  float: left;
+  margin: 20px 0.5em 0 0;
+  font-size: 150%;
+  /*Note: - seems to be 40% smaller than a +, adding that difference here keeps the following text from moving around*/
+  font-weight: bold;
+}
+
+TABLE.reports {
+  width: 98%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+TABLE.reports tr td {
+  border: 1px solid black;
+  background-color: #ffffff;
+}
+TABLE.reports th {
+  background-color: #b9ccdd;
+  font-weight: bold;
+  border: 1px solid black;
+  text-align: center;
+}
+TABLE.reports ul {
+  padding: 1em;
+  margin: 0px;
+  list-style-position: inside;
+}
+
+TABLE.fullPage {
+  width: 100%;
+}
+
+TABLE LABEL.hidden {
+  display: none;
+}
+TABLE LABEL.visible {
+  display: inline;
+}
+TR.fedAgSeparation td {
+  padding-top: 10px;
+}
+LI.fedAgSeparation {
+  padding-top: 10px;
+}
+.overviewCol1 {
+  width: 46%;
+  padding-bottom: 0;
+}
+.overviewCol2 {
+  width: 26%;
+  padding-bottom: 0;
+}
+.overviewCol3 {
+  width: 10%;
+  padding-bottom: 0;
+}
+.overviewCol4 {
+  width: 18%;
+  padding-bottom: 0;
+}
+.overviewCol5 {
+  width: 30%;
+  padding-bottom: 0;
+}
+.expendCol1 {
+  width: 5%;
+}
+.expendCol2 {
+  width: 10%;
+}
+.expendCol3 {
+  width: 10%;
+}
+.expendCol4 {
+  width: 15%;
+}
+.expendCol5 {
+  width: 15%;
+}
+
+.drillCol1 {
+  width: 25%;
+}
+.drillColCosts {
+  width: 15%;
+  text-align: RIGHT;
+  padding-right: 3em;
+}
+.drillColSalaries {
+  width: 30%;
+  text-align: RIGHT;
+  padding-right: 3em;
+}
+
+H4.alignleftSmPad {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 2em;
+  font-weight: normal;
+  font-size: small;
+  padding-bottom: 0.3em;
+  color: black;
+  padding-top: 0.3em;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+H3.alignleftNoVertPad {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  font-weight: normal;
+  font-size: small;
+  padding-bottom: 0px;
+  color: black;
+  padding-top: 0px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+
+H4.alignleftNoVertPad {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  font-weight: normal;
+  font-size: small;
+  padding-bottom: 0px;
+  color: black;
+  padding-top: 0px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+h5.alignleftNoVertPad {
+  padding-right: 0px;
+  display: inline;
+  padding-left: 0px;
+  font-weight: normal;
+  font-size: small;
+  padding-bottom: 0px;
+  color: black;
+  padding-top: 0px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+.clearboth {
+  clear: both;
+}
+.clearBoth {
+  clear: both;
+}
+.csccbody {
+  border-right: #25354a thin solid;
+  border-top: #25354a 0px solid;
+  font: 13px/1.231 arial, helvetica, clean, sans-serif;
+  border-left: #25354a thin solid;
+  border-bottom: #25354a thin solid;
+}
+
+UL.rptTabs {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left;
+  padding-bottom: 0px;
+  margin: 0px;
+  width: 100%;
+  padding-top: 0.4em;
+  list-style-type: none;
+  background-color: #25354a;
+}
+UL.rptTabs LI {
+  border-right: white 1px solid;
+  border-top: white 1px solid;
+  display: block;
+  background: #25354a;
+  float: left;
+  font: bold 13px/1.231 arial, helvetica, clean, sans-serif;
+  margin-left: 4px;
+  border-left: white 1px solid;
+  color: white;
+}
+UL.rptTabs LI A {
+  border-right: thin;
+  padding-right: 10px;
+  border-top: thin;
+  display: block;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  border-left: thin;
+  color: #ffffff;
+  padding-top: 0px;
+  border-bottom: thin;
+  text-decoration: none;
+}
+UL.rptTabs LI A:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+UL.rptTabs LI A:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+UL.rptTabs LI.active {
+  background: #ffffff;
+  margin-left: 0.4em;
+}
+UL.rptTabs LI.active A {
+  padding-right: 10px;
+  display: block;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  color: #25354a;
+  padding-top: 0px;
+}
+UL.rptTabs LI.active A:visited {
+  color: #25354a;
+}
+UL.rptTabs LI.active A:hover {
+  color: #25354a;
+}
+UL.actionlist {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  width: 100%;
+  color: black;
+  padding-top: 0px;
+}
+UL.actionlist LI {
+  font-weight: normal;
+  margin: 0px 1em;
+  list-style-type: none;
+}
+UL.actionlist LI.subheading {
+  font-weight: normal;
+  margin: 0px 1em 0px 2.4em;
+  color: black;
+  list-style-type: none;
+}
+UL.actionlist LI.subheadingreadonly {
+  font-weight: normal;
+  margin: 0px 1em 0px 2.4em;
+  color: black;
+  list-style-type: none;
+}
+
+H4.heading {
+  font-weight: bold;
+  font-size: medium;
+  margin: 0px 1em 0.5em;
+  color: black;
+  text-align: left;
+}
+H4.leftboldheading {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: black;
+  text-align: left;
+}
+H5.subheading {
+  font-weight: normal;
+  font-size: small;
+  margin: 0px 1em 0.5em 0em;
+  color: black;
+  text-align: left;
+}
+H5.subheadingreadonly {
+  font-weight: normal;
+  font-size: small;
+  margin: 0px 1em 0.5em 0em;
+  color: black;
+  text-align: left;
+}
+DIV.subnavbar {
+  padding-right: 0.2em;
+  padding-left: 0.1em;
+  font-weight: normal;
+  padding-bottom: 0.1em;
+  margin: 0px 0em 0px 0px;
+  width: 99.8%;
+  color: black;
+  padding-top: 0em;
+  background-color: #b9ccdd;
+  text-align: right;
+}
+.buttonIndent {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0.5em 0.5em 0.5em 3em;
+  padding-top: 0px;
+}
+.largerverticalspace {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 2em 0em 0em;
+  padding-top: 0px;
+}
+#navcontainer {
+  margin: 0.5rem 0rem 0rem;
+  padding: 0.1rem 0.2rem 0.1rem 0;
+}
+
+#navcontainer UL {
+  padding-right: 0px;
+  border-top: medium none;
+  padding-left: 0px;
+  font-weight: bold;
+  font-size: 90%;
+  left: 0px;
+  float: left;
+  padding-bottom: 0.3em;
+  margin: 0em 0.8em 0em 0.3em;
+  width: 100%;
+  padding-top: 0.5em;
+  list-style-type: none;
+  position: relative;
+  background-color: #25354a;
+}
+/*#navcontainer UL LI
     {
         DISPLAY: inline
     }*/
-    #navcontainer UL LI A
-    {
-        BORDER-RIGHT: #ffffff thin solid;
-        PADDING-RIGHT: 1em;
-        BORDER-TOP: #ffffff thin solid;
-        PADDING-LEFT: 1em;
-        PADDING-BOTTOM: 0.2em;
-        BORDER-LEFT: #ffffff thin solid;
-        COLOR: #fff;
-        PADDING-TOP: 0.2em;
-        BACKGROUND-COLOR: #25354a;
-        BORDER-BOTTOM-STYLE: none
-    }
-    #navcontainer UL LI A:hover
-    {
-    }
-    #navcontainer A.active
-    {
-        PADDING-RIGHT: 1em;
-        PADDING-LEFT: 1em;
-        PADDING-BOTTOM: 0.3em;
-        MARGIN: 0px;
-        COLOR: #25354a;
-        PADDING-TOP: 0.2em;
-        BACKGROUND-COLOR: #ffffff;
-        TEXT-DECORATION: none
-    }
-    .rejectbutton
-    {
-            CURSOR: pointer;
-        BORDER-TOP-WIDTH: medium;
-        PADDING-RIGHT: 0.5em;
-        PADDING-LEFT: 0.5em;
-        FONT-WEIGHT: bold;
-        BORDER-LEFT-WIDTH: medium;
-        FONT-SIZE: 80%;
-        BORDER-LEFT-COLOR: #cc3300;
-        BORDER-BOTTOM-WIDTH: medium;
-        BORDER-BOTTOM-COLOR: #cc3300;
-        MARGIN: auto;
-        OVERFLOW: visible;
-        COLOR: #000000;
-        BORDER-TOP-COLOR: #cc3300;
-        HEIGHT: 45px;
-        BORDER-RIGHT-WIDTH: medium;
-        BORDER-RIGHT-COLOR: #cc3300
-    }
-    .rejectbutton:hover
-    {
-            CURSOR: pointer;
-        BORDER-TOP-WIDTH: medium;
-        PADDING-RIGHT: 0.5em;
-        PADDING-LEFT: 0.5em;
-        FONT-WEIGHT: bold;
-        BORDER-LEFT-WIDTH: medium;
-        FONT-SIZE: 80%;
-        BORDER-LEFT-COLOR: #cc3300;
-        BORDER-BOTTOM-WIDTH: medium;
-        BORDER-BOTTOM-COLOR: #cc3300;
-        MARGIN: auto;
-        OVERFLOW: visible;
-        COLOR: #990033;
-        BORDER-TOP-COLOR: #cc3300;
-        HEIGHT: 45px;
-        BORDER-RIGHT-WIDTH: medium;
-        BORDER-RIGHT-COLOR: #cc3300
-    }
-    .acceptbutton
-    {
-            CURSOR: pointer;
-        BORDER-TOP-WIDTH: medium;
-        PADDING-RIGHT: 0.5em;
-        PADDING-LEFT: 0.5em;
-        FONT-WEIGHT: bold;
-        BORDER-LEFT-WIDTH: medium;
-        FONT-SIZE: 80%;
-        BORDER-LEFT-COLOR: #66cc99;
-        BORDER-BOTTOM-WIDTH: medium;
-        BORDER-BOTTOM-COLOR: #66cc99;
-        MARGIN: auto;
-        OVERFLOW: visible;
-        COLOR: #000000;
-        BORDER-TOP-COLOR: #66cc99;
-        HEIGHT: 45px;
-        BORDER-RIGHT-WIDTH: medium;
-        BORDER-RIGHT-COLOR: #66cc99
-    }
-    .acceptbutton:hover
-    {
-            CURSOR: pointer;
-        BORDER-TOP-WIDTH: medium;
-        PADDING-RIGHT: 0.5em;
-        PADDING-LEFT: 0.5em;
-        FONT-WEIGHT: bold;
-        BORDER-LEFT-WIDTH: medium;
-        FONT-SIZE: 80%;
-        BORDER-LEFT-COLOR: #66cc99;
-        BORDER-BOTTOM-WIDTH: medium;
-        BORDER-BOTTOM-COLOR: #66cc99;
-        MARGIN: auto;
-        OVERFLOW: visible;
-        COLOR: #339966;
-        BORDER-TOP-COLOR: #66cc99;
-        HEIGHT: 45px;
-        BORDER-RIGHT-WIDTH: medium;
-        BORDER-RIGHT-COLOR: #66cc99
-    }
-    .reconfirmLine
-    {
-        BACKGROUND-COLOR: #f0f8ff
-    }
-    .versionLabel
-    {
-        padding-top: .5em;
-        padding-left: .5em;
-        font-weight: bold
-    }
-    
-    TABLE.schedule
-    {
-        WIDTH: 98%;
-        border: 1px solid black;
-        border-collapse:collapse;
-        /*padding:4px;*/	
-    }
-    TABLE.schedule tr td
-    {
-        border: 1px solid black;
-        background-color: #ffffff;
-        /*padding:1px;*/
-    }
-    TABLE.schedule th
-    {
-        background-color: #b9ccdd;
-        font-weight: bold;
-        border: 1px solid black;
-        text-align:center;
-    }
-    TABLE.schedule td.date
-    {
-        border: 1px solid black;
-        background-color: #ffffff;
-        text-align:center;
-        padding:3px;
-        vertical-align:middle;
-    }
-    TABLE.schedule th.cell
-    {
-        background-color: #ffffff;
-        font-weight: normal;
-        padding:3px;
-        vertical-align:middle;
-    }
-    TABLE.schedule td.cell
-    {
-        padding:3px;
-        vertical-align:middle;
-    }
-    .csccbody2
-    {
-    /*    border-right: #25354a thin solid;
+#navcontainer UL LI A {
+  border-right: #ffffff thin solid;
+  padding-right: 1em;
+  border-top: #ffffff thin solid;
+  padding-left: 1em;
+  padding-bottom: 0.2em;
+  border-left: #ffffff thin solid;
+  color: #fff;
+  padding-top: 0.2em;
+  background-color: #25354a;
+  border-bottom-style: none;
+}
+#navcontainer UL LI A:hover {
+}
+#navcontainer A.active {
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+  margin: 0px;
+  color: #25354a;
+  padding-top: 0.2em;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+.rejectbutton {
+  cursor: pointer;
+  border-top-width: medium;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  border-left-width: medium;
+  font-size: 80%;
+  border-left-color: #cc3300;
+  border-bottom-width: medium;
+  border-bottom-color: #cc3300;
+  margin: auto;
+  overflow: visible;
+  color: #000000;
+  border-top-color: #cc3300;
+  height: 45px;
+  border-right-width: medium;
+  border-right-color: #cc3300;
+}
+.rejectbutton:hover {
+  cursor: pointer;
+  border-top-width: medium;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  border-left-width: medium;
+  font-size: 80%;
+  border-left-color: #cc3300;
+  border-bottom-width: medium;
+  border-bottom-color: #cc3300;
+  margin: auto;
+  overflow: visible;
+  color: #990033;
+  border-top-color: #cc3300;
+  height: 45px;
+  border-right-width: medium;
+  border-right-color: #cc3300;
+}
+.acceptbutton {
+  cursor: pointer;
+  border-top-width: medium;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  border-left-width: medium;
+  font-size: 80%;
+  border-left-color: #66cc99;
+  border-bottom-width: medium;
+  border-bottom-color: #66cc99;
+  margin: auto;
+  overflow: visible;
+  color: #000000;
+  border-top-color: #66cc99;
+  height: 45px;
+  border-right-width: medium;
+  border-right-color: #66cc99;
+}
+.acceptbutton:hover {
+  cursor: pointer;
+  border-top-width: medium;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  border-left-width: medium;
+  font-size: 80%;
+  border-left-color: #66cc99;
+  border-bottom-width: medium;
+  border-bottom-color: #66cc99;
+  margin: auto;
+  overflow: visible;
+  color: #339966;
+  border-top-color: #66cc99;
+  height: 45px;
+  border-right-width: medium;
+  border-right-color: #66cc99;
+}
+.reconfirmLine {
+  background-color: #f0f8ff;
+}
+.versionLabel {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+TABLE.schedule {
+  width: 98%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  /*padding:4px;*/
+}
+TABLE.schedule tr td {
+  border: 1px solid black;
+  background-color: #ffffff;
+  /*padding:1px;*/
+}
+TABLE.schedule th {
+  background-color: #b9ccdd;
+  font-weight: bold;
+  border: 1px solid black;
+  text-align: center;
+}
+TABLE.schedule td.date {
+  border: 1px solid black;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 3px;
+  vertical-align: middle;
+}
+TABLE.schedule th.cell {
+  background-color: #ffffff;
+  font-weight: normal;
+  padding: 3px;
+  vertical-align: middle;
+}
+TABLE.schedule td.cell {
+  padding: 3px;
+  vertical-align: middle;
+}
+.csccbody2 {
+  /*    border-right: #25354a thin solid;
         border-top: #25354a thin solid;
         border-left: #25354a thin solid;
         border-bottom: #25354a54a thin solid;*/
-        font-size: 0.85em;
+  font-size: 0.85em;
+}
+/*Contributions related CSS */
+.invalid {
+  background-color: #ffdddd;
+  border: 2px solid maroon;
+}
+
+.alignright {
+  text-align: right;
+  float: right;
+}
+.alignrightSmMargin {
+  text-align: right;
+  float: right;
+  margin: 0.5em;
+}
+.warnmsg {
+  color: maroon;
+  font-weight: bold;
+}
+.warnmsgNoPrint {
+  color: maroon;
+  font-weight: bold;
+}
+table.results {
+  border-spacing: 1em;
+  padding: 0.5em 1em 1em 1em;
+  font-size: 1em;
+  width: 40%;
+  border-collapse: collapse;
+  border: 0.1em solid #b7b7b7;
+}
+.results th,
+.results td {
+  border: 0.1em solid #b7b7b7;
+}
+table.contrib {
+  border-spacing: 0;
+  width: 90%;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  border: 0.1em solid #b7b7b7;
+}
+
+.contrib input {
+  font-size: 1.1em;
+}
+
+.contrib th,
+.contrib td {
+  border: 0.1em solid #b7b7b7;
+}
+
+.contrib thead th {
+  padding: 2px 2px 2px 4px !important;
+  text-align: left !important;
+  background-color: #ccc !important;
+  vertical-align: middle;
+}
+
+.contrib tbody tr td,
+.contrib tbody tr th {
+  padding: 2px 2px 2px 4px !important;
+  margins: 0em !important;
+  vertical-align: middle;
+}
+
+.contrib tr:nth-child(even) {
+  text-align: left;
+  background-color: #efefef;
+}
+
+.contrib tr:nth-child(odd) {
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.contrib th.narrow td.narrow {
+  padding: 0em;
+  margins: 0em;
+}
+.nodisplay {
+  display: none;
+}
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+.hidden {
+  /* available for screen readers, hidden from reg users */
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6 and IE 7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* clip to 1px width and height */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-indent: -999em;
+  /* Indent any text so it is not visible */
+  word-wrap: normal;
+  /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */
+}
+.offscreen {
+  /* available for screen readers, hidden from reg users */
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6 and IE 7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* clip to 1px width and height */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-indent: -999em;
+  /* Indent any text so it is not visible */
+  word-wrap: normal;
+  /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */
+}
+
+.error {
+  color: #7a2323;
+}
+
+.errorDiv {
+  padding: 0 0.5rem;
+  margin: 1rem 0;
+}
+.errorDiv h2,
+.errorDiv h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.seperatorLine {
+  text-align: left;
+  width: 97.5%;
+  background-color: #c2d2e1;
+}
+#reviewerList {
+  width: 100%;
+  border: none;
+  height: 2em;
+}
+
+#reviewerList tr td {
+  height: 2em;
+}
+
+#SearchAgain {
+  font-size: 85%;
+}
+
+main {
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+}
+
+
+
+/* =========================== Title 2 Fixes =========================== */
+/* ====================== OVERVIEW PAGE ====================== */
+/* ========== OVERVIEW HEADER (Section above tables) ========== */
+#overview-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    /*Anchor links to go to specific tables*/
+  }
+  #overview-header h2 {
+    font-size: 1.15rem;
+    margin: 0;
+  }
+  #overview-header h3 {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #overview-header ol li {
+    list-style: decimal;
+  }
+  #overview-header .table-nav {
+    margin-top: 1.5rem;
+  }
+  #overview-header .table-nav nav {
+    background-color: transparent;
+    color: black;
+  }
+  #overview-header .table-nav nav ul {
+    padding-left: 0;
+  }
+  #overview-header .table-nav nav ul li {
+    padding: 0;
+    margin-right: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  #overview-header .table-nav nav a {
+    font-size: 14px;
+    color: #0b558e;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background-color: #e7edf2;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+  }
+  #overview-header .table-nav nav a:focus,
+  #overview-header .table-nav nav a:hover {
+    background-color: #d6e2eb;
+    color: #094472;
+  }
+  #overview-header .table-nav nav a:focus-visible {
+    outline-color: black;
+  }
+  
+  /*Tracking Report*/
+  .tracking-report {
+    border: 1px solid #919294;
+    padding: 1rem;
+    max-width: fit-content;
+    background-color: #e9f1f8;
+  }
+  .tracking-report label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .tracking-report fieldset {
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .tracking-report fieldset legend {
+    float: left;
+    margin-right: 0.5rem;
+  }
+  .tracking-report fieldset [type=radio] {
+    transform: scale(1.5);
+  }
+  .tracking-report fieldset label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 0.5rem;
+  }
+  .tracking-report select {
+    display: block;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0.5rem;
+    border: 1px solid #c1c6cd;
+    border-radius: 3px;
+    background-color: #fefefe;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  
+  #trackingReportExcel {
+    padding: 0.75rem;
+    padding-left: 40px;
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="80px" height="90px" viewBox="0 0 80 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Group</title><g id="excel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group" transform="translate(-10, -5)" fill="%23108043" fill-rule="nonzero"><rect id="Rectangle" x="70" y="20" width="20" height="60"></rect><path d="M10,80 L66,95 L66,5 L10,20 L10,80 Z M24,30 L32.9,30 L37.9,41.1 L43.1,30 L51.8,30 L42.7,45.9 L52.7,64.6 L43.8,64.6 L37.9,51.4 L32.1,64.6 L23.4,64.6 L33.1,46.2 L24,30 Z" id="Shape"></path></g></g></svg>');
+    background-size: 25px 25px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .instructions,
+  .tracking-report {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+  
+  @media (min-width: 800px) {
+    .instructions {
+      -ms-grid-column-span: 1;
+      grid-column: span 1;
     }
-    /*Contributions related CSS */
-    .invalid {
-        background-color: #ffdddd;
-        border:2px solid maroon;
+    .tracking-report {
+      -ms-grid-column-span: 1;
+      grid-column: span 1;
+      justify-self: right;
     }
-    
-    .alignright {
-        text-align: right;
-        float:right;
-    }
-    .alignrightSmMargin {
-        text-align: right;
-        float:right;
-        margin: .5em;
-    }
-    .warnmsg {
-        color: maroon;
-        font-weight: bold;
-    }
-    .warnmsgNoPrint {
-        color: maroon;
-        font-weight: bold;
-    }
-    table.results {
-        border-spacing: 1em;
-        padding: 0.5em 1em 1em 1em; 
-        font-size:1em;
-        width:40%;
-        border-collapse: collapse;
-        border:0.1em solid #b7b7b7;
-    }
-    .results th, .results td{
-        border:0.1em solid #b7b7b7;
-    }
-    table.contrib {
-        border-spacing: 0;
-        width: 90%;
-        font-size:0.9em;
-        border-collapse: collapse;
-        border:0.1em solid #b7b7b7;
-    }
-    
-    .contrib input {
-        font-size:1.1em;
-    }
-    
-    .contrib th, .contrib td{
-        border:0.1em solid #b7b7b7;
-    }
-    
-    .contrib thead th{
-        padding: 2px 2px 2px 4px !important;
-        text-align:left !important;
-        background-color:#ccc !important;
-        vertical-align: middle;
-    }
-    
-    .contrib tbody tr td, .contrib tbody tr th {
-        padding: 2px 2px 2px 4px !important;
-        margins: 0em !important;
-        vertical-align: middle;
-    }
-    
-    .contrib tr:nth-child(even) {
-        text-align:left;
-        background-color:#efefef;
-    }
-    
-    .contrib tr:nth-child(odd) {
-        text-align:left;
-        background-color:#FFFFFF;
-    }
-    
-    .contrib th.narrow td.narrow {
-        padding: 0em;
-        margins: 0em;
-    }
-    .nodisplay {
-        display: none;
-    }
-    .ui-helper-hidden-accessible{
-        display: none;
-    }
-    
-    .hidden {
-        /* available for screen readers, hidden from reg users */
-      position: absolute;
-      clip: rect(1px 1px 1px 1px);
-      /* IE 6 and IE 7 */
-      clip: rect(1px, 1px, 1px, 1px);
-      /* clip to 1px width and height */
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      text-indent: -999em;
-      /* Indent any text so it is not visible */
-      word-wrap: normal;
-      /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */
-    }
-    .offscreen {
-      /* available for screen readers, hidden from reg users */
-      position: absolute;
-      clip: rect(1px 1px 1px 1px);
-      /* IE 6 and IE 7 */
-      clip: rect(1px, 1px, 1px, 1px);
-      /* clip to 1px width and height */
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      text-indent: -999em;
-      /* Indent any text so it is not visible */
-      word-wrap: normal;
-      /* Fix a JAWS+Firefox scrollbar issue when word-wrap is set */ }
-    
-    .error {
-          color: #7a2323; }
-    
-    .errorDiv {
-        padding: 0em;
-        margins: 0em;
-    }
-          
-    .seperatorLine {
-        text-align:left;
-        width:97.5%;
-        background-color: #C2D2E1;
-    }
-    #reviewerList  {
-        width: 100%;
-        border:none;
-        height:2em; 
-    }
-    
-    #reviewerList tr td {
-        height:2em; 
-    }
-    
-    #SearchAgain {
-        font-size:85%;
-    }
-     
-    main {
-        font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
-    }
-    
+  }
+  /* ========== Overview Tables ========== */
+  /*Goes around each individual table*/
+  .overview-section {
+    margin-bottom: 2rem;
+    border: 1px solid black;
+  }
+  .overview-section caption {
+    padding: 1rem;
+  }
+  .overview-section .dataTables_wrapper {
+    padding: 0.5rem 1rem 1rem;
+  }
+  
+  /*Goes within overview-section, above table*/
+  .subheading {
+    background-color: #b9ccdd;
+    padding: 0.05rem 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subheading h2 {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .subheading a {
+    padding: 0.5rem;
+    padding-left: 30px;
+    background-color: white;
+    border-radius: 5px;
+    color: #094472;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Combined Shape</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(-4, -1)" fill="%230B558E" fill-rule="nonzero"><path d="M11.5,1 L12.2192113,1.80462884 L19,9.39074232 L17.5615775,11 L12.5,5.337 L12.5,20 L10.5,20 L10.5,5.337 L5.43842251,11 L4,9.39074232 L11.5,1 Z" id="Combined-Shape"></path></g></g></svg>');
+    background-repeat: no-repeat;
+    background-size: 15px 20px;
+    background-position: 10px center;
+  }
+  .subheading a:hover,
+  .subheading a:focus {
+    background-color: #e7edf2;
+  }
+  
+  .read-only {
+    background-color: #b8b8b8;
+  }
+  .read-only a:hover,
+  .read-only a:focus {
+    background-color: #e6e6e6;
+  }
+  
+  /* ====================== Grant Report Pages ====================== */
+  /* ========== Report Heading Section ========== */
+  /*psuedo-label and hor-list classes have been used in other finance apps, can probably be added to common code css*/
+  .psuedo-label {
+    font-weight: bold;
+  }
+  
+  .hor-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hor-list div {
+    margin: 0 2rem 1rem 0;
+  }
+  .hor-list div.question {
+    margin-top: 1rem;
+  }
+  .hor-list .psuedo-label {
+    display: block;
+  }
+  
+  ul.hor-list li {
+    list-style: none;
+    margin: 0 2rem 1.5rem 0;
+  }
+  ul.hor-list li .psuedo-label {
+    display: block;
+  }
+  
+  /* ========== Grant Table (Direct Expenditures) ========== */
+  .grant-table {
+    border: 1px solid #414042;
+    border-collapse: collapse;
+  }
+  .grant-table td,
+  .grant-table th {
+    padding: 0.5rem 0.75rem;
+  }
+  .grant-table thead {
+    background-color: #e6e6e6;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+  .grant-table thead #chart,
+  .grant-table thead #fund,
+  .grant-table thead #org {
+    width: 70px;
+  }
+  .grant-table thead #directCost,
+  .grant-table thead #salaries {
+    width: 125px;
+  }
+  .grant-table thead #noneRequired,
+  .grant-table thead #processed,
+  .grant-table thead #pending {
+    width: 215px;
+  }
+  .grant-table thead th {
+    text-align: left;
+    font-weight: bold;
+  }
+  .grant-table thead th.transferKol {
+    text-align: center;
+    border-color: black;
+  }
+  .grant-table tbody tr td,
+  .grant-table tbody tr th {
+    text-align: left;
+  }
+  .grant-table tbody tr:nth-child(odd) {
+    background-color: #eff0f0;
+  }
+  .grant-table tbody [type=checkbox],
+  .grant-table tbody [type=radio] {
+    -ms-transform: scale(1.75); /* IE 9 */
+    -webkit-transform: scale(1.75); /* Chrome, Safari, Opera */
+    transform: scale(1.75);
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  .grant-table tfoot td.transferKolTop {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .grant-table tfoot td.transferKolTop button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: bold;
+    color: #0b558e;
+    padding: 0.25rem 0.5rem;
+  }
+  .grant-table .cfopamt {
+    text-align: right;
+  }
+  
+  /* ========== Action Buttons ========== */
+  .grant-actions {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+  }
+  .grant-actions h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .actionbar button + button {
+    margin-left: 1rem;
+  }
+  .actionbar button {
+    margin-bottom: 1rem;
+  }
+  
+  /*New button styles*/
+  .primary-btn,
+  .hollow-btn,
+  .accept-btn,
+  .reject-btn {
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .accept-btn,
+  .reject-btn {
+    color: white;
+    padding-left: 2.75rem;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 10px center;
+  }
+  
+  .accept-btn {
+    background-image: url("../graphics/icon_accept.svg");
+    background-color: #627d31;
+  }
+  
+  .accept-btn:hover {
+    background-color: #475822;
+  }
+  
+  .reject-btn {
+    background-image: url("../graphics/icon_reject.svg");
+    background-color: #b82025;
+  }
+  
+  .reject-btn:hover {
+    background-color: #780b0b;
+  }
+  
+  .primary-btn {
+    background-color: #3f4958;
+    color: white;
+  }
+  
+  .primary-btn:hover,
+  .primary-btn:focus {
+    background-color: #25354a;
+    color: white;
+  }
+  
+  .hollow-btn {
+    background-color: transparent;
+    border: 1px solid #3f4958;
+    color: #3f4958;
+  }
+  
+  .hollow-btn:hover,
+  .hollow-btn:focus {
+    background-color: #25354a;
+    color: white;
+  }
+  

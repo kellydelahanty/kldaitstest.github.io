@@ -1,72 +1,196 @@
 /* =========================== Title 2 Fixes =========================== */
-/* =============== UPDATING EXISTING CSS CLASSES ===============
-Replace the existing css classes in costshare.css and sidebar.css, 
-don't just add these on in new file or add them to the end of an existing file
-*/
-/* Replace in costshare.css */
-#navcontainer {
-  margin: 0.5rem 0rem 0rem;
-  padding: 0.1rem 0.2rem 0.1rem 0;
-}
-
-.errorDiv {
-  padding: 0 0.5rem;
-  margin: 1rem 0;
-}
-.errorDiv h2,
-.errorDiv h3 {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* Replace in sidebar.css */
-.csccconfirmbody {
-  margin-top: 1rem;
-  border: none;
-}
-
-/* Replace in costshare.css and/or sidebar.css 
-.textSection exists in both places with the same basic styling, just written different ways, so it's redundant. Don't need to have it in both places unless there's some common code reason that both need to have it. 
-*/
-.textSection {
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-}
-
-/* Replaces all the .tblcommitment classes in sidebar.css (lines 412-439 */
-table.tblcommitment {
-  background-color: white;
-  border: 1px solid black;
-  width: 80%;
-}
-table.tblcommitment thead {
-  background-color: #414042;
-  color: white;
-  text-align: left;
-}
-table.tblcommitment thead th.tblcommitment {
-  color: white;
-  font-weight: bold;
-}
-table.tblcommitment td,
-table.tblcommitment th {
-  padding: 0.5rem 0.75rem;
-}
-
-/* =============== NEW CSS - Individual Grant Page ===============
-This is CSS updates to what I'm calling the "individual grants page" 
-This is the page you get to when clicking on the grant code link on Overview 
-or the View/Edit link on one of the "Send to ____" pages. 
-*/
-/* =============== Report Heading Section =============== */
-.reportheading {
+/* ====================== OVERVIEW PAGE ====================== */
+/* ========== OVERVIEW HEADER (Section above tables) ========== */
+#overview-header {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
   padding: 0 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  /*Anchor links to go to specific tables*/
 }
-.reportheading h2 {
+#overview-header h2 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+#overview-header h3 {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#overview-header ol li {
+  list-style: decimal;
+}
+#overview-header .table-nav {
+  margin-top: 1.5rem;
+}
+#overview-header .table-nav nav {
+  background-color: transparent;
+  color: black;
+}
+#overview-header .table-nav nav ul {
+  padding-left: 0;
+}
+#overview-header .table-nav nav ul li {
+  padding: 0;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+#overview-header .table-nav nav a {
+  font-size: 14px;
+  color: #0b558e;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background-color: #e7edf2;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+#overview-header .table-nav nav a:focus,
+#overview-header .table-nav nav a:hover {
+  background-color: #d6e2eb;
+  color: #094472;
+}
+#overview-header .table-nav nav a:focus-visible {
+  outline-color: black;
+}
+
+/*Tracking Report*/
+.tracking-report {
+  border: 1px solid #919294;
+  padding: 1rem;
+  max-width: fit-content;
+  background-color: #e9f1f8;
+}
+.tracking-report label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.tracking-report fieldset {
+  display: block;
+  padding-left: 0;
+  margin-left: 0;
+}
+.tracking-report fieldset legend {
+  float: left;
+  margin-right: 0.5rem;
+}
+.tracking-report fieldset [type=radio] {
+  transform: scale(1.5);
+}
+.tracking-report fieldset label {
+  display: inline;
+  font-weight: normal;
+  margin-right: 0.5rem;
+}
+.tracking-report select {
+  display: block;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid #c1c6cd;
+  border-radius: 3px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+#trackingReportExcel {
+  padding: 0.75rem;
+  padding-left: 40px;
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="80px" height="90px" viewBox="0 0 80 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Group</title><g id="excel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group" transform="translate(-10, -5)" fill="%23108043" fill-rule="nonzero"><rect id="Rectangle" x="70" y="20" width="20" height="60"></rect><path d="M10,80 L66,95 L66,5 L10,20 L10,80 Z M24,30 L32.9,30 L37.9,41.1 L43.1,30 L51.8,30 L42.7,45.9 L52.7,64.6 L43.8,64.6 L37.9,51.4 L32.1,64.6 L23.4,64.6 L33.1,46.2 L24,30 Z" id="Shape"></path></g></g></svg>');
+  background-size: 25px 25px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5px;
   font-weight: bold;
 }
 
+.instructions,
+.tracking-report {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+@media (min-width: 800px) {
+  .instructions {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+  .tracking-report {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+    justify-self: right;
+  }
+}
+/* ========== Overview Tables ========== */
+/*Goes around each individual table*/
+.overview-section {
+  margin-bottom: 2rem;
+  border: 1px solid black;
+}
+.overview-section caption {
+  padding: 1rem;
+}
+.overview-section .dataTables_wrapper {
+  padding: 0.5rem 1rem 1rem;
+}
+
+/*Goes within overview-section, above table*/
+.subheading {
+  background-color: #b9ccdd;
+  padding: 0.05rem 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subheading h2 {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.subheading a {
+  padding: 0.5rem;
+  padding-left: 30px;
+  background-color: white;
+  border-radius: 5px;
+  color: #094472;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Combined Shape</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(-4, -1)" fill="%230B558E" fill-rule="nonzero"><path d="M11.5,1 L12.2192113,1.80462884 L19,9.39074232 L17.5615775,11 L12.5,5.337 L12.5,20 L10.5,20 L10.5,5.337 L5.43842251,11 L4,9.39074232 L11.5,1 Z" id="Combined-Shape"></path></g></g></svg>');
+  background-repeat: no-repeat;
+  background-size: 15px 20px;
+  background-position: 10px center;
+}
+.subheading a:hover,
+.subheading a:focus {
+  background-color: #e7edf2;
+}
+
+.read-only {
+  background-color: #b8b8b8;
+}
+.read-only a:hover,
+.read-only a:focus {
+  background-color: #e6e6e6;
+}
+
+/* ====================== Grant Report Pages ====================== */
+/* ========== Report Heading Section ========== */
+/*psuedo-label and hor-list classes have been used in other finance apps, can probably be added to common code css*/
 .psuedo-label {
   font-weight: bold;
 }
@@ -93,7 +217,7 @@ ul.hor-list li .psuedo-label {
   display: block;
 }
 
-/* =============== Grant Table (Direct Expenditures) =============== */
+/* ========== Grant Table (Direct Expenditures) ========== */
 .grant-table {
   border: 1px solid #414042;
   border-collapse: collapse;
@@ -160,7 +284,7 @@ ul.hor-list li .psuedo-label {
   text-align: right;
 }
 
-/* =============== Action Button Section =============== */
+/* ========== Action Buttons ========== */
 .grant-actions {
   text-align: center;
   margin: 1.5rem 0 2rem;
@@ -239,196 +363,4 @@ ul.hor-list li .psuedo-label {
 .hollow-btn:focus {
   background-color: #25354a;
   color: white;
-}
-
-.versionLabel {
-  margin-bottom: 2rem;
-}
-
-/* =============== OVERVIEW PAGE =============== */
-/* ========== OVERVIEW HEADER ========== */
-#overview-header {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 10px;
-  padding: 0 1rem;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-#overview-header h2 {
-  font-size: 1.15rem;
-  margin: 0;
-}
-#overview-header h3 {
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: bold;
-}
-#overview-header ol li {
-  list-style: decimal;
-}
-#overview-header .table-nav {
-  margin-top: 1.5rem;
-}
-#overview-header .table-nav nav {
-  background-color: transparent;
-  color: black;
-}
-#overview-header .table-nav nav ul {
-  padding-left: 0;
-}
-#overview-header .table-nav nav ul li {
-  padding: 0;
-  margin-right: 0.75rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-#overview-header .table-nav nav a {
-  font-size: 14px;
-  color: #0b558e;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  background-color: #e7edf2;
-  display: inline-block;
-  border: none;
-  text-decoration: none;
-}
-#overview-header .table-nav nav a:focus,
-#overview-header .table-nav nav a:hover {
-  background-color: #d6e2eb;
-  color: #094472;
-}
-#overview-header .table-nav nav a:focus-visible {
-  outline-color: black;
-}
-
-/* ===== TRACKING REPORT ===== */
-.tracking-report {
-  border: 1px solid #919294;
-  padding: 1rem;
-  max-width: fit-content;
-  background-color: #e9f1f8;
-}
-.tracking-report label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.tracking-report fieldset {
-  display: block;
-  padding-left: 0;
-  margin-left: 0;
-}
-.tracking-report fieldset legend {
-  float: left;
-  margin-right: 0.5rem;
-}
-.tracking-report fieldset [type=radio] {
-  transform: scale(1.5);
-}
-.tracking-report fieldset label {
-  display: inline;
-  font-weight: normal;
-  margin-right: 0.5rem;
-}
-.tracking-report select {
-  display: block;
-  height: 2.5rem;
-  margin: 0;
-  padding: 0.5rem;
-  border: 1px solid #c1c6cd;
-  border-radius: 3px;
-  background-color: #fefefe;
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-  font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #0a0a0a;
-  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-  margin-bottom: 1rem;
-}
-
-#trackingReportExcel {
-  padding: 0.75rem;
-  padding-left: 40px;
-  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="80px" height="90px" viewBox="0 0 80 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Group</title><g id="excel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group" transform="translate(-10, -5)" fill="%23108043" fill-rule="nonzero"><rect id="Rectangle" x="70" y="20" width="20" height="60"></rect><path d="M10,80 L66,95 L66,5 L10,20 L10,80 Z M24,30 L32.9,30 L37.9,41.1 L43.1,30 L51.8,30 L42.7,45.9 L52.7,64.6 L43.8,64.6 L37.9,51.4 L32.1,64.6 L23.4,64.6 L33.1,46.2 L24,30 Z" id="Shape"></path></g></g></svg>');
-  background-size: 25px 25px;
-  background-position: 5px center;
-  background-repeat: no-repeat;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* ========== OVERVIEW TABLES ========== */
-.overview-section {
-  margin-bottom: 2rem;
-  border: 1px solid black;
-}
-.overview-section caption {
-  padding: 1rem;
-}
-.overview-section .dataTables_wrapper {
-  padding: 0.5rem 1rem 1rem;
-}
-
-.subheading {
-  background-color: #b9ccdd;
-  padding: 0.05rem 1rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.subheading h2 {
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 1rem;
-}
-.subheading a {
-  padding: 0.5rem;
-  padding-left: 30px;
-  background-color: white;
-  border-radius: 5px;
-  color: #094472;
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  text-align: left;
-  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Combined Shape</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(-4, -1)" fill="%230B558E" fill-rule="nonzero"><path d="M11.5,1 L12.2192113,1.80462884 L19,9.39074232 L17.5615775,11 L12.5,5.337 L12.5,20 L10.5,20 L10.5,5.337 L5.43842251,11 L4,9.39074232 L11.5,1 Z" id="Combined-Shape"></path></g></g></svg>');
-  background-repeat: no-repeat;
-  background-size: 15px 20px;
-  background-position: 10px center;
-}
-.subheading a:hover,
-.subheading a:focus {
-  background-color: #e7edf2;
-}
-
-.read-only {
-  background-color: #b8b8b8;
-}
-.read-only a:hover,
-.read-only a:focus {
-  background-color: #e6e6e6;
-}
-
-/* ===== Responsiveness  ===== */
-.instructions,
-.tracking-report {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-}
-
-@media (min-width: 800px) {
-  .instructions {
-    -ms-grid-column-span: 1;
-    grid-column: span 1;
-  }
-  .tracking-report {
-    -ms-grid-column-span: 1;
-    grid-column: span 1;
-    justify-self: right;
-  }
 }

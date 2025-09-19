@@ -49,83 +49,231 @@ $up-arrow-blue: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3
 $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Combined Shape</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(-4, -1)" fill="%230B558E" fill-rule="nonzero"><path d="M11.5,1 L12.2192113,1.80462884 L19,9.39074232 L17.5615775,11 L12.5,5.337 L12.5,20 L10.5,20 L10.5,5.337 L5.43842251,11 L4,9.39074232 L11.5,1 Z" id="Combined-Shape"></path></g></g></svg>');
 
 /* =========================== Title 2 Fixes =========================== */
+/* ====================== OVERVIEW PAGE ====================== */
 
-/* =============== UPDATING EXISTING CSS CLASSES ===============
-Replace the existing css classes in costshare.css and sidebar.css, 
-don't just add these on in new file or add them to the end of an existing file
-*/
+/* ========== OVERVIEW HEADER (Section above tables) ========== */
+#overview-header {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
 
-/* Replace in costshare.css */
-#navcontainer {
-  margin: 0.5rem 0rem 0rem;
-  padding: 0.1rem 0.2rem 0.1rem 0;
-}
+  padding: 0 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 
-.errorDiv {
-  padding: 0 0.5rem;
-  margin: 1rem 0;
+  h2 {
+    font-size: 1.15rem;
+    margin: 0;
+  }
 
-  h2,
   h3 {
-    font-size: 16px;
+    margin-bottom: 0;
+    font-size: 1rem;
     font-weight: bold;
+  }
+
+  ol li {
+    list-style: decimal;
+  }
+
+  /*Anchor links to go to specific tables*/
+  .table-nav {
+    margin-top: 1.5rem;
+    nav {
+      background-color: transparent;
+      color: black;
+
+      ul {
+        padding-left: 0;
+        li {
+          padding: 0;
+          margin-right: 0.75rem;
+          margin-bottom: 0.5rem;
+          display: inline-block;
+        }
+      }
+
+      a {
+        font-size: 14px;
+        color: $link;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        background-color: $ground;
+        display: inline-block;
+        border: none;
+        text-decoration: none;
+      }
+
+      a:focus,
+      a:hover {
+        background-color: $ground-mid;
+        color: $link-dark;
+      }
+
+      a:focus-visible {
+        outline-color: black;
+      }
+    }
   }
 }
 
-/* Replace in sidebar.css */
-.csccconfirmbody {
-  margin-top: 1rem;
-  border: none;
-}
+/*Tracking Report*/
+.tracking-report {
+  border: 1px solid $gray-5;
+  padding: 1rem;
+  max-width: fit-content;
 
-/* Replace in costshare.css and/or sidebar.css 
-.textSection exists in both places with the same basic styling, just written different ways, so it's redundant. Don't need to have it in both places unless there's some common code reason that both need to have it. 
-*/
-.textSection {
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-}
+  background-color: $sky;
 
-/* Replaces all the .tblcommitment classes in sidebar.css (lines 412-439 */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
 
-table.tblcommitment {
-  background-color: white;
-  border: 1px solid black;
-  width: 80%;
+  fieldset {
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
 
-  thead {
-    background-color: $gray-7;
-    color: white;
-    text-align: left;
+    legend {
+      float: left;
+      margin-right: 0.5rem;
+    }
+    [type="radio"] {
+      transform: scale(1.5);
+    }
 
-    th.tblcommitment {
-      color: white;
-      font-weight: bold;
+    label {
+      display: inline;
+      font-weight: normal;
+      margin-right: 0.5rem;
     }
   }
 
-  td,
-  th {
-    padding: 0.5rem 0.75rem;
+  select {
+    display: block;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0.5rem;
+    border: 1px solid #c1c6cd;
+    border-radius: 3px;
+    background-color: #fefefe;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    margin-bottom: 1rem;
   }
 }
 
-/* =============== NEW CSS - Individual Grant Page ===============
-This is CSS updates to what I'm calling the "individual grants page" 
-This is the page you get to when clicking on the grant code link on Overview 
-or the View/Edit link on one of the "Send to ____" pages. 
-*/
+#trackingReportExcel {
+  padding: 0.75rem;
 
-/* =============== Report Heading Section =============== */
-.reportheading {
-  padding: 0 1rem;
+  padding-left: 40px;
+  background-image: $excel-icon;
+  background-size: 25px 25px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+
+  border: 1px solid black;
+  border-radius: 5px;
+
+  font-weight: bold;
+}
+
+
+.instructions,
+.tracking-report {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+@media (min-width: 800px) {
+  .instructions {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+
+  .tracking-report {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+    justify-self: right;
+  }
+}
+
+/* ========== Overview Tables ========== */
+
+/*Goes around each individual table*/
+.overview-section {
+  margin-bottom: 2rem;
+  border: 1px solid black;
+
+  caption {
+    padding: 1rem;
+  }
+
+  .dataTables_wrapper {
+    padding: 0.5rem 1rem 1rem;
+  }
+}
+
+/*Goes within overview-section, above table*/
+.subheading {
+  background-color: $light-blue;
+  padding: 0.05rem 1rem;
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   h2 {
     font-weight: bold;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  a {
+    padding: 0.5rem;
+    padding-left: 30px;
+    background-color: white;
+    border-radius: 5px;
+    color: $link-dark;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+
+    background-image: $up-arrow-blue-2;
+    background-repeat: no-repeat;
+    background-size: 15px 20px;
+    background-position: 10px center;
+  }
+
+  a:hover,
+  a:focus {
+    background-color: $ground;
   }
 }
 
+.read-only {
+  background-color: $gray-4;
+
+  a:hover,
+  a:focus {
+    background-color: $gray-2;
+  }
+}
+
+
+
+/* ====================== Grant Report Pages ====================== */
+/* ========== Report Heading Section ========== */
+/*psuedo-label and hor-list classes have been used in other finance apps, can probably be added to common code css*/
 .psuedo-label {
   font-weight: bold;
 }
@@ -155,7 +303,7 @@ ul.hor-list {
   }
 }
 
-/* =============== Grant Table (Direct Expenditures) =============== */
+/* ========== Grant Table (Direct Expenditures) ========== */
 .grant-table {
   border: 1px solid $table-border;
   border-collapse: collapse;
@@ -238,8 +386,7 @@ ul.hor-list {
   }
 }
 
-/* =============== Action Button Section =============== */
-
+/* ========== Action Buttons ========== */
 .grant-actions {
   text-align: center;
   margin: 1.5rem 0 2rem;
@@ -324,226 +471,4 @@ ul.hor-list {
   color: white;
 }
 
-.versionLabel {
-  margin-bottom: 2rem;
-}
 
-/* =============== OVERVIEW PAGE =============== */
-
-/* ========== OVERVIEW HEADER ========== */
-
-#overview-header {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 10px;
-
-  padding: 0 1rem;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-
-  h2 {
-    font-size: 1.15rem;
-    margin: 0;
-  }
-
-  h3 {
-    margin-bottom: 0;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  ol li {
-    list-style: decimal;
-  }
-
-  .table-nav {
-    margin-top: 1.5rem;
-    nav {
-      background-color: transparent;
-      color: black;
-
-      ul {
-        padding-left: 0;
-        li {
-          padding: 0;
-          margin-right: 0.75rem;
-          margin-bottom: 0.5rem;
-          display: inline-block;
-        }
-      }
-
-      a {
-        font-size: 14px;
-        color: $link;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        background-color: $ground;
-        display: inline-block;
-        border: none;
-        text-decoration: none;
-      }
-
-      a:focus,
-      a:hover {
-        background-color: $ground-mid;
-        color: $link-dark;
-      }
-
-      a:focus-visible {
-        outline-color: black;
-      }
-    }
-  }
-}
-
-/* ===== TRACKING REPORT ===== */
-.tracking-report {
-  border: 1px solid $gray-5;
-  padding: 1rem;
-  max-width: fit-content;
-
-  background-color: $sky;
-
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  fieldset {
-    display: block;
-    padding-left: 0;
-    margin-left: 0;
-
-    legend {
-      float: left;
-      margin-right: 0.5rem;
-    }
-    [type="radio"] {
-      transform: scale(1.5);
-    }
-
-    label {
-      display: inline;
-      font-weight: normal;
-      margin-right: 0.5rem;
-    }
-  }
-
-  select {
-    display: block;
-    height: 2.5rem;
-    margin: 0;
-    padding: 0.5rem;
-    border: 1px solid #c1c6cd;
-    border-radius: 3px;
-    background-color: #fefefe;
-    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-    font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #0a0a0a;
-    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-    margin-bottom: 1rem;
-  }
-}
-
-#trackingReportExcel {
-  padding: 0.75rem;
-
-  padding-left: 40px;
-  background-image: $excel-icon;
-  background-size: 25px 25px;
-  background-position: 5px center;
-  background-repeat: no-repeat;
-
-  border: 1px solid black;
-  border-radius: 5px;
-
-  font-weight: bold;
-}
-
-/* ========== OVERVIEW TABLES ========== */
-
-.overview-section {
-  margin-bottom: 2rem;
-  border: 1px solid black;
-
-  caption {
-    padding: 1rem;
-  }
-
-  .dataTables_wrapper {
-    padding: 0.5rem 1rem 1rem;
-  }
-}
-
-.subheading {
-  background-color: $light-blue;
-  padding: 0.05rem 1rem;
-  margin-bottom: 0.5rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h2 {
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 1rem;
-  }
-
-  a {
-    padding: 0.5rem;
-    padding-left: 30px;
-    background-color: white;
-    border-radius: 5px;
-    color: $link-dark;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    text-align: left;
-
-    background-image: $up-arrow-blue-2;
-    background-repeat: no-repeat;
-    background-size: 15px 20px;
-    background-position: 10px center;
-  }
-
-  a:hover,
-  a:focus {
-    background-color: $ground;
-  }
-}
-
-.read-only {
-  background-color: $gray-4;
-
-  a:hover,
-  a:focus {
-    background-color: $gray-2;
-  }
-}
-
-
-/* ===== Responsiveness  ===== */
-
-.instructions,
-.tracking-report {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-}
-
-@media (min-width: 800px) {
-  .instructions {
-    -ms-grid-column-span: 1;
-    grid-column: span 1;
-  }
-
-  .tracking-report {
-    -ms-grid-column-span: 1;
-    grid-column: span 1;
-    justify-self: right;
-  }
-}

@@ -1,21 +1,19 @@
 /* CSS Document */
 
-div.container
-{
-width:100%;
-margin:0px;
-border:1px solid gray;
-line-height:150%;
+div.container {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid gray;
+  line-height: 150%;
 }
-div.navBarContainer
-{
-margin:0px;
-padding:0px;
-background-color:#E1EFFF;
-line-height:150%;
-float: left;
-width: 12%;
-vertical-align: top;
+div.navBarContainer {
+  margin: 0px;
+  padding: 0px;
+  background-color: #e1efff;
+  line-height: 150%;
+  float: left;
+  width: 12%;
+  vertical-align: top;
 }
 
 /*
@@ -32,662 +30,677 @@ padding:0;
 margin:0;
 }
 */
-div.left
-{
-float:left;
-width:160px;
-margin:0;
-padding:1em;
-background:#ccc;
+div.left {
+  float: left;
+  width: 160px;
+  margin: 0;
+  padding: 1em;
+  background: #ccc;
 }
-div.content
-{
-margin-left:160px;
-border-left:1px solid gray;
-padding:1em;
+div.content {
+  margin-left: 160px;
+  border-left: 1px solid gray;
+  padding: 1em;
 }
-#commitrptaction
-{
-width:90%;/*
+#commitrptaction {
+  width: 90%; /*
 float:left;*/
-/*clear:left;
-*/}
-#confirmrptaction
-{
-width:100%;
-float:none;
-text-align:center;/*
+  /*clear:left;
+*/
+}
+#confirmrptaction {
+  width: 100%;
+  float: none;
+  text-align: center; /*
 	clear:left;*/
 }
 
 ul.navbar {
-list-style-type: none;
-padding: 0;
-margin: 0;
-position: left;
-top: 2em;
-/*left: 1em;*/
-width: 9em }
-ul.navbar li {
-	background: none;
-	margin: 0.2em 0;
-	list-style-type: none;
-	padding: 0.1em;
-	color: black;
-	text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: left;
+  top: 2em;
+  /*left: 1em;*/
+  width: 9em;
 }
-ul.navbar li A:hover {background: #C2D2E1; color: black; /*font-size:larger;*/}
+ul.navbar li {
+  background: none;
+  margin: 0.2em 0;
+  list-style-type: none;
+  padding: 0.1em;
+  color: black;
+  text-decoration: none;
+}
+ul.navbar li A:hover {
+  background: #c2d2e1;
+  color: black; /*font-size:larger;*/
+}
 /*A:link {text-decoration: none}
 A:visited {text-decoration: none}
 ul.navbar li A:active {text-decoration: none }*/
-A span {display: none;}
-ul.navbar li A:hover span {display:block;
-position:relative;
-padding: .1em; margin:.5em; 
-color:#000000; background:#999999;
-font:Verdana, Arial, Helvetica, sans-serif; font-size:10px;
-text-align:center}
+A span {
+  display: none;
+}
+ul.navbar li A:hover span {
+  display: block;
+  position: relative;
+  padding: 0.1em;
+  margin: 0.5em;
+  color: #000000;
+  background: #999999;
+  font: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
 
 h3.chosen {
-	margin: 0.5em 0 0 0;
-	padding:0;
-	width:100%;
-	font-size:1em;
-	color:black;
-	background:#FFFFFF;	
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1em;
+  color: black;
+  background: #ffffff;
 }
 h3.notchosen {
-	margin: 0.5em 0 0 0;
-	padding:0;
-	width:100%;
-	font-size:1em;
-	color:black;	
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1em;
+  color: black;
 }
 h3.smMargin {
-	padding:0;
-	margin: .5em 0 0.5em 0;
-		}
+  padding: 0;
+  margin: 0.5em 0 0.5em 0;
+}
 h4.navbar {
-	margin: 0.2em 0 0 0;
-	color:black;
-	font-weight:normal;
-	width:100%;
-	text-align:left;
+  margin: 0.2em 0 0 0;
+  color: black;
+  font-weight: normal;
+  width: 100%;
+  text-align: left;
 }
 h4.navbarchosen {
-	color:black;
-	margin: 0.2em 0 0 0;
-	width:100%;
-	color:black;
-	background:#FFFFFF;
-	font-weight:normal;
-	text-align:left;
+  color: black;
+  margin: 0.2em 0 0 0;
+  width: 100%;
+  color: black;
+  background: #ffffff;
+  font-weight: normal;
+  text-align: left;
 }
 h5.navbar {
-	margin: 0.1em 0 0 0.7em;
-	padding: 0;
-	color:black;
-	font-weight:normal;	
-	width:100%;
-	text-align:left;
+  margin: 0.1em 0 0 0.7em;
+  padding: 0;
+  color: black;
+  font-weight: normal;
+  width: 100%;
+  text-align: left;
 }
 h5.navbarchosen {
-	color: black;
-	margin: 0.1em 0 0 0.7em;
-	padding: 0em;
-	width: 100%;
-	text-align: left;
-	background: #FFFFFF;
-	font-weight: normal;
+  color: black;
+  margin: 0.1em 0 0 0.7em;
+  padding: 0em;
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  font-weight: normal;
 }
 ul.navbar li.chosen {
-color:black;
-background:#FFFFFF;	
-text-decoration: none;
-margin: 0.2em 0;
-list-style-type: none;
-padding: 0.1em;
+  color: black;
+  background: #ffffff;
+  text-decoration: none;
+  margin: 0.2em 0;
+  list-style-type: none;
+  padding: 0.1em;
 }
 
 ul.chosen {
-width:8.2em;
-float:right;
-text-align:right;
-background:white;
-border:none;
-font-size:larger;
-padding: .1em -3em .1em 1.5em ;
-margin:.1em 0em  .1em 12px ;
-border-right-style:none;
-border-right-color:white;
-border-right-width:0px;
+  width: 8.2em;
+  float: right;
+  text-align: right;
+  background: white;
+  border: none;
+  font-size: larger;
+  padding: 0.1em -3em 0.1em 1.5em;
+  margin: 0.1em 0em 0.1em 12px;
+  border-right-style: none;
+  border-right-color: white;
+  border-right-width: 0px;
 }
 
-ul.chosen li A:hover span {display:block;
-position:relative;
-padding: .1em; margin:.5em; 
-color:#000000; background:#999999;
-font:Verdana, Arial, Helvetica, sans-serif; font-size:10px;
-text-align:center}
-
-
-.container {background:#ccc; color:#fff; margin:0 15px;}
-.rtop, .rbottom{
-display:block;
-background:#fff;
+ul.chosen li A:hover span {
+  display: block;
+  position: relative;
+  padding: 0.1em;
+  margin: 0.5em;
+  color: #000000;
+  background: #999999;
+  font: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
 }
-.rtop *, .rbottom *{
-display: block;
-height: 1px;
-overflow: hidden;
-/*background:#F0F8FF;*/
-background:#ECF5FF
+
+.container {
+  background: #ccc;
+  color: #fff;
+  margin: 0 15px;
 }
-.r1{margin: 0 5px}
-.r2{margin: 0 3px}
-.r3{margin: 0 2px}
-.r4{
-margin: 0 1px;
-height: 2px
+.rtop,
+.rbottom {
+  display: block;
+  background: #fff;
+}
+.rtop *,
+.rbottom * {
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  /*background:#F0F8FF;*/
+  background: #ecf5ff;
+}
+.r1 {
+  margin: 0 5px;
+}
+.r2 {
+  margin: 0 3px;
+}
+.r3 {
+  margin: 0 2px;
+}
+.r4 {
+  margin: 0 1px;
+  height: 2px;
 }
 /* .heading2 is different than costshare css */
 .heading2 {
-	vertical-align: top;
-	float: left;
-	margin: 1em 1em 1em 1em;
-	padding: 0;
-	width: 90%; /* was @ 80% changed to view with yui */
-	text-align: left;
-	/*old color=background: #ECFFEC;*/
-	background:#E6FFE6;
-	clear:inherit;
+  vertical-align: top;
+  float: left;
+  margin: 1em 1em 1em 1em;
+  padding: 0;
+  width: 90%; /* was @ 80% changed to view with yui */
+  text-align: left;
+  /*old color=background: #ECFFEC;*/
+  background: #e6ffe6;
+  clear: inherit;
 }
 .reportheading {
-	vertical-align: top;
-	float: left;
-	margin: 0em .2em .1em .1em;
-	padding: .1em 0em 0em .20em;
-	width:99.6%; /* was @ 80% changed to view with yui */
-	text-align: left;
-	/*old color=background: #ECFFEC;*/
-	background:#E6FFE6;
-	clear:inherit;
+  vertical-align: top;
+  float: left;
+  margin: 0em 0.2em 0.1em 0.1em;
+  padding: 0 1rem;
+  width: 99.6%; /* was @ 80% changed to view with yui */
+  text-align: left;
+  /*old color=background: #ECFFEC;*/
+  background: #e6ffe6;
+  clear: inherit;
 }
+
+.reportheading h2 {
+	font-weight: bold;
+}
+
 .heading3 {
-	vertical-align: top;
-	float: left;
-	margin: .5em 1em .15em 1em;
-	padding: 0;
-	width: 90%;
-	text-align: left;
+  vertical-align: top;
+  float: left;
+  margin: 0.5em 1em 0.15em 1em;
+  padding: 0;
+  width: 90%;
+  text-align: left;
 }
 
 /* layout sections */
-.section{
-	float: left;
-	margin: 0.25em 1em 1em 1em;
-	width: 90%;
+.section {
+  float: left;
+  margin: 0.25em 1em 1em 1em;
+  width: 90%;
 }
-.section2{
-	float: left;
-	margin: 0.25em 1em 1em 1em;
-	width: 90%;
-	background-color:#C2D2E1;
+.section2 {
+  float: left;
+  margin: 0.25em 1em 1em 1em;
+  width: 90%;
+  background-color: #c2d2e1;
 }
-  /*Different than CostShare CSS, throws off Semi-annual Expenditure Confirmations  MGS*//*Changed to Subsection8 instead of subsection1*/
+/*Different than CostShare CSS, throws off Semi-annual Expenditure Confirmations  MGS*/ /*Changed to Subsection8 instead of subsection1*/
 .subSection8 {
-	margin: 0em .5em .5em 1.5em;
-	/*float:left;*/
-	width:90%;  /*this was 80% 5/21/08*/
-	/*clear:inherit;*/
+  margin: 0em 0.5em 0.5em 1.5em;
+  /*float:left;*/
+  width: 90%; /*this was 80% 5/21/08*/
+  /*clear:inherit;*/
 }
 .tabSection {
-	margin: 0.75em 0 .5em 1em;
-	float: left;
-	width: 95%;
+  margin: 0.75em 0 0.5em 1em;
+  float: left;
+  width: 95%;
 }
 .subSection2 {
-	margin:0;
+  margin: 0;
 }
-.csbottomBar{
-	float: left;
-	margin-bottom:1em;
+.csbottomBar {
+  float: left;
+  margin-bottom: 1em;
 }
 .indentElement {
-	margin: .5em;
-		
+  margin: 0.5em;
 }
 .leftIndentElement {
-	margin: 0 0 0 0.5em;
-		
+  margin: 0 0 0 0.5em;
 }
 /* Used for text sections within a subSection1*/
 .textSection {
-	padding: 0 0 0 0;
-	margin: 0 0 0 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
 /* Form Related classes */
 /* provides the box for the form in a shaded area */
 .formContainer {
-	background-color:#ECF5FF;
-	margin-top: .1em;
+  background-color: #ecf5ff;
+  margin-top: 0.1em;
 }
 .formContainer2 {
-	background-color:#B9CCDD;
-	margin-top: .1em;
+  background-color: #b9ccdd;
+  margin-top: 0.1em;
 }
 
 /* provides the area with margins in the formContainer to put the form content/elements */
 .formSubSection1 {
-	margin: .5em 1em 1em 1em;
-	padding-bottom: .5em;
-	padding-top: .5em;}
-	
-	div.box {
-	width: 100%;
-	padding: 0em;
-	background-color:#EAEAEA; 
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
+  margin: 0.5em 1em 1em 1em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
 
+div.box {
+  width: 100%;
+  padding: 0em;
+  background-color: #eaeaea;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
 }
 .box {
-	background-color:#EAEAEA;
+  background-color: #eaeaea;
 }
 .largetabright {
-	padding: 0 0 0 15em;
-	margin: 0 0 0 1em;	
+  padding: 0 0 0 15em;
+  margin: 0 0 0 1em;
 }
 .mediumtabright {
-	padding: 0 0 0 8em;
-	margin: 0 0 0 1em;	
+  padding: 0 0 0 8em;
+  margin: 0 0 0 1em;
 }
 /* different than costshare.css */
 .smalltableft {
-	padding: 0 0 0 3.5em;
-	margin: 0 0 0 1em;
+  padding: 0 0 0 3.5em;
+  margin: 0 0 0 1em;
 }
-
 
 /*tab  */
 #tab {
-	border-bottom : 1px solid #000000;
-	margin : 0;
-	padding-bottom : 19px;
-	padding-left : 10px;
+  border-bottom: 1px solid #000000;
+  margin: 0;
+  padding-bottom: 19px;
+  padding-left: 10px;
 }
 
-#tab ul, #tab li	{
-	display : inline;
-	list-style-type : none;
-	margin : 0;
-	padding : 0;
+#tab ul,
+#tab li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-	/* #ccc for border and tab.border-bottom above */
-#tab a:link, #tab a:visited	{
-	background : none;
-	border : 1px solid #000000;
-	color : #666;
-	float : left;
-	font-size : 3em;
-	font-weight : normal;
-	line-height : 14px;
-	margin-right : 2px; 
-	padding : 2px 10px 2px 10px;
-	text-decoration : none;
+/* #ccc for border and tab.border-bottom above */
+#tab a:link,
+#tab a:visited {
+  background: none;
+  border: 1px solid #000000;
+  color: #666;
+  float: left;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 14px;
+  margin-right: 2px;
+  padding: 2px 10px 2px 10px;
+  text-decoration: none;
 }
 h2.nav {
-	font-size : 1em;
-	font-weight : normal;
-	
+  font-size: 1em;
+  font-weight: normal;
 }
 /*#tab a:link.active, #tab a:visited.active	{
 	background : #fff;
 	border-bottom : 1px solid #fff;
 	color : #000;
 }*/
-#tab a:link.active, #tab a:visited.active	{
-	background : blue;
-	border-bottom : 1px solid #fff;
-	color : white;
+#tab a:link.active,
+#tab a:visited.active {
+  background: blue;
+  border-bottom: 1px solid #fff;
+  color: white;
 }
-#tab a:link.Here, #tab a:visited.Here  {background: blue; border: 2px solid #000000; border-bottom:none; color:white}
-
-#tab a:hover	{
-	color : #f00;
+#tab a:link.Here,
+#tab a:visited.Here {
+  background: blue;
+  border: 2px solid #000000;
+  border-bottom: none;
+  color: white;
 }
 
-	
-body.section-1 #tab li#nav-1 a, 
+#tab a:hover {
+  color: #f00;
+}
+
+body.section-1 #tab li#nav-1 a,
 body.section-2 #tab li#nav-2 a,
 body.section-3 #tab li#nav-3 a,
 body.section-4 #tab li#nav-4 a {
-	background : none;
-	border-bottom : 1px solid #fff;
-	color : #000;
+  background: none;
+  border-bottom: 1px solid #fff;
+  color: #000;
 }
 
 #tab #subnav-1,
 #tab #subnav-2,
 #tab #subnav-3,
 #tab #subnav-4 {
-	display : none;
-	width: 90%;
+  display: none;
+  width: 90%;
 }
 
-body.section-1 #tab ul#subnav-1, 
+body.section-1 #tab ul#subnav-1,
 body.section-2 #tab ul#subnav-2,
 body.section-3 #tab ul#subnav-3,
 body.section-4 #tab ul#subnav-4 {
-	display : inline;
-	left : 10px;
-	position : absolute;
-	top : 95px;
+  display: inline;
+  left: 10px;
+  position: absolute;
+  top: 95px;
 }
 
-body.section-1 #tab ul#subnav-1 a, 
+body.section-1 #tab ul#subnav-1 a,
 body.section-2 #tab ul#subnav-2 a,
 body.section-3 #tab ul#subnav-3 a,
 body.section-4 #tab ul#subnav-4 a {
-	background : #fff;
-	border : none;
-	border-left : 1px solid #ccc;
-	color : #999;
-	font-size : smaller;
-	font-weight : bold;
-	line-height : 10px;
-	margin-right : 4px;
-	padding : 2px 10px 2px 10px;
-	text-decoration : none;
+  background: #fff;
+  border: none;
+  border-left: 1px solid #ccc;
+  color: #999;
+  font-size: smaller;
+  font-weight: bold;
+  line-height: 10px;
+  margin-right: 4px;
+  padding: 2px 10px 2px 10px;
+  text-decoration: none;
 }
 
- #tab ul a:hover {
-	color : #f00 !important;
+#tab ul a:hover {
+  color: #f00 !important;
 }
 
-table.tblcommitment
-  { 
-     font-family:arial;
-/*     font-size:12pt;*/
-     background-color:white;
-     width:80%;
-     border-color:black;
-     border-width:1px;
-  }
-  th.tblcommitment
-  {
-/*     font-size:12pt;*/
-     color:black;
-	  text-align:left;
-  }
+table.tblcommitment {
+  background-color: white;
+  border: 1px solid black;
+  width: 80%;
+}
+table.tblcommitment thead {
+  background-color: #e6e6e6;
+  color: black;
+  text-align: left;
+}
+table.tblcommitment thead th.tblcommitment {
+  color: black;
+  font-weight: bold;
+}
+table.tblcommitment td,
+table.tblcommitment th {
+  padding: 0.5rem 0.75rem;
+}
 
-  tr.tblcommitment
-  { 
-  }
-
-  td.tblcommitment
-  {  
-/*     font-size:12pt;*/
-     background-color:white;
-     color:black;
-     border-width:1px;
-     text-align:left;
-  }
-div.cssectionCenter
- {	
- 	text-align:center;
-	float: left;
-	margin: 0.25em 1em 1em 1em;
-	width: 80%;
-  }
-  #cfopamt
-  {
+div.cssectionCenter {
+  text-align: center;
+  float: left;
+  margin: 0.25em 1em 1em 1em;
+  width: 80%;
+}
+#cfopamt {
   text-align: right;
   padding: 0 3em 0 0;
-  margin-bottom:-3px;
-  width:10%;
-  }
-  #cfopamthiglighted
-  {
-  background: #B0C4DE;
-  bgcolor:#B0C4DE;
+  margin-bottom: -3px;
+  width: 10%;
+}
+#cfopamthiglighted {
+  background: #b0c4de;
+  bgcolor: #b0c4de;
   text-align: right;
   padding: 0 3em 0 0;
-  margin-bottom:-3px;
-  width:10%;
-  }
+  margin-bottom: -3px;
+  width: 10%;
+}
 
- 
-.Line
-{
-border-bottom-color:##000000;
-border-bottom-style:solid;
-border-bottom-width:medium;
+.Line {
+  border-bottom-color: ##000000;
+  border-bottom-style: solid;
+  border-bottom-width: medium;
 }
-.textRight
-{
-text-align:right;
+.textRight {
+  text-align: right;
 }
-.textLeft
-{
-text-align:left;
+.textLeft {
+  text-align: left;
 }
-.textCenter
-{
-text-align:center;
+.textCenter {
+  text-align: center;
 }
 /* The msgbox items are required for error pages that
-do not have other text.*/ 
-.msgbox 
-{
-	color:maroon;
-	font-size:12pt;
-	font-weight:bold;
-	text-align: left;
-	margin: 1em 3em 1em 3em;
-	font-family:verdana;
-	font-size:108%; 
+do not have other text.*/
+.msgbox {
+  color: maroon;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: left;
+  margin: 1em 3em 1em 3em;
+  font-family: verdana;
+  font-size: 108%;
 }
 
-.msgbox ul
-{
-	text-align: left;
-	margin: .5em 0em .5em .5em;
+.msgbox ul {
+  text-align: left;
+  margin: 0.5em 0em 0.5em 0.5em;
 }
-.msgbox li
-{
-	text-align: left;
-	margin: .5em 0em .5em .5em;
-	list-style: disc inside;
+.msgbox li {
+  text-align: left;
+  margin: 0.5em 0em 0.5em 0.5em;
+  list-style: disc inside;
 }
 /* These errormsg styles are used for inline error messages. */
-.errormsg 
-{
-	text-align: left;
-	margin: 1em 6em 1em 6em;
+.errormsg {
+  text-align: left;
+  margin: 1em 6em 1em 6em;
 }
 
-.errormsg ul
-{
-	text-align: left;
-	margin: .5em 0em .5em .5em;
+.errormsg ul {
+  text-align: left;
+  margin: 0.5em 0em 0.5em 0.5em;
 }
-.errormsg li
-{
-	text-align: left;
-	margin: .5em 0em .5em .5em;
-	list-style: disc inside;
+.errormsg li {
+  text-align: left;
+  margin: 0.5em 0em 0.5em 0.5em;
+  list-style: disc inside;
 }
 
 /* */
-.WidthNinety
-{width:=90%;
+.WidthNinety {
+  width: =90%;
 }
-.widthHundred
-{width:100%;
+.widthHundred {
+  width: 100%;
 }
-.WidthNinetyFive
-{width:95%;
+.WidthNinetyFive {
+  width: 95%;
 }
-.transferKol
-{border-bottom-style:solid;
-text-align:center;
-border-bottom-color:#000000;
-border-bottom-width:thin;
+.transferKol {
+  border-bottom-style: solid;
+  text-align: center;
+  border-bottom-color: #000000;
+  border-bottom-width: thin;
 }
-.transferKolTop
-{border-top-style:solid;
-text-align:center;
-border-top-color:#000000;
-border-top-width:thin;
-padding:.1em,0em,0em,0em;
-
+.transferKolTop {
+  border-top-style: solid;
+  text-align: center;
+  border-top-color: #000000;
+  border-top-width: thin;
+  padding: 0.1em, 0em, 0em, 0em;
 }
-
 
 /* Will need to change so that Grid.CSS does not overwrite*/
 /* base.css, part of YUI's CSS Foundation */
 
 h1 {
-	/*18px via YUI Fonts CSS foundation*/
-	font-size:138.5%;  
-	color:black;
+  /*18px via YUI Fonts CSS foundation*/
+  font-size: 138.5%;
+  color: black;
 }
 h2 {
-	/*16px via YUI Fonts CSS foundation*/
-	font-size:123.1%; 
+  /*16px via YUI Fonts CSS foundation*/
+  font-size: 123.1%;
 }
 h3 {
-	/*14px via YUI Fonts CSS foundation*/
-	font-size:108%;  
+  /*14px via YUI Fonts CSS foundation*/
+  font-size: 108%;
 }
-h1,h2,h3 {
-	/* top & bottom margin based on font size */
-	margin:1em 0;
+h1,
+h2,
+h3 {
+  /* top & bottom margin based on font size */
+  margin: 1em 0;
 }
-h1,h2,h3,h4,h5,h6,strong {
-	/*bringing boldness back to headers and the strong element*/
-	font-weight:bold; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  /*bringing boldness back to headers and the strong element*/
+  font-weight: bold;
 }
 .bolded {
-	/*bringing boldness back to headers and the strong element*/
-	font-weight:bold; 
+  /*bringing boldness back to headers and the strong element*/
+  font-weight: bold;
 }
-abbr,acronym {
-	/*indicating to users that more info is available */
-	border-bottom:1px dotted #000;
-	cursor:help;
-} 
+abbr,
+acronym {
+  /*indicating to users that more info is available */
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
 em {
-	/*bringing italics back to the em element*/
-	font-style:italic;
+  /*bringing italics back to the em element*/
+  font-style: italic;
 }
-.TransferStatusTitle1
-{
-margin-left:.1em;
-padding-left:.1em;
-margin-right:.1em;
+.TransferStatusTitle1 {
+  margin-left: 0.1em;
+  padding-left: 0.1em;
+  margin-right: 0.1em;
 }
-.TransferStatusTitle2
-{
-margin-left:1em;
-padding-left:1em;
-margin-right:1em;
-width:15%;}
-.TransferStatusTitle3
-{
-margin-left:.1em;
-padding-left:.8em;
-width:10%;}
+.TransferStatusTitle2 {
+  margin-left: 1em;
+  padding-left: 1em;
+  margin-right: 1em;
+  width: 15%;
+}
+.TransferStatusTitle3 {
+  margin-left: 0.1em;
+  padding-left: 0.8em;
+  width: 10%;
+}
 
-.TransferStatus1
-{margin-left:.1px;
-padding-left:1em;
-width:"5";
+.TransferStatus1 {
+  margin-left: 0.1px;
+  padding-left: 1em;
+  width: "5";
 }
-.TransferStatus2
-{
-margin-left:2px;
-padding-left:3em;
-width:"90";
+.TransferStatus2 {
+  margin-left: 2px;
+  padding-left: 3em;
+  width: "90";
 }
-.TransferStatus3
-{
-margin-left:1px;
-padding-left:2em;
-width:"45"}
+.TransferStatus3 {
+  margin-left: 1px;
+  padding-left: 2em;
+  width: "45";
+}
 
 .smallIndent {
-	margin-left: .3em; 
+  margin-left: 0.3em;
 }
-div.navBarContainer h2{
-	color:black;
-	}
-div.navBarContainer h3{
-	color:black;
-	}
-	
-
-.fineprint
-{
-    FONT-SIZE:75%;
-    FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
-	PADDING-RIGHT: 0px;
-    PADDING-LEFT: 0px;
-    PADDING-BOTTOM: 0px;
-    MARGIN: 0px;
-    PADDING-TOP: 0px;
+div.navBarContainer h2 {
+  color: black;
+}
+div.navBarContainer h3 {
+  color: black;
 }
 
-.DocError{
-    FONT-WEIGHT: bold;
-    FONT-SIZE: 12pt;
-    COLOR: maroon
+.fineprint {
+  font-size: 75%;
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  padding-top: 0px;
 }
 
-.Center
-{
-text-align:center;}
+.DocError {
+  font-weight: bold;
+  font-size: 12pt;
+  color: maroon;
+}
 
-.csccconfirmbody{
-border:solid;
-border-width:thin;
-border-color:#66CC99;
-//width:100%;
-background-color:#FFFFFF}
+.Center {
+  text-align: center;
+}
 
-.greenbackground{
-background:#E6FFE6;}
+.csccconfirmbody {
+  margin-top: 1rem;
+  border: none;
+}
 
+.greenbackground {
+  background: #e6ffe6;
+}
 
-.JustificationSmTxt{
-font-family:Arial;
-font-size:11px;
-display:block; 
-position: relative;
-text-align: left ; 
-font-family:Arial;
-text-align:left;
-word-wrap:break-word;}
+.JustificationSmTxt {
+  font-family: Arial;
+  font-size: 11px;
+  display: block;
+  position: relative;
+  text-align: left;
+  font-family: Arial;
+  text-align: left;
+  word-wrap: break-word;
+}
 
-.noborder{
-border:none;}
+.noborder {
+  border: none;
+}
 
 .popupHeader {
-	width:100%;
+  width: 100%;
 }
-.drilldownTitleColor
-{
-background:#3F4958;
-background-color:#3F4958;
-color:#fefefe;
+.drilldownTitleColor {
+  background: #3f4958;
+  background-color: #3f4958;
+  color: #fefefe;
 }
 /* Popup Window Styles */
- .drilldownTitleRight a, .drilldownTitleRight a:visited, .drilldownTitleRight a:focus {
+.drilldownTitleRight a,
+.drilldownTitleRight a:visited,
+.drilldownTitleRight a:focus {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
@@ -697,7 +710,9 @@ color:#fefefe;
   text-decoration: none;
   border-bottom: 1px solid white;
 }
- .drilldownTitleLeft a, .drilldownTitleLeft a:visited, .drilldownTitleLeft a:focus {
+.drilldownTitleLeft a,
+.drilldownTitleLeft a:visited,
+.drilldownTitleLeft a:focus {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
@@ -708,17 +723,14 @@ color:#fefefe;
   border-bottom: 1px solid white;
 }
 
- .drilldownTitleLeft button {
- margin: 0.5em;
- 
+.drilldownTitleLeft button {
+  margin: 0.5em;
 }
- .drilldownTitleLeft button:focus  {
-border: 1px solid white;
- 
+.drilldownTitleLeft button:focus {
+  border: 1px solid white;
 }
- .drilldownTitleRight button:focus  {
-border: 1px solid white;
- 
+.drilldownTitleRight button:focus {
+  border: 1px solid white;
 }
 /*.drilldownTitleLeft button:hover {
   color: white;
@@ -727,13 +739,12 @@ border: 1px solid white;
 }*/
 
 .drilldownTitleRight {
-  background-color: #3F4958
+  background-color: #3f4958;
 }
 
 .drilldownTitleRight h1 {
- color: #fefefe;
- }
- .drilldownTitleColor h1 {
- color: #fefefe;
- }
-
+  color: #fefefe;
+}
+.drilldownTitleColor h1 {
+  color: #fefefe;
+}
