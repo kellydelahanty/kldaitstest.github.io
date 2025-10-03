@@ -237,7 +237,7 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
     margin-right: 1rem;
   }
 
-  a {
+  a.back-to-top {
     padding: 0.5rem;
     padding-left: 30px;
     background-color: white;
@@ -254,8 +254,8 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
     background-position: 10px center;
   }
 
-  a:hover,
-  a:focus {
+  a.back-to-top :hover,
+  a.back-to-top :focus {
     background-color: $ground;
   }
 }

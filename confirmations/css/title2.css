@@ -160,7 +160,7 @@
   display: inline-block;
   margin-right: 1rem;
 }
-.subheading a {
+.subheading a.back-to-top {
   padding: 0.5rem;
   padding-left: 30px;
   background-color: white;
@@ -175,8 +175,8 @@
   background-size: 15px 20px;
   background-position: 10px center;
 }
-.subheading a:hover,
-.subheading a:focus {
+.subheading a.back-to-top :hover,
+.subheading a.back-to-top :focus {
   background-color: #e7edf2;
 }
 

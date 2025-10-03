@@ -748,3 +748,8 @@ div.navBarContainer h3 {
 .drilldownTitleColor h1 {
   color: #fefefe;
 }
+
+.textRightBMargin {
+  text-align: right;
+  margin: 10px;
+}
