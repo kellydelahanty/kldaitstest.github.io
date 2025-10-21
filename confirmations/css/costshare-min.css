@@ -1595,3 +1595,44 @@ main {
     color: white;
   }
   
+
+
+/* ====================== Send to pages - title 2 update ====================== */
+ul.actionlist {
+  padding: 0;
+  margin: 0px;
+  width: 100%;
+  color: black;
+}
+ul.actionlist h3.heading {
+  background-color: #b9ccdd;
+  padding: 1rem;
+  margin: 0;
+  font-size: 16px;
+}
+ul.actionlist h4.subheading {
+  background-color: #e6e6e6;
+  justify-content: start;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  margin-top: 0rem;
+}
+ul.actionlist li {
+  font-weight: normal;
+  margin: 0;
+  list-style-type: none;
+}
+ul.actionlist li > ul {
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+ul.actionlist li > ul li ul {
+  margin-left: 1rem;
+}
+ul.actionlist li > ul li ul li {
+  margin: 0.75rem 0;
+}
+ul.actionlist > li {
+  border: 1px solid #b9ccdd;
+  margin-bottom: 2rem;
+}

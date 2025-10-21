@@ -7573,6 +7573,16 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/confirmations\/graphics\/cscc_checkboxbutton.gif" : {
+      "ft" : 4194304,
+      "iS" : 928,
+      "oA" : 0,
+      "oAP" : "\/confirmations\/graphics\/cscc_checkboxbutton.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
     "\/confirmations\/graphics\/CSCCexcel.gif" : {
       "ft" : 4194304,
       "iS" : 1351,
@@ -7722,6 +7732,16 @@
       "oA" : 0,
       "oAP" : "\/confirmations\/graphics\/System-logo.sketch",
       "oF" : 0
+    },
+    "\/confirmations\/graphics\/user-alt-text.gif" : {
+      "ft" : 4194304,
+      "iS" : 1513,
+      "oA" : 0,
+      "oAP" : "\/confirmations\/graphics\/user-alt-text.gif",
+      "oF" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "rq" : 75
     },
     "\/confirmations\/js\/datatables\/css\/buttons.dataTables.min.css" : {
       "aP" : 1,
@@ -11581,6 +11601,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/confirmations\/oveview-tables.html",
+      "oF" : 0
+    },
+    "\/confirmations\/send-to.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/confirmations\/send-to.html",
       "oF" : 0
     },
     "\/confirmations\/site.webmanifest" : {
