@@ -5,36 +5,42 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View access : University of Illinois System Access | University of Illinois System </title>
+    <title>Access Rights Management for USCs | University of Illinois System </title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../../css/app.css">
-
-        <!--keeps older styles in place-->
-        <link rel="stylesheet" href="../../css/devhelp.css">
 </head>
 
 <body>
     <aside id="skip"><a href="#main">skip to content</a></aside>
     <header>
 
+        <div class="swap">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell medium-12">
+                        <form>
+                            <!-- the current persona and the switch button only show if they have assumed another identity-->
+                            <span class="otherID"> Viewing as <em>abelincoln</em> | <button
+                                    class="button clear revertID">Switch to my
+                                    account</button> </span>
+                            <label for="swapper">Assume other identity: </label>
+                            <input type="text" id="swapper" class="input-small" placeholder="enter uin"><button
+                                type="submit" class="button swap-btn">Enter
+                                UIN</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="topbrand">
             <div class="grid-x">
-               <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../../img/sys-logo.png"
+                <div class="brand cell medium-4 small-order-2 medium-order-1"><img src="../../img/sys-logo.png"
                         alt="University of Illinois System" class="syslogo">
                 </div>
                 <div class="cell medium-8 userblock small-order-1 medium-order-2">
-                    <a href="settings.html" class="button clear prefs" aria-label="Preferences"><img src="../../img/unused/prefs.png"
-                            alt="Preferences"></a>
-
-
-                    <span>Billy Donovan <span class="sdetail">658884541</span></span>
-                    <label for="current-unit" class="show-for-sr">Select unit to manage:</label>
-                    <select class="pulldown-look" id="current-unit">
-                        <option selected>Basketball Theory, Dept of</option>
-                        <option>Sports and Leisure, Div of</option>
-                    </select>
+                    <span>Jonathan Sims <span class="sdetail">(666777888)</span></span>
 
                     <a href="logout" class="button log-btn">Log out</a>
                 </div>
@@ -43,8 +49,8 @@
 
             <div class="grid-x">
                 <div class="cell medium-12 appname">
-                    <!-- no link on the main page-->
-                    <a href="index"><img src="../../img/appname.png" alt="Access Rights Management application"></a>
+                    <a href="dash.html">
+                        <img src="../../img/appname.png" alt="Access Rights Management application"></a>
                 </div>
             </div>
         </div>
@@ -60,60 +66,17 @@
     <main id="main">
         <div class="grid-container">
             <div class="grid-x">
-                <div class="cell bodycard change">
-                    <h1>Request or change access
-                    </h1>
-
-                    <div class="change-single">
-                        <div class="profile-single is-person">
-                            <div class="profile-type grid-x">
-                                <div class="profile-type-name">
-                                    <h2>Zach LaVine</h2>
-
-                                </div>
-                                <div class="profile-type-details">
-
-                                    Education Administration [335000]
-
-
-                                </div>
-                                <div class="profile-type-flags">
-                                    <div><strong>zlavine</strong> / 65214551</div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="redo-search cart">
-                            <a href="back-to-search" class="cancel-link">Cancel</a>
-                        </div>
-
-                    </div>
-
-                    <div class="grid-x">
-                        <div class="cell">
-
-
-                            You are adding the following:
-
-                            <ul>
-                                <li>list them here. Cat: subcat: app : profile : settings</li>
-                            </ul>
-
-
-
-                            <p><button class="button batch">Submit request</button></p>
-                        </div>
-
-                    </div>
+                <div class="cell bodycard">
+                    <h1>I'm the title</h1>
 
                 </div>
             </div>
+
+
         </div>
+
+
     </main>
-
-
-
 
     <footer>
         <div class="helpbar">
