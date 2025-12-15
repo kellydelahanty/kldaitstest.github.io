@@ -7528,12 +7528,20 @@
       "oS" : 0,
       "pg" : 0
     },
-    "\/confirmations\/grant-info-costshare-current.html" : {
+    "\/confirmations\/drilldown-current.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/confirmations\/grant-info-costshare-current.html",
+      "oAP" : "\/confirmations\/drilldown-current.html",
+      "oF" : 0
+    },
+    "\/confirmations\/drilldown-update.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/confirmations\/drilldown-update.html",
       "oF" : 0
     },
     "\/confirmations\/grant-info-costshare-update.html" : {
@@ -7542,14 +7550,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/confirmations\/grant-info-costshare-update.html",
-      "oF" : 0
-    },
-    "\/confirmations\/grant-info-current.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/confirmations\/grant-info-current.html",
       "oF" : 0
     },
     "\/confirmations\/grant-info-update.html" : {

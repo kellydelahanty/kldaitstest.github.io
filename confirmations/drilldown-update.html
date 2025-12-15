@@ -1,0 +1,1204 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>[WIP Grant page]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/common-app.css">
+  <link rel="stylesheet" href="css/costshare.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/reset-fonts-grids.css">
+  <link rel="stylesheet" href="css/CSCCReport.css">
+
+  <link rel="stylesheet" href="css/title2.css">
+
+
+</head>
+
+<body>
+  <!--Skip link for keyboard users-->
+  <aside id="skip"><a href="#main">jump to main content</a></aside>
+
+
+  <!--Header-->
+  <header>
+    <!--U of I System wordmark and Site Name-->
+    <div class="site-identity desktop-display">
+      <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+          alt="University of Illinois System" class="wordmark"></a>
+      <div class="app-name"> <a href="#" class="plainlink">Semi-Annual Confirmation</a> </div>
+    </div>
+
+    <!--User name, Change Roles link, and log out buttons-->
+    <div class="account">
+      Martin Blackwood (<a href="#">Change Roles</a>)
+      <a class="logout" href="#">Log Out</a>
+    </div>
+
+    <div class="site-identity mobile-display">
+      <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+          alt="University of Illinois System" class="wordmark"></a>
+      <div class="app-name"> <a href="#" class="plainlink">Fiscal Control and Internal Auditing Act (FCIAA) Name</a>
+      </div>
+    </div>
+  </header>
+
+  <!--Navigation-->
+  <nav class="navbar">
+    <button class="mobile-nav-toggle">
+      Menu
+    </button>
+
+    <ul class="navbar-links">
+      <li><a href="overview.html" class="current">Overview</a></li>
+      <li><a href="#">Sent to Dept</a></li>
+      <li><a href="#">Sent to Archive</a></li>
+      <li><a href="#">View Archive</a></li>
+      <li><a href="#">Admin</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="center_app">
+    <h1 class="offscreen">Grant Reports</h1>
+    <div class="clearboth"></div>
+
+
+    <nav id="navcontainer" title="Report period navigation">
+      <ul>
+        <li>&nbsp;</li>
+
+        <li>
+          <a href="#" class="active" title="Current Page">Direct Expenditures</a>
+        </li>
+        <li>
+          <a href="grant-info-costshare-update.html" class="noPrint" title="View the Cost Sharing Page">Cost Sharing</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="clearboth"></div>
+    <form>
+      <div class="csccbody">
+
+        <!--Report Heading -->
+        <div class="reportheading">
+          <h2>Grant A9976 - 106 UIUC FY24 FWS</h2>
+          <div class="hor-list">
+            <div><span class="psuedo-label">Fund Org:</span> 106 - Cntl - OBFS - Grants &amp; Contr - Control - Bus
+              &amp; Fin Services</div>
+            <div><span class="psuedo-label">Fund PI:</span> Trame, Michelle Kay </div>
+            <div><span class="psuedo-label">Date Range:</span> 01/01/25 - 06/30/2025</div>
+            <div><span class="psuedo-label">Project End Date:</span> 06/30/2024 </div>
+          </div>
+        </div>
+        <div class="clearboth"></div>
+
+        <div class="csccconfirmbody">
+          <div class="subSection1">
+
+
+            <!--Instructions-->
+            <div class="textSection">
+              The expenditures below have been recorded in Banner for the six month reporting period. Salary and wage
+              payments are for individuals whose names, percentages of effort, and payments have been reported in
+              monthly payroll distribution vouchers. For each fund line the PI/Confirmer or Department Contact must
+              select the appropriate transfer status. Attach supporting documentation as needed.
+            </div>
+
+            <!--Table - Default-->
+            <div class="formContainer1 hidden">
+              <div class="formSubSection1">
+                <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" id="chart" class="expendCol1">Chart</th>
+                      <th rowspan="2" id="fund" class="expendCol2">Fund</th>
+                      <th rowspan="2" id="org" class="expendCol3">Org</th>
+                      <th rowspan="2" id="directCost" class="cfopamt expendCol4">All Other<br>Direct Costs</th>
+                      <th rowspan="2" id="salaries" class="cfopamt expendCol5">Salaries<br>and Wages</th>
+                      <th id="chooseCost" colspan="3" class="transferKol">Choose Cost Transfer Status</th>
+                      <th rowspan="2" id="docs">Docs</th>
+                    </tr>
+                    <tr>
+                      <th id="noneRequired" headers="chooseCost" class="TransferStatusTitle1">None Required</th>
+                      <th id="processed" headers="chooseCost" class="TransferStatusTitle2">Processed before Confirmation
+                      </th>
+                      <th id="pending" headers="chooseCost" class="TransferStatusTitle3">Pending in Banner</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">498124</th>
+                      <td headers="org">434054</td>
+                      <td headers="directCost chart fund org" class="cfopamt">
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999944,1,498124,434054,5787,'5C3B42F1-FD13-4467-A7CA-7CCF4FAE231C');">
+                          $1,000,000,000.00
+                        </a>
+                      </td>
+                      <td headers="salaries chart fund org" class="cfopamt">
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999944,1,498124,434054,5787,'5C3B42F1-FD13-4467-A7CA-7CCF4FAE231C');">
+                          ($81.60)</a>
+                      </td>
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None5787">None required</label>
+                        <input type="radio" name="TransferStatus.Line5787" id="None5787" value="None,5787"
+                          aria-label="TransferStatus of None Required for Fund 1-498124">
+                      </td>
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before5787">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line5787" id="Before5787" value="Before,5787"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-498124">
+                      </td>
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner5787">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line5787" id="Banner5787" value="Banner,5787"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-498124">
+                      </td>
+                      <td headers="docs">
+                        <input type="image" name="pklineid" alt="Attachment indicator" value="5787"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=5787&amp;packetVersionID=5C3B42F1-FD13-4467-A7CA-7CCF4FAE231C','DOCs',530,450);">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">498124</th>
+                      <td headers="org">434054</td>
+                      <td headers="directCost chart fund org" class="cfopamt">
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999944,1,498124,434054,5787,'5C3B42F1-FD13-4467-A7CA-7CCF4FAE231C');">
+                          $82,000.00
+                        </a>
+                      </td>
+                      <td headers="salaries chart fund org" class="cfopamt">
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999944,1,498124,434054,5787,'5C3B42F1-FD13-4467-A7CA-7CCF4FAE231C');">
+                          $532.00</a>
+                      </td>
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None5787">None required</label>
+                        <input type="radio" name="TransferStatus.Line5787" id="None5787" value="None,5787"
+                          aria-label="TransferStatus of None Required for Fund 1-498124">
+                      </td>
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before5787">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line5787" id="Before5787" value="Before,5787"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-498124">
+                      </td>
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner5787">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line5787" id="Banner5787" value="Banner,5787"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-498124">
+                      </td>
+                      <td headers="docs">
+                        <input type="image" name="pklineid" alt="Attachment indicator" value="5787"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=5787&amp;packetVersionID=5C3B42F1-FD13-4467-A7CA-7CCF4FAE231C','DOCs',530,450);">
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                  <tfoot>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td headers="chooseCost" colspan="4" class="transferKolTop">
+                        <button
+                          onclick="javascript:submit2ConfirmationSummary('saveConfirmationSummaryReport','-1999999954','3341','220','8784FD3A-7BDE-4038-84A5-2B2FF7D6D603');">
+                          <img src="./graphics/disk.png">
+                          Save Selections
+                        </button>
+                      </td>
+                    </tr>
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>
+
+            <!--Table - Drilldown - lvl 1 (Same for Direct cost and salaries) -->
+            <p>Level 1 (Same for Direct Cost and Salaries)</p>
+            <div class="formContainer1 ">
+              <div class="formSubSection1">
+                <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" id="chart" class="expendCol1">Chart</th>
+                      <th rowspan="2" id="fund" class="expendCol2">Fund</th>
+                      <th rowspan="2" id="org" class="expendCol3">Org</th>
+                      <th rowspan="2" id="directCost" class="cfopamt expendCol4">All&nbsp;Other<br>Direct Costs</th>
+                      <th rowspan="2" id="salaries" class="cfopamt expendCol5">Salaries&nbsp;and<br>Wages</th>
+
+                      <th id="chooseCost" colspan="3" class="transferKol">
+
+                        Choose Cost Transfer Status</th>
+
+                      <th rowspan="2" id="docs">Docs</th>
+                    </tr>
+                    <tr>
+
+                      <th id="noneRequired" headers="chooseCost" class="TransferStatusTitle1">None Required</th>
+                      <th id="processed" headers="chooseCost" class="TransferStatusTitle2">Processed&nbsp;before
+                        Confirmation</th>
+                      <th id="pending" headers="chooseCost" class="TransferStatusTitle3">Pending&nbsp;in Banner</th>
+
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">476297</th>
+                      <td headers="org">220001</td>
+                      <td headers="directCost chart fund org" class="cfopamt">
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999948,1,476297,220001,1322,'8DC62C0A-1F17-445B-A524-6300A5049481');">$143.57</a>
+                      </td>
+                      <td headers="salaries chart fund org" class="cfopamt">
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999948,1,476297,220001,1322,'8DC62C0A-1F17-445B-A524-6300A5049481');">
+                          $402.17</a>
+                      </td>
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1322">None required</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="None1322" value="None,1322"
+                          aria-label="TransferStatus of None Required for Fund 1-476297" checked="">
+                      </td>
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1322">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="Before1322" value="Before,1322"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-476297" disabled="">
+                      </td>
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1322">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="Banner1322" value="Banner,1322"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-476297" disabled="">
+                      </td>
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1322"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=1322&amp;packetVersionID=8DC62C0A-1F17-445B-A524-6300A5049481','DOCs',530,450);">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">476297</th>
+                      <td headers="org">220019</td>
+                      <td headers="directCost chart fund org" class="cfopamthiglighted">
+                        <a href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999948,1,476297,220019,1321,'8DC62C0A-1F17-445B-A524-6300A5049481');">$355,033.39</a>
+                      </td>
+                      <td headers="salaries chart fund org" class="cfopamt">
+                        <a href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999948,1,476297,220019,1321,'8DC62C0A-1F17-445B-A524-6300A5049481');">
+                          $466,675.84</a>
+                      </td>
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1321">None required</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="None1321" value="None,1321"
+                          aria-label="TransferStatus of None Required for Fund 1-476297" disabled="">
+                      </td>
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1321">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Before1321" value="Before,1321"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-476297" checked="">
+                      </td>
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1321">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Banner1321" value="Banner,1321"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-476297" disabled="">
+                      </td>
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1321"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=1321&amp;packetVersionID=8DC62C0A-1F17-445B-A524-6300A5049481','DOCs',530,450);">
+                      </td>
+                    </tr>
+
+
+                    <!--Drilldown Table-->
+                    <tr>
+                      <td headers="directCost" colspan="10" align="left">
+
+                        <table style="" class="box nested-table" summary="All Other Direct Costs Detail">
+                          <caption class="drilldownTitleColor">
+                            <h2 class="" id="directCost1" tabindex="0">
+                              All Other Direct Costs Detail
+                            </h2>
+                            <span class="drilldownBtns">
+                              <button id="popup_close" type="button" aria-label="close section">×</button>
+                            </span><br>
+                          </caption>
+                          <thead> 
+                            <tr>
+                              <th rowspan="2" id="AccountType" class="drillCol1"><strong>Account Type</strong></th>
+                              <th rowspan="2" id="Amount" class="drillColCosts"><strong>Amount</strong></th>
+                              <th rowspan="2" id="ExcelExport" style="text-align:right;padding-right:1em;">
+                                <input type="image" name="Save" alt="Export to Excel" id="ExportDetails"
+                                  value="Export to Excel" src="./graphics/CSCCexcel.gif">
+                                &nbsp;&nbsp;Export Details to Excel
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a
+                                  href="javascript:submit2AcctDetail('findConfirmationOtherCostDetailDrillDown',-1999999948,1,476297,220019,1321,956,220,25,'8DC62C0A-1F17-445B-A524-6300A5049481');">Benefit
+                                  Costs</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $113,499.05
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a
+                                  href="javascript:submit2AcctDetail('findConfirmationOtherCostDetailDrillDown',-1999999948,1,476297,220019,1321,956,220,16,'8DC62C0A-1F17-445B-A524-6300A5049481');">Equipment/Software/Capital
+                                  Lease</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $5,325.00
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a
+                                  href="javascript:submit2AcctDetail('findConfirmationOtherCostDetailDrillDown',-1999999948,1,476297,220019,1321,956,220,12,'8DC62C0A-1F17-445B-A524-6300A5049481');">Materials
+                                  and Supplies</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $158,249.14
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a
+                                  href="javascript:submit2AcctDetail('findConfirmationOtherCostDetailDrillDown',-1999999948,1,476297,220019,1321,956,220,14,'8DC62C0A-1F17-445B-A524-6300A5049481');">Services</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $59,300.92
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a
+                                  href="javascript:submit2AcctDetail('findConfirmationOtherCostDetailDrillDown',-1999999948,1,476297,220019,1321,956,220,13,'8DC62C0A-1F17-445B-A524-6300A5049481');">Transportation
+                                  Services</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $18,659.28
+                              </td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                  <tfoot>
+
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>
+
+            <p>Direct Costs - lvl 2</p>
+            <!--Table - Drilldown - Other Direct Costs - lvl 2 -->
+            <div class="formContainer1">
+              <div class="formSubSection1">
+                <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" id="chart" class="expendCol1">Chart</th>
+                      <th rowspan="2" id="fund" class="expendCol2">Fund</th>
+                      <th rowspan="2" id="org" class="expendCol3">Org</th>
+                      <th rowspan="2" id="directCost" class="cfopamt expendCol4">All&nbsp;Other<br>Direct Costs</th>
+                      <th rowspan="2" id="salaries" class="cfopamt expendCol5">Salaries&nbsp;and<br>Wages</th>
+
+                      <th id="chooseCost" colspan="3" class="transferKol">
+
+                        Choose Cost Transfer Status</th>
+
+                      <th rowspan="2" id="docs">Docs</th>
+                    </tr>
+                    <tr>
+
+                      <th id="noneRequired" headers="chooseCost" class="TransferStatusTitle1">None Required</th>
+                      <th id="processed" headers="chooseCost" class="TransferStatusTitle2">Processed&nbsp;before
+                        Confirmation</th>
+                      <th id="pending" headers="chooseCost" class="TransferStatusTitle3">Pending&nbsp;in Banner</th>
+
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">476297</th>
+                      <td headers="org">220019</td>
+
+                      <td headers="directCost chart fund org" class="cfopamthiglighted">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999948,1,476297,220019,1321,'8DC62C0A-1F17-445B-A524-6300A5049481');">$355,033.39</a>
+                      </td>
+
+
+                      <td headers="salaries chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999948,1,476297,220019,1321,'8DC62C0A-1F17-445B-A524-6300A5049481');">
+                          $466,675.84</a>
+                      </td>
+
+
+
+
+
+
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1321">None required</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="None1321" value="None,1321"
+                          aria-label="TransferStatus of None Required for Fund 1-476297" disabled="">
+                      </td>
+
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1321">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Before1321" value="Before,1321"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-476297" checked="">
+                      </td>
+
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1321">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Banner1321" value="Banner,1321"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-476297" disabled="">
+                      </td>
+
+
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1321"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=1321&amp;packetVersionID=8DC62C0A-1F17-445B-A524-6300A5049481','DOCs',530,450);">
+                      </td>
+
+                    </tr>
+
+                    <!--Drilldown-->
+                    <tr>
+                      <td headers="directCost" colspan="10" align="left" class="nested-table">
+  
+                        <!-- Account Detail Heading and Summary -->
+
+                        <div class="drilldownTitleColor">
+                          <h2 class="" id="AccountDetail1" tabindex="0">Account Detail</h2>
+                  
+                          <div class="drilldownBtns"> 
+                            <span class="">
+                                <button id="popup_back" type="button" aria-label="back to previous drill down">Back</button>
+                            </span>
+                            <span class="">
+                                <button id="popup_close" type="button" aria-label="close section">×</button>
+                            </span>
+                          </div>
+                          <h3>
+                            Transportation Services: <strong>$18,659.28</strong>
+                          </h3>
+              
+                        </div>
+
+
+                        <!-- Account Tables -->
+
+                        <h4>Account: 130510 - Mileage - Employee Reimbursement (Amt: $2,505.99)</h4>
+                        <table  
+                          summary="Other Direct Costs Detail by Account Code for Account 130510">
+                          <thead>
+                            <tr>
+                              <th id="TransDate130510">Trans Date</th>
+                              <th id="Amt2130510">Amt</th>
+                              <th id="DocNum130510">Doc#</th>
+                              <th id="Program130510">Program</th>
+                              <th id="Activity130510">Activity</th>
+                              <th id="TransDesc130510">Trans Desc</th>
+                              <th id="Employee130510">Employee</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                              <td headers="TransDate130510">01/27/2024</td>
+                              <td headers="Amt2130510" style="text-align:right;">$639.50</td>
+                              <td headers="DocNum130510">TE568995</td>
+                              <td headers="Program130510">191100</td>
+                              <td headers="Activity130510">A51</td>
+                              <td headers="TransDesc130510">Chen, Jin</td>
+                              <td headers="Employee130510"></td>
+                            </tr>
+
+                            <tr>
+                              <td headers="TransDate130510">03/25/2024</td>
+                              <td headers="Amt2130510" style="text-align:right;">$654.16</td>
+                              <td headers="DocNum130510">TE618627</td>
+                              <td headers="Program130510">191100</td>
+                              <td headers="Activity130510">A51</td>
+                              <td headers="TransDesc130510">Chen, Jin</td>
+                              <td headers="Employee130510"></td>
+                            </tr>
+
+                            <tr>
+                              <td headers="TransDate130510">05/06/2024</td>
+                              <td headers="Amt2130510" style="text-align:right;">$97.60</td>
+                              <td headers="DocNum130510">TE662422</td>
+                              <td headers="Program130510">191100</td>
+                              <td headers="Activity130510">A94</td>
+                              <td headers="TransDesc130510">Mahmood, Fahad</td>
+                              <td headers="Employee130510"></td>
+                            </tr>
+
+                            <tr>
+                              <td headers="TransDate130510">05/16/2024</td>
+                              <td headers="Amt2130510" style="text-align:right;">$344.22</td>
+                              <td headers="DocNum130510">TE673902</td>
+                              <td headers="Program130510">191100</td>
+                              <td headers="Activity130510">A94</td>
+                              <td headers="TransDesc130510">Bielinski, Nina Izabel Gomez.</td>
+                              <td headers="Employee130510"></td>
+                            </tr>
+
+                            <tr>
+                              <td headers="TransDate130510">06/05/2024</td>
+                              <td headers="Amt2130510" style="text-align:right;">$82.08</td>
+                              <td headers="DocNum130510">TE692820</td>
+                              <td headers="Program130510">191100</td>
+                              <td headers="Activity130510">A94</td>
+                              <td headers="TransDesc130510">Mahmood, Fahad</td>
+                              <td headers="Employee130510"></td>
+                            </tr>
+
+                            <tr>
+                              <td headers="TransDate130510">06/17/2024</td>
+                              <td headers="Amt2130510" style="text-align:right;">$688.43</td>
+                              <td headers="DocNum130510">TE703965</td>
+                              <td headers="Program130510">191100</td>
+                              <td headers="Activity130510">A23</td>
+                              <td headers="TransDesc130510">Mai, Peizhi</td>
+                              <td headers="Employee130510"></td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                        <h4>Account: 131140 - Foreign Travel-Toll/Park-Empl Reimb (Amt: $35.00)</h4>
+                        <table summary="Other Direct Costs Detail by Account Code for Account 131140">
+                          <thead>
+                            <tr>
+                              <th id="TransDate131140">Trans Date</th>
+                              <th id="Amt2131140">Amt</th>
+                              <th id="DocNum131140">Doc#</th>
+                              <th id="Program131140">Program</th>
+                              <th id="Activity131140">Activity</th>
+                              <th id="TransDesc131140">Trans Desc</th>
+                              <th id="Employee131140">Employee</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                              <td headers="TransDate131140">06/05/2024</td>
+                              <td headers="Amt2131140" style="text-align:right;">$35.00</td>
+                              <td headers="DocNum131140">TE692820</td>
+                              <td headers="Program131140">191100</td>
+                              <td headers="Activity131140">A94</td>
+                              <td headers="TransDesc131140">Mahmood, Fahad</td>
+                              <td headers="Employee131140"></td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+
+                  </tbody>
+
+                  <tfoot>
+
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>            
+            
+            <p>Salary - lvl 2</p>
+            <!--Table - Drilldown - Salary  - lvl 2 -->
+            <div class="formContainer1">
+              <div class="formSubSection1">
+                <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" id="chart" class="expendCol1">Chart</th>
+                      <th rowspan="2" id="fund" class="expendCol2">Fund</th>
+                      <th rowspan="2" id="org" class="expendCol3">Org</th>
+                      <th rowspan="2" id="directCost" class="cfopamt expendCol4">All&nbsp;Other<br>Direct Costs</th>
+                      <th rowspan="2" id="salaries" class="cfopamt expendCol5">Salaries&nbsp;and<br>Wages</th>
+
+                      <th id="chooseCost" colspan="3" class="transferKol">
+
+                        Choose Cost Transfer Status</th>
+
+                      <th rowspan="2" id="docs">Docs</th>
+                    </tr>
+                    <tr>
+
+                      <th id="noneRequired" headers="chooseCost" class="TransferStatusTitle1">None Required</th>
+                      <th id="processed" headers="chooseCost" class="TransferStatusTitle2">Processed&nbsp;before
+                        Confirmation</th>
+                      <th id="pending" headers="chooseCost" class="TransferStatusTitle3">Pending&nbsp;in Banner</th>
+
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">476297</th>
+                      <td headers="org">220001</td>
+
+                      <td headers="directCost chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999948,1,476297,220001,1322,'8DC62C0A-1F17-445B-A524-6300A5049481');">$143.57</a>
+                      </td>
+
+
+                      <td headers="salaries chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999948,1,476297,220001,1322,'8DC62C0A-1F17-445B-A524-6300A5049481');">
+                          $402.17</a>
+                      </td>
+
+
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1322">None required</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="None1322" value="None,1322"
+                          aria-label="TransferStatus of None Required for Fund 1-476297" checked="">
+                      </td>
+
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1322">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="Before1322" value="Before,1322"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-476297" disabled="">
+                      </td>
+
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1322">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="Banner1322" value="Banner,1322"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-476297" disabled="">
+                      </td>
+
+
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1322"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=1322&amp;packetVersionID=8DC62C0A-1F17-445B-A524-6300A5049481','DOCs',530,450);">
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">476297</th>
+                      <td headers="org">220019</td>
+
+                      <td headers="directCost chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999948,1,476297,220019,1321,'8DC62C0A-1F17-445B-A524-6300A5049481');">$355,033.39</a>
+                      </td>
+
+
+                      <td headers="salaries chart fund org" class="cfopamthiglighted">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999948,1,476297,220019,1321,'8DC62C0A-1F17-445B-A524-6300A5049481');">
+                          $466,675.84</a>
+                      </td>
+
+
+
+
+
+
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1321">None required</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="None1321" value="None,1321"
+                          aria-label="TransferStatus of None Required for Fund 1-476297" disabled="">
+                      </td>
+
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1321">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Before1321" value="Before,1321"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-476297" checked="">
+                      </td>
+
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1321">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Banner1321" value="Banner,1321"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-476297" disabled="">
+                      </td>
+
+
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1321"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=1321&amp;packetVersionID=8DC62C0A-1F17-445B-A524-6300A5049481','DOCs',530,450);">
+                      </td>
+
+                    </tr>
+                    
+                    <!--Drilldown-->
+                    <tr> 
+                      <td headers="salaries" colspan="10" align="left" class="nested-table">
+                        <div class="drilldownTitleColor">
+                          <h2 class="" id="DrillDownSalary" tabindex="0">Payee Detail</h2>
+                          <div class="drilldownBtns">
+                            <span class="">
+                                <button id="popup_back" type="button" aria-label="back to previous drill down">Back</button>
+                            </span>
+
+                            <span class="">
+                                <button id="popup_close" type="button" aria-label="close section">×</button>
+                            </span>
+                          </div>
+                          <h3 class="col-header">
+                            <span>Employee Name: Arias, Gilbert Ray</span>
+                            <span>UIN: 655381663</span>
+                            <span>Total Salary Amount: $17,200.72</span>
+                          </h3>
+                        </div>
+
+                        <h4 class="col-header">
+                          <span>Position: U50036</span>
+                          <span>Job Suffix: 00</span>
+                          <span>Job Emp Class:GA</span>
+                          <span>Job FTE: 0.5</span>
+                        </h4>
+                        <table  summary="Salary Detail for Position U50036 Job Suffix 00">
+                            <thead>
+                                <tr>
+                                    <th id="payperiodU50036" style="width:21%">Pay Period</th>
+                                    <th id="eventdescU50036" style="width:15%">Event Desc</th>
+                                    <th id="transdateU50036" style="width:10%">Trans Date</th>
+                                    <th id="salaryamtU50036" style="width:12%;text-align:right; padding-right:25px;">Salary Amt</th>
+                                    <th id="eefthrsU50036" style="width:10%; text-align:right; right;padding-right:25px;">%FTE/Hrs</th>
+                                    <th id="acctU50036" style="width:10%">Acct</th>
+                                    <th id="transdescU50036" style="width:22%">Trans Desc</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th headers="payperiodU50036" style="width:21%">01/16/2024 - 02/15/2024</th>
+                                <td headers="eventdescU50036" style="width:15%">Original Action</td>
+                                <td headers="transdateU50036" style="width:10%">02/16/2024</td>
+                                <td headers="salaryamtU50036" style="width:12%;text-align:right; padding-right:25px;">$2,656.00</td>
+                                <td headers="eefthrsU50036" style="width:10%;text-align:right;right;padding-right:25px;">50 %</td>
+                                <td headers="acctU50036" style="width:10%">212210</td>
+                                <td headers="transdescU50036" style="width:22%">HR Payroll 2024 MN 2 0</td>
+                                </tr>
+
+                                <tr>
+                                <th headers="payperiodU50036" style="width:21%">02/16/2024 - 03/15/2024</th>
+                                <td headers="eventdescU50036" style="width:15%">Original Action</td>
+                                <td headers="transdateU50036" style="width:10%">03/15/2024</td>
+                                <td headers="salaryamtU50036" style="width:12%;text-align:right; padding-right:25px;">$2,656.00</td>
+                                <td headers="eefthrsU50036" style="width:10%;text-align:right;right;padding-right:25px;">50 %</td>
+                                <td headers="acctU50036" style="width:10%">212210</td>
+                                <td headers="transdescU50036" style="width:22%">HR Payroll 2024 MN 3 0</td>
+                                </tr>
+
+                                <tr>
+                                <th headers="payperiodU50036" style="width:21%">03/16/2024 - 04/15/2024</th>
+                                <td headers="eventdescU50036" style="width:15%">Original Action</td>
+                                <td headers="transdateU50036" style="width:10%">04/16/2024</td>
+                                <td headers="salaryamtU50036" style="width:12%;text-align:right; padding-right:25px;">$2,656.00</td>
+                                <td headers="eefthrsU50036" style="width:10%;text-align:right;right;padding-right:25px;">50 %</td>
+                                <td headers="acctU50036" style="width:10%">212210</td>
+                                <td headers="transdescU50036" style="width:22%">HR Payroll 2024 MN 4 0</td>
+                                </tr>
+
+                                <tr>
+                                <th headers="payperiodU50036" style="width:21%">04/16/2024 - 05/15/2024</th>
+                                <td headers="eventdescU50036" style="width:15%">Original Action</td>
+                                <td headers="transdateU50036" style="width:10%">05/16/2024</td>
+                                <td headers="salaryamtU50036" style="width:12%;text-align:right; padding-right:25px;">$2,656.00</td>
+                                <td headers="eefthrsU50036" style="width:10%;text-align:right;right;padding-right:25px;">50 %</td>
+                                <td headers="acctU50036" style="width:10%">212210</td>
+                                <td headers="transdescU50036" style="width:22%">HR Payroll 2024 MN 5 0</td>
+                                </tr>
+
+                                <tr>
+                                <th headers="payperiodU50036" style="width:21%">12/16/2023 - 01/15/2024</th>
+                                <td headers="eventdescU50036" style="width:15%">Original Action</td>
+                                <td headers="transdateU50036" style="width:10%">01/16/2024</td>
+                                <td headers="salaryamtU50036" style="width:12%;text-align:right; padding-right:25px;">$2,656.00</td>
+                                <td headers="eefthrsU50036" style="width:10%;text-align:right;right;padding-right:25px;">50 %</td>
+                                <td headers="acctU50036" style="width:10%">212210</td>
+                                <td headers="transdescU50036" style="width:22%">HR Payroll 2024 MN 1 0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <h4 class="col-header">
+                          <span>Position: U68000</span>
+                          <span >Job Suffix: SM</span>
+                          <span >Job Emp Class: </span>
+                          <span >Job FTE: </span>
+                        </h4>
+                        
+                        <table summary="Salary Detail for Position U68000 Job Suffix SM">
+                            <thead>
+                                <tr>
+                                    <th id="payperiodU68000" style="width:21%">Pay Period</th>
+                                    <th id="eventdescU68000" style="width:15%">Event Desc</th>
+                                    <th id="transdateU68000" style="width:10%">Trans Date</th>
+                                    <th id="salaryamtU68000" style="width:12%;text-align:right; padding-right:25px;">Salary Amt</th>
+                                    <th id="eefthrsU68000" style="width:10%;text-align:right;right;padding-right:25px;">%FTE/Hrs</th>
+                                    <th id="acctU68000" style="width:10%">Acct</th>
+                                    <th id="transdescU68000" style="width:22%">Trans Desc</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th headers="payperiodU68000" style="width:21%"> -</th>
+                                <td headers="eventdescU68000" style="width:15%"> </td>
+                                <td headers="transdateU68000" style="width:10%">06/30/2024</td>
+                                <td headers="salaryamtU68000" style="width:12%;text-align:right; padding-right:25px;">$1,264.72</td>
+                                <td headers="eefthrsU68000" style="width:10%;text-align:right;right;padding-right:25px;">41.27 hrs</td>
+                                <td headers="acctU68000" style="width:10%">212210</td>
+                                <td headers="transdescU68000" style="width:22%">HR Payroll 2024 MN 999 0</td>
+                                </tr>
+
+                                <tr>
+                                <th headers="payperiodU68000" style="width:21%">05/16/2024 - 06/15/2024</th>
+                                <td headers="eventdescU68000" style="width:15%">Original Action</td>
+                                <td headers="transdateU68000" style="width:10%">06/14/2024</td>
+                                <td headers="salaryamtU68000" style="width:12%;text-align:right; padding-right:25px;">$2,656.00</td>
+                                <td headers="eefthrsU68000" style="width:10%;text-align:right;right;padding-right:25px;">50 %</td>
+                                <td headers="acctU68000" style="width:10%">212210</td>
+                                <td headers="transdescU68000" style="width:22%">HR Payroll 2024 MN 6 0</td>
+                                </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                  <tfoot>
+
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>
+
+            <p>Salary Other Payroll (skips level 1)</p>
+            <!--Table - Drilldown - Salary  - Other Payroll (Just adds back button)-->
+            <div class="formContainer1 ">
+              <div class="formSubSection1">
+                <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" id="chart" class="expendCol1">Chart</th>
+                      <th rowspan="2" id="fund" class="expendCol2">Fund</th>
+                      <th rowspan="2" id="org" class="expendCol3">Org</th>
+                      <th rowspan="2" id="directCost" class="cfopamt expendCol4">All&nbsp;Other<br>Direct Costs</th>
+                      <th rowspan="2" id="salaries" class="cfopamt expendCol5">Salaries&nbsp;and<br>Wages</th>
+                      <th id="chooseCost" colspan="3" class="transferKol">
+                        Choose Cost Transfer Status</th>
+                      <th rowspan="2" id="docs">Docs</th>
+                    </tr>
+                    <tr>
+                      <th id="noneRequired" headers="chooseCost" class="TransferStatusTitle1">None Required</th>
+                      <th id="processed" headers="chooseCost" class="TransferStatusTitle2">Processed&nbsp;before
+                        Confirmation</th>
+                      <th id="pending" headers="chooseCost" class="TransferStatusTitle3">Pending&nbsp;in Banner</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">498124</th>
+                      <td headers="org">270005</td>
+
+                      <td headers="directCost chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999946,1,498124,270005,967,'E598C592-D136-4647-B87E-7B61963A3223');">$0.00</a>
+                      </td>
+
+
+                      <td headers="salaries chart fund org" class="cfopamthiglighted">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999946,1,498124,270005,967,'E598C592-D136-4647-B87E-7B61963A3223');">
+                          ($490.20)</a>
+                      </td>
+
+
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None967">None required</label>
+                        <input type="radio" name="TransferStatus.Line967" id="None967" value="None,967"
+                          aria-label="TransferStatus of None Required for Fund 1-498124" disabled="">
+                      </td>
+
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before967">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line967" id="Before967" value="Before,967"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-498124" disabled="">
+                      </td>
+
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner967">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line967" id="Banner967" value="Banner,967"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-498124" disabled="">
+                      </td>
+
+
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="967"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=967&amp;packetVersionID=E598C592-D136-4647-B87E-7B61963A3223','DOCs',530,450);">
+                      </td>
+
+                    </tr>
+
+                    <!--Drilldown-->
+                    <tr class="">
+                      <td class="nested-table" colspan="10" >
+                        <!-- Account Detail Heading and Summary -->
+                        <div class="drilldownTitleColor">
+                          <h2 class="" id="DrillDownODbyAcctType2" tabindex="0">Other Detail: $0.00</h2>
+
+                          <div class="drilldownBtns">
+                            <span class="">
+                                <a href=""class="button-link">Back</a>
+                            </span>
+                            <span class="">
+                                <button id="popup_close" type="button" aria-label="close section">×</button>
+                            </span>
+                          </div>
+           
+                        </div>
+
+                       
+                        <h3 class="col-header">
+                          <span>Account: 218900</span>
+                          <span>Description: Federal Work Study Wage Transfer</span>
+                          <span>Amt: $817.00</span>
+                        </h3>
+
+                        <table columns="7" class="indentElement"  summary="All Other Direct Costs Detail for Account Code 218900">
+                            <thead>
+                                <tr>
+                                    <th id="TransDate218900">Trans Date</th>
+                                    <th id="Amount218900" class="textCenter">Amt</th>
+                                    <th id="DocNum218900">Doc#</th>
+                                    <th id="Program218900">Program</th>
+                                    <th id="Activity218900">Activity</th>
+                                    <th id="TransDesc218900">Trans Desc</th>
+                                    <th id="Employee218900">Employee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td headers="TransDate218900" style="width:10%;">09/20/2024</td>
+                                    <td headers="Amount218900" style="width:10%;text-align:right;padding-right:20px">$817.00</td>
+                                    <td headers="DocNum218900" style="width:10%;">J3286218</td>
+                                    <td headers="Program218900" style="width:10%;">191400</td>
+                                    <td headers="Activity218900" style="width:10%;"> </td>
+                                    <td headers="TransDesc218900" style="width:25%;">FWS Alloc Entry for Org 270005</td>
+                                    <td headers="Employee218900" style="width:25%;"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 class="col-header">
+                          <span>Account: 218950</span>
+                          <span>Description: Federal Work Study Wages Allocated</span>
+                          <span>Amt: ($490.20)</span>
+                        </h3>
+
+                        <table columns="7" class="indentElement" summary="All Other Direct Costs Detail for Account Code 218950">
+                            <thead> 
+                                <tr>
+                                    <th id="TransDate218950">Trans Date</th>
+                                    <th id="Amount218950" class="textCenter">Amt</th>
+                                    <th id="DocNum218950">Doc#</th>
+                                    <th id="Program218950">Program</th>
+                                    <th id="Activity218950">Activity</th>
+                                    <th id="TransDesc218950">Trans Desc</th>
+                                    <th id="Employee218950">Employee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td headers="TransDate218950" style="width:10%;">09/20/2024</td>
+                                <td headers="Amount218950" style="width:10%;text-align:right;padding-right:20px">($490.20)
+                                </td>
+                                <td headers="DocNum218950" style="width:10%;">J3286218</td>
+                                <td headers="Program218950" style="width:10%;">191400</td>
+                                <td headers="Activity218950" style="width:10%;"> </td>
+                                <td headers="TransDesc218950" style="width:25%;">FWS Alloc Entry for Org 270005</td>
+                                <td headers="Employee218950" style="width:25%;"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">498124</th>
+                      <td headers="org">320000</td>
+
+                      <td headers="directCost chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationOtherDirectDetailSummary',-1999999946,1,498124,320000,971,'E598C592-D136-4647-B87E-7B61963A3223');">($233.62)</a>
+                      </td>
+
+
+                      <td headers="salaries chart fund org" class="cfopamt">
+
+
+                        <a
+                          href="javascript: submitForm('findConfirmationSalaryPayeeNameReport',-1999999946,1,498124,320000,971,'E598C592-D136-4647-B87E-7B61963A3223');">
+                          $0.00</a>
+                      </td>
+
+
+
+
+
+
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None971">None required</label>
+                        <input type="radio" name="TransferStatus.Line971" id="None971" value="None,971"
+                          aria-label="TransferStatus of None Required for Fund 1-498124" disabled="">
+                      </td>
+
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before971">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line971" id="Before971" value="Before,971"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-498124" disabled="">
+                      </td>
+
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner971">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line971" id="Banner971" value="Banner,971"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-498124" disabled="">
+                      </td>
+
+
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="971"
+                          src="./graphics/docspaperclip.gif"
+                          onclick="JavaScript:openNewWindow('index.cfm?methodName=findDocMgmt&amp;LineNumber=971&amp;packetVersionID=E598C592-D136-4647-B87E-7B61963A3223','DOCs',530,450);">
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                  <tfoot>
+
+                  </tfoot>
+
+                </table>
+
+
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+    </form>
+    <div class="clearboth"></div>
+
+
+
+
+  </main>
+  <footer>
+    <div class="helpbar">
+      <!--This is an example of when there are mulitple help links.
+          If there is only one help link you can just inlucde the "Help Guide"
+          without the "Help Guides:" prefix-->
+      <div class="help-guide">
+        <p><strong>Help Guides:</strong> <a href="#">Help Guide 1</a> | <a href="#">Help Guide 2</a></p>
+      </div>
+      <div class="help-email">
+        <p><strong>Questions?</strong> <a href="#">Contact Us</a></p>
+      </div>
+    </div>
+    <div class="policies">
+      <p>©
+        <script>document.write(new Date().getFullYear());</script> University of Illinois Board of Trustees |
+        <a href="https://www.vpaa.uillinois.edu/resources/web_privacy" class="external external-blue">Privacy policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
