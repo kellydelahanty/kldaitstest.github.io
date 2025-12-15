@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>[WIP Grant page]</title>
+  <title>[Grant report - drilldown table demo]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
@@ -16,6 +16,17 @@
 
   <link rel="stylesheet" href="css/title2.css">
 
+  <style> 
+  /*ONLY FOR THIS DEMO PAGE - DO NOT COPY OVER TO ACTUAL CONFIRMATIONS SITE*/
+    .demo-heading {
+      font-weight: bold;
+      color: white;
+      font-size: 18px;
+      background-color: #5a2784;
+      padding: 1rem;
+    }
+
+  </style>
 
 </head>
 
@@ -111,7 +122,8 @@
             </div>
 
             <!--Table - Default-->
-            <div class="formContainer1 hidden">
+            <p class="demo-heading">Regular Table with no drilldowns </p>
+            <div class="formContainer1">
               <div class="formSubSection1">
                 <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
                   <thead>
@@ -233,7 +245,7 @@
             </div>
 
             <!--Table - Drilldown - lvl 1 (Same for Direct cost and salaries) -->
-            <p>Level 1 (Same for Direct Cost and Salaries)</p>
+            <p class="demo-heading">Level 1 of drilldown tables (Same for Direct Cost and Salaries)</p>
             <div class="formContainer1 ">
               <div class="formSubSection1">
                 <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
@@ -426,7 +438,7 @@
               </div>
             </div>
 
-            <p>Direct Costs - lvl 2</p>
+            <p class="demo-heading">Direct Costs - Level 2 drilldown</p>
             <!--Table - Drilldown - Other Direct Costs - lvl 2 -->
             <div class="formContainer1">
               <div class="formSubSection1">
@@ -656,7 +668,7 @@
               </div>
             </div>            
             
-            <p>Salary - lvl 2</p>
+            <p class="demo-heading">Salary - Level 2 drilldown for specific Employee</p>
             <!--Table - Drilldown - Salary  - lvl 2 -->
             <div class="formContainer1">
               <div class="formSubSection1">
@@ -935,7 +947,7 @@
               </div>
             </div>
 
-            <p>Salary Other Payroll (skips level 1)</p>
+            <p class="demo-heading">Salary - Level 2 drilldown for specific "Other Payroll"</p>
             <!--Table - Drilldown - Salary  - Other Payroll (Just adds back button)-->
             <div class="formContainer1 ">
               <div class="formSubSection1">
