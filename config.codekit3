@@ -9,114 +9,6 @@
   ],
   "creatorBuild" : "34892",
   "files" : {
-    "\/a11y-orgchart\/CSS\/orgchart.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/CSS\/orgchart-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/a11y-orgchart\/CSS\/orgchart.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/CSS\/orgchart.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0
-    },
-    "\/a11y-orgchart\/CSS\/SCSS\/_colors.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/a11y-orgchart\/CSS\/SCSS\/_colors.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0
-    },
-    "\/a11y-orgchart\/CSS\/SCSS\/_demo-display.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/a11y-orgchart\/CSS\/SCSS\/_demo-display.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0
-    },
-    "\/a11y-orgchart\/CSS\/style.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/CSS\/style-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/a11y-orgchart\/CSS\/style.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/CSS\/style.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0
-    },
-    "\/a11y-orgchart\/divs.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/divs.html",
-      "oF" : 0
-    },
-    "\/a11y-orgchart\/heading.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/heading.html",
-      "oF" : 0
-    },
-    "\/a11y-orgchart\/headings-tab.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/headings-tab.html",
-      "oF" : 0
-    },
-    "\/a11y-orgchart\/list.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/a11y-orgchart\/list.html",
-      "oF" : 0
-    },
     "\/arm\/css\/accessible-autocomplete.min.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -7272,6 +7164,114 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/bulletin\/staff\/source\/resources\/resources.html",
+      "oF" : 0
+    },
+    "\/components\/a11y-orgchart\/CSS\/orgchart.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/CSS\/orgchart-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/components\/a11y-orgchart\/CSS\/orgchart.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/CSS\/orgchart.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0
+    },
+    "\/components\/a11y-orgchart\/CSS\/SCSS\/_colors.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/a11y-orgchart\/CSS\/SCSS\/_colors.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0
+    },
+    "\/components\/a11y-orgchart\/CSS\/SCSS\/_demo-display.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/a11y-orgchart\/CSS\/SCSS\/_demo-display.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0
+    },
+    "\/components\/a11y-orgchart\/CSS\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/CSS\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/components\/a11y-orgchart\/CSS\/style.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/CSS\/style.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0
+    },
+    "\/components\/a11y-orgchart\/divs.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/divs.html",
+      "oF" : 0
+    },
+    "\/components\/a11y-orgchart\/heading.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/heading.html",
+      "oF" : 0
+    },
+    "\/components\/a11y-orgchart\/headings-tab.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/headings-tab.html",
+      "oF" : 0
+    },
+    "\/components\/a11y-orgchart\/list.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/a11y-orgchart\/list.html",
       "oF" : 0
     },
     "\/confirmations\/browserconfig.xml" : {
