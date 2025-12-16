@@ -8,8 +8,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.sb-section-group {
+    border-bottom: 3px solid gray;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 
-.sb-heading {
+
+    h2 {
+        margin-bottom: 0 
+    }
+}
+
+.sb-header {
     padding: .5rem 1rem;
     background: #9FB7D1;
     margin-bottom: 1rem;

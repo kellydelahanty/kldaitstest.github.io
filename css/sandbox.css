@@ -328,27 +328,36 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.sb-heading {
+.sb-section-group {
+  border-bottom: 3px solid gray;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.sb-section-group h2 {
+  margin-bottom: 0;
+}
+
+.sb-header {
   padding: 0.5rem 1rem;
   background: #9FB7D1;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-.sb-heading h1 {
+.sb-header h1 {
   font-size: 28px;
 }
-.sb-heading a {
+.sb-header a {
   background-color: #50576D;
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 10px;
   text-decoration: none;
 }
-.sb-heading a:hover, .sb-heading a:focus {
+.sb-header a:hover, .sb-header a:focus {
   background-color: #3B414E;
   color: white;
 }
-.sb-heading div {
+.sb-header div {
   display: flex;
   justify-content: space-between;
   align-items: center;
