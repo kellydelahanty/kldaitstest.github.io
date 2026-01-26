@@ -271,14 +271,6 @@
       "oAP" : "\/applications\/confirmations\/drilldown-current.html",
       "oF" : 0
     },
-    "\/applications\/confirmations\/drilldown-focus.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/drilldown-focus.html",
-      "oF" : 0
-    },
     "\/applications\/confirmations\/drilldown-update.html" : {
       "cB" : 0,
       "ft" : 8192,
