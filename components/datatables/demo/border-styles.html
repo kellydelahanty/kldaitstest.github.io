@@ -9,28 +9,22 @@
     <cfset local.currentRelease="myRelease2022">
 
         <cfoutput>
-			<script src="../../../js/jquery/jquery-3.6.0.min.js?v=myRelease2022" type="text/javascript"></script>
+            <script src="../../../js/jquery/jquery-3.6.0.min.js?v=myRelease2022" type="text/javascript"></script>
 
-			<script src="js/jquery.dataTables.min.js?v=myRelease2022"
-				type="text/javascript"></script>
-			<link href="css/jquery.dataTables.css?v=myRelease2022" rel="stylesheet"
-				type="text/css" />
+            <script src="js/jquery.dataTables.min.js?v=myRelease2022" type="text/javascript"></script>
+            <link href="css/jquery.dataTables.css?v=myRelease2022" rel="stylesheet" type="text/css" />
 
-			<script
-				src="../extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js?v=myRelease2022"></script>
-			<script
-				src="../extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=myRelease2022"></script>
-			<link rel="stylesheet"
-				href="../extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css?v=myRelease2022">
+            <script src="../extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.min.js?v=myRelease2022"></script>
+            <script
+                src="../extensions/FixedHeader-3.3.1/js/dataTables.fixedHeader.AITSAccessibilityFixes.js?v=myRelease2022"></script>
+            <link rel="stylesheet"
+                href="../extensions/FixedHeader-3.3.1/css/fixedHeader.dataTables.min.css?v=myRelease2022">
 
-			<link href="css/Datatable-AITS-Fix.css?v=myRelease2022" rel="stylesheet"
-				type="text/css" />
-			<link href="css/Datatables-Style-Minimalist.css" rel="stylesheet"
-				type="text/css" />
-			<link href="css/Datatables-Styles-Finance.css" rel="stylesheet"
-				type="text/css" />
+            <link href="css/Datatable-AITS-Fix.css?v=myRelease2022" rel="stylesheet" type="text/css" />
+            <link href="css/Datatables-Style-Minimalist.css" rel="stylesheet" type="text/css" />
+            <link href="css/Datatables-Styles-Finance.css" rel="stylesheet" type="text/css" />
 
-		</cfoutput>
+        </cfoutput>
 
         <!--- note: this style is only needed for the sample because there is no other finance css applied
 				this (or something equivalent) should be in your application's css file --->
@@ -45,7 +39,16 @@
                 word-wrap: normal;
             }
 
-         
+            .table-section {
+                margin-bottom: 2rem;
+                padding-bottom: 3rem;
+                border-bottom: 3px gray solid;
+            }
+
+            .table-section h2 {
+                padding: 1rem;
+                background-color: lightgray;
+            }
         </style>
 
         <script type="text/javascript" id="errorFocusScript">
@@ -217,49 +220,51 @@
 <body>
     <aside class="sb-header">
         <div>
-          <h1>Kelly Delahanty's Front-End Sandbox</h1>
-          <nav>
-            <a href="../../../index.html">Back to Sandbox Home</a>
-          </nav>
+            <h1>Kelly Delahanty's Front-End Sandbox</h1>
+            <nav>
+                <a href="../../../index.html">Back to Sandbox Home</a>
+            </nav>
         </div>
-      </aside>
+    </aside>
     <main>
- 
+
+
+        <!-- Intro / TL;DR -->
         <h1>Border Style Examples</h1>
-    
+
         <ul>
-            <li>Row borders 
+            <li>Row borders
                 <ul>
                     <li>By default, rows will have darker gray lines between them</li>
-                    <li>row-border - Datatables default,  light gray row borders</li>
+                    <li>row-border - Datatables default, light gray row borders</li>
                 </ul>
             </li>
-            <li>Column borders 
+            <li>Column borders
                 <ul>
                     <li>v-grid - black vertical column borders</li>
                     <li>v-grid-gray - gray vertical column borders</li>
                 </ul>
             </li>
-    
-            <li>Cell borders 
+
+            <li>Cell borders
                 <ul>
-                    <li>cell-border - Datatables default,  light gray cell borders</li>
+                    <li>cell-border - Datatables default, light gray cell borders</li>
                     <li>cell-border-dark - Black cell borders</li>
                 </ul>
             </li>
-            
-            <li>Table borders 
+
+            <li>Table borders
                 <ul>
                     <li>tableBorder - black border around entire talbe</li>
                     <li>tableBorder_gray - gray border around entire talbe</li>
                 </ul>
             </li>
-            
-    
+
+
             <li>tableBorder</li>
         </ul>
-    
-    
+
+
         <!--No Styling -->
         <div class="table-section">
             <h2>No Styling </h2>
@@ -303,11 +308,11 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
         </div>
-    
+
         <!--Datatables Row Border-->
         <div class="table-section">
             <h2>Datatables row-border </h2>
@@ -352,17 +357,19 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
         </div>
-    
-    
+
+
         <!--Vertical Grid Lines-->
         <div class="table-section">
-    
+
             <!--Vertical Gridlines-->
             <h2>Vertical Gridlines Only </h2>
+
+            <h3>Black vertical grid lines</h3>
             <p>table class="v-grid"</p>
 
             <table class="ex-table  v-grid ">
@@ -405,14 +412,14 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
-    
-    
-    
+
+
+
             <!--Vertical Gridlines - gray-->
-            <h2>Vertical Gridlines Only (gray)</h2>
+            <h3>Gray vertical grid-lines</h3>
             <p>table class="v-grid-gray"</p>
 
             <table class="ex-table  v-grid-gray ">
@@ -455,15 +462,15 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
         </div>
-    
+
         <!--Datatables cell Border-->
         <div class="table-section">
             <h2>Datatables cell-border </h2>
-            <h3>Gray cell borders (datatable built-in</h3>
+            <h3>Gray cell borders (datatable built-in)</h3>
             <p>table class="cell-border"</p>
             <table class="ex-table cell-border ">
                 <thead>
@@ -505,11 +512,11 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
-    
-            <h2>Black cell border </h2>
+
+            <h3>Black cell border </h3>
             <p>table class="cell-border-dark"</p>
 
             <table class="ex-table cell-border-dark ">
@@ -552,18 +559,15 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
         </div>
-    
-    
-    
-    
+
         <!--table border-->
         <div class="table-section">
             <h2>Table borders (around entire table) </h2>
-    
+
             <!--Default (black) table border-->
             <h3>Black table border</h3>
             <p>table class="tableBorder"</p>
@@ -608,10 +612,10 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
-    
+
             <!--Gray table border-->
             <h3>Gray table border</h3>
             <p>table class="tableBorder_gray"</p>
@@ -656,12 +660,111 @@
                         <td><button class="showID">Show User ID</button></td>
                         <td class="noDisplay userID">3</td>
                     </tr>
-    
+
                 </tbody>
             </table>
         </div>
-    
-    
+
+        <!--Full gridlines-->
+        <div class="table-section">
+            <h2>Full Grid (all possible grid lines)</h2>
+
+            <!--Default (black) table border-->
+            <h3>Black full grid</h3>
+            <p>table class="tableBorder cell-border-dark v-grid"</p>
+
+            <table class="ex-table  tableBorder cell-border-dark v-grid">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th>Birthday</th>
+                        <th>Last Modified</th>
+                        <th class="no-sort no-export">Action</th>
+                        <th class="noDisplay">ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aaron</td>
+                        <td>Adams</td>
+                        <td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+                        <td data-sort="2000/01/01">01/01/2000</td>
+                        <td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+                        <td><button class="showID">Show User ID</button></td>
+                        <td class="noDisplay userID">1</td>
+                    </tr>
+                    <tr>
+                        <td>Brenda</td>
+                        <td>Banks</td>
+                        <td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+                        <td data-sort="1998/02/02">02/02/1998</td>
+                        <td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+                        <td><button class="showID">Show User ID</button></td>
+                        <td class="noDisplay userID">2</td>
+                    </tr>
+                    <tr>
+                        <td>Charles</td>
+                        <td>Carter</td>
+                        <td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+                        <td data-sort="2010/03/03">03/03/2010</td>
+                        <td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+                        <td><button class="showID">Show User ID</button></td>
+                        <td class="noDisplay userID">3</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!--Gray table border-->
+            <h3>Gray full grid</h3>
+            <p>table class="tableBorder_gray v-grid-gray"</p>
+
+            <table class="ex-table tableBorder_gray v-grid-gray ">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th>Birthday</th>
+                        <th>Last Modified</th>
+                        <th class="no-sort no-export">Action</th>
+                        <th class="noDisplay">ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aaron</td>
+                        <td>Adams</td>
+                        <td class="email"><a href="mailto:aadams@uillinois.edu">aadams@uillinois.edu</a></td>
+                        <td data-sort="2000/01/01">01/01/2000</td>
+                        <td data-sort="2000/01/01 18:39">01/01/2000 06:39 PM</td>
+                        <td><button class="showID">Show User ID</button></td>
+                        <td class="noDisplay userID">1</td>
+                    </tr>
+                    <tr>
+                        <td>Brenda</td>
+                        <td>Banks</td>
+                        <td class="email"><a href="mailto:bbanks@uillinois.edu">bbanks@uillinois.edu</a></td>
+                        <td data-sort="1998/02/02">02/02/1998</td>
+                        <td data-sort="1998/02/02 07:15">02/02/1998 07:15 AM</td>
+                        <td><button class="showID">Show User ID</button></td>
+                        <td class="noDisplay userID">2</td>
+                    </tr>
+                    <tr>
+                        <td>Charles</td>
+                        <td>Carter</td>
+                        <td class="email"><a href="mailto:ccarter@uillinois.edu">ccarter@uillinois.edu</a></td>
+                        <td data-sort="2010/03/03">03/03/2010</td>
+                        <td data-sort="2010/03/03 15:08">03/03/2010 03:00 PM</td>
+                        <td><button class="showID">Show User ID</button></td>
+                        <td class="noDisplay userID">3</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </main>
 </body>
 

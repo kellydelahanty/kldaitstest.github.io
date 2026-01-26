@@ -1,0 +1,350 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>[Grant report - focus]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/common-app.css">
+  <link rel="stylesheet" href="css/costshare.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/reset-fonts-grids.css">
+  <link rel="stylesheet" href="css/CSCCReport.css">
+
+  <link rel="stylesheet" href="css/title2.css">
+
+  <style>
+    /*ONLY FOR THIS DEMO PAGE - DO NOT COPY OVER TO ACTUAL CONFIRMATIONS SITE*/
+    .demo-heading {
+      font-weight: bold;
+      color: white;
+      font-size: 18px;
+      background-color: #5a2784;
+      padding: 1rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--Skip link for keyboard users-->
+  <aside id="skip"><a href="#main">jump to main content</a></aside>
+
+
+  <!--Header-->
+  <header>
+    <!--U of I System wordmark and Site Name-->
+    <div class="site-identity desktop-display">
+      <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+          alt="University of Illinois System" class="wordmark"></a>
+      <div class="app-name"> <a href="#" class="plainlink">Semi-Annual Confirmation</a> </div>
+    </div>
+
+    <!--User name, Change Roles link, and log out buttons-->
+    <div class="account">
+      Martin Blackwood (<a href="#">Change Roles</a>)
+      <a class="logout" href="#">Log Out</a>
+    </div>
+
+    <div class="site-identity mobile-display">
+      <a href="http://uillinois.edu" class="plainlink"><img src="graphics/Illinois-System-Logo.svg"
+          alt="University of Illinois System" class="wordmark"></a>
+      <div class="app-name"> <a href="#" class="plainlink">Fiscal Control and Internal Auditing Act (FCIAA) Name</a>
+      </div>
+    </div>
+  </header>
+
+  <!--Navigation-->
+  <nav class="navbar">
+    <button class="mobile-nav-toggle">
+      Menu
+    </button>
+
+    <ul class="navbar-links">
+      <li><a href="overview.html" class="current">Overview</a></li>
+      <li><a href="#">Sent to Dept</a></li>
+      <li><a href="#">Sent to Archive</a></li>
+      <li><a href="#">View Archive</a></li>
+      <li><a href="#">Admin</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="center_app">
+    <h1 class="offscreen">Grant Reports</h1>
+    <div class="clearboth"></div>
+
+
+    <nav id="navcontainer" title="Report period navigation">
+      <ul>
+        <li>&nbsp;</li>
+
+        <li>
+          <a href="#" class="active" title="Current Page">Direct Expenditures</a>
+        </li>
+        <li>
+          <a href="grant-info-costshare-update.html" class="noPrint" title="View the Cost Sharing Page">Cost Sharing</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="clearboth"></div>
+    <form>
+      <div class="csccbody">
+
+        <!--Report Heading -->
+        <div class="reportheading">
+          <h2>Grant A1234 - 100 UIUC FY24 FWS</h2>
+          <div class="hor-list">
+            <div><span class="psuedo-label">Fund Org:</span> 100 - Archival Studies</div>
+            <div><span class="psuedo-label">Fund PI:</span> Bouchard, Elias</div>
+            <div><span class="psuedo-label">Date Range:</span> 01/01/25 - 06/30/2025</div>
+            <div><span class="psuedo-label">Project End Date:</span> 06/30/2024 </div>
+          </div>
+        </div>
+
+        <div class="clearboth"></div>
+
+        <div class="csccconfirmbody">
+          <div class="subSection1">
+
+
+            <!--Instructions-->
+            <div class="textSection">
+              The expenditures below have been recorded in Banner for the six month reporting period. Salary and wage
+              payments are for individuals whose names, percentages of effort, and payments have been reported in
+              monthly payroll distribution vouchers. For each fund line the PI/Confirmer or Department Contact must
+              select the appropriate transfer status. Attach supporting documentation as needed.
+            </div>
+
+
+
+            <!--Table - Drilldown - lvl 1 (Same for Direct cost and salaries) -->
+            <p class="demo-heading">Level 1 of drilldown tables (Same for Direct Cost and Salaries)</p>
+            <div class="formContainer1 ">
+              <div class="formSubSection1">
+                <table class="WidthNinetyFive grant-table" summary="Expenditures in Banner">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" id="chart" class="expendCol1">Chart</th>
+                      <th rowspan="2" id="fund" class="expendCol2">Fund</th>
+                      <th rowspan="2" id="org" class="expendCol3">Org</th>
+                      <th rowspan="2" id="directCost" class="cfopamt expendCol4">All&nbsp;Other<br>Direct Costs</th>
+                      <th rowspan="2" id="salaries" class="cfopamt expendCol5">Salaries&nbsp;and<br>Wages</th>
+
+                      <th id="chooseCost" colspan="3" class="transferKol">
+
+                        Choose Cost Transfer Status</th>
+
+                      <th rowspan="2" id="docs">Docs</th>
+                    </tr>
+                    <tr>
+
+                      <th id="noneRequired" headers="chooseCost" class="TransferStatusTitle1">None Required</th>
+                      <th id="processed" headers="chooseCost" class="TransferStatusTitle2">Processed&nbsp;before
+                        Confirmation</th>
+                      <th id="pending" headers="chooseCost" class="TransferStatusTitle3">Pending&nbsp;in Banner</th>
+
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">100000</th>
+                      <td headers="org">200000</td>
+                      <td headers="directCost chart fund org" class="cfopamt">
+                        <a href="#">$145.00</a>
+                      </td>
+                      <td headers="salaries chart fund org" class="cfopamt">
+                        <a href="#">
+                          $400.00</a>
+                      </td>
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1322">None required</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="None1322" value="None,1322"
+                          aria-label="TransferStatus of None Required for Fund 1-100000" checked="">
+                      </td>
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1322">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="Before1322" value="Before,1322"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-100000" disabled="">
+                      </td>
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1322">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1322" id="Banner1322" value="Banner,1322"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-100000" disabled="">
+                      </td>
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1322"
+                          src="./graphics/docspaperclip.gif" onclick="#">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td headers="chart">1</td>
+                      <th headers="fund">100000</th>
+                      <td headers="org">200001</td>
+                      <td headers="directCost chart fund org" class="cfopamthiglighted">
+                        <a href="#">$350,000.00</a>
+                      </td>
+                      <td headers="salaries chart fund org" class="cfopamt">
+                        <a href="#">
+                          $450,000.00</a>
+                      </td>
+                      <td headers="chooseCost noneRequired" class="TransferStatus1">
+                        <label class="hidden" for="None1321">None required</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="None1321" value="None,1321"
+                          aria-label="TransferStatus of None Required for Fund 1-100000" disabled="">
+                      </td>
+                      <td headers="chooseCost processed" class="TransferStatus2">
+                        <label class="hidden" for="Before1321">Processed before confirmation</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Before1321" value="Before,1321"
+                          aria-label="TransferStatus of Processed before Confirmation for Fund 1-100000" checked="">
+                      </td>
+                      <td headers="chooseCost pending" class="TransferStatus3">
+                        <label class="hidden" for="Banner1321">Pending in Banner</label>
+                        <input type="radio" name="TransferStatus.Line1321" id="Banner1321" value="Banner,1321"
+                          aria-label="TransferStatus of Pending in Banner for Fund 1-100000" disabled="">
+                      </td>
+                      <td headers="docs"><input type="image" name="pklineid" alt="Attachment indicator" value="1321"
+                          src="./graphics/docspaperclip.gif" onclick="#">
+                      </td>
+                    </tr>
+
+
+                    <!--Drilldown Table-->
+                    <tr>
+                      <td headers="directCost" colspan="10" align="left">
+
+                        <table style="" class="box nested-table" summary="All Other Direct Costs Detail">
+                          <caption class="drilldownTitleColor">
+                            <h2 class="" id="directCost1" tabindex="0">
+                              All Other Direct Costs Detail
+                            </h2>
+                            <span class="drilldownBtns">
+                              <button id="popup_close" type="button" aria-label="close section">×</button>
+                            </span><br>
+                          </caption>
+                          <thead>
+                            <tr>
+                              <th rowspan="2" id="AccountType" class="drillCol1"><strong>Account Type</strong></th>
+                              <th rowspan="2" id="Amount" class="drillColCosts"><strong>Amount</strong></th>
+                              <th rowspan="2" id="ExcelExport" style="text-align:right;padding-right:1em;">
+                                <button id="ExportDetails" name="Excel" class="excel_btn">Export Details to Excel</button>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a href="#">
+                                  Benefit
+                                  Costs</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $100,000.00
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a href="#">
+                                  Equipment/Software/Capital
+                                  Lease</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $5,000.00
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a href="#">
+                                  Materials
+                                  and Supplies</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $150,000.00
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a href="#">
+                                  Services</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $60,000.00
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="box drillCol1" headers="AccountType">
+                                <a href="#">
+                                  Transportation
+                                  Services</a>
+                              </td>
+                              <td class="box drillColCosts" headers="Amount">
+                                $20,000.00
+                              </td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                  <tfoot>
+
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </form>
+    <div class="clearboth"></div>
+  </main>
+
+  <footer>
+    <div class="helpbar">
+      <!--This is an example of when there are mulitple help links.
+          If there is only one help link you can just inlucde the "Help Guide"
+          without the "Help Guides:" prefix-->
+      <div class="help-guide">
+        <p><strong>Help Guides:</strong> <a href="#">Help Guide 1</a> | <a href="#">Help Guide 2</a></p>
+      </div>
+      <div class="help-email">
+        <p><strong>Questions?</strong> <a href="#">Contact Us</a></p>
+      </div>
+    </div>
+    <div class="policies">
+      <p>©
+        <script>document.write(new Date().getFullYear());</script> University of Illinois Board of Trustees |
+        <a href="https://www.vpaa.uillinois.edu/resources/web_privacy" class="external external-blue">Privacy policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

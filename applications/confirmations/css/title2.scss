@@ -9,8 +9,6 @@ $gray-7: #414042;
 
 $table-border: $gray-7;
 
-
-
 $primary: #0d78be;
 $primary-dark: #0b558e;
 $slate: #3f4958;
@@ -167,12 +165,14 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
     font-weight: normal;
     line-height: 1.5;
     color: #0a0a0a;
-    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    transition:
+      box-shadow 0.5s,
+      border-color 0.25s ease-in-out;
     margin-bottom: 1rem;
   }
 }
 
-#trackingReportExcel {
+.excel_btn {
   padding: 0.75rem;
 
   padding-left: 40px;
@@ -349,7 +349,9 @@ ul.hor-list {
       text-align: left;
     }
 
-    tr {background-color: $gt-row}
+    tr {
+      background-color: $gt-row;
+    }
 
     tr:nth-child(odd) {
       background-color: white;
@@ -363,6 +365,17 @@ ul.hor-list {
 
       margin-left: 1rem;
       cursor: pointer;
+    }
+
+    [type="checkbox"]:focus-visible,
+    [type="radio"]:focus-visible {
+      outline: 1px dashed #0a0a0a;
+      outline-offset: 2px;
+    }
+
+    [type="image"]:focus-visible {
+      outline: 2px dashed #0a0a0a;
+      outline-offset: 5px;
     }
   }
 
@@ -387,7 +400,6 @@ ul.hor-list {
   }
 }
 
-
 /* ======= Drilldown Grant Tables ======= */
 
 /*Drilldown title section*/
@@ -401,12 +413,27 @@ ul.hor-list {
     margin: 0.5rem 0;
   }
 
+  h2:focus-visible,
+  h2:focus {
+    outline: 3px dotted white;
+    outline-offset: 2px;
+  }
+
   .drilldownBtns {
     width: 25%;
     display: inline-block;
     text-align: right;
 
-    a, button {margin-left: .5rem}
+    a,
+    button {
+      margin-left: 0.5rem;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 3px dotted white;
+      outline-offset: 2px;
+    }
   }
 
   h3 {
@@ -415,40 +442,51 @@ ul.hor-list {
   }
 }
 
-/*Nested tables*/ 
+/*Nested tables*/
 .nested-table {
   margin: 1rem;
   padding: 0 2rem;
   width: 95%;
   outline: 2px solid black;
 
-    > table {
-      margin-left: 1rem;
-      margin-bottom: 2.25rem;
-      border: 1px solid black;
-      width: 85%;
-      
-      th {
-        background-color: $gray-3;
-        font-weight: bold;
-      }
+  > table {
+    margin-left: 1rem;
+    margin-bottom: 2.25rem;
+    border: 1px solid black;
+    width: 85%;
 
-      tr {
-        background-color: $gt-row;
-        border: 1px solid $gray-6;
-      }
-      tr:nth-child(odd) {
-        background-color: white;
-      }
+    th {
+      background-color: $gray-3;
+      font-weight: bold;
+    }
+
+    tr {
+      background-color: $gt-row;
+      border: 1px solid $gray-6;
+    }
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+  }
+
+  thead {
+    .excel_btn {
+        background-size: 20px 20px;
+        padding: .5rem 0.75rem;
+        padding-left: 30px;
+
+
+
+    }
   }
 }
 
 table.nested-table {
-      border: 1px solid black;
-      th {
-        background-color: $gray-3;
-        font-weight: bold;
-      }
+  border: 1px solid black;
+  th {
+    background-color: $gray-3;
+    font-weight: bold;
+  }
 }
 
 td.nested-table {
@@ -462,14 +500,14 @@ td.nested-table {
   }
 }
 
-/*For headings that have multiple components, used in nested table title subheadings/headings for individual tables*/ 
+/*For headings that have multiple components, used in nested table title subheadings/headings for individual tables*/
 .col-header {
   span {
     margin-right: 2rem;
   }
 }
 
-/*Links that look like buttons*/ 
+/*Links that look like buttons*/
 .button-link {
   display: inline-block;
   padding: 2px 6px;
@@ -482,7 +520,6 @@ td.nested-table {
   cursor: pointer;
   margin: 5px;
 }
-
 
 /* ========== Action Buttons ========== */
 .grant-actions {
@@ -617,4 +654,3 @@ ul.actionlist {
     margin-bottom: 2rem;
   }
 }
-
