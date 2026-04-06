@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mixed Checkbox Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common-app.css">
+    <link rel="stylesheet" href="css/confirm.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    
+    <link rel="stylesheet" href="css/mixed-checkbox.css">
+    <script src="js/mixed-checkbox.js"></script> 
+
+</head>
+
+<body>
+    <fieldset class="checkbox-mixed">
+        <legend>Choose the ingredients for your pizza</legend>
+        <div role="checkbox" class="group_checkbox" aria-checked="mixed" aria-controls="cond1 cond2 cond3 cond4"
+            tabindex="0"> Select all of the following ingredients</div>
+        <ul class="checkboxes">
+            <li>
+                <input type="checkbox" id="cond1">
+                <label>Cheese</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cond2" checked="true">
+                <label>Mushrooms</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cond3">
+                <label>Olives</label>
+            </li>
+            <li>
+                <label><input type="checkbox" id="cond4">Chicken</label>
+            </li>
+        </ul>
+    </fieldset>
+
+
+</body>
+
+
+
+
+</html>

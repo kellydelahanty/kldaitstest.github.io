@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WIP mixed state checkbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common-app.css">
+    <link rel="stylesheet" href="css/confirm.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <link rel="stylesheet" href="css/mixed-checkbox.css">
+    <script src="js/mixed-checkbox.js"></script> 
+
+</head>
+
+<body>
+    <!--Skip link for keyboard users-->
+    <aside id="skip"><a href="#main">jump to main content</a></aside>
+
+
+    <main id="main" class="center_app"> <!-- jOpenNewWindow.js -->
+
+        <script type="text/javascript">
+
+            function openNewWindow(fileName, windowName, theWidth, theHeight) {
+                if (windowName == "newMessageWindow") {
+                    //generate random window ID
+                    windowName = new String(Math.round(Math.random() * 100000));
+                }
+                window.open(fileName, windowName, "toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=" + theWidth + ",height=" + theHeight);
+            }
+
+        </script>
+
+        <h1>Send to PI/Confirmer</h1>
+
+        <div class="clearboth"></div>
+        <br>
+
+        <ul class="rptTabs">
+            <li class="active"><a
+                    href="index.cfm?methodName=findActionPage&amp;pageType=SendToPI&amp;rptPeriod=07/01/22-12/31/22"
+                    title="View the data for this reporting period">07/01/22-12/31/22</a></li>
+        </ul>
+
+
+        <div class="sectionleft">
+            <div class="csccbody">
+
+
+                <div class="indentElement">
+
+                    <div class="textaligncenter">
+                        These grants are ready to send to the PI or Alternate Confirmer.
+                    </div>
+                    <div class="csccconfirmbody">
+                        <form name="actionPage" action="index.cfm" method="POST" id="actionPage">
+
+                            <input type="hidden" name="pageType" value="SendToPI">
+                            <input type="hidden" name="methodName" value="processActionPage">
+                            <input type="hidden" name="rptPeriod" value="07/01/22-12/31/22">
+
+                            <div class="formSubSection2">
+                                <div class="textaligncenter"><label for="selectAll">Select<br>All</label></div> <input
+                                    type="image" name="selectAll" value="selectAll" id="selectAll"
+                                    src="./graphics/cscc_checkboxbutton.gif" alt="Select All Grants" border="0">
+                            </div>
+                            <div class="formSubSection3">
+                                <div class="textaligncenter"><label for="unselectAll">Unselect<br>All</label></div>
+                                <input type="image" name="unselectAll" value="unselectAll" id="unselectAll"
+                                    src="./graphics/cscc_checkboxbutton.gif" alt="Unselect All" border="0">
+                            </div>
+                            <div class="clearboth"></div>
+
+
+                            <!--Example with icon-->
+                            <ul class="actionlist">
+
+                                <li>
+                                    <h2 class="heading">Org 100 (Chart 1)</h2>
+
+                                    <ul> 
+
+                                        <li>
+                                            <h3 class="subheading">Dekker, Adelard
+                                                <a href="#"><img src="./graphics/user-alt-text.gif"
+                                                        alt="Reassign Confirmer" border="0"
+                                                        title="Reassign Confirmer"></a> 07/01/22-12/31/22
+                                            </h3>
+
+                                            <ul>
+                                                <li class="">
+                                                    <input type="checkbox"
+                                                        id="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        name="packetList" value="18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        class="allowSelectAll">
+                                                    <label for="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D"name="packetList">
+                                                        <strong>Grant A1111</strong> - [Grant Name]
+                                                    </label>
+                                                    <a href="#"
+                                                        title="View reports for grant B7864 - Groundwater-Level Monitoring in McLean Tazewell an...">[View/Edit]</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                            <!--Example without icons-->
+                            <ul class="actionlist">
+                                <li>
+                                    <h2 class="heading">Org 200 (Chart 1)</h2>
+
+                                    <ul>
+
+                                        <li>
+                                            <h3 class="subheading">King, Melanie 07/01/24-12/31/24</h3>
+
+                                            <ul>
+                                                <li class="">
+                                                    <input type="checkbox"
+                                                        id="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        name="packetList" value="18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        class="allowSelectAll">
+                                                    <label for="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D" name="packetList">
+                                                        <strong>Grant A1111</strong> - [Grant Name]
+                                                    </label>
+                                                    <a href="#"
+                                                        title="View reports for grant B7864 - Groundwater-Level Monitoring in McLean Tazewell an...">[View/Edit]</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <h3 class="subheading">Barker, Georgina 07/01/24-12/31/24</h3>
+
+                                            <ul>
+                                                <li class="">
+                                                    <input type="checkbox"
+                                                        id="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        name="packetList" value="18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        class="allowSelectAll">
+                                                    <label for="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D" name="packetList">
+                                                        <strong>Grant A1111</strong> - [Grant Name]
+                                                    </label>
+                                                    <a href="#" title="View reports for grant B7864 - Groundwater-Level Monitoring in McLean Tazewell an...">[View/Edit]</a>
+                                                </li>
+
+                                                <li class="">
+                                                    <input type="checkbox"
+                                                        id="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        name="packetList" value="18F4FC34-1929-4E22-92CE-5606DA02D76D"
+                                                        class="allowSelectAll">
+                                                    <label for="packetList_18F4FC34-1929-4E22-92CE-5606DA02D76D" name="packetList">
+                                                        <strong>Grant A1111</strong> - [Grant Name]
+                                                    </label>
+                                                    <a href="#" title="View reports for grant B7864 - Groundwater-Level Monitoring in McLean Tazewell an...">[View/Edit]</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+
+
+
+                            <div class="buttonIndent"><input type="submit" name="submit" value="Send to PI/Confirmer">
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                    <script>
+                        $(document).ready(function () {
+                            //Code for Select All
+                            $('#selectAll').on('click', function (event) {
+
+                                // add some extra code to prevent the button from actually working and submitting the form
+                                event.preventDefault();
+
+                                //check any boxes that have a class of allowSelectAll
+                                $('.allowSelectAll').prop("checked", true);
+
+                                return false;
+                            });
+
+                            //Code for Select All
+                            $('#unselectAll').on('click', function (event) {
+
+                                // add some extra code to prevent the button from actually working and submitting the form
+                                event.preventDefault();
+
+                                //check any boxes that have a class of allowSelectAll
+                                $('.allowSelectAll').prop("checked", false);
+
+                                return false;
+                            });
+
+                        }); //end of ready function
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearboth"></div>
+
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

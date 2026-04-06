@@ -7,7 +7,7 @@
       "uuidString" : "495CEC86-CB77-41EE-9F0E-384A85D24444"
     }
   ],
-  "creatorBuild" : "34892",
+  "creatorBuild" : "34903",
   "files" : {
     "\/applications\/confirmations\/browserconfig.xml" : {
       "cB" : 0,
@@ -15,6 +15,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/browserconfig.xml",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/card-list-correct.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/card-list-correct.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/card-list-incorrect.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/card-list-incorrect.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/css\/_devhelp.scss" : {
@@ -118,7 +134,7 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/applications\/confirmations\/css\/costshare-min.css" : {
+    "\/applications\/confirmations\/css\/confirm-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -126,11 +142,11 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/css\/costshare-min-min.css",
+      "oAP" : "\/applications\/confirmations\/css\/confirm-min-min.css",
       "oF" : 0,
       "pg" : 0
     },
-    "\/applications\/confirmations\/css\/costshare.css" : {
+    "\/applications\/confirmations\/css\/confirm.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -138,7 +154,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/css\/costshare-min.css",
+      "oAP" : "\/applications\/confirmations\/css\/confirm-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -187,6 +203,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/css\/main-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/applications\/confirmations\/css\/mixed-checkbox.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/mixed-checkbox-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -307,6 +335,16 @@
       "ou" : "lpckwebp-none",
       "q" : 90,
       "rq" : 75
+    },
+    "\/applications\/confirmations\/graphics\/Calendar.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/applications\/confirmations\/graphics\/Calendar.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/applications\/confirmations\/graphics\/cscc_checkboxbutton.gif" : {
       "ft" : 4194304,
@@ -455,6 +493,26 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/applications\/confirmations\/graphics\/Illinois-System-Logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/applications\/confirmations\/graphics\/Reviewer-Blue.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/applications\/confirmations\/graphics\/Reviewer-Blue.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/applications\/confirmations\/graphics\/Reviewer-Green.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/applications\/confirmations\/graphics\/Reviewer-Green.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -4322,20 +4380,58 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/applications\/confirmations\/overview.html" : {
+    "\/applications\/confirmations\/js\/mixed-checkbox-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/js\/mixed-checkbox-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/applications\/confirmations\/js\/mixed-checkbox.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/js\/mixed-checkbox-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/applications\/confirmations\/overview-cards-wip.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/overview.html",
+      "oAP" : "\/applications\/confirmations\/overview-cards-wip.html",
       "oF" : 0
     },
-    "\/applications\/confirmations\/oveview-tables.html" : {
+    "\/applications\/confirmations\/overview-cards.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/oveview-tables.html",
+      "oAP" : "\/applications\/confirmations\/overview-cards.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/overview-table-OLD.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/overview-table-OLD.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/oveview-tables-tests-OLD.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/oveview-tables-tests-OLD.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/send-to.html" : {
@@ -4352,6 +4448,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/site.webmanifest",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/wip-checkbox-example.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/wip-checkbox-example.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/wip-checkbox.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/wip-checkbox.html",
       "oF" : 0
     },
     "\/aside-ref.html" : {
@@ -8747,44 +8859,16 @@
         "active" : 0,
         "optionString" : "{'setWithoutGet': true, 'getWithoutSet': false, 'enforceForClassMembers': true}"
       },
-      "array-bracket-newline" : {
-        "active" : 0,
-        "optionString" : "{'multiline': true, 'minItems': null}"
-      },
-      "array-bracket-spacing" : {
-        "active" : 0,
-        "optionString" : "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
-      },
       "array-callback-return" : {
         "active" : 0,
         "optionString" : "{'allowImplicit': false}"
-      },
-      "array-element-newline" : {
-        "active" : 0,
-        "optionString" : "'always'"
       },
       "arrow-body-style" : {
         "active" : 0,
         "optionString" : "'as-needed', {'requireReturnForObjectLiteral': false}"
       },
-      "arrow-parens" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
-      "arrow-spacing" : {
-        "active" : 0,
-        "optionString" : "{'before': true, 'after': true}"
-      },
       "block-scoped-var" : {
         "active" : 0
-      },
-      "block-spacing" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
-      "brace-style" : {
-        "active" : 0,
-        "optionString" : "'1tbs', {'allowSingleLine': true}"
       },
       "camelcase" : {
         "active" : 0,
@@ -8798,25 +8882,9 @@
         "active" : 0,
         "optionString" : "{'exceptMethods': [], 'enforceForClassFields': true}"
       },
-      "comma-dangle" : {
-        "active" : 1,
-        "optionString" : "'never'"
-      },
-      "comma-spacing" : {
-        "active" : 0,
-        "optionString" : "{'before': false, 'after': true}"
-      },
-      "comma-style" : {
-        "active" : 0,
-        "optionString" : "'last'"
-      },
       "complexity" : {
         "active" : 0,
         "optionString" : "20"
-      },
-      "computed-property-spacing" : {
-        "active" : 0,
-        "optionString" : "'never', {'enforceForClassMembers': true}"
       },
       "consistent-return" : {
         "active" : 0,
@@ -8842,17 +8910,9 @@
       "default-param-last" : {
         "active" : 0
       },
-      "dot-location" : {
-        "active" : 0,
-        "optionString" : "'object'"
-      },
       "dot-notation" : {
         "active" : 0,
         "optionString" : "{'allowKeywords': false}"
-      },
-      "eol-last" : {
-        "active" : 0,
-        "optionString" : "'always'"
       },
       "eqeqeq" : {
         "active" : 0,
@@ -8860,10 +8920,6 @@
       },
       "for-direction" : {
         "active" : 1
-      },
-      "func-call-spacing" : {
-        "active" : 0,
-        "optionString" : "'never'"
       },
       "func-name-matching" : {
         "active" : 0,
@@ -8876,18 +8932,6 @@
       "func-style" : {
         "active" : 0,
         "optionString" : "'expression'"
-      },
-      "function-call-argument-newline" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
-      "function-paren-newline" : {
-        "active" : 0,
-        "optionString" : "'multiline'"
-      },
-      "generator-star-spacing" : {
-        "active" : 0,
-        "optionString" : "{'before': true, 'after': false}"
       },
       "getter-return" : {
         "active" : 1,
@@ -8912,41 +8956,9 @@
         "active" : 0,
         "optionString" : "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true, 'ignoreDestructuring': false}"
       },
-      "implicit-arrow-linebreak" : {
-        "active" : 0,
-        "optionString" : "'beside'"
-      },
-      "indent" : {
-        "active" : 0,
-        "optionString" : "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1 }"
-      },
       "init-declarations" : {
         "active" : 0,
         "optionString" : "'always',  {'ignoreForLoopInit': true}"
-      },
-      "jsx-quotes" : {
-        "active" : 0,
-        "optionString" : "'prefer-double'"
-      },
-      "key-spacing" : {
-        "active" : 0,
-        "optionString" : "{'singleLine': {'beforeColon': false, 'afterColon': true, 'mode':'strict'}, 'multiLine': {'beforeColon': false, 'afterColon': true, 'align': 'value', 'mode':'minimum'}}"
-      },
-      "keyword-spacing" : {
-        "active" : 0,
-        "optionString" : "{'before': true, 'after': true, 'overrides': {}}"
-      },
-      "linebreak-style" : {
-        "active" : 0,
-        "optionString" : "'unix'"
-      },
-      "lines-around-comment" : {
-        "active" : 0,
-        "optionString" : "{'beforeBlockComment': true}"
-      },
-      "lines-between-class-members" : {
-        "active" : 0,
-        "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
       "logical-assignment-operators" : {
         "active" : 0,
@@ -8959,10 +8971,6 @@
       "max-depth" : {
         "active" : 0,
         "optionString" : "{'max': 4}"
-      },
-      "max-len" : {
-        "active" : 0,
-        "optionString" : "{'code': 80, 'comments': 80, 'tabWidth': 4, 'ignoreUrls': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true, 'ignoreRegExpLiterals': true}"
       },
       "max-lines" : {
         "active" : 0,
@@ -8984,25 +8992,9 @@
         "active" : 0,
         "optionString" : "{'max': 10}, {'ignoreTopLevelFunctions': true}"
       },
-      "max-statements-per-line" : {
-        "active" : 0,
-        "optionString" : "{'max': 1}"
-      },
-      "multiline-ternary" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
       "new-cap" : {
         "active" : 0,
         "optionString" : "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
-      },
-      "new-parens" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
-      "newline-per-chained-call" : {
-        "active" : 0,
-        "optionString" : "{'ignoreChainWithDepth': 2}"
       },
       "no-alert" : {
         "active" : 0
@@ -9035,10 +9027,6 @@
       "no-cond-assign" : {
         "active" : 1,
         "optionString" : "'except-parens'"
-      },
-      "no-confusing-arrow" : {
-        "active" : 0,
-        "optionString" : "{'allowParens': true, 'onlyOneSimpleParam': false}"
       },
       "no-console" : {
         "active" : 0,
@@ -9135,19 +9123,9 @@
       "no-extra-label" : {
         "active" : 0
       },
-      "no-extra-parens" : {
-        "active" : 0,
-        "optionString" : "'all'"
-      },
-      "no-extra-semi" : {
-        "active" : 0
-      },
       "no-fallthrough" : {
         "active" : 1,
         "optionString" : "{'allowEmptyCase': false}"
-      },
-      "no-floating-decimal" : {
-        "active" : 0
       },
       "no-func-assign" : {
         "active" : 1
@@ -9218,28 +9196,12 @@
         "active" : 1,
         "optionString" : "{'allowEscape': false}"
       },
-      "no-mixed-operators" : {
-        "active" : 0,
-        "optionString" : "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
-      },
-      "no-mixed-spaces-and-tabs" : {
-        "active" : 0,
-        "optionString" : ""
-      },
       "no-multi-assign" : {
         "active" : 0,
         "optionString" : "{'ignoreNonDeclaration': false}"
       },
-      "no-multi-spaces" : {
-        "active" : 0,
-        "optionString" : "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
-      },
       "no-multi-str" : {
         "active" : 0
-      },
-      "no-multiple-empty-lines" : {
-        "active" : 0,
-        "optionString" : "{'max': 2, 'maxBOF': 2, 'maxEOF': 2}"
       },
       "no-negated-condition" : {
         "active" : 0
@@ -9255,9 +9217,6 @@
       },
       "no-new-native-nonconstructor" : {
         "active" : 1
-      },
-      "no-new-symbol" : {
-        "active" : 0
       },
       "no-new-wrappers" : {
         "active" : 0
@@ -9352,10 +9311,6 @@
       "no-sparse-arrays" : {
         "active" : 1
       },
-      "no-tabs" : {
-        "active" : 0,
-        "optionString" : "{allowIndentationTabs: false}"
-      },
       "no-template-curly-in-string" : {
         "active" : 0
       },
@@ -9367,10 +9322,6 @@
       },
       "no-throw-literal" : {
         "active" : 0
-      },
-      "no-trailing-spaces" : {
-        "active" : 0,
-        "optionString" : "{'skipBlankLines': false, 'ignoreComments': false}"
       },
       "no-unassigned-vars" : {
         "active" : 0
@@ -9435,6 +9386,9 @@
         "active" : 0,
         "optionString" : "{'functions': true, 'classes': true, 'variables': true, 'allowNamedExports': false}"
       },
+      "no-useless-assignment" : {
+        "active" : 1
+      },
       "no-useless-backreference" : {
         "active" : 1
       },
@@ -9476,27 +9430,8 @@
         "active" : 0,
         "optionString" : "{'terms': ['todo', 'fixme', 'xxx'], 'location': 'start'}"
       },
-      "no-whitespace-before-property" : {
-        "active" : 0
-      },
       "no-with" : {
         "active" : 1
-      },
-      "nonblock-statement-body-position" : {
-        "active" : 0,
-        "optionString" : "'beside'"
-      },
-      "object-curly-newline" : {
-        "active" : 0,
-        "optionString" : "{'ObjectExpression': {'multiline': true, 'consistent': true}, 'ObjectPattern': {'multiline': true, 'consistent': true}}"
-      },
-      "object-curly-spacing" : {
-        "active" : 0,
-        "optionString" : "'never'"
-      },
-      "object-property-newline" : {
-        "active" : 0,
-        "optionString" : "{'allowAllPropertiesOnSameLine': true}"
       },
       "object-shorthand" : {
         "active" : 0,
@@ -9506,25 +9441,9 @@
         "active" : 0,
         "optionString" : "'always'"
       },
-      "one-var-declaration-per-line" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
       "operator-assignment" : {
         "active" : 0,
         "optionString" : "'always'"
-      },
-      "operator-linebreak" : {
-        "active" : 0,
-        "optionString" : "'after', {'overrides': {'?': 'after', '+=': 'none'}}"
-      },
-      "padded-blocks" : {
-        "active" : 0,
-        "optionString" : "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
-      },
-      "padding-line-between-statements" : {
-        "active" : 0,
-        "optionString" : "{blankLine: 'always', prev:'*', next:'return'}"
       },
       "prefer-arrow-callback" : {
         "active" : 0
@@ -9568,17 +9487,12 @@
       "prefer-template" : {
         "active" : 0
       },
-      "quote-props" : {
-        "active" : 0,
-        "optionString" : "'always'"
-      },
-      "quotes" : {
-        "active" : 0,
-        "optionString" : "'double', {'avoidEscape': true, 'allowTemplateLiterals': true}"
+      "preserve-caught-error" : {
+        "active" : 1,
+        "optionString" : "{'requireCatchParameter': false}"
       },
       "radix" : {
-        "active" : 0,
-        "optionString" : "'always'"
+        "active" : 0
       },
       "require-atomic-updates" : {
         "active" : 0,
@@ -9594,22 +9508,6 @@
       "require-yield" : {
         "active" : 1
       },
-      "rest-spread-spacing" : {
-        "active" : 0,
-        "optionString" : "'never'"
-      },
-      "semi" : {
-        "active" : 0,
-        "optionString" : "'always', {'omitLastInOneLineBlock': false}"
-      },
-      "semi-spacing" : {
-        "active" : 0,
-        "optionString" : "{'before': false, 'after': true}"
-      },
-      "semi-style" : {
-        "active" : 0,
-        "optionString" : "'last'"
-      },
       "sort-imports" : {
         "active" : 0,
         "optionString" : "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single'], 'allowSeparatedGroups': false}"
@@ -9622,48 +9520,12 @@
         "active" : 0,
         "optionString" : "{'ignoreCase': false}"
       },
-      "space-before-blocks" : {
-        "active" : 0,
-        "optionString" : "{'functions': 'always', 'keywords': 'always', 'classes': 'always'}"
-      },
-      "space-before-function-paren" : {
-        "active" : 0,
-        "optionString" : "{'anonymous': 'always', 'named': 'never'}"
-      },
-      "space-in-parens" : {
-        "active" : 0,
-        "optionString" : "'never', {'exceptions': []}"
-      },
-      "space-infix-ops" : {
-        "active" : 0,
-        "optionString" : "{'int32Hint': false}"
-      },
-      "space-unary-ops" : {
-        "active" : 0,
-        "optionString" : "{'words': true, 'nonwords': false, 'overrides': {}}"
-      },
-      "spaced-comment" : {
-        "active" : 0,
-        "optionString" : "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
-      },
       "strict" : {
         "active" : 0,
         "optionString" : "'safe'"
       },
-      "switch-colon-spacing" : {
-        "active" : 0,
-        "optionString" : "{'after': true, 'before': false}"
-      },
       "symbol-description" : {
         "active" : 0
-      },
-      "template-curly-spacing" : {
-        "active" : 0,
-        "optionString" : "'never'"
-      },
-      "template-tag-spacing" : {
-        "active" : 0,
-        "optionString" : "'never'"
       },
       "unicode-bom" : {
         "active" : 0,
@@ -9679,17 +9541,6 @@
       },
       "vars-on-top" : {
         "active" : 0
-      },
-      "wrap-iife" : {
-        "active" : 0,
-        "optionString" : "'outside'"
-      },
-      "wrap-regex" : {
-        "active" : 0
-      },
-      "yield-star-spacing" : {
-        "active" : 0,
-        "optionString" : "{'before': false, 'after': true}"
       },
       "yoda" : {
         "active" : 0,

@@ -14,10 +14,11 @@ $primary-dark: #0b558e;
 $slate: #3f4958;
 $inky: #25354a;
 
+$wash: #f8fafc;
+$sky: #e9f1f8;
 $ground: #e7edf2;
 $ground-mid: #d6e2eb;
 $ground-dark: #b6c1ce;
-$sky: #e9f1f8;
 
 $light-blue: #b9ccdd;
 
@@ -45,13 +46,15 @@ $gt-row: $gray-1;
 
 $excel-icon: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="80px" height="90px" viewBox="0 0 80 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Group</title><g id="excel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group" transform="translate(-10, -5)" fill="%23108043" fill-rule="nonzero"><rect id="Rectangle" x="70" y="20" width="20" height="60"></rect><path d="M10,80 L66,95 L66,5 L10,20 L10,80 Z M24,30 L32.9,30 L37.9,41.1 L43.1,30 L51.8,30 L42.7,45.9 L52.7,64.6 L43.8,64.6 L37.9,51.4 L32.1,64.6 L23.4,64.6 L33.1,46.2 L24,30 Z" id="Shape"></path></g></g></svg>');
 
-$up-arrow-blue: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="23px" height="15px" viewBox="0 0 23 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Path</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(0, -1)" fill="%230B558E" fill-rule="nonzero"><polygon id="Path" points="11 1.87867966 12.0606602 2.93933983 22.0606602 12.9393398 19.9393398 15.0606602 11 6.121 2.06066017 15.0606602 -0.0606601718 12.9393398"></polygon></g></g></svg>');
-$up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Combined Shape</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(-4, -1)" fill="%230B558E" fill-rule="nonzero"><path d="M11.5,1 L12.2192113,1.80462884 L19,9.39074232 L17.5615775,11 L12.5,5.337 L12.5,20 L10.5,20 L10.5,5.337 L5.43842251,11 L4,9.39074232 L11.5,1 Z" id="Combined-Shape"></path></g></g></svg>');
+$up-arrow-blue: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Combined Shape</title><g id="WIP-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Frame" transform="translate(-4, -1)" fill="%230B558E" fill-rule="nonzero"><path d="M11.5,1 L12.2192113,1.80462884 L19,9.39074232 L17.5615775,11 L12.5,5.337 L12.5,20 L10.5,20 L10.5,5.337 L5.43842251,11 L4,9.39074232 L11.5,1 Z" id="Combined-Shape"></path></g></g></svg>');
 
-/* =========================== Title 2 Fixes =========================== */
-/* ====================== OVERVIEW PAGE ====================== */
+$reviewer: url("../graphics/Reviewer-Blue.svg");
+$reviewer-hover: url("../graphics/Reviewer-Green.svg");
 
-/* ========== OVERVIEW HEADER (Section above tables) ========== */
+/* ===================================== Title 2 Fixes ===================================== */
+/* ================================ OVERVIEW PAGE ================================ */
+
+/* ============= OVERVIEW PAGE INTRO (Section above tables) ============= */
 #overview-header {
   display: grid;
   grid-template-columns: auto auto;
@@ -95,7 +98,7 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
 
       a {
         font-size: 14px;
-        color: $link;
+        color: $link-dark;
         padding: 0.5rem 1rem;
         border-radius: 25px;
         background-color: $ground;
@@ -117,7 +120,38 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
   }
 }
 
-/*Tracking Report*/
+.instructions,
+.tracking-report {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+//Reporting Period and Due Date in Overview page instructions
+.review-dates {
+  width: max-content;
+  background-color: $gray-1;
+  border: 1px solid $gray-3;
+
+  background-image: url("../graphics/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  padding: .75rem 1rem;
+  padding-left: 3.25rem;
+  border-radius: 10px;
+  font-weight: normal;
+  strong {font-weight: bold;}
+  p {
+    margin: 0;
+
+    span {
+      display: inline-block;
+      margin: .15rem 1rem .15rem 0;
+    }
+  }
+  
+}
+
+/* === Tracking Report === */
 .tracking-report {
   border: 1px solid $gray-5;
   padding: 1rem;
@@ -187,11 +221,6 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
   font-weight: bold;
 }
 
-.instructions,
-.tracking-report {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-}
 
 @media (min-width: 800px) {
   .instructions {
@@ -206,9 +235,10 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
   }
 }
 
-/* ========== Overview Tables ========== */
+/* ============= Overview Sections ============= */
 
-/*Goes around each individual table*/
+/* ======== Section Containers ======== */
+
 .overview-section {
   margin-bottom: 2rem;
   border: 1px solid black;
@@ -222,7 +252,6 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
   }
 }
 
-/*Goes within overview-section, above table*/
 .subheading {
   background-color: $light-blue;
   padding: 0.05rem 1rem;
@@ -236,6 +265,11 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
     font-weight: bold;
     display: inline-block;
     margin-right: 1rem;
+    span {
+      display: block;
+      font-size: 14px;
+      margin-top: 0.25rem;
+    }
   }
 
   a.back-to-top {
@@ -249,18 +283,19 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
     display: inline-block;
     text-align: left;
 
-    background-image: $up-arrow-blue-2;
+    background-image: $up-arrow-blue;
     background-repeat: no-repeat;
     background-size: 15px 20px;
     background-position: 10px center;
   }
 
-  a.back-to-top :hover,
-  a.back-to-top :focus {
+  a.back-to-top:hover,
+  a.back-to-top:focus {
     background-color: $ground;
   }
 }
 
+//Added to 'subheading' div for read-only sections
 .read-only {
   background-color: $gray-4;
 
@@ -269,6 +304,100 @@ $up-arrow-blue-2: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"
     background-color: $gray-2;
   }
 }
+
+.section-body {padding: 1rem;}
+
+
+/* ======== Section Content ======== */
+//Applied to paragraph inside section body when there's no grants listed in that section 
+.no-grants {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+//Card Lists
+.card-list {
+  margin: 0;
+  padding: 0;
+
+  li {list-style: none;}
+
+  .card {
+    border: 1px solid $gray-3;
+    border-radius: 10px;
+    background-color: $wash;
+    margin-bottom: 1rem;
+
+    strong {font-weight: bold;}
+
+    .card-header {
+      background-color: $sky;
+      border-bottom: 1px solid $gray-3;
+      padding: 1rem;
+
+      h3 {
+        margin: 0;
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      div {
+        p {margin: 0.25rem 1rem 0.25rem 0;}
+        p, button {display: inline-block;}
+      }
+    }
+
+    .card-body {
+      padding: 1rem;
+     
+      h4 {
+        margin: 0;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        
+        li ul {
+            padding-left: 2rem;
+            margin-bottom: 1.25rem;
+
+            li {
+              list-style-type: disc;
+              margin-bottom: 0.5rem;
+              line-height: 135%;
+
+              a {margin-right: 1rem;}
+              span {
+                margin-right: 1rem;
+                display: inline-block;
+              }
+              span:last-of-type {margin-right: 0}
+            }
+          
+        }
+
+        li:last-child ul {margin-bottom: 0;}
+      }
+    }
+  }
+}
+
+
+//Applied in addition to "card-list" ul
+.read-only-cards {
+  .card {
+    background-color: $gray-1;
+    .card-header { background-color: $gray-2;}
+  }
+}
+
+
 
 /* ====================== Grant Report Pages ====================== */
 /* ========== Report Heading Section ========== */
@@ -471,12 +600,9 @@ ul.hor-list {
 
   thead {
     .excel_btn {
-        background-size: 20px 20px;
-        padding: .5rem 0.75rem;
-        padding-left: 30px;
-
-
-
+      background-size: 20px 20px;
+      padding: 0.5rem 0.75rem;
+      padding-left: 30px;
     }
   }
 }
@@ -607,7 +733,6 @@ td.nested-table {
 }
 
 /* ====================== Send to pages ====================== */
-
 //Styling for update format
 ul.actionlist {
   padding: 0;
@@ -615,14 +740,14 @@ ul.actionlist {
   width: 100%;
   color: black;
 
-  h3.heading {
+  .heading {
     background-color: $light-blue;
     padding: 1rem;
     margin: 0;
     font-size: 16px;
   }
 
-  h4.subheading {
+  .subheading {
     background-color: $gray-2;
     justify-content: start;
     padding: 0.5rem 1rem;
@@ -654,3 +779,39 @@ ul.actionlist {
     margin-bottom: 2rem;
   }
 }
+
+/* =========================== Title 2 Fixes =========================== */
+
+
+
+
+.reviewer_btn {
+  cursor: pointer;
+  border: none;
+  // border: 1px solid gray;
+  background-color: transparent;
+  color: $link;
+  text-decoration: underline;
+  background-image: $reviewer;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 25px;
+  display: block;
+}
+
+.reviewer_btn:hover,
+.reviewer_btn:focus {
+  //NEED TO MAKE GREEN VERSION OF ICON?
+  color: $link-hover;
+  background-image: $reviewer-hover;
+}
+
+/*
+#overview-header {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  >div { 
+    outline: 1px dashed red
+  }
+}
+  */
