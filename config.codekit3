@@ -17,22 +17,6 @@
       "oAP" : "\/applications\/confirmations\/browserconfig.xml",
       "oF" : 0
     },
-    "\/applications\/confirmations\/card-list-correct.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/card-list-correct.html",
-      "oF" : 0
-    },
-    "\/applications\/confirmations\/card-list-incorrect.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/card-list-incorrect.html",
-      "oF" : 0
-    },
     "\/applications\/confirmations\/css\/_devhelp.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -134,7 +118,7 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/applications\/confirmations\/css\/confirm-min.css" : {
+    "\/applications\/confirmations\/css\/confirm-kd.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -142,11 +126,11 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/css\/confirm-min-min.css",
+      "oAP" : "\/applications\/confirmations\/css\/confirm-kd-min.css",
       "oF" : 0,
       "pg" : 0
     },
-    "\/applications\/confirmations\/css\/confirm.css" : {
+    "\/applications\/confirmations\/css\/Confirm.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -154,7 +138,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/css\/confirm-min.css",
+      "oAP" : "\/applications\/confirmations\/css\/Confirm-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -203,6 +187,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/css\/main-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/applications\/confirmations\/css\/mixed-checkbox-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/mixed-checkbox-min-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -291,36 +287,28 @@
       "oS" : 0,
       "pg" : 0
     },
-    "\/applications\/confirmations\/drilldown-current.html" : {
+    "\/applications\/confirmations\/drilldown.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/drilldown-current.html",
+      "oAP" : "\/applications\/confirmations\/drilldown.html",
       "oF" : 0
     },
-    "\/applications\/confirmations\/drilldown-update.html" : {
+    "\/applications\/confirmations\/grant-info-costshare.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/drilldown-update.html",
+      "oAP" : "\/applications\/confirmations\/grant-info-costshare.html",
       "oF" : 0
     },
-    "\/applications\/confirmations\/grant-info-costshare-update.html" : {
+    "\/applications\/confirmations\/grant-info.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/grant-info-costshare-update.html",
-      "oF" : 0
-    },
-    "\/applications\/confirmations\/grant-info-update.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/grant-info-update.html",
+      "oAP" : "\/applications\/confirmations\/grant-info.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/graphics\/accept.png" : {
@@ -4402,12 +4390,36 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/applications\/confirmations\/overview-cards-wip.html" : {
+    "\/applications\/confirmations\/old-pages\/drilldown-current.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/overview-cards-wip.html",
+      "oAP" : "\/applications\/confirmations\/old-pages\/drilldown-current.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/old-pages\/overview-cards.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/old-pages\/overview-cards.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/old-pages\/overview-table-OLD.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/old-pages\/overview-table-OLD.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/old-pages\/oveview-tables-tests-OLD.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/old-pages\/oveview-tables-tests-OLD.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/overview-cards.html" : {
@@ -4416,22 +4428,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/overview-cards.html",
-      "oF" : 0
-    },
-    "\/applications\/confirmations\/overview-table-OLD.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/overview-table-OLD.html",
-      "oF" : 0
-    },
-    "\/applications\/confirmations\/oveview-tables-tests-OLD.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/oveview-tables-tests-OLD.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/send-to.html" : {
@@ -4448,22 +4444,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/site.webmanifest",
-      "oF" : 0
-    },
-    "\/applications\/confirmations\/wip-checkbox-example.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/wip-checkbox-example.html",
-      "oF" : 0
-    },
-    "\/applications\/confirmations\/wip-checkbox.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/wip-checkbox.html",
       "oF" : 0
     },
     "\/aside-ref.html" : {
