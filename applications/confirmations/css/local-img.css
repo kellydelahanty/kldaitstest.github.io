@@ -1,0 +1,23 @@
+/*Created because the link paths for images is different in Gil's environment and mine. 
+Confirm.css will have the path Gil needs and this additional file will have paths I use*/
+
+.review-dates {
+  background-image: url("../graphics/calendar.svg");
+}
+
+.accept-btn {
+  background-image: url("../graphics/icon_accept.svg");
+}
+
+.reject-btn {
+  background-image: url("../graphics/icon_reject.svg");
+}
+
+.reviewer_btn {
+  background-image: url("../graphics/Reviewer-Blue.svg");
+}
+
+.reviewer_btn:hover,
+.reviewer_btn:focus {
+    background-image: url("../graphics/Reviewer-Green.svg");
+}

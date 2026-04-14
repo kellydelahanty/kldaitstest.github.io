@@ -130,6 +130,18 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/applications\/confirmations\/css\/Confirm-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/Confirm-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/applications\/confirmations\/css\/Confirm.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -163,6 +175,30 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/css\/CSCCReport-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/applications\/confirmations\/css\/local-img-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/local-img-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/applications\/confirmations\/css\/local-img.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/local-img-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -259,6 +295,30 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/css\/sidebar-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/applications\/confirmations\/css\/title2-test-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/title2-test-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/applications\/confirmations\/css\/title2-test.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/title2-test-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -523,6 +583,28 @@
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "rq" : 75
+    },
+    "\/applications\/confirmations\/js\/checkboxMixed-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/js\/checkboxMixed-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/applications\/confirmations\/js\/checkboxMixed.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/js\/checkboxMixed-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/applications\/confirmations\/js\/datatables\/css\/buttons.dataTables.min.css" : {
       "aP" : 1,
@@ -4398,12 +4480,12 @@
       "oAP" : "\/applications\/confirmations\/old-pages\/drilldown-current.html",
       "oF" : 0
     },
-    "\/applications\/confirmations\/old-pages\/overview-cards.html" : {
+    "\/applications\/confirmations\/old-pages\/overview-cards-wip.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/confirmations\/old-pages\/overview-cards.html",
+      "oAP" : "\/applications\/confirmations\/old-pages\/overview-cards-wip.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/old-pages\/overview-table-OLD.html" : {
@@ -4428,6 +4510,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/applications\/confirmations\/overview-cards.html",
+      "oF" : 0
+    },
+    "\/applications\/confirmations\/send-to-old.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/send-to-old.html",
       "oF" : 0
     },
     "\/applications\/confirmations\/send-to.html" : {

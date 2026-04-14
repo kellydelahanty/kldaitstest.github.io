@@ -51,10 +51,9 @@ $up-arrow-blue: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3
 $reviewer: url("../graphics/Reviewer-Blue.svg");
 $reviewer-hover: url("../graphics/Reviewer-Green.svg");
 
-/* ===================================== Title 2 Fixes ===================================== */
-/* ================================ OVERVIEW PAGE ================================ */
-
-/* ============= OVERVIEW PAGE INTRO (Section above tables) ============= */
+/* =========================== Title 2 Fixes =========================== */
+/* ====================== OVERVIEW PAGE ====================== */
+/* ========== OVERVIEW HEADER (Section above tables) ========== */
 #overview-header {
   display: grid;
   grid-template-columns: auto auto;
@@ -335,6 +334,7 @@ $reviewer-hover: url("../graphics/Reviewer-Green.svg");
       background-color: $sky;
       border-bottom: 1px solid $gray-3;
       padding: 1rem;
+      border-radius: 3px 3px 0 0;
 
       h3 {
         margin: 0;
@@ -486,7 +486,7 @@ ul.hor-list {
       background-color: white;
     }
 
-    [type="checkbox"],
+    input[type="checkbox"],
     [type="radio"] {
       -ms-transform: scale(1.75); /* IE 9 */
       -webkit-transform: scale(1.75); /* Chrome, Safari, Opera */
@@ -758,6 +758,7 @@ ul.actionlist {
   li {
     font-weight: normal;
     margin: 0;
+    margin-bottom: 1rem;
     list-style-type: none;
 
     > ul {

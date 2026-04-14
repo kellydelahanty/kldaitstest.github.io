@@ -1243,6 +1243,8 @@ main {
 }
 
 .review-dates {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   background-color: #eff0f0;
   border: 1px solid #cacccd;
@@ -1269,6 +1271,8 @@ main {
   .tracking-report {
     border: 1px solid #919294;
     padding: 1rem;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
     background-color: #e9f1f8;
   }
@@ -1560,9 +1564,7 @@ main {
   background-color: white;
   }
   .grant-table tbody [type=checkbox],
-  .grant-table tbody [type=radio] {
-    -ms-transform: scale(1.75); /* IE 9 */
-    -webkit-transform: scale(1.75); /* Chrome, Safari, Opera */
+  .grant-table tbody [type=radio] { /* IE 9 */ /* Chrome, Safari, Opera */
     transform: scale(1.75);
     margin-left: 1rem;
     cursor: pointer;

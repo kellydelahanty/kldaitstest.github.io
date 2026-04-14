@@ -69,7 +69,7 @@
   width: max-content;
   background-color: #eff0f0;
   border: 1px solid #cacccd;
-  background-image: url("../graphics/calendar.svg");
+  background-image: url("./graphics/calendar.svg");
   background-repeat: no-repeat;
   background-position: 1rem center;
   padding: 0.75rem 1rem;
@@ -232,9 +232,11 @@
   margin: 0;
   padding: 0;
 }
+
 .card-list li {
   list-style: none;
 }
+
 .card-list .card {
   border: 1px solid #cacccd;
   border-radius: 10px;
@@ -259,7 +261,8 @@
 .card-list .card .card-header div p {
   margin: 0.25rem 1rem 0.25rem 0;
 }
-.card-list .card .card-header div p, .card-list .card .card-header div button {
+.card-list .card .card-header div p,
+.card-list .card .card-header div button {
   display: inline-block;
 }
 .card-list .card .card-body {
@@ -297,7 +300,6 @@
 .card-list .card .card-body ul li:last-child ul {
   margin-bottom: 0;
 }
-
 .read-only-cards .card {
   background-color: #eff0f0;
 }
@@ -380,7 +382,7 @@ ul.hor-list li .psuedo-label {
 .grant-table tbody tr:nth-child(odd) {
   background-color: white;
 }
-.grant-table tbody input[type=checkbox],
+.grant-table tbody [type=checkbox],
 .grant-table tbody [type=radio] {
   -ms-transform: scale(1.75); /* IE 9 */
   -webkit-transform: scale(1.75); /* Chrome, Safari, Opera */
@@ -556,7 +558,7 @@ td.nested-table > h4 {
 }
 
 .accept-btn {
-  background-image: url("../graphics/icon_accept.svg");
+  background-image: url("./graphics/icon_accept.svg");
   background-color: #627d31;
 }
 
@@ -565,7 +567,7 @@ td.nested-table > h4 {
 }
 
 .reject-btn {
-  background-image: url("../graphics/icon_reject.svg");
+  background-image: url("./graphics/icon_reject.svg");
   background-color: #b82025;
 }
 
@@ -596,7 +598,7 @@ td.nested-table > h4 {
   color: white;
 }
 
-/* ====================== Send to pages ====================== */
+/* ====================== Send to pages - title 2 update ====================== */
 ul.actionlist {
   padding: 0;
   margin: 0px;
@@ -619,7 +621,6 @@ ul.actionlist .subheading {
 ul.actionlist li {
   font-weight: normal;
   margin: 0;
-  margin-bottom: 1rem;
   list-style-type: none;
 }
 ul.actionlist li > ul {
@@ -637,14 +638,13 @@ ul.actionlist > li {
   margin-bottom: 2rem;
 }
 
-/* =========================== Title 2 Fixes =========================== */
 .reviewer_btn {
   cursor: pointer;
   border: none;
   background-color: transparent;
   color: #0b558e;
   text-decoration: underline;
-  background-image: url("../graphics/Reviewer-Blue.svg");
+  background-image: url("./graphics/Reviewer-Blue.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding-left: 25px;
@@ -654,15 +654,107 @@ ul.actionlist > li {
 .reviewer_btn:hover,
 .reviewer_btn:focus {
   color: #4a5a01;
-  background-image: url("../graphics/Reviewer-Green.svg");
+  background-image: url("./graphics/Reviewer-Green.svg");
+}
+
+/* ====================== End of Title 2 Fixes ====================== */
+
+/* =========================== Required =========================== */
+p.required {
+  color: maroon;
+  font-weight: bold;
+}
+label.required:after,
+legend.required::after {
+  content: " *";
+  color: maroon;
+  line-height: 0.8;
+}
+
+/* =========================== Custom tooltip for overview =========================== */
+.custom-tooltip {
+  pointer-events: none;
+  position: absolute;
+  white-space: pre-line;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*
+.button-focus-white:focus {
+  outline: 2px dotted #fff !important;
+  outline-offset: 2px;
+}*/
+
+.checkbox-mixed ul.checkboxes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-mixed ul.checkboxes li {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.checkbox-mixed label {
+  margin: 1px;
+  padding: 4px;
+}
+
+.checkbox-mixed [role="checkbox"] {
+  display: inline-block;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.checkbox-mixed [role="checkbox"]::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+
+  /* position: relative;*/
+  /* top: 1px;*/
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' style='forced-color-adjust: auto;'%3E%3Crect x='2' y='2' height='13' width='13' rx='2' stroke='currentcolor' stroke-width='1' fill-opacity='0' /%3E%3C/svg%3E");
+}
+
+.checkbox-mixed [role="checkbox"][aria-checked="true"]::before {
+  position: relative;
+  top: 1px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' style='forced-color-adjust: auto;'%3E%3Crect x='2' y='2' height='13' width='13' rx='2' stroke='currentcolor' stroke-width='1' fill-opacity='0' /%3E%3Cpolyline points='4,8 7,12 12,5' fill='none' stroke='currentcolor' stroke-width='2' /%3E%3C/svg%3E");
+}
+
+.checkbox-mixed [role="checkbox"][aria-checked="mixed"]::before {
+  position: relative;
+  top: 1px;
+
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' style='forced-color-adjust: auto;'%3E%3Crect x='2' y='2' height='13' width='13' rx='2' stroke='currentcolor' stroke-width='1' fill-opacity='0' /%3E%3Cline x1='5' y1='5' x2='12' y2='12' stroke='currentcolor' stroke-width='2' /%3E%3C/svg%3E");
+}
+
+.checkbox-mixed input:focus,
+.checkbox-mixed [role="checkbox"] {
+  outline: none;
+}
+
+.checkbox-mixed [role="checkbox"]:focus,
+.checkbox-mixed [role="checkbox"]:hover {
+  padding: 2px;
+  border: 2px solid #005a9c;
+  border-radius: 5px;
+  background-color: #def;
+}
+
+.checkbox-mixed label.focus,
+.checkbox-mixed label:hover {
+  padding: 2px;
+  border: 2px solid #005a9c;
+  background-color: #def;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /*
-#overview-header {
-  display: grid;
-  grid-template-columns: 75% 25%;
-  >div { 
-    outline: 1px dashed red
-  }
-}
-  */
+This component has been adapted from an example provided by the W3C, in accordance with the W3C Software and Document License https://www.w3.org/copyright/software-license-2023/
+*/
