@@ -19,5 +19,19 @@ Confirm.css will have the path Gil needs and this additional file will have path
 
 .reviewer_btn:hover,
 .reviewer_btn:focus {
-    background-image: url("../graphics/Reviewer-Green.svg");
+  background-image: url("../graphics/Reviewer-Green.svg");
+}
+
+/*Select All checkbox on Sent To  pages */
+.checkbox-mixed [role="checkbox"]::before {
+  content: url("../graphics/checkbox_unchecked.svg");
+}
+
+.checkbox-mixed [role="checkbox"][aria-checked="true"]::before {
+  content: url("../graphics/checkbox_checked.svg");
+}
+
+.checkbox-mixed [role="checkbox"][aria-checked="mixed"]::before {
+    content: url("../graphics/checkbox_mixed.svg");
+
 }

@@ -94,6 +94,18 @@
       "oS" : 0,
       "pg" : 0
     },
+    "\/applications\/confirmations\/css\/checkbox-ref.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/confirmations\/css\/checkbox-ref-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/applications\/confirmations\/css\/common-app-min.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -389,6 +401,36 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/applications\/confirmations\/graphics\/Calendar.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/applications\/confirmations\/graphics\/Checkbox_checked.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/applications\/confirmations\/graphics\/Checkbox_checked.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/applications\/confirmations\/graphics\/checkbox_mixed.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/applications\/confirmations\/graphics\/checkbox_mixed.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/applications\/confirmations\/graphics\/checkbox_unchecked.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/applications\/confirmations\/graphics\/checkbox_unchecked.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
