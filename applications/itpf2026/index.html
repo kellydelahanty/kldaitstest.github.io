@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Accessibility Issues Example Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+  <style>
+    /* =========== DEV HELP =========== */
+    .hide {
+      display: none !important;
+    }
+
+    /* =========== Page Styling =========== */
+  </style>
+</head>
+
+<body>
+  <header class="a11yheader">
+
+    <!--Subtitle doesn't meet color contrast because of size/weight-->
+    <div>
+      <h1>Accessibility Issues Example Site</h1>
+      <p class="subtitle">Spring 2026 IT Pro Forum</p>
+    </div>
+  </header>
+  <main>
+
+
+    <div class="grid-container">
+
+      <div class="cell">
+        <h2>Example Form </h2>
+      </div>
+
+
+      <div class="cell half-cell">
+        <form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+          </div>
+
+          <!--No accessible name for textarea-->
+          <div>
+            <p class="fake-label">Comments: </p>
+            <textarea></textarea>
+          </div>
+          <div class="actionbar">
+            <!--Submit button isn't a real button, isn't focusable-->
+            <div class="btn primary">
+              Submit
+            </div>
+            <button class="btn hollow">Cancel</button>
+          </div>
+
+        </form>
+      </div>
+
+      <!--Uninformative all text-->
+      <div class="cell half-cell">
+        <img class="ex-img" src="img/campus.jpg" alt="A photograph">
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+</body>
+
+</html>

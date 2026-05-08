@@ -9,15 +9,7 @@
   ],
   "creatorBuild" : "34903",
   "files" : {
-    "\/applications\/a11yexsite\/bada11ypage.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/applications\/a11yexsite\/bada11ypage.html",
-      "oF" : 0
-    },
-    "\/applications\/a11yexsite\/css\/style-min.css" : {
+    "\/applications\/itpf2026\/css\/style-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -25,11 +17,11 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/a11yexsite\/css\/style-min-min.css",
+      "oAP" : "\/applications\/itpf2026\/css\/style-min-min.css",
       "oF" : 0,
       "pg" : 0
     },
-    "\/applications\/a11yexsite\/css\/style.css" : {
+    "\/applications\/itpf2026\/css\/style.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -37,22 +29,30 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/a11yexsite\/css\/style-min.css",
+      "oAP" : "\/applications\/itpf2026\/css\/style-min.css",
       "oF" : 0,
       "pg" : 0
     },
-    "\/applications\/a11yexsite\/img\/campus.jpg" : {
+    "\/applications\/itpf2026\/img\/campus.jpg" : {
       "ft" : 16384,
       "iS" : 259256,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/applications\/a11yexsite\/img\/campus.jpg",
+      "oAP" : "\/applications\/itpf2026\/img\/campus.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/applications\/itpf2026\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/itpf2026\/index.html",
+      "oF" : 0
     },
     "\/aside-ref.html" : {
       "cB" : 0,
