@@ -22,11 +22,14 @@
 <body>
   <header class="a11yheader">
 
-    <!--Subtitle doesn't meet color contrast because of size/weight-->
-    <div>
+    <div class="grid-container">
+    <div class="cell">
       <h1>Accessibility Issues Example Site</h1>
       <p class="subtitle">Spring 2026 IT Pro Forum</p>
     </div>
+    </div>
+    <!--#3 - Subtitle doesn't meet color contrast because of size/weight-->
+
   </header>
   <main>
 
@@ -45,13 +48,13 @@
             <input id="name" type="text">
           </div>
 
-          <!--No accessible name for textarea-->
+          <!--#2 - No accessible name for textarea-->
           <div>
             <p class="fake-label">Comments: </p>
             <textarea></textarea>
           </div>
           <div class="actionbar">
-            <!--Submit button isn't a real button, isn't focusable-->
+            <!--#1 - Submit button isn't a real button, isn't focusable-->
             <div class="btn primary">
               Submit
             </div>
@@ -61,7 +64,7 @@
         </form>
       </div>
 
-      <!--Uninformative all text-->
+      <!--#4 - Uninformative all text-->
       <div class="cell half-cell">
         <img class="ex-img" src="img/campus.jpg" alt="A photograph">
       </div>
