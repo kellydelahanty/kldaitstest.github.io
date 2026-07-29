@@ -1,0 +1,661 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Sink Reference</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/devhelp.css">
+    <link rel="stylesheet" href="../../css/app.css">
+
+
+</head>
+
+<body>
+
+
+    <main id="main" class="ks-main">
+        <div class="grid-container">
+            <div class="grid-x">
+
+                <!--Table of Contents-->
+                <div class="cell bodycard">
+                    <div class="grid-x grid-margin-y grid-margin-x">
+                        <div class="cell">
+                            <h1>ARM Old/Unused Components</h1>
+                        </div>
+                  
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <!-- Containers -->
+            <div class="cell bodycard " id="containers">
+                <div class="grid-x grid-margin-y grid-margin-x">
+                    <div class="cell ks-heading">
+                        <h2>Containers</h2>
+
+                    </div>
+                    <!--Modals-->
+                    <div class="cell ks-section" id="modals">
+                        <h3>Old Foundation version of  modals</h3>
+
+                        <div class="grid-x grid-margin-x grid-margin-y">
+
+                            <!--gen-modal-->
+                            <div class="cell">
+                                <p>Gen modal </p>
+                                <button class="button" data-open="gen-modal-ex">Click me for a modal</button>
+                                <div class="reveal gen-modal" id="gen-modal-ex" data-reveal>
+                                    <h1>Awesome. I Have It.</h1>
+                                    <p class="lead">Your couch. It is mine.</p>
+                                    <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!--hist-modal-->
+                            <div class="cell">
+                                <p>hist-modal- Used on View Access pages to view access history on a particular
+                                    profile</p>
+                                <button type="button" class="button" aria-label="History request #1356"
+                                    data-open="history1">hist-modal Modal</button>
+                                <div class="reveal hist-modal" id="history1" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Student information > General learner & registration >
+                                        </div>
+                                        <h1>Access History for
+                                            <span>Banner Student: Hold maintenance </span>
+                                        </h1>
+
+                                    </div>
+
+
+                                    List dates and sources of requests that yielded this access; what info needs to
+                                    be displayed?
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!--history modal-->
+                            <div class="cell">
+                                <p>History Modal- Used on View Access pages to view access history on a particular
+                                    profile</p>
+                                <button type="button" class="button clear small hist-btn"
+                                    aria-label="History of access, { name of profile }"
+                                    data-open="wip-history"></button>
+                                <div class="reveal history" id="wip-history" data-reveal
+                                    aria-describedby="history1-title">
+                                    <h1 id="history1-title">Access Snapshot</h1>
+                                    <h2>{ Name of profile } /
+                                        { Name of app} </h2>
+
+                                    <p>[PLACEHOLDER: about access history/full history/pre-ARM history goes here]</p>
+                                    <ul>
+                                        <li class="history-highlight change-highlight">
+                                            <div class="history-meta">
+                                                <h3>Change - Request submitted 01/23/2025 <span
+                                                        class="req-number">#76438</span></h3>
+                                                <p>
+                                                    Requested by
+                                                    <strong>Jonathan Sims (666555444)</strong>
+                                                    on behalf of
+                                                    <strong>Chicago, Learning Sciences Res Inst [200-FT-217]</strong>
+                                                </p>
+                                            </div>
+
+                                            <ul class="review-summary">
+                                                <li>Campus
+                                                    <ul class="lowest-lvl-dets">
+                                                        <li class="mark-add">Chicago</li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>Department
+                                                    <ul class="lowest-lvl-dets">
+                                                        <li class="mark-del">[KV-218] UIUC Liberal Arts &amp;
+                                                            Sciences-Cline Ctr for Adv SocialRsrch</li>
+                                                        <li class="mark-del">[KV-241] UIUC Liberal Arts &amp;
+                                                            Sciences-Anthropology</li>
+                                                        <li class="mark-del">value 3</li>
+                                                        <li class="mark-del">value 4</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="history-highlight change-highlight">
+                                            <div class="history-meta">
+                                                <h3>Change - Request submitted 12/11/2024 <span
+                                                        class="req-number">#74458</span></h3>
+                                                <p>
+                                                    Requested by
+                                                    <strong>Jonathan Sims (666555444)</strong>
+                                                    on behalf of
+                                                    <strong>Chicago, Learning Sciences Res Inst [200-FT-217]</strong>
+                                                </p>
+                                            </div>
+
+                                            <ul class="review-summary">
+
+                                                <li class="">Department:
+                                                    <ul class="lowest-lvl-dets">
+                                                        <li class="mark-add">[KV-218] UIUC Liberal Arts &amp;
+                                                            Sciences-Cline Ctr for
+                                                            Adv SocialRsrch</li>
+                                                        <li class="mark-add">[KV-241] UIUC Liberal Arts &amp;
+                                                            Sciences-Anthropology
+                                                        </li>
+                                                        <li class="mark-del">[KV-276] UIUC Liberal Arts &amp;
+                                                            Sciences-Center for
+                                                            Writing Studies</li>
+                                                        <li class="mark-del">[KV-276] UIUC Liberal Arts &amp;
+                                                            Sciences-Center for
+                                                            Writing Studies</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="history-highlight add-highlight">
+                                            <div class="history-meta">
+                                                <h3>Add - Request submitted 01/23/2025 <span
+                                                        class="req-number">#74321</span></h3>
+
+                                                <p>
+                                                    Requested by
+                                                    <strong>Jonathan Sims (666555444)</strong>
+                                                    on behalf of
+                                                    <strong>Chicago, Learning Sciences Res Inst [200-FT-217]</strong>
+                                                </p>
+                                            </div>
+
+                                            <ul class="review-summary">
+
+                                                <li>entitlement1:
+                                                    <ul class="lowest-lvl-dets">
+                                                        <li class="mark-add">value1</li>
+                                                        <li class="mark-add">value2</li>
+                                                        <li class="mark-add">value3</li>
+                                                        <li class="mark-add">value4</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <!--form-modal (used on old profiles page)-->
+                            <div class="cell">
+                                <p>form-modal</p>
+                                <button class="button" data-open="profile-1-example">Form Modal</button>
+
+                                <div class="reveal form-modal" id="profile-1-example" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Category Name > Subcategory name > Application or
+                                            report/data
+                                            name > Profile name</div>
+                                        <h1>Set permission details for this profile
+                                        </h1>
+
+                                        <p class="form-direction">All fields
+                                            required unless noted. If you don't know yet what the settings should
+                                            be,
+                                            skip this profile and add it later, after getting clarification.
+                                        </p>
+                                    </div>
+
+
+                                    <div class="quest">
+                                        <label for="selectex">Select the level of access needed: </label>
+                                        <select id="selectex">
+                                            <option>Choose one ...</option>
+                                            <option selected>PRR Role Instructor (With SSN)</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="quest">
+                                        <div class="followup">
+                                            <label for="df">You have requested SSN access. Please explain why this
+                                                person
+                                                requires.... </label>
+                                            <textarea id="df"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-actions"><button type="submit" class="button">Save these
+                                            settings</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!--settings + form different version of form-modal (used on new profile page)-->
+                            <div class="cell">
+                                <p>settings popup with form-modal inside / large modal</p>
+
+                                <button class="button" data-open="exampleSetting">Settings Modal</button>
+
+                                <div class="reveal large settings-popup" id="exampleSetting" data-reveal
+                                    aria-labelledby="setting-head">
+                                    <h1 id="setting-head">Specify settings for Name-of-profile-here</h1>
+
+
+                                    <p class="error-summary">2 marked setting fields must be completed below. </p>
+
+                                    <form class="form-modal">
+                                        <div class="setting-item">
+                                            <div class="not-shared">
+                                                <label for="set1">Level of access needed:</label>
+                                                <select id="set1">
+                                                    <option>Option 1</option>
+                                                    <option>Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <!-- <p class="shared-notice">
+                                                                        <span>Shared setting used</span>: This profile makes use of the following setting, which has been set previously and is used by other profiles. 
+                                                                    </p>-->
+
+
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which might be used by other profiles. If added, they will
+                                                inherit
+                                                the
+                                                setting you indicate here.
+                                            </p>
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <select id="set1">
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which has been set previously and is used by other
+                                                profiles.
+                                            </p>
+
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <div class="shared-value">Whatever the setting value is</div>
+                                                    <select id="set1" class="hidden">
+                                                        <option selected>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+                                                    <div class="align-offset"><button type="button"
+                                                            class="txt-btn">Change
+                                                            setting</button></div>
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                    You can change this setting, but doing so will affect all other
+                                                    profiles
+                                                    which use this setting:
+                                                    <ul class="shared-affects">
+                                                        <li>Profile #545</li>
+                                                        <li>Profile #323</li>
+                                                        <li>Profile #876</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which has been set previously and is used by other
+                                                profiles.
+                                            </p>
+
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <select id="set1">
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+                                                    <div class="align-offset"><button type="button"
+                                                            class="txt-btn">Cancel
+                                                            change</button></div>
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                    You can change this setting, but doing so will affect all other
+                                                    profiles
+                                                    which use this setting:
+                                                    <ul class="shared-affects">
+                                                        <li>Profile #545</li>
+                                                        <li>Profile #323</li>
+                                                        <li>Profile #876</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <div class="not-shared">
+                                                <label for="just1">Justification for access needed:</label>
+                                                <textarea id="just1"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-action">
+                                            <button type="submit" class="button">Save settings</button>
+                                        </div>
+
+                                    </form>
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--info-modal-->
+                            <div class="cell">
+                                <p>Info Modal</p>
+
+                                <button type="button" class="button"
+                                    aria-label="Definition of pre-registration and registration"
+                                    data-open="info-def">Info Modal</button>
+                                <div class="reveal info-modal" id="info-def" data-reveal>
+                                    <div class="modal-top">
+                                        <div class="bread">Category Name > Subcategory name > Application or
+                                            report/data name </div>
+                                        <h1>About { name of profile}
+                                        </h1>
+
+                                    </div>
+                                    <p class="training-req">Note: Completed FERPA training is required before access
+                                        can be granted. </p>
+
+                                    <p><span class="stress">Expected role:</span> Persons holding management
+                                        positions within the division who have
+                                        oversight authority and are
+                                        impowered to
+                                        make decisions in the best interest of the University. They will also
+                                        monitor documents to insure they
+                                        comply with all federal, state and university rules. They will have
+                                        maintenance and query access to all
+                                        processes and tables through menus and forms and will execute reports.</p>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--definition-modal -->
+                            <div class="cell">
+                                <p>Defintion Modal</p>
+                                <button type="submit" class="button" data-open="missed-req">Process this
+                                    request</button>
+
+                                <div class="reveal definition-modal" id="missed-req" data-reveal
+                                    aria-labelledby="modalheader-1">
+
+                                    <h1 id="modalheader-1">One or more requests were not decided.</h1>
+
+                                    <p>Select "Go back" to review the action page again. </p>
+                                    <p>Click "Continue" to proceed, which will return any skipped/undecided requests
+                                        to the inbox. </p>
+
+
+                                    <div class="optbar">
+                                        <button class="button neutral-btn" type="button" data-close>Go back &amp;
+                                            review</button> <button class="button" type="button">Continue with
+                                            decisions</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <!--status-reveal-->
+                            <div class="cell">
+                                <p> Status reveal</p>
+                                <a href="javascript:void();" data-open="status-main-pop"> #39985</a>
+                                <div class="reveal status-reveal" id="status-main-pop" data-reveal>
+                                    <div class="status-body">
+                                        <h1>Request #88888 <span>Submitted 01/15/24</span></h1>
+
+
+                                        <h2>For:</h2>
+                                        <p>PreferredFirst Lastname<br>
+                                            Sr title here | Education Administation [333]<br>
+                                            netidhere / 65unihere
+                                        </p>
+
+                                        <h2>Buy: </h2>
+                                        <p>{Submitter name}
+                                            <span>on behalf of {unit name }</span>
+                                        </p>
+
+                                        <h2>Prequested effective date:</h2>
+                                        <p>Nov 12, 2024 [edit]</p>
+                                    </div>
+
+                                    <div class="blanket-cancel checks">
+                                        <h2>Remaining {2} parts of this request</h2>
+
+                                        <label for="cancel-it"><input id="cancel-it" type="checkbox"
+                                                name="blanket-cancel">Cancel
+                                            all incomplete parts of
+                                            this request <strong>[Note: Clicking the Cancel items button below will
+                                                immediately
+                                                cancel the
+                                                remaining items. This action cannot be undone.</strong>] </label>
+                                        <button type="button" class="button">Cancel remaining items</button>
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="req-part-name"><span class="part-no">(1) </span>
+                                    <a href="javascript:void();" data-open="item-detail">Modify{name of profile}
+                                        click me</a>
+                                </div>
+
+                                <div class="reveal status-reveal" id="item-detail" data-reveal>
+
+                                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                    <div class="status-banner">
+                                        <h1>Request #2222 - Part #3</h1>
+                                        <div>In process</div>
+                                        <p>Submitted: mm/dd/yyyy</p>
+
+                                    </div>
+
+                                    <div class="status-body">
+                                        <h2>For:</h2>
+                                        <p>PreferredFirst Lastname<br>
+                                            Sr title here | Education Administation [333]<br>
+                                            netidhere / 65unihere
+                                        </p>
+
+                                        <h2>Buy: </h2>
+                                        <p>{Submitter name}
+                                            <span>on behalf of {unit name }</span>
+                                        </p>
+
+                                        <h2>Details</h2>
+                                        <p>Add {name of profile }
+                                            <span>settings go here if applicable</span>
+                                        </p>
+
+                                        <h2>Status </h2>
+                                        <p>{write status details here; this would include comments about rejections,
+                                            etc. }</p>
+
+                                        <div>{potentially timeframe goes here } </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="req-cnl-btn">
+                                    <button class="cancel-part-btn" aria-label="Cancel request part #39985-1"
+                                        data-open="confirm-cancel"></button>
+                                </div>
+
+                                <div class="reveal status-reveal" id="confirm-cancel" data-reveal>
+                                    <div class="status-body">
+                                        <h1>Cancel this part of your request? </h1>
+
+                                        <p>To be cancelled: Adding {name of profile } /Changing settings for {name
+                                            of profile}
+                                            /Removing
+                                            {name of profile }</p>
+                                        <button type="button" class="button ">Yes, cancel it </button> <button
+                                            type="button" class="button secondary" data-close>No, keep this
+                                            request</button>
+                                        <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--Tiny Modal-->
+                            <div class="cell">
+                                <a href="#" data-open="lookup">Tiny modal</a>
+                                <div class="reveal tiny" id="lookup" data-reveal>
+                                    <h1>Look up an application's location</h1>
+                                    <form>
+                                        <label for="lookup-name">Application name:</label>
+                                        <div class="input-group">
+
+                                            <input class="input-group-field" type="text" id="lookup-name">
+                                            <div class="input-group-button">
+                                                <input type="submit" class="button" value="Look up">
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                    <div>
+
+                                        <h2>Results for "Chrome"</h2>
+                                        <ul>
+                                            <li><strong>ChromeRiver</strong> -- found here:
+                                                <div>Finance > Financed-focused applications</div>
+                                            </li>
+                                        </ul>
+
+                                        <h2>Results for "EDDIE"</h2>
+
+                                        <ul>
+                                            <li><strong>EDDIE and Data Warehouse -- Accounts receivable</strong> --
+                                                found
+                                                here:
+                                                <div>Finance > Finance-related reporting</div>
+                                            </li>
+
+                                            <li><strong>EDDIE and Data Warehouse -- Recruiting and admissions</strong>
+                                                -- found
+                                                here:
+                                                <div>Student > Student-related reporting</div>
+                                            </li>
+                                            <li><strong>EDDIE and Data Warehouse -- Test score administration</strong>
+                                                -- found
+                                                here:
+                                                <div>Student > Student-related reporting</div>
+                                            </li>
+
+                                    </div>
+
+                                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../../js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,484 @@
+@use "variables" as *;
+
+/* ## INBOX PAGES ============================================================================
+    ### Table Search
+    ### Filters
+    ### Tables
+    ### Pagination
+==============================================================================================*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Table Search
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+//The req-search specifically used to search for requests from the USC Submissions (saved and complete) pages
+.req-search {
+  padding-top: 2rem;
+}
+
+//Completed table - page search results section that contain table
+.archive-results {
+  padding-top: 2rem;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Filters
+    - Appears on both Inbox pages as while as view-access access-list pages
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//SPECIFIC filters for tables on dashboards ===================================
+.filterbar {
+  position: relative;
+  font-size: 0.85rem;
+  background-color: $sky;
+  padding: 0.375rem 0.75rem 0.375rem 35px;
+  margin: 0.75rem 0 1.25rem 0;
+  background-image: $icon_filter;
+
+  background-repeat: no-repeat;
+  background-position: 6px;
+  border-radius: $global-radius;
+  @include xy-grid;
+
+  .dropdown-pane {
+    width: 220px;
+    border-radius: 4px;
+    border: 1px solid $blue-gray-mid;
+
+    label {
+      border-bottom: 1px solid transparent;
+      // margin-left: 2rem;
+      // text-indent: -1.625rem;
+      font-size: 0.85rem;
+    }
+
+    legend {
+      font-weight: normal;
+      font-size: 1rem;
+    }
+
+    label:hover,
+    label:focus {
+      border-bottom: 1px solid $blue-gray-mid;
+    }
+
+    input[type="checkbox"] {
+      overflow: visible;
+    }
+
+    .checks {
+      label {
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}
+
+//Filter by application dropdown
+.filters {
+  @include xy-cell(6);
+}
+
+//apply button in filter dropdown
+.apply-btn {
+  padding: 0.4rem 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+//sort by dropdown
+.sorts {
+  @include xy-cell(6);
+  text-align: right;
+
+  fieldset {
+    text-align: left;
+  }
+}
+
+//filter bar when only sort is available, not the filter by application
+.onlysort {
+  background-image: none;
+  padding-left: 0;
+  font-weight: 600;
+
+  .count {
+    align-self: center;
+    @include xy-cell(6);
+    font-style: italic;
+  }
+}
+
+//button that triggers fillers/sort panel to appear (looks like a select input but isn't)
+.button.pop-cntl {
+  padding: 0.6rem 3.5rem 0.6rem 0.85rem;
+  font-size: 0.9rem;
+  background-color: $white;
+  background: $white url(../img/drop-arrow.png) right center no-repeat;
+  color: $blue-gray-dark;
+  border: 1px solid $ground-dark;
+}
+
+.button.pop-cntl:active,
+.button.pop-cntl:focus,
+.button.pop-cntl:hover,
+.button.popped {
+  border: 1px solid $blue-gray-mid;
+  background-color: $white;
+  color: $primary-dark;
+}
+
+.ordering.pop-cntl {
+  text-align: left;
+  min-width: 8rem;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Tables
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Inbox tables for all roles
+.listing-table {
+  border: none;
+
+  caption {
+    @include for-sr();
+  }
+
+  thead,
+  tbody,
+  tfooter {
+    border-color: transparent;
+  }
+
+  thead tr {
+    background-color: $white;
+    border-bottom: 2px solid $blue-gray-mid;
+  }
+
+  th {
+    text-transform: uppercase;
+    color: $blue-gray-dark;
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+  }
+
+  th,
+  td {
+    border: none;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $wash;
+  }
+}
+
+// ##### =================== USC Inboxes ============================================================================ //
+
+// ######  USC Completed and In Progress Inboxes ----------------------------------------- //
+.sub-req {
+  .req-number {
+    width: 100px;
+  }
+  .req-date {
+    width: 150px;
+  }
+  .req-cancel {
+    width: 75px;
+  }
+
+  tbody {
+    th {
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: none;
+    }
+
+    tr:nth-child(even) {
+      background-color: $white;
+    }
+
+    tr {
+      border-bottom: 1px solid $gray-4;
+    }
+
+    .req-parts,
+    .req-status,
+    .req-cancel {
+      vertical-align: middle;
+      padding: 0.75rem 0.625rem;
+    }
+
+    .req-cancel {
+      text-align: right;
+      padding: 0 0.625rem;
+    }
+
+    //Rrequest part subcolumn - section that shows request part number
+    .part-no {
+      display: inline-block;
+      min-width: 34px;
+    }
+
+    .occ-date {
+      // display: block;
+      font-size: 0.85rem;
+      color: $dark-gray;
+    }
+  }
+}
+
+// ######  USC Saved/Unsubmitted Inbox ----------------------------------------- //
+
+.saved-req {
+  tr,
+  tr:nth-child(even) {
+    border-bottom: 1px solid $robin-light;
+  }
+
+  //Column Widths
+  .req-num {
+    width: 8rem;
+  }
+  .req-date {
+    width: 10rem;
+  }
+  .req-account {
+    width: 20rem;
+  }
+  .req-cancel {
+    width: 40px;
+  }
+  tbody {
+    .req-cancel {
+      padding: 0 0 0 10px;
+    }
+  }
+
+  a:link {
+    font-weight: 700;
+    @include plainlink;
+  }
+
+  a:hover,
+  a:focus {
+    border-bottom: 1px solid $primary-dark;
+  }
+}
+
+//Request part subcolumn for cancel button in USC Saved table
+.req-cnl-btn {
+  justify-self: end;
+}
+
+// #### Authorizer & Admin Inboxes =================================================================================/
+// ######  Table Styling ----------------------------------------- //
+.claimed-requests,
+.open-requests,
+.waiting-req-table {
+  width: 100%;
+  margin: 0.75rem 0 2rem 0;
+
+  td {
+    vertical-align: top;
+  }
+
+  tr {
+    border-bottom: 1px solid $gray-4;
+  }
+
+  tbody {
+    th {
+      text-align: left;
+      text-transform: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      border-bottom: 1px solid $gray-4;
+    }
+
+    .linked-req,
+    .linked-req-ext {
+      td {
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+      td:first-of-type {
+        border-left: 4px solid #6c9ea8;
+      }
+    }
+
+    .linked-req-ext {
+      background-color: #eff6f7 !important;
+      font-style: italic;
+    }
+  }
+
+  a:link {
+    @include plainlink();
+    font-weight: 700;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  #req-date {
+    width: 135px;
+  }
+  #status {
+    width: 150px;
+  }
+  #usc-claim {
+    width: 175px;
+  }
+
+  #act {
+    width: 80px;
+  }
+}
+
+.claimed-requests,
+.open-requests {
+  tbody {
+    tr:nth-child(even) {
+      background-color: transparent;
+      border-bottom: 1px solid $gray-4;
+    }
+  }
+}
+
+// ######  Table Content ----------------------------------------- //
+
+//Authorizers - Claim and release button -----------------//
+.claim-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  background-image: $icon_claim;
+  background-position: center 2px;
+  background-repeat: no-repeat;
+}
+
+.release-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  background-image: $icon_release;
+  background-position: center 2px;
+  background-repeat: no-repeat;
+}
+
+.claim-btn:hover,
+.claim-btn:focus,
+.release-btn:focus,
+.release-btn:hover {
+  border-color: $gray-4;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(76%) saturate(7237%)
+    hue-rotate(211deg) brightness(92%) contrast(111%);
+}
+
+//Request Summary Styling -----------------//
+//name of application
+.noa {
+  display: block;
+  color: $dark-gray;
+  font-weight: 600;
+}
+
+//Request Code
+.req-code {
+  color: $dark-gray;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+//Linked requests-----------------//
+.linked-req-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    padding: 0.2rem 0.4rem 0.2rem 40px;
+    margin-bottom: 0.4rem;
+  }
+
+  .linked-ext {
+    background-color: $teal-1;
+    font-style: italic;
+    margin-right: 1rem;
+  }
+}
+
+th.linked-req {
+  text-transform: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  border-left: 4px solid $teal-2;
+
+  padding-left: 0;
+  background-image: $icon_link;
+  background-position: 12px 12px;
+  background-repeat: no-repeat;
+}
+
+td.linked-req {
+  border-left: 4px solid $teal-2;
+  padding-left: 0;
+}
+
+//summary header for linked requests
+.sum-linked {
+  padding-left: 44px;
+}
+
+//Cancel button -----------------//
+
+// Saved/In Progress x in  a circle Cancel button that appears in USC tables for cancelling parts of a request/the full request
+.cancel-part-btn {
+  background-image: $icon_cancel-circle-gray;
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 36px;
+  background-position: center;
+}
+
+.cancel-part-btn:hover,
+.cancel-part-btn:focus {
+  filter: invert(18%) sepia(60%) saturate(3259%) hue-rotate(341deg)
+    brightness(70%) contrast(100%);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ### Pagination
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.pagination {
+  text-align: center;
+  a:link {
+    @include plainlink;
+  }
+  .disabled {
+    color: $dark-gray;
+  }
+
+  .current {
+    padding: 0; 
+
+    a {
+      color: white;
+      background: $primary-color;
+    }
+    
+    a:hover, a:focus {
+      color: white;
+      background: $primary-dark;
+    }
+  }
+}

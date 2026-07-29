@@ -1,0 +1,591 @@
+@use "variables" as *;
+
+/* CONTAINERS ----------------------------------------------------------------
+    ## CALLOUTS
+    ## ACCORDIONS
+    ## TABS
+    ## MODALS 
+
+--------------------------------------------------------------------------------------- */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ## CALLOUTS
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//generic gray callout
+.callout {
+  border: none;
+  border-left: 6px solid $dark-gray;
+  background-color: $wash;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+//yellow notice callout
+.notice {
+  border-color: $orange-4;
+  background-color: $orange-1;
+  color: $inky;
+}
+
+//Red warning callout
+//currently used on selectApp page of request access if they try to proceed without selecting anything
+//this used be call ".warning" but then the styling gets overridden but foundations warning styling
+.warn {
+  border-color: $peach-dark;
+  background-color: $peach-lightest;
+  color: $peach-dark;
+}
+
+//Positive Green Callout, success/acknowledgement
+.ack {
+  border-color: $success-mid;
+  background-color: $success-light;
+  color: $success-dark;
+}
+
+//Err-callout is a Red error callout that has a ! icon
+//reiminder-callout is a brown reminder callout with a tied string around finger icon
+.err-callout,
+.reminder-callout {
+  border-color: $error;
+  background-color: $alert-lightest;
+  font-weight: 700;
+  color: $error;
+  background-image: $icon_error-circle;
+  background-position: 10px 14px;
+  background-repeat: no-repeat;
+  padding-left: 48px;
+}
+
+.reminder-callout {
+  color: #5f2323;
+  border-color: #5f2323;
+  background-image: $icon_reminder;
+}
+
+//"Action Needed" callout used on dashboard. Has red ! icon and a x close button
+.callout-act-needed {
+  background-color: $white;
+  display: block;
+  background-image: $icon_error-circle;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  background-position: 10px 20px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: $alert-dark;
+  font-size: 1.125rem;
+}
+
+//Missing an application note (NeedsReview - Note/text styling, could be made generic)
+.missing {
+  padding: 0.75rem 1.2rem 0.75rem 2.25rem;
+  background-color: #ffee8a;
+  border-radius: $global-radius;
+  display: inline-block;
+  background-image: $icon_lightbulb;
+  background-repeat: no-repeat;
+  background-position: 4px 10px;
+}
+
+.callout,
+.notice,
+.warn,
+.ack,
+.err-callout,
+.reminder-callout,
+.missing {
+  a {
+    color: $smoked-7;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ## Accordions
+    Use standard Foundation accordions, with some additional styles (below)
+    There are unique styles or the "access-list"" accordions on the 
+    Request Access page, found with the Request Access styles. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.accordion-item {
+  .accordion-title {
+ //   border-radius: 0;
+  }
+}
+
+.accordion-item:last-child {
+  .accordion-title {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.accordion-item:only-child {
+  .accordion-title {
+    border-radius: 5px;
+    border-bottom: none;
+  }
+}
+
+
+
+
+
+.accordion-item:only-child.is-active, 
+.accordion-item:first-child.is-active {
+  .accordion-title {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+
+.accordion-item:last-child.is-active {
+  .accordion-title {
+    border-radius: 0;
+  }
+}
+
+
+.accordion-title {
+  padding-left: 2.5rem;
+  border-radius: 0;
+}
+
+.accordion-title::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  //   top: 8px;
+  width: 17px;
+  height: 16px;
+  background-image: $icon_accordion-arrow-lg;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.is-active > .accordion-title::before {
+  content: "";
+  transform: rotate(90deg);
+}
+
+.accordion-title:hover,
+.accordion-title:focus {
+  background-color: $wash;
+  //    background-color: $ground;
+}
+
+.accordion-content {
+  padding: 0.2rem 1rem;
+}
+
+// --- Small Blue Accordion --- //
+.accordion-blue {
+  .accordion-item:only-child {
+    .accordion-title {
+      border-radius: 5px;
+    }
+  }
+  .accordion-item:only-child.is-active {
+    .accordion-title {
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  .accordion-title {
+    background-color: $wash;
+    color: $black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    padding-left: 2.5rem;
+    text-decoration: none;
+    border-bottom: none;
+    border-radius: 0;
+
+    h2,
+    h3,
+    h4 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .accordion-title::before {
+    content: "";
+    left: 0.75rem;
+    width: 17px;
+    height: 16px;
+    background-image: $icon_accordion-arrow-sm;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+
+  .accordion-content {
+    background-color: $wash;
+    border-top: none;
+    padding-top: 0.75rem;
+  }
+
+  .accordion-title:focus,
+  .accordion-title:hover {
+    text-decoration: none;
+    background-color: $ground;
+    background-color: $ground-mid;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ## TABS
+    Use standard Foundation tabs
+    These additional classes can be added for styling, c
+    urrently used on the USC "Submissions in progress" page
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+//added to ul alongside the "tabs" class
+.pagepanel {
+  border: none;
+  padding-top: 1.75rem;
+
+  a {
+    font-size: 1.1rem;
+    padding: 0 0 0.25rem 0;
+    @include plainlink();
+    font-weight: 400;
+  }
+
+  a:hover,
+  a:focus {
+    border-bottom-color: $primary-dark;
+    border-bottom-style: solid;
+  }
+
+  .is-active {
+    border-bottom: 2px solid $orange-4;
+
+    > a:link {
+      font-weight: 700;
+      color: $primary-dark;
+    }
+  }
+
+  .is-active a:hover,
+  .is-active a:focus {
+    border-bottom-color: transparent;
+  }
+
+  .tabs-title {
+    float: none;
+    display: block;
+    margin: 0 0 0.5rem 0;
+
+    @include breakpoint(large) {
+      display: inline-block;
+      margin-right: 3rem;
+    }
+  }
+
+  .tabs-title:last-child {
+    margin-right: 0;
+  }
+}
+
+//Added to the div alongside the "tabs-content" class
+.pagepanel-content {
+  border: none;
+  padding: 0;
+
+  .tabs-panel {
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ## Modals
+    Built off of Foundation Reveals 
+    Need to go through and clean these styles up, seems to be a lot of inefficiencies/redundances in how they're designed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ==================== Generic Modal Styling ==================== */
+
+:root {
+  --radius: 4px;
+}
+
+/* Ensure modals are initially hidden */
+.ptn-modal-element {
+  display: none;
+}
+
+/* When inside an overlay, they should be displayed */
+.ptn-modal-overlay .ptn-modal-element {
+  display: block;
+}
+
+//Modal Top
+.modal:before,
+.ptn-modal-styled:before {
+  content: " ";
+  display: block;
+  background: linear-gradient(
+    90deg,
+    rgba(66, 168, 221, 1) 0%,
+    rgba(18, 35, 97, 1) 100%
+  );
+  height: 10px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+//Modal Interior
+.ptn-modal-interior {
+  padding: 12px 28px 2rem 28px;
+}
+
+.ptn-modal-interior h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+//Modal Close Button
+.ptn-modal-close {
+  position: absolute;
+  top: 22px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--ground);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  padding: 0;
+  transform: translateY(-2px);
+}
+
+.ptn-modal-close:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.ptn-modal-close:focus {
+  outline: 2px dotted black;
+  border-radius: 50%;
+}
+
+.ptn-modal-overlay {
+  backdrop-filter: blur(2px);
+}
+
+/* ==================== Custom Modals ==================== */
+.modal-top {
+  padding-bottom: 0.5rem;
+}
+
+/* ========== Definition Modal ========== */
+.definition-modal {
+  dd {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* ========== Setting & Form Modal ========== */
+/*    
+    Form modal is used for modals with forms in them, but that class
+    can either be applied on the reveal div or within a larger "settings-popup" reveal
+*/
+
+.form-modal {
+  h1 {
+    padding: 0.75rem 0 0 0;
+    font-weight: 700;
+  }
+
+  h1 span {
+    font-size: 1.4rem;
+    display: block;
+    text-transform: none;
+  }
+
+  select {
+    max-width: max-content;
+  }
+}
+
+.modal-top {
+  padding: 1rem 1.25rem;
+}
+
+/* ========== Status Reveal Modal ========== */
+/*
+Status reveal modal is used for various types of modals used on the 
+USC Submissions In Progress 
+*/
+
+.status-reveal {
+  .ptn-modal-interior {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}
+
+.status-reveal.ptn-modal-styled:before,
+.status-reveal.modal:before {
+  height: 0;
+}
+
+.alert-modal.modal:before,
+.alert-modal.ptn-modal-styled:before {
+  content: " ";
+  display: block;
+  background: linear-gradient(
+    90deg,
+    rgba(220, 56, 61, 1) 0%,
+    rgba(120, 11, 11, 1) 100%
+  );
+  height: 10px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.status-banner {
+  padding: 1.25rem 1.75rem;
+  background-color: $wash;
+  margin-top: 0rem;
+}
+
+.status-body {
+  padding: 1.25rem 1.75rem 2.5rem 1.75rem;
+
+  .status-summary-1 {
+    list-style: none;
+    margin-left: 0;
+    li {
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      margin-left: 2.5rem;
+      li {
+        margin-bottom: 0;
+        span {
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .status-summary-2 {
+    list-style: none;
+    //margin-left: 0;
+    > li {
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+    }
+    ul {
+      list-style: none;
+      margin-left: 0.75rem;
+      .usc-info {
+        color: $gray-6;
+        font-weight: normal;
+      }
+      .status-info {
+        color: $gray-6;
+        font-style: italic;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.blanket-cancel {
+  padding: 1.25rem 1.75rem 2rem 1.75rem;
+  background-color: $gray-4;
+  background-color: $alert-lightest;
+
+  .button {
+    background-color: $alert-dark;
+    color: $white;
+    font-size: 0.9rem;
+  }
+
+  .button:hover,
+  .button:focus {
+    background-color: $alert-darkest;
+  }
+
+  label {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    text-indent: -1.4rem;
+  }
+}
+
+.cancel-status {
+  .details {
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: rem;
+      }
+      .success-mssg,
+      .alert-mssg,
+      .failure-mssg {
+        background-size: 20px 20px;
+      }
+    }
+  }
+}
+
+//actionbar - need to review and see if I can combined/consolidate these styles
+.reveal .optbar {
+  padding: 1rem 0;
+  text-align: right;
+}
+
+//Overlay effects for all modals
+/*
+html.is-reveal-open {
+    position: relative;
+}
+
+.reveal-overlay {
+    background: rgba(193, 201, 207, 0.75);
+    //background: rgba(22, 21, 21, 0.5);
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+*/

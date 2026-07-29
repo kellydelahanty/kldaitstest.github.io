@@ -1,0 +1,166 @@
+<form>
+    <div class="grid-x"><!--The div directly under <form> should have class "grid-x"-->
+
+        <!--Instead of having just one <div> as the child of the above "grid-x" div like you have now, there should be 4 direct child divs. 
+                Each div should have the class "cell".
+                The overview of what the "cell" divs include is: 
+                    1st - The initial access and org selection inputs. Contains the access level radio selection, the college/department type ahead, and the "add" button for that type ahead
+                    2nd - The historical inputs. Contains the 'add historical org' checkbox, the inputs for actually adding the org code, and an add button specifically for the historical orgs 
+                    3rd - The display of the departments or colleges that have been added (Currently in dev this appears between the basic access selection and the historic org selection, should appear after both of them)
+                    4th - The "save these settings" button 
+            -->
+
+        <!--Basic access/org selection (Contains the access level radio selection, the college/department type ahead, and the add button for that type ahead)-->
+        <div class="cell">
+
+            <!--Access Level Selection-->
+            <div class="quest">
+                <fieldset class="radios">
+                    <legend>Human Resources Data Restriction (VPD) for Data Warehouse:</legend>
+                    <div>
+                        <input type="radio" name="rad420" id="rad_0" value="[object Object]">
+                        <label for="rad_0">Department</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rad420" id="rad_1" value="[object Object]">
+                        <label for="rad_1">College</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rad420" id="rad_2" value="[object Object]">
+                        <label for="rad_2">Campus</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rad420" id="rad_3" value="[object Object]">
+                        <label for="rad_3">System Wide</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!--College/Department Autocomplete Type-ahead-->
+            <div>
+                <!--This div doesn't have the "quest" class because it contains a <p> tag in addition to the actual question label/input-->
+                <p class="sub-instructions big-note">Click Add after choosing a value to move it to the selected list. This step is require before saving.</p>
+                <!--This paragraph needs to be added before the type ahead "quest" div-->
+                <div class="quest">
+                    <label for="acSelectMulti12">Department:</label><!--Would say college if user selected 'college' from the access level question above-->
+                    <div id="ac-selectMulti12" class="autocomplete-wrapper">
+                        <div class="autocomplete__wrapper">
+                            <div
+                                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                                <div id="acSelectMulti12__status--A" role="status" aria-atomic="true"
+                                    aria-live="polite"></div>
+                                <div id="acSelectMulti12__status--B" role="status" aria-atomic="true"
+                                    aria-live="polite"></div>
+                            </div><input aria-expanded="false" aria-owns="acSelectMulti12__listbox"
+                                aria-autocomplete="both" autocomplete="off"
+                                class="autocomplete__input autocomplete__input--default" id="acSelectMulti12"
+                                name="input-autocomplete" placeholder="Enter Department code or description" type="text"
+                                role="combobox" aria-describedby="acSelectMulti12__assistiveHint">
+                            <ul class="autocomplete__menu autocomplete__menu--overlay autocomplete__menu--hidden"
+                                id="acSelectMulti12__listbox" role="listbox"></ul><span
+                                id="acSelectMulti12__assistiveHint" style="display: none;">When
+                                autocomplete results are available use up and down arrows to
+                                review and enter to select. Touch device users, explore by touch
+                                or with swipe gestures.</span>
+                        </div>
+                    </div>
+                    <!--Right now the Add button and the Access Selected box are within the type-ahead's "quest" div. 
+                        The add button should be in it's own "quest" div after this one. 
+                        The Access Selected box is in it's own cell further down the page-->
+
+                </div>
+            </div>
+
+            <!--The add button should be in it's own "quest" div outside of the type-ahead's "quest" div
+                    The text of the button has been updated to say "Add Department to Selected Access"
+                    And it should have the class "add_btn"
+                    -->
+            <div class="quest">
+                <button type="button" aria-label="Look up this code" class="button twbtn  add_btn">Add Department to Selected Access</button>
+            </div>
+        </div>
+
+        <!--Historical org UI - includes both the "I want to see..." checkbox, 
+            the actual inputs for filling in the code (that differ depending on if 
+            its an HR or Student profile), as well as it's own "add button"-->
+        <div class="cell">
+            <div class="quest checks">
+
+                <!-- checkbox appears when historical access is allowed, and appears under the auto complete input after user selects department or college.  The label will say departments or colleges respectively-->
+                <div>
+                    <input type="checkbox" name="hist-org-check" id="hist-org-check">
+                    <label for="hist-org-check">I wish to add historical departments</label>
+                    <!--This will say "historical colleges" if you selected college in first question-->
+                </div>
+
+
+                <!--HR Version of fieldset, Student version can be seen in req-access-02-profiles.html -->
+                <div class="followup">
+                    <fieldset>
+                        <legend>Enter historical organization code
+                            <span class="gentext">(Format example: 1:1:D1:NP:AAA:123)</span>
+                            <!--If user has selected the "College" level, then the hint text should be "(Format example: 1:1:D1:NP)"-->
+                        </legend>
+
+                        <div class="">
+                            <div class="sm-quest">
+                                <label for="hist-hr-coa">COA_CD</label>
+                                <input type="text" id="hist-hr-coa" maxlength="1" placeholder="1, 2 or 4" class="tiny-input">
+                            </div>
+
+                            <div class="sm-quest">
+                                <label for="hist-hr-campus">CAMPUS_LEVEL1__CD</label>
+                                <input type="text" id="hist-hr-campus" maxlength="1" placeholder="1, 2 or 4" class="tiny-input">
+                            </div>
+
+                            <div class="sm-quest">
+                                <label for="hist-hr-admin">ADMIN_LEVEL_2_CD</label>
+                                <input type="text" id="hist-hr-admin" maxlength="2" class="tiny-input">
+                            </div>
+
+                            <div class="sm-quest">
+                                <label for="hist-hr-college">COLL_LEVEL_3_CD</label>
+                                <input type="text" id="hist-hr-collge" maxlength="2" class="tiny-input">
+                            </div>
+
+                            <!--The below inputs only appear if user selected "Department"-->
+                            <div class="sm-quest">
+                                <label for="hist-hr-school">SCHOOL_SUB_COLL_LEVEL_4_CD</label>
+                                <input type="text" id="hist-hr-school" maxlength="3" class="tiny-input">
+                            </div>
+
+                            <div class="sm-quest">
+                                <label for="hist-hr-dept">DEPT_LEVEL_5_CD</label>
+                                <input type="text" id="hist-hr-dept" maxlength="3" class="tiny-input">
+                            </div>
+
+
+                            <div class="">
+                                <!--give button the class add_btn and update the text to "Add Historical Department to Selected AccessAdd Historical Department to Selected Access"-->
+                                <button type="button" aria-label="Add this code" class="button twbtn add_btn">Add Historical Department to Selected Access</button>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <!--Selected Access Display - appears after historical org UI in it's own div with the classes "cell" and "selections". It should not have the class "grid-x"-->
+        <div class="cell selections">
+            <!--There should not be any other div inside the "cell selections" div-->
+            <h2>Access Selected:</h2>
+            <ul>
+                <li>[1:1:B1:KM:KM0:230] UIUC MBA Program Administration
+                    <button type="button" aria-label="Remove selection" class="button clear">[remove]</button>
+                </li>
+            </ul>
+        </div>
+
+        <!--Modal Actions - should be it's own "cell" div with the additional class of "modal-actions"-->
+        <div class="cell modal-actions">
+            <button type="button" class="button">Save these settings</button>
+        </div>
+    </div>
+</form>

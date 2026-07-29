@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Modal Example
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <style>
+        .codebloc {
+            border: 1px solid black;
+            background-color: #e6e6e6;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-intro {
+            border-bottom: 5px solid #919294;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .ex-bloc {
+            border-bottom: 1px solid #919294;
+            padding-bottom: 1rem;
+        }
+
+        h4 {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <aside id="skip"><a href="#main">skip to content</a></aside>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell bodycard tracking">
+                    <div class="grid-x grid-margin-x grid-margin-y">
+
+                        <!--Intro/Instructions/Documentation-->
+                        <div class="cell page-intro">
+                            <h1>Modal Tests</h1>
+                            <p>
+                                These modals are based the "method 1" overlay component in the
+                                <a href="https://tracivaughan.github.io/Component-Library/">AITS component library</a>
+                                that is currently in development.
+                                <a
+                                    href="https://tracivaughan.github.io/Component-Library/components/overlays/basic-modal.html">See
+                                    Traci's full documentation of the modals.</a>
+                                Some basic implementation notes:
+                            </p>
+                            <ul>
+                                <li>Javascript is in the modal-sh.js file</li>
+                                <li>Each modal must have a unique id that is then used to open and close the modal</li>
+                                <li>By default, the modal's max width is 800px, but you can override it setting the
+                                    <code>data-modal-size</code>
+                                    attribute.
+                                </li>
+                                <li>The main modal div always needs to the class <code>ptn-modal-element</code>.
+                                    Additional classes may be added for specific modals (see examples below)</li>
+                            </ul>
+
+                            <h2>HTML Structure</h2>
+                            <p>Basic HTML for modal trigger (Can be button or link):</p>
+                            <pre class="codebloc">
+&lt;button onclick="openModal('modal-id')" type="button" class="primary button">[Button/link that triggers modal]&lt;/button>
+</pre>
+
+                            <p>Basic HTML for the modal itself:</p>
+                            <pre class="codebloc">
+&lt;div id="modal-id" class="ptn-modal-element" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    &lt;button class="ptn-modal-close" onclick="closeModal('modal-id')" aria-label="Close modal">&times;&lt;/button>
+                                    
+    &lt;div class="ptn-modal-interior">
+                                        
+        &lt;h1 id="ptn-modal-title">Main heading for the modal content&lt;/h1>
+        
+        [Content for the modal goes here.]
+        
+    &lt;/div>
+&lt;/div>
+</pre>
+                        </div>
+
+                        <div class="cell">
+                            <h2>Modal Examples + Special Modal Classes</h2>
+                        </div>
+
+                        <!--basic example-->
+                        <div class="cell ex-bloc">
+                            <h3>Basic/Generic modal</h3>
+                            <p>Default modal. There should be the class <code>ptn-modal-element</code> on the modal div
+                            </p>
+                            <button onclick="openModal('basic-modal')" type="button" class="primary button">Basic
+                                Modal</button>
+
+
+                            <!-- modal content-->
+                            <div id="basic-modal" class="ptn-modal-element" role="dialog" aria-modal="true"
+                                aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('basic-modal')"
+                                    aria-label="Close modal">&times;</button>
+                                <div class="ptn-modal-interior">
+                                    <h2 id="ptn-modal-title">Main heading for the modal content</h2>
+
+                                    <p>Main content for the modal goes here. </p>
+
+                                    <ul>
+                                        <li>Example terms and conditions statement </li>
+                                        <li>Example legal notice </li>
+                                        <li>Example policy statement </li>
+
+                                    </ul>
+                                    <p>Adding some inactive buttons just to demo how focus works.</p>
+
+                                    <div class="ptn-modal-btnbar">
+                                        <button class="test-btn">Sample button here</button>
+                                        <button class="test-btn2">Another button</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--Tiny Modal for Lookup-->
+                        <div class="cell ex-bloc">
+                            <h3>Tiny Modal</h3>
+                            <p>
+                                Example of a small modal, where size is set using <code>data-modal-size</code>.
+                            </p>
+                            <p>Use cases:</p>
+                            <ul>
+                                <li>the application lookup link at top of the USC Request Access "Select App page"</li>
+                                <li>when there is not a lot of content in the modal</li>
+                            </ul>
+                            <button onclick="openModal('tiny-ex')" type="button" class="button primary">Tiny
+                                Modal</button>
+
+                            <div id="tiny-ex" data-modal-size="600px" class="ptn-modal-element" role="dialog"
+                                aria-modal="true" aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('tiny-ex')"
+                                    aria-label="Close modal">&times;</button>
+                                <div class="ptn-modal-interior">
+                                    <h1 id="ptn-modal-title">Look up an application's location</h1>
+
+                                    <form>
+                                        <label for="lookup-name">Application name:</label>
+                                        <div class="input-group">
+
+                                            <input class="input-group-field" type="text" id="lookup-name">
+                                            <div class="input-group-button">
+                                                <input type="submit" class="button" value="Look up">
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                    <div>
+
+                                        <h2>Results for "Chrome"</h2>
+                                        <ul>
+                                            <li><strong>ChromeRiver</strong> -- found here:
+                                                <div>Finance > Financed-focused applications</div>
+                                            </li>
+                                        </ul>
+
+                                        <h2>Results for "EDDIE"</h2>
+
+                                        <ul>
+                                            <li><strong>EDDIE and Data Warehouse -- Accounts receivable</strong> --
+                                                found
+                                                here:
+                                                <div>Finance > Finance-related reporting</div>
+                                            </li>
+
+                                            <li><strong>EDDIE and Data Warehouse -- Recruiting and admissions</strong>
+                                                -- found
+                                                here:
+                                                <div>Student > Student-related reporting</div>
+                                            </li>
+                                            <li><strong>EDDIE and Data Warehouse -- Test score administration</strong>
+                                                -- found
+                                                here:
+                                                <div>Student > Student-related reporting</div>
+                                            </li>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Error/Warning Modal-->
+                        <div class="cell ex-bloc">
+                            <h3>Warning/Error alert Modal</h3>
+                            <p>
+                                Created by adding the class <code>alert-modal</code> to the modal. 
+                                 Used either when the modal is telling user about an error that's been made 
+                                 or the modal is warning user about something (ex: confirming user wants to cancel a request)
+                            </p> 
+                            <button onclick="openModal('error-modal')" type="button"
+                                class="button caution-btn">Cancel/Warning/Error Modal</button>
+
+                            <div id="error-modal" class="ptn-modal-element alert-modal" role="dialog" aria-modal="true"
+                                aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('error-modal')"
+                                    aria-label="Close modal">&times;</button>
+                                <div class="ptn-modal-interior">
+                                    <h1 id="modalheader-1">One or more requests were not decided.</h1>
+
+                                    <p>Select "Go back" to review the action page again. </p>
+                                    <p>Click "Continue" to proceed, which will return any skipped/undecided requests
+                                        to the inbox. </p>
+
+
+                                    <div>
+                                        <button class="button neutral-btn" type="button" data-close>Go back &amp;
+                                            review</button> <button class="button" type="button">Continue with
+                                            decisions</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Definitions-modal-->
+                        <div class="cell ex-bloc">
+                            <h3>Definition Modal</h3>
+                            <p>
+                                The class <code>definition-modal</code> is added to the modal div in
+                                addition to the class <code>ptn-modal-element</code>
+                                when there is a &lt;dl> in the modal. This styles the definition list.
+                            </p>
+                            <p>Use cases:</p>
+                            <ul>
+                                <li>More info modals with profile information on the USC Request Access profile
+                                    selection pages.</li>
+                            </ul>
+                            <button onclick="openModal('def-modal')" type="button" class="button primary">Definition
+                                Modal</button>
+
+                            <div id="def-modal" class="ptn-modal-element definition-modal" role="dialog"
+                                aria-modal="true" aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('def-modal')"
+                                    aria-label="Close modal">&times;</button>
+                                <div class="ptn-modal-interior">
+                                    <h1 class="def-head">Guide to myResearch Portal profiles</h1>
+
+                                    <dl>
+                                        <dt>Profile name</dt>
+                                        <dd>Description and details</dd>
+                                        <dt>Another profile name</dt>
+                                        <dd>Its description and details. If it requires a training prereq it is
+                                            mentioned here. </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--form-modal-->
+                        <div class="cell ex-bloc">
+                            <h3>Form Modal</h3>
+                            <p>Modals that include forms have the class <code>form-modal</code> to modal div in
+                                addition to the class <code>ptn-modal-element</code>. </p>
+                            <button onclick="openModal('form-modal')" type="button" class="primary button">Form
+                                Modal</button>
+                            <!-- modal content-->
+                            <div id="form-modal" class="ptn-modal-element form-modal" role="dialog" aria-modal="true"
+                                aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('form-modal')"
+                                    aria-label="Close modal">&times;</button>
+                                <div class="ptn-modal-interior">
+
+                                    <div class="modal-top">
+                                        <h1>Edit Implementation date for this request</h1>
+                                        <p class="form-direction">
+                                            All fields are required unless otherwise noted. Please enter the date on
+                                            which the request should go into effect.
+                                            If no date is entered then the request will be implemented as soon as
+                                            possible.
+                                        </p>
+                                    </div>
+                                    <div class="quest sequence-entry-block">
+                                        <div class="seb-one">
+                                            <label for="date-1">Implementation Date </label>
+                                            <input type="date">
+                                        </div>
+                                        <div class="seb-one"><button class="button twbtn">Clear Date</button></div>
+                                    </div>
+                                    <div class="quest ">
+                                        <label for="date-explain">Explain reason for changing implementation
+                                            date:</label>
+                                        <textarea id="date-explain"></textarea>
+
+                                    </div>
+
+
+                                    <div class="modal-actions">
+                                        <button type="submit" class="button">Save changes</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <h4>Settings Modal</h4>
+                            <p>Previously the profile settings modal in the Request Access process had a class of
+                                <code>setting-popup</code> with the form having the class <code>form-modal</code>.
+                                I've done away with that and just have the <code>form-modal</code> class on the modal
+                                itself.
+                            </p>
+                            <button onclick="openModal('settings-modal')" type="button" class="primary button">Settings
+                                Modal</button>
+
+
+                            <!-- modal content-->
+                            <div id="settings-modal" class="ptn-modal-element form-modal" role="dialog"
+                                aria-modal="true" aria-labelledby="modal-title" data-modal-size="1000px">
+                                <button class="ptn-modal-close" onclick="closeModal('settings-modal')"
+                                    aria-label="Close modal">&times;</button>
+                                <div class="ptn-modal-interior">
+                                    <h1 id="ptn-modal-title">Specify settings for Name-of-profile-here</h1>
+
+                                    <p class="error-summary">2 marked setting fields must be completed below. </p>
+
+                                    <form>
+                                        <div class="setting-item err">
+                                            <div class="not-shared">
+                                                <label for="set1">Level of access needed:</label>
+                                                <select id="set1">
+                                                    <option>Option 1</option>
+                                                    <option>Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <!-- <p class="shared-notice">
+                                            <span>Shared setting used</span>: This profile makes use of the following setting, which has been set previously and is used by other profiles. 
+                                        </p>-->
+
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which might
+                                                be used by other profiles.
+                                                If added, they will inherit thesetting you indicate here.
+                                            </p>
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <select id="set1">
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="shared-setting-impact">
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which has been set previously and is used by other profiles.
+                                            </p>
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <div class="shared-value">Whatever the setting value is</div>
+                                                    <select id="set1" class="hidden">
+                                                        <option selected>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="shared-setting-impact">
+                                                    <div class="align-offset">
+                                                        <button type="button" class="txt-btn">Change setting</button>
+                                                    </div>
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                    You can change this setting, but doing so will affect all other
+                                                    profiles
+                                                    which use this
+                                                    setting:
+                                                    <ul class="shared-affects">
+                                                        <li>Profile #545</li>
+                                                        <li>Profile #323</li>
+                                                        <li>Profile #876</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <p class="shared-notice">
+                                                <span>Shared setting used</span>: This profile makes use of the
+                                                following
+                                                setting, which has been set previously and is used by other profiles.
+                                            </p>
+
+
+                                            <div class="is-shared">
+                                                <div>
+                                                    <label for="set1">Whatever the label is:</label>
+                                                    <select id="set1">
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="shared-setting-impact">
+                                                    <div class="align-offset">
+                                                        <button type="button" class="txt-btn">Cancel change</button>
+                                                    </div>
+                                                    <!-- leave empty but keep the div if this is a fresh setting-->
+                                                    You can change this setting, but doing so will affect all other
+                                                    profiles
+                                                    which use this
+                                                    setting:
+                                                    <ul class="shared-affects">
+                                                        <li>Profile #545</li>
+                                                        <li>Profile #323</li>
+                                                        <li>Profile #876</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <div class="not-shared">
+                                                <label for="just1">Justification for access needed:</label>
+                                                <textarea id="just1"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-action">
+                                            <button type="submit" class="button">Save settings</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--Status Reveal Modals-->
+                        <div class="cell ex-bloc">
+                            <h3>Status Reveal Modals</h3>
+                            <p>The class <code>status-reveal</code> should be added to the modals in the USC in process
+                                inbox.</p>
+
+                            <!--Status Reveal: Request # -->
+                            <h4>Request # Modal (WIP)</h4>
+                            <p>Modal when you click on the main request number. There are two version here, with the
+                                differences
+                                being how the section with the request parts submitted by which USC being different.
+                                Have to decide which one to go with.
+                            </p>
+
+                            <!--Request # -->
+                            <a onclick="openModal('status-modal-request-num')">[Status - Request #]</a>
+                            <div id="status-modal-request-num" class="ptn-modal-element status-reveal" role="dialog"
+                                aria-modal="true" aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('status-modal-request-num')"
+                                    aria-label="Close modal">&times;</button>
+
+                                <div class="ptn-modal-interior">
+                                    <div class="status-body">
+                                        <h1>Request #123 <span>Submitted 01/15/24</span></h1>
+
+                                        <h2>For:</h2>
+                                        <p>
+                                            PreferredFirst Lastname<br />
+                                            Sr title here | Education Administation [333]<br />
+                                            netidhere / 65unihere
+                                        </p>
+
+                                        <h2>Request Summary:</h2>
+                                        <ul class="status-summary-1">
+                                            <li>
+                                                Submitted by {Submitting USC Name} <span>on behalf of {unit name}</span>
+                                                <ul>
+                                                    <li>#123-11111 - Add All Campus FGAC - <span>Pending</span></li>
+                                                    <li>#123-22222 - Add VPD 1UIUC - <span>Approved</span> </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Submitted by {Second Submitting USC Name} <span>on behalf of {unit
+                                                    name}</span>
+                                                <ul>
+                                                    <li>#123-33333 - Add Catalog and Schedule Ad hoc Reporting -
+                                                        <span>Approved</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+
+                                        <h2>Prequested effective date:</h2>
+                                        <p>Nov 12, 2024 [edit]</p>
+                                    </div>
+
+                                    <div class="blanket-cancel checks">
+                                        <h2>Remaining {2} parts of this request</h2>
+
+                                        <label for="cancel-it"><input id="cancel-it" type="checkbox"
+                                                name="blanket-cancel" />Cancel
+                                            all incomplete parts of this request
+                                            <strong>[Note: Clicking the Cancel items button below will
+                                                immediately cancel the remaining items. This action cannot
+                                                be undone.</strong>]
+                                        </label>
+                                        <button type="button" class="button">
+                                            Cancel remaining items
+                                        </button>
+
+                                        <!-- Show cancellation status after user clicked on the cancel button. -->
+                                        <div class="cancel-status" style="margin-top: 1.25rem; display: block;">
+                                            <!-- When cancellation is in progress: -->
+                                            <div class="message">
+                                                <span class="spinner-30px"></span>
+                                                Submitting 3 parts for cancellation...
+                                            </div>
+                                            <!-- When cancellation was successful: -->
+                                            <!-- Page reloads after 1 second of successful outcome -->
+                                            <hr>
+                                            <div class="message success-mssg ">
+                                                <p>Successfully submitted 3 parts for cancellation.</p>
+                                            </div>
+
+                                            <!-- When at least one part failed: -->
+                                            <!-- The modal remains displayed for the user to read messages -->
+                                            <hr>
+                                            <div class="message alert-mssg">
+                                                <p>
+                                                    2 parts failed to be submitted for cancellation.
+                                                </p>
+                                            </div>
+                                            <div class="details">
+                                                <ul>
+                                                    <li class="failure-mssg">Part #100 - Cannot be canceled in current
+                                                        state</li>
+                                                    <li class="success-mssg ">Part #101 - Successfully submitted for
+                                                        cancellation</li>
+                                                    <li class="failure-mssg">Part #102 - The request is being processed.
+                                                        Try again later.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+             
+
+
+                            <!--Part # modal-->
+                            <h4>Part # Modal</h4>
+                            <p>Modal when you click on a specific part of the request</p>
+                            <a onclick="openModal('status-modal-part-num')">[Status - Part #]</a>
+                            <div id="status-modal-part-num" class="ptn-modal-element status-reveal" role="dialog"
+                                aria-modal="true" aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('status-modal-part-num')"
+                                    aria-label="Close modal">&times;</button>
+
+                                <div class="ptn-modal-interior">
+                                    <div class="status-banner">
+                                        <h1>Request #1111 - Part #1</h1>
+                                        <div>[status]</div>
+                                        <p>Submitted: mm/dd/yyyy</p>
+                                    </div>
+
+                                    <div class="status-body">
+                                        <h2>For:</h2>
+                                        <p>
+                                            PreferredFirst Lastname<br />
+                                            Sr title here | Education Administation [333]<br />
+                                            netidhere / 65unihere
+                                        </p>
+
+                                        <h2>By:</h2>
+                                        <p>
+                                            {Submitter name}
+                                            <span>on behalf of {unit name}</span>
+                                        </p>
+
+                                        <h2>Details</h2>
+                                        <p>
+                                            Add {name of profile }
+                                            <span>settings go here if applicable</span>
+                                        </p>
+
+                                        <h2>Status</h2>
+                                        <p>
+                                            {write status details here; this would include comments about
+                                            rejections, etc. }
+                                        </p>
+
+                                        <div>{potentially timeframe goes here }</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!--Cancel Modal-->
+                            <h4>Cancel Request Modal</h4>
+                            <p>Uses both the <code>status-reveal</code> and <code>alert-modal</code> classes.</p>
+                            <a onclick="openModal('status-modal-cancel')">[Status - Cancel]</a>
+                            <div id="status-modal-cancel" class="ptn-modal-element status-reveal alert-modal"
+                                role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                                <button class="ptn-modal-close" onclick="closeModal('status-modal-cancel')"
+                                    aria-label="Close modal">&times;</button>
+
+                                <div class="ptn-modal-interior">
+                                    <div class="status-body">
+                                        <h1>Cancel this part of your request?</h1>
+
+                                        <p>
+                                            To be cancelled: Adding {name of profile } /Changing settings
+                                            for {name of profile} /Removing {name of profile }
+                                        </p>
+                                        <button type="button" class="button caution-btn">Yes, cancel it</button>
+                                        <button type="button" class="button secondary" data-close>
+                                            No, keep this request
+                                        </button>
+
+                                    </div>
+
+
+
+                                    <div class="blanket-cancel checks">
+                                        <!-- Show cancellation status after user clicked on the cancel button. -->
+                                        <div class="cancel-status" style="margin-top: 1.25rem; display: block;">
+                                            <!-- When cancellation is in progress: -->
+                                            <div class="message">
+                                                <span class="spinner-30px"></span>
+                                                Submitting 3 parts for cancellation...
+                                            </div>
+                                            <!-- When cancellation was successful: -->
+                                            <!-- Page reloads after 1 second of successful outcome -->
+                                            <hr>
+                                            <div class="message success-mssg ">
+                                                <p>Successfully submitted 3 parts for cancellation.</p>
+                                            </div>
+
+                                            <!-- When at least one part failed: -->
+                                            <!-- The modal remains displayed for the user to read messages -->
+                                            <hr>
+                                            <div class="message alert-mssg">
+                                                <p>
+                                                    2 parts failed to be submitted for cancellation.
+                                                </p>
+                                            </div>
+                                            <div class="details">
+                                                <ul>
+                                                    <li class="failure-mssg">Part #100 - Cannot be canceled in current
+                                                        state</li>
+                                                    <li class="success-mssg ">Part #101 - Successfully submitted for
+                                                        cancellation</li>
+                                                    <li class="failure-mssg">Part #102 - The request is being processed.
+                                                        Try again later.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- Show cancellation status after user clicked on the cancel button. -->
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../js/app.js"></script>
+
+    <script src="../js/modal-sh.js"></script>
+
+
+
+</body>
+
+</html>

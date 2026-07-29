@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+
+</head>
+
+<body>
+
+
+    <main id="main">
+        <div class="grid-container">
+            <!-- Containers -->
+            <div class="cell bodycard " id="containers">
+                <div class="grid-x grid-margin-y grid-margin-x">
+                    <div class="cell">
+                        <h1>ARM Sandbox</h1>
+                    </div>
+
+                    <!--Accordions-->
+                    <div class="cell" id="accordions">
+                        <h3>Accordions</h3>
+                        <div class="grid-x grid-margin-x grid-margin-y">
+
+                            <!--Standard Accordions-->
+                            <div class="cell">
+                                <h3>Standard Accordions</h3>
+                                <ul class="accordion selection-accord" data-accordion data-multi-expand="true"
+                                    data-allow-all-closed="true">
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 1</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 1 Content</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 2</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 2 Content</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 3</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 3 Content</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--Access List accordions-->
+                            <div class="cell access-list">
+                                <p>Access List Accordions</p>
+                                <ul class="accordion access-top-level" data-accordion data-multi-expand="true"
+                                    data-allow-all-closed="true">
+
+                                    <!-- IF THERE IS ONLY ONE SECTION, ADD CLASS 'IS-ACTIVE' TO THE LI CLASS SO IT IS AUTOMATICALLY OPEN-->
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3>Accordion 1 Title</h3>
+                                        </a>
+
+                                        <div class="accordion-content" data-tab-content>
+                                            Accordion 1 content
+
+
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3>Accordion 2 Title</h3>
+                                        </a>
+
+                                        <div class="accordion-content" data-tab-content>
+                                            Accordion 2 content
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3>Accordion 3 Title</h3>
+                                        </a>
+
+                                        <div class="accordion-content" data-tab-content>
+                                            Accordion 3 content
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!--Blue Accordions-->
+                            <div class="cell">
+                                <h3>Blue Accordions (Setting Modal - Entitlement Description)</h3>
+                                <ul class="accordion accordion-blue" data-accordion data-multi-expand="true"
+                                    data-allow-all-closed="true">
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" type="button" class="accordion-title">Accordion 1</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p> Accordion 1 Content</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+    </main>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../js/app.js"></script>
+
+    <script src="../js/modal-sh.js"></script>
+
+</body>
+
+</html>

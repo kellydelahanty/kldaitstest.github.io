@@ -1,0 +1,500 @@
+@use 'scss/variables' as *;
+
+
+@import '../node_modules/foundation-sites/scss/settings/settings';
+@import '../node_modules/foundation-sites/scss/foundation';
+//@import 'motion-ui';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid; 
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-range-input;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+// @include foundation-prototype-classes;
+//
+// Motion UI
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
+
+
+@import 'scss/mixins';
+@import 'scss/unused';
+
+/*  =================================== Kitchen Sink Layout =================================== ### */
+
+.ks-main {
+    .bodycard {
+        margin-bottom: 1rem;
+    }
+}
+
+.ks-heading {
+    background: $ground;
+    padding: 1rem 0 .5rem 1rem;
+
+    border-bottom: 10px solid gray;
+    h2, a {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
+
+
+#toc {
+    nav>ul {
+        list-style: none;
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+
+        >li {
+            margin-bottom: 1rem;
+            vertical-align: top;
+            margin-right: 1rem;
+            background-color: $wash;
+            padding: .75rem;
+            font-size: 1rem;
+            font-weight: bold;
+
+            ul {
+                list-style: none;
+                font-size: 1rem;
+                font-weight: normal;
+                margin-left: 10px;
+                display: block;
+                li {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+}
+.ks-section {
+    >h3 {
+      //  background-color: $wash;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid $gray-4;
+        margin-bottom: 1rem;
+    }
+    border: 1px solid $gray-7;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+/*  =================================== Testing Styles =================================== ### */
+
+.green-test {
+    .button.success {
+        background-color: #3A985D;
+    }
+    .button.success:hover {
+        background-color: #0B7452;
+    }
+
+    .sec-btn {
+        background-color: #EDF7F1;
+    }
+
+    .sec-btn:hover {
+        background-color: #3A985D;
+    }
+
+    .confirm-check {
+        color: #0B7452;
+        background: url(../img/check-circl-test.png) left top no-repeat;
+
+    }
+
+    .mark-add {
+        span {color: #0B7452;}
+        background-image: url('data:image/svg+xml,<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="noun-plus-6888303" fill="%230B7452" fill-rule="nonzero"><path d="M10,0 C7.34772174,0 4.80453835,1.05345649 2.92847013,2.92847013 C1.05349285,4.80435652 0,7.34772174 0,10 C0,12.6522783 1.05345649,15.1954617 2.92847013,17.0715299 C4.80435652,18.9465071 7.34772174,20 10,20 C12.6522783,20 15.1954617,18.9465435 17.0715299,17.0715299 C18.9465071,15.1956435 20,12.6522783 20,10 C20,7.34772174 18.9465435,4.80453835 17.0715299,2.92847013 C15.1956435,1.05349285 12.6522783,0 10,0 L10,0 Z M15.0005455,11.0007637 L10.9998545,10.9999114 L10.9998545,14.9996932 L9.00032728,15.0005455 L9.00032728,10.9998545 L4.99963635,10.9998545 L4.99963635,9.00032728 L8.99941816,9.00032728 L9.00027046,4.99963635 L11.0007068,4.99963635 L11.0007068,8.99941816 L15.0005455,8.99941816 L15.0005455,11.0007637 Z" id="Shape"></path></g></g></svg>');
+    }
+}
+
+
+.ack-2 {
+    border-color: $green-4;
+    background-color: $green-1;
+    color: $green-6;
+}
+
+
+.devtest {
+    .shared-notice {
+        background-color: $ground-mid;
+        background-color: #CBD3D7;
+
+    }
+}
+
+/*  =================================== Icons =================================== ### */
+@mixin icon-ex($icon) {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    background-image: $icon;
+  //  background-size:25px 25x;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    margin: .5rem;
+    background-color: $light-gray;
+}
+
+.icon-error-circle {@include icon-ex($icon_error-circle)};
+.icon-reminder-icon {@include icon-ex($icon_reminder)};
+
+.icon-lightbulb-icon {@include icon-ex($icon_lightbulb)};
+.icon-accordion-arrow-lg {@include icon-ex($icon_accordion-arrow-lg)};
+.icon-accordion-arrow-sm {@include icon-ex($icon_accordion-arrow-sm)};
+.icon-blue-down-caret {@include icon-ex($icon_blue-down-caret)};
+.icon-blue-asterisk {@include icon-ex($icon_blue-asterisk)};
+.icon-blue-quotemark {@include icon-ex($icon_quotemark)};
+.icon-icon_link {@include icon-ex($icon_link)};
+.icon-claim-icon {@include icon-ex($icon_claim)};
+.icon-release-icon {@include icon-ex($icon_release)};
+
+.icon-cancel-circle-icon {@include icon-ex($icon_cancel-circle-gray)};
+.icon-cancel-circle-icon-red {@include icon-ex($icon_cancel-circle-red)};
+.icon-circle-plus-icon {@include icon-ex($icon_circle-plus)};
+.icon-circle-minus-icon {@include icon-ex($icon_circle-minus)};
+.icon-circle-link {@include icon-ex($icon_circle-link)};
+.icon-outline-arrow {@include icon-ex($icon_outline-arrow)};
+
+.icon-red-x-icon {@include icon-ex($icon_circle-red-x)};
+.icon-green-plus-icon {@include icon-ex($icon_circle-green-plus)};
+.icon-gold-gear-icon {@include icon-ex($icon_circle-gold-gear)};
+.icon-circle-i {@include icon-ex($icon_circle-i)};
+.icon-circle-i-bold {@include icon-ex($icon_circle-i-bold)};
+.icon-circle-i-italic {@include icon-ex($icon_circle-i-italic)};
+.icon-circle-person {@include icon-ex($icon_circle-person)};
+.icon-circle-at {@include icon-ex($icon_circle-at)};
+.icon-purple-at {@include icon-ex($icon_purple-at)};
+
+.icon-flag-white {@include icon-ex($icon_flag-white)};
+.icon-check-white {@include icon-ex($icon_check-white)};
+
+.icon-filter-icon {@include icon-ex($icon_filter)};
+.icon-circle-ellipses {@include icon-ex($icon_circle-ellipses)};
+.icon-calendar-icon {@include icon-ex($icon_calendar)};
+.icon-red-quote-alert {@include icon-ex($icon_red-quote-alert)};
+.icon-yellow-flag {@include icon-ex($yellow-flag)};
+
+
+.icon-admin-hold-off {@include icon-ex($icon_admin-hold-off)};
+.icon-admin-hold-on {@include icon-ex($icon_admin-hold-on)};
+.icon-admin-hold-small {@include icon-ex($icon_admin-hold-on)};
+
+
+
+.icon-admin-process-off {@include icon-ex($icon_admin-process-off)};
+.icon-admin-process-on {@include icon-ex($icon_admin-process-on)};
+
+.icon-alert-circle {@include icon-ex($icon_alert-circle)};
+.icon-asterisk-large {@include icon-ex($icon_asterisk-large)};
+
+.icon-auth-nope-off {@include icon-ex($icon_auth-nope-off)};
+.icon-auth-nope-on {@include icon-ex($icon_auth-nope-on)};
+.icon-auth-ok-off {@include icon-ex($icon_auth-ok-off)};
+.icon-auth-ok-on {@include icon-ex($icon_auth-ok-on)};
+.icon-auth-return-off {@include icon-ex($icon_auth-return-off)};
+.icon-auth-return-on {@include icon-ex($icon_auth-return-on)};
+
+.icon-big-edit {@include icon-ex($icon_big-edit)};
+.icon-challenge-warning {@include icon-ex($icon_challenge-warning)};
+.icon-check-circl-test {@include icon-ex($icon_check-circl-test)};
+.icon-clock-alert {@include icon-ex($icon_clock-alert)};
+.icon-down-caret {@include icon-ex($icon_down-caret)};
+.icon-drop-arrow {@include icon-ex($icon_drop-arrow)};
+
+
+.icon-error-mark {@include icon-ex($icon_error-mark)};
+.icon-followup {@include icon-ex($icon_followup)};
+.icon-hamburger {@include icon-ex($icon_hamburger)};
+.icon-plus {@include icon-ex($icon_plus)};
+
+.icon-help-center-off {@include icon-ex($icon_help-center-off)};
+.icon-help-center-on {@include icon-ex($icon_help-center-on)};
+
+.icon-noun-arrow-1593360 {@include icon-ex($icon_noun-arrow-1593360)};
+.icon-lg-green-check {@include icon-ex($icon_lg-green-check)};
+
+.icon-sm-green-check {@include icon-ex($icon_sm-green-check)};
+.icon-starred {@include icon-ex($icon_starred)};
+.icon-ticket-off {@include icon-ex($icon_ticket-off)};
+.icon-ticket-on {@include icon-ex($icon_ticket-on)};
+.icon-lookup-off {@include icon-ex($icon_lookup-off)};
+.icon-lookup-on {@include icon-ex($icon_lookup-on)};
+.icon-linked-setting {@include icon-ex($icon_linked-setting)};
+
+
+/*  =================================== Color Palette Blocks =================================== ### */
+
+/*  ------------------------ Default Blocks ------------------------ ### */
+
+@mixin color-bloc($bg-color) {
+    width: 125px;
+    height: 125px;
+    padding: 1rem;
+    background-color: $bg-color;
+    display: inline-flex;
+    margin: .25rem;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 #333,
+        -1px -1px 0 #333,
+        1px -1px 0 #333,
+        -1px 1px 0 #333,
+        2px 2px 5px rgba(0,0,0,0.65);
+}
+
+.icon-color-block {
+    @include color-bloc(gray);
+    border-radius: 25%;
+}
+
+.color-bloc {
+    @include color-bloc(gray)
+}
+
+
+
+
+/*  ------------------------ Neutrals ------------------------ ### */
+.color-bloc-white {@include color-bloc(($white))}
+
+.color-bloc-gray1 {@include color-bloc(($gray-1))}
+.color-bloc-gray2 {@include color-bloc(($gray-2))}
+.color-bloc-gray3 {@include color-bloc(($gray-3))}
+.color-bloc-gray4 {@include color-bloc(($gray-4))}
+.color-bloc-gray5 {@include color-bloc(($gray-5))}
+.color-bloc-gray6 {@include color-bloc(($gray-6))}
+
+.color-bloc-secondary {@include color-bloc(($secondary-color))}
+
+
+.color-bloc-gray7 {@include color-bloc(($gray-7))}
+.color-bloc-gray8 {@include color-bloc(($gray-8))}
+
+.color-bloc-black {@include color-bloc(($black))}
+
+
+.color-bloc-wash-light {@include color-bloc(($wash-light))}
+.color-bloc-wash {@include color-bloc(($wash))}
+.color-bloc-ground {@include color-bloc(($ground))}
+.color-bloc-ground-mid {@include color-bloc(($ground-mid))}
+.color-bloc-ground-dark {@include color-bloc(($ground-dark))}
+
+
+/*  ------------------------ Blues ------------------------ ### */
+.color-bloc-blgr-light {@include color-bloc(($blue-gray-light))}
+.color-bloc-blgr-mid {@include color-bloc(($blue-gray-mid))}
+.color-bloc-blgr-dark {@include color-bloc(($blue-gray-dark))}
+.color-bloc-slate {@include color-bloc(($slate))}
+
+
+.color-bloc-sky {@include color-bloc(($sky))}
+.color-bloc-robin-light {@include color-bloc(($robin-light))}
+.color-bloc-carolina {@include color-bloc(($carolina))}
+
+
+.color-bloc-robin {@include color-bloc(($robin))}
+.color-bloc-robin-dark {@include color-bloc(($robin-dark))}
+
+.color-bloc-sea6 {@include color-bloc(($sea-6))}
+.color-bloc-primary {@include color-bloc(($primary-color))}
+.color-bloc-smoked {@include color-bloc(($smoked-7))}
+.color-bloc-primary-dark {@include color-bloc(($primary-dark))}
+
+.color-bloc-inky {@include color-bloc(($inky))}
+
+
+
+/*  ------------------------ Teal/Aqua ------------------------ ### */
+.color-bloc-aqua-light {@include color-bloc(($aqua-light))}
+.color-bloc-aqua-mid {@include color-bloc(($aqua-mid))}
+.color-bloc-aqua-dark {@include color-bloc(($aqua-dark))}
+
+.color-bloc-teal-1 {@include color-bloc(($teal-1))}
+.color-bloc-teal-2 {@include color-bloc(($teal-2))}
+.color-bloc-teal-3 {@include color-bloc(($teal-3))}
+.color-bloc-teal-4 {@include color-bloc(($teal-4))}
+.color-bloc-teal-5 {@include color-bloc(($teal-5))}
+
+
+
+/*  ------------------------ Greens ------------------------ ### */
+
+.color-bloc-shamrock-light {@include color-bloc(($shamrock-light))}
+.color-bloc-shamrock-mid {@include color-bloc(($shamrock-mid))}
+.color-bloc-shamrock-dark {@include color-bloc(($shamrock-dark))}
+
+
+.color-bloc-green-1 {@include color-bloc(($green-1))}
+.color-bloc-green-2 {@include color-bloc(($green-2))}
+.color-bloc-green-3 {@include color-bloc(($green-3))}
+.color-bloc-green-4 {@include color-bloc(($green-4))}
+.color-bloc-green-5 {@include color-bloc(($green-5))}
+.color-bloc-green-6 {@include color-bloc(($green-6))}
+
+
+
+/*  ------------------------ Reds ------------------------ ### */
+.color-bloc-peach-lightest {@include color-bloc(($peach-lightest))}
+.color-bloc-peach-light {@include color-bloc(($peach-light))}
+.color-bloc-peach {@include color-bloc(($peach))}
+.color-bloc-peach-dark {@include color-bloc(($peach-dark))}
+
+
+.color-bloc-alert-lightest {@include color-bloc(($alert-lightest))}
+.color-bloc-alert-light {@include color-bloc(($alert-light))}
+.color-bloc-alert {@include color-bloc(($alert-color))}
+.color-bloc-alert-dark {@include color-bloc(($alert-dark))}
+.color-bloc-alert-darkest {@include color-bloc(($alert-darkest))}
+
+.color-bloc-maroon {@include color-bloc(($maroon))}
+
+
+
+/*  ------------------------ Yelllow/Orange ------------------------ ### */
+
+.color-bloc-yellow {@include color-bloc(($yellow))}
+
+.color-bloc-orange-1 {@include color-bloc(($orange-1))}
+.color-bloc-orange-2 {@include color-bloc(($orange-2))}
+.color-bloc-orange-3 {@include color-bloc(($orange-3))}
+.color-bloc-orange-4 {@include color-bloc(($orange-4))}
+
+.color-bloc-orange-brown {@include color-bloc(($orange-brown))}
+
+
+.color-bloc-gold-1 {@include color-bloc(($gold-1))}
+.color-bloc-gold-2 {@include color-bloc(($gold-2))}
+
+
+
+/*  ------------------------ Purple ------------------------ ### */
+.color-bloc-purple {@include color-bloc(($purple))}
+.color-bloc-purple-light {@include color-bloc(($purple-light))}
+.color-bloc-purple-dark {@include color-bloc(($purple-dark))}
+
+
+
+.color-bloc-magenta-1 {@include color-bloc(($magenta-1))}
+.color-bloc-magenta-2 {@include color-bloc(($magenta-2))}
+.color-bloc-magenta-3 {@include color-bloc(($magenta-3))}
+.color-bloc-magenta-4 {@include color-bloc(($magenta-4))}
+
+.color-bloc-magenta-5 {@include color-bloc(($magenta-5))}
+.color-bloc-magenta-6 {@include color-bloc(($magenta-6))}
+
+
+.color-bloc-magenta-7 {@include color-bloc(($magenta-7))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ------------------------ Functional Color Blocks ------------------------ ### */
+
+.color-bloc-form-color {
+    @include color-bloc(($form-color))
+}
+
+.color-bloc-form-outline {
+    @include color-bloc(($form-outline))
+}
+
+
+.color-bloc-light-gray {@include color-bloc(($light-gray))}
+.color-bloc-medium-gray {@include color-bloc(($medium-gray))}
+
+
+
+.color-bloc-success {
+    @include color-bloc(($success-color))
+}
+
+
+
+.color-bloc-success-light {
+    @include color-bloc(($success-light))
+}
+
+.color-bloc-success-dark {
+    @include color-bloc(($success-dark))
+}
+
+
