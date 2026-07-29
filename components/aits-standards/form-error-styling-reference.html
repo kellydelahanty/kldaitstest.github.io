@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Error Styling Reference</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .example-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .example-section h2 {
+            margin-top: 0;
+            color: #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .example-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Error Summary Styles */
+        .ptn-error-summary {
+            background: #fef9f9;
+            border-left: 4px solid #d32f2f;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.25);
+        }
+
+        .ptn-error-summary__title {
+            margin: 0 0 16px 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4a4a4a;
+        }
+
+        .ptn-error-summary__list {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            color: #333;
+        }
+
+        .ptn-error-summary__list li {
+            display: inline;
+        }
+
+        .ptn-error-summary__list li:not(:last-child)::after {
+            content: ", ";
+        }
+
+        .ptn-error-summary__link {
+            color: #c62828;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .ptn-error-summary__link:hover,
+        .ptn-error-summary__link:focus {
+            color: #b71c1c;
+            outline: 2px solid #d32f2f;
+            outline-offset: 2px;
+        }
+
+        /* Form Group Styles */
+        .ptn-form__group {
+            border-left: 4px solid transparent;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            transition: border-color 0.2s ease;
+        }
+
+        .ptn-form__group:has(.ptn-form__error.is-visible) {
+            border-left-color: #d32f2f;
+        }
+
+        .ptn-form__group:has(.ptn-form__error.is-visible) .ptn-form__input {
+            border-color: #d32f2f;
+            background-color: #fef7f7;
+        }
+
+        .ptn-form__label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .ptn-form__input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .ptn-form__input::placeholder {
+            color: #757575;
+            opacity: 1;
+        }
+
+        .ptn-form__input:focus {
+            outline: none;
+            border-color: #1976d2;
+            box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+        }
+
+        .ptn-form__error {
+            color: #d32f2f;
+            font-size: 0.875rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .ptn-form__error.is-visible {
+            display: block;
+        }
+
+        /* Color swatches */
+        .color-swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-swatch {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .color-swatch__color {
+            height: 80px;
+            width: 100%;
+        }
+
+        .color-swatch__info {
+            padding: 10px;
+            background: white;
+        }
+
+        .color-swatch__name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .color-swatch__value {
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .comparison-item {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+        }
+
+        .comparison-item h4 {
+            margin-top: 0;
+            color: #666;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Error Styling Reference</h1>
+
+    <!-- Color Palette Section -->
+    <div class="example-section">
+        <h2>Color Palette</h2>
+        <div class="color-swatches">
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #d32f2f;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Primary Error Red</div>
+                    <div class="color-swatch__value">#d32f2f</div>
+                    <div class="color-swatch__value">Borders, heading</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #c62828;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Link Red</div>
+                    <div class="color-swatch__value">#c62828</div>
+                    <div class="color-swatch__value">Links (WCAG AA)</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #fef9f9;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Error Background</div>
+                    <div class="color-swatch__value">#fef9f9</div>
+                    <div class="color-swatch__value">Error summary bg</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #fef7f7;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Input Error Tint</div>
+                    <div class="color-swatch__value">#fef7f7</div>
+                    <div class="color-swatch__value">Error input bg</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #757575;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Placeholder Gray</div>
+                    <div class="color-swatch__value">#757575</div>
+                    <div class="color-swatch__value">Placeholder text (WCAG AA)</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #4a4a4a;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Heading Dark Gray</div>
+                    <div class="color-swatch__value">#4a4a4a</div>
+                    <div class="color-swatch__value">Error summary title</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch__color" style="background-color: #333333;"></div>
+                <div class="color-swatch__info">
+                    <div class="color-swatch__name">Text Dark Gray</div>
+                    <div class="color-swatch__value">#333333</div>
+                    <div class="color-swatch__value">Body text</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Summary Section -->
+    <div class="example-section">
+        <h2>Error Summary</h2>
+        <div class="example-label">Implementation Example:</div>
+        
+        <div class="ptn-error-summary" role="alert" aria-labelledby="error-summary-title">
+            <h2 class="ptn-error-summary__title" id="error-summary-title">
+                Please correct errors in 2 fields:
+            </h2>
+            <ul class="ptn-error-summary__list">
+                <li><a href="#email" class="ptn-error-summary__link">Contact email</a></li>
+                <li><a href="#preferences" class="ptn-error-summary__link">Preferences</a></li>
+            </ul>
+        </div>
+
+        <div class="example-label">Specifications:</div>
+        <ul style="color: #666; font-size: 0.875rem;">
+            <li>Background: <code>#fef9f9</code> (pale pink/gray)</li>
+            <li>Left border: <code>4px solid #d32f2f</code></li>
+            <li>Border radius: <code>4px</code></li>
+            <li>Padding: <code>20px</code></li>
+            <li>Box shadow: <code>0 4px 12px rgba(211, 47, 47, 0.25)</code></li>
+            <li>Heading color: <code>#4a4a4a</code> (dark gray), size: <code>1.25rem</code>, weight: <code>600</code></li>
+            <li>Link color: <code>#c62828</code> (meets WCAG AA contrast), weight: <code>500</code></li>
+            <li>Body text: <code>#333</code></li>
+        </ul>
+    </div>
+
+    <!-- Field Error Section -->
+    <div class="example-section">
+        <h2>Inline Field Errors</h2>
+        
+        <div class="comparison">
+            <div class="comparison-item">
+                <h4>Normal State</h4>
+                <div class="ptn-form__group">
+                    <label for="email-normal" class="ptn-form__label">Email</label>
+                    <input type="email" id="email-normal" class="ptn-form__input" value="netid@illinois.edu">
+                    <div class="ptn-form__error" id="email-normal-error" role="alert"></div>
+                </div>
+            </div>
+
+            <div class="comparison-item">
+                <h4>Error State</h4>
+                <div class="ptn-form__group">
+                    <label for="email-error" class="ptn-form__label">Email</label>
+                    <input type="email" id="email-error" class="ptn-form__input" placeholder="netid@illinois.edu" aria-invalid="true" aria-describedby="email-error-msg">
+                    <div class="ptn-form__error is-visible" id="email-error-msg" role="alert">
+                        Enter a valid email address
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-label" style="margin-top: 30px;">Specifications:</div>
+        <ul style="color: #666; font-size: 0.875rem;">
+            <li>Wrapper left border (error): <code>4px solid #d32f2f</code> (changes from transparent)</li>
+            <li>Wrapper padding-left: <code>12px</code></li>
+            <li>Input border (error): <code>2px solid #d32f2f</code></li>
+            <li>Input background (error): <code>#fef7f7</code> (optional subtle tint)</li>
+            <li>Placeholder text: <code>#757575</code> (meets WCAG AA contrast requirements)</li>
+            <li>Error message color: <code>#d32f2f</code></li>
+            <li>Error message size: <code>0.875rem</code> (14px)</li>
+            <li>Error message margin-top: <code>4px</code></li>
+            <li>Label color: remains <code>#333</code> (do not change)</li>
+        </ul>
+
+        <div class="example-label" style="margin-top: 30px;">CSS Automation:</div>
+        <p style="color: #666; font-size: 0.875rem;">
+            The error styling is applied automatically using the <code>:has()</code> selector. 
+            Developers only need to add <code>is-visible</code> to the error div and 
+            <code>aria-invalid="true"</code> to the input. The wrapper's red border and 
+            input styling appear automatically via CSS.
+        </p>
+    </div>
+
+    <!-- Checkbox Group Section -->
+    <div class="example-section">
+        <h2>Checkbox Group with Error</h2>
+        
+        <div class="example-label">Error Below (Short Groups 2-5 options):</div>
+        <div class="ptn-form__group">
+            <fieldset style="border: none; padding: 0; margin: 0;" aria-describedby="notify-error">
+                <legend class="ptn-form__label">Notification preferences</legend>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="notify" value="email" style="margin-right: 8px;">
+                    Email
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="notify" value="sms" style="margin-right: 8px;">
+                    Text message
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="notify" value="phone" style="margin-right: 8px;">
+                    Phone call
+                </label>
+            </fieldset>
+            <div class="ptn-form__error is-visible" id="notify-error" role="alert">
+                Select at least one notification method
+            </div>
+        </div>
+
+        <div class="example-label" style="margin-top: 30px;">Error Above (Medium Groups 6-8 options):</div>
+        <div class="ptn-form__group">
+            <fieldset style="border: none; padding: 0; margin: 0;" aria-describedby="interests-error">
+                <legend class="ptn-form__label">Select your interests</legend>
+                <div class="ptn-form__error is-visible" id="interests-error" role="alert">
+                    Select at least one interest
+                </div>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="interests" value="tech" style="margin-right: 8px;">
+                    Technology
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="interests" value="science" style="margin-right: 8px;">
+                    Science
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="interests" value="arts" style="margin-right: 8px;">
+                    Arts & Culture
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="interests" value="sports" style="margin-right: 8px;">
+                    Sports
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="interests" value="business" style="margin-right: 8px;">
+                    Business
+                </label>
+                <label style="display: block; margin-bottom: 8px;">
+                    <input type="checkbox" name="interests" value="health" style="margin-right: 8px;">
+                    Health & Wellness
+                </label>
+            </fieldset>
+        </div>
+    </div>
+
+    <!-- Complete Form Example -->
+    <div class="example-section">
+        <h2>Complete Form with Errors</h2>
+        
+        <p style="color: #666; font-size: 0.875rem; padding: 12px; background: #f5f5f5; border-radius: 4px; margin-bottom: 20px;">
+            <strong>Note:</strong> This form demonstrates the "majority required" approach. Most fields are required, so we mark ONLY the optional ones with "(optional)" and include the statement "All fields required unless otherwise noted." We do NOT use asterisks (*) on required fields when using this approach.
+        </p>
+        
+        <div class="ptn-error-summary" role="alert" aria-labelledby="demo-error-title">
+            <h2 class="ptn-error-summary__title" id="demo-error-title">
+                Please correct errors in 3 fields:
+            </h2>
+            <ul class="ptn-error-summary__list">
+                <li><a href="#demo-name" class="ptn-error-summary__link">Name</a></li>
+                <li><a href="#demo-email" class="ptn-error-summary__link">Email</a></li>
+                <li><a href="#demo-phone" class="ptn-error-summary__link">Phone number</a></li>
+            </ul>
+        </div>
+
+        <p class="ptn-form__required-note" style="margin-bottom: 20px; color: #666;">All fields required unless otherwise noted.</p>
+
+        <form>
+            <div class="ptn-form__group">
+                <label for="demo-name" class="ptn-form__label">Name</label>
+                <input type="text" id="demo-name" class="ptn-form__input" aria-invalid="true" aria-describedby="demo-name-error">
+                <div class="ptn-form__error is-visible" id="demo-name-error" role="alert">
+                    Enter your name
+                </div>
+            </div>
+
+            <div class="ptn-form__group">
+                <label for="demo-email" class="ptn-form__label">Email</label>
+                <input type="email" id="demo-email" class="ptn-form__input" placeholder="netid@illinois.edu" value="invalid-email" aria-invalid="true" aria-describedby="demo-email-error">
+                <div class="ptn-form__error is-visible" id="demo-email-error" role="alert">
+                    Enter a valid email address (example: netid@illinois.edu)
+                </div>
+            </div>
+
+            <div class="ptn-form__group">
+                <label for="demo-phone" class="ptn-form__label">Phone number</label>
+                <input type="tel" id="demo-phone" class="ptn-form__input" placeholder="217-555-1234" aria-invalid="true" aria-describedby="demo-phone-error">
+                <div class="ptn-form__error is-visible" id="demo-phone-error" role="alert">
+                    Enter your phone number
+                </div>
+            </div>
+
+            <div class="ptn-form__group">
+                <label for="demo-department" class="ptn-form__label">Department (optional)</label>
+                <input type="text" id="demo-department" class="ptn-form__input">
+                <div class="ptn-form__error" id="demo-department-error" role="alert"></div>
+            </div>
+
+            <div class="ptn-form__group">
+                <label for="demo-company" class="ptn-form__label">Company (optional)</label>
+                <input type="text" id="demo-company" class="ptn-form__input" value="Acme Corp">
+                <div class="ptn-fo
