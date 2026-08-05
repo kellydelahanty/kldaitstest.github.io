@@ -7475,6 +7475,15 @@ input[type=radio]:focus {
   --form-control-color: var(--form-control-disabled);
   color: var(--form-control-disabled);
   cursor: not-allowed;
+  background-color: #e9f1f8;
+}
+.quest input[type=radio]:disabled,
+.check-align input[type=radio]:disabled,
+.checks input[type=radio]:disabled {
+  --form-control-color: var(--form-control-disabled);
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+  background-color: #e9f1f8;
 }
 .quest input.num,
 .quest input.tiny,
@@ -7503,7 +7512,10 @@ input[type=radio]:focus {
   align-items: flex-start;
 }
 
-input[type=text]:disabled {
+input[type=text]:disabled, select:disabled, textarea:disabled,
+input[type=date]:disabled, input[type=email]:disabled, input[type=file]:disabled,
+input[type=number]:disabled, input[type=password]:disabled, input[type=range]:disabled,
+input[type=search]:disabled, input[type=tel]:disabled, input[type=time]:disabled, input[type=url]:disabled {
   background-color: #e9f1f8;
 }
 

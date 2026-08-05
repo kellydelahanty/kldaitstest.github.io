@@ -159,7 +159,15 @@ input[type="radio"]:focus {
         --form-control-color: var(--form-control-disabled);
         color: var(--form-control-disabled);
         cursor: not-allowed;
+        background-color: $sky;
+    }
 
+
+        input[type="radio"]:disabled {
+        --form-control-color: var(--form-control-disabled);
+        color: var(--form-control-disabled);
+        cursor: not-allowed;
+        background-color: $sky;
     }
 
 
@@ -199,7 +207,10 @@ input[type="radio"]:focus {
 
 }
 
-input[type=text]:disabled {
+input[type=text]:disabled, select:disabled, textarea:disabled, 
+input[type=date]:disabled, input[type=email]:disabled, input[type=file]:disabled,
+input[type=number]:disabled, input[type=password]:disabled, input[type=range]:disabled,
+input[type=search]:disabled, input[type=tel]:disabled, input[type=time]:disabled, input[type=url]:disabled {
     background-color: $sky;
 }
 

@@ -238,7 +238,7 @@
 
                                 <!--max length with character counter-->
                                 <div class="quest ">
-                                    <label for="qw">Please enter whatever extended text is needed:
+                                    <label for="qw">Please enter whatever extended text is needed (max 25 characters):
                                     </label>
                                     <textarea id="myTextarea" rows="1" cols="40" maxlength="25"></textarea>
                                     <div id="charCountDisplay">0 / 25 characters</div>
@@ -247,7 +247,7 @@
 
                                 <!--min length with character counter-->
                                 <div class="quest ">
-                                    <label for="qw">Please enter whatever extended text is needed:
+                                    <label for="qw">Please enter whatever extended text is needed (min 25 characters):
                                     </label>
                                     <textarea id="myTextarea2" rows="1" cols="40" minlength="25"></textarea>
                                     <div id="mincharcount">Characters: 0 (Minimum 25 characters)</div>
@@ -308,7 +308,7 @@
                             <div>
                                 <div class="callout for-guide">
                                     Element group
-                                    <p>Used for sequencial narrowing/selecting. Contents for each element could be
+                                    <p>Used for sequential narrowing/selecting. Contents for each element could be
                                         driven by
                                         previous selections. Can be used to build a list of values to add, in which case
                                         the
@@ -524,6 +524,105 @@
                                         </div>
 
                                     </fieldset>
+
+
+                                </div>
+                            </div>
+
+                            <!--Disabled Inputs-->
+                            <div>
+                                <div class="callout for-guide">
+                                    Disabled inputs
+                                </div>
+
+                                <div class="quest">
+                                    <label for="disabled-text">Disabled Textbox</label>
+                                    <input type="text" id="disabled-text" class="med-input" disabled>
+                                </div>
+
+                                 <div class="quest">
+                                    <label for="disabled-date">Disabled date input</label>
+                                    <input type="date" id="disabled-date" class="med-input" disabled>
+                                </div>
+
+                                <div class="quest">
+                                    <label for="disabled-select">Disabled Select </label>
+                                    <select id="disabled-select" disabled>
+                                        <option>Pick</option>
+                                        <option>UIC</option>
+                                        <option>UIS</option>
+                                        <option>UIUC</option>
+                                        <option>UofI Admin</option>
+                                    </select>
+                                </div>
+
+                                <div class="quest">
+                                    <label for="disabled-textarea">Disabled Textarea:</label>
+                                    <textarea id="disabled-textarea" disabled></textarea>
+                                </div>
+
+                                <div class="quest">
+                                    <!-- example of placement of error message-->
+                                    <!-- <div class="error-note">Required field</div>-->
+                                    <fieldset class="checks">
+                                        <legend>Disabled Checkbox example: </legend>
+                                        <div>
+                                            <input type="checkbox" name="disabled-checkboxes" id="dc1">
+                                            <label for="dc1">Regular checkbox</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="disabled-checkboxes" id="dc2" disabled>
+                                            <label for="dc2">Disabled checkbox</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="quest">
+                                    <fieldset class="radios">
+                                        <legend>Check your favorite:</legend>
+                                        <div>
+                                            <input type="radio" name="disabled-rads" id="dr1">
+                                            <label for="dr1">Regular radio</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="disabled-rads" id="dr2" disabled>
+                                            <label for="dr2">Disabled radio</label>
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+
+                                
+          
+
+
+
+                                </div>
+                            </div>
+
+                            <!--Input Sizes Inputs-->
+                            <div>
+                                <div class="callout for-guide">
+                                    Inputs sizes
+                                </div>
+
+                                <div class="quest">
+                                    <label for="tiny-input">.tiny-input</label>
+                                    <input type="text" id="tiny-input" class="tiny-input">
+                                </div>
+                                <div class="quest">
+                                    <label for="sm-input">.sm-input</label>
+                                    <input type="text" id="sm-input" class="sm-input">
+                                </div>
+                                <div class="quest">
+                                    <label for="med-input">.med-input</label>
+                                    <input type="text" id="med-input" class="med-input">
+                                </div>
+                                <div class="quest">
+                                    <label for="lg-input">.lg-input</label>
+                                    <input type="text" id="lg-input" class="lg-input">
+                                </div>
+
 
 
                                 </div>
