@@ -378,6 +378,14 @@
       "oAP" : "\/applications\/ARM\/devhelp\/kitchen-sink.html",
       "oF" : 0
     },
+    "\/applications\/ARM\/devhelp\/loading.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/applications\/ARM\/devhelp\/loading.html",
+      "oF" : 0
+    },
     "\/applications\/ARM\/devhelp\/old-reference\/find-method.html" : {
       "cB" : 0,
       "ft" : 8192,

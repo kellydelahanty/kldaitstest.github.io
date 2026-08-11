@@ -1,0 +1,248 @@
+<!--Loading indicator code adapted from from https://codeaccessible.com/codepatterns/loading-spinner/-->
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/app.css">
+
+    <style>
+        /* Base Styles */
+       /* #overlay {
+                        display: none;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+            */
+        /* Overlay and loader Styles */
+        .overlay {
+            display: none;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+
+        .loader-text {
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+
+
+
+        /*Hidden alert for screen readers after loading is complete*/
+        .loading-complete {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            white-space: nowrap;
+            border: 0;
+            clip-path: inset(50%);
+            display: none;
+        }
+        
+        
+        /* Example Content Section to test */
+        .content-section {
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <main id="main">
+        <div class="grid-container">
+
+            <div class="cell bodycard " id="containers">
+                <div class="grid-x grid-margin-y grid-margin-x">
+                    <div class="cell">
+                        <h1>ARM Sandbox</h1>
+                    </div>
+                    <div class="cell">
+
+                        <p>
+                            <A href="https://www.wish.com" 
+                            onClick="linkloader()">
+                             Links to another page that's slow to load."</a>
+
+                        </p>
+
+                        <button id="loadButton" class="button">Load Content</button>
+                    </div>
+
+ 
+
+
+                    <!-- Loading Alert -->
+                        <div class="overlay" aria-hidden="true">
+                            <div   class="loader" role="alert" aria-live="assertive" tabindex="-1">
+                                <div class="loader-text">Now Loading...</div>
+                                <!--  <div class="loader-icon"></div>-->
+                            </div>
+                        </div>
+
+                    <!--Hidden text that lets sr-user know the page has loaded-->
+                    <div class="loading-complete" aria-live="polite" role="alert" aria-hidden="True">
+                        <p>Content Loaded</p>
+                    </div>
+
+                    <div class="cell">
+
+                        <!-- Content Loaded Section -->
+                        <div class="content-section" aria-hidden="true" tabindex="-1">
+                            <h2>Content Loaded</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.</p>
+                            <button id="resetButton" class="button secbtn small">Reset Page</button>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+    </main>
+
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/what-input/dist/what-input.js"></script>
+    <script src="../../node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="../../js/app.js"></script>
+
+    <script src="../../js/modal-sh.js"></script>
+
+    <script>
+
+
+        const loadButton = document.getElementById('loadButton');
+        const overlay = document.querySelector('.overlay');
+        const loadingComplete = document.querySelector('.loading-complete');
+        
+        
+        const resetButton = document.getElementById('resetButton');
+        const contentSection = document.querySelector('.content-section');
+
+        function showLoader() {
+            overlay.style.display = 'flex';
+            overlay.setAttribute('aria-hidden', 'false');
+            contentSection.style.display = 'none'; // Hide content section
+            document.body.style.overflow = 'hidden'; // Disable scrolling when overlay is displayed
+            
+            setTimeout(() => {hideLoader();}, 1000); // Adjust the time (in milliseconds) for how long the loading loader should display
+        }
+
+        function hideLoader() {
+            overlay.style.display = 'none';
+            overlay.setAttribute('aria-hidden', 'true');
+            contentSection.style.display = 'block'; // Show content section after loading
+            contentSection.setAttribute('aria-hidden', 'false');
+
+            loadingComplete.style.display = 'block'; // Show content section after loading
+            loadingComplete.setAttribute('aria-hidden', 'false');
+
+            document.body.style.overflow = 'auto'; // Enable scrolling after hiding overlay
+        }
+
+        loadButton.addEventListener('click', () => {
+            showLoader(); // Trigger loading sequence when the button is clicked
+        });
+
+        resetButton.addEventListener('click', () => {
+            contentSection.style.display = 'none'; // Hide the content section
+            loadButton.style.display = 'block'; // Show the load button again
+        });
+
+
+
+        /*Link loader*/
+   
+
+
+
+        function linkloader() {
+            overlay.style.display = 'flex';
+            overlay.setAttribute('aria-hidden', 'false');
+            contentSection.style.display = 'none'; // Hide content section
+            document.body.style.overflow = 'hidden'; // Disable scrolling when overlay is displayed
+
+        }
+    /*
+
+        window.onload = function hidelinkloader() { 
+                       console.log('The Script will load now.'); 
+        
+        } 
+*/
+ 
+                function hidelinkloader() {
+            overlay.style.display = 'none';
+            overlay.setAttribute('aria-hidden', 'true');
+        }
+
+        /**/
+        window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+        hidelinkloader();
+    }
+});
+
+
+
+        
+
+    </script>
+
+</body>
+
+</html>
