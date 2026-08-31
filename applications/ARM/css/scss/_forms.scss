@@ -354,7 +354,28 @@ legend {
 
 .required {
     color: $alert-dark;
-    font-weight: bold;
+    //font-style: italic;
+    font-weight: normal;
+    padding-left: .25rem;
+}
+
+.required::before {
+    padding-right: .15rem;
+    content: "\2731";
+}
+
+.optional {
+    font-weight: normal;
+    font-style: italic;
+    color: $secondary-color;
+}
+
+.label-note {
+    color: $gray-6;
+    font-weight: normal;
+    display: block;
+    font-size: .9rem;
+    max-width: 100ch;
 }
 
 

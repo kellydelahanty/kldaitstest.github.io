@@ -354,6 +354,22 @@ button {
     margin-left: 3px;
 }
 
+.ref-guide-text {
+//    height: 26px;
+  //  width: 26px;
+    background-image: $icon_circle-i;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+    padding: .5rem;
+    padding-left: 1.5rem;
+    color: $aqua-dark;
+    //font-style: italic;
+    font-size: .95rem;
+
+   //    border: 1px red dotted; 
+}
+
 
 //Used in request access profiles 02 but can be generic
 .txt-btn {

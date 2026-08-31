@@ -1,3 +1,5 @@
+<!--Loading indicator code adapted from from https://codeaccessible.com/codepatterns/loading-spinner/-->
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -9,7 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../css/devhelp.css">
     <link rel="stylesheet" href="../css/app.css">
+    <style>
+        #custom-text h4 {
+            background: lightgray;
+            font-weight: bold;
+            padding: 1rem;
+        }
+    </style>
 
 </head>
 
@@ -18,113 +28,279 @@
 
     <main id="main">
         <div class="grid-container">
-            <!-- Containers -->
+
+
             <div class="cell bodycard " id="containers">
                 <div class="grid-x grid-margin-y grid-margin-x">
                     <div class="cell">
                         <h1>ARM Sandbox</h1>
                     </div>
 
-                    <!--Accordions-->
-                    <div class="cell" id="accordions">
-                        <h3>Accordions</h3>
-                        <div class="grid-x grid-margin-x grid-margin-y">
 
-                            <!--Standard Accordions-->
-                            <div class="cell">
-                                <h3>Standard Accordions</h3>
-                                <ul class="accordion selection-accord" data-accordion data-multi-expand="true"
-                                    data-allow-all-closed="true">
-                                    <li class="accordion-item" data-accordion-item>
-                                        <a href="#" type="button" class="accordion-title">Accordion 1</a>
-                                        <div class="accordion-content" data-tab-content>
-                                            <p> Accordion 1 Content</p>
+                    <!--In-label  version-->
+                    <div class="cell">
+                        <!--Version of question when user has has less than 8 units    -->
+                        <div class="block">
+                            <h2>Because you represent multiple departments as a USC:</h2>
+                            <div class="quest">
+                                <fieldset>
+                                    <legend>
+                                        Select the department for which you are submitting this request
+                                        <span class="label-note">
+                                          The department you select will determine which profile options are
+                                          available and will be associated with any access that is granted,
+                                          changed, or removed as a result of this request. This department will
+                                          also be responsible for reviewing the access during future audits.
+                                        </span>
+                                    </legend>
+                                    <div class="radio-bars">
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep1" name="depts">
+                                            <label for="dep1">Urbana-Champaign, Control-Accounting <span
+                                                    class="refnum">[100-ZZ-103]</span></label>
                                         </div>
-                                    </li>
-
-                                    <li class="accordion-item" data-accordion-item>
-                                        <a href="#" type="button" class="accordion-title">Accordion 2</a>
-                                        <div class="accordion-content" data-tab-content>
-                                            <p> Accordion 2 Content</p>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep2" name="depts">
+                                            <label for="dep2">Urbana-Champaign, Office of the Registrar <span
+                                                    class="refnum">[100-NB-898]</span></label>
                                         </div>
-                                    </li>
-
-                                    <li class="accordion-item" data-accordion-item>
-                                        <a href="#" type="button" class="accordion-title">Accordion 3</a>
-                                        <div class="accordion-content" data-tab-content>
-                                            <p> Accordion 3 Content</p>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep3" name="depts">
+                                            <label for="dep3">Urbana-Champaign, Cooperative Extension <span
+                                                    class="refnum">[100-KL-384]</span></label>
                                         </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!--Access List accordions-->
-                            <div class="cell access-list">
-                                <p>Access List Accordions</p>
-                                <ul class="accordion access-top-level" data-accordion data-multi-expand="true"
-                                    data-allow-all-closed="true">
-
-                                    <!-- IF THERE IS ONLY ONE SECTION, ADD CLASS 'IS-ACTIVE' TO THE LI CLASS SO IT IS AUTOMATICALLY OPEN-->
-                                    <li class="accordion-item" data-accordion-item>
-                                        <!-- Accordion tab title -->
-                                        <a href="#" class="accordion-title">
-                                            <h3>Accordion 1 Title</h3>
-                                        </a>
-
-                                        <div class="accordion-content" data-tab-content>
-                                            Accordion 1 content
-
-
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep4" name="depts">
+                                            <label for="dep4">Urbana-Champaign, Special Education <span
+                                                    class="refnum">[100-KN-570]</span></label>
                                         </div>
-                                    </li>
-
-                                    <li class="accordion-item" data-accordion-item>
-                                        <!-- Accordion tab title -->
-                                        <a href="#" class="accordion-title">
-                                            <h3>Accordion 2 Title</h3>
-                                        </a>
-
-                                        <div class="accordion-content" data-tab-content>
-                                            Accordion 2 content
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep5" name="depts">
+                                            <label for="dep5">Chicago, Computer Science <span
+                                                    class="refnum">[200-AE-699]</span></label>
                                         </div>
-                                    </li>
-
-                                    <li class="accordion-item" data-accordion-item>
-                                        <!-- Accordion tab title -->
-                                        <a href="#" class="accordion-title">
-                                            <h3>Accordion 3 Title</h3>
-                                        </a>
-
-                                        <div class="accordion-content" data-tab-content>
-                                            Accordion 3 content
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep6" name="depts">
+                                            <label for="dep6">Springfield, Records and Registration <span
+                                                    class="refnum">[400-SB-239]</span></label>
                                         </div>
-                                    </li>
-                                </ul>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep7" name="depts">
+                                            <label for="dep7">System Offices, Admin Info Technology Services <span
+                                                    class="refnum">[900-AH-699]</span></label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <!--Only appears if user has selected a 900 level unit  -->
+                                <div class="followup ">
+                                    <label for="campus-level">
+                                        Because you are submitting on behalf of a System affiliated department,
+                                        you will need to select a university to determine which university-level
+                                        profiles you will be shown in addition to system-level profiles.
+                                    </label>
+                                    <select id="campus-level" class="input-lg">
+                                        <option value="" disabled selected hidden></option>
+                                        <option>Chicago</option>
+                                        <option>Springfield</option>
+                                        <option>Urbana-Champaign</option>
+                                    </select>
+                                </div>
 
                             </div>
-
-                            <!--Blue Accordions-->
-                            <div class="cell">
-                                <h3>Blue Accordions (Setting Modal - Entitlement Description)</h3>
-                                <ul class="accordion accordion-blue" data-accordion data-multi-expand="true"
-                                    data-allow-all-closed="true">
-                                    <li class="accordion-item" data-accordion-item>
-                                        <a href="#" type="button" class="accordion-title">Accordion 1</a>
-                                        <div class="accordion-content" data-tab-content>
-                                            <p> Accordion 1 Content</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-
                         </div>
 
+                        <!--Version of question when user has has 8 or MORE units-->
+                        <div class="block">
+                            <h2>Because you represent multiple departments as a USC:</h2>
+
+                            <div class="quest">
+                                <label for="auto-unit">
+                                    Select the department for which you are submitting this request:
+                                    <span class="label-note">
+                                        The department you select will determine which profile options are
+                                        available and will be associated with any access that is granted,
+                                        changed, or removed as a result of this request. This department will
+                                        also be responsible for reviewing the access during future audits.
+                                    </span>
+                                </label>
+                                <select id="auto-unit" aria-label="Select units; begin typing name or org code"
+                                    class="input-lg">
+                                    <option value="" disabled selected hidden></option>
+                                    <option>Urbana-Champaign, Control-Accounting - 100-ZZ-103</option>
+                                    <option>Urbana-Champaign, Office of the Registrar - 100-NB-898</option>
+                                    <option>Urbana-Champaign, Cooperative Extension - 100-KL-384</option>
+                                    <option>Urbana-Champaign, Special Education - 100-KN-570</option>
+                                    <option>Chicago, Computer Science - 200-AE-699</option>
+                                    <option>Chicago, Learning Science Res Inst - 200-FT-217</option>
+                                    <option>Chicago, Office of the Registrar - 200-JE-811</option>
+                                    <option>Springfield, Records and Registration - 400-SB-239</option>
+                                    <option>Springfield, Records and Registration - 400-SK-239</option>
+                                    <option>System Offices, Admin Info Technology Services - 900-AH-699</option>
+                                    <option>System Offices, Univ Acct & Fin Report - 900-AS-641</option>
+                                </select>
+                                <div id="location2" class="auto-hint" aria-hidden="true">Begin typing department
+                                    name or org
+                                    code</div>
+
+                                <!--Only appears if user has selected a 900 level unit    -->
+
+                                <div class="followup ">
+                                    <label for="campus-level">
+                                        Because you are submitting on behalf of a System affiliated department,
+                                        you will need to select a university to determine which university-level
+                                        profiles you will be shown in addition to system-level profiles.
+                                    </label>
+                                    <select id="campus-level" class="input-lg">
+                                        <option value="" disabled selected hidden></option>
+                                        <option>Chicago</option>
+                                        <option>Springfield</option>
+                                        <option>Urbana-Champaign</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
+
+                     <!--Modal version-->
+                    <div class="cell">
+                        <div class="block">
+                            <h2>Because you represent multiple departments as a USC:</h2>
+                            <div class="quest">
+                                <fieldset>
+                                    <legend>
+                                        Select the department for which you are submitting this request:
+                                        <button type="button" aria-label="Why do I need to select a department?"
+                                            class="ref-guide-text" onclick="openModal('department-reason')">Why do I
+                                            need to select a Department?</button>
+                                    </legend>
+                                    <div class="radio-bars">
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep1" name="depts">
+                                            <label for="dep1">Urbana-Champaign, Control-Accounting <span
+                                                    class="refnum">[100-ZZ-103]</span></label>
+                                        </div>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep2" name="depts">
+                                            <label for="dep2">Urbana-Champaign, Office of the Registrar <span
+                                                    class="refnum">[100-NB-898]</span></label>
+                                        </div>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep3" name="depts">
+                                            <label for="dep3">Urbana-Champaign, Cooperative Extension <span
+                                                    class="refnum">[100-KL-384]</span></label>
+                                        </div>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep4" name="depts">
+                                            <label for="dep4">Urbana-Champaign, Special Education <span
+                                                    class="refnum">[100-KN-570]</span></label>
+                                        </div>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep5" name="depts">
+                                            <label for="dep5">Chicago, Computer Science <span
+                                                    class="refnum">[200-AE-699]</span></label>
+                                        </div>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep6" name="depts">
+                                            <label for="dep6">Springfield, Records and Registration <span
+                                                    class="refnum">[400-SB-239]</span></label>
+                                        </div>
+                                        <div class="radiobtn">
+                                            <input type="radio" id="dep7" name="depts">
+                                            <label for="dep7">System Offices, Admin Info Technology Services <span
+                                                    class="refnum">[900-AH-699]</span></label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="followup ">
+                                    <label for="campus-level">
+                                        Because you are submitting on behalf of a System affiliated department,
+                                        you will need to select a university to determine which university-level
+                                        profiles you will be shown in addition to system-level profiles.
+                                    </label>
+                                    <select id="campus-level" class="input-lg">
+                                        <option value="" disabled selected hidden></option>
+                                        <option>Chicago</option>
+                                        <option>Springfield</option>
+                                        <option>Urbana-Champaign</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <h2>Because you represent multiple departments as a USC:</h2>
+
+                            <div class="quest">
+                                <label for="auto-unit">
+                                    Select the department for which you are submitting this request:
+                                   <button type="button" aria-label="Why do I need to select a department?"
+                                            class="ref-guide-text" onclick="openModal('department-reason')">Why do I
+                                            need to select a Department?</button>
+                                </label>
+                                <select id="auto-unit" aria-label="Select units; begin typing name or org code"
+                                    class="input-lg">
+                                    <option value="" disabled selected hidden></option>
+                                    <option>Urbana-Champaign, Control-Accounting - 100-ZZ-103</option>
+                                    <option>Urbana-Champaign, Office of the Registrar - 100-NB-898</option>
+                                    <option>Urbana-Champaign, Cooperative Extension - 100-KL-384</option>
+                                    <option>Urbana-Champaign, Special Education - 100-KN-570</option>
+                                    <option>Chicago, Computer Science - 200-AE-699</option>
+                                    <option>Chicago, Learning Science Res Inst - 200-FT-217</option>
+                                    <option>Chicago, Office of the Registrar - 200-JE-811</option>
+                                    <option>Springfield, Records and Registration - 400-SB-239</option>
+                                    <option>Springfield, Records and Registration - 400-SK-239</option>
+                                    <option>System Offices, Admin Info Technology Services - 900-AH-699</option>
+                                    <option>System Offices, Univ Acct & Fin Report - 900-AS-641</option>
+                                </select>
+                                <div id="location2" class="auto-hint" aria-hidden="true">Begin typing department
+                                    name or org
+                                    code</div>
+
+                                <div class="followup ">
+                                    <label for="campus-level">
+                                        Because you are submitting on behalf of a System affiliated department,
+                                        you will need to select a university to determine which university-level
+                                        profiles you will be shown in addition to system-level profiles.
+                                    </label>
+                                    <select id="campus-level" class="input-lg">
+                                        <option value="" disabled selected hidden></option>
+                                        <option>Chicago</option>
+                                        <option>Springfield</option>
+                                        <option>Urbana-Champaign</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="department-reason" class="ptn-modal-element definition-modal" role="dialog"
+                            aria-modal="true" aria-labelledby="modal-title">
+                            <button class="ptn-modal-close" onclick="closeModal('department-reason')"
+                                aria-label="Close modal">&times;</button>
+                            <div class="ptn-modal-interior">
+                                <h1 class="def-head">Why do I need to select a department?</h1>
+                                <p>
+                                    The department you select will determine which profile options are
+                                    available and will be associated with any access that is granted,
+                                    changed, or removed as a result of this request. This department will
+                                    also be responsible for reviewing the access during future audits.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+       
+                    
 
 
                 </div>
             </div>
+
 
 
 
@@ -140,6 +316,8 @@
     <script src="../js/app.js"></script>
 
     <script src="../js/modal-sh.js"></script>
+
+    
 
 </body>
 

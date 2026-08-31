@@ -6456,6 +6456,17 @@ button {
   margin-left: 3px;
 }
 
+.ref-guide-text {
+  background-image: url('data:image/svg+xml,<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group" transform="translate(-2, -1)" fill="%23038179" fill-rule="nonzero"><g id="noun-info-6787664" transform="translate(2, 1)"><path d="M9,0 C4.03961935,0 0,4.04011016 0,9 C0,13.9601352 4.04011016,18 9,18 C13.9601352,18 18,13.9598898 18,9 C18,4.03986475 13.9598898,0 9,0 Z M9,16.1599498 C5.05216229,16.1599498 1.84054098,12.9483285 1.84054098,9.00049081 C1.84054098,5.05265311 5.05216229,1.84103179 9,1.84103179 C12.9478377,1.84103179 16.159459,5.05265311 16.159459,9.00049081 C16.159459,12.9483285 12.9478377,16.1599498 9,16.1599498 Z M9.92027049,9.00049081 L9.92027049,12.6997328 C9.92027049,13.2058816 9.50614877,13.6200033 9,13.6200033 C8.49385123,13.6200033 8.07972951,13.2058816 8.07972951,12.6997328 L8.07972951,9.00049081 C8.07972951,8.49434204 8.49385123,8.08022032 9,8.08022032 C9.50614877,8.08022032 9.92027049,8.49434204 9.92027049,9.00049081 Z M9.92027049,5.31940885 C9.92027049,5.82555762 9.50614877,6.23967934 9,6.23967934 C8.49385123,6.23967934 8.07972951,5.82555762 8.07972951,5.31940885 C8.07972951,4.81326008 8.49385123,4.39913835 9,4.39913835 C9.50614877,4.39913835 9.92027049,4.81326008 9.92027049,5.31940885 Z" id="Shape"></path></g></g></g></svg>');
+  background-position: left center;
+  background-repeat: no-repeat;
+  margin-left: 15px;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  color: #247E84;
+  font-size: 0.95rem;
+}
+
 .txt-btn {
   padding: 0.3rem 0.75rem;
   background-color: transparent;
@@ -7630,7 +7641,27 @@ legend {
 
 .required {
   color: #B82025;
-  font-weight: bold;
+  font-weight: normal;
+  padding-left: 0.25rem;
+}
+
+.required::before {
+  padding-right: 0.15rem;
+  content: "✱";
+}
+
+.optional {
+  font-weight: normal;
+  font-style: italic;
+  color: #616161;
+}
+
+.label-note {
+  color: #6D6E71;
+  font-weight: normal;
+  display: block;
+  font-size: 0.9rem;
+  max-width: 100ch;
 }
 
 .conflix label {
